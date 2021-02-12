@@ -1,0 +1,2 @@
+```js
+<Button text="Button"/>
