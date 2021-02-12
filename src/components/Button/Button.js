@@ -14,9 +14,9 @@ const Button = (props) => {
         </button>
     );
 };
-/** @component */
-export default Button;
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
 };
+
+export default Button;
