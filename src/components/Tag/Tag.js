@@ -2,12 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '@gouvfr/tags/dist/css/tags.min.css';
 
+
+/**
+ * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.
+ *
+ * @visibleName Tag
+ */
 const Tag = ({
-  as, children, sm, href, title, isBlank,
+  as, children, size, href, title, isBlank, icon, iconPlace, 
 }) => {
   let tag = '';
-  let attribute = { className: `rf-tag${sm ? '--sm' : ''}` };
-console.log('as', as);
+  let attribute = { className: `rf-tag rf-tag--${size} ${(icon) ? icon : ''} ${(icon) ? 'rf-tag--icon-'+iconPlace : '' }` };
   switch (as) {
     case 'p':
       tag = 'p';
@@ -27,7 +32,7 @@ console.log('as', as);
       break;
 
     default:
-      tag = 'span';
+      tag = 'p';
 
   }
 
@@ -41,12 +46,11 @@ console.log('as', as);
 export default Tag;
 
 Tag.defaultProps = {
-  as: 'span',
-  sm: false,
+  as: 'p',
+  size: 'md',
   href: '',
   title: '',
   isBlank: false,
-  theme: 'default',
   icon: '',
   iconPlace: 'right'
 };
@@ -54,11 +58,10 @@ Tag.defaultProps = {
 Tag.propTypes = {
   as: PropTypes.string,
   children: PropTypes.string.isRequired,
-  sm: PropTypes.bool,
+  size: PropTypes.oneOf(['sm', 'md']),
   href: PropTypes.string,
   title: PropTypes.string,
   isBlank: PropTypes.bool,
-  theme: PropTypes.string,
   icon: PropTypes.string,
   iconPlace: PropTypes.string,
 };
