@@ -25,5 +25,11 @@ module.exports = {
       content: 'docs/COMPONENTS.md',
       components: 'src/components/**/[A-Z]*.js',
     },
+    {
+      name: 'Hooks',
+      sectionDepth: 1,
+      content: 'docs/COMPONENTS.md',
+      components: 'src/hooks/**/index.js',
+    },
   ],
 };
