@@ -7,20 +7,21 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "install": "^0.13.0",
+    "jest-dom": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
     "react-styleguidist": "^11.1.5",
+    "react-test-renderer": "^17.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "guide": "npx styleguidist server"
+    "guide": "npx styleguidist server",
+    "test": "react-scripts test --watchAll"
   },
   "eslintConfig": {
     "extends": [

@@ -5,7 +5,16 @@ module.exports = {
   skipComponentsWithoutExample: true,
   pagePerSection: true,
   components: 'src/components/**/[A-Z]*.js',
-  usageMode: 'expand',
+  usageMode: 'collapse',
+  theme: {
+    color: {
+      link: '#3B7A57',
+      linkHover: '#8F9779'
+    },
+    fontFamily: {
+      base: '"Calibri", "Geneva", sans-serif'
+    }
+  },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper')
   },
@@ -16,7 +25,7 @@ module.exports = {
   sections: [
     {
       name: 'Getting started',
-      content: 'docs/GETTING-STARTED.md',
+      content: './README.md',
       sectionDepth: 0,
     },
     {
