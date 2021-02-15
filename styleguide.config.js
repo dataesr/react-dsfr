@@ -20,6 +20,12 @@ module.exports = {
       sectionDepth: 0,
     },
     {
+      name: 'Fondamentaux',
+      sectionDepth: 1,
+      content: 'docs/FONDAMENTAUX.md',
+      components: 'src/foundation/**/[A-Z]*.js',
+    },
+    {
       name: 'Composants',
       sectionDepth: 1,
       content: 'docs/COMPONENTS.md',
