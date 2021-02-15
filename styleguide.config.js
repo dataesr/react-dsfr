@@ -28,7 +28,7 @@ module.exports = {
     {
       name: 'Hooks',
       sectionDepth: 1,
-      content: 'docs/COMPONENTS.md',
+      content: 'docs/HOOKS.md',
       components: 'src/hooks/**/index.js',
     },
   ],
