@@ -9,38 +9,28 @@ import '@gouvfr/tags/dist/css/tags.min.css';
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, isBlank, icon, iconPlace, 
+  as, children, size, href, title, target, icon, iconPlace, 
 }) => {
-  let tag = '';
+  const HtmlTag = `${as}`;
   let attribute = { className: `rf-tag rf-tag--${size} ${(icon) ? icon : ''} ${(icon) ? 'rf-tag--icon-'+iconPlace : '' }` };
-  switch (as) {
-    case 'p':
-      tag = 'p';
-      break;
 
-      case 'li':
-      tag = 'li';
-      break;
+  if (as === 'a') {
+    attribute = { ...attribute, href, target };
 
-      case 'a':
-      tag = 'a';
-      if (isBlank) {
-        attribute = { ...attribute, href, target: '_blank', rel: 'noopener noreferer' };
-      } else {
-        attribute = { ...attribute, href };
-      }
-      break;
-
-    default:
-      tag = 'p';
-
+    if (target === '_blank') {
+      attribute = { ...attribute, rel: 'noopener noreferer' };
+    }
   }
 
   if (title) {
     attribute = { ...attribute, title };
   }
 
-  return (React.createElement(tag, attribute, children));
+  return (
+    <HtmlTag {...attribute}>
+      {children}
+    </HtmlTag>
+  );
 };
 
 export default Tag;
@@ -48,20 +38,20 @@ export default Tag;
 Tag.defaultProps = {
   as: 'p',
   size: 'md',
-  href: '',
+  href: '#',
   title: '',
-  isBlank: false,
+  target: '_self',
   icon: '',
   iconPlace: 'right'
 };
 
 Tag.propTypes = {
-  as: PropTypes.string,
+  as: PropTypes.oneOf(['a', 'li', 'p']),
   children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['sm', 'md']),
   href: PropTypes.string,
   title: PropTypes.string,
-  isBlank: PropTypes.bool,
+  target: PropTypes.string,
   icon: PropTypes.string,
-  iconPlace: PropTypes.string,
+  iconPlace: PropTypes.oneOf(['left', 'right']),
 };
