@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import '@gouvfr/all/dist/css/all.min.css';
 import useFocusTrap from '../../hooks/useFocusTrap';
-
+import {
+  Title, Content, Footer, Close
+} from './subcomponents';
 /**
  * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
  * un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite
@@ -11,59 +13,6 @@ import useFocusTrap from '../../hooks/useFocusTrap';
  *
  * @visibleName Modale -- Modal
  */
-
-const ModalFooter = ({ children }) => (
-  <div className="rf-modal__footer">
-    {children}
-  </div>
-);
-
-ModalFooter.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-const ModalTitle = ({ children, icon }) => (
-  <h1 id="rf-modal-title-modal" className="rf-modal__title">
-    {icon && <span className="rf-fi-arrow-right-line rf-fi--lg" />}
-    {children}
-  </h1>
-);
-
-ModalTitle.propTypes = {
-  children: PropTypes.node.isRequired,
-  icon: PropTypes.bool,
-};
-ModalTitle.defaultProps = {
-  icon: true,
-};
-
-const ModalContent = ({ children }) => children;
-
-ModalContent.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-const ModalClose = ({ hide, title, children }) => (
-  <button
-    className="rf-link--close rf-link"
-    type="button"
-    onClick={hide}
-    title={title}
-    aria-controls="rf-modal"
-    target="_self"
-  >
-    {children}
-  </button>
-);
-ModalClose.propTypes = {
-  children: PropTypes.string,
-  title: PropTypes.string,
-  hide: PropTypes.func.isRequired,
-};
-ModalClose.defaultProps = {
-  children: 'Fermer',
-  title: 'Fermer la fenêtre modale',
-};
 
 const ModalDialog = ({ children, hide, size }) => {
   const modalRef = useRef();
@@ -106,7 +55,7 @@ const ModalDialog = ({ children, hide, size }) => {
             <div className="rf-col-12 rf-col-md-6">
               <div className="rf-modal__body">
                 <div className="rf-modal__header">
-                  {(close.length > 1) ? close : <ModalClose hide={hide} />}
+                  {(close.length > 1) ? close : <Close hide={hide} />}
                 </div>
                 <div className="rf-modal__content">
                   {title}
@@ -138,9 +87,9 @@ Modal.propTypes = {
 Modal.defaultProps = {
   size: 'md',
 };
-Modal.Title = ModalTitle;
-Modal.Footer = ModalFooter;
-Modal.Content = ModalContent;
-Modal.Close = ModalClose;
+Modal.Title = Title;
+Modal.Footer = Footer;
+Modal.Content = Content;
+Modal.Close = Close;
 
 export default Modal;

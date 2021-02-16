@@ -39,7 +39,7 @@ const hide = () => {
 </>
 ```
 
-Le boutton de fermeture peut etre personnalisé:
+Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
 ```
 import { useState, useRef } from 'react';
 import Button from '../Button'
