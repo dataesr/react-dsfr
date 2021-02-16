@@ -25,5 +25,17 @@ module.exports = {
       content: 'docs/COMPONENTS.md',
       components: 'src/components/**/[A-Z]*.js',
     },
+    {
+      name: 'Fondamentaux',
+      sectionDepth: 1,
+      content: 'docs/FONDAMENTAUX.md',
+      sections: [
+        {
+          name: 'Système de grille -- Grid',
+          content: 'docs/GRID.md',
+          components: 'src/foundation/**/[A-Z]*.js',
+        },
+      ],
+    },
   ],
 };

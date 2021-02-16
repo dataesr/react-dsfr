@@ -31,11 +31,11 @@ Col.propTypes = {
   /**
   * Col size in the grid
   */
-  n: PropTypes.bool,
+  n: PropTypes.string,
   /**
   * Set Col offset.
   */
-  offset: PropTypes.bool,
+  offset: PropTypes.string,
 };
 Col.defaultProps = {
   n: null,

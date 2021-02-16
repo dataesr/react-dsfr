@@ -12,7 +12,7 @@ const Container = ({ fluid, children, ...rest }) => {
   const { margin, padding } = getSpace(rest);
   const className = classNames(
     { 'rf-container': !fluid },
-    { 'fr-container-fluid': fluid },
+    { 'rf-container-fluid': fluid },
     margin,
     padding,
   );
