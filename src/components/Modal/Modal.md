@@ -4,7 +4,7 @@ La modale par défaut permet de mettre en évidence une information qui ne néce
 
 Elle se compose des éléments de base du composant à savoir :
   - Le lien Fermer - obligatoire.
-  - Le titre  obligatoire,  avec  icône  🔗 optionnelle.
+  - Le titre obligatoire, avec icône optionnelle.
   - La zone de contenu - obligatoire.
     - Peut-être composée de texte ou d'élément de formulaires.
   - Un overlay disposé à l’arrière du composant - obligatoire.

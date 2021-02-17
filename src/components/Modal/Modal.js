@@ -22,6 +22,7 @@ const ModalDialog = ({ children, hide, size }) => {
   const content = children.filter((child) => child.type.name === 'ModalContent');
   const footer = children.filter((child) => child.type.name === 'ModalFooter');
   const close = children.filter((child) => child.type.name === 'ModalClose');
+  const style = { opacity: 1, visibility: 'visible' };
   const handleOverlayClick = (e) => {
     if (!modalRef.current || (modalRef.current === e.target)) {
       hide();
@@ -47,15 +48,16 @@ const ModalDialog = ({ children, hide, size }) => {
         className={`rf-modal${sizeModifier}`}
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
-        style={{ opacity: 1, visibility: 'visible' }}
+        style={style}
         onClick={(e) => handleOverlayClick(e)}
+        data-testid="modal"
       >
         <div className="rf-container--fluid rf-container-md">
           <div className="rf-grid-row rf-grid-row--center">
             <div className="rf-col-12 rf-col-md-6">
               <div className="rf-modal__body">
                 <div className="rf-modal__header">
-                  {(close.length > 1) ? close : <Close hide={hide} />}
+                  {(close.length > 0) ? close : <Close hide={hide} />}
                 </div>
                 <div className="rf-modal__content">
                   {title}
