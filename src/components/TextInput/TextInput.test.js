@@ -23,13 +23,21 @@ describe('<TextInput />', () => {
 
   beforeEach(() => {
     wrapper = (props = {}) => shallow(
-      <TextInput {...props} />,
+      <TextInput
+        value={props.value}
+        label={props.label}
+        onChange={props.onChange}
+      />,
     );
   });
 
   it('renders correctly', () => {
     const component = renderer
-      .create(<TextInput {...initialProps} />)
+      .create(<TextInput
+        label={initialProps.label}
+        value={initialProps.value}
+        onChange={initialProps.onChange}
+      />)
       .toJSON();
     expect(component).toMatchSnapshot();
   });

@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
 
 /**
  * Les champs permettent à un utilisateur d'entrer du contenu et données.
