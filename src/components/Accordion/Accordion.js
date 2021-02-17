@@ -2,17 +2,17 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import { v4 as uuidV4 } from 'uuid';
+import classnames from 'classnames';
 import { CHILDREN_TYPE } from '../../utils/variables';
 import AccordionLine from './AccordionLine';
-
 /**
  * Condenser l'espace
  *
- * @visibleName Accordéon
+ * @visibleName Accordion
  */
 
 const Accordion = (props) => {
-  const { group, children } = props;
+  const { group, customClass, children } = props;
 
   const expandLine = (e) => {
     const id = e.target.getAttribute('data-button');
@@ -53,17 +53,18 @@ const Accordion = (props) => {
   }, []);
 
   return (
-    <>
+    <section className={classnames(customClass)}>
       {children}
       <ul className="rf-accordions-group">
         {groupBody}
       </ul>
-    </>
+    </section>
   );
 };
 
 Accordion.defaultProps = {
   children: '',
+  customClass: '',
 };
 
 Accordion.propTypes = {
@@ -72,6 +73,10 @@ Accordion.propTypes = {
     children: CHILDREN_TYPE,
   })).isRequired,
   children: CHILDREN_TYPE,
+  customClass: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 };
 
 export default Accordion;

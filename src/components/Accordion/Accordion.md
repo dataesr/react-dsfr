@@ -1,28 +1,20 @@
-### Les accordéons
+# Les accordéons
 
-Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page.
+Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page. Ils sont utilisés pour condenser l'espace en cachant le contenu et en le révélant au besoin.
 
-#### Accordéons par défaut
 
-Les accordéons sont utilisés pour condenser l'espace en cachant le contenu et en le révélant au besoin.
-
-Un accordéon est constitué des éléments suivants :
-
-* En-tête : le titre de la section
-* Icône : “+” indique quand le panneau est fermé, “-” quand le panneau est ouvert.
-* Contenu : une section de contenu libre associée à un accordéon.
-
-Par défaut, les accordéons sont fermés et comprennent l’en tête et l’icône “+”.
-
-### Accordéon simple
+## Accordéon simple
 
 ```js
 const group = [{ 'title': 'One Simple Line', 'children': 'Content of line' }];
 
-<Accordion group={group}></Accordion>
+<Accordion
+    customClass={'custom-class'}
+    group={group}>
+</Accordion>
 ```
 
-### Accordéon multiple
+## Accordéon multiple
 
 ```js
 const group = [{ 'title': 'First Line', 'children': '<p>HTML content children</p>' }, {
@@ -30,12 +22,13 @@ const group = [{ 'title': 'First Line', 'children': '<p>HTML content children</p
     'children': 'Content text'
 }];
 
-<Accordion group={group}>
+<Accordion
+    group={group}>
     <p>Accordion Group Title</p>
 </Accordion>
 ```
 
-### Accordéon contenu type HTML
+## Accordéon avec contenu HTML
 
 ```jsx
 const children = <article><h1>Content title</h1><p>
@@ -46,7 +39,8 @@ const children = <article><h1>Content title</h1><p>
 </article>
 const group = [{ 'title': 'See more', 'children': children }];
 
-<Accordion group={group}>
+<Accordion
+    group={group}>
     <p>Accordion Group Title</p>
 </Accordion>
 ```
