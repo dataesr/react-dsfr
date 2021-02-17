@@ -1,39 +1,39 @@
-```js
+```jsx
 <Button size="sm" title="title">
     basic sm button
 </Button>
 ```
 
-```js
+```jsx
 <Button title="title">
     basic md button
 </Button>
 ```
 
-```js
+```jsx
 <Button size="lg" title="title">
     basic lg button
 </Button>
 ```
 
-```js
+```jsx
 <Button size="sm" secondary title="title">
     secondary sm button
 </Button>
 ```
 
-```js
+```jsx
 <Button disabled title="title">
     disabled button
 </Button>
 ```
 
-```js
+```jsx
 <Button icon="lock-line" title="title">
     icon button
 </Button>
 ```
 
-```js
+```jsx
 <Button icon="alert-fill" title="title"></Button>
 ```

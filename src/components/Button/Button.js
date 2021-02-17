@@ -1,25 +1,29 @@
 import PropTypes from 'prop-types';
 import '@gouvfr/schemes/dist/css/schemes.min.css';
 import '@gouvfr/buttons/dist/css/buttons.min.css';
-
+import classnames from 'classnames';
 /**
  *
  * @visibleName Button
  */
 const Button = (props) => {
   const {
-    size, secondary, disabled, title, icon, children,
+    size, secondary, disabled, title, icon, children, className,
   } = props;
-  const classSize = `rf-btn--${size}`;
-  const classIcon = icon ? `rf-btn--icon rf-fi-${icon}` : '';
-  const classChildren = children ? 'rf-btn--icon-left' : '';
 
   // TODO manage all icons from remix library
   // TODO manage icon position left/right
   return (
     <button
       type="button"
-      className={`rf-btn ${secondary ? 'rf-btn--secondary' : ''} ${classSize} ${classIcon} ${classChildren}`}
+      className={classnames('rf-btn',
+        {
+          [`rf-btn--icon rf-fi-${icon}`]: icon,
+          'rf-btn--secondary': secondary,
+          'rf-btn--icon-left': children,
+        },
+        `rf-btn--${size}`,
+        className)}
       title={title}
       disabled={disabled}
     >
@@ -37,6 +41,7 @@ Button.defaultProps = {
   disabled: false,
   icon: '',
   children: '',
+  className: '',
 };
 
 Button.propTypes = {
@@ -44,6 +49,10 @@ Button.propTypes = {
   icon: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
