@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = {
   title: 'react-rfds',
   styleguideDir: 'build',
@@ -16,7 +17,10 @@ module.exports = {
     }
   },
   styleguideComponents: {
-    Wrapper: path.join(__dirname, './styleguide/Wrapper')
+    Wrapper: path.join(__dirname, './styleguide/Wrapper'),
+  },
+  getExampleFilename(componentPath) {
+    return componentPath.replace(/\.js?$/, '.md');
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js');

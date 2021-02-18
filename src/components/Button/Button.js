@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+
 /**
  *
  * @visibleName Button
@@ -39,6 +40,7 @@ Button.defaultProps = {
   disabled: false,
   icon: '',
   children: '',
+
   className: '',
 };
 
@@ -51,6 +53,7 @@ Button.propTypes = {
     PropTypes.object,
     PropTypes.string,
   ]),
+
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
