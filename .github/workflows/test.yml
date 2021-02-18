@@ -1,12 +1,6 @@
 name: Test
 
-on:
-  push:
-    branches:
-      - test
-  pull_request:
-    branches:
-      - test
+on: push
 
 jobs:
   build:
@@ -17,4 +11,4 @@ jobs:
       - uses: actions/setup-node@v1
 
       - run: npm ci
-      - run: npm run predeploy
+      - run: npm run predeploy --if-present
