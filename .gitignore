@@ -4,9 +4,6 @@
 /.pnp
 .pnp.js
 
-# testing
-__snapshots__
-
 # production
 /build
 /dist
