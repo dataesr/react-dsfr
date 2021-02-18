@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> renders correctly 1`] = `
+<section
+  className=""
+>
+  Title
+  <ul
+    className="rf-accordions-group"
+  >
+    <li
+      className=""
+    >
+      <section
+        className="rf-accordion"
+      >
+        <h3
+          className="rf-accordion__title"
+        >
+          <button
+            aria-controls="rf-accordion-xxxxxxx"
+            aria-expanded="false"
+            className="rf-accordion__btn"
+            onClick={[Function]}
+            type="button"
+          >
+            title
+          </button>
+        </h3>
+        <div
+          className="rf-collapse"
+          id="rf-accordion-xxxxxxx"
+          style={
+            Object {
+              "--collapse": "0px",
+              "maxHeight": null,
+            }
+          }
+        >
+          content line
+        </div>
+      </section>
+    </li>
+  </ul>
+</section>
+`;
