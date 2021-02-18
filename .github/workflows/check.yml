@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install
-        run: yarn --no-progress --non-interactive --no-lockfile
+        run: yarn --non-interactive --no-lockfile
       - name: Build
         run: yarn predeploy
       - name: Test
