@@ -25,7 +25,7 @@ jobs:
   #         NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   deploy-gh-pages:
-    needs: ['publish-npm']
+    # needs: ['publish-npm']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
