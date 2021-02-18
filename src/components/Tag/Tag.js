@@ -11,7 +11,9 @@ const Tag = ({
   as, children, size, href, title, target, icon, iconPlace,
 }) => {
   const HtmlTag = `${as}`;
-  let attribute = { className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPlace}` : ''}` };
+  let attribute = {
+    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPlace}` : ''}`,
+  };
 
   if (as === 'a') {
     attribute = { ...attribute, href, target };
@@ -25,7 +27,7 @@ const Tag = ({
     attribute = { ...attribute, title };
   }
 
-  return (<HtmlTag className={attribute.className}>{children}</HtmlTag>);
+  return (<HtmlTag {...attribute}>{children}</HtmlTag>);
 };
 
 export default Tag;
