@@ -10,6 +10,7 @@ __snapshots__
 # production
 /build
 /dist
+/coverage
 
 # misc
 .DS_Store

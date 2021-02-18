@@ -1,18 +1,19 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import '@gouvfr/tags/dist/css/tags.min.css';
-
+import '@gouvfr/all/dist/css/all.min.css';
 
 /**
- * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.
+ * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
+ * Il aide les utilisateurs à rechercher et à trouver facilement une information.
  *
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPlace, 
+  as, children, size, href, title, target, icon, iconPlace,
 }) => {
   const HtmlTag = `${as}`;
-  let attribute = { className: `rf-tag rf-tag--${size} ${(icon) ? icon : ''} ${(icon) ? 'rf-tag--icon-'+iconPlace : '' }` };
+  let attribute = {
+    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPlace}` : ''}`,
+  };
 
   if (as === 'a') {
     attribute = { ...attribute, href, target };
@@ -26,11 +27,7 @@ const Tag = ({
     attribute = { ...attribute, title };
   }
 
-  return (
-    <HtmlTag {...attribute}>
-      {children}
-    </HtmlTag>
-  );
+  return (<HtmlTag {...attribute}>{children}</HtmlTag>);
 };
 
 export default Tag;
@@ -42,7 +39,7 @@ Tag.defaultProps = {
   title: '',
   target: '_self',
   icon: '',
-  iconPlace: 'right'
+  iconPlace: 'right',
 };
 
 Tag.propTypes = {

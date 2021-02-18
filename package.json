@@ -56,7 +56,8 @@
     "predeploy": "styleguidist build",
     "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-rfds.git",
     "guide": "npx styleguidist server",
-    "test": "react-scripts test --watchAll"
+    "test": "react-scripts test --watchAll",
+    "test:coverage": "CI=true npm test -- --coverage"
   },
   "eslintConfig": {
     "extends": [
