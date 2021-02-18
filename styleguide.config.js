@@ -10,11 +10,11 @@ module.exports = {
   theme: {
     color: {
       link: '#3B7A57',
-      linkHover: '#8F9779',
+      linkHover: '#8F9779'
     },
     fontFamily: {
-      base: '"Calibri", "Geneva", sans-serif',
-    },
+      base: '"Calibri", "Geneva", sans-serif'
+    }
   },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
