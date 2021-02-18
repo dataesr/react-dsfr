@@ -11,6 +11,6 @@ jobs:
       - name: Install
         run: yarn --no-progress --non-interactive --no-lockfile
       - name: Build
-        run: yarn predeploy --if-present
+        run: yarn predeploy
       - name: Test
-        run: yarn test:nowatch --if-present
+        run: yarn test:nowatch
