@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> renders correctly 1`] = `
+<div
+  className="rf-input-group rf-input-group--valid"
+>
+  <label
+    aria-describedby="text-input-message"
+    className="rf-label"
+    htmlFor="text-input"
+  >
+    label
+  </label>
+  
+  <input
+    className="rf-input rf-input--valid"
+    disabled={false}
+    id="text-input"
+    onChange={[MockFunction]}
+    type="text"
+    value="init-value"
+  />
+  
+  
+</div>
+`;
