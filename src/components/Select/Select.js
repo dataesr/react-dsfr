@@ -16,11 +16,10 @@ const Select = forwardRef((props, ref) => {
   } = props;
 
   return (
-    <select className={`rf-select ${className || ''}`} id={id || null} name={name || null}>
+    <select className={`rf-select ${className || ''}`} id={id || null} name={name || null}>
       {children}
     </select>
   );
-
 });
 
 // Select.defaultProps = {
