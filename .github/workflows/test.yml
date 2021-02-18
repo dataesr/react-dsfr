@@ -1,4 +1,4 @@
-name: Test
+name: Test & Build
 
 on: push
 
@@ -8,7 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-
-      - run: npm ci
-      - run: npm run predeploy --if-present
+      - name: Install
+        run: yarn --no-progress --non-interactive --no-lockfile
+      - name: Build
+        run: yarn predeploy --if-present
+      - name: Test
+        run: yarn test:nowatch --if-present

@@ -8,7 +8,7 @@ import '@gouvfr/all/dist/css/all.min.css';
  * La barre de recherche est un système de navigation qui permet à l'utilisateur
  * d’accéder rapidement à un contenu en lançant une recherche sur un mot clé ou une expression.
  *
- * @visibleName Champ de recherche -- SearchBar
+ * @visibleName SearchBar
  */
 const SearchBar = forwardRef((props, ref) => {
   const {
