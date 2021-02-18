@@ -20,16 +20,28 @@ module.exports = {
       sectionDepth: 0,
     },
     {
+      name: 'Fondamentaux',
+      sectionDepth: 1,
+      content: 'docs/FONDAMENTAUX.md',
+      components: 'src/foundation/**/[A-Z]*.js',
+    },
+    {
       name: 'Composants',
       sectionDepth: 1,
       content: 'docs/COMPONENTS.md',
       components: 'src/components/**/[A-Z]*.js',
     },
     {
-      name: 'Hooks',
+      name: 'Fondamentaux',
       sectionDepth: 1,
-      content: 'docs/HOOKS.md',
-      components: 'src/hooks/**/index.js',
+      content: 'docs/FONDAMENTAUX.md',
+      sections: [
+        {
+          name: 'Système de grille -- Grid',
+          content: 'docs/GRID.md',
+          components: 'src/foundation/**/[A-Z]*.js',
+        },
+      ],
     },
   ],
 };
