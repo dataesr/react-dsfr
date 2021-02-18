@@ -43,20 +43,14 @@ exports[`<Modal /> should render modal properly 1`] = `
               <span
                 class="rf-fi-arrow-right-line rf-fi--lg"
               />
-              I'm a title
+              I am a title
             </h1>
             blah blah
           </div>
           <div
             class="rf-modal__footer"
           >
-            <button
-              class="rf-btn rf-btn--icon-left rf-btn--md"
-              title="Une action"
-              type="button"
-            >
-              blah
-            </button>
+            blah
           </div>
         </div>
       </div>
