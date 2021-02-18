@@ -5,10 +5,11 @@
 .pnp.js
 
 # testing
-/coverage
+__snapshots__
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -25,5 +26,5 @@ yarn-error.log*
 .idea
 
 # lock
-package.json
+package-lock.json
 yarn.lock

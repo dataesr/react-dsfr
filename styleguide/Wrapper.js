@@ -1,8 +1,14 @@
-import '@gouvfr/schemes/dist/css/schemes.min.css';
 import { Component } from 'react';
+import { CHILDREN_TYPE } from '../src/utils/variables';
+import '@gouvfr/all/dist/css/all.min.css';
 
 export default class Wrapper extends Component {
-    render() {
-        return this.props.children;
-    }
+  render() {
+    const { children } = this.props;
+    return children;
+  }
 }
+
+Wrapper.propTypes = {
+  children: CHILDREN_TYPE.isRequired,
+};

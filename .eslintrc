@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "rules": {
+    "react/prefer-stateless-function": 0,
+    "react/jsx-uses-react": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}
