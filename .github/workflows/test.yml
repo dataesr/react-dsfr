@@ -1,9 +1,9 @@
-name: Test & Build
+name: Build & Test
 
 on: push
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
 
     steps:
