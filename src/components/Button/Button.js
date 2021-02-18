@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-import '@gouvfr/schemes/dist/css/schemes.min.css';
-import '@gouvfr/buttons/dist/css/buttons.min.css';
 import classnames from 'classnames';
 /**
  *
