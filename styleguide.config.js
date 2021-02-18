@@ -7,14 +7,15 @@ module.exports = {
   pagePerSection: true,
   components: 'src/components/**/[A-Z]*.js',
   usageMode: 'collapse',
+  tocMode: 'collapse',
   theme: {
     color: {
       link: '#3B7A57',
-      linkHover: '#8F9779'
+      linkHover: '#8F9779',
     },
     fontFamily: {
-      base: '"Calibri", "Geneva", sans-serif'
-    }
+      base: '"Calibri", "Geneva", sans-serif',
+    },
   },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
@@ -34,27 +35,37 @@ module.exports = {
     },
     {
       name: 'Fondamentaux',
-      sectionDepth: 1,
-      content: 'docs/FONDAMENTAUX.md',
-      components: 'src/foundation/**/[A-Z]*.js',
+      sectionDepth: 2,
+      content: 'src/foundation/FOUNDATION.md',
+      sections: [
+        {
+          name: 'Grid system',
+          content: 'src/foundation/grid/GRID.md',
+          components: 'src/foundation/grid/**/[A-Z]*.js',
+        },
+        {
+          name: 'Typography',
+          content: 'src/foundation/typography/TYPOGRAPHY.md',
+          components: 'src/foundation/typography/**/[A-Z]*.js',
+        },
+        {
+          name: 'Icons',
+          content: 'src/foundation/icons/ICONS.md',
+          components: 'src/foundation/icons/**/[A-Z]*.js',
+        },
+      ],
     },
     {
       name: 'Composants',
       sectionDepth: 1,
-      content: 'docs/COMPONENTS.md',
+      content: 'src/components/COMPONENTS.md',
       components: 'src/components/**/[A-Z]*.js',
     },
     {
-      name: 'Fondamentaux',
+      name: 'Hooks',
       sectionDepth: 1,
-      content: 'docs/FONDAMENTAUX.md',
-      sections: [
-        {
-          name: 'Système de grille -- Grid',
-          content: 'docs/GRID.md',
-          components: 'src/foundation/**/[A-Z]*.js',
-        },
-      ],
+      content: 'src/hooks/HOOKS.md',
+      components: 'src/hooks/**/[A-Z]*.js',
     },
   ],
 };

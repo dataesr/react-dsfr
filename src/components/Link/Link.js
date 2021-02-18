@@ -1,23 +1,24 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import '@gouvfr/links/dist/css/links.min.css';
-
+import '@gouvfr/all/dist/css/all.min.css';
 
 /**
- * Le lien permet la navigation entre une page et un autre contenu au sein de la même page, du même site ou externe. 
+ * Le lien permet la navigation entre une page et un autre contenu
+ * au sein de la même page, du même site ou externe.
  *
  * @visibleName Links
  */
 const Link = ({
-  children, size, href, title, target, isSimple, icon, iconPlace, 
+  children, href, title, target, isSimple, icon, iconPlace,
 }) => (
   <a
     href={href}
     title={title}
     target={target}
     rel={(target === '_blank') ? 'noopener noreferer' : null}
-    className={`${(isSimple) ? 'rf-link' : ''} ${(icon) ? icon : ''} ${(icon) ? 'rf-link--icon-'+iconPlace : '' }`}
-  >{children}</a>
+    className={`${(isSimple) ? 'rf-link' : ''} ${(icon) || ''} ${(icon) ? `rf-link--icon-${iconPlace}` : ''}`}
+  >
+    {children}
+  </a>
 );
 
 export default Link;
@@ -28,7 +29,7 @@ Link.defaultProps = {
   target: '_self',
   isSimple: false,
   icon: '',
-  iconPlace: 'right'
+  iconPlace: 'right',
 };
 
 Link.propTypes = {
