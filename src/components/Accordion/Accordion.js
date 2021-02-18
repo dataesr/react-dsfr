@@ -10,7 +10,6 @@ import AccordionLine from './AccordionLine';
  *
  * @visibleName Accordion
  */
-
 const Accordion = (props) => {
   const { group, className, children } = props;
 

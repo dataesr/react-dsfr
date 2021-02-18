@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should render modal properly 1`] = `
+<dialog
+  aria-labelledby="rf-modal-title-modal"
+  class="rf-modal"
+  data-testid="modal"
+  id="rf-modal"
+  style="opacity: 1; visibility: visible;"
+>
+  <div
+    class="rf-container--fluid rf-container-md"
+  >
+    <div
+      class="rf-grid-row rf-grid-row--center"
+    >
+      <div
+        class="rf-col-12 rf-col-md-6"
+      >
+        <div
+          class="rf-modal__body"
+        >
+          <div
+            class="rf-modal__header"
+          >
+            <button
+              aria-controls="rf-modal"
+              class="rf-link--close rf-link"
+              target="_self"
+              title="Close the modal window"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <div
+            class="rf-modal__content"
+          >
+            <h1
+              class="rf-modal__title"
+              id="rf-modal-title-modal"
+            >
+              <span
+                class="rf-fi-arrow-right-line rf-fi--lg"
+              />
+              I'm a title
+            </h1>
+            blah blah
+          </div>
+          <div
+            class="rf-modal__footer"
+          >
+            <button
+              class="rf-btn rf-btn--icon-left rf-btn--md"
+              title="Une action"
+              type="button"
+            >
+              blah
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+`;

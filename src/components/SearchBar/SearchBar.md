@@ -4,7 +4,7 @@ Choisissez la barre de recherche medium lorsqu'il y a des contraintes d'espace d
 
 Il peut également être spécifique à certains composants dans le cas de recherche contextuelle (exemple : recherche pour filtrer des listes ou un tableau de données).
 
-```
+```jsx
 <SearchBar
   onSearch={() => {}}
   label="SearchBar du gouvernement"
@@ -16,7 +16,7 @@ Il peut également être spécifique à certains composants dans le cas de reche
 ### Barre de recherche Large
 Choisissez la barre de recherche large pour présenter un moteur de recherche global à l’intérieur d'une page (exemple : mise en avant de la recherche depuis la home page, moteur de recherche sur la liste de résultats de recherche).
 
-```
+```jsx
 <SearchBar
   size="lg"
   onSearch={() => {}}

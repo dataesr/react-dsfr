@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Container from '.';
+import Container from '..';
 
 it('renders Container properly', () => {
   render(

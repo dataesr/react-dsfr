@@ -14,7 +14,7 @@ module.exports = {
       linkHover: '#8F9779',
     },
     fontFamily: {
-      base: '"Calibri", "Geneva", sans-serif',
+      base: "'Marianne', sans-serif",
     },
   },
   styleguideComponents: {
@@ -65,7 +65,7 @@ module.exports = {
       name: 'Hooks',
       sectionDepth: 1,
       content: 'src/hooks/HOOKS.md',
-      components: 'src/hooks/**/[A-Z]*.js',
+      components: 'src/hooks/**/use*.js',
     },
   ],
 };

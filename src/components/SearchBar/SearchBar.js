@@ -2,7 +2,6 @@ import { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import classNames from 'classnames';
-import '@gouvfr/all/dist/css/all.min.css';
 
 /**
  * La barre de recherche est un système de navigation qui permet à l'utilisateur

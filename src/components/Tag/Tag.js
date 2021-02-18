@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
 
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
@@ -8,11 +7,11 @@ import '@gouvfr/all/dist/css/all.min.css';
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPlace,
+  as, children, size, href, title, target, icon, iconPosition,
 }) => {
   const HtmlTag = `${as}`;
   let attribute = {
-    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPlace}` : ''}`,
+    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPosition}` : ''}`,
   };
 
   if (as === 'a') {
@@ -39,7 +38,7 @@ Tag.defaultProps = {
   title: '',
   target: '_self',
   icon: '',
-  iconPlace: 'right',
+  iconPosition: 'right',
 };
 
 Tag.propTypes = {
@@ -50,5 +49,5 @@ Tag.propTypes = {
   title: PropTypes.string,
   target: PropTypes.string,
   icon: PropTypes.string,
-  iconPlace: PropTypes.oneOf(['left', 'right']),
+  iconPosition: PropTypes.oneOf(['left', 'right']),
 };

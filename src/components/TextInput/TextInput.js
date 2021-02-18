@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
  *
  * @visibleName TextInput
  */
-
 const TextInput = forwardRef((props, ref) => {
   const {
     textarea,
@@ -37,29 +36,29 @@ const TextInput = forwardRef((props, ref) => {
       {label && <label className="rf-label" htmlFor="text-input" aria-describedby={describer}>{label}</label>}
       {hint && <p className="rf-hint-text" id="text-input-hint">{hint}</p>}
       {
-                (textarea)
-                  ? (
-                    <textarea
-                      ref={ref}
-                      className={getClasses(messageType)[1]}
-                      disabled={inactive}
-                      id="text-input"
-                      value={value}
-                      onChange={onChange}
-                    />
-                  )
-                  : (
-                    <input
-                      ref={ref}
-                      className={getClasses(messageType)[1]}
-                      disabled={inactive}
-                      type="text"
-                      id="text-input"
-                      value={value}
-                      onChange={onChange}
-                    />
-                  )
-            }
+        (textarea)
+          ? (
+            <textarea
+              ref={ref}
+              className={getClasses(messageType)[1]}
+              disabled={inactive}
+              id="text-input"
+              value={value}
+              onChange={onChange}
+            />
+          )
+          : (
+            <input
+              ref={ref}
+              className={getClasses(messageType)[1]}
+              disabled={inactive}
+              type="text"
+              id="text-input"
+              value={value}
+              onChange={onChange}
+            />
+          )
+    }
       {(message && messageType === 'error') && <p id="text-input-message" className="rf-error-text">{message}</p>}
       {(message && messageType === 'valid') && <p id="text-input-message" className="rf-valid-text">{message}</p>}
     </div>
@@ -72,11 +71,12 @@ TextInput.defaultProps = {
   onChange: () => {},
   messageType: 'valid',
   message: '',
+  label: null,
 };
 TextInput.propTypes = {
   textarea: PropTypes.bool,
   inactive: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   hint: PropTypes.string,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func,

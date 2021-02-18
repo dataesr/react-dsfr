@@ -17,7 +17,7 @@ Pour que la grille s’affiche correctement, il faut respecter la structure : `<
 
 ### Examples
 
-```
+```jsx
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
@@ -30,10 +30,9 @@ import Col from './Col';
     <Col>JE SUIS UNE COLONE</Col>
   </Row>
 </Container>
-
 ```
 
-```
+```jsx
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
@@ -45,7 +44,7 @@ import Col from './Col';
 </Container>
 ```
 
-```
+```jsx
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
