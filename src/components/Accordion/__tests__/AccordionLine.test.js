@@ -1,9 +1,8 @@
-import React, { useState as useStateMock } from 'react';
-import '@testing-library/jest-dom';
+import { useState as useStateMock } from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
-import AccordionLine from './AccordionLine';
+import AccordionLine from '../AccordionLine';
 
 Enzyme.configure({ adapter: new Adapter() });
 

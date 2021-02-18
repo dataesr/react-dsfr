@@ -1,22 +1,21 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Modal from '.';
-import Button from '../Button';
+import Modal from '..';
+import Button from '../../Button';
 
-describe('Modal tests', () =>{
-
+describe('<Modal />', () => {
   it('should render modal properly', () => {
-    const hide = jest.fn()
+    const hide = jest.fn();
     render(
       <Modal hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-        <Modal.Title icon>I'm a title</Modal.Title>
+        <Modal.Title icon>I&apos;m a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button text="blah" />
+          <Button title="Une action">blah</Button>
         </Modal.Footer>
-      </Modal>
+      </Modal>,
     );
-    const modal = screen.getByTestId('modal')
+    const modal = screen.getByTestId('modal');
     const title = screen.getByText("I'm a title");
     const content = screen.getByText('blah blah');
     const footer = screen.getByText('blah');
@@ -30,36 +29,36 @@ describe('Modal tests', () =>{
   });
 
   it('should close modal on Close button click', () => {
-    const hide = jest.fn()
+    const hide = jest.fn();
     render(
       <Modal hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-        <Modal.Title icon>I'm a title</Modal.Title>
+        <Modal.Title icon>I&apos;m a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button text="blah" />
+          <Button title="Une action">blah</Button>
         </Modal.Footer>
-      </Modal>
+      </Modal>,
     );
     const close = screen.getByText('Close');
-    fireEvent.click(close)
-    expect(hide).toHaveBeenCalledTimes(1)
+    fireEvent.click(close);
+    expect(hide).toHaveBeenCalledTimes(1);
   });
 
   it('should close modal on dialog click', () => {
-    const hide = jest.fn()
+    const hide = jest.fn();
     render(
       <Modal hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-        <Modal.Title icon>I'm a title</Modal.Title>
+        <Modal.Title icon>I&apos;m a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button text="blah" />
+          <Button title="Une action">blah</Button>
         </Modal.Footer>
-      </Modal>
+      </Modal>,
     );
     const close = screen.getByText('Close');
-    fireEvent.click(close)
-    expect(hide).toHaveBeenCalledTimes(1)
+    fireEvent.click(close);
+    expect(hide).toHaveBeenCalledTimes(1);
   });
-})
+});

@@ -1,8 +1,7 @@
-import '@testing-library/jest-dom';
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
-import Button from './Button';
+import Button from '../Button';
 
 Enzyme.configure({ adapter: new Adapter() });
 

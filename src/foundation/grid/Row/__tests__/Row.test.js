@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Row from '.';
+import Row from '..';
 
 it('renders Row properly', () => {
   render(
@@ -22,7 +22,7 @@ it('renders Row with gutter properly', () => {
 
 it('renders Row with alignItems properly', () => {
   render(
-    <Row alignItems='middle'>Text</Row>,
+    <Row alignItems="middle">Text</Row>,
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
@@ -31,7 +31,7 @@ it('renders Row with alignItems properly', () => {
 
 it('renders Row with justifyContent properly', () => {
   render(
-    <Row justifyContent='center'>Text</Row>,
+    <Row justifyContent="center">Text</Row>,
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
@@ -40,7 +40,7 @@ it('renders Row with justifyContent properly', () => {
 
 it('renders Row offset and n properly', () => {
   render(
-    <Row gutter alignItems='middle' justifyContent='center'>Text</Row>,
+    <Row gutter alignItems="middle" justifyContent="center">Text</Row>,
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();

@@ -1,9 +1,8 @@
-import '@testing-library/jest-dom';
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
 import { v4 as uuidv4 } from 'uuid';
-import Accordion from './Accordion';
+import Accordion from '../Accordion';
 
 jest.mock('uuid', () => ({
   v4: jest.fn(),

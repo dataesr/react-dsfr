@@ -3,6 +3,12 @@ import { CHILDREN_TYPE } from '../src/utils/variables';
 import '@gouvfr/all/dist/css/all.min.css';
 
 export default class Wrapper extends Component {
+  componentDidMount() {
+    document.documentElement.setAttribute('data-rf-reset', '');
+    document.documentElement.setAttribute('data-rf-theme', 'light');
+    document.documentElement.setAttribute('lang', 'fr');
+  }
+
   render() {
     const { children } = this.props;
     return children;

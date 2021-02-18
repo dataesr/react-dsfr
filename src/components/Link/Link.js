@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
 
 /**
  * Le lien permet la navigation entre une page et un autre contenu

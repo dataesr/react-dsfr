@@ -11,7 +11,7 @@ Elle se compose des éléments de base du composant à savoir :
 
 En desktop, ce composant s’affiche au centre de la page.
 
-```
+```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
 const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ const hide = () => {
         <Modal.Title icon>I'm a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button text="blah" />
+          <Button title="Une action">blah</Button>
         </Modal.Footer>
       </Modal>
     )
@@ -40,7 +40,7 @@ const hide = () => {
 ```
 
 Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
-```
+```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
 const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,7 @@ const hide = () => {
         <Modal.Title icon>I'm a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button text="blah"/>
+          <Button title="Une action">blah</Button>
         </Modal.Footer>
       </Modal>
     )

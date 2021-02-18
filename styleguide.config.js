@@ -14,7 +14,7 @@ module.exports = {
       linkHover: '#8F9779',
     },
     fontFamily: {
-      base: '"Calibri", "Geneva", sans-serif',
+      base: "'Marianne', sans-serif",
     },
   },
   styleguideComponents: {

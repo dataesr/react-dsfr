@@ -1,11 +1,11 @@
 import { Component, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
 import useFocusTrap from '../../hooks/useFocusTrap';
-import {
-  Title, Content, Footer, Close,
-} from './subcomponents';
+import ModalTitle from './ModalTitle';
+import ModalContent from './ModalContent';
+import ModalFooter from './ModalFooter';
+import ModalClose from './ModalClose';
 /**
  * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
  * un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite
@@ -57,7 +57,7 @@ const ModalDialog = ({ children, hide, size }) => {
             <div className="rf-col-12 rf-col-md-6">
               <div className="rf-modal__body">
                 <div className="rf-modal__header">
-                  {(close.length > 0) ? close : <Close hide={hide} />}
+                  {(close.length > 0) ? close : <ModalClose hide={hide} />}
                 </div>
                 <div className="rf-modal__content">
                   {title}
@@ -89,9 +89,9 @@ Modal.propTypes = {
 Modal.defaultProps = {
   size: 'md',
 };
-Modal.Title = Title;
-Modal.Footer = Footer;
-Modal.Content = Content;
-Modal.Close = Close;
+Modal.Title = ModalTitle;
+Modal.Footer = ModalFooter;
+Modal.Content = ModalContent;
+Modal.Close = ModalClose;
 
 export default Modal;

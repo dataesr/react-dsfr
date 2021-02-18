@@ -27,9 +27,9 @@ const Button = (props) => {
       disabled={disabled}
     >
       {
-                icon && children ? (<span className="sr-only">{children}</span>)
-                  : children
-            }
+        icon && children ? (<span className="sr-only">{children}</span>)
+          : children
+      }
     </button>
   );
 };

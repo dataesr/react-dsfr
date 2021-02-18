@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
-import '@gouvfr/all/dist/css/all.min.css';
 
 /**
  * Design system Container
