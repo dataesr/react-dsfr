@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
-import { v4 as uuidV4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import classnames from 'classnames';
-import { CHILDREN_TYPE } from '../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
 import AccordionLine from './AccordionLine';
+
 /**
  * Condenser l'espace
  *
@@ -12,48 +12,31 @@ import AccordionLine from './AccordionLine';
  */
 
 const Accordion = (props) => {
-  const { group, customClass, children } = props;
-
-  const expandLine = (e) => {
-    const id = e.target.getAttribute('data-button');
-    const currentLine = document.querySelector(`[data-line="${id}"]`);
-    const isExpanded = currentLine.className.match(/rf-collapse--expanded/gm);
-    currentLine.className = isExpanded ? 'rf-collapse' : 'rf-collapse rf-collapse--expanded';
-    currentLine.style.maxHeight = isExpanded ? null : 'none';
-    e.target.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
-    currentLine.style.setProperty('--collapse', isExpanded ? `-${currentLine.getBoundingClientRect().height}px` : 0);
-  };
+  const { group, className, children } = props;
 
   // TODO manage expanded by default
   // TODO Group title style
   // TODO Manage automatic close
   const groupBody = group.map((line) => {
-    const id = uuidV4();
+    const id = uuidv4();
     let lineChildren = line.children || null;
     if (lineChildren && typeof line.children === 'string') {
       lineChildren = parse(line.children);
     }
     return (
       <AccordionLine
+        className={line.className}
         key={id}
         id={id}
         title={line.title}
-        onClick={expandLine}
       >
         {lineChildren}
       </AccordionLine>
     );
   });
 
-  useEffect(() => {
-    const lines = document.querySelectorAll('.rf-collapse');
-    lines.forEach((line) => {
-      line.style.setProperty('--collapse', '0px');
-    });
-  }, []);
-
   return (
-    <section className={classnames(customClass)}>
+    <section className={classnames(className)}>
       {children}
       <ul className="rf-accordions-group">
         {groupBody}
@@ -64,7 +47,7 @@ const Accordion = (props) => {
 
 Accordion.defaultProps = {
   children: '',
-  customClass: '',
+  className: '',
 };
 
 Accordion.propTypes = {
@@ -73,10 +56,7 @@ Accordion.propTypes = {
     children: CHILDREN_TYPE,
   })).isRequired,
   children: CHILDREN_TYPE,
-  customClass: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
+  className: CLASS_NAME_TYPE,
 };
 
 export default Accordion;

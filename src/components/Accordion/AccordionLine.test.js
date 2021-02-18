@@ -1,3 +1,4 @@
+import React, { useState as useStateMock } from 'react';
 import '@testing-library/jest-dom';
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
@@ -6,21 +7,25 @@ import AccordionLine from './AccordionLine';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useState: jest.fn(),
+}));
+
 const initialProps = {
   title: 'title',
   id: '00',
   children: 'accordion line',
-  onClick: () => {},
 };
 
 describe('<AccordionLine />', () => {
   let wrapper;
-
+  const setState = jest.fn();
   beforeEach(() => {
+    useStateMock.mockImplementation((init) => [init, setState]);
     wrapper = (props = {}) => shallow(
       <AccordionLine
         title={props.title}
-        onClick={props.onClick}
         id={props.id}
       >
         {props.children}
@@ -44,16 +49,14 @@ describe('<AccordionLine />', () => {
   });
 
   test('onClick AccordionLine', () => {
-    const onClickSpy = jest.fn();
     const props = {
       title: 'title',
       id: '01',
       children: 'accordion line',
-      onClick: onClickSpy,
     };
 
     const component = wrapper({ ...props });
     component.find('button').simulate('click');
-    expect(onClickSpy).toHaveBeenCalledTimes(1);
+    expect(setState).toHaveBeenCalledTimes(1);
   });
 });

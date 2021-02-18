@@ -5,4 +5,7 @@ export const CHILDREN_TYPE = PropTypes.oneOfType([
   PropTypes.node,
   PropTypes.string,
 ]);
-export const test = 0;
+export const CLASS_NAME_TYPE = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.object,
+]);
