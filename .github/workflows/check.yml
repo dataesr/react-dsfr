@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install
-        run: yarn --non-interactive --no-lockfile
+        run: npm ci
       - name: Build
-        run: yarn predeploy
+        run: npm run predeploy
       - name: Test
-        run: yarn test:nowatch
+        run: npm run test:nowatch
       - uses: act10ns/slack@v1
         with:
           status: ${{ job.status }}
