@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '@gouvfr/all/dist/css/all.min.css';
 import useFocusTrap from '../../hooks/useFocusTrap';
 import {
-  Title, Content, Footer, Close
+  Title, Content, Footer, Close,
 } from './subcomponents';
 /**
  * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
