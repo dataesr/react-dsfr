@@ -1,5 +1,7 @@
-import { forwardRef } from 'react';
+import { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
+import classNames from 'classnames';
 import '@gouvfr/all/dist/css/all.min.css';
 
 /**
@@ -14,33 +16,38 @@ const SearchBar = forwardRef((props, ref) => {
     label,
     buttonLabel,
     placeholder,
-    value,
-    onChange,
+    onSearch,
+    defaultValue,
   } = props;
-  const classes = (size === 'lg')
-    ? ['rf-search-bar rf-search-bar--lg', 'rf-btn rf-btn--lg']
-    : ['rf-search-bar', 'rf-btn'];
+  const [text, setText] = useState(defaultValue);
+  const inputId = v4();
+  const onKeyDown = (e) => (e.keyCode === 13) && onSearch(text);
+  const formClass = classNames('rf-search-bar', { 'rf-search-bar--lg': (size === 'lg') });
+  const buttonClass = classNames('rf-btn', { 'rf-btn--lg': (size === 'lg') });
   return (
-    <div className={classes[0]} id="searchbar">
-      <label className="rf-label" htmlFor="search-input">{label}</label>
+    <form role="search" className={formClass} data-testid="search-bar">
+      <label className="rf-label" htmlFor={inputId}>{label}</label>
       <input
         ref={ref}
         className="rf-input"
         placeholder={placeholder}
         type="search"
-        id="search-input"
-        value={value}
-        onChange={onChange}
+        id={inputId}
+        data-testid="search-input"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={onKeyDown}
       />
-      <button type="button" className={classes[1]} title={buttonLabel}>
+      <button type="button" onClick={() => onSearch(text)} className={buttonClass} title={buttonLabel}>
         {buttonLabel}
       </button>
-    </div>
+    </form>
   );
 });
 SearchBar.defaultProps = {
   size: 'md',
   placeholder: '',
+  defaultValue: '',
 };
 SearchBar.propTypes = {
   /**
@@ -56,17 +63,17 @@ SearchBar.propTypes = {
   */
   placeholder: PropTypes.string,
   /**
-  * A hint to complement the input label
+  * A function that handles search action. Input value is passed as prop.
   */
-  value: PropTypes.string.isRequired,
-  /**
-  * A function that handles value change
-  */
-  onChange: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
   /**
   * Controls the valid and error state
   */
   size: PropTypes.oneOf(['md', 'lg']),
+  /**
+  * An initial value for the search input
+  */
+  defaultValue: PropTypes.string,
 };
 
 export default SearchBar;

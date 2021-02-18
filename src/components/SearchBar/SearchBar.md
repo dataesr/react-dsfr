@@ -5,13 +5,8 @@ Choisissez la barre de recherche medium lorsqu'il y a des contraintes d'espace d
 Il peut également être spécifique à certains composants dans le cas de recherche contextuelle (exemple : recherche pour filtrer des listes ou un tableau de données).
 
 ```
-import { useState } from 'react';
-
-const [value, setValue] = useState('');
-
 <SearchBar
-  value={value}
-  onChange={e => setValue(e.target.value)}
+  onSearch={() => {}}
   label="SearchBar du gouvernement"
   placeholder="Rechercher dans..."
   buttonLabel="Rechercher"
@@ -22,14 +17,9 @@ const [value, setValue] = useState('');
 Choisissez la barre de recherche large pour présenter un moteur de recherche global à l’intérieur d'une page (exemple : mise en avant de la recherche depuis la home page, moteur de recherche sur la liste de résultats de recherche).
 
 ```
-import { useState } from 'react';
-
-const [value, setValue] = useState('');
-
 <SearchBar
   size="lg"
-  value={value}
-  onChange={e => setValue(e.target.value)}
+  onSearch={() => {}}
   label="SearchBar du gouvernement"
   placeholder="Rechercher dans..."
   buttonLabel="Rechercher"
@@ -57,4 +47,4 @@ Les règles d’accessibilité sur la barre de recherche :
 #### Contenu
 Pour le libellé du champ de saisie, utiliser un texte clair et concis qui définit le contexte de recherche à l'utilisateur (recherche globale ? recherche d’un type de contenu spécifiques ?…).
 
-Pour le libellé du bouton de recherche, nous préconisons par défaut d’utiliser le texte “Rechercher” qui est le plus clair pour l’utilisateur et respecte les règles d'écriture pour le contenu des boutons 🔗 .
+Pour le libellé du bouton de recherche, nous préconisons par défaut d’utiliser le texte “Rechercher” qui est le plus clair pour l’utilisateur et respecte les règles d'écriture pour le contenu des boutons.
