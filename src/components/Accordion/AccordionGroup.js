@@ -28,7 +28,7 @@ const AccordionGroup = ({ className, children }) => {
   });
 
   return (
-    <section className={classNames(className)}>
+    <section className={classNames(className)} data-testid="accordion-group">
       <ul className="rf-accordions-group">
         {childs}
       </ul>

@@ -1,60 +1,76 @@
-import PropTypes from 'prop-types';
-import parse from 'html-react-parser';
-import { v4 as uuidv4 } from 'uuid';
 import classnames from 'classnames';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
-import AccordionLine from './AccordionLine';
 
-/**
- * Condenser l'espace
- *
- * @visibleName Accordion
- */
-const Accordion = (props) => {
-  const { group, className, children } = props;
+const Accordion = ({
+  title, isExpanded, onClick, children, className, id,
+}) => {
+  const expandedLine = {
+    false: {
+      class: 'rf-collapse',
+      stateHeight: null,
+      aria: 'false',
+      expanded: false,
+    },
+    true: {
+      class: 'rf-collapse rf-collapse--expanded',
+      stateHeight: 'none',
+      aria: 'true',
+      expanded: true,
+    },
+  };
 
-  // TODO manage expanded by default
-  // TODO Group title style
-  // TODO Manage automatic close
-  const groupBody = group.map((line) => {
-    const id = uuidv4();
-    let lineChildren = line.children || null;
-    if (lineChildren && typeof line.children === 'string') {
-      lineChildren = parse(line.children);
-    }
-    return (
-      <AccordionLine
-        className={line.className}
-        key={id}
-        id={id}
-        title={line.title}
-      >
-        {lineChildren}
-      </AccordionLine>
-    );
-  });
+  const [collapse, setCollapse] = useState('0px');
+  const line = expandedLine[isExpanded];
+
+  useEffect(() => {
+    const lineElement = document.getElementById(`rf-accordion-${id}`);
+    setCollapse(`-${lineElement.getBoundingClientRect().height}px`);
+  }, [id]);
 
   return (
-    <section className={classnames(className)}>
-      {children}
-      <ul className="rf-accordions-group">
-        {groupBody}
-      </ul>
-    </section>
+    <li className={classnames(className)} data-testid="accordion">
+      <section className="rf-accordion">
+        <h3 className="rf-accordion__title">
+          <button
+            data-testid="accordion-button"
+            id={`button${id}`}
+            onClick={onClick}
+            type="button"
+            className="rf-accordion__btn"
+            aria-controls={`rf-accordion-${id}`}
+            aria-expanded={line.aria}
+          >
+            {title}
+          </button>
+        </h3>
+        <div
+          data-testid="accordion-div"
+          style={{ maxHeight: line.stateHeight, '--collapse': collapse }}
+          className={line.class}
+          id={`rf-accordion-${id}`}
+        >
+          {children}
+        </div>
+      </section>
+    </li>
   );
 };
 
 Accordion.defaultProps = {
-  children: '',
   className: '',
+  isExpanded: false,
+  onClick: () => {},
+  id: '',
 };
 
 Accordion.propTypes = {
-  group: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    children: CHILDREN_TYPE,
-  })).isRequired,
-  children: CHILDREN_TYPE,
+  isExpanded: PropTypes.bool,
+  onClick: PropTypes.func,
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  children: CHILDREN_TYPE.isRequired,
   className: CLASS_NAME_TYPE,
 };
 
