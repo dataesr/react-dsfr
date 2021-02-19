@@ -19,6 +19,7 @@ const Select = ({
   name,
   onChange,
   options,
+  selected,
 }) => {
   const selectClasses = classNames(
     'rf-select',
@@ -46,6 +47,7 @@ const Select = ({
         id={selectId}
         name={name}
         onChange={onChange}
+        value={selected}
       >
         {
           options.map((opt) => (
@@ -53,7 +55,7 @@ const Select = ({
               disabled={opt.disabled || false}
               hidden={opt.hidden || false}
               key={uuidv4()}
-              selected={opt.selected || false}
+              // selected={opt.selected || false}
               value={opt.value}
             >
               {opt.label}
@@ -76,6 +78,7 @@ Select.defaultProps = {
   messageType: '',
   name: null,
   onChange: () => {},
+  selected: '',
 };
 
 Select.propTypes = {
@@ -91,10 +94,10 @@ Select.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    selected: PropTypes.bool,
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
   })).isRequired,
+  selected: PropTypes.string,
 };
 
 export default Select;

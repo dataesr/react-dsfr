@@ -3,7 +3,7 @@ La liste déroule fournit une liste d’option parmi laquelle l’utilisateur pe
 
 ```jsx padded
   const options = [
-    {value: "", label: "- Select -", selected: true, disabled: true, hidden: true}, 
+    {value: "", label: "- Select -", disabled: true, hidden: true}, 
     {value: "1", label: "Burgers &amp; sandwiches"}, {value: "2", label: "Build your own"}, 
     {value: "3", label: "Friendly meals"}, 
     {value: "4", label: "Save menu &amp; more"}
@@ -19,7 +19,7 @@ L'état d’erreur est signalé par un changement de couleur et par l’appariti
 
 ```jsx padded
   const options = [
-    {value: "", label: "- Select -", selected: true, disabled: true, hidden: true}, 
+    {value: "", label: "- Select -", disabled: true, hidden: true}, 
     {value: "1", label: "Burgers &amp; sandwiches"}, {value: "2", label: "Build your own"}, 
     {value: "3", label: "Friendly meals"}, 
     {value: "4", label: "Save menu &amp; more"}
@@ -37,7 +37,7 @@ L'état succès est signalé par un changement de couleur et par l’apparition 
 Le message et le label sont liés par leurs attribut id et aria-describedby .
 ```jsx padded
   const options = [
-    {value: "", label: "- Select -", selected: true, disabled: true, hidden: true}, 
+    {value: "", label: "- Select -", disabled: true, hidden: true}, 
     {value: "1", label: "Burgers &amp; sandwiches"}, {value: "2", label: "Build your own"}, 
     {value: "3", label: "Friendly meals"}, 
     {value: "4", label: "Save menu &amp; more"}
@@ -53,7 +53,7 @@ Le message et le label sont liés par leurs attribut id et aria-describedby .
 L'état inactif indique que utilisateur ne peut pas interagir avec l'élément.
 ```jsx padded
   const options = [
-    {value: "", label: "- Select -", selected: true, disabled: true, hidden: true}, 
+    {value: "", label: "- Select -", disabled: true, hidden: true}, 
     {value: "1", label: "Burgers &amp; sandwiches"}, {value: "2", label: "Build your own"}, 
     {value: "3", label: "Friendly meals"}, 
     {value: "4", label: "Save menu &amp; more"}
@@ -68,7 +68,7 @@ L'état inactif indique que utilisateur ne peut pas interagir avec l'élément.
 Il est recommandé d’ajouter un texte d’aide sous le libellé afin de faciliter le choix de l’utilisateur. Il s’affiche sous le libellé du champ.
 ```jsx padded
   const options = [
-    {value: "", label: "- Select -", selected: true, disabled: true, hidden: true}, 
+    {value: "", label: "- Select -", disabled: true, hidden: true}, 
     {value: "1", label: "Burgers &amp; sandwiches"}, {value: "2", label: "Build your own"}, 
     {value: "3", label: "Friendly meals"}, 
     {value: "4", label: "Save menu &amp; more"}
