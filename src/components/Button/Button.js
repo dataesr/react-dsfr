@@ -7,11 +7,9 @@ import classnames from 'classnames';
  */
 const Button = (props) => {
   const {
-    size, secondary, disabled, title, icon, children, className,
+    size, secondary, disabled, title, icon, iconPosition, children, className,
   } = props;
-
   // TODO manage all icons from remix library
-  // TODO manage icon position left/right
   return (
     <button
       type="button"
@@ -19,7 +17,7 @@ const Button = (props) => {
         {
           [`rf-btn--icon rf-fi-${icon}`]: icon,
           'rf-btn--secondary': secondary,
-          'rf-btn--icon-left': children,
+          [`rf-btn--icon-${iconPosition}`]: icon && children,
         },
         `rf-btn--${size}`,
         className)}
@@ -38,9 +36,9 @@ Button.defaultProps = {
   size: 'md',
   secondary: false,
   disabled: false,
+  iconPosition: 'left',
   icon: '',
   children: '',
-
   className: '',
 };
 
@@ -48,6 +46,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.object,
