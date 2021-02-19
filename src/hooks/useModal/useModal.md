@@ -6,7 +6,7 @@ import useModal from './useModal';
 const backRef = useRef();
 const { Modal, show } = useModal({backRef});
 <>
-  <button ref={backRef} onClick={show}>
+  <button onClick={show}>
     Toggle modal
   </button>
   <Modal.Modal>

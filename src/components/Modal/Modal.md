@@ -18,28 +18,24 @@ const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
 const show = () => setIsOpen(true);
+
 const hide = () => {
-  setIsOpen(false)
+  setIsOpen(false);
   buttonRef.current.focus()
 };
-
 <>
-  <button ref={buttonRef} onClick={show}>open modal</button>
-  {
-    (isOpen) && (
-      <Modal hide={hide}>
-        <Modal.Title icon>I'm a title</Modal.Title>
-        <Modal.Content>blah blah</Modal.Content>
-        <Modal.Footer>
-          <Button title="Une action">blah</Button>
-        </Modal.Footer>
-      </Modal>
-    )
-  }
+  <button ref={buttonRef} onClick={show}>Ouvrir la modale</button>
+  <Modal isOpen={isOpen} hide={hide}>
+      <Modal.Title icon>Je suis le titre</Modal.Title>
+      <Modal.Content>Consequatur unde hic rerum facere sequi fugiat explicabo. Ullam quaerat officia aliquam reiciendis enim ducimus quam sapiente. Enim modi alias nihil. Blanditiis et temporibus voluptatem dolor deserunt cum ut. Nostrum voluptates totam quidem quas animi temporibus et maxime. Ab beatae tempore aliquam sed voluptates quidem eum in.</Modal.Content>
+      <Modal.Footer>
+          <Button title="Une action">Je suis un button</Button>
+      </Modal.Footer>
+  </Modal>
 </>
 ```
 
-Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
+Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue :
 ```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
@@ -54,17 +50,13 @@ const hide = () => {
 
 <>
   <button ref={buttonRef} onClick={show}>open modal</button>
-  {
-    (isOpen) && (
-      <Modal hide={hide}>
-        <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-        <Modal.Title icon>I'm a title</Modal.Title>
-        <Modal.Content>blah blah</Modal.Content>
-        <Modal.Footer>
-          <Button title="Une action">blah</Button>
-        </Modal.Footer>
-      </Modal>
-    )
-  }
+  <Modal isOpen={isOpen} hide={hide}>
+    <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
+    <Modal.Title icon>I'm a title</Modal.Title>
+    <Modal.Content>Im the content</Modal.Content>
+    <Modal.Footer>
+      <Button title="Une action">Button</Button>
+    </Modal.Footer>
+  </Modal>
 </>
 ```
