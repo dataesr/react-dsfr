@@ -11,6 +11,7 @@ const initialProps = {
   icon: 'alert-fill',
   secondary: true,
   children: 'test button',
+  iconPosition: 'right',
 };
 
 describe('<Button />', () => {
@@ -33,6 +34,7 @@ describe('<Button />', () => {
       .create(
         <Button
           icon={initialProps.icon}
+          iconPosition={initialProps.iconPosition}
           secondary={initialProps.secondary}
           size={initialProps.size}
           title={initialProps.title}
