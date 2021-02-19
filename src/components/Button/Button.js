@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../utils/variables';
 
 /**
  *
@@ -7,7 +8,7 @@ import classnames from 'classnames';
  */
 const Button = (props) => {
   const {
-    size, secondary, disabled, title, icon, children, className,
+    size, secondary, disabled, title, icon, children, onClick, className,
   } = props;
 
   // TODO manage all icons from remix library
@@ -15,6 +16,7 @@ const Button = (props) => {
   return (
     <button
       type="button"
+      onClick={onClick}
       className={classnames('rf-btn',
         {
           [`rf-btn--icon rf-fi-${icon}`]: icon,
@@ -26,10 +28,8 @@ const Button = (props) => {
       title={title}
       disabled={disabled}
     >
-      {
-        icon && children ? (<span className="sr-only">{children}</span>)
-          : children
-      }
+      {icon && children ? (<span className="sr-only">{children}</span>)
+        : children}
     </button>
   );
 };
@@ -39,8 +39,8 @@ Button.defaultProps = {
   secondary: false,
   disabled: false,
   icon: '',
+  onClick: () => {},
   children: '',
-
   className: '',
 };
 
@@ -48,12 +48,9 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
+  onClick: PropTypes.func,
   title: PropTypes.string.isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.string,
-  ]),
-
+  className: CLASS_NAME_TYPE,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
