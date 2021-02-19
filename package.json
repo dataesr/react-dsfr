@@ -15,8 +15,8 @@
   "dependencies": {
     "@gouvfr/all": "^0.5.3",
     "classnames": "^2.2.6",
-    "uuid": "^8.3.2",
-    "html-react-parser": "^1.2.4"
+    "html-react-parser": "^1.2.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.15",
@@ -30,6 +30,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint-config-airbnb": "^18.2.1",
+    "gh-pages": "^3.1.0",
     "install": "^0.13.0",
     "jest-dom": "^4.0.0",
     "prop-types": "^15.7.2",
@@ -56,7 +57,9 @@
     "predeploy": "styleguidist build",
     "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-rfds.git",
     "guide": "npx styleguidist server",
-    "test": "react-scripts test --watchAll"
+    "test:dev": "react-scripts test --watchAll",
+    "test:nowatch": "react-scripts test --watchAll=false",
+    "test:coverage": "CI=true npm test -- --coverage"
   },
   "eslintConfig": {
     "extends": [

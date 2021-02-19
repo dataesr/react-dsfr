@@ -1,18 +1,18 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import '@gouvfr/tags/dist/css/tags.min.css';
-
 
 /**
- * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.
+ * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
+ * Il aide les utilisateurs à rechercher et à trouver facilement une information.
  *
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPlace, 
+  as, children, size, href, title, target, icon, iconPosition,
 }) => {
   const HtmlTag = `${as}`;
-  let attribute = { className: `rf-tag rf-tag--${size} ${(icon) ? icon : ''} ${(icon) ? 'rf-tag--icon-'+iconPlace : '' }` };
+  let attribute = {
+    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPosition}` : ''}`,
+  };
 
   if (as === 'a') {
     attribute = { ...attribute, href, target };
@@ -26,11 +26,7 @@ const Tag = ({
     attribute = { ...attribute, title };
   }
 
-  return (
-    <HtmlTag {...attribute}>
-      {children}
-    </HtmlTag>
-  );
+  return (<HtmlTag {...attribute}>{children}</HtmlTag>);
 };
 
 export default Tag;
@@ -42,7 +38,7 @@ Tag.defaultProps = {
   title: '',
   target: '_self',
   icon: '',
-  iconPlace: 'right'
+  iconPosition: 'right',
 };
 
 Tag.propTypes = {
@@ -53,5 +49,5 @@ Tag.propTypes = {
   title: PropTypes.string,
   target: PropTypes.string,
   icon: PropTypes.string,
-  iconPlace: PropTypes.oneOf(['left', 'right']),
+  iconPosition: PropTypes.oneOf(['left', 'right']),
 };

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly 1`] = `
+<button
+  className="rf-btn rf-btn--icon rf-fi-alert-fill rf-btn--secondary rf-btn--icon-left rf-btn--lg"
+  disabled={false}
+  title="title"
+  type="button"
+>
+  <span
+    className="sr-only"
+  >
+    test button
+  </span>
+</button>
+`;

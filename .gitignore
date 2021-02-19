@@ -4,12 +4,10 @@
 /.pnp
 .pnp.js
 
-# testing
-__snapshots__
-
 # production
 /build
 /dist
+/coverage
 
 # misc
 .DS_Store
