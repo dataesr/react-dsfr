@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import className from 'classnames';
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
  * Il aide les utilisateurs à rechercher et à trouver facilement une information.
@@ -10,39 +10,37 @@ const Tag = ({
   as, children, size, href, title, target, icon, iconPosition,
 }) => {
   const HtmlTag = `${as}`;
-  let attribute = {
-    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPosition}` : ''}`,
-  };
+  const classes = className('rf-tag', {
+    [`rf-tag--${size}`]: size,
+    [`rf-fi-${icon}`]: icon,
+    [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
+  });
 
-  if (as === 'a') {
-    attribute = { ...attribute, href, target };
-
-    if (target === '_blank') {
-      attribute = { ...attribute, rel: 'noopener noreferer' };
-    }
-  }
-
-  if (title) {
-    attribute = { ...attribute, title };
-  }
-
-  return (<HtmlTag {...attribute}>{children}</HtmlTag>);
+  return (
+    <HtmlTag
+      className={classes}
+      title={title || undefined}
+      href={href || undefined}
+      target={target || undefined}
+      rel={target === '_blank' ? 'noopener noreferer' : undefined}
+    >
+      {children}
+    </HtmlTag>
+  );
 };
-
-export default Tag;
 
 Tag.defaultProps = {
   as: 'p',
   size: 'md',
-  href: '#',
+  href: '',
   title: '',
-  target: '_self',
+  target: '',
   icon: '',
   iconPosition: 'right',
 };
 
 Tag.propTypes = {
-  as: PropTypes.oneOf(['a', 'li', 'p']),
+  as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['sm', 'md']),
   href: PropTypes.string,
@@ -51,3 +49,5 @@ Tag.propTypes = {
   icon: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };
+
+export default Tag;
