@@ -21,7 +21,7 @@ const useModal = ({ backRef }) => {
   };
 
   const MyModal = ({ children, size }) => (
-    (isOpen) ? <Modal size={size} hide={hide}>{children}</Modal> : null
+    (isOpen) ? <Modal isOpen={isOpen} size={size} hide={hide}>{children}</Modal> : null
   );
 
   MyModal.propTypes = {
