@@ -39,5 +39,5 @@
 ```
 
 ```jsx
-<Button icon="alert-fill" right title="title">icon on the right</Button>
+<Button icon="alert-fill" iconPosition='right' title="title">icon on the right</Button>
 ```
