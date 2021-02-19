@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -38,7 +37,8 @@ const Select = ({
           {label}
           {hint && <span className="rf-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
         </label>
-      )}
+      )
+      }
       <select
         className={selectClasses}
         data-testid="select"
