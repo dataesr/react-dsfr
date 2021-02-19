@@ -1,42 +1,48 @@
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../utils/variables';
 
 /**
- * Le lien permet la navigation entre une page et un autre contenu
- * au sein de la même page, du même site ou externe.
+ * Navigation
  *
  * @visibleName Links
  */
 const Link = ({
-  children, href, title, target, isSimple, icon, iconPlace,
+  children, href, title, target, isSimple, icon, className, iconPosition,
 }) => (
   <a
     href={href}
     title={title}
     target={target}
     rel={(target === '_blank') ? 'noopener noreferer' : null}
-    className={`${(isSimple) ? 'rf-link' : ''} ${(icon) || ''} ${(icon) ? `rf-link--icon-${iconPlace}` : ''}`}
+    className={classnames(icon, className, {
+      'rf-link': isSimple,
+      'rf-link--icon-left': !isSimple && icon && children,
+      [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
+    })}
   >
     {children}
   </a>
 );
 
-export default Link;
-
 Link.defaultProps = {
-  href: '',
+  className: '',
   title: '',
   target: '_self',
   isSimple: false,
   icon: '',
-  iconPlace: 'right',
+  iconPosition: 'right',
 };
 
 Link.propTypes = {
+  className: CLASS_NAME_TYPE,
   children: PropTypes.string.isRequired,
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
   title: PropTypes.string,
   target: PropTypes.string,
   isSimple: PropTypes.bool,
   icon: PropTypes.string,
-  iconPlace: PropTypes.string,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
 };
+
+export default Link;
