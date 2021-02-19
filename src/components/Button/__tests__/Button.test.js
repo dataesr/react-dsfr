@@ -22,6 +22,7 @@ describe('<Button />', () => {
       <Button
         size={props.size}
         title={props.title}
+        onClick={props.onClick}
       >
         {props.children}
       </Button>,
@@ -54,5 +55,19 @@ describe('<Button />', () => {
 
     const component = wrapper({ ...props });
     expect(component.find('button').text()).toBe('basic sm button');
+  });
+
+  test('onClick Button', () => {
+    const mockClick = jest.fn();
+    const props = {
+      size: 'sm',
+      title: 'title',
+      children: 'basic sm button',
+      onClick: mockClick,
+    };
+
+    const component = wrapper({ ...props });
+    component.find('button').simulate('click');
+    expect(mockClick).toHaveBeenCalled();
   });
 });

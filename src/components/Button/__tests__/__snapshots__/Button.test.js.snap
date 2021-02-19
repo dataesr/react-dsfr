@@ -4,6 +4,7 @@ exports[`<Button /> renders correctly 1`] = `
 <button
   className="rf-btn rf-btn--icon rf-fi-alert-fill rf-btn--secondary rf-btn--icon-right rf-btn--lg"
   disabled={false}
+  onClick={[Function]}
   title="title"
   type="button"
 >
