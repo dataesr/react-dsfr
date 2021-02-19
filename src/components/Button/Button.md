@@ -37,3 +37,7 @@
 ```jsx
 <Button icon="alert-fill" title="title"></Button>
 ```
+
+```jsx
+<Button icon="alert-fill" right title="title">icon on the right</Button>
+```
