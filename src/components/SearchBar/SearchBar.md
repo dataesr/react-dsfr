@@ -1,9 +1,5 @@
 ### Barre de recherche Medium
 
-Choisissez la barre de recherche medium lorsqu'il y a des contraintes d'espace dans vos interfaces. Le cas d’usage principal est l’accès à la recherche globale depuis le header.
-
-Il peut également être spécifique à certains composants dans le cas de recherche contextuelle (exemple : recherche pour filtrer des listes ou un tableau de données).
-
 ```jsx
 <SearchBar
   onSearch={() => {}}
@@ -14,7 +10,6 @@ Il peut également être spécifique à certains composants dans le cas de reche
 ```
 
 ### Barre de recherche Large
-Choisissez la barre de recherche large pour présenter un moteur de recherche global à l’intérieur d'une page (exemple : mise en avant de la recherche depuis la home page, moteur de recherche sur la liste de résultats de recherche).
 
 ```jsx
 <SearchBar
@@ -25,9 +20,6 @@ Choisissez la barre de recherche large pour présenter un moteur de recherche gl
   buttonLabel="Rechercher"
 />
 ```
-
-### Barre de recherche responsive
-Pour l’affichage mobile/tablette, nous proposons une seule barre de recherche quelque soit la barre de recherche choisie pour le desktop. À noter que l’adaptation responsive se fera automatiquement, pour la barre de recherche MD et LG.
 
 ### Règles d’utilisation
 
