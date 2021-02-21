@@ -1,4 +1,4 @@
-name: Check build & tests
+name: check build & tests
 
 on: push
 
