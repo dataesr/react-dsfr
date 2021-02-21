@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { v4 as uuidv4 } from 'uuid';
-import SearchBar from '..';
+import SearchBar from '../index';
 
 jest.mock('uuid', () => ({
   v4: jest.fn(),

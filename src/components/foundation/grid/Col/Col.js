@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace, getColSize } from '../../../utils/getters';
+import { getSpace, getColSize } from '../../../../utils/getters';
 
 /**
  * Design system Column
