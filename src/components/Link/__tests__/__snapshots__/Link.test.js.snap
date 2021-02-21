@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> renders correctly 1`] = `
+<a
+  className="alert-fill rf-link--icon-left"
+  href="/page"
+  rel={null}
+  target="_self"
+  title="title"
+>
+  test button
+</a>
+`;

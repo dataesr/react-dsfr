@@ -53,11 +53,7 @@ Button.propTypes = {
   title: PropTypes.string.isRequired,
   className: CLASS_NAME_TYPE,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.string,
-  ]),
+  children: PropTypes.string,
 };
 
 export default Button;
