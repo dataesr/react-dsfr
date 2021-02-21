@@ -35,6 +35,9 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
+  /**
+   * One of: string, object
+   */
   className: CLASS_NAME_TYPE,
   children: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,

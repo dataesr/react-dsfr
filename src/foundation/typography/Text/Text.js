@@ -1,41 +1,48 @@
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
- * Design system Text
  *
  * @visibleName Text
  */
 const Text = ({
-  as, size, alt, children,
+  as, size, alt, className, children,
 }) => {
   const HtmlTag = `${as}`;
-  const isAlt = alt ? ' rf-text--alt' : '';
-  const textSize = (size !== 'md') ? `--${size}` : '';
-  return <HtmlTag className={`rf-text${textSize}${isAlt}`}>{children}</HtmlTag>;
+  return (
+    <HtmlTag className={classnames({
+      'rf-text--alt': size !== 'lead' && alt,
+      [`rf-text--${size}`]: size !== 'md',
+      'rf-text': size === 'md',
+    }, { className })}
+    >
+      {children}
+    </HtmlTag>
+  );
 };
 
 Text.propTypes = {
+  as: PropTypes.oneOf(['p', 'span']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'lead']),
   /**
-  * The actual text to display
+  * If true Spectral is used instead of Marianne.
   */
+  alt: PropTypes.bool,
   children: PropTypes.string.isRequired,
+  /**
+   * One of: string, object
+   */
+  className: CLASS_NAME_TYPE,
   /**
   * html tag to render
   */
-  as: PropTypes.oneOf(['p', 'span']),
-  /**
-  * Text size
-  */
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'lead']),
-  /**
-  * If true Spactral is used instead of Marianne.
-  */
-  alt: PropTypes.bool,
 };
 Text.defaultProps = {
   as: 'p',
   size: 'md',
   alt: false,
+  className: '',
 };
 
 export default Text;

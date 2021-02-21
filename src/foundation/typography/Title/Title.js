@@ -1,41 +1,39 @@
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
- * Design system Title
  *
  * @visibleName Title
  */
 const Title = ({
-  as, size, children, displaySize,
+  as, look, children, className,
 }) => {
   const HtmlTag = `${as}`;
-  const display = (displaySize !== 'md') ? `rf-text--${displaySize}` : 'rf-text';
-  const textSize = (size && size !== as) ? `rf-${size}` : `rf-${as}`;
-  return <HtmlTag className={(displaySize) ? `${display}` : `${textSize}`}>{children}</HtmlTag>;
+  const textLook = (look && look !== as) ? `rf-${look}` : `rf-${as}`;
+  return (
+    <HtmlTag className={classnames(className, textLook)}>
+      {children}
+    </HtmlTag>
+  );
 };
 
 Title.propTypes = {
-  /**
-  * The actual title text to display
-  */
   children: PropTypes.string.isRequired,
+  /**
+   * One of: string, object
+   */
+  className: CLASS_NAME_TYPE,
   /**
   * html tag to render
   */
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  /**
-  * Modify the size of the title
-  */
-  size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  /**
-  * Alternative text sizes for display styled titles.
-  */
-  displaySize: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'lead']),
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
+  look: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
 };
+
 Title.defaultProps = {
-  as: 'h1',
-  size: null,
-  displaySize: null,
+  look: '',
+  className: '',
 };
 
 export default Title;

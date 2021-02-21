@@ -52,9 +52,18 @@ Accordion.defaultProps = {
 Accordion.propTypes = {
   group: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
+    /**
+     * One of: node, arrayOf(node), string
+     */
     children: CHILDREN_TYPE,
   })).isRequired,
+  /**
+   * One of: node, arrayOf(node), string
+   */
   children: CHILDREN_TYPE,
+  /**
+   * One of: string, object
+   */
   className: CLASS_NAME_TYPE,
 };
 

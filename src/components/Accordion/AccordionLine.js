@@ -57,7 +57,13 @@ AccordionLine.defaultProps = {
 AccordionLine.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  /**
+   * One of: node, arrayOf(node), string
+   */
   children: CHILDREN_TYPE.isRequired,
+  /**
+   * One of: string, object
+   */
   className: CLASS_NAME_TYPE,
 };
 
