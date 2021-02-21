@@ -56,6 +56,9 @@ SearchBar.propTypes = {
   label: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
+  /**
+   * A function that handles search action. Input value is passed as prop.
+   */
   onSearch: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['md', 'lg']),
   defaultValue: PropTypes.string,
