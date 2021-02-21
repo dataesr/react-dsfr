@@ -80,7 +80,6 @@ const ModalDialog = ({
 class Modal extends Component {
   constructor(props) {
     super(props);
-    this.hide = this.hide.bind(this);
     this.rootModal = document.createElement('div');
     this.rootModal.id = `root-modal-${uuidv4()}`;
   }
@@ -89,23 +88,15 @@ class Modal extends Component {
     document.body.appendChild(this.rootModal);
   }
 
-  hide() {
-    const {
-      hide,
-    } = this.props;
-
-    hide();
-  }
-
   render() {
     const {
-      size, children, isOpen,
+      size, children, isOpen, hide,
     } = this.props;
 
     return ((isOpen) && (
     <ModalDialog
       size={size}
-      hide={this.hide}
+      hide={hide}
       target={this.rootModal}
     >
       {children}
