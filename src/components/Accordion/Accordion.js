@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
 
 const Accordion = ({
-  title, isExpanded, onClick, children, className, id,
+  title, titleAs, isExpanded, onClick, children, className, id,
 }) => {
+  const TitleTag = `${titleAs}`;
   const expandedLine = {
     false: {
       class: 'rf-collapse',
@@ -32,7 +33,7 @@ const Accordion = ({
   return (
     <li className={classnames(className)} data-testid="accordion">
       <section className="rf-accordion">
-        <h3 className="rf-accordion__title">
+        <TitleTag className="rf-accordion__title">
           <button
             data-testid="accordion-button"
             id={`button${id}`}
@@ -44,7 +45,7 @@ const Accordion = ({
           >
             {title}
           </button>
-        </h3>
+        </TitleTag>
         <div
           data-testid="accordion-div"
           style={{ maxHeight: line.stateHeight, '--collapse': collapse }}
@@ -59,6 +60,7 @@ const Accordion = ({
 };
 
 Accordion.defaultProps = {
+  titleAs: 'p',
   className: '',
   isExpanded: false,
   onClick: () => {},
@@ -66,8 +68,21 @@ Accordion.defaultProps = {
 };
 
 Accordion.propTypes = {
+  /**
+   * Html tag to render in accordion title.
+   */
+  titleAs: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  /**
+   * @ignore
+   */
   isExpanded: PropTypes.bool,
+  /**
+   * @ignore
+   */
   onClick: PropTypes.func,
+  /**
+   * @ignore
+   */
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
   children: CHILDREN_TYPE.isRequired,

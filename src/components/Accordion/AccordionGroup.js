@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
 
@@ -7,7 +8,8 @@ import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
  *
  * @visibleName Accordion
  */
-const AccordionGroup = ({ className, children }) => {
+const AccordionGroup = ({ className, children, as }) => {
+  const HtmlTag = `${as}`;
   const [isExpanded, setIsExpanded] = useState('');
   const expand = (e) => {
     if (e.target.id.slice(6) === isExpanded) {
@@ -28,20 +30,25 @@ const AccordionGroup = ({ className, children }) => {
   });
 
   return (
-    <section className={classNames(className)} data-testid="accordion-group">
+    <HtmlTag className={classNames(className)} data-testid="accordion-group">
       <ul className="rf-accordions-group">
         {childs}
       </ul>
-    </section>
+    </HtmlTag>
   );
 };
 
 AccordionGroup.defaultProps = {
+  as: 'div',
   children: '',
   className: '',
 };
 
 AccordionGroup.propTypes = {
+  /**
+   * Html tag to render accordion wrapper.
+   */
+  as: PropTypes.oneOf(['div', 'section']),
   children: CHILDREN_TYPE,
   className: CLASS_NAME_TYPE,
 };
