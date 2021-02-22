@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should render accordion properly 1`] = `
+<div
+  class="custom-class"
+  data-testid="accordion-group"
+>
+  <ul
+    class="rf-accordions-group"
+  >
+    <li
+      class=""
+      data-testid="accordion"
+    >
+      <section
+        class="rf-accordion"
+      >
+        <p
+          class="rf-accordion__title"
+        >
+          <button
+            aria-controls="rf-accordion-0"
+            aria-expanded="false"
+            class="rf-accordion__btn"
+            data-testid="accordion-button"
+            id="button0"
+            type="button"
+          >
+            first line accordion
+          </button>
+        </p>
+        <div
+          class="rf-collapse"
+          data-testid="accordion-div"
+          id="rf-accordion-0"
+          style="--collapse: -0px;"
+        >
+          Anything I want
+        </div>
+      </section>
+    </li>
+    <li
+      class=""
+      data-testid="accordion"
+    >
+      <section
+        class="rf-accordion"
+      >
+        <p
+          class="rf-accordion__title"
+        >
+          <button
+            aria-controls="rf-accordion-1"
+            aria-expanded="false"
+            class="rf-accordion__btn"
+            data-testid="accordion-button"
+            id="button1"
+            type="button"
+          >
+            first line accordion
+          </button>
+        </p>
+        <div
+          class="rf-collapse"
+          data-testid="accordion-div"
+          id="rf-accordion-1"
+          style="--collapse: -0px;"
+        >
+          Anything I want
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
+`;
