@@ -32,7 +32,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-  look: '',
+  look: 'h1',
   className: '',
 };
 

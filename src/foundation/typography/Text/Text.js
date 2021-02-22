@@ -11,11 +11,11 @@ const Text = ({
 }) => {
   const HtmlTag = `${as}`;
   return (
-    <HtmlTag className={classnames({
+    <HtmlTag className={classnames(className, {
       'rf-text--alt': size !== 'lead' && alt,
       [`rf-text--${size}`]: size !== 'md',
       'rf-text': size === 'md',
-    }, { className })}
+    })}
     >
       {children}
     </HtmlTag>
