@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import className from 'classnames';
+import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
+
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
  * Il aide les utilisateurs à rechercher et à trouver facilement une information.
@@ -7,10 +9,10 @@ import className from 'classnames';
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPosition,
+  as, children, size, href, title, target, icon, iconPosition, className,
 }) => {
   const HtmlTag = `${as}`;
-  const classes = className('rf-tag', {
+  const classes = classNames('rf-tag', className, {
     [`rf-tag--${size}`]: size,
     [`rf-fi-${icon}`]: icon,
     [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
@@ -30,6 +32,7 @@ const Tag = ({
 };
 
 Tag.defaultProps = {
+  className: '',
   as: 'p',
   size: 'md',
   href: '',
@@ -40,6 +43,7 @@ Tag.defaultProps = {
 };
 
 Tag.propTypes = {
+  className: CLASS_NAME_TYPE,
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['sm', 'md']),
