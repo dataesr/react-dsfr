@@ -1,56 +1,62 @@
-import Enzyme, { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
-import { v4 as uuidv4 } from 'uuid';
-import Accordion from '../Accordion';
-
-jest.mock('uuid', () => ({
-  v4: jest.fn(),
-}));
-
-Enzyme.configure({ adapter: new Adapter() });
-
-const initialProps = {
-  group: [{ title: 'title', children: 'content line' }],
-  children: 'Title',
-};
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Accordion, AccordionGroup } from '..';
 
 describe('<Accordion />', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
-    wrapper = (props = {}) => shallow(
-      <Accordion group={props.group}>
-        {props.children}
-      </Accordion>,
+  it('should render accordion properly', () => {
+    render(
+      <AccordionGroup className="custom-class">
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+      </AccordionGroup>,
     );
+    const group = screen.getByTestId('accordion-group');
+    const items = screen.getAllByTestId('accordion');
+    expect(items).toHaveLength(2);
+    expect(group).toMatchSnapshot();
   });
 
-  afterEach(() => {
-    jest.resetAllMocks();
+  it('should toggle on click', () => {
+    render(
+      <AccordionGroup className="custom-class">
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+      </AccordionGroup>,
+    );
+    const item = screen.getAllByTestId('accordion')[0];
+    expect(item.isExpanded).toBeFalsy();
+    const button = screen.getAllByTestId('accordion-button')[0];
+    const itemDiv = screen.getAllByTestId('accordion-div')[0];
+    expect(itemDiv.className).toBe('rf-collapse');
+    fireEvent.click(button);
+    expect(itemDiv.className).toBe('rf-collapse rf-collapse--expanded');
+    fireEvent.click(button);
+    expect(itemDiv.className).toBe('rf-collapse');
   });
-
-  it('renders correctly', () => {
-    const component = renderer
-      .create(
-        <Accordion
-          group={initialProps.group}
-        >
-          {initialProps.children}
-        </Accordion>,
-      )
-      .toJSON();
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders Accordion', () => {
-    const props = {
-      group: [{ title: 'title', children: 'test children' }],
-      children: 'Title Group',
-    };
-
-    const component = wrapper({ ...props });
-    expect(component.find('.rf-accordions-group')).toHaveLength(1);
+  it('should toggle on click another accordion', () => {
+    render(
+      <AccordionGroup className="custom-class">
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+        <Accordion title="first line accordion">
+          Anything I want
+        </Accordion>
+      </AccordionGroup>,
+    );
+    const buttons = screen.getAllByTestId('accordion-button');
+    const itemDivs = screen.getAllByTestId('accordion-div');
+    fireEvent.click(buttons[0]);
+    expect(itemDivs[0].className).toBe('rf-collapse rf-collapse--expanded');
+    fireEvent.click(buttons[1]);
+    expect(itemDivs[0].className).toBe('rf-collapse');
+    expect(itemDivs[1].className).toBe('rf-collapse rf-collapse--expanded');
   });
 });

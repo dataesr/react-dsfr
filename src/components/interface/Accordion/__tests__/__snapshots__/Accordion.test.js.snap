@@ -1,46 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Accordion /> renders correctly 1`] = `
-<section
-  className=""
+exports[`<Accordion /> should render accordion properly 1`] = `
+<div
+  class="custom-class"
+  data-testid="accordion-group"
 >
-  Title
   <ul
-    className="rf-accordions-group"
+    class="rf-accordions-group"
   >
     <li
-      className=""
+      class=""
+      data-testid="accordion"
     >
       <section
-        className="rf-accordion"
+        class="rf-accordion"
       >
-        <h3
-          className="rf-accordion__title"
+        <p
+          class="rf-accordion__title"
         >
           <button
-            aria-controls="rf-accordion-xxxxxxx"
+            aria-controls="rf-accordion-0"
             aria-expanded="false"
-            className="rf-accordion__btn"
-            onClick={[Function]}
+            class="rf-accordion__btn"
+            data-testid="accordion-button"
+            id="button0"
             type="button"
           >
-            title
+            first line accordion
           </button>
-        </h3>
+        </p>
         <div
-          className="rf-collapse"
-          id="rf-accordion-xxxxxxx"
-          style={
-            Object {
-              "--collapse": "0px",
-              "maxHeight": null,
-            }
-          }
+          class="rf-collapse"
+          data-testid="accordion-div"
+          id="rf-accordion-0"
+          style="--collapse: -0px;"
         >
-          content line
+          Anything I want
+        </div>
+      </section>
+    </li>
+    <li
+      class=""
+      data-testid="accordion"
+    >
+      <section
+        class="rf-accordion"
+      >
+        <p
+          class="rf-accordion__title"
+        >
+          <button
+            aria-controls="rf-accordion-1"
+            aria-expanded="false"
+            class="rf-accordion__btn"
+            data-testid="accordion-button"
+            id="button1"
+            type="button"
+          >
+            first line accordion
+          </button>
+        </p>
+        <div
+          class="rf-collapse"
+          data-testid="accordion-div"
+          id="rf-accordion-1"
+          style="--collapse: -0px;"
+        >
+          Anything I want
         </div>
       </section>
     </li>
   </ul>
-</section>
+</div>
 `;
