@@ -1,0 +1,25 @@
+import PropTypes from 'prop-types';
+import '@gouvfr/all/dist/css/all.min.css';
+
+const ModalClose = ({ hide, title, children }) => (
+  <button
+    className="rf-link--close rf-link"
+    type="button"
+    onClick={hide}
+    title={title}
+    aria-controls="rf-modal"
+  >
+    {children}
+  </button>
+);
+ModalClose.propTypes = {
+  children: PropTypes.string,
+  title: PropTypes.string,
+  hide: PropTypes.func.isRequired,
+};
+ModalClose.defaultProps = {
+  children: 'Fermer',
+  title: 'Fermer la fenêtre modale',
+};
+
+export default ModalClose;
