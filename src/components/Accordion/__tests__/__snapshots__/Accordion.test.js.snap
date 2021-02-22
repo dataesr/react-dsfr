@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should render accordion properly 1`] = `
-<section
+<div
   class="custom-class"
   data-testid="accordion-group"
 >
@@ -15,7 +15,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
       <section
         class="rf-accordion"
       >
-        <h3
+        <p
           class="rf-accordion__title"
         >
           <button
@@ -28,7 +28,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           >
             first line accordion
           </button>
-        </h3>
+        </p>
         <div
           class="rf-collapse"
           data-testid="accordion-div"
@@ -46,7 +46,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
       <section
         class="rf-accordion"
       >
-        <h3
+        <p
           class="rf-accordion__title"
         >
           <button
@@ -59,7 +59,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           >
             first line accordion
           </button>
-        </h3>
+        </p>
         <div
           class="rf-collapse"
           data-testid="accordion-div"
@@ -71,5 +71,5 @@ exports[`<Accordion /> should render accordion properly 1`] = `
       </section>
     </li>
   </ul>
-</section>
+</div>
 `;
