@@ -26,7 +26,6 @@ exports[`<Modal /> should render modal properly 1`] = `
             <button
               aria-controls="rf-modal"
               class="rf-link--close rf-link"
-              target="_self"
               title="Close the modal window"
               type="button"
             >

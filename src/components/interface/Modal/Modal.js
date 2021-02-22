@@ -1,7 +1,7 @@
 import { Component, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import useFocusTrap from '../../hooks/useFocusTrap';
+import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalTitle from './ModalTitle';
 import ModalContent from './ModalContent';
 import ModalFooter from './ModalFooter';

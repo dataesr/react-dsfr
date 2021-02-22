@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import { v4 as uuidv4 } from 'uuid';
 import classnames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 import AccordionLine from './AccordionLine';
 
 /**
