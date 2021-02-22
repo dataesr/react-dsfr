@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 
 const AccordionLine = (props) => {
   const {

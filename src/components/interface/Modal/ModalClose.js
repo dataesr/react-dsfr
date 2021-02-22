@@ -8,7 +8,6 @@ const ModalClose = ({ hide, title, children }) => (
     onClick={hide}
     title={title}
     aria-controls="rf-modal"
-    target="_self"
   >
     {children}
   </button>
