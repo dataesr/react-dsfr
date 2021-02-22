@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CLASS_NAME_TYPE } from '../../../../utils/variables';
 
 /**
  *
- * @visibleName TitleAlt
+ * @visibleName TitleDisplay
  */
-const TitleAlt = ({
+const TitleDisplay = ({
   as, size, children, className,
 }) => {
   const HtmlTag = `${as}`;
@@ -21,7 +21,7 @@ const TitleAlt = ({
   );
 };
 
-TitleAlt.propTypes = {
+TitleDisplay.propTypes = {
   children: PropTypes.string.isRequired,
   /**
    * One of: string, object
@@ -34,9 +34,9 @@ TitleAlt.propTypes = {
   size: PropTypes.oneOf(['xl', 'lg', 'md', 'sm', 'xs']).isRequired,
 };
 
-TitleAlt.defaultProps = {
+TitleDisplay.defaultProps = {
   as: 'h1',
   className: '',
 };
 
-export default TitleAlt;
+export default TitleDisplay;

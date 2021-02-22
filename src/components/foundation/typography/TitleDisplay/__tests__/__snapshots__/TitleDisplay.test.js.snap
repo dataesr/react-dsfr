@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TitleAlt /> renders correctly 1`] = `
+exports[`<TitleDisplay /> renders correctly 1`] = `
 <h2
   className="rf-display-xl"
 >

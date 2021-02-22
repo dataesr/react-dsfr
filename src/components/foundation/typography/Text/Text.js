@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CLASS_NAME_TYPE } from '../../../../utils/variables';
 
 /**
  *
@@ -23,6 +23,9 @@ const Text = ({
 };
 
 Text.propTypes = {
+  /**
+  * html tag to render
+  */
   as: PropTypes.oneOf(['p', 'span']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'lead']),
   /**
@@ -34,9 +37,6 @@ Text.propTypes = {
    * One of: string, object
    */
   className: CLASS_NAME_TYPE,
-  /**
-  * html tag to render
-  */
 };
 Text.defaultProps = {
   as: 'p',
