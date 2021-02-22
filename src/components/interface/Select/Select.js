@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-// import '@gouvfr/selects/dist/css/selects.min.css';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  * La liste déroulante permet à un utilisateur de choisir un élément dans une liste donnée.
  *
- * @visibleName Liste déroulante - Select
+ * @visibleName Select
  */
 const Select = ({
   className,
@@ -24,11 +24,14 @@ const Select = ({
   const selectClasses = classNames(
     'rf-select',
     className,
-    `${(messageType ? `rf-select--${messageType}` : '')}`,
+    { [`rf-select--${messageType}`]: messageType },
   );
   const selectId = id || uuidv4();
   const messageId = uuidv4();
-  const divClasses = classNames(`${(messageType ? `rf-select-group rf-select-group--${messageType}` : '')}`);
+  const divClasses = classNames(
+    'rf-select-group',
+    { [`rf-select-group--${messageType}`]: messageType },
+  );
 
   return (
     <div className={divClasses}>
@@ -82,7 +85,7 @@ Select.defaultProps = {
 };
 
 Select.propTypes = {
-  className: PropTypes.string,
+  className: CLASS_NAME_TYPE,
   disabled: PropTypes.bool,
   hint: PropTypes.string,
   id: PropTypes.string,
