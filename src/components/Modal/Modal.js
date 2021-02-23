@@ -88,6 +88,10 @@ class Modal extends Component {
     document.body.appendChild(this.rootModal);
   }
 
+  componentWillUnmount() {
+    document.body.removeChild(this.rootModal);
+  }
+
   render() {
     const {
       size, children, isOpen, hide,
