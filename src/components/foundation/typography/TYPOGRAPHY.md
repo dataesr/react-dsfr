@@ -1,1 +1,1 @@
-La typography.
+La typographie.

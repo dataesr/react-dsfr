@@ -1,1 +1,1 @@
-Les icones du design system.
+Les icônes du design system.
