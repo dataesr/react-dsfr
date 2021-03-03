@@ -13,7 +13,7 @@ const Row = ({
   const { margin, padding } = getSpace(rest);
   const className = classNames(
     { 'rf-grid-row': !gutter },
-    { 'rf-grid-row--gutter': gutter },
+    { 'rf-grid-row rf-grid-row--gutters': gutter },
     { [`rf-grid-row--${justifyContent}`]: justifyContent },
     { [`rf-grid-row--${alignItems}`]: alignItems },
     margin,

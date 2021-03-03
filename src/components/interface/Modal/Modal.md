@@ -13,7 +13,7 @@ En desktop, ce composant s’affiche au centre de la page.
 
 ```jsx
 import { useState, useRef } from 'react';
-import Button from '../Button'
+import Tile from '../Tile'
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
@@ -31,7 +31,7 @@ const hide = () => {
         <Modal.Title icon>I'm a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button title="Une action">blah</Button>
+          <Tile title="Une action">blah</Tile>
         </Modal.Footer>
       </Modal>
     )
@@ -42,7 +42,7 @@ const hide = () => {
 Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
 ```jsx
 import { useState, useRef } from 'react';
-import Button from '../Button'
+import Tile from '../Tile'
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
@@ -61,7 +61,7 @@ const hide = () => {
         <Modal.Title icon>I'm a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
         <Modal.Footer>
-          <Button title="Une action">blah</Button>
+          <Tile title="Une action">blah</Tile>
         </Modal.Footer>
       </Modal>
     )
