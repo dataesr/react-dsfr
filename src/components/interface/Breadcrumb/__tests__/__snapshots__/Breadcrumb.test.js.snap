@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
+<nav
+  aria-label="fil d'ariane"
+  class="rf-breadcrumb"
+  data-testid="bc-nav"
+>
+  <button
+    class="rf-breadcrumb__button"
+    data-testid="bc-button"
+    hidden=""
+    type="button"
+  >
+    Voir le fil d&paos;ariane
+  </button>
+  <ol
+    class="rf-breadcrumb__list"
+    data-testid="bc-list"
+  >
+    <li
+      aria-current="false"
+      class="rf-breadcrumb__item"
+      data-testid="bc-item"
+    >
+      <a
+        href="#"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      aria-current="false"
+      class="rf-breadcrumb__item"
+      data-testid="bc-item"
+    >
+      <a
+        href="#"
+      >
+        Productions
+      </a>
+    </li>
+    <li
+      aria-current="page"
+      class="rf-breadcrumb__item rf-breadcrumb__item--current"
+      data-testid="bc-item"
+    >
+      Production 1234567899
+    </li>
+  </ol>
+</nav>
+`;
