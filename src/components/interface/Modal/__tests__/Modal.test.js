@@ -45,7 +45,8 @@ describe('<Modal />', () => {
     expect(hide).toHaveBeenCalledTimes(1);
   });
 
-  it('should close modal on dialog click', () => {
+  it('should close modal on dialog click', async () => {
+    jest.useFakeTimers();
     const hide = jest.fn();
     render(
       <Modal isOpen hide={hide}>
@@ -57,8 +58,10 @@ describe('<Modal />', () => {
         </Modal.Footer>
       </Modal>,
     );
-    const close = screen.getByTestId('modal');
-    fireEvent.click(close);
-    expect(hide).toHaveBeenCalledTimes(1);
+    const modal = screen.getByTestId('modal');
+    expect(setTimeout).toHaveBeenCalledTimes(1);
+    fireEvent.click(modal);
+    expect(setTimeout).toHaveBeenCalledTimes(2);
+    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 300);
   });
 });

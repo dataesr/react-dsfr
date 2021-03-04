@@ -14,6 +14,8 @@ import ModalClose from './ModalClose';
  * @visibleName Modale -- Modal
  */
 
+const MODAL_ANIMATION_TIME = 300;
+
 const ModalDialog = ({ children, hide, size }) => {
   const modalRef = useRef();
   const sizeModifier = (size !== 'md') ? ` rf-modal--${size}` : '';
@@ -22,9 +24,15 @@ const ModalDialog = ({ children, hide, size }) => {
   const content = children.filter((child) => child.type.name === 'ModalContent');
   const footer = children.filter((child) => child.type.name === 'ModalFooter');
   const close = children.filter((child) => child.type.name === 'ModalClose');
+  const handleAnimatedUnmount = () => {
+    modalRef.current.style.opacity = '0';
+    setTimeout(() => {
+      hide();
+    }, MODAL_ANIMATION_TIME);
+  };
   const handleOverlayClick = (e) => {
     if (!modalRef.current || (modalRef.current === e.target)) {
-      hide();
+      handleAnimatedUnmount();
     }
   };
   const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('rf-no-scroll');
@@ -67,7 +75,7 @@ const ModalDialog = ({ children, hide, size }) => {
             <div className="rf-col-12 rf-col-md-6">
               <div className="rf-modal__body">
                 <div className="rf-modal__header">
-                  {(close.length > 0) ? close : <ModalClose hide={hide} />}
+                  {(close.length > 0) ? close : <ModalClose hide={handleAnimatedUnmount} />}
                 </div>
                 <div className="rf-modal__content">
                   {title}
