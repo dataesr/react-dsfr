@@ -1,4 +1,4 @@
-import { Component, useRef } from 'react';
+import { Component, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import useFocusTrap from '../../../hooks/useFocusTrap';
@@ -22,12 +22,23 @@ const ModalDialog = ({ children, hide, size }) => {
   const content = children.filter((child) => child.type.name === 'ModalContent');
   const footer = children.filter((child) => child.type.name === 'ModalFooter');
   const close = children.filter((child) => child.type.name === 'ModalClose');
-  const style = { opacity: 1, visibility: 'visible' };
   const handleOverlayClick = (e) => {
     if (!modalRef.current || (modalRef.current === e.target)) {
       hide();
     }
   };
+  const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('rf-no-scroll');
+
+  useEffect(() => {
+    modalRef.current.style.visibility = 'visible';
+    setTimeout(() => {
+      modalRef.current.style.opacity = '1';
+    }, 0);
+    handleNoBodyScroll();
+    return () => {
+      handleNoBodyScroll();
+    };
+  }, []);
 
   const handleAllKeyDown = (e) => {
     if (e.keyCode === 27) {
@@ -48,7 +59,6 @@ const ModalDialog = ({ children, hide, size }) => {
         className={`rf-modal${sizeModifier}`}
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
-        style={style}
         onClick={(e) => handleOverlayClick(e)}
         data-testid="modal"
       >
@@ -75,18 +85,20 @@ const ModalDialog = ({ children, hide, size }) => {
 
 class Modal extends Component {
   render() {
-    const { size, hide, children } = this.props;
-    return (
-      <ModalDialog size={size} hide={hide}>{children}</ModalDialog>
-    );
+    const {
+      size, hide, children, isOpen,
+    } = this.props;
+    return (isOpen) && <ModalDialog size={size} hide={hide}>{children}</ModalDialog>;
   }
 }
 Modal.propTypes = {
+  isOpen: PropTypes.bool,
   children: PropTypes.node.isRequired,
   hide: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
 };
 Modal.defaultProps = {
+  isOpen: false,
   size: 'md',
 };
 Modal.Title = ModalTitle;
