@@ -1,17 +1,14 @@
 import { render, screen } from '@testing-library/react';
-import Callout from '..';
+import { Callout, CalloutText, CalloutTitle } from '..';
 import Button from '../../Button';
 
 describe('<Callout />', () => {
   it('renders Callout properly', () => {
     render(
-      <Callout
-        scheme="soft-green-warm"
-        title="Callout title"
-        text="Callout text that might be short and concise."
-        titleAs="h3"
-      >
-        <Button title="acceder">
+      <Callout scheme="soft-green-warm">
+        <CalloutTitle as="h3">Callout title</CalloutTitle>
+        <CalloutText>Callout text that might be short and concise.</CalloutText>
+        <Button title="acceder...">
           Accéder au service
         </Button>
       </Callout>,
@@ -21,6 +18,7 @@ describe('<Callout />', () => {
     const calloutText = screen.getByText('Callout text that might be short and concise.');
     expect(calloutText.className).toBe('rf-callout__text');
     const callout = screen.getByTestId('callout');
+    expect(callout.className).toBe('rf-callout rf-fi-information-line rf-callout--scheme-soft-green-warm');
     expect(callout).toBeInTheDocument();
     expect(callout).toMatchSnapshot();
   });

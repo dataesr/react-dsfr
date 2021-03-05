@@ -17,7 +17,7 @@ exports[`<Callout /> renders Callout properly 1`] = `
   </p>
   <button
     class="rf-btn rf-btn--md"
-    title="acceder"
+    title="acceder..."
     type="button"
   >
     Accéder au service
