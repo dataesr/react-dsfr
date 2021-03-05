@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * Les champs permettent à un utilisateur d'entrer du contenu et données.
@@ -18,31 +20,24 @@ const TextInput = forwardRef((props, ref) => {
     messageType,
   } = props;
 
-  const getClasses = (type) => {
-    switch (type) {
-      case 'error':
-        return ['rf-input-group rf-input-group--error', 'rf-input rf-input--error'];
-      case 'valid':
-        return ['rf-input-group rf-input-group--valid', 'rf-input rf-input--valid'];
-      default:
-        return ['rf-input-group', 'rf-input'];
-    }
-  };
+  const divClasses = classNames('rf-input', { [`rf-input-group--${messageType}`]: messageType });
+  const inputClasses = classNames('rf-input-group', { [`rf-input--${messageType}`]: messageType });
 
-  const describer = (hint) ? 'text-input-hint' : 'text-input-message';
+  const inputId = uuidv4();
+  const hintId = hint && uuidv4();
+  const messageId = message && uuidv4();
   return (
-  // TODO Manage Label htmlFor
-    <div className={getClasses(messageType)[0]}>
-      {label && <label className="rf-label" htmlFor="text-input" aria-describedby={describer}>{label}</label>}
-      {hint && <p className="rf-hint-text" id="text-input-hint">{hint}</p>}
+    <div className={divClasses}>
+      {label && <label className="rf-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
+      {hint && <p className="rf-hint-text" id={hintId}>{hint}</p>}
       {
         (textarea)
           ? (
             <textarea
               ref={ref}
-              className={getClasses(messageType)[1]}
+              className={inputClasses}
               disabled={inactive}
-              id="text-input"
+              id={inputId}
               value={value}
               onChange={onChange}
             />
@@ -50,7 +45,7 @@ const TextInput = forwardRef((props, ref) => {
           : (
             <input
               ref={ref}
-              className={getClasses(messageType)[1]}
+              className={inputClasses}
               disabled={inactive}
               type="text"
               id="text-input"
@@ -59,8 +54,8 @@ const TextInput = forwardRef((props, ref) => {
             />
           )
     }
-      {(message && messageType === 'error') && <p id="text-input-message" className="rf-error-text">{message}</p>}
-      {(message && messageType === 'valid') && <p id="text-input-message" className="rf-valid-text">{message}</p>}
+      {(message && messageType === 'error') && <p id={messageId} className="rf-error-text">{message}</p>}
+      {(message && messageType === 'valid') && <p id={messageId} className="rf-valid-text">{message}</p>}
     </div>
   );
 });
@@ -69,7 +64,7 @@ TextInput.defaultProps = {
   inactive: false,
   hint: '',
   onChange: () => {},
-  messageType: 'valid',
+  messageType: '',
   message: '',
   label: null,
 };
@@ -80,7 +75,7 @@ TextInput.propTypes = {
   hint: PropTypes.string,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  messageType: PropTypes.oneOf(['error', 'valid']),
+  messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
 };
 

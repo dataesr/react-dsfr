@@ -17,29 +17,25 @@ import Button from '../Button'
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
-const show = () => setIsOpen(true);
 const hide = () => {
   setIsOpen(false)
   buttonRef.current.focus()
 };
 
 <>
-  <button ref={buttonRef} onClick={show}>open modal</button>
-  {
-    (isOpen) && (
-      <Modal hide={hide}>
-        <Modal.Title icon>I'm a title</Modal.Title>
-        <Modal.Content>blah blah</Modal.Content>
-        <Modal.Footer>
-          <Button title="Une action">blah</Button>
-        </Modal.Footer>
-      </Modal>
-    )
-  }
+  <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
+  <Modal isOpen={isOpen} hide={hide}>
+    <Modal.Title icon>I'm a title</Modal.Title>
+    <Modal.Content>blah blah</Modal.Content>
+    <Modal.Footer>
+      <Button title="Une action">blah</Button>
+    </Modal.Footer>
+  </Modal>
 </>
 ```
 
 Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
+
 ```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
@@ -53,18 +49,14 @@ const hide = () => {
 };
 
 <>
-  <button ref={buttonRef} onClick={show}>open modal</button>
-  {
-    (isOpen) && (
-      <Modal hide={hide}>
-        <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-        <Modal.Title icon>I'm a title</Modal.Title>
-        <Modal.Content>blah blah</Modal.Content>
-        <Modal.Footer>
-          <Button title="Une action">blah</Button>
-        </Modal.Footer>
-      </Modal>
-    )
-  }
+  <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
+  <Modal isOpen={isOpen} hide={hide}>
+    <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
+    <Modal.Title icon>I'm a title</Modal.Title>
+    <Modal.Content>blah blah</Modal.Content>
+    <Modal.Footer>
+      <Button title="Une action">blah</Button>
+    </Modal.Footer>
+  </Modal>
 </>
 ```

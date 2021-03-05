@@ -6,7 +6,7 @@ describe('<Modal />', () => {
   it('should render modal properly', () => {
     const hide = jest.fn();
     render(
-      <Modal hide={hide}>
+      <Modal isOpen hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
         <Modal.Title icon>I am a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
@@ -19,7 +19,7 @@ describe('<Modal />', () => {
     const title = screen.getByText('I am a title');
     const content = screen.getByText('blah blah');
     const footer = screen.getByText('blah');
-    const close = screen.getByText('Close');
+    const close = screen.getByTestId('modal-close');
     expect(modal).toBeInTheDocument();
     expect(title).toBeInTheDocument();
     expect(content).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe('<Modal />', () => {
   it('should close modal on Close button click', () => {
     const hide = jest.fn();
     render(
-      <Modal hide={hide}>
+      <Modal isOpen hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
         <Modal.Title icon>I am a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
@@ -40,15 +40,16 @@ describe('<Modal />', () => {
         </Modal.Footer>
       </Modal>,
     );
-    const close = screen.getByText('Close');
+    const close = screen.getByTestId('modal-close');
     fireEvent.click(close);
     expect(hide).toHaveBeenCalledTimes(1);
   });
 
-  it('should close modal on dialog click', () => {
+  it('should close modal on dialog click', async () => {
+    jest.useFakeTimers();
     const hide = jest.fn();
     render(
-      <Modal hide={hide}>
+      <Modal isOpen hide={hide}>
         <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
         <Modal.Title icon>I am a title</Modal.Title>
         <Modal.Content>blah blah</Modal.Content>
@@ -57,8 +58,10 @@ describe('<Modal />', () => {
         </Modal.Footer>
       </Modal>,
     );
-    const close = screen.getByText('Close');
-    fireEvent.click(close);
-    expect(hide).toHaveBeenCalledTimes(1);
+    const modal = screen.getByTestId('modal');
+    expect(setTimeout).toHaveBeenCalledTimes(1);
+    fireEvent.click(modal);
+    expect(setTimeout).toHaveBeenCalledTimes(2);
+    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 300);
   });
 });
