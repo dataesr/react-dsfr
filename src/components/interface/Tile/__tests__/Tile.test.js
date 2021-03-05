@@ -2,6 +2,8 @@ import Enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
 import Tile from '../Tile';
+import TileBody from '../TileBody';
+import TileImage from '../TileImage';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -10,6 +12,8 @@ const initialProps = {
   verticalMedium: true,
   title: 'title',
   linkHref: '/path',
+  alt: '',
+  src: '/src.png',
   description: 'description',
   className: 'my-class',
 };
@@ -19,12 +23,19 @@ describe('<Tile />', () => {
     const component = renderer
       .create(
         <Tile
-          linkHref={initialProps.linkHref}
           horizontal={initialProps.horizontal}
-          description={initialProps.description}
-          title={initialProps.title}
           className={initialProps.className}
-        />,
+        >
+          <TileBody
+            linkHref={initialProps.linkHref}
+            description={initialProps.description}
+            title={initialProps.title}
+          />
+          <TileImage
+            alt={initialProps.alt}
+            src={initialProps.src}
+          />
+        </Tile>,
       )
       .toJSON();
     expect(component).toMatchSnapshot();

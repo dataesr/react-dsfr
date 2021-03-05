@@ -2,9 +2,8 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="my-class rf-tile rf-tile-horizontal"
+  className="my-class rf-tile rf-tile--horizontal"
 >
-  
   <div
     className="rf-tile__body"
   >
@@ -25,6 +24,15 @@ exports[`<Tile /> renders correctly 1`] = `
     >
       description
     </p>
+  </div>
+  <div
+    className="rf-tile__img-wrap"
+  >
+    <img
+      alt=""
+      src="/src.png"
+      title=""
+    />
   </div>
 </div>
 `;
