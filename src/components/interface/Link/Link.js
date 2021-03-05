@@ -14,7 +14,7 @@ const Link = ({
     href={href}
     title={title}
     target={target}
-    rel={(target === '_blank') ? 'noopener noreferer' : null}
+    rel={(target === '_blank') ? 'noopener noreferrer' : null}
     className={classnames(icon, className, {
       'rf-link': isSimple,
       'rf-link--icon-left': !isSimple && icon && children,
