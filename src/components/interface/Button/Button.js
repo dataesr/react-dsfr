@@ -51,6 +51,9 @@ Button.propTypes = {
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string.isRequired,
+  /**
+   * One of: string, object
+   */
   className: CLASS_NAME_TYPE,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.string,

@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
@@ -7,42 +9,42 @@ import PropTypes from 'prop-types';
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPosition,
+  as, children, size, href, title, target, icon, iconPosition, className,
 }) => {
   const HtmlTag = `${as}`;
-  let attribute = {
-    className: `rf-tag rf-tag--${size} ${(icon) || ''} ${(icon) ? `rf-tag--icon-${iconPosition}` : ''}`,
-  };
+  const classes = classNames('rf-tag', className, {
+    [`rf-tag--${size}`]: size,
+    [`rf-fi-${icon}`]: icon,
+    [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
+  });
 
-  if (as === 'a') {
-    attribute = { ...attribute, href, target };
-
-    if (target === '_blank') {
-      attribute = { ...attribute, rel: 'noopener noreferer' };
-    }
-  }
-
-  if (title) {
-    attribute = { ...attribute, title };
-  }
-
-  return (<HtmlTag {...attribute}>{children}</HtmlTag>);
+  return (
+    <HtmlTag
+      className={classes}
+      title={title || undefined}
+      href={href || undefined}
+      target={target || undefined}
+      rel={target === '_blank' ? 'noopener noreferer' : undefined}
+    >
+      {children}
+    </HtmlTag>
+  );
 };
 
-export default Tag;
-
 Tag.defaultProps = {
+  className: '',
   as: 'p',
   size: 'md',
-  href: '#',
+  href: '',
   title: '',
-  target: '_self',
+  target: '',
   icon: '',
   iconPosition: 'right',
 };
 
 Tag.propTypes = {
-  as: PropTypes.oneOf(['a', 'li', 'p']),
+  className: CLASS_NAME_TYPE,
+  as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['sm', 'md']),
   href: PropTypes.string,
@@ -51,3 +53,5 @@ Tag.propTypes = {
   icon: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };
+
+export default Tag;

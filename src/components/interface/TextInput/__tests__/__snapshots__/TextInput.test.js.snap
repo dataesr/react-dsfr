@@ -2,18 +2,17 @@
 
 exports[`<TextInput /> renders correctly 1`] = `
 <div
-  className="rf-input-group rf-input-group--valid"
+  className="rf-input"
 >
   <label
-    aria-describedby="text-input-message"
     className="rf-label"
-    htmlFor="text-input"
+    htmlFor="xxxxxxx"
   >
     label
   </label>
   
   <input
-    className="rf-input rf-input--valid"
+    className="rf-input-group"
     disabled={false}
     id="text-input"
     onChange={[MockFunction]}

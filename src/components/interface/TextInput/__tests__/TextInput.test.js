@@ -2,7 +2,12 @@ import '@testing-library/jest-dom';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
+import { v4 as uuidv4 } from 'uuid';
 import TextInput from '../TextInput';
+
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -22,6 +27,7 @@ describe('<TextInput />', () => {
   };
 
   beforeEach(() => {
+    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
     wrapper = (props = {}) => shallow(
       <TextInput {...props} />,
     );

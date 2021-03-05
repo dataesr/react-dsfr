@@ -1,4 +1,5 @@
-Le système de grille sur 12 colonnes proposée par le Design System vous permet de structurer vos contenus. Il met à disposition 5 mises en page, basées sur 4 points de rupture:
+Le système de grille sur 12 colonnes proposé par le Design System vous permet de structurer vos contenus. Il met à disposition 5 mises en page, basées sur 4 points de rupture:
+
   - `xs`: de 0 à 575px
   - `sm`: de 576px à 676px
   - `md`: de 768px à 991px
@@ -6,7 +7,8 @@ Le système de grille sur 12 colonnes proposée par le Design System vous permet
   - `xl`: ≥ 1248px
 
 Par défaut la grille est proposée sans gouttière, et avec des marges externes dans le code. Vous pouvez néanmoins utiliser les props des composants pour:
-  - ajouter les gouttières de la grille  
+
+  - ajouter les gouttières de la grille
   - supprimer les marges externes
   - adapter la largeur et l’affichage de vos blocs de contenu
   - adapter les alignements

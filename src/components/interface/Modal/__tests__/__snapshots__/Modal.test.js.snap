@@ -6,7 +6,7 @@ exports[`<Modal /> should render modal properly 1`] = `
   class="rf-modal"
   data-testid="modal"
   id="rf-modal"
-  style="opacity: 1; visibility: visible;"
+  style="visibility: visible;"
 >
   <div
     class="rf-container--fluid rf-container-md"
@@ -26,6 +26,7 @@ exports[`<Modal /> should render modal properly 1`] = `
             <button
               aria-controls="rf-modal"
               class="rf-link--close rf-link"
+              data-testid="modal-close"
               title="Close the modal window"
               type="button"
             >
