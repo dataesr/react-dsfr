@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> renders Table properly 1`] = `
+<div
+  class="rf-table rf-table--caption-bottom rf-table--bordered"
+  data-testid="table"
+>
+  <table>
+    <caption
+      data-testid="table-caption"
+    >
+      Mon super tableau
+    </caption>
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+        <th
+          scope="col"
+        >
+          Titre
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+        <td>
+          Donnée
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> renders simple table properly 1`] = `
+<td>
+  Mathematics
+</td>
+`;
