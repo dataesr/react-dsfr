@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * Mise en exergue.
+ * Mise en avant.
  *
  * @visibleName Callout
  */

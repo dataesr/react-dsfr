@@ -4,7 +4,7 @@ import classNames from 'classnames';
 /**
  * Mise en exergue.
  *
- * @visibleName Callout
+ * @visibleName Highlight
  */
 const Highlight = ({
   scheme, size, children, className,

@@ -17,7 +17,7 @@ it('renders Row with gutter properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toBe('rf-grid-row--gutter');
+  expect(row.className).toBe('rf-grid-row rf-grid-row--gutters');
 });
 
 it('renders Row with alignItems properly', () => {
@@ -46,5 +46,5 @@ it('renders Row offset and n properly', () => {
   expect(row).toBeInTheDocument();
   expect(row.className).toContain('rf-grid-row--center');
   expect(row.className).toContain('rf-grid-row--middle');
-  expect(row.className).toContain('rf-grid-row--gutter');
+  expect(row.className).toContain('rf-grid-row--gutters');
 });
