@@ -10,7 +10,7 @@ module.exports = {
   tocMode: 'collapse',
   theme: {
     color: {
-      link: '#3B7A57',
+      link: '#000091',
       linkHover: '#8F9779',
     },
     fontFamily: {
