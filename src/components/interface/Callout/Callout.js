@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * Mise en avant.
+ * La mise en avant est une proposition de mise en page du contenu éditorial pour
+ * mettre en évidence une information complémentaire.
  *
  * @visibleName Callout
  */

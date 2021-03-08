@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * Mise en exergue.
+ * La mise en exergue met en évidence une information déjà présente dans le reste du contenu.
  *
  * @visibleName Highlight
  */
