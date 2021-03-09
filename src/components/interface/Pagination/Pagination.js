@@ -84,7 +84,7 @@ const Pagination = ({
   } = buttonLabels;
 
   return (
-    <nav className="rf-pagination" aria-label={navigationAria}>
+    <nav className="rf-pagination" aria-label={navigationAria} data-testid="pagination-nav">
       <ul className="rf-pagination__list">
         <li className={`rf-pagination__item--first rf-pagination__item ${prevClasses}`}>
           <Tag className="rf-pagination__link" aria-label={firstAria} title={firstAria} />
@@ -161,7 +161,7 @@ Pagination.propTypes = {
 
 Pagination.defaultProps = {
   anchorAs: 'a',
-  surrendingPages: 1,
+  surrendingPages: 2,
   buttonLabels: {
     navigationAria: 'Pagination navigation',
     currentAria: 'page',
