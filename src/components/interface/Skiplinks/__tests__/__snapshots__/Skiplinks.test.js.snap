@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SkipLinks /> should renders Tag properly 1`] = `
+<div
+  class="rf-skiplinks"
+  data-testid="skiplinks"
+>
+  <div
+    class="rf-container"
+  >
+    <ul
+      class="rf-skiplinks__list"
+    >
+      <li
+        class=""
+      >
+        <a
+          class="rf-link"
+          href="#"
+        >
+          Accéder au contenu
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="rf-link"
+          href="#"
+        >
+          Accéder au menu
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="rf-link"
+          href="#"
+        >
+          Accéder à la recherche
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="rf-link"
+          href="#"
+        >
+          Accéder au footer
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
