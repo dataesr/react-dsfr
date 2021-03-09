@@ -13,7 +13,7 @@ Le lien contextuel se trouve au sein d’un texte et reprend les caractéristiqu
 
 ```js
   <p>
-    Lorem elit, <Link icon="rf-fi-search-line" title="titre lien interne" href="#" target="_self">lien contextuel avec icône</Link> incididunt morbi.
+    Lorem elit, <Link icon="search-line" title="titre lien interne" href="#" target="_self">lien contextuel avec icône</Link> incididunt morbi.
   </p>
 ```
 
