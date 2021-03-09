@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly 1`] = `
+<header
+  className="rf-header"
+  role="banner"
+>
+  <div
+    className="rf-container"
+  >
+    <div
+      className="rf-header__body"
+      role="banner"
+    >
+      <div
+        className="rf-header__brand"
+      >
+        <a
+          className="rf-logo"
+          href="/"
+          title="République française"
+        >
+          <span
+            className="rf-logo__title"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "republique<br>française",
+              }
+            }
+          />
+        </a>
+      </div>
+      <div
+        className="rf-header__navbar"
+      >
+        <div
+          className="rf-service"
+        >
+          <a
+            className="rf-service__title"
+            href="/test"
+            title="Nom du service"
+          >
+            Nom du service
+          </a>
+          <p
+            className="rf-service__tagline"
+          >
+            baseline - précisions sur l‘organisation
+          </p>
+        </div>
+      </div>
+      <div
+        className="rf-header__tools"
+        id=""
+      >
+        <div
+          className="rf-shortcuts"
+        >
+          <ul
+            className="rf-shortcuts__list"
+          >
+            <li
+              className="rf-shortcuts__item"
+            >
+              <a
+                className="rf-fi-lock-line rf-link rf-link--icon-left"
+                href="/connect"
+                rel={null}
+                target="_self"
+                title=""
+              >
+                Se connecter
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</header>
+`;

@@ -15,7 +15,6 @@
   "dependencies": {
     "@gouvfr/all": "^0.5.3",
     "classnames": "^2.2.6",
-    "html-react-parser": "^1.2.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
