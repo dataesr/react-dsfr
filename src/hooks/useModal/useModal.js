@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import Modal from '../../components/Modal';
+import Modal from '../../components/interface/Modal';
 
 /**
  * useModal permet de gérer l'ouverture et la fermeture de la modale plus facilement

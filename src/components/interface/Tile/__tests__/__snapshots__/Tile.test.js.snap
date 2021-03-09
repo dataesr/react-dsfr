@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile /> renders correctly 1`] = `
+<div
+  className="my-class rf-tile rf-tile--horizontal"
+>
+  <div
+    className="rf-tile__body"
+  >
+    <p
+      className="rf-tile__title"
+    >
+      <a
+        className="rf-tile__link"
+        href="/path"
+        target=""
+        title=""
+      >
+        title
+      </a>
+    </p>
+    <p
+      className="rf-tile__desc"
+    >
+      description
+    </p>
+  </div>
+  <div
+    className="rf-tile__img-wrap"
+  >
+    <img
+      alt=""
+      src="/src.png"
+      title=""
+    />
+  </div>
+</div>
+`;
