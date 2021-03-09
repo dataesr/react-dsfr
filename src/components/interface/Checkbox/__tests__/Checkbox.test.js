@@ -1,20 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import { Checkbox } from '../index';
 
 describe('<Checkbox />', () => {
-  it('renders correctly', () => {
-    const component = renderer
-      .create(
-        <Checkbox
-          label="Label de la checkbox"
-          value="value"
-        />,
-      )
-      .toJSON();
-    expect(component).toMatchSnapshot();
-  });
-
   it('in document', () => {
     render(
       <Checkbox
