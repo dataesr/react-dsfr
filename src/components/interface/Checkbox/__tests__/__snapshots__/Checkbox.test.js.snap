@@ -7,7 +7,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
   <input
     data-testid="checkbox-testid"
     disabled={false}
-    id="f96822c4-aecc-4dc3-a51d-96d326f73a46"
+    id={null}
     name="checkbox"
     onChange={[Function]}
     type="checkbox"
@@ -15,7 +15,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
   />
   <label
     className="rf-label"
-    htmlFor="f96822c4-aecc-4dc3-a51d-96d326f73a46"
+    htmlFor={null}
   >
     Label de la checkbox
   </label>
