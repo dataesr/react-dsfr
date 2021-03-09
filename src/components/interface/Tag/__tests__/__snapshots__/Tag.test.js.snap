@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should renders Tag properly 1`] = `
+<a
+  class="rf-tag rf-tag--md"
+  href="/"
+  title="titre"
+>
+  tag-test
+</a>
+`;
+
+exports[`<Tag /> should renders TagGroup properly 1`] = `
+<ul
+  class="rf-tags-group"
+  data-testid="tag-group"
+>
+  <li>
+    <span
+      class="rf-tag rf-tag--sm"
+    >
+      tag-test
+    </span>
+  </li>
+  <li>
+    <span
+      class="rf-tag rf-tag--sm"
+    >
+      tag-test
+    </span>
+  </li>
+  <li>
+    <span
+      class="rf-tag rf-tag--sm"
+    >
+      tag-test
+    </span>
+  </li>
+  <li>
+    <span
+      class="rf-tag rf-tag--sm"
+    >
+      tag-test
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<Tag /> should renders small Tag properly 1`] = `
+<span
+  class="rf-tag rf-tag--sm"
+>
+  tag-test
+</span>
+`;

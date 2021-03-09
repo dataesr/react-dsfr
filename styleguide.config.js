@@ -10,11 +10,11 @@ module.exports = {
   tocMode: 'collapse',
   theme: {
     color: {
-      link: '#3B7A57',
+      link: '#000091',
       linkHover: '#8F9779',
     },
     fontFamily: {
-      base: '"Calibri", "Geneva", sans-serif',
+      base: "'Marianne', sans-serif",
     },
   },
   styleguideComponents: {
@@ -29,43 +29,49 @@ module.exports = {
   },
   sections: [
     {
-      name: 'Getting started',
+      name: 'Pour commencer',
       content: './README.md',
       sectionDepth: 0,
-    },
-    {
-      name: 'Fondamentaux',
+    }, {
+      name: 'Composants',
+      content: 'src/components/COMPONENTS.md',
       sectionDepth: 2,
-      content: 'src/foundation/FOUNDATION.md',
       sections: [
         {
-          name: 'Grid system',
-          content: 'src/foundation/grid/GRID.md',
-          components: 'src/foundation/grid/**/[A-Z]*.js',
+          name: 'Fondamentaux',
+          content: 'src/components/foundation/FOUNDATION.md',
+          sectionDepth: 1,
+          sections: [
+            {
+              name: 'Grid system',
+              content: 'src/components/foundation/grid/GRID.md',
+              components: 'src/components/foundation/grid/**/[A-Z]*.js',
+            },
+            {
+              name: 'Typography',
+              content: 'src/components/foundation/typography/TYPOGRAPHY.md',
+              components: 'src/components/foundation/typography/**/[A-Z]*.js',
+            },
+            {
+              name: 'Icons',
+              content: 'src/components/foundation/icons/ICONS.md',
+              components: 'src/components/foundation/icons/**/[A-Z]*.js',
+            },
+          ],
         },
         {
-          name: 'Typography',
-          content: 'src/foundation/typography/TYPOGRAPHY.md',
-          components: 'src/foundation/typography/**/[A-Z]*.js',
-        },
-        {
-          name: 'Icons',
-          content: 'src/foundation/icons/ICONS.md',
-          components: 'src/foundation/icons/**/[A-Z]*.js',
+          name: 'Elements d\'interface',
+          content: 'src/components/interface/INTERFACE.md',
+          sectionDepth: 1,
+          components: 'src/components/interface/**/[A-Z]*.js',
         },
       ],
-    },
-    {
-      name: 'Composants',
-      sectionDepth: 1,
-      content: 'src/components/COMPONENTS.md',
-      components: 'src/components/**/[A-Z]*.js',
     },
     {
       name: 'Hooks',
       sectionDepth: 1,
       content: 'src/hooks/HOOKS.md',
-      components: 'src/hooks/**/[A-Z]*.js',
+      components: 'src/hooks/**/use*.js',
     },
   ],
 };
