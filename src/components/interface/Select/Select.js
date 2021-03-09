@@ -4,7 +4,6 @@ import classNames from 'classnames';
 // import '@gouvfr/selects/dist/css/selects.min.css';
 
 /**
- * La liste déroulante permet à un utilisateur de choisir un élément dans une liste donnée.
  *
  * @visibleName Liste déroulante - Select
  */
