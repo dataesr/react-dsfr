@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> renders correctly 1`] = `
+<div
+  className="rf-checkbox-group"
+>
+  <input
+    data-testid="checkbox-testid"
+    disabled={false}
+    id="f96822c4-aecc-4dc3-a51d-96d326f73a46"
+    name="checkbox"
+    onChange={[Function]}
+    type="checkbox"
+    value="value"
+  />
+  <label
+    className="rf-label"
+    htmlFor="f96822c4-aecc-4dc3-a51d-96d326f73a46"
+  >
+    Label de la checkbox
+  </label>
+  
+  
+</div>
+`;
