@@ -5,9 +5,9 @@ exports[`<Select /> renders correctly 1`] = `
   className="rf-select-group rf-select-group--valid"
 >
   <label
-    aria-describedby="16f18b04-0439-4d91-be64-f4c12eaf7e35"
+    aria-describedby="a1ef86ed-8f28-498d-8207-cd560f92184e"
     className="rf-label"
-    htmlFor="b74a1772-2811-4d88-ae43-87a192704043"
+    htmlFor="9d45fe81-3fb5-467d-919c-de97e2ed465d"
   >
     Label pour liste déroulante
     
@@ -16,7 +16,7 @@ exports[`<Select /> renders correctly 1`] = `
     className="rf-select rf-select--valid"
     data-testid="select"
     disabled={false}
-    id="b74a1772-2811-4d88-ae43-87a192704043"
+    id="9d45fe81-3fb5-467d-919c-de97e2ed465d"
     name={null}
     onChange={[Function]}
     value=""
