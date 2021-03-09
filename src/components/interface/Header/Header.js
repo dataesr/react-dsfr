@@ -13,7 +13,7 @@ const Header = ({
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
   const [openNav, setOpenNav] = useState(isOpenNav || false);
 
-  const addProps = {
+  const contextProps = {
     isNavBar,
     isMobile: width < 768,
     isSearchBar,
@@ -35,7 +35,7 @@ const Header = ({
   ));
   // TODO add animation
   return (
-    <HeaderContext.Provider value={addProps}>
+    <HeaderContext.Provider value={contextProps}>
       <header
         className={classnames(className, 'rf-header')}
         role="banner"
@@ -56,12 +56,28 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
+  /**
+   * Barre de navigation
+   */
   isNavBar: PropTypes.bool,
+  /**
+   * Barre de recherche
+   */
   isSearchBar: PropTypes.bool,
+  /**
+   * Ouverture de la popin de recherche en mobile
+   */
   isOpenSearch: PropTypes.bool,
+  /**
+   * Raccourcis outils
+   */
   shortcutTools: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
   })),
+  /**
+   * Ouverture de la popin de navigation en mobile
+   */
   isOpenNav: PropTypes.bool,
   children: PropTypes.node.isRequired,
   /**

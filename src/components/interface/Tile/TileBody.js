@@ -12,7 +12,7 @@ const TileBody = ({
   description,
   titleAs,
   linkHref,
-  brandLinkTitle,
+  linkTitle,
   linkTarget,
 }) => {
   const HtmlTag = `${titleAs}`;
@@ -22,7 +22,7 @@ const TileBody = ({
         <a
           className="rf-tile__link"
           href={linkHref}
-          title={brandLinkTitle}
+          title={linkTitle}
           target={linkTarget}
         >
           {title}
@@ -36,7 +36,7 @@ const TileBody = ({
 TileBody.defaultProps = {
   description: '',
   titleAs: 'p',
-  brandLinkTitle: '',
+  linkTitle: '',
   linkTarget: '',
   className: '',
 };
@@ -49,7 +49,7 @@ TileBody.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   linkTarget: PropTypes.string,
-  brandLinkTitle: PropTypes.string,
+  linkTitle: PropTypes.string,
   linkHref: PropTypes.string.isRequired,
   /**
    * One of: string, object

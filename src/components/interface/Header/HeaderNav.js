@@ -61,6 +61,10 @@ HeaderNav.propTypes = {
   navItems: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     link: PropTypes.string,
+    subItems: PropTypes.arrayOf(PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })),
   })),
   /**
    * One of: string, object
