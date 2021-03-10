@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render pagination properly 1`] = `
+<nav
+  aria-label="Pagination navigation"
+  class="rf-pagination"
+  data-testid="pagination-nav"
+>
+  <ul
+    class="rf-pagination__list"
+  >
+    <li
+      class="rf-pagination__item--first rf-pagination__item "
+    >
+      <a
+        aria-label="Première page"
+        class="rf-pagination__link"
+        title="Première page"
+      />
+    </li>
+    <li
+      class="rf-pagination__item--prev rf-pagination__item "
+    >
+      <a
+        aria-label="Page précédente"
+        class="rf-pagination__link"
+        title="Page précédente"
+      >
+        <span
+          class="rf-pagination__label"
+        >
+          Précédente
+        </span>
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item"
+    >
+      <a
+        aria-label="Page 1"
+        class="rf-pagination__link"
+        href="page1"
+        title="Page 1"
+      >
+        1
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      …
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      <a
+        aria-label="Page 6"
+        class="rf-pagination__link"
+        href="page6"
+        title="Page 6"
+      >
+        6
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      <a
+        aria-label="Page 7"
+        class="rf-pagination__link"
+        href="page7"
+        title="Page 7"
+      >
+        7
+      </a>
+    </li>
+    <li
+      aria-current="page"
+      class="rf-pagination__item rf-pagination__item--active"
+    >
+      8
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      <a
+        aria-label="Page 9"
+        class="rf-pagination__link"
+        href="page9"
+        title="Page 9"
+      >
+        9
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      <a
+        aria-label="Page 10"
+        class="rf-pagination__link"
+        href="page10"
+        title="Page 10"
+      >
+        10
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item rf-pagination__item--from-md"
+    >
+      …
+    </li>
+    <li
+      class="rf-pagination__item"
+    >
+      <a
+        aria-label="Page 15"
+        class="rf-pagination__link"
+        href="page15"
+        title="Page 15"
+      >
+        15
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item--next rf-pagination__item "
+    >
+      <a
+        aria-label="Page suivante"
+        class="rf-pagination__link"
+        title="Page suivante"
+      >
+        <span
+          class="rf-pagination__label"
+        >
+          Suivante
+        </span>
+      </a>
+    </li>
+    <li
+      class="rf-pagination__item--last rf-pagination__item "
+    >
+      <a
+        aria-label="Dernière Page"
+        class="rf-pagination__link"
+        title="Dernière Page"
+      />
+    </li>
+  </ul>
+</nav>
+`;
