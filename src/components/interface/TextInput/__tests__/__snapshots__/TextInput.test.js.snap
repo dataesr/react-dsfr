@@ -2,7 +2,7 @@
 
 exports[`<TextInput /> renders correctly 1`] = `
 <div
-  className="rf-input"
+  className="rf-input-group"
 >
   <label
     className="rf-label"
@@ -12,7 +12,7 @@ exports[`<TextInput /> renders correctly 1`] = `
   </label>
   
   <input
-    className="rf-input-group"
+    className="rf-input"
     disabled={false}
     id="text-input"
     onChange={[MockFunction]}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Callout /> renders Callout properly 1`] = `
+<div
+  class="rf-callout rf-fi-information-line rf-callout--scheme-soft-green-warm"
+  data-testid="callout"
+>
+  <h3
+    class="rf-callout__title"
+  >
+    Callout title
+  </h3>
+  <p
+    class="rf-callout__text"
+  >
+    Callout text that might be short and concise.
+  </p>
+  <button
+    class="rf-btn rf-btn--md"
+    title="acceder..."
+    type="button"
+  >
+    Accéder au service
+  </button>
+</div>
+`;

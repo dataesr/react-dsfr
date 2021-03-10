@@ -1,20 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
-// Calculation helpers
-const range = (start, end) => (new Array(end - start + 1)).fill(undefined).map((_, i) => i + start);
-const getSurrendingLeft = (x1, x2) => {
-  if (x1 === 1) return { pages: [], hasEllipsis: false };
-  if (x2 === 0) { return { pages: [], hasEllipsis: (x1 > 2) }; }
-  if (x1 < x2 + 1) return { pages: range(2, x1 - 1), hasEllipsis: false };
-  return { pages: range(x1 - x2, x1 - 1), hasEllipsis: true };
-};
-const getSurrendingRight = (x1, x2, x3) => {
-  if (x1 === x3) return { pages: [], hasEllipsis: false };
-  if (x2 === 0) { return { pages: [], hasEllipsis: (x1 < x3 - 1) }; }
-  if (Math.abs(x1 - x3) < x2 + 1) return { pages: range(x1 + 1, x3 - 1), hasEllipsis: false };
-  return { pages: range(x1 + 1, x1 + x2), hasEllipsis: true };
-};
+import { getSurrendingLeft, getSurrendingRight } from './helpers';
 
 const PaginationItem = ({
   page,
@@ -27,8 +13,7 @@ const PaginationItem = ({
   const Tag = `${anchorAs}`;
   const href = (anchorAs === 'a') ? url : undefined;
   const to = (anchorAs !== 'a') ? url : undefined;
-  const classes = classNames({
-    'rf-pagination__item': true,
+  const classes = classNames('rf-pagination__item', {
     'rf-pagination__item--from-md': !isVisibleOnMobile,
     'rf-pagination__item--active': isActive,
   });
