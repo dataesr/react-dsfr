@@ -32,6 +32,7 @@ export const SideMenuItem = ({ children, expandedDefault, title }) => {
       <div
         className={item.class}
         id={itemID}
+        data-testid={itemID}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
       >
         <ul className="rf-sidemenu__list">

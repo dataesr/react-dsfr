@@ -16,8 +16,7 @@ const useCollapse = (id, isExpanded, className) => {
   const item = expandedItem[isExpanded];
 
   useEffect(() => {
-    const itemElement = document.getElementById(id);
-    setCollapse(`-${itemElement.getBoundingClientRect().height}px`);
+    setCollapse(`-${document.getElementById(id).getBoundingClientRect().height}px`);
   }, [id]);
 
   return { item, collapse };
