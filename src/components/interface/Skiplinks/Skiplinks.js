@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link';
+import { CLASS_NAME_TYPE } from '../../../utils/variables';
 /**
  * Les liens d’évitement permettent aux utilisateurs naviguant au clavier,
  * ou équipés de lecteurs d'écran, d’accéder plus rapidement à des zones précises de la page.
@@ -18,10 +19,7 @@ export const Skiplink = ({
 Skiplink.propTypes = {
   children: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
+  className: CLASS_NAME_TYPE,
   target: PropTypes.string,
 };
 
@@ -42,10 +40,7 @@ export const Skiplinks = ({ children, className }) => (
 
 Skiplinks.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
+  className: CLASS_NAME_TYPE,
 };
 Skiplinks.defaultProps = {
   className: '',
