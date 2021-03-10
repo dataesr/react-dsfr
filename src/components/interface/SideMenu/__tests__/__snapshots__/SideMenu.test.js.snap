@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideMenu /> should render SideMenu properly 1`] = `
+<nav
+  aria-label="Menu latéral"
+  class="rf-sidemenu"
+  data-testid="sidemenu"
+>
+  <div
+    class="rf-sidemenu__inner"
+  >
+    <button
+      aria-controls="xxxxxxx"
+      aria-expanded="false"
+      class="rf-sidemenu__btn"
+      type="button"
+    >
+      Dans cette rubrique
+    </button>
+    <div
+      class="rf-collapse"
+      id="xxxxxxx"
+      style="--collapse: -0px;"
+    >
+      <div
+        class="rf-sidemenu__title"
+      >
+        Titre de rubrique
+      </div>
+      <ul
+        class="rf-sidemenu__list"
+      >
+        <li
+          class="rf-sidemenu__item"
+        >
+          <button
+            aria-controls="xxxxxxx"
+            aria-expanded="false"
+            class="rf-sidemenu__btn"
+            type="button"
+          >
+            Niveau 1
+          </button>
+          <div
+            class="rf-collapse"
+            data-testid="xxxxxxx"
+            id="xxxxxxx"
+            style="--collapse: -0px;"
+          >
+            <ul
+              class="rf-sidemenu__list"
+            >
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <button
+                  aria-controls="xxxxxxx"
+                  aria-expanded="false"
+                  class="rf-sidemenu__btn"
+                  type="button"
+                >
+                  Niveau 2
+                </button>
+                <div
+                  class="rf-collapse"
+                  data-testid="xxxxxxx"
+                  id="xxxxxxx"
+                  style="--collapse: -0px;"
+                >
+                  <ul
+                    class="rf-sidemenu__list"
+                  >
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li
+          class="rf-sidemenu__item"
+        >
+          <button
+            aria-controls="xxxxxxx"
+            aria-expanded="false"
+            class="rf-sidemenu__btn"
+            type="button"
+          >
+            Niveau 1
+          </button>
+          <div
+            class="rf-collapse"
+            data-testid="xxxxxxx"
+            id="xxxxxxx"
+            style="--collapse: -0px;"
+          >
+            <ul
+              class="rf-sidemenu__list"
+            >
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <button
+                  aria-controls="xxxxxxx"
+                  aria-expanded="false"
+                  class="rf-sidemenu__btn"
+                  type="button"
+                >
+                  Niveau 2
+                </button>
+                <div
+                  class="rf-collapse"
+                  data-testid="xxxxxxx"
+                  id="xxxxxxx"
+                  style="--collapse: -0px;"
+                >
+                  <ul
+                    class="rf-sidemenu__list"
+                  >
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                    <li
+                      class="rf-sidemenu__item"
+                    >
+                      <a
+                        class="rf-sidemenu__link"
+                        href="/"
+                        target="_self"
+                      >
+                        Accès direct niveau 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+              <li
+                class="rf-sidemenu__item"
+              >
+                <a
+                  class="rf-sidemenu__link"
+                  href="/"
+                  target="_self"
+                >
+                  Accès direct niveau 2
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
