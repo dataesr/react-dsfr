@@ -1,17 +1,35 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import Link from '../Link';
 /**
  * Les liens d’évitement permettent aux utilisateurs naviguant au clavier,
  * ou équipés de lecteurs d'écran, d’accéder plus rapidement à des zones précises de la page.
  *
  * @visibleName Skiplinks
  */
-export const Skiplink = ({ href, children, className }) => (
+export const Skiplink = ({
+  href, target, children, className,
+}) => (
   <li className={className}>
-    <a className="rf-link" href={href}>{children}</a>
+    <Link isSimple href={href} target={target}>{children}</Link>
   </li>
 );
+
+Skiplink.propTypes = {
+  children: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
+  target: PropTypes.string,
+};
+
+Skiplink.defaultProps = {
+  className: '',
+  target: '_self',
+};
+
 export const Skiplinks = ({ children, className }) => (
   <div data-testid="skiplinks" className={classNames('rf-skiplinks', className)}>
     <div className="rf-container">
@@ -24,18 +42,11 @@ export const Skiplinks = ({ children, className }) => (
 
 Skiplinks.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 };
 Skiplinks.defaultProps = {
-  className: '',
-};
-
-Skiplink.propTypes = {
-  children: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
-
-Skiplink.defaultProps = {
   className: '',
 };
