@@ -75,9 +75,18 @@ exports[`<Button /> renders correctly 1`] = `
             </li>
           </ul>
         </div>
-        
       </div>
     </div>
+  </div>
+  <div
+    className="rf-container"
+  >
+    <nav
+      aria-label="Menu principal"
+      className="rf-nav"
+      id="header-nav-popin"
+      role="navigation"
+    />
   </div>
 </header>
 `;

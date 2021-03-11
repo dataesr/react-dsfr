@@ -5,14 +5,13 @@ import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 import Link from '../Link';
 import HeaderContext from './headerContext';
 
-const Tools = (props) => {
+const Tools = ({
+  children, className, buttonClose,
+}) => {
   const context = useContext(HeaderContext);
   const {
-    isSearchBar, isOpenSearch, onOpenSearch, isMobile, shortcutTools,
+    isSearchBar, isOpenSearch, onOpenSearch, isMobile, navTools,
   } = context;
-  const {
-    children, className, buttonClose,
-  } = props;
   return (
     <div
       id={isMobile && isSearchBar ? 'header-tools-popin' : ''}
@@ -22,10 +21,10 @@ const Tools = (props) => {
           'rf-header__popin--expanded': isOpenSearch,
         })}
     >
-      {!isMobile && shortcutTools.length > 0 && (
+      {!isMobile && navTools && (
       <div className="rf-shortcuts">
         <ul className="rf-shortcuts__list">
-          {shortcutTools.map((tool) => (
+          {navTools.map((tool) => (
             <li className="rf-shortcuts__item" key={tool.title}>
               <Link
                 isSimple

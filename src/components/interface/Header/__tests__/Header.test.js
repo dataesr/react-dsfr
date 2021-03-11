@@ -15,7 +15,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const initialProps = {
   isNavBar: false,
   isSearchBar: true,
-  shortcutTools: [{ title: 'Se connecter', icon: 'rf-fi-lock-line' }],
+  navTools: [{ title: 'Se connecter', icon: 'rf-fi-lock-line', link: '/path' }],
 };
 
 describe('<Button />', () => {
