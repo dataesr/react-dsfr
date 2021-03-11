@@ -50,16 +50,15 @@ import { Header, HeaderBody, Service, Logo } from '.';
 
 ### Header avec raccourcis outils
 
-**Les props shortcutTools doivent être implémentées avec un composant HeaderNav, enfant direct de Header**
+**Les props navTools doivent être obligatoirement implémentées avec un composant HeaderNav, enfant direct de Header**
 
 ```jsx
-import { Header, HeaderBody, Service, Tools, HeaderNav } from '.';
+import { Header, HeaderBody, Service, Tools } from '.';
 
 <Header
-    isNavBar
-    shortcutTools={[
-        { title: 'Se connecter', icon: 'rf-fi-lock-line' },
-        { title: 'Créer un espace', icon: 'rf-fi-add-circle-line' }
+    navTools={[
+        { title: 'Se connecter', icon: 'rf-fi-lock-line', link: '/path' },
+        { title: 'Créer un espace', icon: 'rf-fi-add-circle-line', link: '/path' }
     ]}>
     <HeaderBody
         brand="republique<br>française"
@@ -69,7 +68,6 @@ import { Header, HeaderBody, Service, Tools, HeaderNav } from '.';
             description="baseline - précisions sur l‘organisation"/>
         <Tools/>
     </HeaderBody>
-    <HeaderNav/>    
 </Header>
 ```
 
@@ -79,8 +77,7 @@ import { Header, HeaderBody, Service, Tools, HeaderNav } from '.';
 import { Header, HeaderBody, Service, Tools } from '.';
 import SearchBar from '../SearchBar/index';
 
-<Header
-    isSearchBar>
+<Header>
     <HeaderBody
         brand="republique<br>française"
         brandLinkTitle="République française">
@@ -105,11 +102,16 @@ import SearchBar from '../SearchBar/index';
 ### Header avec navigation
 
 ```jsx
-import { Header, HeaderBody, HeaderNav, Service, Tools } from '.';
+import { Header, HeaderBody, Service, Tools } from '.';
 import SearchBar from '../SearchBar/index';
 
-<Header
-    isNavBar>
+<Header navItems={[
+    { title: 'Home', link: '/home' },
+    { title: 'Ressources', subItems: [
+            { title: 'Ressource #1', link: '/path-to-resources-1' },
+            { title: 'Ressource #2', link: '/path-to-resources-2' }
+        ]
+    }]}>
     <HeaderBody
         brand="republique<br>française"
         brandLinkTitle="République française">
@@ -117,29 +119,27 @@ import SearchBar from '../SearchBar/index';
             title="Nom du service"
             description="baseline - précisions sur l‘organisation"/>
     </HeaderBody>
-    <HeaderNav navItems={[
-        { title: 'Home', link: '/home' },
-        { title: 'Ressources', subItems: [
-            { title: 'Ressource #1', link: '/path-to-resources-1' },
-            { title: 'Ressource #2', link: '/path-to-resources-2' }
-        ]
-    }]} />
 </Header>
 ```
 
 ### Header avec barre de recherche, raccourcis outils et navigation
 
 ```jsx
-import { Header, HeaderBody, HeaderNav, Service, Tools } from '.';
+import { Header, HeaderBody, Service, Tools } from '.';
 import SearchBar from '../SearchBar/index';
 
 <Header
-    isNavBar
-    isSearchBar
-    shortcutTools={[
-        { title: 'Se connecter', icon: 'rf-fi-lock-line' },
-        { title: 'Créer un espace', icon: 'rf-fi-add-circle-line' }
-    ]}>
+    navTools={[
+        { title: 'Se connecter', icon: 'rf-fi-lock-line', link: '/path' },
+        { title: 'Créer un espace', icon: 'rf-fi-add-circle-line', link: '/path' }
+    ]}
+    navItems={[
+        { title: 'Home', link: '/home' },
+        { title: 'Ressources', subItems: [
+                { title: 'Ressource #1', link: '/path-to-resources-1' },
+                { title: 'Ressource #2', link: '/path-to-resources-2' }
+            ]
+        }]}>
     <HeaderBody
         brand="republique<br>française"
         brandLinkTitle="République française">
@@ -158,12 +158,5 @@ import SearchBar from '../SearchBar/index';
             />
         </Tools>
     </HeaderBody>
-    <HeaderNav navItems={[
-        { title: 'Home', link: '/home' },
-        { title: 'Ressources', subItems: [
-            { title: 'Ressource #1', link: '/path-to-resources-1' },
-            { title: 'Ressource #2', link: '/path-to-resources-2' }
-        ]
-    }]} />
 </Header>
 ```

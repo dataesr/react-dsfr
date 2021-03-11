@@ -4,13 +4,12 @@ import { useContext } from 'react';
 import { CLASS_NAME_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
-const Service = (props) => {
+const Service = ({
+  title, description, className,
+}) => {
   const context = useContext(HeaderContext);
   const {
-    title, description, className,
-  } = props;
-  const {
-    onOpenNav, searchButton, navButton, shortcutTools, isSearchBar, onOpenSearch, isNavBar,
+    onOpenNav, searchButton, navButton, navTools, isSearchBar, onOpenSearch, isNavBar,
   } = context;
   const { isMobile } = context;
   return (
@@ -32,7 +31,7 @@ const Service = (props) => {
         {searchButton}
       </button>
       )}
-      {(shortcutTools.length > 0 || isNavBar) && isMobile && (
+      {(navTools || isNavBar) && isMobile && (
       <button
         onClick={onOpenNav}
         type="button"

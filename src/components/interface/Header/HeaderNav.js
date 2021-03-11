@@ -12,7 +12,7 @@ const HeaderNav = ({
 }) => {
   const context = useContext(HeaderContext);
   const {
-    isOpenNav, onOpenNav, shortcutTools, isMobile,
+    isOpenNav, onOpenNav, navTools, isMobile,
   } = context;
 
   return (
@@ -25,10 +25,10 @@ const HeaderNav = ({
       aria-label="Menu principal"
       id="header-nav-popin"
     >
-      {isMobile && shortcutTools.length > 0 && (
+      {isMobile && navTools && (
         <div className="rf-shortcuts">
           <ul className="rf-shortcuts__list">
-            {shortcutTools.map((tool) => (
+            {navTools.map((tool) => (
               <li className="rf-shortcuts__item" key={uuidv4()}>
                 <Link isSimple icon={tool.icon || ''} iconPosition="left" href="/connect">{tool.title}</Link>
               </li>
@@ -36,7 +36,7 @@ const HeaderNav = ({
           </ul>
         </div>
       )}
-      <Navigation items={navItems} />
+      {navItems && <Navigation items={navItems} />}
       {isMobile && (
         <button
           onClick={onOpenNav}
@@ -54,7 +54,7 @@ const HeaderNav = ({
 
 HeaderNav.defaultProps = {
   className: '',
-  navItems: [],
+  navItems: null,
 };
 
 HeaderNav.propTypes = {

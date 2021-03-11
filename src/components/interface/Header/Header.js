@@ -1,23 +1,35 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { useState, Children } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { CLASS_NAME_TYPE } from '../../../utils/variables';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
+import HeaderNav from './HeaderNav';
 
 const Header = ({
-  children, className, isOpenNav, shortcutTools, isSearchBar, isOpenSearch, isNavBar,
+  children, className, isOpenNav, navTools, isOpenSearch, navItems,
 }) => {
   const { width } = useViewport();
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
   const [openNav, setOpenNav] = useState(isOpenNav || false);
 
+  const arrayChildren = Children.toArray(children);
+  let isSearchBar = false;
+
+  arrayChildren.forEach((headerChild) => {
+    if (headerChild.type.name === 'HeaderBody') {
+      const tools = Children.toArray(headerChild.props.children).filter((bodyChild) => (bodyChild ? bodyChild.type.name === 'Tools' : false));
+      if (tools.length > 0) {
+        [isSearchBar] = tools.map((toolsChildren) => !!toolsChildren.props.children);
+      }
+    }
+  });
+
   const contextProps = {
-    isNavBar,
+    isNavBar: navItems || navTools,
     isMobile: width < 768,
     isSearchBar,
-    shortcutTools,
+    navTools,
     isOpenSearch: openSearch,
     onOpenSearch: () => {
       setOpenSearch(!openSearch);
@@ -28,19 +40,18 @@ const Header = ({
     },
   };
 
-  const elements = Children.toArray(children).map((element) => (
-    <div className="rf-container" key={uuidv4()}>
-      {element}
-    </div>
-  ));
-  // TODO add animation
   return (
     <HeaderContext.Provider value={contextProps}>
       <header
         className={classnames(className, 'rf-header')}
         role="banner"
       >
-        {children && elements}
+        <div className="rf-container">
+          {children && children}
+        </div>
+        <div className="rf-container">
+          {(navItems || navTools) && <HeaderNav navItems={navItems} />}
+        </div>
       </header>
     </HeaderContext.Provider>
   );
@@ -49,21 +60,20 @@ const Header = ({
 Header.defaultProps = {
   className: '',
   isOpenNav: false,
-  isNavBar: false,
   isOpenSearch: false,
-  isSearchBar: false,
-  shortcutTools: [],
+  navTools: null,
+  navItems: null,
 };
 
 Header.propTypes = {
-  /**
-   * Barre de navigation
-   */
-  isNavBar: PropTypes.bool,
-  /**
-   * Barre de recherche
-   */
-  isSearchBar: PropTypes.bool,
+  navItems: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    subItems: PropTypes.arrayOf(PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })),
+  })),
   /**
    * Ouverture de la popin de recherche en mobile
    */
@@ -71,7 +81,7 @@ Header.propTypes = {
   /**
    * Raccourcis outils
    */
-  shortcutTools: PropTypes.arrayOf(PropTypes.shape({
+  navTools: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
   })),
