@@ -18,13 +18,13 @@ describe('<Footer />', () => {
     render(
       <Footer>
         <FooterTop>
-          <FooterTopCategory category="Nom de la catégorie">
+          <FooterTopCategory title="Nom de la catégorie">
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
           </FooterTopCategory>
-          <FooterTopCategory category="Nom de la catégorie">
+          <FooterTopCategory title="Nom de la catégorie">
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
@@ -32,19 +32,19 @@ describe('<Footer />', () => {
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
           </FooterTopCategory>
-          <FooterTopCategory category="Nom de la catégorie">
+          <FooterTopCategory title="Nom de la catégorie">
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
           </FooterTopCategory>
-          <FooterTopCategory category="Nom de la catégorie">
+          <FooterTopCategory title="Nom de la catégorie">
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
           </FooterTopCategory>
-          <FooterTopCategory category="Nom de la catégorie">
+          <FooterTopCategory title="Nom de la catégorie">
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
