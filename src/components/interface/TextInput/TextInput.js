@@ -20,8 +20,8 @@ const TextInput = forwardRef((props, ref) => {
     messageType,
   } = props;
 
-  const divClasses = classNames('rf-input', { [`rf-input-group--${messageType}`]: messageType });
-  const inputClasses = classNames('rf-input-group', { [`rf-input--${messageType}`]: messageType });
+  const divClasses = classNames('rf-input-group', { [`rf-input-group--${messageType}`]: messageType });
+  const inputClasses = classNames('rf-input', { [`rf-input--${messageType}`]: messageType });
 
   const inputId = uuidv4();
   const hintId = hint && uuidv4();
