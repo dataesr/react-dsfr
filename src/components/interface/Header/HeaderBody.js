@@ -1,19 +1,15 @@
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 
 const HeaderBody = (props) => {
   const {
-    children, className, brandLinkTitle, brand,
+    children, className,
   } = props;
   return (
-    <div className={classnames(className, 'rf-header__body')} role="banner">
-      <div className="rf-header__brand">
-        <a className="rf-logo" href="/" title={brandLinkTitle}>
-          <span className="rf-logo__title" dangerouslySetInnerHTML={{ __html: brand }} />
-        </a>
+    <div className="rf-container">
+      <div className={classnames(className, 'rf-header__body')} role="banner">
+        {children}
       </div>
-      {children}
     </div>
   );
 };
@@ -24,8 +20,6 @@ HeaderBody.defaultProps = {
 };
 
 HeaderBody.propTypes = {
-  brand: PropTypes.string.isRequired,
-  brandLinkTitle: PropTypes.string.isRequired,
   /**
    * One of: node, arrayOf(node), string
    */

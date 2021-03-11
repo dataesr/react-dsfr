@@ -1,43 +1,35 @@
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
 import { useContext } from 'react';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
-import Link from '../Link';
-import Navigation from '../Navigation/Navigation';
+import { CLASS_NAME_TYPE, CHILDREN_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, navItems,
+  className, children,
 }) => {
   const context = useContext(HeaderContext);
   const {
-    isOpenNav, onOpenNav, navTools, isMobile,
+    isOpenNav, onOpenNav, isMobile, shortcutClassName,
   } = context;
-
   return (
-    <nav
-      className={classnames(className, 'rf-nav', {
-        'rf-header__popin': isMobile,
-        'rf-header__popin--expanded': isOpenNav,
-      })}
-      role="navigation"
-      aria-label="Menu principal"
-      id="header-nav-popin"
-    >
-      {isMobile && navTools && (
+    <div className="rf-container">
+      <nav
+        className={classnames(className, 'rf-nav', {
+          'rf-header__popin': isMobile,
+          'rf-header__popin--expanded': isOpenNav,
+        })}
+        role="navigation"
+        aria-label="Menu principal"
+        id="header-nav-popin"
+      >
+        {isMobile && (
         <div className="rf-shortcuts">
-          <ul className="rf-shortcuts__list">
-            {navTools.map((tool) => (
-              <li className="rf-shortcuts__item" key={uuidv4()}>
-                <Link isSimple icon={tool.icon || ''} iconPosition="left" href="/connect">{tool.title}</Link>
-              </li>
-            ))}
-          </ul>
+          <ul className={classnames(shortcutClassName, 'rf-shortcuts__list')} />
         </div>
-      )}
-      {navItems && <Navigation items={navItems} />}
-      {isMobile && (
+        )}
+        <ul className="rf-nav__list">
+          {children}
+        </ul>
+        {isMobile && (
         <button
           onClick={onOpenNav}
           type="button"
@@ -47,29 +39,22 @@ const HeaderNav = ({
         >
           Fermer
         </button>
-      )}
-    </nav>
+        )}
+      </nav>
+    </div>
   );
 };
 
 HeaderNav.defaultProps = {
   className: '',
-  navItems: null,
 };
 
 HeaderNav.propTypes = {
-  navItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    link: PropTypes.string,
-    subItems: PropTypes.arrayOf(PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    })),
-  })),
   /**
    * One of: string, object
    */
   className: CLASS_NAME_TYPE,
+  children: CHILDREN_TYPE.isRequired,
 };
 
 export default HeaderNav;

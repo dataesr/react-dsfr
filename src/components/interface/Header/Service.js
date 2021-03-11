@@ -9,7 +9,7 @@ const Service = ({
 }) => {
   const context = useContext(HeaderContext);
   const {
-    onOpenNav, searchButton, navButton, navTools, isSearchBar, onOpenSearch, isNavBar,
+    onOpenNav, searchButton, navButton, isSearchBar, onOpenSearch, isNavBar, isNavTool,
   } = context;
   const { isMobile } = context;
   return (
@@ -31,7 +31,7 @@ const Service = ({
         {searchButton}
       </button>
       )}
-      {(navTools || isNavBar) && isMobile && (
+      {(isNavBar || isNavTool) && isMobile && (
       <button
         onClick={onOpenNav}
         type="button"

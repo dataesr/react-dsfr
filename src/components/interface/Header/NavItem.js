@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect, Children } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { CHILDREN_TYPE } from '../../../utils/variables';
 
-const SubItem = ({
-  title, link, subItems, index,
-}) => {
+const NavItem = ({ children, title, link }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [collapse, setCollapse] = useState('0px');
   const onClick = () => {
     setIsExpanded(!isExpanded);
   };
-  const expandedLine = {
+
+  const expandedItem = {
     false: {
       class: 'rf-menu rf-collapse',
       stateHeight: null,
@@ -22,8 +24,15 @@ const SubItem = ({
       expanded: true,
     },
   };
-  const item = expandedLine[isExpanded];
+  useEffect(() => {
+    const menuHeight = document.querySelector('.rf-menu');
+    if (menuHeight) {
+      setCollapse(menuHeight.getBoundingClientRect().height);
+    }
+  }, [collapse]);
 
+  const item = expandedItem[isExpanded];
+  const subItems = Children.toArray(children).filter((child) => !!child);
   return (
     subItems && subItems.length > 0 ? (
       <li className="rf-nav__item">
@@ -37,19 +46,12 @@ const SubItem = ({
           {title}
         </button>
         <div
-          id={`rf-nav-subitem-${index}`}
+          id={`rf-nav-subitem-${uuidv4()}`}
           className={item.class}
-          style={{ maxHeight: item.stateHeight, '--collapse': '0px' }}
+          style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
         >
           <ul className="rf-menu__list">
-            {subItems.map((subItem) => (
-              <li className="rf-menu__item" key={subItem.title}>
-                <a className="rf-link" href="/test" target="_self">
-                  {subItem.title}
-                </a>
-              </li>
-            ))}
-
+            {children}
           </ul>
         </div>
       </li>
@@ -62,18 +64,14 @@ const SubItem = ({
   );
 };
 
-SubItem.defaultProps = {
+NavItem.defaultProps = {
   link: '',
-  subItems: [],
+  children: '',
 };
-SubItem.propTypes = {
-  index: PropTypes.string.isRequired,
+NavItem.propTypes = {
+  children: CHILDREN_TYPE,
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
-  subItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    link: PropTypes.string,
-  })),
 };
 
-export default SubItem;
+export default NavItem;
