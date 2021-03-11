@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -52,12 +53,11 @@ const Select = ({
         value={selected}
       >
         {
-          options.map((opt) => (
+          options.map((opt, i) => (
             <option
               disabled={opt.disabled || false}
               hidden={opt.hidden || false}
-              key={uuidv4()}
-              // selected={opt.selected || false}
+              key={`${selectId}-${i}`}
               value={opt.value}
             >
               {opt.label}

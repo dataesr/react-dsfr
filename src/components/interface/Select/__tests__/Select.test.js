@@ -1,11 +1,32 @@
 import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
+import { v4 as uuidv4 } from 'uuid';
 import Select from '..';
+
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
 
 describe('<Select />', () => {
   const options = [
     { value: '1', label: 'label-1' },
     { value: '2', label: 'label-2' },
   ];
+  beforeEach(() => {
+    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
+  });
+  it('renders correctly', () => {
+    const component = renderer
+      .create(
+        <Select
+          label="Label pour liste déroulante"
+          options={options}
+          messageType="valid"
+        />,
+      )
+      .toJSON();
+    expect(component).toMatchSnapshot();
+  });
 
   it('in document', () => {
     render(
