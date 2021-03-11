@@ -1,4 +1,4 @@
-export {
-  BreadcrumbItem,
-  Breadcrumb,
-} from './Breadcrumb';
+import Breadcrumb from './Breadcrumb';
+import BreadcrumbItem from './BreadcrumbItem';
+
+export { Breadcrumb, BreadcrumbItem };

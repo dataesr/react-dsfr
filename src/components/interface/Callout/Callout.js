@@ -7,40 +7,8 @@ import classNames from 'classnames';
  *
  * @visibleName Callout
  */
-export const CalloutTitle = ({ as, children, className }) => {
-  const HtmlTitleTag = `${as}`;
-  return (
-    <HtmlTitleTag className={classNames('rf-callout__title', className)}>
-      {children}
-    </HtmlTitleTag>
-  );
-};
 
-CalloutTitle.propTypes = {
-  children: PropTypes.string.isRequired,
-  as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  className: PropTypes.string,
-};
-CalloutTitle.defaultProps = {
-  as: 'p',
-  className: '',
-};
-
-export const CalloutText = ({ children, className }) => (
-  <p className={classNames('rf-callout__text', className)}>
-    {children}
-  </p>
-);
-
-CalloutText.propTypes = {
-  children: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
-CalloutText.defaultProps = {
-  className: '',
-};
-
-export const Callout = ({
+const Callout = ({
   scheme, hasInfoIcon, children, className,
 }) => {
   const classes = classNames(
@@ -69,3 +37,5 @@ Callout.defaultProps = {
   children: null,
   className: '',
 };
+
+export default Callout;
