@@ -1,4 +1,4 @@
-### Callout
+## Callout - Mise en avant
 
 ```jsx
 import { Callout, CalloutText, CalloutTitle } from '.';

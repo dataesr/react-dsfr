@@ -1,4 +1,5 @@
-### Liste déroulante
+## Select - Liste déroulante
+### Liste déroulante avec options
 La liste déroule fournit une liste d’option parmi laquelle l’utilisateur peut choisir. Seule la partie visible du composant est stylisé : la liste d’option déroulée conserve le style du navigateur.
 
 ```jsx padded

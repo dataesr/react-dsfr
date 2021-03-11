@@ -1,6 +1,9 @@
-### Tableau
+## Tableau - Table
 
+### Tableau simple
 ```jsx
+import { Table } from '.';
+
 <Table bordered captionPosition="bottom" caption="Mon super tableau">
   <thead>
     <tr>
@@ -65,9 +68,10 @@
 </Table>
 ```
 
-### Simple table with data
+### Tableau simple avec données en props
 ```js
 import { SimpleTable } from '.';
+
 const data = [
   {
     id: 'PE',
