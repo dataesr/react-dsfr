@@ -1,72 +1,53 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import withProps from '../../../utils/withProps';
 
 const Tab = ({
-  className, children, index, setActiveTab, activeTab, setContentTabHeight,
+  className, children, index, setActiveTab, activeTab, setHeight, icon, iconPosition, label,
 }) => {
-  const content = useRef(null);
+  const [translate, setTranslate] = useState('0%');
+  const getHeight = (el) => el.getBoundingClientRect().height;
   useEffect(() => {
     if (activeTab === index) {
-      setContentTabHeight(content.current ? content.current.clientHeight : 500);
+      const current = document.getElementById(`rf-tabpanel-${index}`);
+      const tab = document.querySelector('.rf-tabs__list');
+      setHeight(current && tab ? getHeight(current) + getHeight(tab) : 0);
     }
-  }, [index, setContentTabHeight, activeTab]);
-  const obj = {
-    true: {
-      aria: 'true',
-      class: 'rf-tabs__panel rf-tabs__panel--selected',
-    },
-    false: {
-      aria: 'false',
-      class: 'rf-tabs__panel',
-    },
-  };
+  }, [index, setHeight, activeTab]);
+  useEffect(() => {
+    // TODO manage animation
+    if (activeTab > index) {
+      setTranslate('-100%');
+    } else if (activeTab < index) {
+      setTranslate('100%');
+    } else {
+      setTranslate('0%');
+    }
+  }, [activeTab, setTranslate, index]);
 
-  let trans = '0%';
-  if (activeTab > index) {
-    trans = '-100%';
-  } else if (activeTab < index) {
-    trans = '100%';
-  }
-  console.log('==== test ==== ', index);
   return (
     <li className={classnames(className)}>
       <button
         onClick={() => setActiveTab(index)}
         type="button"
-        className="rf-tabs__tab rf-fi-checkbox-line rf-tabs__tab--icon-left"
+        className={classnames('rf-tabs__tab', icon, { [`rf-tabs__tab--icon-${iconPosition}`]: iconPosition })}
         tabIndex="0"
         role="tab"
-        aria-selected={obj[activeTab === index].aria}
+        aria-selected={activeTab === index ? 'true' : 'false'}
         aria-controls={`rf-tabpanel-${index}`}
       >
-        Label Tab 1
+        {label}
       </button>
       <div
-        style={{ transform: `translate(${trans})` }}
-        ref={content}
+        style={{ transform: `translate(${translate})` }}
         id={`rf-tabpanel-${index}`}
-        className={obj[activeTab === index].class}
+        className={`rf-tabs__panel ${activeTab === index ? 'rf-tabs__panel--selected' : ''}`}
         role="tabpanel"
         tabIndex="0"
       >
-        <div className="rf-prose">
-          {children}
-          <h4 className="rf-h4">Contenu panneau 1</h4>
-          <ul>
-            <li>
-              list item
-              <ul>
-                <li>list item niveau 2</li>
-              </ul>
-            </li>
-            <li>
-              list item
-              <p>Lorem ipm saepe sed tempora, velit, vero!</p>
-            </li>
-          </ul>
-        </div>
+        {children}
       </div>
     </li>
   );
@@ -74,15 +55,20 @@ const Tab = ({
 
 Tab.defaultProps = {
   className: '',
+  icon: '',
+  iconPosition: 'left',
 };
 
 Tab.propTypes = {
   className: CLASS_NAME_TYPE,
   index: PropTypes.number.isRequired,
+  icon: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
   activeTab: PropTypes.number.isRequired,
   setActiveTab: PropTypes.func.isRequired,
-  setContentTabHeight: PropTypes.func.isRequired,
+  setHeight: PropTypes.func.isRequired,
   children: CHILDREN_TYPE.isRequired,
 };
 
-export default Tab;
+export default withProps(Tab);

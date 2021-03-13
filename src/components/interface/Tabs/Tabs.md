@@ -6,13 +6,17 @@ Le composant onglet permet aux utilisateurs de naviguer dans différentes sectio
 import { Tabs, Tab } from '.';
 
 <Tabs>
-    <Tab>
-        <h3>
-            test #1
-        </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate delectus dolor dolorem ea eius error ipsam, nam, necessitatibus non quam quas, quia quidem quo reiciendis sed sequi veritatis voluptatibus.</p>
-    
+    <Tab label="Label tab #1">
+        <h3>Content tab #1</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolorem est ex fugiat minima minus natus quos ratione. Adipisci, consequatur obcaecati porro soluta ullam ut. Aspernatur atque porro quis quod!</p>
     </Tab>
-    <Tab>test #2</Tab>
+    <Tab label="Label tab #2">
+        <h3>Content tab #2</h3>
+    </Tab>
+    <Tab label="Label tab #3">
+        <h3>Content tab #3</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolorem est ex fugiat minima minus natus quos ratione. Adipisci, consequatur obcaecati porro soluta ullam ut. Aspernatur atque porro quis quod!</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolorem est ex fugiat minima minus natus quos ratione. Adipisci, consequatur obcaecati porro soluta ullam ut. Aspernatur atque porro quis quod!</p>
+    </Tab>
 </Tabs>
 ```

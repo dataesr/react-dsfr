@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> should render Tab properly 1`] = `
+<div
+  className="rf-tabs"
+  style={
+    Object {
+      "height": 500,
+    }
+  }
+>
+  <ul
+    className="rf-tabs__list"
+    role="tablist"
+  >
+    <li
+      className=""
+    >
+      <button
+        aria-controls="rf-tabpanel-0"
+        aria-selected="true"
+        className="rf-tabs__tab rf-tabs__tab--icon-left"
+        onClick={[Function]}
+        role="tab"
+        tabIndex="0"
+        type="button"
+      >
+        Label
+      </button>
+      <div
+        className="rf-tabs__panel rf-tabs__panel--selected"
+        id="rf-tabpanel-0"
+        role="tabpanel"
+        style={
+          Object {
+            "transform": "translate(0%)",
+          }
+        }
+        tabIndex="0"
+      >
+        Tab #1
+      </div>
+    </li>
+  </ul>
+</div>
+`;

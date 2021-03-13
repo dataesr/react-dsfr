@@ -1,24 +1,27 @@
 import classnames from 'classnames';
 import {
-  cloneElement, useState, Children, useEffect,
+  cloneElement, useState, Children,
 } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 
-// TODO add uuid by Tab
-
 const Tabs = ({
-  className, children,
+  className, children, defaultActiveTab,
 }) => {
-  const [activeTab, setActiveTab] = useState(() => 0);
-  const [contentTabHeight, setContentTabHeight] = useState(() => 0);
+  const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
+  const [contentTabHeight, setHeight] = useState(() => 500);
+  const addProps = {
+    activeTab, setActiveTab, setHeight,
+  };
+  const elements = Children.toArray(children).map((child, index) => cloneElement(child, {
+    ...addProps, index, key: uuidv4(),
+  }));
 
   return (
     <div className={classnames('rf-tabs', className)} style={{ height: contentTabHeight }}>
       <ul className="rf-tabs__list" role="tablist">
-        {children.map((child, index) => cloneElement(child, {
-          ...children, index, activeTab, setActiveTab, setContentTabHeight, key: uuidv4(),
-        }))}
+        {elements && elements}
       </ul>
     </div>
   );
@@ -26,10 +29,12 @@ const Tabs = ({
 
 Tabs.defaultProps = {
   className: '',
+  defaultActiveTab: 0,
 };
 
 Tabs.propTypes = {
   className: CLASS_NAME_TYPE,
+  defaultActiveTab: PropTypes.number,
   children: CHILDREN_TYPE.isRequired,
 };
 
