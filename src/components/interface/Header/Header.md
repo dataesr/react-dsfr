@@ -41,3 +41,8 @@ import SearchBar from '../SearchBar/index';
     </HeaderNav>
 </Header>
 ```
+
+```jsx
+import Service from './Service';
+<Service title='test'/>
+```

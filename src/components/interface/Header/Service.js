@@ -5,7 +5,7 @@ import { CLASS_NAME_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
 const Service = ({
-  title, description, className,
+  title, description, className, link,
 }) => {
   const context = useContext(HeaderContext);
   const {
@@ -15,7 +15,7 @@ const Service = ({
   return (
     <div className={classnames(className, 'rf-header__navbar')}>
       <div className="rf-service">
-        <a className="rf-service__title" href="/test" title={title}>
+        <a className="rf-service__title" href={link} title={title}>
           {title}
         </a>
         <p className="rf-service__tagline">{description}</p>
@@ -35,7 +35,7 @@ const Service = ({
       <button
         onClick={onOpenNav}
         type="button"
-        className="rf-btn rf-fi-menu-fill rf-btn--icon "
+        className="rf-btn rf-fi-menu-fill rf-btn--icon"
         title={navButton}
         aria-controls="header-nav-popin"
       >
@@ -49,11 +49,13 @@ const Service = ({
 Service.defaultProps = {
   className: '',
   description: 'Ouvrir le menu',
+  link: '/',
 };
 
 Service.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
+  link: PropTypes.string,
   /**
    * One of: string, object
    */

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> renders correctly 1`] = `
+exports[`<Header /> renders correctly 1`] = `
 <header
   className="rf-header"
   role="banner"
@@ -38,7 +38,7 @@ exports[`<Button /> renders correctly 1`] = `
         >
           <a
             className="rf-service__title"
-            href="/test"
+            href="/"
             title="Nom du service"
           >
             Nom du service
@@ -65,12 +65,25 @@ exports[`<Button /> renders correctly 1`] = `
             >
               <a
                 className="rf-fi-lock-line rf-link rf-link--icon-left"
-                href="/connect"
+                href="/path"
                 rel={null}
                 target="_self"
                 title=""
               >
                 Se connecter
+              </a>
+            </li>
+            <li
+              className="rf-shortcuts__item"
+            >
+              <a
+                className="rf-fi-add-circle-line rf-link rf-link--icon-left"
+                href="/path"
+                rel={null}
+                target="_self"
+                title=""
+              >
+                Créer un espace
               </a>
             </li>
           </ul>
@@ -86,7 +99,84 @@ exports[`<Button /> renders correctly 1`] = `
       className="rf-nav"
       id="header-nav-popin"
       role="navigation"
-    />
+    >
+      <ul
+        className="rf-nav__list"
+      >
+        <li
+          className="rf-nav__item"
+        >
+          <a
+            className="rf-link"
+            href="/"
+            target="_self"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="rf-nav__item"
+        >
+          <button
+            aria-controls="rf-nav-Resources"
+            aria-expanded="false"
+            className="rf-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Resources
+          </button>
+          <div
+            className="rf-menu rf-collapse"
+            id="rf-nav-subitem-xxxxxxx"
+            style={
+              Object {
+                "--collapse": "-0pxpx",
+                "maxHeight": null,
+              }
+            }
+          >
+            <ul
+              className="rf-menu__list"
+            >
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-1"
+                  target="_self"
+                >
+                  Ressource #1
+                </a>
+              </li>
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-2"
+                  target="_self"
+                >
+                  Ressource #2
+                </a>
+              </li>
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-3"
+                  target="_self"
+                >
+                  Ressource #3
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 `;

@@ -1,13 +1,21 @@
 import Enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { v4 as uuidv4 } from 'uuid';
 import {
   Header, HeaderBody, Service, Tool, Brand, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
 } from '../index';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
+
 describe('<Header />', () => {
+  beforeEach(() => {
+    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
+  });
   it('renders correctly', () => {
     const component = renderer
       .create(
