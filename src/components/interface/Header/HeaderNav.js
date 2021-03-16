@@ -6,10 +6,9 @@ import HeaderContext from './headerContext';
 const HeaderNav = ({
   className, children,
 }) => {
-  const context = useContext(HeaderContext);
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
-  } = context;
+  } = useContext(HeaderContext);
   return (
     <div className="rf-container">
       <nav

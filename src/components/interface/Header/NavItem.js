@@ -6,9 +6,6 @@ import { CHILDREN_TYPE } from '../../../utils/variables';
 const NavItem = ({ children, title, link }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
-  const onClick = () => {
-    setIsExpanded(!isExpanded);
-  };
 
   const expandedItem = {
     false: {
@@ -38,7 +35,7 @@ const NavItem = ({ children, title, link }) => {
       <li className="rf-nav__item">
         <button
           aria-controls={`rf-nav-${title}`}
-          onClick={onClick}
+          onClick={() => setIsExpanded(!isExpanded)}
           type="button"
           aria-expanded={item.aria}
           className="rf-btn"

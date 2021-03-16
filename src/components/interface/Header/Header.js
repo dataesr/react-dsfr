@@ -45,7 +45,7 @@ const Header = ({
         role="banner"
       >
         {children}
-        {isNavTool && !isNavBar && (
+        {isMobile && isNavTool && !isNavBar && (
         <div className="rf-container">
           <nav
             className={classnames(className, 'rf-nav', {

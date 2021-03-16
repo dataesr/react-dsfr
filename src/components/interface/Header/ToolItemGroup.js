@@ -7,9 +7,8 @@ import HeaderContext from './headerContext';
 const ToolItemGroup = ({
   children, className,
 }) => {
-  const [shortcutListElement, setShortcutListElement] = useState('');
-  const context = useContext(HeaderContext);
-  const { isMobile, shortcutClassName } = context;
+  const [shortcutListElement, setShortcutListElement] = useState();
+  const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
     setShortcutListElement(document.querySelector('.rf-shortcuts__list'));
   }, [shortcutClassName, setShortcutListElement]);
