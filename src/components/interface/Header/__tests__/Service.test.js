@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import {
   Service,
 } from '../index';
@@ -16,7 +16,6 @@ describe('<Service />', () => {
     isNavTool: true,
     navButton: 'navigation',
   };
-  afterEach(() => cleanup);
   it('renders correctly', () => {
     const component = renderer
       .create(
