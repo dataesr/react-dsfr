@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> renders correctly 1`] = `
+<div
+  className="rf-radio-group"
+>
+  <input
+    data-testid="radio-testid"
+    id="xxxxxxx"
+    name="radio"
+    onChange={[Function]}
+    type="radio"
+    value="value"
+  />
+  <label
+    className="rf-label"
+    htmlFor="xxxxxxx"
+  >
+    Label de la radio
+  </label>
+  
+  
+</div>
+`;
