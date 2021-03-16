@@ -30,6 +30,13 @@ import SearchBar from '../SearchBar/index';
             />
         </Tool>
     </HeaderBody>
-   
+    <HeaderNav>
+        <NavItem title='Home' link='/' />
+        <NavItem title='Resources'>
+            <NavSubItem title='Ressource #1' link='/path-to-resources-1' />
+            <NavSubItem title='Ressource #2' link='/path-to-resources-2' />
+            <NavSubItem title='Ressource #3' link='/path-to-resources-3' />
+        </NavItem>
+    </HeaderNav>
 </Header>
 ```
