@@ -4,7 +4,6 @@ L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouven
 
 ```jsx
 import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, Brand, ToolItemGroup } from '.';
-
 import SearchBar from '../SearchBar/index';
 
 <Header>
@@ -40,9 +39,4 @@ import SearchBar from '../SearchBar/index';
         </NavItem>
     </HeaderNav>
 </Header>
-```
-
-```jsx
-import Service from './Service';
-<Service title='test'/>
 ```
