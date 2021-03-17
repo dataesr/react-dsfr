@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import useCollapse from '../../../hooks/useCollapse';
 
+/**
+ * Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une
+ * rubrique ou d’un même thème.
+ *
+ * @visibleName SideMenu
+ */
 export const SideMenuLink = ({ children, href }) => (
   <li className="rf-sidemenu__item">
     <a className="rf-sidemenu__link" href={href} target="_self">{children}</a>
