@@ -14,10 +14,10 @@ import Card from '.';
   </Card.Description>
 </Card>
 ```
-Card may be horizontal in desktop
+La Carte peut etre horizontale sur les grands écrans
 ```jsx
 import Card from '.';
-<Card href="/" isHorizontal>
+<Card href="/" isHorizontal hasArrow={false}>
   <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
   <Card.Detail>Détail</Card.Detail>
   <Card.Title>
