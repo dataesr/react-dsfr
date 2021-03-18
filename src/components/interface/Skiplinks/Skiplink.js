@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Link from '../Link';
 import { CLASS_NAME_TYPE } from '../../../utils/types';
+
 /**
  * Les liens d’évitement permettent aux utilisateurs naviguant au clavier,
  * ou équipés de lecteurs d'écran, d’accéder plus rapidement à des zones précises de la page.

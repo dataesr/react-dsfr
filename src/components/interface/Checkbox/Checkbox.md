@@ -1,7 +1,7 @@
 Les cases à cocher permettent à l’utilisateur de sélectionner une ou plusieurs options dans une liste.
 Elles sont utilisées pour effectuer des sélections multiples (de 0 à N éléments) ou bien pour permettre un choix binaire, lorsque l’utilisateur peut sélectionner ou désélectionner une seule option. 
 
-## Case à cocher - checkbox
+## Checkbox - Case à cocher 
 La case à cocher peut être utilisée seule ou en liste. Évitez les listes de plus de 5 items et lorsque vous souhaitez contraindre le choix à un seul élément - utiliser les boutons radios 🔗 
 
 ```jsx
@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 <Checkbox
   value="value-1"
-  onChange={e => alert(e.target.value)}
+  onChange={() => {}}
   label="Label checkbox"
 />
 ```
@@ -20,8 +20,8 @@ import { useState } from 'react';
 
 <Checkbox
   value="value-1"
-  onChange={e => alert(e.target.value)}
-  label="Label checkbox"
+  onChange={() => {}}
+  label="Label checkbox disabled"
   isDisabled={true}
 />
 ```
@@ -32,7 +32,7 @@ import { useState } from 'react';
 
 <Checkbox
   value="value-1"
-  onChange={e => alert(e.target.value)}
+  onChange={() => {}}
   label="Label checkbox"
   hint="Texte de description additionnel"
 />
@@ -45,7 +45,7 @@ import { useState } from 'react';
 
 <Checkbox
   value="value-1"
-  onChange={e => alert(e.target.value)}
+  onChange={() => {}}
   label="Label checkbox"
   messageType="error"
   message="Texte d’erreur obligatoire"
@@ -62,8 +62,8 @@ import { useState } from 'react';
 
 <Checkbox
   value="value-1"
-  onChange={e => alert(e.target.value)}
-  label="Label checkbox"
+  onChange={() => {}}
+  label="Label checkbox taille sm"
   size="sm"
 />
 ```
@@ -76,12 +76,12 @@ import { CheckboxGroup, Checkbox } from '.';
 <CheckboxGroup>
   <Checkbox
     label="Label checkbox 1"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-1"
   />
   <Checkbox
     label="Label checkbox 2"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-2"
   />
 </CheckboxGroup>
@@ -96,12 +96,12 @@ import { CheckboxGroup, Checkbox } from '.';
 >
   <Checkbox
     label="Label checkbox 1"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-1"
   />
   <Checkbox
     label="Label checkbox 2"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-2"
   />
 </CheckboxGroup>
@@ -115,12 +115,12 @@ import { CheckboxGroup, Checkbox } from '.';
 <CheckboxGroup isInline>
   <Checkbox
     label="Label checkbox 1"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-1"
   />
   <Checkbox
     label="Label checkbox 2"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-2"
   />
 </CheckboxGroup>
@@ -139,12 +139,12 @@ import { CheckboxGroup, Checkbox } from '.';
 >
   <Checkbox
     label="Label checkbox 1"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-1"
   />
   <Checkbox
     label="Label checkbox 2"
-    onChange={e => alert(e.target.value)}
+    onChange={() => {}}
     value="value-2"
   />
 </CheckboxGroup>

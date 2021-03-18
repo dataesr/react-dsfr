@@ -1,3 +1,7 @@
+## Tuile - Tile
+
+
+### Tuile horizontale
 ```jsx
 
 import { Tile, TileBody, TileImage } from '.';
@@ -15,6 +19,7 @@ import { Tile, TileBody, TileImage } from '.';
 </Tile>
 ```
 
+### Tuile verticale
 ```jsx
 
 import { Tile, TileBody, TileImage } from '.';
@@ -33,7 +38,7 @@ import { Tile, TileBody, TileImage } from '.';
 ```
 
 
-#### Utilisation avec Container, Row, Col
+### Utilisation avec Container, Row, Col
 
 ```jsx
 import Row from '../../foundation/grid/Row/Row';
