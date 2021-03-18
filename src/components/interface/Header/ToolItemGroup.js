@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
@@ -14,7 +14,7 @@ const ToolItemGroup = ({ children, className }) => {
     <>
       {isMobile && shortcutListElement && createPortal(children, shortcutListElement)}
       {!isMobile && (
-        <div className={classnames(className, 'rf-shortcuts')}>
+        <div className={classNames(className, 'rf-shortcuts')}>
           <ul className="rf-shortcuts__list">
             {children}
           </ul>

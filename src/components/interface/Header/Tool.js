@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
@@ -10,7 +10,7 @@ const Tool = ({
   const {
     isOpenSearch, onOpenSearch, isMobile,
   } = useContext(HeaderContext);
-  const _className = classnames('rf-header__tools', {
+  const _className = classNames('rf-header__tools', {
     'rf-header__popin': isMobile,
     'rf-header__popin--expanded': isOpenSearch,
   }, className);

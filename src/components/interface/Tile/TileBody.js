@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
@@ -17,7 +17,7 @@ const TileBody = ({
 }) => {
   const HtmlTag = `${titleAs}`;
   return (
-    <div className={classnames('rf-tile__body', className)}>
+    <div className={classNames('rf-tile__body', className)}>
       <HtmlTag className="rf-tile__title">
         <a
           className="rf-tile__link"

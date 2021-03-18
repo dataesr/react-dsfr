@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 /**
  *
@@ -9,7 +9,7 @@ const TitleDisplay = ({
   as, size, children, className,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classnames(className, { [`rf-display-${size}`]: size });
+  const _className = classNames(className, { [`rf-display-${size}`]: size });
   return (
     <HtmlTag className={_className}>
       {children}
