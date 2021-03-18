@@ -36,4 +36,5 @@ export const SCHEME_TYPE = PropTypes.oneOf([
   'soft-pink-soft',
   'soft-yellow-dark',
   'soft-yellow-medium',
+  '',
 ]);

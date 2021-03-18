@@ -17,5 +17,6 @@ export function getColSize(n, offset) {
 }
 
 export function getScheme(scheme) {
-  return `rf-scheme-${scheme}`;
+  if (scheme) return `rf-scheme-${scheme}`;
+  return null;
 }
