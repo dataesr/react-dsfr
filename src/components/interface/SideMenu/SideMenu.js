@@ -9,56 +9,7 @@ import useCollapse from '../../../hooks/useCollapse';
  *
  * @visibleName SideMenu
  */
-export const SideMenuLink = ({ children, href }) => (
-  <li className="rf-sidemenu__item">
-    <a className="rf-sidemenu__link" href={href} target="_self">{children}</a>
-  </li>
-);
-
-SideMenuLink.propTypes = {
-  children: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-};
-
-export const SideMenuItem = ({ children, expandedDefault, title }) => {
-  const itemID = uuidv4();
-  const [isExpanded, setExpanded] = useState(expandedDefault);
-  const { item, collapse } = useCollapse(itemID, isExpanded);
-  return (
-    <li className="rf-sidemenu__item">
-      <button
-        type="button"
-        onClick={() => setExpanded(!isExpanded)}
-        className="rf-sidemenu__btn"
-        aria-expanded={isExpanded}
-        aria-controls={itemID}
-      >
-        {title}
-      </button>
-      <div
-        className={item.class}
-        id={itemID}
-        data-testid={itemID}
-        style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
-      >
-        <ul className="rf-sidemenu__list">
-          {children}
-        </ul>
-      </div>
-    </li>
-  );
-};
-
-SideMenuItem.propTypes = {
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  expandedDefault: PropTypes.bool,
-};
-SideMenuItem.defaultProps = {
-  expandedDefault: false,
-};
-
-export const SideMenu = ({ children, title, buttonLabel }) => {
+const SideMenu = ({ children, title, buttonLabel }) => {
   const itemID = uuidv4();
   const [isExpanded, setExpanded] = useState(false);
   const { item, collapse } = useCollapse(itemID, isExpanded);
@@ -96,3 +47,4 @@ SideMenu.propTypes = {
   title: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string.isRequired,
 };
+export default SideMenu;

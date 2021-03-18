@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE, CHILDREN_TYPE } from '../../../utils/variables';
+import classNames from 'classnames';
+import { CLASS_NAME_TYPE, CHILDREN_TYPE, SCHEME_TYPE } from '../../../utils/types';
+import { getScheme } from '../../../utils/getters';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
  * Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
  *
- * @visibleName Tuile horizontale ou verticale
+ * @visibleName Tile
  */
 const Tile = ({
   horizontal,
@@ -14,19 +15,20 @@ const Tile = ({
   horizontalMedium,
   verticalMedium,
   children,
-}) => (
-  <div className={classnames(className, 'rf-tile', {
+  scheme,
+}) => {
+  const _scheme = getScheme(scheme);
+  const _className = classNames('rf-tile', {
     'rf-tile--horizontal': horizontal,
     'rf-tile--horizontal-md': !horizontal && horizontalMedium,
     'rf-tile--vertical-md': verticalMedium && horizontal,
-  })}
-  >
-    {children}
-  </div>
-);
+  }, _scheme, className);
+  return <div className={_className}>{children}</div>;
+};
 
 Tile.defaultProps = {
   className: '',
+  scheme: '',
   horizontal: false,
   verticalMedium: false,
   horizontalMedium: false,
@@ -47,6 +49,7 @@ Tile.propTypes = {
    * One of: node, arrayOf(node), string
    */
   children: CHILDREN_TYPE.isRequired,
+  scheme: SCHEME_TYPE,
 };
 
 export default Tile;

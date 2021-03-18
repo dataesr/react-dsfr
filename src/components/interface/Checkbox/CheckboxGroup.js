@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
@@ -15,11 +15,12 @@ const CheckboxGroup = ({
   message,
   messageType,
 }) => {
-  const inlineClass = (isInline) ? 'rf-fieldset--inline' : null;
-  const messageClasses = (messageType !== '') ? `rf-fieldset--${messageType}` : null;
-  const classes = classNames('rf-form-group', className, inlineClass, messageClasses);
+  const _className = classNames('rf-form-group', {
+    'rf-fieldset--inline': isInline,
+    [`rf-fieldset--${messageType}`]: messageType,
+  }, className);
   return (
-    <div className={classes}>
+    <div className={_className}>
       <fieldset className="rf-fieldset">
         {legend && <legend className="rf-fieldset__legend">{legend}</legend>}
         {hint && <p className="rf-hint-text">{hint}</p>}

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  * Condenser l'espace
@@ -10,6 +10,7 @@ import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
  */
 const AccordionGroup = ({ className, children, as }) => {
   const HtmlTag = `${as}`;
+  const _className = classNames(className);
   const [isExpanded, setIsExpanded] = useState('');
   const expand = (e) => {
     if (e.target.id.slice(6) === isExpanded) {
@@ -19,9 +20,9 @@ const AccordionGroup = ({ className, children, as }) => {
     }
   };
 
-  const childs = React.Children.toArray(children).map((child, i) => {
+  const childs = Children.toArray(children).map((child, i) => {
     const id = i.toString();
-    return React.cloneElement(child, {
+    return cloneElement(child, {
       id,
       key: id,
       onClick: expand,
@@ -30,7 +31,7 @@ const AccordionGroup = ({ className, children, as }) => {
   });
 
   return (
-    <HtmlTag className={classNames(className)} data-testid="accordion-group">
+    <HtmlTag className={_className} data-testid="accordion-group">
       <ul className="rf-accordions-group">
         {childs}
       </ul>

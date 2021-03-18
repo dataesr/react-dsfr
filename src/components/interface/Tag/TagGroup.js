@@ -1,4 +1,4 @@
-import React from 'react';
+import { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,10 +9,9 @@ import { v4 as uuidv4 } from 'uuid';
  * @visibleName Tag
  */
 const TagGroup = ({ className, children }) => {
-  const classes = classNames('rf-tags-group', className);
-  const childList = React.Children.toArray(children);
-  const childs = childList.map((child) => <li key={uuidv4()}>{child}</li>);
-  return <ul className={classes} data-testid="tag-group">{childs}</ul>;
+  const _className = classNames('rf-tags-group', className);
+  const childs = Children.toArray(children).map((child) => <li key={uuidv4()}>{child}</li>);
+  return <ul className={_className} data-testid="tag-group">{childs}</ul>;
 };
 
 TagGroup.defaultProps = {

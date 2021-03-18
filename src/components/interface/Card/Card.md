@@ -2,7 +2,7 @@
 
 ```jsx
 import Card from '.';
-<Card href="/">
+<Card href="/" scheme="soft-orange-dark">
   <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
   <Card.Detail>Détail</Card.Detail>
   <Card.Title>

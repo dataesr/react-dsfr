@@ -9,14 +9,10 @@ import classNames from 'classnames';
 const Highlight = ({
   scheme, size, children, className,
 }) => {
-  const classes = classNames(
-    'rf-highlight',
-    {
-      [`rf-highlight--scheme-${scheme}`]: scheme,
-      [`rf-highlight--${size}`]: (['sm', 'lg'].includes(size)),
-    },
-    className,
-  );
+  const classes = classNames('rf-highlight', {
+    [`rf-highlight--scheme-${scheme}`]: scheme,
+    [`rf-highlight--${size}`]: (['sm', 'lg'].includes(size)),
+  }, className);
   return (
     <div className={classes} data-testid="highlight">
       {children}

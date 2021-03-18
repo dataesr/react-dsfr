@@ -1,29 +1,34 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
  * @visibleName Button
  */
-const Button = (props) => {
-  const {
-    size, secondary, disabled, title, icon, iconPosition, onClick, children, className,
-  } = props;
+const Button = ({
+  size,
+  secondary,
+  disabled,
+  title,
+  icon,
+  iconPosition,
+  onClick,
+  children,
+  className,
+}) => {
+  const _className = classNames('rf-btn', `rf-btn--${size}`, className, {
+    [`rf-btn--icon rf-fi-${icon}`]: icon,
+    'rf-btn--secondary': secondary,
+    [`rf-btn--icon-${iconPosition}`]: icon && children,
+  });
 
   // TODO manage all icons from remix library
   return (
     <button
       type="button"
       onClick={onClick}
-      className={classnames('rf-btn',
-        {
-          [`rf-btn--icon rf-fi-${icon}`]: icon,
-          'rf-btn--secondary': secondary,
-          [`rf-btn--icon-${iconPosition}`]: icon && children,
-        },
-        `rf-btn--${size}`,
-        className)}
+      className={_className}
       title={title}
       disabled={disabled}
     >
@@ -51,9 +56,6 @@ Button.propTypes = {
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string.isRequired,
-  /**
-   * One of: string, object
-   */
   className: CLASS_NAME_TYPE,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.string,

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
 
 const ModalTitle = ({ children, icon }) => (
   <h1 id="rf-modal-title-modal" className="rf-modal__title">

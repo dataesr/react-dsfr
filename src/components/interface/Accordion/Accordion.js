@@ -1,6 +1,6 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 import useCollapse from '../../../hooks/useCollapse';
 
 const Accordion = ({
@@ -8,8 +8,9 @@ const Accordion = ({
 }) => {
   const TitleTag = `${titleAs}`;
   const { item, collapse } = useCollapse(`rf-accordion-${id}`, isExpanded);
+  const _className = classNames(className);
   return (
-    <li className={classnames(className)} data-testid="accordion">
+    <li className={_className} data-testid="accordion">
       <section className="rf-accordion">
         <TitleTag className="rf-accordion__title">
           <button
@@ -67,9 +68,6 @@ Accordion.propTypes = {
    * One of: node, arrayOf(node), string
    */
   children: CHILDREN_TYPE.isRequired,
-  /**
-   * One of: string, object
-   */
   className: CLASS_NAME_TYPE,
 };
 

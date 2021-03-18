@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /**
  * Design system Icon
  *
  * @visibleName Icon
  */
-const Icon = ({ icon, size }) => {
-  const iconSize = (size !== 'md') ? ` rf-fi--${size}` : '';
-  return <span className={`rf-fi-${icon}${iconSize}`} />;
+const Icon = ({ icon, size, className }) => {
+  const _className = classNames(className, `rf-fi-${icon}`, {
+    [`rf-fi--${size}`]: (size !== 'md'),
+  });
+  return <span className={_className} />;
 };
 
 Icon.propTypes = {
@@ -19,9 +22,15 @@ Icon.propTypes = {
   * Icon size
   */
   size: PropTypes.oneOf(['md', 'lg', 'xl']),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Icon.defaultProps = {
   size: 'md',
+  className: '',
 };
 
 export default Icon;

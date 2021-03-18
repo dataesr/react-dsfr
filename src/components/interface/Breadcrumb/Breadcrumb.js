@@ -1,9 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
-import classnames from 'classnames';
+import {
+  useState, useEffect, useRef, Children,
+} from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
-export const Breadcrumb = ({
+/**
+ * @visibleName Breadcrumb
+ */
+const Breadcrumb = ({
   label,
   buttonLabel,
   className,
@@ -14,9 +19,13 @@ export const Breadcrumb = ({
   const listRef = useRef();
   const [open, setOpen] = useState(true);
   const [clicked, setClicked] = useState(false);
-  const button = children.filter((child) => child.type.name === 'BreadcrumbButton');
-  const content = children.filter((child) => child.type.name === 'BreadcrumbItem');
-  const classes = classnames('rf-breadcrumb', className);
+  const button = Children.toArray(children).filter(
+    (child) => child.type.name === 'BreadcrumbButton',
+  );
+  const content = Children.toArray(children).filter(
+    (child) => child.type.name === 'BreadcrumbItem',
+  );
+  const _className = classNames('rf-breadcrumb', className);
   const handleOpenBreadcrumb = () => {
     const height = buttonRef.current.offsetHeight;
     breadRef.current.style.maxHeight = `calc(${height}px + 1rem)`;
@@ -36,7 +45,7 @@ export const Breadcrumb = ({
   }, [open, clicked]);
 
   return (
-    <nav ref={breadRef} className={classes} aria-label={label} data-testid="bc-nav">
+    <nav ref={breadRef} className={_className} aria-label={label} data-testid="bc-nav">
       <button ref={buttonRef} type="button" onClick={handleOpenBreadcrumb} className="rf-breadcrumb__button" hidden={open} data-testid="bc-button">
         {buttonLabel}
       </button>
@@ -60,34 +69,4 @@ Breadcrumb.propTypes = {
   className: CLASS_NAME_TYPE,
 };
 
-export const BreadcrumbItem = ({
-  className, children, current, href,
-}) => {
-  const classes = classnames(
-    'rf-breadcrumb__item',
-    { 'rf-breadcrumb__item--current': current },
-    className,
-  );
-  return (
-    <li className={classes} aria-current={current && 'page'} data-testid="bc-item">
-      {
-        (href)
-          ? <a href={href}>{children}</a>
-          : children
-      }
-    </li>
-  );
-};
-
-BreadcrumbItem.defaultProps = {
-  className: '',
-  current: false,
-  href: null,
-};
-
-BreadcrumbItem.propTypes = {
-  children: CHILDREN_TYPE.isRequired,
-  className: CLASS_NAME_TYPE,
-  current: PropTypes.bool,
-  href: PropTypes.string,
-};
+export default Breadcrumb;

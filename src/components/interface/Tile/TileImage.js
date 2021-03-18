@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.

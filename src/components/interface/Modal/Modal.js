@@ -1,6 +1,7 @@
-import { Component, useRef, useEffect } from 'react';
+import { Children, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalTitle from './ModalTitle';
 import ModalContent from './ModalContent';
@@ -18,12 +19,14 @@ const MODAL_ANIMATION_TIME = 300;
 
 const ModalDialog = ({ children, hide, size }) => {
   const modalRef = useRef();
-  const sizeModifier = (size !== 'md') ? ` rf-modal--${size}` : '';
+  const _className = classNames('rf-modal', {
+    [`rf-modal--${size}`]: (size !== 'md'),
+  });
   const handleTabulation = useFocusTrap(modalRef);
-  const title = children.filter((child) => child.type.name === 'ModalTitle');
-  const content = children.filter((child) => child.type.name === 'ModalContent');
-  const footer = children.filter((child) => child.type.name === 'ModalFooter');
-  const close = children.filter((child) => child.type.name === 'ModalClose');
+  const title = Children.toArray(children).filter((child) => child.type.name === 'ModalTitle');
+  const content = Children.toArray(children).filter((child) => child.type.name === 'ModalContent');
+  const footer = Children.toArray(children).filter((child) => child.type.name === 'ModalFooter');
+  const close = Children.toArray(children).filter((child) => child.type.name === 'ModalClose');
   const handleAnimatedUnmount = () => {
     modalRef.current.style.opacity = '0';
     setTimeout(() => {
@@ -64,7 +67,7 @@ const ModalDialog = ({ children, hide, size }) => {
       <dialog
         aria-labelledby="rf-modal-title-modal"
         id="rf-modal"
-        className={`rf-modal${sizeModifier}`}
+        className={_className}
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
         onClick={(e) => handleOverlayClick(e)}
@@ -91,14 +94,10 @@ const ModalDialog = ({ children, hide, size }) => {
   );
 };
 
-class Modal extends Component {
-  render() {
-    const {
-      size, hide, children, isOpen,
-    } = this.props;
-    return (isOpen) && <ModalDialog size={size} hide={hide}>{children}</ModalDialog>;
-  }
-}
+const Modal = ({
+  size, hide, children, isOpen,
+}) => (isOpen) && <ModalDialog size={size} hide={hide}>{children}</ModalDialog>;
+
 Modal.propTypes = {
   isOpen: PropTypes.bool,
   children: PropTypes.node.isRequired,

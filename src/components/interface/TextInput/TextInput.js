@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
-
+import { CLASS_NAME_TYPE } from '../../../utils/types';
 /**
  * Les champs permettent à un utilisateur d'entrer du contenu et données.
  *
@@ -18,16 +18,21 @@ const TextInput = forwardRef((props, ref) => {
     value,
     onChange,
     messageType,
+    className,
   } = props;
 
-  const divClasses = classNames('rf-input-group', { [`rf-input-group--${messageType}`]: messageType });
-  const inputClasses = classNames('rf-input', { [`rf-input--${messageType}`]: messageType });
+  const _classNameWrapper = classNames('rf-input-group', {
+    [`rf-input-group--${messageType}`]: messageType,
+  }, className);
+  const _className = classNames('rf-input', {
+    [`rf-input--${messageType}`]: messageType,
+  });
 
   const inputId = uuidv4();
   const hintId = hint && uuidv4();
   const messageId = message && uuidv4();
   return (
-    <div className={divClasses}>
+    <div className={_classNameWrapper}>
       {label && <label className="rf-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
       {hint && <p className="rf-hint-text" id={hintId}>{hint}</p>}
       {
@@ -35,7 +40,7 @@ const TextInput = forwardRef((props, ref) => {
           ? (
             <textarea
               ref={ref}
-              className={inputClasses}
+              className={_className}
               disabled={inactive}
               id={inputId}
               value={value}
@@ -45,7 +50,7 @@ const TextInput = forwardRef((props, ref) => {
           : (
             <input
               ref={ref}
-              className={inputClasses}
+              className={_className}
               disabled={inactive}
               type="text"
               id="text-input"
@@ -67,6 +72,7 @@ TextInput.defaultProps = {
   messageType: '',
   message: '',
   label: null,
+  className: '',
 };
 TextInput.propTypes = {
   textarea: PropTypes.bool,
@@ -77,6 +83,7 @@ TextInput.propTypes = {
   onChange: PropTypes.func,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
+  className: CLASS_NAME_TYPE,
 };
 
 export default TextInput;

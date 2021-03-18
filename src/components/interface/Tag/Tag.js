@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import { CLASS_NAME_TYPE, SCHEME_TYPE } from '../../../utils/types';
+import { getScheme } from '../../../utils/getters';
 
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
@@ -9,18 +10,28 @@ import { CLASS_NAME_TYPE } from '../../../utils/variables';
  * @visibleName Tag
  */
 const Tag = ({
-  as, children, size, href, title, target, icon, iconPosition, className,
+  as,
+  children,
+  size,
+  href,
+  title,
+  target,
+  icon,
+  iconPosition,
+  className,
+  scheme,
 }) => {
   const HtmlTag = `${as}`;
-  const classes = classNames('rf-tag', className, {
+  const _scheme = getScheme(scheme);
+  const _className = classNames('rf-tag', _scheme, {
     [`rf-tag--${size}`]: size,
     [`rf-fi-${icon}`]: icon,
     [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
-  });
+  }, className);
 
   return (
     <HtmlTag
-      className={classes}
+      className={_className}
       title={title || undefined}
       href={href || undefined}
       target={target || undefined}
@@ -33,6 +44,7 @@ const Tag = ({
 
 Tag.defaultProps = {
   className: '',
+  scheme: '',
   as: 'p',
   size: 'md',
   href: '',
@@ -44,6 +56,7 @@ Tag.defaultProps = {
 
 Tag.propTypes = {
   className: CLASS_NAME_TYPE,
+  scheme: SCHEME_TYPE,
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['sm', 'md']),

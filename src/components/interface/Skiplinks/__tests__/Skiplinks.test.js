@@ -1,15 +1,15 @@
 import { render, screen, within } from '@testing-library/react';
-import { Skiplinks, Skiplink } from '..';
+import { SkiplinkGroup, Skiplink } from '..';
 
 describe('<SkipLinks />', () => {
   it('should renders Tag properly', () => {
     render(
-      <Skiplinks>
+      <SkiplinkGroup>
         <Skiplink href="#">Accéder au contenu</Skiplink>
         <Skiplink href="#">Accéder au menu</Skiplink>
         <Skiplink href="#">Accéder à la recherche</Skiplink>
         <Skiplink href="#">Accéder au footer</Skiplink>
-      </Skiplinks>,
+      </SkiplinkGroup>,
     );
     const skiplinks = screen.getByTestId('skiplinks');
     expect(skiplinks).toBeInTheDocument();
