@@ -44,7 +44,7 @@ describe('<Tabs />', () => {
     expect(wrapper.find('.rf-tabs').hasClass('my-class')).toBeTruthy();
   });
 
-  it('should height equals 500', () => {
+  it('should call setHeight', () => {
     const setHeight = jest.fn();
     const useStateSpy = jest.spyOn(React, 'useState');
     useStateSpy.mockImplementation((contentTabHeight) => [contentTabHeight, setHeight]);
