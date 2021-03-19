@@ -1,15 +1,53 @@
 import renderer from 'react-test-renderer';
-import { Tab, Tabs } from '../index';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import React from 'react';
+import { Tabs, Tab } from '../index';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tabs />', () => {
-  it('should render Tab properly', () => {
+  const initProps = {
+    className: 'my-class',
+    children: 'Tabinouze',
+    scheme: 'soft-yellow-medium',
+  };
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Tabs
+        className={initProps.className}
+        scheme={initProps.scheme}
+      >
+        {initProps.children}
+      </Tabs>,
+    );
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should render Tabs properly', () => {
     const component = renderer
       .create(
-        <Tabs>
+        <Tabs scheme="soft-blue-soft">
           <Tab label="Label">Tab #1</Tab>
         </Tabs>,
       )
       .toJSON();
     expect(component).toMatchSnapshot();
+  });
+
+  it('should have custom class', () => {
+    expect(wrapper.find('.rf-tabs').hasClass('my-class')).toBeTruthy();
+  });
+
+  it('should height equals 500', () => {
+    const setHeight = jest.fn();
+    const useStateSpy = jest.spyOn(React, 'useState');
+    useStateSpy.mockImplementation((contentTabHeight) => [contentTabHeight, setHeight]);
+    expect(setHeight).toBeTruthy();
   });
 });

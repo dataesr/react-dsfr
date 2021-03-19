@@ -63,7 +63,7 @@ describe('<Tab />', () => {
 
   test('on load setHeight', () => {
     const mockSetHeight = jest.fn();
-    const component = wrapper({ ...initProps, setHeight: mockSetHeight });
+    wrapper({ ...initProps, setHeight: mockSetHeight });
     expect(mockSetHeight).toHaveBeenCalled();
   });
 });

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tabs /> should render Tab properly 1`] = `
+exports[`<Tabs /> should render Tabs properly 1`] = `
 <div
-  className="rf-tabs"
+  className="rf-tabs rf-scheme-soft-blue-soft"
   style={
     Object {
       "height": 500,
