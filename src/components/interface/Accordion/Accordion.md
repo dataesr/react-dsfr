@@ -1,5 +1,7 @@
 Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page. Ils sont utilisés pour condenser l'espace en cachant le contenu et en le révélant au besoin.
 
+## Les accordéons
+
 ### Accordéon simple
 
 ```jsx

@@ -1,24 +1,38 @@
-### Tag par défaut
+## Tag simple
 
-```jsx padded
+### Tag simple par défault
+```jsx
   <Tag>Label tag</Tag>
+```
+### Tag simple avec icône à gauche
+```jsx
   <Tag icon="arrow-right-line" iconPosition="left">Label tag</Tag>
+```
+### Tag simple avec icône à droite
+```jsx
   <Tag icon="arrow-right-line">Label tag</Tag>
 ```
 
-### Tag  cliquable
+## Tag cliquable
 
 Le tag cliquable donne accès à une page avec des contenus associés à ce tag.
 
-```jsx padded
+### Tag cliquable par défault
+```jsx
   <Tag as="a" href="#">Label tag</Tag>
+```
+### Tag cliquable avec icône à gauche
+```jsx
   <Tag as="a" href="#" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
+```
+### Tag cliquable avec icône à droite
+```jsx
   <Tag as="a" href="#" icon="arrow-right-line">Label tag</Tag>
 ```
 
-### Groupe de tags
+## Groupe de tags
 
-#### Tags non cliquables
+### Tags non cliquables
 ```jsx
 import { Tag, TagGroup } from '.';
 <>
@@ -43,7 +57,7 @@ import { Tag, TagGroup } from '.';
 </>
 ```
 
-#### Tags cliquables
+### Tags cliquables
 ```jsx
 import { Tag, TagGroup } from '.';
 <>

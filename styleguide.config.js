@@ -27,6 +27,7 @@ module.exports = {
       base: "'Marianne', sans-serif",
     },
   },
+  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-rfds/master/favicon.ico' },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
   },

@@ -1,4 +1,4 @@
-### Modale  simple
+## Modale simple
 
 La modale par défaut permet de mettre en évidence une information qui ne nécessite pas d’action de l’utilisateur. Elle s’affiche à la suite du clic sur un bouton.
 
