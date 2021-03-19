@@ -1,7 +1,8 @@
-### SideMenu usage
+## SideMenu - Menu latéral
 
 ```jsx
 import { SideMenu, SideMenuItem, SideMenuLink } from '.';
+
 <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
   <SideMenuItem title="Niveau 1">
     <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>

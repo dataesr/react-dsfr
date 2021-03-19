@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> renders Card properly 1`] = `
+<div
+  class="rf-card"
+  data-testid="card"
+>
+  <div
+    class="rf-card__img"
+  >
+    <img
+      alt="alternative"
+      src="http://fakeimg.pl/300/"
+    />
+  </div>
+  <div
+    class="rf-card__body"
+  >
+    <p
+      class="rf-card__detail"
+    >
+      Détail
+    </p>
+    <p
+      class="rf-card__title"
+    >
+      <a
+        class="rf-card__link"
+        href="/"
+      >
+        Qu’est-ce que le Pass Culture et comment l’obtenir ?
+      </a>
+    </p>
+    <p
+      class="rf-card__desc"
+    >
+      Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
+    </p>
+  </div>
+</div>
+`;

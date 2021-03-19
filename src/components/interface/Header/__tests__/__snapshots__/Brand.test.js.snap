@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Brand /> renders correctly 1`] = `
+<div
+  className="rf-header__brand"
+>
+  <a
+    className="rf-logo"
+    href="/"
+    title="République française"
+  >
+    <span
+      className="rf-logo__title"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "title",
+        }
+      }
+    />
+  </a>
+</div>
+`;

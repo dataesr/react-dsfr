@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> renders correctly 1`] = `
+<div
+  className="rf-select-group rf-select-group--valid"
+>
+  <label
+    className="rf-label"
+    htmlFor="xxxxxxx"
+  >
+    Label pour liste déroulante
+    
+  </label>
+  <select
+    className="rf-select rf-select--valid"
+    data-testid="select"
+    disabled={false}
+    id="xxxxxxx"
+    name={null}
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      disabled={false}
+      hidden={false}
+      value="1"
+    >
+      label-1
+    </option>
+    <option
+      disabled={false}
+      hidden={false}
+      value="2"
+    >
+      label-2
+    </option>
+  </select>
+  
+</div>
+`;

@@ -1,4 +1,4 @@
-### Breadcrumb usage
+## Breadcrumb - Fil d'ariane
 
 ```jsx
 import { Breadcrumb, BreadcrumbItem } from '.';
