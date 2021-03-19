@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../../utils/types';
 
 /**
  * Design system Icon
@@ -22,11 +23,7 @@ Icon.propTypes = {
   * Icon size
   */
   size: PropTypes.oneOf(['md', 'lg', 'xl']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: CLASS_NAME_TYPE,
 };
 Icon.defaultProps = {
   size: 'md',

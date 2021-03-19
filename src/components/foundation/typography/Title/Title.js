@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../../utils/types';
 
 /**
  *
@@ -27,11 +28,7 @@ Title.propTypes = {
   */
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
   look: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: CLASS_NAME_TYPE,
 };
 
 Title.defaultProps = {

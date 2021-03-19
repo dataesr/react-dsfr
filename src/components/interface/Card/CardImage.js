@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 const CardImage = ({ alt, src, className }) => (
   <div className={classNames('rf-card__img', className)}>
@@ -9,11 +10,7 @@ const CardImage = ({ alt, src, className }) => (
 
 CardImage.propTypes = {
   alt: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: CLASS_NAME_TYPE,
   src: PropTypes.string.isRequired,
 };
 CardImage.defaultProps = {
