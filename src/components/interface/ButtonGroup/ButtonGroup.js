@@ -6,7 +6,7 @@ import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
- * @visibleName Button
+ * @visibleName ButtonGroup
  */
 const ButtonGroup = ({
   children,

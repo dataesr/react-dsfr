@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { CLASS_NAME_TYPE } from '../../../utils/variables';
+
 /**
  * @visibleName Toggle
  */
