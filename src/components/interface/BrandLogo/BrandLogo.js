@@ -9,6 +9,7 @@ import classNames from 'classnames';
 const BrandLogo = ({
   children, href, className, splitCharacter, hrefTitle,
 }) => {
+  // TODO Better system to split
   const regex = new RegExp(`.{${splitCharacter.toString()}}\\S*\\s+`, 'g');
   const arrayStr = children.replace(regex, '$&@').split(/\s+@/);
   const title = arrayStr.reduce((el, a, i) => el.concat(a, i < arrayStr.length - 1 ? (
