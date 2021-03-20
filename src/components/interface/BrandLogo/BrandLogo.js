@@ -39,6 +39,7 @@ BrandLogo.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
+    PropTypes.array,
   ]),
   children: PropTypes.string.isRequired,
   hrefTitle: PropTypes.string,
