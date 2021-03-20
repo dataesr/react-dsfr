@@ -2,11 +2,11 @@ import { Children } from 'react';
 import PropTypes from 'prop-types';
 
 const FooterBody = ({ children, description }) => {
-  const logo = Children.toArray(children).filter((child) => child.type.name === 'Logo');
+  const brandLogo = Children.toArray(children).filter((child) => child.type.name === 'BrandLogo');
   return (
     <div className="rf-footer__body">
       <div className="rf-footer__brand">
-        {logo}
+        {brandLogo}
       </div>
       <div className="rf-footer__content">
         <p className="rf-footer__content-desc">{description}</p>

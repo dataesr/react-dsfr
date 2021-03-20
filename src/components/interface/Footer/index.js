@@ -1,5 +1,6 @@
 import FooterBody from './FooterBody';
-import FooterTop, { FooterTopCategory } from './FooterTop';
+import FooterTop from './FooterTop';
+import FooterTopCategory from './FooterTopCategory';
 import FooterBottom from './FooterBottom';
 import FooterCopy from './FooterCopy';
 import FooterPartners, { FooterPartnersTitle, FooterPartnersLogo } from './FooterPartners';

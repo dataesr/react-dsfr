@@ -11,7 +11,7 @@ import {
   FooterPartnersLogo,
   Footer,
 } from '..';
-import Logo from '../../Logo';
+import BrandLogo from '../../BrandLogo';
 
 describe('<Footer />', () => {
   it('should render Footer properly', () => {
@@ -54,9 +54,9 @@ describe('<Footer />', () => {
         <FooterBody
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         >
-          <Logo>
-            Ministère |de l&apos;enseignement |supérieur de la |rechercher  et de |l&apos;innovation
-          </Logo>
+          <BrandLogo splitCharacter={10}>
+            Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
+          </BrandLogo>
         </FooterBody>
         <FooterPartners>
           <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>

@@ -1,4 +1,4 @@
-```jsx
+```jsx noeditor
 import {
   FooterBody,
   FooterTop,
@@ -11,7 +11,7 @@ import {
   FooterPartnersLogo,
   Footer,
 } from '.';
-import Logo from '../Logo';
+import BrandLogo from '../BrandLogo';
 <Footer>
   <FooterTop>
     <FooterTopCategory title="Nom de la catégorie">
@@ -50,14 +50,14 @@ import Logo from '../Logo';
   <FooterBody
     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   >
-    <Logo>Ministère |de l'enseignement |supérieur de la |rechercher  et de |l'innovation</Logo>
+    <BrandLogo>Ministère de l'enseignement supérieur de la rechercher  et de l'innovation</BrandLogo>
   </FooterBody>
   <FooterPartners>
     <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
-    <FooterPartnersLogo isMain href="/" imageSrc="img/logo1" imageAlt="Logo 1" />
-    <FooterPartnersLogo href="/" imageSrc="img/logo2" imageAlt="Logo 2" />
-    <FooterPartnersLogo href="/" imageSrc="img/logo3" imageAlt="Logo 3" />
-    <FooterPartnersLogo href="/" imageSrc="img/logo4" imageAlt="Logo 4" />
+    <FooterPartnersLogo isMain href="/" imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo" imageAlt="Logo 1" />
+    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2" imageAlt="Logo 2" />
+    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3" imageAlt="Logo 3" />
+    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4" imageAlt="Logo 4" />
   </FooterPartners>
   <FooterBottom>
     <FooterLink href="/">Plan du site</FooterLink>

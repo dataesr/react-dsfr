@@ -316,21 +316,21 @@ exports[`<Footer /> should render Footer properly 1`] = `
         <a
           class="rf-logo"
           href="/"
-          title="Ministère de l'enseignement supérieur de la rechercher  et de l'innovation"
+          title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"
         >
           <span
             class="rf-logo__title"
           >
-            Ministère
+            Ministère de
             <br />
-            de l'enseignement
+            l'enseignement
             <br />
-            supérieur de la
+            supérieur de
             <br />
-            rechercher  et de
+            la rechercher
             <br />
-            l'innovation
-            <br />
+            et de l'innovation
+            
           </span>
         </a>
       </div>
