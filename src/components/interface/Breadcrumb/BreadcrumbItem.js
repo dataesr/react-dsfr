@@ -12,11 +12,7 @@ const BreadcrumbItem = ({
   );
   return (
     <li className={classes} aria-current={current && 'page'} data-testid="bc-item">
-      {
-                (href)
-                  ? <a href={href}>{children}</a>
-                  : children
-            }
+      {href ? <a href={href}>{children}</a> : children}
     </li>
   );
 };
@@ -24,7 +20,7 @@ const BreadcrumbItem = ({
 BreadcrumbItem.defaultProps = {
   className: '',
   current: false,
-  href: null,
+  href: '',
 };
 
 BreadcrumbItem.propTypes = {
