@@ -24,7 +24,7 @@ const BreadcrumbItem = ({
 BreadcrumbItem.defaultProps = {
   className: '',
   current: false,
-  href: null,
+  href: '',
 };
 
 BreadcrumbItem.propTypes = {

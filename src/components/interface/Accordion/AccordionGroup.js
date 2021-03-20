@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Children, cloneElement, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
@@ -19,9 +19,9 @@ const AccordionGroup = ({ className, children, as }) => {
     }
   };
 
-  const childs = React.Children.toArray(children).map((child, i) => {
+  const childs = Children.toArray(children).map((child, i) => {
     const id = i.toString();
-    return React.cloneElement(child, {
+    return cloneElement(child, {
       id,
       key: id,
       onClick: expand,

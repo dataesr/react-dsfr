@@ -1,10 +1,10 @@
-import React from 'react';
+import { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 const FooterBottom = ({ children }) => {
-  const links = React.Children.toArray(children)
+  const links = Children.toArray(children)
     .filter((link) => link.type.name === 'FooterLink')
-    .map((link) => React.cloneElement(link, { section: 'bottom' }));
+    .map((link) => cloneElement(link, { section: 'bottom' }));
   const childs = children.filter((link) => link.type.name !== 'FooterLink');
   return (
     <div className="rf-footer__bottom">

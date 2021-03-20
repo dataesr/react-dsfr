@@ -43,8 +43,7 @@ FooterPartnersTitle.defaultProps = {
 };
 
 export const FooterPartnersLogo = ({
-  // eslint-disable-next-line
-  href, imageSrc, imageAlt, isMain,
+  href, imageSrc, imageAlt,
 }) => {
   if (!href) return <img className="rf-footer__logo" src={imageSrc} alt={imageAlt} />;
   return (
@@ -57,12 +56,10 @@ FooterPartnersLogo.propTypes = {
   href: PropTypes.string,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
-  isMain: PropTypes.bool,
 };
 FooterPartnersLogo.defaultProps = {
-  href: null,
+  href: '',
   imageSrc: '',
-  isMain: false,
 };
 
 export default FooterPartners;
