@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace, getScheme } from '../../../../utils/getters';
+import { getSpace } from '../../../../utils/getters';
 import { SCHEMES } from '../../../../utils/constants';
 /**
  * Design system Row
@@ -11,17 +11,13 @@ const Row = ({
   gutter, justifyContent, alignItems, children, scheme, className, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
-  const _scheme = getScheme(scheme);
-  const _className = classNames(
-    { 'rf-grid-row': !gutter },
-    { 'rf-grid-row rf-grid-row--gutters': gutter },
-    { [`rf-grid-row--${justifyContent}`]: justifyContent },
-    { [`rf-grid-row--${alignItems}`]: alignItems },
-    margin,
-    padding,
-    className,
-    _scheme,
-  );
+  const _className = classNames(margin, padding, {
+    'rf-grid-row': !gutter,
+    'rf-grid-row rf-grid-row--gutters': gutter,
+    [`rf-grid-row--${justifyContent}`]: justifyContent,
+    [`rf-grid-row--${alignItems}`]: alignItems,
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
   return <div className={_className}>{children}</div>;
 };
 

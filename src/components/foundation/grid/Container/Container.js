@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace, getScheme } from '../../../../utils/getters';
+import { getSpace } from '../../../../utils/getters';
 import { SCHEMES } from '../../../../utils/constants';
 
 /**
@@ -12,15 +12,11 @@ const Container = ({
   fluid, children, scheme, className, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
-  const _scheme = getScheme(scheme);
-  const _className = classNames(
-    { 'rf-container': !fluid },
-    { 'rf-container-fluid': fluid },
-    margin,
-    padding,
-    className,
-    _scheme,
-  );
+  const _className = classNames(margin, padding, {
+    'rf-container': !fluid,
+    'rf-container-fluid': fluid,
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
   return <div className={_className}>{children}</div>;
 };
 

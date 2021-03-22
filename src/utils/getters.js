@@ -15,8 +15,3 @@ export function getColSize(n, offset) {
     offset: offset && offset.split(' ').map((elem) => `rf-col-offset-${elem}`),
   };
 }
-
-export function getScheme(scheme) {
-  if (scheme) return `rf-scheme-${scheme}`;
-  return null;
-}

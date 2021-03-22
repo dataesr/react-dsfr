@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace, getColSize, getScheme } from '../../../../utils/getters';
+import { getSpace, getColSize } from '../../../../utils/getters';
 import { SCHEMES } from '../../../../utils/constants';
 
 /**
@@ -13,16 +13,10 @@ const Col = ({
 }) => {
   const { margin, padding } = getSpace(rest);
   const { n: size, offset: off } = getColSize(n, offset);
-  const _scheme = getScheme(scheme);
-  const _className = classNames(
-    { 'rf-col': !n },
-    off,
-    size,
-    padding,
-    margin,
-    className,
-    _scheme,
-  );
+  const _className = classNames(off, size, padding, margin, {
+    'rf-col': !n,
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
   return <div className={_className}>{children}</div>;
 };
 

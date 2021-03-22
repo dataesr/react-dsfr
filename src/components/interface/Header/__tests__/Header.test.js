@@ -3,8 +3,9 @@ import renderer from 'react-test-renderer';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  Header, HeaderBody, Service, Tool, Brand, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
+  Header, HeaderBody, Service, Tool, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
 } from '../index';
+import BrandLogo from '../../BrandLogo';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -15,16 +16,14 @@ jest.mock('uuid', () => ({
 describe('<Header />', () => {
   beforeEach(() => {
     uuidv4.mockImplementationOnce(() => 'xxxxxxx');
+    uuidv4.mockImplementationOnce(() => 'yyyyyy');
   });
   it('renders correctly', () => {
     const component = renderer
       .create(
         <Header>
           <HeaderBody>
-            <Brand
-              title="republique<br>française"
-              linkTitle="République française"
-            />
+            <BrandLogo splitCharacter={10}>République française</BrandLogo>
             <Service
               title="Nom du service"
               description="baseline - précisions sur l‘organisation"

@@ -9,18 +9,14 @@ const BreadcrumbItem = ({
   }, className);
   return (
     <li className={_className} aria-current={!href && 'page'} data-testid="bc-item">
-      {
-        (href)
-          ? <a href={href}>{children}</a>
-          : children
-      }
+      {(href) ? <a href={href}>{children}</a> : children}
     </li>
   );
 };
 
 BreadcrumbItem.defaultProps = {
   className: '',
-  href: null,
+  href: '',
 };
 
 BreadcrumbItem.propTypes = {

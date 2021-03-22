@@ -3,29 +3,31 @@ L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouven
 ### Header avec barre de recherche, raccourcis outils et navigation
 
 ```jsx
-import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, Brand, ToolItemGroup } from '.';
+import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, ToolItemGroup } from '.';
 import SearchBar from '../SearchBar/index';
+import BrandLogo from '../BrandLogo';
 
 <Header>
-  <HeaderBody>
-    <Brand
-      title="republique<br>française"
-      linkTitle="République française" />
-    <Service
-      title="Nom du service"
-      description="baseline - précisions sur l‘organisation" />
-    <Tool buttonClose='fermer' >
-      <ToolItemGroup>
-        <ToolItem title='Se connecter' icon='rf-fi-lock-line' link='/path'></ToolItem>
-        <ToolItem title='Créer un espace' icon='rf-fi-add-circle-line' link='/path'></ToolItem>
-      </ToolItemGroup>
-      <SearchBar
-        onSearch={() => {}}
-        label="SearchBar du gouvernement"
-        placeholder="Rechercher"
-        buttonLabel="Rechercher"
-      />
-    </Tool>
+    <HeaderBody>
+        <BrandLogo splitCharacter={10}>République Française</BrandLogo>
+        <Service
+            title="Nom du service"
+            description="baseline - précisions sur l‘organisation" />
+        <Tool
+            buttonClose='fermer'
+        >
+            <ToolItemGroup>
+                <ToolItem title='Se connecter' icon='rf-fi-lock-line' link='/path'></ToolItem>
+                <ToolItem title='Créer un espace' icon='rf-fi-add-circle-line' link='/path'></ToolItem>
+            </ToolItemGroup>
+            <SearchBar
+                onSearch={() => {
+                }}
+                label="SearchBar du gouvernement"
+                placeholder="Rechercher"
+                buttonLabel="Rechercher"
+            />
+        </Tool>
     </HeaderBody>
     <HeaderNav>
       <NavItem title='Home' link='/' />
