@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
-import { getScheme } from '../../../utils/getters';
 
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
@@ -22,11 +21,11 @@ const Tag = ({
   scheme,
 }) => {
   const HtmlTag = `${as}`;
-  const _scheme = getScheme(scheme);
-  const _className = classNames('rf-tag', _scheme, {
+  const _className = classNames('rf-tag', {
     [`rf-tag--${size}`]: size,
     [`rf-fi-${icon}`]: icon,
     [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
+    [`rf-scheme-${scheme}`]: scheme,
   }, className);
 
   return (

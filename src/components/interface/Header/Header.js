@@ -18,7 +18,7 @@ const Header = ({
   let isNavBar = false;
   let isNavTool = false;
   const isMobile = width < 768;
-  const _classNameNav = classNames(className, 'rf-nav', {
+  const _classNameNav = classNames('rf-nav', {
     'rf-header__popin': isMobile,
     'rf-header__popin--expanded': openNav,
   });

@@ -1,13 +1,14 @@
 import { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const FooterBottom = ({ children }) => {
+const FooterBottom = ({ children, className }) => {
   const links = Children.toArray(children)
     .filter((link) => link.type.name === 'FooterLink')
     .map((link) => cloneElement(link, { section: 'bottom' }));
   const childs = children.filter((link) => link.type.name !== 'FooterLink');
   return (
-    <div className="rf-footer__bottom">
+    <div className={classNames('rf-footer__bottom', className)}>
       <ul className="rf-footer__bottom-list">
         {links}
       </ul>
@@ -16,7 +17,16 @@ const FooterBottom = ({ children }) => {
   );
 };
 FooterBottom.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
+FooterBottom.defaultProps = { className: '' };
 
 export default FooterBottom;

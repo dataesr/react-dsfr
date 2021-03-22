@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Footer = ({ children }) => {
+const Footer = ({ children, className }) => {
   const top = children.filter((child) => child.type.name === 'FooterTop');
   const rest = children.filter((child) => child.type.name !== 'FooterTop');
+  const _className = classNames('rf-footer', className);
   return (
-    <footer data-testid="footer" className="rf-footer" role="contentinfo" id="footer">
+    <footer data-testid="footer" className={_className} role="contentinfo" id="footer">
       {top}
       <div className="rf-container">
         {rest}
@@ -12,11 +14,18 @@ const Footer = ({ children }) => {
     </footer>
   );
 };
+
+Footer.defaultProps = { className: '' };
 Footer.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Footer;

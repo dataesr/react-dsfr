@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
-import { getScheme } from '../../../utils/getters';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
@@ -17,12 +16,12 @@ const Tile = ({
   children,
   scheme,
 }) => {
-  const _scheme = getScheme(scheme);
   const _className = classNames('rf-tile', {
     'rf-tile--horizontal': horizontal,
     'rf-tile--horizontal-md': !horizontal && horizontalMedium,
     'rf-tile--vertical-md': verticalMedium && horizontal,
-  }, _scheme, className);
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
   return <div className={_className}>{children}</div>;
 };
 

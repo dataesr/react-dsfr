@@ -7,9 +7,8 @@ const AccordionItem = ({
 }) => {
   const TitleTag = `${titleAs}`;
   const { item, collapse } = useCollapse(`rf-accordion-${id}`, isExpanded);
-  const _className = classNames(className);
   return (
-    <li className={_className} data-testid="accordion">
+    <li className={classNames(className)} data-testid="accordion">
       <section className="rf-accordion">
         <TitleTag className="rf-accordion__title">
           <button

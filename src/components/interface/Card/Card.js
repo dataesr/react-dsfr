@@ -2,7 +2,6 @@ import { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
-import { getScheme } from '../../../utils/getters';
 /**
  * Carte
  *
@@ -24,11 +23,11 @@ const Card = ({
   );
   const title = Children.toArray(children).find((child) => child.type.name === 'CardTitle');
   const displayTitle = title && cloneElement(title, { href, anchorAs });
-  const _scheme = getScheme(scheme);
   const _className = classNames('rf-card', {
     'rf-card--horizontal': isHorizontal,
     'rf-card--no-arrow': !hasArrow,
-  }, className, _scheme);
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
   return (
     <div className={_className} data-testid="card">
       {img}

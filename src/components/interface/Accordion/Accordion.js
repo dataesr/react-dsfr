@@ -9,7 +9,6 @@ import classNames from 'classnames';
  */
 const Accordion = ({ className, children, as }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames(className);
   const [isExpanded, setIsExpanded] = useState('');
   const expand = (e) => {
     if (e.target.id.slice(6) === isExpanded) {
@@ -30,7 +29,7 @@ const Accordion = ({ className, children, as }) => {
   });
 
   return (
-    <HtmlTag className={_className} data-testid="accordion-group">
+    <HtmlTag className={classNames(className)} data-testid="accordion-group">
       <ul className="rf-accordions-group">
         {childs}
       </ul>
