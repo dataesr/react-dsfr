@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import ButtonGroup from '..';
 import Button from '../../Button';
 
-describe('<Card />', () => {
-  it('renders Card properly', () => {
+describe('<ButtonGroup />', () => {
+  it('renders ButtonGroup properly', () => {
     render(
       <ButtonGroup size="sm" isEquisized align="center" isInlineFrom="md">
         <Button secondary title="title">secondary sm button</Button>
