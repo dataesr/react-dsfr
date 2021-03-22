@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> renders Card properly 1`] = `
+exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
 <ul
   class="rf-btns-group rf-btns-group--sm rf-btns-group--center rf-btns-group--inline-md rf-btns-group--equisized"
   data-testid="button-group"
