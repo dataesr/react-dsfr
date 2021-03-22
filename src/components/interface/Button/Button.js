@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
@@ -56,7 +55,11 @@ Button.propTypes = {
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string.isRequired,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.string,
 };

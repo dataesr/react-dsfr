@@ -1,12 +1,8 @@
 import { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE, SCHEME_TYPE } from '../../../utils/types';
+import { SCHEMES } from '../../../utils/constants';
 import { getScheme } from '../../../utils/getters';
-import CardTitle from './CardTitle';
-import CardDescription from './CardDescription';
-import CardDetail from './CardDetail';
-import CardImage from './CardImage';
 /**
  * Carte
  *
@@ -45,11 +41,6 @@ const Card = ({
   );
 };
 
-Card.Title = CardTitle;
-Card.Description = CardDescription;
-Card.Detail = CardDetail;
-Card.Image = CardImage;
-
 Card.defaultProps = {
   anchorAs: 'a',
   isHorizontal: false,
@@ -58,13 +49,20 @@ Card.defaultProps = {
   scheme: '',
 };
 Card.propTypes = {
-  children: CHILDREN_TYPE.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   anchorAs: PropTypes.string,
   href: PropTypes.string.isRequired,
   isHorizontal: PropTypes.bool,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   hasArrow: PropTypes.bool,
-  scheme: SCHEME_TYPE,
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 
 export default Card;

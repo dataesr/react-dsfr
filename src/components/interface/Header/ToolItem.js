@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 import Link from '../Link';
 
 const ToolItem = ({
@@ -23,10 +22,11 @@ ToolItem.defaultProps = {
 };
 
 ToolItem.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   icon: PropTypes.string,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,

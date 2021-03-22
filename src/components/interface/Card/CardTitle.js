@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 const CardTitle = ({
   href, children, as, anchorAs, className,
@@ -25,12 +24,16 @@ CardTitle.propTypes = {
    * @ignore
    */
   href: PropTypes.string,
-  children: CHILDREN_TYPE.isRequired,
-  className: CLASS_NAME_TYPE,
   /**
    * @ignore
    */
   anchorAs: PropTypes.string,
+  children: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
 };
 

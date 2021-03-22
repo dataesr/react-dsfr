@@ -3,7 +3,6 @@ import {
 } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  * @visibleName Breadcrumb
@@ -19,9 +18,6 @@ const Breadcrumb = ({
   const listRef = useRef();
   const [open, setOpen] = useState(true);
   const [clicked, setClicked] = useState(false);
-  const button = Children.toArray(children).filter(
-    (child) => child.type.name === 'BreadcrumbButton',
-  );
   const content = Children.toArray(children).filter(
     (child) => child.type.name === 'BreadcrumbItem',
   );
@@ -46,7 +42,14 @@ const Breadcrumb = ({
 
   return (
     <nav ref={breadRef} className={_className} aria-label={label} data-testid="bc-nav">
-      <button ref={buttonRef} type="button" onClick={handleOpenBreadcrumb} className="rf-breadcrumb__button" hidden={open} data-testid="bc-button">
+      <button
+        ref={buttonRef}
+        type="button"
+        onClick={handleOpenBreadcrumb}
+        className="rf-breadcrumb__button"
+        hidden={open}
+        data-testid="bc-button"
+      >
         {buttonLabel}
       </button>
       <ol ref={listRef} className="rf-breadcrumb__list" data-testid="bc-list" hidden={!open}>
@@ -59,14 +62,21 @@ const Breadcrumb = ({
 Breadcrumb.defaultProps = {
   className: '',
   buttonLabel: "Voir le fil d'ariane",
-  label: 'vous êtes ici :',
+  label: "Fil d'ariane",
 };
 
 Breadcrumb.propTypes = {
   label: PropTypes.string,
   buttonLabel: PropTypes.string,
-  children: CHILDREN_TYPE.isRequired,
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Breadcrumb;

@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 const Brand = (props) => {
   const {
@@ -24,7 +23,11 @@ Brand.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
   linkTitle: PropTypes.string.isRequired,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Brand;

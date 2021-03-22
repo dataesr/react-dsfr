@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getScheme } from '../../../../utils/getters';
-import { CLASS_NAME_TYPE, SCHEME_TYPE, CHILDREN_TYPE } from '../../../../utils/types';
+import { SCHEMES } from '../../../../utils/constants';
 /**
  * Design system Row
  *
@@ -29,7 +29,11 @@ Row.propTypes = {
   /**
   * Row children (should always be Col)
   */
-  children: CHILDREN_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   /**
   * Add gutter to row
   */
@@ -42,8 +46,12 @@ Row.propTypes = {
   * Horizontal alignement.
   */
   justifyContent: PropTypes.oneOf(['start', 'center', 'end']),
-  className: CLASS_NAME_TYPE,
-  scheme: SCHEME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 Row.defaultProps = {
   className: '',

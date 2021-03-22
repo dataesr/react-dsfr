@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getScheme } from '../../../../utils/getters';
-import { CLASS_NAME_TYPE, SCHEME_TYPE, CHILDREN_TYPE } from '../../../../utils/types';
+import { SCHEMES } from '../../../../utils/constants';
 
 /**
  * Design system Container
@@ -28,13 +28,21 @@ Container.propTypes = {
   /**
   * Container children node (should be Rows)
   */
-  children: CHILDREN_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   /**
   * Container with no outer margins
   */
   fluid: PropTypes.bool,
-  className: CLASS_NAME_TYPE,
-  scheme: SCHEME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 Container.defaultProps = {
   fluid: false,

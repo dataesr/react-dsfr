@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
@@ -81,7 +80,11 @@ Select.defaultProps = {
 };
 
 Select.propTypes = {
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   disabled: PropTypes.bool,
   hint: PropTypes.string,
   id: PropTypes.string,

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { SCHEMES } from '../../../utils/constants';
 
 /**
  * La mise en exergue met en évidence une information déjà présente dans le reste du contenu.
@@ -20,15 +21,18 @@ const Highlight = ({
   );
 };
 Highlight.propTypes = {
-  scheme: PropTypes.string,
+  scheme: PropTypes.oneOf(SCHEMES),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  children: PropTypes.node,
-  className: PropTypes.string,
+  children: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Highlight.defaultProps = {
   scheme: null,
   size: 'md',
-  children: null,
   className: '',
 };
 

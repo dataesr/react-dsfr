@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 const BreadcrumbItem = ({
   className, children, href,
@@ -25,8 +24,12 @@ BreadcrumbItem.defaultProps = {
 };
 
 BreadcrumbItem.propTypes = {
-  children: CHILDREN_TYPE.isRequired,
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   href: PropTypes.string,
 };
 

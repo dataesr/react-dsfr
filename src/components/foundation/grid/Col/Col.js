@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getColSize, getScheme } from '../../../../utils/getters';
-import { CLASS_NAME_TYPE, SCHEME_TYPE, CHILDREN_TYPE } from '../../../../utils/types';
+import { SCHEMES } from '../../../../utils/constants';
+
 /**
  * Design system Column
  *
@@ -26,20 +27,25 @@ const Col = ({
 };
 
 Col.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   /**
-  * The actual text to display
-  */
-  children: CHILDREN_TYPE,
-  /**
-  * Col size in the grid
+  * Col size
   */
   n: PropTypes.string,
   /**
   * Set Col offset.
   */
   offset: PropTypes.string,
-  className: CLASS_NAME_TYPE,
-  scheme: SCHEME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 Col.defaultProps = {
   n: null,

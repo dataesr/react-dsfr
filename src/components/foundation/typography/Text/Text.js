@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../../utils/types';
 
 /**
  *
@@ -33,10 +32,11 @@ Text.propTypes = {
   */
   alt: PropTypes.bool,
   children: PropTypes.string.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Text.defaultProps = {
   as: 'p',

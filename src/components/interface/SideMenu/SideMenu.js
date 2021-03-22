@@ -1,21 +1,23 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
-
 /**
  * Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une
  * rubrique ou d’un même thème.
  *
  * @visibleName SideMenu
  */
-const SideMenu = ({ children, title, buttonLabel }) => {
+const SideMenu = ({
+  children, title, buttonLabel, className,
+}) => {
   const itemID = uuidv4();
   const [isExpanded, setExpanded] = useState(false);
   const { item, collapse } = useCollapse(itemID, isExpanded);
 
   return (
-    <nav className="rf-sidemenu" aria-label="Menu latéral" data-testid="sidemenu">
+    <nav className={classNames('rf-sidemenu', className)} aria-label="Menu latéral" data-testid="sidemenu">
       <div className="rf-sidemenu__inner">
         <button
           onClick={() => setExpanded(!isExpanded)}
@@ -43,8 +45,17 @@ const SideMenu = ({ children, title, buttonLabel }) => {
 };
 
 SideMenu.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   title: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string.isRequired,
 };
+SideMenu.defaultProps = { className: '' };
 export default SideMenu;

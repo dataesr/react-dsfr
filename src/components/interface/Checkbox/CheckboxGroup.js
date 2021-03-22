@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
@@ -34,7 +33,6 @@ const CheckboxGroup = ({
 };
 
 CheckboxGroup.defaultProps = {
-  children: '',
   className: '',
   hint: '',
   isInline: false,
@@ -44,8 +42,15 @@ CheckboxGroup.defaultProps = {
 };
 
 CheckboxGroup.propTypes = {
-  children: CHILDREN_TYPE,
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   hint: PropTypes.string,
   isInline: PropTypes.bool,
   legend: PropTypes.string,

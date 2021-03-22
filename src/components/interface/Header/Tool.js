@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 import HeaderContext from './headerContext';
 
 const Tool = ({
@@ -40,14 +39,16 @@ Tool.defaultProps = {
 };
 
 Tool.propTypes = {
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   buttonClose: PropTypes.string,
 };
 export default Tool;

@@ -1,20 +1,4 @@
-import PropTypes from 'prop-types';
-
-export const CHILDREN_TYPE = PropTypes.oneOfType([
-  PropTypes.arrayOf(PropTypes.node),
-  PropTypes.node,
-  PropTypes.string,
-]);
-export const CLASS_NAME_TYPE = PropTypes.oneOfType([
-  PropTypes.string,
-  PropTypes.object,
-  PropTypes.arrayOf(
-    PropTypes.string,
-    PropTypes.object,
-  ),
-]);
-
-export const SCHEME_TYPE = PropTypes.oneOf([
+export const SCHEMES = [
   'light-white',
   'light-grey-100',
   'light-grey-200',
@@ -37,4 +21,6 @@ export const SCHEME_TYPE = PropTypes.oneOf([
   'soft-yellow-dark',
   'soft-yellow-medium',
   '',
-]);
+];
+
+export const BACKGROUNDS = [];

@@ -19,7 +19,11 @@ TagGroup.defaultProps = {
 };
 
 TagGroup.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   children: PropTypes.node.isRequired,
 };
 

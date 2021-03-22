@@ -1,11 +1,10 @@
-import { Children, useRef, useEffect } from 'react';
+import {
+  cloneElement, Children, useRef, useEffect,
+} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import useFocusTrap from '../../../hooks/useFocusTrap';
-import ModalTitle from './ModalTitle';
-import ModalContent from './ModalContent';
-import ModalFooter from './ModalFooter';
 import ModalClose from './ModalClose';
 /**
  * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
@@ -17,11 +16,17 @@ import ModalClose from './ModalClose';
 
 const MODAL_ANIMATION_TIME = 300;
 
-const ModalDialog = ({ children, hide, size }) => {
+const ModalDialog = ({
+  children,
+  hide,
+  size,
+  className,
+}) => {
   const modalRef = useRef();
   const _className = classNames('rf-modal', {
     [`rf-modal--${size}`]: (size !== 'md'),
-  });
+  }, className);
+  const focusBackTo = document.activeElement;
   const handleTabulation = useFocusTrap(modalRef);
   const title = Children.toArray(children).filter((child) => child.type.name === 'ModalTitle');
   const content = Children.toArray(children).filter((child) => child.type.name === 'ModalContent');
@@ -30,6 +35,7 @@ const ModalDialog = ({ children, hide, size }) => {
   const handleAnimatedUnmount = () => {
     modalRef.current.style.opacity = '0';
     setTimeout(() => {
+      if (focusBackTo) focusBackTo.focus();
       hide();
     }, MODAL_ANIMATION_TIME);
   };
@@ -78,7 +84,11 @@ const ModalDialog = ({ children, hide, size }) => {
             <div className="rf-col-12 rf-col-md-6">
               <div className="rf-modal__body">
                 <div className="rf-modal__header">
-                  {(close.length > 0) ? close : <ModalClose hide={handleAnimatedUnmount} />}
+                  {
+                    (close.length > 0)
+                      ? cloneElement(close[0], { hide: handleAnimatedUnmount })
+                      : <ModalClose hide={handleAnimatedUnmount} />
+                  }
                 </div>
                 <div className="rf-modal__content">
                   {title}
@@ -95,22 +105,29 @@ const ModalDialog = ({ children, hide, size }) => {
 };
 
 const Modal = ({
-  size, hide, children, isOpen,
-}) => (isOpen) && <ModalDialog size={size} hide={hide}>{children}</ModalDialog>;
+  size, hide, children, isOpen, className,
+}) => (isOpen) && (
+  <ModalDialog className={className} size={size} hide={hide}>{children}</ModalDialog>
+);
 
 Modal.propTypes = {
   isOpen: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   hide: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Modal.defaultProps = {
   isOpen: false,
   size: 'md',
+  className: '',
 };
-Modal.Title = ModalTitle;
-Modal.Footer = ModalFooter;
-Modal.Content = ModalContent;
-Modal.Close = ModalClose;
 
 export default Modal;

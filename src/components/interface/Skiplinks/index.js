@@ -1,7 +1,7 @@
-import Skiplink from './Skiplink';
-import SkiplinkGroup from './SkiplinkGroup';
+import Skiplinks from './Skiplinks';
+import SkiplinkItem from './SkiplinkItem';
 
 export {
-  SkiplinkGroup,
-  Skiplink,
+  SkiplinkItem,
+  Skiplinks,
 };

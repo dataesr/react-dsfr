@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
+import { SCHEMES } from '../../../utils/constants';
 
 /**
  * La mise en avant est une proposition de mise en page du contenu éditorial pour
@@ -22,10 +22,17 @@ const Callout = ({
   );
 };
 Callout.propTypes = {
-  scheme: PropTypes.string,
+  scheme: PropTypes.oneOf(SCHEMES),
   hasInfoIcon: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Callout.defaultProps = {
   scheme: null,

@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
+
 /**
  * Les champs permettent à un utilisateur d'entrer du contenu et données.
  *
@@ -83,7 +83,11 @@ TextInput.propTypes = {
   onChange: PropTypes.func,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default TextInput;

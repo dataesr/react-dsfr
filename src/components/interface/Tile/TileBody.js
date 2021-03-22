@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  *
@@ -51,10 +50,11 @@ TileBody.propTypes = {
   linkTarget: PropTypes.string,
   linkTitle: PropTypes.string,
   linkHref: PropTypes.string.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default TileBody;

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../../utils/types';
 
 /**
  *
@@ -20,7 +19,11 @@ const TitleDisplay = ({
 
 TitleDisplay.propTypes = {
   children: PropTypes.string.isRequired,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   /**
   * html tag to render
   */

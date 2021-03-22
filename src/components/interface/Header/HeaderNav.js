@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { useContext } from 'react';
-import { CLASS_NAME_TYPE, CHILDREN_TYPE } from '../../../utils/types';
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
@@ -50,11 +50,15 @@ HeaderNav.defaultProps = {
 };
 
 HeaderNav.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
-  children: CHILDREN_TYPE.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default HeaderNav;

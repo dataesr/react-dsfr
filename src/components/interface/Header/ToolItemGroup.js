@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 import HeaderContext from './headerContext';
 
 const ToolItemGroup = ({ children, className }) => {
@@ -28,13 +28,15 @@ ToolItemGroup.defaultProps = {
 };
 
 ToolItemGroup.propTypes = {
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 export default ToolItemGroup;

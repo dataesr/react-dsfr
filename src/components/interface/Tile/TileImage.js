@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
@@ -29,10 +28,11 @@ TileImage.defaultProps = {
 };
 
 TileImage.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   title: PropTypes.string,
   alt: PropTypes.string.isRequired,
   /**

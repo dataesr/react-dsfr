@@ -41,7 +41,11 @@ SimpleTable.propTypes = {
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
   caption: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 export default SimpleTable;

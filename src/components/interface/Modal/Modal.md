@@ -14,22 +14,22 @@ En desktop, ce composant s’affiche au centre de la page.
 ```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
+import { Modal, ModalTitle, ModalContent, ModalFooter } from '.';
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
 const hide = () => {
   setIsOpen(false)
-  buttonRef.current.focus()
 };
 
 <>
   <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
-  <Modal isOpen={isOpen} hide={hide}>
-    <Modal.Title icon>I'm a title</Modal.Title>
-    <Modal.Content>blah blah</Modal.Content>
-    <Modal.Footer>
+  <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
+    <ModalTitle icon>I'm a title</ModalTitle>
+    <ModalContent>blah blah</ModalContent>
+    <ModalFooter>
       <Button title="Une action">blah</Button>
-    </Modal.Footer>
+    </ModalFooter>
   </Modal>
 </>
 ```
@@ -39,24 +39,23 @@ Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le c
 ```jsx
 import { useState, useRef } from 'react';
 import Button from '../Button'
+import { Modal, ModalTitle, ModalContent, ModalFooter, ModalClose } from '.';
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
-const show = () => setIsOpen(true);
 const hide = () => {
   setIsOpen(false)
-  buttonRef.current.focus()
 };
 
 <>
   <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
-  <Modal isOpen={isOpen} hide={hide}>
-    <Modal.Close hide={hide} title="Close the modal window">Close</Modal.Close>
-    <Modal.Title icon>I'm a title</Modal.Title>
-    <Modal.Content>blah blah</Modal.Content>
-    <Modal.Footer>
+  <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
+    <ModalClose hide={hide} title="Close the modal window">Close</ModalClose>
+    <ModalTitle icon>I'm a title</ModalTitle>
+    <ModalContent>blah blah</ModalContent>
+    <ModalFooter>
       <Button title="Une action">blah</Button>
-    </Modal.Footer>
+    </ModalFooter>
   </Modal>
 </>
 ```

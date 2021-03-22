@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { deepForEach } from 'react-children-utilities';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
@@ -99,11 +98,15 @@ Header.propTypes = {
    * Ouverture de la popin de navigation en mobile
    */
   isOpenNav: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Header;

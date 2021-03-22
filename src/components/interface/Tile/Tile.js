@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE, CHILDREN_TYPE, SCHEME_TYPE } from '../../../utils/types';
+import { SCHEMES } from '../../../utils/constants';
 import { getScheme } from '../../../utils/getters';
 
 /**
@@ -35,10 +35,11 @@ Tile.defaultProps = {
 };
 
 Tile.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   /**
    * Source of the image — size is fixed 80x80
    */
@@ -48,8 +49,11 @@ Tile.propTypes = {
   /**
    * One of: node, arrayOf(node), string
    */
-  children: CHILDREN_TYPE.isRequired,
-  scheme: SCHEME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 
 export default Tile;

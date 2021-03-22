@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/types';
 
 const HeaderBody = ({ children, className }) => (
   <div className="rf-container">
@@ -15,14 +15,16 @@ HeaderBody.defaultProps = {
 };
 
 HeaderBody.propTypes = {
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default HeaderBody;

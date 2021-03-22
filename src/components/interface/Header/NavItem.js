@@ -1,7 +1,6 @@
 import { useState, useEffect, Children } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { CHILDREN_TYPE } from '../../../utils/types';
 
 const NavItem = ({ children, title, link }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -66,7 +65,11 @@ NavItem.defaultProps = {
   children: '',
 };
 NavItem.propTypes = {
-  children: CHILDREN_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
 };

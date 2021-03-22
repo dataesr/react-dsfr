@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/types';
 
 /**
  * Navigation
@@ -38,10 +37,11 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   children: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   title: PropTypes.string,
