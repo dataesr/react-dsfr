@@ -2,7 +2,6 @@ import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
@@ -21,15 +20,15 @@ const Checkbox = forwardRef((props, ref) => {
     size,
     value,
   } = props;
-
-  const messageClasses = (messageType !== '') ? `rf-checkbox-group--${messageType}` : null;
-  const sizeClass = (size !== 'md') ? 'rf-checkbox-group--sm' : null;
-  const inputClasses = classNames('rf-checkbox-group', className, messageClasses, sizeClass);
+  const _className = classNames('rf-checkbox-group', {
+    [`rf-checkbox-group--${messageType}`]: messageType,
+    'rf-checkbox-group--sm': (size !== 'md'),
+  }, className);
   const checkboxId = id || uuidv4();
   const messageId = uuidv4();
 
   return (
-    <div className={inputClasses}>
+    <div className={_className}>
       <input
         data-testid="checkbox-testid"
         type="checkbox"
@@ -59,7 +58,11 @@ Checkbox.defaultProps = {
 };
 
 Checkbox.propTypes = {
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   id: PropTypes.string,
   hint: PropTypes.string,
   isDisabled: PropTypes.bool,

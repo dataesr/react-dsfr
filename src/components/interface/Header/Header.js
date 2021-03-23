@@ -1,13 +1,15 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { deepForEach } from 'react-children-utilities';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
 const Header = ({
-  children, className, isOpenNav, isOpenSearch,
+  children,
+  className,
+  isOpenNav,
+  isOpenSearch,
 }) => {
   const { width } = useViewport();
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
@@ -16,6 +18,10 @@ const Header = ({
   let isNavBar = false;
   let isNavTool = false;
   const isMobile = width < 768;
+  const _classNameNav = classNames('rf-nav', {
+    'rf-header__popin': isMobile,
+    'rf-header__popin--expanded': openNav,
+  });
 
   deepForEach(children, (child) => {
     if (child.type.name === 'HeaderNav') {
@@ -41,17 +47,14 @@ const Header = ({
   return (
     <HeaderContext.Provider value={contextProps}>
       <header
-        className={classnames(className, 'rf-header')}
+        className={classNames(className, 'rf-header')}
         role="banner"
       >
         {children}
         {isMobile && isNavTool && !isNavBar && (
         <div className="rf-container">
           <nav
-            className={classnames(className, 'rf-nav', {
-              'rf-header__popin': isMobile,
-              'rf-header__popin--expanded': openNav,
-            })}
+            className={_classNameNav}
             role="navigation"
             aria-label="Menu principal"
             id="header-nav-popin"
@@ -95,11 +98,15 @@ Header.propTypes = {
    * Ouverture de la popin de navigation en mobile
    */
   isOpenNav: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Header;

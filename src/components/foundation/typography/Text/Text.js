@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../../utils/variables';
+import classNames from 'classnames';
 
 /**
  *
@@ -10,13 +9,13 @@ const Text = ({
   as, size, alt, className, children,
 }) => {
   const HtmlTag = `${as}`;
+  const _className = classNames(className, {
+    'rf-text--alt': size !== 'lead' && alt,
+    [`rf-text--${size}`]: size !== 'md',
+    'rf-text': size === 'md',
+  });
   return (
-    <HtmlTag className={classnames(className, {
-      'rf-text--alt': size !== 'lead' && alt,
-      [`rf-text--${size}`]: size !== 'md',
-      'rf-text': size === 'md',
-    })}
-    >
+    <HtmlTag className={_className}>
       {children}
     </HtmlTag>
   );
@@ -33,10 +32,11 @@ Text.propTypes = {
   */
   alt: PropTypes.bool,
   children: PropTypes.string.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 Text.defaultProps = {
   as: 'p',

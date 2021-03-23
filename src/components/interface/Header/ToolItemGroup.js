@@ -1,12 +1,10 @@
-import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
-const ToolItemGroup = ({
-  children, className,
-}) => {
+const ToolItemGroup = ({ children, className }) => {
   const [shortcutListElement, setShortcutListElement] = useState();
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
@@ -16,7 +14,7 @@ const ToolItemGroup = ({
     <>
       {isMobile && shortcutListElement && createPortal(children, shortcutListElement)}
       {!isMobile && (
-        <div className={classnames(className, 'rf-shortcuts')}>
+        <div className={classNames(className, 'rf-shortcuts')}>
           <ul className="rf-shortcuts__list">
             {children}
           </ul>
@@ -30,13 +28,15 @@ ToolItemGroup.defaultProps = {
 };
 
 ToolItemGroup.propTypes = {
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 export default ToolItemGroup;

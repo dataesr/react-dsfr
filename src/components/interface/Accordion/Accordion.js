@@ -1,76 +1,61 @@
-import classnames from 'classnames';
+import { useState, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
-import useCollapse from '../../../hooks/useCollapse';
+import classNames from 'classnames';
 
-const Accordion = ({
-  title, titleAs, isExpanded, onClick, children, className, id,
-}) => {
-  const TitleTag = `${titleAs}`;
-  const { item, collapse } = useCollapse(`rf-accordion-${id}`, isExpanded);
+/**
+ * Condenser l'espace
+ *
+ * @visibleName Accordion
+ */
+const Accordion = ({ className, children, as }) => {
+  const HtmlTag = `${as}`;
+  const [isExpanded, setIsExpanded] = useState('');
+  const expand = (e) => {
+    if (e.target.id.slice(6) === isExpanded) {
+      setIsExpanded('');
+    } else {
+      setIsExpanded(e.target.id.slice(6));
+    }
+  };
+
+  const childs = Children.toArray(children).map((child, i) => {
+    const id = i.toString();
+    return cloneElement(child, {
+      id,
+      key: id,
+      onClick: expand,
+      isExpanded: (isExpanded === id),
+    });
+  });
+
   return (
-    <li className={classnames(className)} data-testid="accordion">
-      <section className="rf-accordion">
-        <TitleTag className="rf-accordion__title">
-          <button
-            data-testid="accordion-button"
-            id={`button${id}`}
-            onClick={onClick}
-            type="button"
-            className="rf-accordion__btn"
-            aria-controls={`rf-accordion-${id}`}
-            aria-expanded={isExpanded}
-          >
-            {title}
-          </button>
-        </TitleTag>
-        <div
-          data-testid="accordion-div"
-          style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
-          className={item.class}
-          id={`rf-accordion-${id}`}
-        >
-          {children}
-        </div>
-      </section>
-    </li>
+    <HtmlTag className={classNames(className)} data-testid="accordion-group">
+      <ul className="rf-accordions-group">
+        {childs}
+      </ul>
+    </HtmlTag>
   );
 };
 
 Accordion.defaultProps = {
-  titleAs: 'p',
+  as: 'div',
   className: '',
-  isExpanded: false,
-  onClick: () => {},
-  id: '',
 };
 
 Accordion.propTypes = {
   /**
-   * Html tag to render in accordion title.
+   * Html tag to render accordion wrapper.
    */
-  titleAs: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  /**
-   * @ignore
-   */
-  isExpanded: PropTypes.bool,
-  /**
-   * @ignore
-   */
-  onClick: PropTypes.func,
-  /**
-   * @ignore
-   */
-  id: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  as: PropTypes.oneOf(['div', 'section']),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Accordion;

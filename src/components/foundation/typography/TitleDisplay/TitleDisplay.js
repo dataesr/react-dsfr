@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../../utils/variables';
+import classNames from 'classnames';
 
 /**
  *
@@ -10,12 +9,9 @@ const TitleDisplay = ({
   as, size, children, className,
 }) => {
   const HtmlTag = `${as}`;
+  const _className = classNames(className, { [`rf-display-${size}`]: size });
   return (
-    <HtmlTag className={classnames({
-      className,
-      [`rf-display-${size}`]: size,
-    })}
-    >
+    <HtmlTag className={_className}>
       {children}
     </HtmlTag>
   );
@@ -23,10 +19,11 @@ const TitleDisplay = ({
 
 TitleDisplay.propTypes = {
   children: PropTypes.string.isRequired,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   /**
   * html tag to render
   */

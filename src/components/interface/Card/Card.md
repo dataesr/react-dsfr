@@ -1,38 +1,39 @@
 ### Card
 
 ```jsx
-import Card from '.';
-<Card href="/">
-  <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
-  <Card.Detail>Détail</Card.Detail>
-  <Card.Title>
+import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
+
+<Card href="/" scheme="soft-orange-dark">
+  <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+  <CardDetail>Détail</CardDetail>
+  <CardTitle>
     Qu’est-ce que le Pass Culture et comment l’obtenir ?
-  </Card.Title>
-  <Card.Description>
+  </CardTitle>
+  <CardDescription>
     Description texte body small regular consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore et dolore…
-  </Card.Description>
+  </CardDescription>
 </Card>
 ```
 La Carte peut etre horizontale sur les grands écrans
 ```jsx
-import Card from '.';
+import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 <Card href="/" isHorizontal hasArrow={false}>
-  <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
-  <Card.Detail>Détail</Card.Detail>
-  <Card.Title>
+  <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+  <CardDetail>Détail</CardDetail>
+  <CardTitle>
     Qu’est-ce que le Pass Culture et comment l’obtenir ?
-  </Card.Title>
-  <Card.Description>
+  </CardTitle>
+  <CardDescription>
     Description texte body small regular consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore et dolore…
-  </Card.Description>
+  </CardDescription>
 </Card>
 ```
 
 Utilisation avec Container, Row, Col
 ```jsx
-import Card from '.';
+import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 import Row from '../../foundation/grid/Row/Row';
 import Container from '../../foundation/grid/Container/Container';
 import Col from '../../foundation/grid/Col/Col';
@@ -41,41 +42,41 @@ import Col from '../../foundation/grid/Col/Col';
   <Row gutter={true}>
     <Col>
       <Card href="/">
-        <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
-        <Card.Detail>Détail</Card.Detail>
-        <Card.Title>
+        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
           Qu’est-ce que le Pass Culture et comment l’obtenir ?
-        </Card.Title>
-        <Card.Description>
+        </CardTitle>
+        <CardDescription>
           Description texte body small regular consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore…
-        </Card.Description>
+        </CardDescription>
       </Card>
     </Col>
     <Col>  
       <Card href="/">
-        <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
-        <Card.Detail>Détail</Card.Detail>
-        <Card.Title>
+        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
           Qu’est-ce que le Pass Culture et comment l’obtenir ?
-        </Card.Title>
-        <Card.Description>
+        </CardTitle>
+        <CardDescription>
           Description texte body small regular consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore…
-        </Card.Description>
+        </CardDescription>
       </Card>
     </Col>
     <Col>
       <Card href="/">
-        <Card.Image alt="alternative" src="http://fakeimg.pl/300/" />
-        <Card.Detail>Détail</Card.Detail>
-        <Card.Title>
+        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
           Qu’est-ce que le Pass Culture et comment l’obtenir ?
-        </Card.Title>
-        <Card.Description>
+        </CardTitle>
+        <CardDescription>
           Description texte body small regular consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore…
-        </Card.Description>
+        </CardDescription>
       </Card>
     </Col>
   </Row>
