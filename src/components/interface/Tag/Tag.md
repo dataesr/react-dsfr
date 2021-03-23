@@ -39,9 +39,9 @@ import { Tag, TagGroup } from '.';
   Medium:
   <TagGroup>
     <Tag as="span">Label tag</Tag>
-    <Tag as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
-    <Tag as="span" icon="arrow-right-line">Label tag</Tag>
-    <Tag as="span">Label tag</Tag>
+    <Tag as="span" scheme="soft-orange-dark" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
+    <Tag as="span" scheme="soft-orange-dark" icon="arrow-right-line">Label tag</Tag>
+    <Tag as="span" scheme="soft-orange-dark">Label tag</Tag>
     <Tag as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
     <Tag as="span" icon="arrow-right-line">Label tag</Tag>
   </TagGroup>

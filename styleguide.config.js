@@ -17,6 +17,7 @@ module.exports = {
       base: "'Marianne', sans-serif",
     },
   },
+  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-rfds/master/favicon.ico' },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
   },
@@ -66,12 +67,6 @@ module.exports = {
           components: 'src/components/interface/**/[A-Z]*.js',
         },
       ],
-    },
-    {
-      name: 'Hooks',
-      sectionDepth: 1,
-      content: 'src/hooks/HOOKS.md',
-      components: 'src/hooks/**/use*.js',
     },
   ],
 };

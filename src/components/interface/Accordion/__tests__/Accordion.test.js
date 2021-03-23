@@ -1,17 +1,17 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Accordion, AccordionGroup } from '..';
+import { Accordion, AccordionItem } from '..';
 
 describe('<Accordion />', () => {
   it('should render accordion properly', () => {
     render(
-      <AccordionGroup className="custom-class">
-        <Accordion title="first line accordion">
+      <Accordion className="custom-class">
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-        <Accordion title="first line accordion">
+        </AccordionItem>
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-      </AccordionGroup>,
+        </AccordionItem>
+      </Accordion>,
     );
     const group = screen.getByTestId('accordion-group');
     const items = screen.getAllByTestId('accordion');
@@ -21,14 +21,14 @@ describe('<Accordion />', () => {
 
   it('should toggle on click', () => {
     render(
-      <AccordionGroup className="custom-class">
-        <Accordion title="first line accordion">
+      <Accordion className="custom-class">
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-        <Accordion title="first line accordion">
+        </AccordionItem>
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-      </AccordionGroup>,
+        </AccordionItem>
+      </Accordion>,
     );
     const item = screen.getAllByTestId('accordion')[0];
     expect(item.isExpanded).toBeFalsy();
@@ -42,14 +42,14 @@ describe('<Accordion />', () => {
   });
   it('should toggle on click another accordion', () => {
     render(
-      <AccordionGroup className="custom-class">
-        <Accordion title="first line accordion">
+      <Accordion className="custom-class">
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-        <Accordion title="first line accordion">
+        </AccordionItem>
+        <AccordionItem title="first line accordion">
           Anything I want
-        </Accordion>
-      </AccordionGroup>,
+        </AccordionItem>
+      </Accordion>,
     );
     const buttons = screen.getAllByTestId('accordion-button');
     const itemDivs = screen.getAllByTestId('accordion-div');

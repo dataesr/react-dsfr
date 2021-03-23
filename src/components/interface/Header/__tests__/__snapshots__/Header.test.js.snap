@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders correctly 1`] = `
+<header
+  className="rf-header"
+  role="banner"
+>
+  <div
+    className="rf-container"
+  >
+    <div
+      className="rf-header__body"
+      role="banner"
+    >
+      <div
+        className="rf-header__brand"
+      >
+        <a
+          className="rf-logo"
+          href="/"
+          title="République française"
+        >
+          <span
+            className="rf-logo__title"
+          >
+            République
+            <br />
+            française
+            
+          </span>
+        </a>
+      </div>
+      <div
+        className="rf-header__navbar"
+      >
+        <div
+          className="rf-service"
+        >
+          <a
+            className="rf-service__title"
+            href="/"
+            title="Nom du service"
+          >
+            Nom du service
+          </a>
+          <p
+            className="rf-service__tagline"
+          >
+            baseline - précisions sur l‘organisation
+          </p>
+        </div>
+      </div>
+      <div
+        className="rf-header__tools"
+        id=""
+      >
+        <div
+          className="rf-shortcuts"
+        >
+          <ul
+            className="rf-shortcuts__list"
+          >
+            <li
+              className="rf-shortcuts__item"
+            >
+              <a
+                className="rf-fi-lock-line rf-link rf-link--icon-left"
+                href="/path"
+                rel={null}
+                target="_self"
+                title=""
+              >
+                Se connecter
+              </a>
+            </li>
+            <li
+              className="rf-shortcuts__item"
+            >
+              <a
+                className="rf-fi-add-circle-line rf-link rf-link--icon-left"
+                href="/path"
+                rel={null}
+                target="_self"
+                title=""
+              >
+                Créer un espace
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="rf-container"
+  >
+    <nav
+      aria-label="Menu principal"
+      className="rf-nav"
+      id="header-nav-popin"
+      role="navigation"
+    >
+      <ul
+        className="rf-nav__list"
+      >
+        <li
+          className="rf-nav__item"
+        >
+          <a
+            className="rf-link"
+            href="/"
+            target="_self"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="rf-nav__item"
+        >
+          <button
+            aria-controls="rf-nav-Resources"
+            aria-expanded="false"
+            className="rf-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Resources
+          </button>
+          <div
+            className="rf-menu rf-collapse"
+            id="rf-nav-subitem-yyyyyy"
+            style={
+              Object {
+                "--collapse": "-0pxpx",
+                "maxHeight": null,
+              }
+            }
+          >
+            <ul
+              className="rf-menu__list"
+            >
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-1"
+                  target="_self"
+                >
+                  Ressource #1
+                </a>
+              </li>
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-2"
+                  target="_self"
+                >
+                  Ressource #2
+                </a>
+              </li>
+              <li
+                className="rf-menu__item"
+              >
+                <a
+                  className="rf-link"
+                  href="/path-to-resources-3"
+                  target="_self"
+                >
+                  Ressource #3
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;

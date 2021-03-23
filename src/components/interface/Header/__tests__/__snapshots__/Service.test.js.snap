@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Service /> renders correctly 1`] = `
+<div
+  className="rf-header__navbar"
+>
+  <div
+    className="rf-service"
+  >
+    <a
+      className="rf-service__title"
+      href="/"
+      title="title"
+    >
+      title
+    </a>
+    <p
+      className="rf-service__tagline"
+    >
+      description service
+    </p>
+  </div>
+</div>
+`;

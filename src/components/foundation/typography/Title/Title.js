@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../../utils/variables';
+import classNames from 'classnames';
 
 /**
  *
@@ -10,9 +9,12 @@ const Title = ({
   as, look, children, className,
 }) => {
   const HtmlTag = `${as}`;
-  const textLook = (look && look !== as) ? `rf-${look}` : `rf-${as}`;
+  const _className = classNames(className, {
+    [`rf-${look}`]: (look !== as),
+    [`rf-${as}`]: (look === as),
+  });
   return (
-    <HtmlTag className={classnames(className, textLook)}>
+    <HtmlTag className={_className}>
       {children}
     </HtmlTag>
   );
@@ -21,14 +23,15 @@ const Title = ({
 Title.propTypes = {
   children: PropTypes.string.isRequired,
   /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
-  /**
   * html tag to render
   */
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
   look: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 Title.defaultProps = {

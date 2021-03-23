@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getColSize } from '../../../../utils/getters';
+import { SCHEMES } from '../../../../utils/constants';
 
 /**
  * Design system Column
@@ -8,37 +9,44 @@ import { getSpace, getColSize } from '../../../../utils/getters';
  * @visibleName Col
  */
 const Col = ({
-  offset, n, children, ...rest
+  offset, n, scheme, children, className, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
   const { n: size, offset: off } = getColSize(n, offset);
-  const className = classNames(
-    { 'rf-col': !n },
-    off,
-    size,
-    padding,
-    margin,
-  );
-  return <div className={className}>{children}</div>;
+  const _className = classNames(off, size, padding, margin, {
+    'rf-col': !n,
+    [`rf-scheme-${scheme}`]: scheme,
+  }, className);
+  return <div className={_className}>{children}</div>;
 };
 
 Col.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   /**
-  * The actual text to display
-  */
-  children: PropTypes.node.isRequired,
-  /**
-  * Col size in the grid
+  * Col size
   */
   n: PropTypes.string,
   /**
   * Set Col offset.
   */
   offset: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  scheme: PropTypes.oneOf(SCHEMES),
 };
 Col.defaultProps = {
   n: null,
   offset: null,
+  className: '',
+  scheme: '',
+  children: null,
 };
 
 export default Col;
