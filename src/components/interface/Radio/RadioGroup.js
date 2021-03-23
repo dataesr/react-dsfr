@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
@@ -45,8 +44,16 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.propTypes = {
-  children: CHILDREN_TYPE,
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   hint: PropTypes.string,
   isDisabled: PropTypes.bool,
   isInline: PropTypes.bool,

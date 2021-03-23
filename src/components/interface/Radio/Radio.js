@@ -1,14 +1,12 @@
-import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
  * @visibleName Radio
  */
-const Radio = forwardRef((props, ref) => {
+const Radio = (props) => {
   const {
     className,
     hint,
@@ -35,7 +33,6 @@ const Radio = forwardRef((props, ref) => {
         id={radioId}
         name="radio"
         onChange={onChange}
-        ref={ref}
         value={value}
       />
       <label className="rf-label" htmlFor={radioId}>{label}</label>
@@ -43,7 +40,7 @@ const Radio = forwardRef((props, ref) => {
       {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
     </div>
   );
-});
+};
 
 Radio.defaultProps = {
   className: '',
@@ -56,7 +53,11 @@ Radio.defaultProps = {
 };
 
 Radio.propTypes = {
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   id: PropTypes.string,
   hint: PropTypes.string,
   label: PropTypes.string.isRequired,
