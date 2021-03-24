@@ -18,6 +18,7 @@ exports[`<Header /> renders correctly 1`] = `
         <a
           className="rf-logo"
           href="/"
+          target="_self"
           title="République française"
         >
           <span
@@ -39,6 +40,7 @@ exports[`<Header /> renders correctly 1`] = `
           <a
             className="rf-service__title"
             href="/"
+            target="_self"
             title="Nom du service"
           >
             Nom du service
@@ -66,9 +68,7 @@ exports[`<Header /> renders correctly 1`] = `
               <a
                 className="rf-fi-lock-line rf-link rf-link--icon-left"
                 href="/path"
-                rel={null}
                 target="_self"
-                title=""
               >
                 Se connecter
               </a>
@@ -79,9 +79,7 @@ exports[`<Header /> renders correctly 1`] = `
               <a
                 className="rf-fi-add-circle-line rf-link rf-link--icon-left"
                 href="/path"
-                rel={null}
                 target="_self"
-                title=""
               >
                 Créer un espace
               </a>

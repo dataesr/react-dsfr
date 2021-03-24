@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Link from '../Link';
 
 const FooterPartners = ({ children, className }) => {
   const title = children.filter((child) => child.type.name === 'FooterPartnersTitle');
@@ -71,9 +72,9 @@ export const FooterPartnersLogo = ({
     );
   }
   return (
-    <a className={classNames('footer__partners-link', className)} href={href}>
+    <Link className={classNames('footer__partners-link', className)} href={href}>
       <img className="rf-footer__logo" src={imageSrc} alt={imageAlt} />
-    </a>
+    </Link>
   );
 };
 FooterPartnersLogo.propTypes = {

@@ -14,13 +14,14 @@ const Link = ({
     'rf-link--icon-left': !isSimple && icon && children,
     [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
+
   return (
     <a
       href={href}
-      title={title}
+      title={title || undefined}
       target={target}
-      rel={(target === '_blank') ? 'noopener noreferrer' : null}
-      className={_className}
+      rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
+      className={_className || undefined}
     >
       {children}
     </a>
@@ -42,7 +43,11 @@ Link.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
   href: PropTypes.string.isRequired,
   title: PropTypes.string,
   target: PropTypes.string,
