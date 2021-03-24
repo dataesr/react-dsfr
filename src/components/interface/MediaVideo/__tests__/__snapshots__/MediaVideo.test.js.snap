@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MediaVideo /> renders correctly 1`] = `
+<div
+  className="rf-content-media rf-content-media--sm"
+  data-testid="video-test"
+>
+  <div
+    className="rf-responsive-vid"
+  >
+    <iframe
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen=""
+      className="rf-responsive-vid__player"
+      frameBorder="0"
+      height="100%"
+      src="https://www.youtube.com/embed/HyirpmPL43I"
+      title="titre de l’iframe"
+      width="100%"
+    />
+  </div>
+  <div
+    className="rf-content-media__caption"
+  >
+    légende de l'image
+  </div>
+  <div
+    className="rf-content-media__transcription"
+  >
+    <button
+      className="rf-btn"
+      onClick={[Function]}
+      title="Transcription"
+      type="button"
+    >
+      Transcription
+    </button>
+  </div>
+</div>
+`;
