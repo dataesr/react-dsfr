@@ -2,7 +2,7 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="my-class rf-tile rf-tile--horizontal"
+  className="rf-tile rf-tile--horizontal my-class"
 >
   <div
     className="rf-tile__body"

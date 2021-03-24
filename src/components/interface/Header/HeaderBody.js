@@ -1,14 +1,13 @@
-import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import { deepFilter } from 'react-children-utilities';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
+import classNames from 'classnames';
 
 const HeaderBody = ({ children, className }) => {
-  const logo = deepFilter(children, (child) => child.type.name === 'BrandLogo');
   const elements = deepFilter(children, (child) => child.type.name !== 'BrandLogo');
-
+  const logo = deepFilter(children, (child) => child.type.name === 'BrandLogo');
   return (
     <div className="rf-container">
-      <div className={classnames(className, 'rf-header__body')} role="banner">
+      <div className={classNames(className, 'rf-header__body')} role="banner">
         <div className="rf-header__brand">
           {logo}
         </div>
@@ -24,14 +23,16 @@ HeaderBody.defaultProps = {
 };
 
 HeaderBody.propTypes = {
-  /**
-   * One of: node, arrayOf(node), string
-   */
-  children: CHILDREN_TYPE,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default HeaderBody;

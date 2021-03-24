@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
+import classNames from 'classnames';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
@@ -14,7 +13,7 @@ const TileImage = ({
   alt,
   className,
 }) => (
-  <div className={classnames('rf-tile__img-wrap', className)}>
+  <div className={classNames('rf-tile__img-wrap', className)}>
     <img
       src={src}
       title={title}
@@ -29,10 +28,11 @@ TileImage.defaultProps = {
 };
 
 TileImage.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   title: PropTypes.string,
   alt: PropTypes.string.isRequired,
   /**

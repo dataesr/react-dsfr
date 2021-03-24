@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
@@ -21,20 +20,17 @@ const Select = ({
   options,
   selected,
 }) => {
-  const selectClasses = classNames(
-    'rf-select',
-    className,
-    { [`rf-select--${messageType}`]: messageType },
-  );
+  const _className = classNames('rf-select', {
+    [`rf-select--${messageType}`]: messageType,
+  });
   const selectId = id || uuidv4();
   const messageId = uuidv4();
-  const divClasses = classNames(
-    'rf-select-group',
-    { [`rf-select-group--${messageType}`]: messageType },
-  );
+  const _classNameWrapper = classNames('rf-select-group', {
+    [`rf-select-group--${messageType}`]: messageType,
+  }, className);
 
   return (
-    <div className={divClasses}>
+    <div className={_classNameWrapper}>
       {
       label && (
         <label className="rf-label" htmlFor={selectId} aria-describedby={messageId}>
@@ -44,7 +40,7 @@ const Select = ({
       )
       }
       <select
-        className={selectClasses}
+        className={_className}
         data-testid="select"
         disabled={disabled}
         id={selectId}
@@ -84,7 +80,11 @@ Select.defaultProps = {
 };
 
 Select.propTypes = {
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   disabled: PropTypes.bool,
   hint: PropTypes.string,
   id: PropTypes.string,
