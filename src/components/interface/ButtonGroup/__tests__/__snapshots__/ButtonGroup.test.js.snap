@@ -7,7 +7,7 @@ exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
 >
   <li>
     <button
-      class="rf-btn rf-btn--secondary rf-btn--md"
+      class="rf-btn rf-btn--md rf-btn--secondary"
       title="title"
       type="button"
     >
