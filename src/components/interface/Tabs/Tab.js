@@ -1,7 +1,6 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { CHILDREN_TYPE, CLASS_NAME_TYPE } from '../../../utils/variables';
 import withProps from '../../../utils/withProps';
 
 const Tab = ({
@@ -28,11 +27,11 @@ const Tab = ({
   }, [activeTab, setTranslate, index]);
 
   return (
-    <li className={classnames(className)}>
+    <li className={classNames(className)}>
       <button
         onClick={() => setActiveTab(index)}
         type="button"
-        className={classnames('rf-tabs__tab', icon, { [`rf-tabs__tab--icon-${iconPosition}`]: iconPosition })}
+        className={classNames('rf-tabs__tab', icon, { [`rf-tabs__tab--icon-${iconPosition}`]: iconPosition })}
         tabIndex="0"
         role="tab"
         aria-selected={activeTab === index ? 'true' : 'false'}
@@ -60,7 +59,11 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   index: PropTypes.number.isRequired,
   icon: PropTypes.string,
   label: PropTypes.string.isRequired,
@@ -68,7 +71,11 @@ Tab.propTypes = {
   activeTab: PropTypes.number.isRequired,
   setActiveTab: PropTypes.func.isRequired,
   setHeight: PropTypes.func.isRequired,
-  children: CHILDREN_TYPE.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 export default withProps(Tab);
