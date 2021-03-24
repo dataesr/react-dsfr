@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
-import { CHILDREN_TYPE } from '../src/utils/variables';
 import '@gouvfr/all/dist/css/all.min.css';
 
 export default class Wrapper extends Component {
@@ -16,5 +16,8 @@ export default class Wrapper extends Component {
 }
 
 Wrapper.propTypes = {
-  children: CHILDREN_TYPE.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };

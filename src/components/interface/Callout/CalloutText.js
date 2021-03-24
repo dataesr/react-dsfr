@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const CalloutText = ({ children, className }) => (
   <p className={classNames('rf-callout__text', className)}>
@@ -9,10 +9,13 @@ const CalloutText = ({ children, className }) => (
 
 CalloutText.propTypes = {
   children: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 CalloutText.defaultProps = {
   className: '',
 };
-
 export default CalloutText;

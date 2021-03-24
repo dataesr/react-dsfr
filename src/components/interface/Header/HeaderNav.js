@@ -1,6 +1,6 @@
-import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { useContext } from 'react';
-import { CLASS_NAME_TYPE, CHILDREN_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
@@ -9,20 +9,21 @@ const HeaderNav = ({
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
   } = useContext(HeaderContext);
+  const _className = classNames(className, 'rf-nav', {
+    'rf-header__popin': isMobile,
+    'rf-header__popin--expanded': isOpenNav,
+  });
   return (
     <div className="rf-container">
       <nav
-        className={classnames(className, 'rf-nav', {
-          'rf-header__popin': isMobile,
-          'rf-header__popin--expanded': isOpenNav,
-        })}
+        className={_className}
         role="navigation"
         aria-label="Menu principal"
         id="header-nav-popin"
       >
         {isMobile && (
         <div className="rf-shortcuts">
-          <ul className={classnames(shortcutClassName, 'rf-shortcuts__list')} />
+          <ul className={classNames(shortcutClassName, 'rf-shortcuts__list')} />
         </div>
         )}
         <ul className="rf-nav__list">
@@ -49,11 +50,15 @@ HeaderNav.defaultProps = {
 };
 
 HeaderNav.propTypes = {
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
-  children: CHILDREN_TYPE.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default HeaderNav;

@@ -1,13 +1,12 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 const Brand = (props) => {
   const {
     title, className, linkTitle, link,
   } = props;
   return (
-    <div className={classnames('rf-header__brand', className)}>
+    <div className={classNames('rf-header__brand', className)}>
       <a className="rf-logo" href={link} title={linkTitle}>
         <span className="rf-logo__title" dangerouslySetInnerHTML={{ __html: title }} />
       </a>
@@ -24,7 +23,11 @@ Brand.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
   linkTitle: PropTypes.string.isRequired,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default Brand;

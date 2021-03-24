@@ -22,12 +22,12 @@ exports[`<Header /> renders correctly 1`] = `
         >
           <span
             className="rf-logo__title"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "republique<br>française",
-              }
-            }
-          />
+          >
+            République
+            <br />
+            française
+            
+          </span>
         </a>
       </div>
       <div
@@ -128,7 +128,7 @@ exports[`<Header /> renders correctly 1`] = `
           </button>
           <div
             className="rf-menu rf-collapse"
-            id="rf-nav-subitem-xxxxxxx"
+            id="rf-nav-subitem-yyyyyy"
             style={
               Object {
                 "--collapse": "-0pxpx",

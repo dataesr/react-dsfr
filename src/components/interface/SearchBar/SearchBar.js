@@ -16,14 +16,17 @@ const SearchBar = forwardRef((props, ref) => {
     placeholder,
     onSearch,
     defaultValue,
+    className,
   } = props;
   const [text, setText] = useState(defaultValue);
   const inputId = uuidv4();
   const onKeyDown = (e) => (e.keyCode === 13) && onSearch(text);
-  const formClass = classNames('rf-search-bar', { 'rf-search-bar--lg': (size === 'lg') });
-  const buttonClass = classNames('rf-btn', { 'rf-btn--lg': (size === 'lg') });
+  const _className = classNames('rf-search-bar', {
+    'rf-search-bar--lg': (size === 'lg'),
+  }, className);
+  const _classNameButton = classNames('rf-btn', { 'rf-btn--lg': (size === 'lg') });
   return (
-    <form role="search" className={formClass} data-testid="search-bar">
+    <form role="search" className={_className} data-testid="search-bar">
       <label className="rf-label" htmlFor={inputId}>{label}</label>
       <input
         ref={ref}
@@ -39,7 +42,7 @@ const SearchBar = forwardRef((props, ref) => {
       <button
         type="button"
         onClick={() => onSearch(text)}
-        className={buttonClass}
+        className={_classNameButton}
         title={buttonLabel}
       >
         {buttonLabel}
@@ -51,6 +54,7 @@ SearchBar.defaultProps = {
   size: 'md',
   placeholder: '',
   defaultValue: '',
+  className: '',
 };
 SearchBar.propTypes = {
   label: PropTypes.string.isRequired,
@@ -62,6 +66,11 @@ SearchBar.propTypes = {
   onSearch: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['md', 'lg']),
   defaultValue: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default SearchBar;
