@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import '@gouvfr/all/dist/css/all.min.css';
+import classNames from 'classnames';
 
-const ModalClose = ({ hide, title, children }) => (
+const ModalClose = ({
+  hide, title, children, className,
+}) => (
   <button
-    className="rf-link--close rf-link"
+    className={classNames('rf-link--close rf-link', className)}
     type="button"
     onClick={hide}
     title={title}
@@ -16,11 +18,22 @@ const ModalClose = ({ hide, title, children }) => (
 ModalClose.propTypes = {
   children: PropTypes.string,
   title: PropTypes.string,
-  hide: PropTypes.func.isRequired,
+  /**
+   * @ignore
+   */
+  hide: PropTypes.func,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 ModalClose.defaultProps = {
   children: 'Fermer',
   title: 'Fermer la fenêtre modale',
+  className: '',
+  hide: () => {},
+
 };
 
 export default ModalClose;

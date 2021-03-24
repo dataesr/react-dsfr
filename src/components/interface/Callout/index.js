@@ -1,5 +1,9 @@
 import Callout from './Callout';
-import CalloutText from './CalloutText';
 import CalloutTitle from './CalloutTitle';
+import CalloutText from './CalloutText';
 
-export { Callout, CalloutText, CalloutTitle };
+export {
+  Callout,
+  CalloutTitle,
+  CalloutText,
+};

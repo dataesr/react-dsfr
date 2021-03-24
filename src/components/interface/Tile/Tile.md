@@ -6,9 +6,7 @@
 
 import { Tile, TileBody, TileImage } from '.';
 
-<Tile
-    horizontal={true}
-    verticalMedium={true}>
+<Tile horizontal={true} verticalMedium={true}>
     <TileImage
         alt="un petit carré"
         src="https://place-hold.it/80x80">
@@ -26,8 +24,7 @@ import { Tile, TileBody, TileImage } from '.';
 
 import { Tile, TileBody, TileImage } from '.';
 
-<Tile
-    horizontalMedium={true}>
+<Tile horizontalMedium={true} scheme="soft-orange-dark">
     <TileImage
         alt="un petit carré"
         src="https://place-hold.it/80x80">

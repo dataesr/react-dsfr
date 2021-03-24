@@ -5,29 +5,29 @@ Les accordéons permettent aux utilisateurs d'afficher et de masquer des section
 ### Accordéon simple
 
 ```jsx
-import { AccordionGroup, Accordion } from '.';
+import { AccordionItem, Accordion } from '.';
 
-<AccordionGroup className="custom-class">
-  <Accordion title="first line accordion">
+<Accordion className="custom-class">
+  <AccordionItem title="first line accordion">
     Anything I want
-  </Accordion>
-</AccordionGroup>
+  </AccordionItem>
+</Accordion>
 ```
 
 ### Accordéon multiple
 
 ```jsx
-import { AccordionGroup, Accordion } from '.';
+import { AccordionItem, Accordion } from '.';
 
 
-<AccordionGroup className="custom-class">
-  <Accordion title="first line accordion">
+<Accordion className="custom-class">
+  <AccordionItem title="first line accordion">
     Anything I want
-  </Accordion>
-  <Accordion title="second line accordion">
+  </AccordionItem>
+  <AccordionItem title="second line accordion">
     Anything I want
-  </Accordion>
-  <Accordion title="third line accordion">
+  </AccordionItem>
+  <AccordionItem title="third line accordion">
     <article>
       <h1>Content title</h1>
       <p>
@@ -37,6 +37,6 @@ import { AccordionGroup, Accordion } from '.';
       </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum debitis doloribus magni reiciendis ullam voluptates voluptatibus! Asperiores aspernatur ipsum magni. Aperiam consequatur, dignissimos esse laborum minus possimus tempora tenetur!</p>
     </article>
-  </Accordion>
-</AccordionGroup>
+  </AccordionItem>
+</Accordion>
 ```

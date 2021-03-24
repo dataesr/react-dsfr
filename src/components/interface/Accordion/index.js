@@ -1,7 +1,7 @@
-import AccordionGroup from './AccordionGroup';
+import AccordionItem from './AccordionItem';
 import Accordion from './Accordion';
 
 export {
-  AccordionGroup,
+  AccordionItem,
   Accordion,
 };

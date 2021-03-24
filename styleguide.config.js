@@ -68,11 +68,5 @@ module.exports = {
         },
       ],
     },
-    {
-      name: 'Hooks',
-      sectionDepth: 1,
-      content: 'src/hooks/HOOKS.md',
-      components: 'src/hooks/**/use*.js',
-    },
   ],
 };

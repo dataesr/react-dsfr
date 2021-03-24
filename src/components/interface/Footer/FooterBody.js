@@ -1,10 +1,11 @@
 import { Children } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const FooterBody = ({ children, description }) => {
+const FooterBody = ({ children, description, className }) => {
   const brandLogo = Children.toArray(children).filter((child) => child.type.name === 'BrandLogo');
   return (
-    <div className="rf-footer__body">
+    <div className={classNames('rf-footer__body', className)}>
       <div className="rf-footer__brand">
         {brandLogo}
       </div>
@@ -29,8 +30,17 @@ const FooterBody = ({ children, description }) => {
   );
 };
 FooterBody.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   description: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
+FooterBody.defaultProps = { className: '' };
 
 export default FooterBody;

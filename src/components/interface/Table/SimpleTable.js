@@ -12,16 +12,16 @@ const SimpleTable = ({ data, ...rest }) => {
       </thead>
       <tbody>
         {
-                data.map((row) => (
-                  <tr key={row._id || row.id}>
-                    {
-                            Object.entries(row).map(
-                              ([key, value]) => (<td key={`${row._id || row.id}_${key}`}>{value}</td>),
-                            )
-                        }
-                  </tr>
-                ))
-            }
+          data.map((row) => (
+            <tr key={row._id || row.id}>
+              {
+                Object.entries(row).map(
+                  ([key, value]) => (<td key={`${row._id || row.id}_${key}`}>{value}</td>),
+                )
+              }
+            </tr>
+          ))
+        }
       </tbody>
     </Table>
   );
@@ -41,8 +41,11 @@ SimpleTable.propTypes = {
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
   caption: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
-
 export default SimpleTable;

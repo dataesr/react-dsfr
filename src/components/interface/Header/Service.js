@@ -1,7 +1,6 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
 const Service = ({
@@ -13,7 +12,7 @@ const Service = ({
   } = context;
   const { isMobile } = context;
   return (
-    <div className={classnames(className, 'rf-header__navbar')}>
+    <div className={classNames(className, 'rf-header__navbar')}>
       <div className="rf-service">
         <a className="rf-service__title" href={link} title={title}>
           {title}
@@ -56,9 +55,10 @@ Service.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
-  /**
-   * One of: string, object
-   */
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 export default Service;

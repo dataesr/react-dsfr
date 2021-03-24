@@ -15,19 +15,15 @@ const Table = ({
   fixedLayout,
   className,
 }) => {
-  const classes = classNames(
-    'rf-table',
-    {
-      'rf-table--no-caption': (captionPosition === 'none'),
-      'rf-table--caption-bottom': (captionPosition === 'bottom'),
-      'rf-table--bordered': bordered,
-      'rf-table--no-scroll': noScroll,
-      'rf-table--layout-fixed': fixedLayout,
-    },
-    className,
-  );
+  const _className = classNames('rf-table', {
+    'rf-table--no-caption': (captionPosition === 'none'),
+    'rf-table--caption-bottom': (captionPosition === 'bottom'),
+    'rf-table--bordered': bordered,
+    'rf-table--no-scroll': noScroll,
+    'rf-table--layout-fixed': fixedLayout,
+  }, className);
   return (
-    <div className={classes} data-testid="table">
+    <div className={_className} data-testid="table">
       <table>
         <caption data-testid="table-caption">{caption}</caption>
         {children}
@@ -52,7 +48,10 @@ Table.propTypes = {
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
   caption: PropTypes.string.isRequired,
   children: PropTypes.node,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
-
 export default Table;
