@@ -1,10 +1,11 @@
 import classnames from 'classnames';
 import { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { CLASS_NAME_TYPE, CHILDREN_TYPE } from '../../../utils/variables';
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, children,
+  className, children, closeButton,
 }) => {
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
@@ -36,7 +37,7 @@ const HeaderNav = ({
           title="Fermer"
           aria-controls="header-nav-popin"
         >
-          Fermer
+            {closeButton}
         </button>
         )}
       </nav>
@@ -46,12 +47,11 @@ const HeaderNav = ({
 
 HeaderNav.defaultProps = {
   className: '',
+  closeButton: 'Fermer',
 };
 
 HeaderNav.propTypes = {
-  /**
-   * One of: string, object
-   */
+  closeButton: PropTypes.string,
   className: CLASS_NAME_TYPE,
   children: CHILDREN_TYPE.isRequired,
 };
