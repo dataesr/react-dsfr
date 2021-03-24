@@ -1,9 +1,11 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
+ *
+ * L’usage des interrupteurs est à privilégier pour paramétrer des fonctionnalités transverses.
+ * Le changement d'état de l’interrupteur ne nécessite pas de validation
  * @visibleName Toggle
  */
 const Toggle = ({
@@ -54,18 +56,23 @@ Toggle.defaultProps = {
   hasSeparator: false,
   hasLabelLeft: false,
   description: null,
+  onChange: () => {},
 };
 
 Toggle.propTypes = {
   id: PropTypes.string,
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   hasSeparator: PropTypes.bool,
   isChecked: PropTypes.bool,
   isDisabled: PropTypes.bool,
   hasLabelLeft: PropTypes.bool,
   description: PropTypes.string,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };
 
 export default Toggle;

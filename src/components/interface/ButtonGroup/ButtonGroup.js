@@ -2,7 +2,6 @@ import { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
-import { CLASS_NAME_TYPE } from '../../../utils/variables';
 
 /**
  *
@@ -45,7 +44,11 @@ ButtonGroup.defaultProps = {
 
 ButtonGroup.propTypes = {
   isInlineFrom: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
-  className: CLASS_NAME_TYPE,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   children: PropTypes.oneOfType([
