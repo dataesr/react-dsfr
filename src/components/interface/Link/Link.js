@@ -1,30 +1,36 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { cloneElement } from 'react';
 
 /**
  * Navigation
  *
- * @visibleName Links
+ * @visibleName Link
  */
 const Link = ({
-  children, href, title, target, isSimple, icon, className, iconPosition,
+  children, href, title, target, isSimple, icon, className, iconPosition, as,
 }) => {
   const _className = classNames(icon, className, {
     'rf-link': isSimple,
-    'rf-link--icon-left': !isSimple && icon && children,
+    'rf-link--icon-left': !isSimple && icon,
     [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
 
+  const asLink = as ? cloneElement(as, { className: _className }) : null;
+
   return (
-    <a
-      href={href}
-      title={title || undefined}
-      target={target}
-      rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
-      className={_className || undefined}
-    >
-      {children}
-    </a>
+    as ? <>{asLink}</>
+      : (
+        <a
+          href={href}
+          title={title || undefined}
+          target={target}
+          rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
+          className={_className || undefined}
+        >
+          {children}
+        </a>
+      )
   );
 };
 
@@ -34,7 +40,10 @@ Link.defaultProps = {
   target: '_self',
   isSimple: false,
   icon: '',
+  as: null,
   iconPosition: 'right',
+  href: '',
+  children: '',
 };
 
 Link.propTypes = {
@@ -47,8 +56,9 @@ Link.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string,
-  ]).isRequired,
-  href: PropTypes.string.isRequired,
+  ]),
+  href: PropTypes.string,
+  as: PropTypes.element,
   title: PropTypes.string,
   target: PropTypes.string,
   isSimple: PropTypes.bool,
