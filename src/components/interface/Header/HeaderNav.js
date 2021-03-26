@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, children, closeButton,
+  className, children, closeButtonLabel,
 }) => {
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
@@ -37,7 +37,7 @@ const HeaderNav = ({
           title="Fermer"
           aria-controls="header-nav-popin"
         >
-            {closeButton}
+            {closeButtonLabel}
         </button>
         )}
       </nav>
@@ -47,11 +47,11 @@ const HeaderNav = ({
 
 HeaderNav.defaultProps = {
   className: '',
-  closeButton: 'Fermer',
+  closeButtonLabel: 'Fermer',
 };
 
 HeaderNav.propTypes = {
-  closeButton: PropTypes.string,
+  closeButtonLabel: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

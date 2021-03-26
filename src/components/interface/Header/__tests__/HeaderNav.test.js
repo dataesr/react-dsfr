@@ -44,7 +44,7 @@ describe('<HeaderNav />', () => {
   });
 
   it('should call onOpenNav', () => {
-    wrapper(<HeaderNav closeButton="close"><li>nav #1</li></HeaderNav>, { context });
+    wrapper(<HeaderNav closeButtonLabel="close"><li>nav #1</li></HeaderNav>, { context });
     userEvent.click(screen.getByText(/close/i));
     expect(context.onOpenNav).toHaveBeenCalled();
   });
