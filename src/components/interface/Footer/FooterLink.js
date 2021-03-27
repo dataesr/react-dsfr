@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Link from '../Link';
 
 const FooterLink = ({
   children, href, section, className,
 }) => (
   <li className={classNames(`rf-footer__${section}-item`, className)}>
-    <a className={`rf-footer__${section}-link`} href={href}>{children}</a>
+    <Link href={href} className={`rf-footer__${section}-link`}>
+      {children}
+    </Link>
   </li>
 );
 FooterLink.propTypes = {

@@ -10,6 +10,7 @@ exports[`<Service /> renders correctly 1`] = `
     <a
       className="rf-service__title"
       href="/"
+      target="_self"
       title="title"
     >
       title

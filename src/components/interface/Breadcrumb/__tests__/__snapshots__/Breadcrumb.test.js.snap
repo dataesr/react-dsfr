@@ -26,6 +26,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
     >
       <a
         href="#"
+        target="_self"
       >
         Home
       </a>
@@ -37,6 +38,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
     >
       <a
         href="#"
+        target="_self"
       >
         Productions
       </a>

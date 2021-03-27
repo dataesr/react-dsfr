@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Link from '../Link';
 
 const BreadcrumbItem = ({
   className, children, href,
@@ -9,7 +10,7 @@ const BreadcrumbItem = ({
   }, className);
   return (
     <li className={_className} aria-current={!href && 'page'} data-testid="bc-item">
-      {(href) ? <a href={href}>{children}</a> : children}
+      {(href) ? <Link href={href}>{children}</Link> : children}
     </li>
   );
 };

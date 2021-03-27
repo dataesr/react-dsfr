@@ -4,7 +4,6 @@ exports[`<Link /> renders correctly 1`] = `
 <a
   className="alert-fill rf-link--icon-left"
   href="/page"
-  rel={null}
   target="_self"
   title="title"
 >
