@@ -50,5 +50,4 @@ describe('<Header />', () => {
       .toJSON();
     expect(component).toMatchSnapshot();
   });
-  // TODO add tests
 });

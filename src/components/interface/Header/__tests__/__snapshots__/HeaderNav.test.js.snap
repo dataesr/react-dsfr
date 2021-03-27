@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderNav /> renders correctly 1`] = `
+<div
+  className="rf-container"
+>
+  <nav
+    aria-label="Menu principal"
+    className="rf-nav"
+    id="header-nav-popin"
+    role="navigation"
+  >
+    <ul
+      className="rf-nav__list"
+    >
+      <li>
+        nav #1
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

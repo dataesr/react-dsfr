@@ -61,6 +61,7 @@
     "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-rfds.git",
     "guide": "npx styleguidist server",
     "test:dev": "react-scripts test --watchAll",
+    "test:dev:coverage": "react-scripts test  --watchAll --coverage",
     "test:debug": "react-scripts --inspect test --runInBand --no-cache",
     "test:nowatch": "react-scripts test --watchAll=false",
     "test:coverage": "CI=true npm test -- --coverage"
