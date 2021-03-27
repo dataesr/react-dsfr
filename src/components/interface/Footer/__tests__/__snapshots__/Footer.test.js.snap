@@ -33,6 +33,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -43,6 +44,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -53,6 +55,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -63,79 +66,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
-        >
-          <div
-            class="rf-footer__top-cat"
-          >
-            Nom de la catégorie
-          </div>
-          <ul
-            class="rf-footer__top-list"
-          >
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -159,6 +90,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -169,6 +101,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -179,6 +112,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -189,29 +123,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
-        >
-          <div
-            class="rf-footer__top-cat"
-          >
-            Nom de la catégorie
-          </div>
-          <ul
-            class="rf-footer__top-list"
-          >
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -222,6 +134,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -232,16 +145,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
-              >
-                Lien de navigation
-              </a>
-            </li>
-            <li
-              class="rf-footer__top-item"
-            >
-              <a
-                class="rf-footer__top-link"
-                href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -265,6 +169,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -275,6 +180,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -285,6 +191,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -295,6 +202,121 @@ exports[`<Footer /> should render Footer properly 1`] = `
               <a
                 class="rf-footer__top-link"
                 href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+        >
+          <div
+            class="rf-footer__top-cat"
+          >
+            Nom de la catégorie
+          </div>
+          <ul
+            class="rf-footer__top-list"
+          >
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+        >
+          <div
+            class="rf-footer__top-cat"
+          >
+            Nom de la catégorie
+          </div>
+          <ul
+            class="rf-footer__top-list"
+          >
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+            <li
+              class="rf-footer__top-item"
+            >
+              <a
+                class="rf-footer__top-link"
+                href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -316,6 +338,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
         <a
           class="rf-logo"
           href="/"
+          target="_self"
           title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"
         >
           <span
@@ -351,6 +374,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             <a
               class="rf-footer__content-link"
               href="https://legifrance.gouv.fr"
+              target="_self"
             >
               legifrance.gouv.fr
             </a>
@@ -361,6 +385,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             <a
               class="rf-footer__content-link"
               href="https://gouvernement.fr"
+              target="_self"
             >
               gouvernement.fr
             </a>
@@ -371,6 +396,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             <a
               class="rf-footer__content-link"
               href="https://service-public.fr"
+              target="_self"
             >
               service-public.fr
             </a>
@@ -381,6 +407,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             <a
               class="rf-footer__content-link"
               href="https://data.gouv.fr"
+              target="_self"
             >
               data.gouv.fr
             </a>
@@ -405,6 +432,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 1"
@@ -419,6 +447,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 2"
@@ -429,6 +458,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 3"
@@ -439,6 +469,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 4"
@@ -461,6 +492,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="rf-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Plan du site
           </a>
@@ -471,6 +503,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="rf-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Accessibilité: non/partiellement/totalement conforme
           </a>
@@ -481,6 +514,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="rf-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Mentions légales
           </a>
@@ -491,6 +525,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="rf-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Données personnelles
           </a>
@@ -501,6 +536,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <a
             class="rf-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Gestion des cookies
           </a>

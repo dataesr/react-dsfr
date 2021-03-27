@@ -13,8 +13,8 @@ exports[`<Tile /> renders correctly 1`] = `
       <a
         className="rf-tile__link"
         href="/path"
-        target=""
-        title=""
+        target="linkTarget"
+        title="linkTitle"
       >
         title
       </a>

@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import HeaderContext from './headerContext';
+import Link from '../Link';
 
 const Service = ({
   title, description, className, link,
@@ -14,9 +15,9 @@ const Service = ({
   return (
     <div className={classNames(className, 'rf-header__navbar')}>
       <div className="rf-service">
-        <a className="rf-service__title" href={link} title={title}>
+        <Link className="rf-service__title" href={link} title={title}>
           {title}
-        </a>
+        </Link>
         <p className="rf-service__tagline">{description}</p>
       </div>
       {isSearchBar && isMobile && (

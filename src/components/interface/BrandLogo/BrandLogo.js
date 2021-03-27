@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
+import Link from '../Link';
 
 /**
  *
@@ -17,16 +18,17 @@ const BrandLogo = ({
       key={uuidv4()}
     />
   ) : ''), []);
+
   return (
-    <a
-      className={classNames('rf-logo', className)}
-      href={href}
+    <Link
       title={hrefTitle || children}
+      href={href}
+      className={classNames('rf-logo', className)}
     >
       <span className="rf-logo__title">
         {title}
       </span>
-    </a>
+    </Link>
   );
 };
 

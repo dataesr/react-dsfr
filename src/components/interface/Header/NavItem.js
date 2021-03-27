@@ -1,6 +1,7 @@
 import { useState, useEffect, Children } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import Link from '../Link';
 
 const NavItem = ({ children, title, link }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -53,7 +54,12 @@ const NavItem = ({ children, title, link }) => {
       </li>
     ) : (
       <li className="rf-nav__item">
-        <a className="rf-link" href={link} target="_self">{title}</a>
+        <Link
+          className="rf-link"
+          href={link}
+        >
+          {title}
+        </Link>
       </li>
 
     )
