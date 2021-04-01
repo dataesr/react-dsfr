@@ -13,11 +13,10 @@
     "gouvfr"
   ],
   "dependencies": {
-    "@gouvfr/all": "^0.5.3",
+    "@gouvfr/dsfr": "^0.6.0",
     "classnames": "^2.2.6",
     "html-react-parser": "^1.2.4",
     "react-children-utilities": "2.2.4",
-    "react-router-dom": "^5.2.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -39,6 +38,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-styleguidist": "^11.1.5",
     "react-test-renderer": "^17.0.1",
@@ -68,7 +68,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-children-utilities|@gouvfr/all)/)"
+      "node_modules/(?!(react-children-utilities|@gouvfr/dsfr)/)"
     ]
   },
   "eslintConfig": {

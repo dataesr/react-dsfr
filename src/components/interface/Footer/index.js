@@ -1,3 +1,4 @@
+import '@gouvfr/dsfr/dist/css/footer.min.css';
 import FooterBody from './FooterBody';
 import FooterTop from './FooterTop';
 import FooterTopCategory from './FooterTopCategory';

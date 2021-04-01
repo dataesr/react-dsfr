@@ -1,3 +1,4 @@
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';

@@ -1,3 +1,4 @@
+import '@gouvfr/dsfr/dist/css/pagination.min.css';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';

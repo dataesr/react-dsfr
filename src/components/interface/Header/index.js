@@ -1,3 +1,6 @@
+import '@gouvfr/dsfr/dist/css/navigation.min.css';
+import '@gouvfr/dsfr/dist/css/header.min.css';
+
 import Header from './Header';
 import HeaderBody from './HeaderBody';
 import HeaderNav from './HeaderNav';

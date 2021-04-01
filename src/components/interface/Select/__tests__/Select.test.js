@@ -13,7 +13,10 @@ describe('<Select />', () => {
     { value: '2', label: 'label-2' },
   ];
   beforeEach(() => {
-    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
+    uuidv4.mockImplementationOnce(() => 'message-xxxxxxx');
+    options.forEach((elm) => {
+      uuidv4.mockImplementationOnce(() => `${elm.label}-xxx`);
+    });
   });
   it('renders correctly', () => {
     const component = renderer
