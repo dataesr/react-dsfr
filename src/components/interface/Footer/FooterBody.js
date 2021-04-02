@@ -4,12 +4,12 @@ import classNames from 'classnames';
 import Link from '../Links';
 
 const FooterBody = ({ children, description, className }) => {
-  const brandLogo = Children.toArray(children).filter(
-    (child) => child.type.name === 'BrandLogo',
+  const Logo = Children.toArray(children).filter(
+    (child) => child.type.name === 'Logo',
   );
   return (
     <div className={classNames('rf-footer__body', className)}>
-      <div className="rf-footer__brand">{brandLogo}</div>
+      <div className="rf-footer__brand">{Logo}</div>
       <div className="rf-footer__content">
         <p className="rf-footer__content-desc">{description}</p>
         <ul className="rf-footer__content-list">

@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import BrandLogo from '..';
+import Logo from '..';
 
-describe('<BrandLogo />', () => {
-  it('should render BrandLogo properly', () => {
+describe('<Logo />', () => {
+  it('should render Logo properly', () => {
     render(
-      <BrandLogo>
+      <Logo>
         Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
-      </BrandLogo>,
+      </Logo>,
     );
     const footer = screen.getByText(/Ministère/);
     expect(footer).toMatchSnapshot();

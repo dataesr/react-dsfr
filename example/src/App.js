@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Links, Accordion, AccordionItem, Breadcrumb, BreadcrumbItem, Button, Callout,
-    BrandLogo,
+    Logo,
     CalloutTitle, CalloutText, Checkbox, CheckboxGroup,
     Col,
     Row,
@@ -33,7 +33,8 @@ import {
 
 const App = () => {
     return <Container>
-        <BrandLogo>react-dsfr</BrandLogo>
+        <Links title='title'>Link</Links>
+        <Logo>Test</Logo>
         <Row>
             <Col>
                 <Icon icon="alert-fill" size="xl" />
@@ -127,7 +128,7 @@ const App = () => {
             <FooterBody
                 description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             >
-                <BrandLogo>Ministère de l'enseignement supérieur de la rechercher  et de l'innovation</BrandLogo>
+                <Logo>Ministère de l'enseignement supérieur de la rechercher  et de l'innovation</Logo>
             </FooterBody>
             <FooterPartners>
                 <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>

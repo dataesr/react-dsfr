@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   Header, HeaderBody, Service, Tool, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
 } from '../index';
-import BrandLogo from '../../BrandLogo';
+import Logo from '../../Logo';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -23,7 +23,7 @@ describe('<Header />', () => {
       .create(
         <Header>
           <HeaderBody>
-            <BrandLogo splitCharacter={10}>République française</BrandLogo>
+            <Logo splitCharacter={10}>République française</Logo>
             <Service
               title="Nom du service"
               description="baseline - précisions sur l‘organisation"

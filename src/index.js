@@ -7,7 +7,7 @@ import Title from './components/foundation/typography/Title/Title';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/TitleDisplay';
 import Accordion from './components/interface/Accordion/Accordion';
 import AccordionItem from './components/interface/Accordion/AccordionItem';
-import BrandLogo from './components/interface/BrandLogo/BrandLogo';
+import Logo from './components/interface/Logo/Logo';
 import Breadcrumb from './components/interface/Breadcrumb/Breadcrumb';
 import BreadcrumbItem from './components/interface/Breadcrumb/BreadcrumbItem';
 import Button from './components/interface/Button/Button';
@@ -45,7 +45,7 @@ import '@gouvfr/dsfr/dist/css/core.min.css';
 
 export {
   Accordion, AccordionItem,
-  BrandLogo,
+  Logo,
   Breadcrumb, BreadcrumbItem,
   Button,
   Callout, CalloutTitle, CalloutText,

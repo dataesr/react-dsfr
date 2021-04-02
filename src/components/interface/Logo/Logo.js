@@ -8,9 +8,9 @@ import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *
- * @visibleName Bloc-marque
+ * @visibleName Logo
  */
-const BrandLogo = ({
+const Logo = ({
   children, href, className, splitCharacter, hrefTitle,
 }) => {
   // TODO Better system to split
@@ -35,13 +35,13 @@ const BrandLogo = ({
   );
 };
 
-BrandLogo.defaultProps = {
+Logo.defaultProps = {
   href: '/',
   hrefTitle: '',
   splitCharacter: 12,
   className: '',
 };
-BrandLogo.propTypes = {
+Logo.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -56,4 +56,4 @@ BrandLogo.propTypes = {
   splitCharacter: PropTypes.number,
 };
 
-export default BrandLogo;
+export default Logo;

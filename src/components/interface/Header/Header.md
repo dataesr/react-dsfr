@@ -5,14 +5,14 @@ L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouven
 ```jsx
 import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, ToolItemGroup } from '.';
 import SearchBar from '../SearchBar/index';
-import BrandLogo from '../BrandLogo';
+import Logo from '../Logo';
 
 <Header>
     <HeaderBody>
-        <BrandLogo splitCharacter={10}>République Française</BrandLogo>
+        <Logo splitCharacter={10}>République Française</Logo>
         <Service
             title="Nom du service"
-            description="baseline - précisions sur l‘organisation" />
+            description="baseline - précisions sur l‘organisation"/>
         <Tool
             buttonClose='fermer'
         >
@@ -30,12 +30,12 @@ import BrandLogo from '../BrandLogo';
         </Tool>
     </HeaderBody>
     <HeaderNav>
-      <NavItem title='Home' link='/' />
-      <NavItem title='Resources'>
-        <NavSubItem title='Ressource #1' link='/path-to-resources-1' />
-        <NavSubItem title='Ressource #2' link='/path-to-resources-2' />
-        <NavSubItem title='Ressource #3' link='/path-to-resources-3' />
-      </NavItem>
-  </HeaderNav>
+        <NavItem title='Home' link='/'/>
+        <NavItem title='Resources'>
+            <NavSubItem title='Ressource #1' link='/path-to-resources-1'/>
+            <NavSubItem title='Ressource #2' link='/path-to-resources-2'/>
+            <NavSubItem title='Ressource #3' link='/path-to-resources-3'/>
+        </NavItem>
+    </HeaderNav>
 </Header>
 ```

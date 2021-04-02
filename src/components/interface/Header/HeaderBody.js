@@ -4,8 +4,8 @@ import { deepFilter } from 'react-children-utilities';
 import classNames from 'classnames';
 
 const HeaderBody = ({ children, className }) => {
-  const elements = deepFilter(children, (child) => child.type.name !== 'BrandLogo');
-  const logo = deepFilter(children, (child) => child.type.name === 'BrandLogo');
+  const elements = deepFilter(children, (child) => child.type.name !== 'Logo');
+  const logo = deepFilter(children, (child) => child.type.name === 'Logo');
   return (
     <div className="rf-container">
       <div className={classNames(className, 'rf-header__body')} role="banner">
