@@ -1,12 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import Link from '../Links';
 
 const NavSubItem = ({ title, link }) => (
   <li className="rf-menu__item" key={title}>
-    <Link
-      className="rf-link"
-      href={link}
-    >
+    <Link className="rf-link" href={link}>
       {title}
     </Link>
   </li>

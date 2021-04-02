@@ -1,8 +1,10 @@
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
 
 /**
  * Les champs permettent à un utilisateur d'entrer du contenu et données.

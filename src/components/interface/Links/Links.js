@@ -1,40 +1,50 @@
+import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { cloneElement } from 'react';
+
+import '@gouvfr/dsfr/dist/css/links.min.css';
 
 /**
  * Navigation
  *
- * @visibleName Link
+ * @visibleName Links
  */
-const Link = ({
-  children, href, title, target, isSimple, icon, className, iconPosition, as,
+const Links = ({
+  children,
+  href,
+  title,
+  target,
+  isSimple,
+  icon,
+  className,
+  iconPosition,
+  as,
 }) => {
   const _className = classNames(icon, className, {
     'rf-link': isSimple,
     'rf-link--icon-left': !isSimple && icon,
-    [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
+    [`rf-link--icon-${iconPosition}`]:
+      iconPosition && isSimple && icon && children,
   });
 
   const asLink = as ? cloneElement(as, { className: _className }) : null;
 
-  return (
-    as ? <>{asLink}</>
-      : (
-        <a
-          href={href}
-          title={title || undefined}
-          target={target}
-          rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
-          className={_className || undefined}
-        >
-          {children}
-        </a>
-      )
+  return as ? (
+    <>{asLink}</>
+  ) : (
+    <a
+      href={href}
+      title={title || undefined}
+      target={target}
+      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      className={_className || undefined}
+    >
+      {children}
+    </a>
   );
 };
 
-Link.defaultProps = {
+Links.defaultProps = {
   className: '',
   title: '',
   target: '_self',
@@ -46,7 +56,7 @@ Link.defaultProps = {
   children: '',
 };
 
-Link.propTypes = {
+Links.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -66,4 +76,4 @@ Link.propTypes = {
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };
 
-export default Link;
+export default Links;

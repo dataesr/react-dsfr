@@ -1,12 +1,15 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Link';
+import Link from '../Links';
 
 const SkiplinkItem = ({
   href, target, children, className,
 }) => (
   <li className={classNames(className)}>
-    <Link isSimple href={href} target={target}>{children}</Link>
+    <Link isSimple href={href} target={target}>
+      {children}
+    </Link>
   </li>
 );
 
@@ -16,10 +19,7 @@ SkiplinkItem.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
-    PropTypes.arrayOf(
-      PropTypes.string,
-      PropTypes.object,
-    ),
+    PropTypes.arrayOf(PropTypes.string, PropTypes.object),
   ]),
   target: PropTypes.string,
 };

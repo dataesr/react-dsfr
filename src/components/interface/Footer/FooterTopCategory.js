@@ -1,5 +1,6 @@
+import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { Children, cloneElement } from 'react';
+
 import classNames from 'classnames';
 import Col from '../../foundation/grid/Col';
 
@@ -7,7 +8,7 @@ const FooterTopCategory = ({
   children, title, n, offset, className,
 }) => {
   const links = Children.toArray(children)
-    .filter((link) => link.type.name === 'FooterLink')
+    .filter((link) => link && link.type.name === 'FooterLink')
     .map((link) => cloneElement(link, { section: 'top' }));
   const childs = children.filter((link) => link.type.name !== 'FooterLink');
   return (

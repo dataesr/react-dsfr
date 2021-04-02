@@ -1,6 +1,7 @@
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+
 import HeaderContext from './headerContext';
 
 const Tool = ({

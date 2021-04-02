@@ -1,5 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import '@gouvfr/dsfr/dist/css/footer.min.css';
 
 const Footer = ({ children, className }) => {
   const top = children.filter((child) => child.type.name === 'FooterTop');
@@ -16,6 +19,7 @@ const Footer = ({ children, className }) => {
 };
 
 Footer.defaultProps = { className: '' };
+
 Footer.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

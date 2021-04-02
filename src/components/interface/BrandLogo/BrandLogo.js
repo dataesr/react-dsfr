@@ -1,7 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import Link from '../Link';
+import Link from '../Links';
+
+import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *

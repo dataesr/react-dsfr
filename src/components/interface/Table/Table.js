@@ -1,5 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import '@gouvfr/dsfr/dist/css/table.min.css';
 
 /**
  * Tableau de données

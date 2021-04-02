@@ -1,11 +1,15 @@
-import {
+import React, {
   cloneElement, Children, useRef, useEffect,
 } from 'react';
+
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
+
+import '@gouvfr/dsfr/dist/css/modal.min.css';
+
 /**
  * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
  * un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite

@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
+
+import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
+
 /**
  * Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une
  * rubrique ou d’un même thème.

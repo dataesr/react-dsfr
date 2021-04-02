@@ -1,6 +1,7 @@
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { useContext, useEffect, useState } from 'react';
+
 import { createPortal } from 'react-dom';
 import HeaderContext from './headerContext';
 

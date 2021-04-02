@@ -1,8 +1,10 @@
-import '@gouvfr/dsfr/dist/css/pagination.min.css';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
+
+import '@gouvfr/dsfr/dist/css/pagination.min.css';
 
 const Pagination = ({
   pageCount,

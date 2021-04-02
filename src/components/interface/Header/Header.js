@@ -1,9 +1,13 @@
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+
 import { deepForEach } from 'react-children-utilities';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
+
+import '@gouvfr/dsfr/dist/css/navigation.min.css';
+import '@gouvfr/dsfr/dist/css/header.min.css';
 
 const Header = ({
   children,

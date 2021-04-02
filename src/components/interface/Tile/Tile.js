@@ -1,6 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/tiles.min.css';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.

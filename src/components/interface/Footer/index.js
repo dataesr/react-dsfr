@@ -1,10 +1,11 @@
-import '@gouvfr/dsfr/dist/css/footer.min.css';
 import FooterBody from './FooterBody';
 import FooterTop from './FooterTop';
 import FooterTopCategory from './FooterTopCategory';
 import FooterBottom from './FooterBottom';
 import FooterCopy from './FooterCopy';
-import FooterPartners, { FooterPartnersTitle, FooterPartnersLogo } from './FooterPartners';
+import FooterPartners from './FooterPartners';
+import FooterPartnersLogo from './FooterPartnersLogo';
+import FooterPartnersTitle from './FooterPartnersTitle';
 import FooterLink from './FooterLink';
 import Footer from './Footer';
 

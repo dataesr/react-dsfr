@@ -1,17 +1,13 @@
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import Link from '../Links';
 
 const ToolItem = ({
   icon, link, title, className,
 }) => (
   <li className={classNames('rf-shortcuts__item', className)} key={title}>
-    <Link
-      isSimple
-      icon={icon || ''}
-      iconPosition="left"
-      href={link}
-    >
+    <Link isSimple icon={icon || ''} iconPosition="left" href={link}>
       {title}
     </Link>
   </li>

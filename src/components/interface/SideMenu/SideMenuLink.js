@@ -1,13 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Link';
+import Link from '../Links';
 
 const SideMenuLink = ({ children, href, className }) => (
   <li className={classNames('rf-sidemenu__item', className)}>
-    <Link
-      className="rf-sidemenu__link"
-      href={href}
-    >
+    <Link className="rf-sidemenu__link" href={href}>
       {children}
     </Link>
   </li>

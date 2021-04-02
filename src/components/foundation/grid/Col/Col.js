@@ -1,7 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getColSize } from '../../../../utils/getters';
 import { SCHEMES } from '../../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/content.min.css';
 
 /**
  * Design system Column
