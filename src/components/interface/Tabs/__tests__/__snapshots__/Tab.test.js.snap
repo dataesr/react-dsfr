@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab /> renders Tab correctly 1`] = `
+<li
+  className="my-class"
+>
+  <button
+    aria-controls="rf-tabpanel-0"
+    aria-selected="true"
+    className="rf-tabs__tab rf-fi-home rf-tabs__tab--icon-right"
+    onClick={[Function]}
+    role="tab"
+    tabIndex="0"
+    type="button"
+  >
+    Label
+  </button>
+  <div
+    className="rf-tabs__panel rf-tabs__panel--selected"
+    id="rf-tabpanel-0"
+    role="tabpanel"
+    style={
+      Object {
+        "transform": "translate(0%)",
+      }
+    }
+    tabIndex="0"
+  >
+    Tabinouze
+  </div>
+</li>
+`;
