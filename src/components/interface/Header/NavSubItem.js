@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../Links';
+import Link from '../Link';
 
 const NavSubItem = ({ title, link }) => (
   <li className="rf-menu__item" key={title}>

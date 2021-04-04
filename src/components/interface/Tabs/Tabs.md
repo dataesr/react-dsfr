@@ -2,7 +2,7 @@
 
 Le composant onglet permet aux utilisateurs de naviguer dans différentes sections de contenu au sein d’une même page.
 
-```jsx noeditor
+```jsx
 import { Tabs, Tab } from '.';
 
 <Tabs>

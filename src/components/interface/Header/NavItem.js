@@ -2,7 +2,7 @@ import React, { useState, useEffect, Children } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import Link from '../Links';
+import Link from '../Link';
 
 const NavItem = ({ children, title, link }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -38,13 +38,13 @@ const NavItem = ({ children, title, link }) => {
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
         aria-expanded={item.aria}
-        className="rf-btn"
+        className="rf-nav__btn"
       >
         {title}
       </button>
       <div
         id={`rf-nav-subitem-${uuidv4()}`}
-        className={item.class}
+        className={`rf-menu rf-collapse ${item.class}`}
         style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
       >
         <ul className="rf-menu__list">{children}</ul>
@@ -52,7 +52,7 @@ const NavItem = ({ children, title, link }) => {
     </li>
   ) : (
     <li className="rf-nav__item">
-      <Link className="rf-link" href={link}>
+      <Link className="rf-nav__link" href={link}>
         {title}
       </Link>
     </li>

@@ -7,7 +7,6 @@ import Title from './components/foundation/typography/Title/Title';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/TitleDisplay';
 import Accordion from './components/interface/Accordion/Accordion';
 import AccordionItem from './components/interface/Accordion/AccordionItem';
-import Logo from './components/interface/Logo/Logo';
 import Breadcrumb from './components/interface/Breadcrumb/Breadcrumb';
 import BreadcrumbItem from './components/interface/Breadcrumb/BreadcrumbItem';
 import Button from './components/interface/Button/Button';
@@ -40,7 +39,38 @@ import Service from './components/interface/Header/Service';
 import Tool from './components/interface/Header/Tool';
 import ToolItem from './components/interface/Header/ToolItem';
 import ToolItemGroup from './components/interface/Header/ToolItemGroup';
-import Links from './components/interface/Links/Links';
+import Highlight from './components/interface/Highlight/Highlight';
+import Link from './components/interface/Link/Link';
+import Logo from './components/interface/Logo/Logo';
+import MediaImage from './components/interface/MediaImage/MediaImage';
+import MediaVideo from './components/interface/MediaVideo/MediaVideo';
+import Modal from './components/interface/Modal/Modal';
+import ModalClose from './components/interface/Modal/ModalClose';
+import ModalContent from './components/interface/Modal/ModalContent';
+import ModalFooter from './components/interface/Modal/ModalFooter';
+import ModalTitle from './components/interface/Modal/ModalTitle';
+import Pagination from './components/interface/Pagination/Pagination';
+import PaginationItem from './components/interface/Pagination/PaginationItem';
+import Radio from './components/interface/Radio/Radio';
+import RadioGroup from './components/interface/Radio/RadioGroup';
+import SearchBar from './components/interface/SearchBar/SearchBar';
+import Select from './components/interface/Select/Select';
+import SideMenu from './components/interface/SideMenu/SideMenu';
+import SideMenuLink from './components/interface/SideMenu/SideMenuLink';
+import SideMenuItem from './components/interface/SideMenu/SideMenuItem';
+import Skiplinks from './components/interface/Skiplinks/Skiplinks';
+import SkiplinkItem from './components/interface/Skiplinks/SkiplinkItem';
+import Table from './components/interface/Table/Table';
+import SimpleTable from './components/interface/Table/SimpleTable';
+import Tabs from './components/interface/Tabs/Tabs';
+import Tab from './components/interface/Tabs/Tab';
+import Tag from './components/interface/Tag/Tag';
+import TagGroup from './components/interface/Tag/TagGroup';
+import TextInput from './components/interface/TextInput/TextInput';
+import Tile from './components/interface/Tile/Tile';
+import TileImage from './components/interface/Tile/TileImage';
+import TileBody from './components/interface/Tile/TileBody';
+
 import '@gouvfr/dsfr/dist/css/core.min.css';
 
 export {
@@ -49,7 +79,7 @@ export {
   Breadcrumb, BreadcrumbItem,
   Button,
   Callout, CalloutTitle, CalloutText,
-  Links,
+  Link,
   Card, CardDescription, CardDetail, CardImage, CardTitle,
   Checkbox, CheckboxGroup,
   Col, Row, Container,
@@ -57,4 +87,9 @@ export {
   Footer, FooterTopCategory, FooterBody, FooterBottom, FooterLink,
   FooterCopy, FooterPartners, FooterTop, FooterPartnersTitle, FooterPartnersLogo,
   HeaderNav, NavSubItem, NavItem, Service, ToolItemGroup, Tool, Header, HeaderBody, ToolItem,
+  Highlight, MediaVideo, MediaImage, Modal, ModalClose, ModalContent, ModalFooter, ModalTitle,
+  Pagination, PaginationItem, Radio, RadioGroup, SearchBar, Select,
+  SideMenu, SideMenuItem, SideMenuLink,
+  Skiplinks, SkiplinkItem, Table, SimpleTable, Tab, Tabs, Tag, TagGroup,
+  TextInput, Tile, TileBody, TileImage,
 };

@@ -39,7 +39,6 @@ describe('<Tab />', () => {
           icon={initProps.icon}
           activeTab={initProps.activeTab}
           iconPosition={initProps.iconPosition}
-          setActiveTab={initProps.setActiveTab}
           setHeight={initProps.setHeight}
         >
           {initProps.children}
@@ -52,13 +51,6 @@ describe('<Tab />', () => {
   it('has --selected class', () => {
     const component = wrapper({ ...initProps });
     expect(component.find('.rf-tabs__panel').hasClass('rf-tabs__panel--selected')).toBeTruthy();
-  });
-
-  test('onClick setActiveTab', () => {
-    const mockSetActiveTab = jest.fn();
-    const component = wrapper({ ...initProps, setActiveTab: mockSetActiveTab });
-    component.find('button').simulate('click');
-    expect(mockSetActiveTab).toHaveBeenCalledWith(initProps.index);
   });
 
   test('on load setHeight', () => {

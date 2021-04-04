@@ -9,18 +9,17 @@ const ToolItemGroup = ({ children, className }) => {
   const [shortcutListElement, setShortcutListElement] = useState();
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
-    setShortcutListElement(document.querySelector('.rf-shortcuts__list'));
+    setShortcutListElement(document.querySelector('.rf-nav .rf-shortcuts__list'));
   }, [shortcutClassName, setShortcutListElement]);
+
   return (
     <>
       {isMobile && shortcutListElement && createPortal(children, shortcutListElement)}
-      {!isMobile && (
-        <div className={classNames(className, 'rf-shortcuts')}>
-          <ul className="rf-shortcuts__list">
-            {children}
-          </ul>
-        </div>
-      )}
+      <div className={classNames(className, 'rf-shortcuts')}>
+        <ul className="rf-shortcuts__list">
+          {children}
+        </ul>
+      </div>
     </>
   );
 };

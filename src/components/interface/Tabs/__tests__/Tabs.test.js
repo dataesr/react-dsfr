@@ -19,7 +19,9 @@ describe('<Tabs />', () => {
       <Tabs
         className={initProps.className}
         scheme={initProps.scheme}
+        defaultActiveTab={1}
       >
+        {initProps.children}
         {initProps.children}
       </Tabs>,
     );
@@ -33,7 +35,8 @@ describe('<Tabs />', () => {
     const component = renderer
       .create(
         <Tabs scheme="soft-blue-soft">
-          <Tab label="Label">Tab #1</Tab>
+          <Tab label="Label1">Tab #1</Tab>
+          <Tab label="Label2">Tab #2</Tab>
         </Tabs>,
       )
       .toJSON();
@@ -46,8 +49,8 @@ describe('<Tabs />', () => {
 
   it('should call setHeight', () => {
     const setHeight = jest.fn();
-    const useStateSpy = jest.spyOn(React, 'useState');
-    useStateSpy.mockImplementation((contentTabHeight) => [contentTabHeight, setHeight]);
+    const useState = jest.spyOn(React, 'useState');
+    useState.mockImplementation((contentTabHeight) => [contentTabHeight, setHeight]);
     expect(setHeight).toBeTruthy();
   });
 });

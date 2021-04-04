@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Link from '../Links';
+import Link from '../Link';
 
 const BreadcrumbItem = ({ className, children, href }) => {
   const _className = classNames(

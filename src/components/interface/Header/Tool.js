@@ -2,35 +2,40 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import { deepFilter, deepForEach } from 'react-children-utilities';
 import HeaderContext from './headerContext';
 
 const Tool = ({
   children, className, buttonClose,
 }) => {
+  const searchBar = deepFilter(children, (child) => child.props && !!child.props.onSearch);
+  let toolItemGroup = null;
+  deepForEach(children, (child) => {
+    if (child.type && child.type.name === 'ToolItemGroup') toolItemGroup = child;
+  });
   const {
-    isOpenSearch, onOpenSearch, isMobile,
+    isOpenSearch, onOpenSearch,
   } = useContext(HeaderContext);
-  const _className = classNames('rf-header__tools', {
-    'rf-header__popin': isMobile,
-    'rf-header__popin--expanded': isOpenSearch,
+  const _className = classNames('rf-header__tools rf-modal', {
+    'rf-modal--opened': isOpenSearch,
   }, className);
   return (
     <div
-      id={isMobile ? 'header-tools-popin' : ''}
       className={_className}
     >
-      {children}
       {isOpenSearch && (
       <button
         onClick={onOpenSearch}
         type="button"
-        className="rf-btn rf-fi-close-line rf-btn--icon-right rf-btn--sm"
+        className="rf-link--close rf-link"
         title={buttonClose}
         aria-controls="header-tools-popin"
       >
         {buttonClose}
       </button>
       )}
+      {!isOpenSearch && toolItemGroup}
+      {searchBar}
     </div>
   );
 };

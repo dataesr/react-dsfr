@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Links';
+import Link from '../Link';
 
 /**
  *

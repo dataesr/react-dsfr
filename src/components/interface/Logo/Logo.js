@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import Link from '../Links';
+import Link from '../Link';
 
 import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *
- * @visibleName Logo
+ * @visibleName Bloc-marque
  */
 const Logo = ({
   children, href, className, splitCharacter, hrefTitle,

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabButton /> should render TabButton properly 1`] = `
+<li
+  className="my-class"
+>
+  <button
+    aria-controls="rf-tabpanel-0"
+    aria-selected="true"
+    className="rf-tabs__tab rf-tabs__tab--icon-left"
+    onClick={[Function]}
+    role="tab"
+    tabIndex="0"
+    type="button"
+  >
+    Label #1
+  </button>
+</li>
+`;

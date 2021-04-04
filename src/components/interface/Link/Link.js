@@ -7,44 +7,36 @@ import '@gouvfr/dsfr/dist/css/links.min.css';
 /**
  * Navigation
  *
- * @visibleName Links
+ * @visibleName Link
  */
-const Links = ({
-  children,
-  href,
-  title,
-  target,
-  isSimple,
-  icon,
-  className,
-  iconPosition,
-  as,
+const Link = ({
+  children, href, title, target, isSimple, icon, className, iconPosition, as,
 }) => {
   const _className = classNames(icon, className, {
     'rf-link': isSimple,
     'rf-link--icon-left': !isSimple && icon,
-    [`rf-link--icon-${iconPosition}`]:
-      iconPosition && isSimple && icon && children,
+    [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
 
   const asLink = as ? cloneElement(as, { className: _className }) : null;
 
-  return as ? (
-    <>{asLink}</>
-  ) : (
-    <a
-      href={href}
-      title={title || undefined}
-      target={target}
-      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-      className={_className || undefined}
-    >
-      {children}
-    </a>
+  return (
+    as ? <>{asLink}</>
+      : (
+        <a
+          href={href}
+          title={title || undefined}
+          target={target}
+          rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
+          className={_className || undefined}
+        >
+          {children}
+        </a>
+      )
   );
 };
 
-Links.defaultProps = {
+Link.defaultProps = {
   className: '',
   title: '',
   target: '_self',
@@ -56,7 +48,7 @@ Links.defaultProps = {
   children: '',
 };
 
-Links.propTypes = {
+Link.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -76,4 +68,4 @@ Links.propTypes = {
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };
 
-export default Links;
+export default Link;

@@ -2,7 +2,7 @@ L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouven
 
 ### Header avec barre de recherche, raccourcis outils et navigation
 
-```jsx
+```jsx noeditor
 import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, ToolItemGroup } from '.';
 import SearchBar from '../SearchBar/index';
 import Logo from '../Logo';
@@ -17,8 +17,8 @@ import Logo from '../Logo';
             buttonClose='fermer'
         >
             <ToolItemGroup>
-                <ToolItem title='Se connecter' icon='rf-fi-lock-line' link='/path'></ToolItem>
-                <ToolItem title='Créer un espace' icon='rf-fi-add-circle-line' link='/path'></ToolItem>
+                <ToolItem icon='rf-fi-lock-line' link='/path'>Se connecter</ToolItem>
+                <ToolItem icon='rf-fi-add-circle-line' link='/path'>Créer un espace</ToolItem>
             </ToolItemGroup>
             <SearchBar
                 onSearch={() => {

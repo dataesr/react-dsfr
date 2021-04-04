@@ -1,7 +1,7 @@
 import Enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
-import Link from '../Links';
+import Link from '../Link';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -13,7 +13,7 @@ const initialProps = {
   children: 'test button',
 };
 
-describe('<Links />', () => {
+describe('<Link />', () => {
   it('renders correctly', () => {
     const component = renderer
       .create(

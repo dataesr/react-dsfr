@@ -43,7 +43,7 @@ describe('<Tool />', () => {
 
   it('should find rf-fi-close-line class when isOpenSearch is true', () => {
     wrapper(<Tool>Item #1</Tool>, { ...context });
-    expect(screen.getByRole('button')).toHaveClass('rf-fi-close-line');
+    expect(screen.getByRole('button')).toHaveClass('rf-link--close');
   });
 
   it('should call onOpenSearch on click', () => {

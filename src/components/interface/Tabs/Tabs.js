@@ -1,10 +1,14 @@
-import classNames from 'classnames';
-import {
+import React, {
   cloneElement, useState, Children,
 } from 'react';
+
+import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { SCHEMES } from '../../../utils/constants';
+import TabButton from './TabButton';
+
+import '@gouvfr/dsfr/dist/css/tabs.min.css';
 
 const Tabs = ({
   className, children, defaultActiveTab, scheme,
@@ -12,17 +16,28 @@ const Tabs = ({
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
   const [contentTabHeight, setHeight] = useState(() => 500);
   const addProps = {
-    activeTab, setActiveTab, setHeight,
+    activeTab, setHeight,
   };
-  const elements = Children.toArray(children).map((child, index) => cloneElement(child, {
-    ...addProps, index, key: uuidv4(),
+  const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
+    ...addProps,
+    index,
+    key: uuidv4(),
   }));
+
   const _className = classNames('rf-tabs', className, { [`rf-scheme-${scheme}`]: scheme });
   return (
     <div className={_className} style={{ height: contentTabHeight }}>
       <ul className="rf-tabs__list" role="tablist">
-        {elements}
+        {tabsPanel.map((element, index) => (
+          <TabButton
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            index={index}
+            label={element.props.label}
+          />
+        ))}
       </ul>
+      {tabsPanel}
     </div>
   );
 };
