@@ -19,7 +19,7 @@ const Tile = ({
   children,
   scheme,
 }) => {
-  const _className = classNames('rf-tile', {
+  const _className = classNames('rf-tile rf-enlarge-link', {
     'rf-tile--horizontal': horizontal,
     'rf-tile--horizontal-md': !horizontal && horizontalMedium,
     'rf-tile--vertical-md': verticalMedium && horizontal,

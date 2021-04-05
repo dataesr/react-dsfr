@@ -18,12 +18,9 @@ import { Modal, ModalTitle, ModalContent, ModalFooter } from '.';
 const [isOpen, setIsOpen] = useState(false);
 
 const buttonRef = useRef();
-const hide = () => {
-  setIsOpen(false)
-};
 
 <>
-  <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
+  <Button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</Button>
   <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
     <ModalTitle icon>I'm a title</ModalTitle>
     <ModalContent>blah blah</ModalContent>
@@ -48,7 +45,7 @@ const hide = () => {
 };
 
 <>
-  <button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</button>
+  <Button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</Button>
   <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
     <ModalClose hide={hide} title="Close the modal window">Close</ModalClose>
     <ModalTitle icon>I'm a title</ModalTitle>

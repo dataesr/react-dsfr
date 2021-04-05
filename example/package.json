@@ -10,7 +10,7 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
-    "react": "17.0.1",
+    "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "@dataesr/react-rfds": "link:..",
     "react-scripts": "link:../node_modules/react-scripts"

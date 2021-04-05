@@ -14,7 +14,7 @@ const TileImage = ({
   alt,
   className,
 }) => (
-  <div className={classNames('rf-tile__img-wrap', className)}>
+  <div className={classNames('rf-tile__img', className)}>
     <img
       src={src}
       title={title}

@@ -7,15 +7,15 @@
 import { Tile, TileBody, TileImage } from '.';
 
 <Tile horizontal={true} verticalMedium={true}>
-    <TileImage
-        alt="un petit carré"
-        src="https://place-hold.it/80x80">
-    </TileImage>
     <TileBody
         title="Tuile horizontale par défaut"
         description="Et verticale en desktop"
         linkHref='/myPath'>
     </TileBody>
+    <TileImage
+        alt="un petit carré"
+        src="https://place-hold.it/80x80">
+    </TileImage>
 </Tile>
 ```
 
@@ -25,15 +25,15 @@ import { Tile, TileBody, TileImage } from '.';
 import { Tile, TileBody, TileImage } from '.';
 
 <Tile horizontalMedium={true} scheme="soft-orange-dark">
-    <TileImage
-        alt="un petit carré"
-        src="https://place-hold.it/80x80">
-    </TileImage>
     <TileBody
         title="Tuile verticale par défaut"
         description="Et horizontale en desktop"
         linkHref='/myPath'>
     </TileBody>
+    <TileImage
+        alt="un petit carré"
+        src="https://place-hold.it/80x80">
+    </TileImage>
 </Tile>
 ```
 
@@ -50,15 +50,15 @@ import { Tile, TileBody, TileImage } from '.';
     <Row gutter={true}>
         <Col>
             <Tile>
-                <TileImage
-                    alt="un petit carré"
-                    src="https://place-hold.it/80x80">
-                </TileImage>
                 <TileBody
                     titleAs="h5"
                     title="Ceci est mon titre #1"
                     linkHref='/myPath'>
                 </TileBody>
+                <TileImage
+                    alt="un petit carré"
+                    src="https://place-hold.it/80x80">
+                </TileImage>
             </Tile>
         </Col>
         <Col>
@@ -73,16 +73,16 @@ import { Tile, TileBody, TileImage } from '.';
         </Col>
         <Col>
             <Tile>
-                <TileImage
-                    alt="un petit carré"
-                    src="https://place-hold.it/80x80"
-                    linkHref='/myPath'>
-                </TileImage>
                 <TileBody
                     titleAs="h5"
                     title="Ceci est mon titre #3"
                     linkHref='/myPath'>
                 </TileBody>
+                <TileImage
+                    alt="un petit carré"
+                    src="https://place-hold.it/80x80"
+                    linkHref='/myPath'>
+                </TileImage>
             </Tile>
         </Col>
     </Row>

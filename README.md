@@ -14,6 +14,7 @@
 
 * node >=12.13
 * npm >=6.14
+* React >=17.01
 
 ## Install project
 
@@ -24,7 +25,7 @@ $ yarn
 ## Install library
 
 ```bash
-$ yarn install @dataesr/react-rfds
+$ yarn add @dataesr/react-rfds
 ```
 
 ## Available scripts
@@ -35,7 +36,6 @@ $ yarn install @dataesr/react-rfds
 
 ```bash
 $ cd example
-
 $ yarn start
 ```
 
@@ -43,9 +43,10 @@ Visit [http://localhost:3000](http://localhost:3000).
 
 ### Npm package
 
-#### Generate dist folder
+#### Generate and watch dist folder
 
 ```bash
+$ yarn 
 $ yarn start
 ```
 

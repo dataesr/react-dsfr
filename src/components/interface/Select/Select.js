@@ -75,7 +75,7 @@ Select.defaultProps = {
   id: null,
   label: '',
   message: '',
-  messageType: '',
+  messageType: 'valid',
   name: null,
   onChange: () => {},
   selected: '',
