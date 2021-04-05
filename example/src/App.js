@@ -40,7 +40,7 @@ import {
     Highlight,
     MediaVideo,
     MediaImage,
-} from 'react-rfds';
+} from '@dataesr/react-rfds';
 
 const App = () => {
     return <>

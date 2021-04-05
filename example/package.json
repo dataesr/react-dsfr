@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "17.0.1",
     "react-dom": "link:../node_modules/react-dom",
-    "react-rfds": "link:..",
+    "@dataesr/react-rfds": "link:..",
     "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {

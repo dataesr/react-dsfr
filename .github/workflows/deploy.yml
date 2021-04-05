@@ -1,4 +1,4 @@
-name: publish react-rfds package and deploy docs on success
+name: publish @dataesr/react-rfds package and deploy docs on success
 
 on:
   push:

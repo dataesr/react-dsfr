@@ -30,6 +30,7 @@ const Tabs = ({
       <ul className="rf-tabs__list" role="tablist">
         {tabsPanel.map((element, index) => (
           <TabButton
+            key={uuidv4()}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             index={index}

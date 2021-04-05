@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  title: 'react-rfds',
+  title: '@dataesr/react-rfds',
   styleguideDir: 'build',
   skipComponentsWithoutExample: true,
   pagePerSection: true,
@@ -30,7 +30,7 @@ module.exports = {
   },
   sections: [
     {
-      name: 'Pour commencer',
+      name: '',
       content: './README.md',
       sectionDepth: 0,
     }, {
