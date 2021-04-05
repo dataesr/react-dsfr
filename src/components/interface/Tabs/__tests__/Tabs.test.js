@@ -9,7 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Tabs />', () => {
   const initProps = {
     className: 'my-class',
-    children: 'Tabinouze',
     scheme: 'soft-yellow-medium',
   };
   let wrapper;
@@ -21,8 +20,7 @@ describe('<Tabs />', () => {
         scheme={initProps.scheme}
         defaultActiveTab={1}
       >
-        {initProps.children}
-        {initProps.children}
+        <Tab label="Label">Tab</Tab>
       </Tabs>,
     );
   });
