@@ -47,7 +47,7 @@ import {
     Skiplinks, SkiplinkItem, SimpleTable,
     Tag, TagGroup, TextInput,
     Tile, TileImage, TileBody,
-} from '@dataesr/react-rfds';
+} from '@dataesr/react-dsfr';
 
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);

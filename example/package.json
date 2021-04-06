@@ -1,5 +1,5 @@
 {
-  "name": "react-rfds-example",
+  "name": "react-dsfr-example",
   "homepage": ".",
   "version": "0.0.0",
   "private": true,
@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "@dataesr/react-rfds": "link:..",
+    "@dataesr/react-dsfr": "link:..",
     "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {

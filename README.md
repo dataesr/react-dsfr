@@ -1,14 +1,12 @@
-# @dataesr/react-rfds
+# @dataesr/react-dsfr
 
-> :warning: Project is still beta version :hammer:
+:warning: Project is still beta version :hammer:
 
-> Non-official React version of the official @gouvfr/dsfr Design System.
+[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml)
 
-[![NPM](https://img.shields.io/npm/v/react-rfds.svg)](https://www.npmjs.com/package/react-rfds) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-dsfr.svg)](https://www.npmjs.com/package/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476)
-
-[![Build & Test](https://github.com/dataesr/react-rfds/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-rfds/actions/workflows/check.yml)
+> Non-official React version of the official @gouvfr/dsfr Design System. This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476)
 
 ## Requirements
 
@@ -25,7 +23,7 @@ $ yarn
 ## Install library
 
 ```bash
-$ yarn add @dataesr/react-rfds
+$ yarn add @dataesr/react-dsfr
 ```
 
 ## Available scripts

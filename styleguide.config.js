@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  title: '@dataesr/react-rfds',
+  title: '@dataesr/react-dsfr',
   styleguideDir: 'build',
   skipComponentsWithoutExample: true,
   pagePerSection: true,
@@ -17,7 +17,7 @@ module.exports = {
       base: "'Marianne', sans-serif",
     },
   },
-  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-rfds/master/favicon.ico' },
+  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-dsfr/master/favicon.ico' },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
   },
@@ -26,7 +26,7 @@ module.exports = {
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js');
-    return `import { ${name} } from '@dataesr/react-rfds';`;
+    return `import { ${name} } from '@dataesr/react-dsfr';`;
   },
   sections: [
     {

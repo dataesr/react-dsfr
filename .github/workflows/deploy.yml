@@ -1,4 +1,4 @@
-name: publish @dataesr/react-rfds package and deploy docs on success
+name: publish @dataesr/react-dsfr package and deploy docs on success
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
       - run: npm install
       - run: git config --global user.name "dataesr"
       - run: git config --global user.email "frederic+dataesr@olland.me"
-      - run: git remote set-url origin https://github.com/dataesr/react-rfds.git
+      - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
       - run: npm run deploy
         env:
           GH_PAT: ${{secrets.GH_PAT}}
