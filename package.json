@@ -1,10 +1,10 @@
 {
-  "name": "@dataesr/react-rfds",
+  "name": "@dataesr/react-dsfr",
   "version": "0.1.0",
   "private": false,
   "description": "A React implementation of the french government design system.",
   "license": "MIT",
-  "repository": "dataesr/react-rfds",
+  "repository": "dataesr/react-dsfr",
   "main": "dist/index.js",
   "source": "src/index.js",
   "keywords": [
@@ -75,7 +75,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "build:rollup": "rollup -c",
     "guide:predeploy": "styleguidist build",
-    "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-rfds.git",
+    "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-dsfr.git",
     "guide": "npx styleguidist server",
     "test:dev": "react-scripts test --watchAll",
     "test:dev:coverage": "react-scripts test  --watchAll --coverage",
