@@ -2,9 +2,6 @@
 
 exports[`<Tool /> renders correctly 1`] = `
 <div
-  className="rf-header__tools"
-  id=""
->
-  Item #1
-</div>
+  className="rf-header__tools rf-modal"
+/>
 `;

@@ -5,7 +5,7 @@ exports[`<NavItem /> renders correctly 1`] = `
   className="rf-nav__item"
 >
   <a
-    className="rf-link"
+    className="rf-nav__link"
     href="link"
     target="_self"
   >

@@ -1,24 +1,79 @@
+# @dataesr/react-rfds
+
+> :warning: Project is still beta version :hammer:
+
+> Non-official React version of the official @gouvfr/dsfr Design System.
+
+[![NPM](https://img.shields.io/npm/v/react-rfds.svg)](https://www.npmjs.com/package/react-rfds) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+> This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476)
+
 [![Build & Test](https://github.com/dataesr/react-rfds/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-rfds/actions/workflows/check.yml)
 
-# Non-official React version of the official @gouvfr Design System.
+## Requirements
 
-This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476). For now those projects are still beta versions :hammer:
+* node >=12.13
+* npm >=6.14
+* React >=17.01
 
-## Available scripts for development
+## Install project
 
-### `yarn guide`
+```bash
+$ yarn
+```
 
-A complete style guide is developed with [react-styleguidist](https://react-styleguidist.js.org/) and visible on  [http://localhost:6060](http://localhost:6060).
+## Install library
 
-Documentation of each component of the project is visible in /docs
+```bash
+$ yarn add @dataesr/react-rfds
+```
 
-### `yarn test:dev`
+## Available scripts
 
-Run all tests using react-scripts with watcher option
+### Library usage
 
-### `yarn test:debug`
+#### Example page
 
-`about:inspect` in chrome
+```bash
+$ cd example
+$ yarn start
+```
 
-[debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
+Visit [http://localhost:3000](http://localhost:3000).
 
+### Npm package
+
+#### Generate and watch dist folder
+
+```bash
+$ yarn 
+$ yarn start
+```
+
+
+### Styleguide
+
+Complete style guide is developed with [react-styleguidist](https://react-styleguidist.js.org/).
+
+```bash
+$ yarn guide
+```
+
+Visit [http://localhost:6060](http://localhost:6060).
+
+### Tests
+
+#### Run all tests using react-scripts with watcher option
+```bash
+$ yarn test:dev
+```
+
+#### In Chrome
+
+```bash
+$ yarn test:debug
+```
+
+Access `about:inspect`
+
+See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)

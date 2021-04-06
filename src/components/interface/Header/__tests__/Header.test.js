@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   Header, HeaderBody, Service, Tool, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
 } from '../index';
-import BrandLogo from '../../BrandLogo';
+import Logo from '../../Logo';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -23,7 +23,7 @@ describe('<Header />', () => {
       .create(
         <Header>
           <HeaderBody>
-            <BrandLogo splitCharacter={10}>République française</BrandLogo>
+            <Logo splitCharacter={10}>République française</Logo>
             <Service
               title="Nom du service"
               description="baseline - précisions sur l‘organisation"
@@ -32,8 +32,8 @@ describe('<Header />', () => {
               buttonClose="fermer"
             >
               <ToolItemGroup>
-                <ToolItem title="Se connecter" icon="rf-fi-lock-line" link="/path" />
-                <ToolItem title="Créer un espace" icon="rf-fi-add-circle-line" link="/path" />
+                <ToolItem icon="rf-fi-lock-line" link="/path">Se connecter</ToolItem>
+                <ToolItem icon="rf-fi-add-circle-line" link="/path">Créer un espace</ToolItem>
               </ToolItemGroup>
             </Tool>
           </HeaderBody>

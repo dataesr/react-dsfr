@@ -1,6 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/tags.min.css';
 
 /**
  * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.

@@ -38,9 +38,9 @@ describe('<HeaderNav />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should have rf-header__popin--expanded class when isOpenNav is true', () => {
+  it('should have rf-link--close class when isOpenNav is true', () => {
     wrapper(<HeaderNav><li>nav #1</li></HeaderNav>, { ...context, isOpenNav: true });
-    expect(screen.getByRole('button')).toHaveClass('rf-fi-close-line');
+    expect(screen.getByRole('button')).toHaveClass('rf-link--close');
   });
 
   it('should call onOpenNav', () => {

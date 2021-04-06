@@ -1,7 +1,11 @@
-import { Children, cloneElement } from 'react';
+import React, { Children, cloneElement } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/cards.min.css';
+
 /**
  * Carte
  *

@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -13,7 +14,7 @@ const TileImage = ({
   alt,
   className,
 }) => (
-  <div className={classNames('rf-tile__img-wrap', className)}>
+  <div className={classNames('rf-tile__img', className)}>
     <img
       src={src}
       title={title}

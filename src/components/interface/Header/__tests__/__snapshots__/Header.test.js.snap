@@ -30,31 +30,40 @@ exports[`<Header /> renders correctly 1`] = `
             
           </span>
         </a>
+        <div
+          className="rf-header__service"
+        >
+          <div
+            className="rf-service"
+          >
+            <a
+              className="rf-header__service-title"
+              href="/"
+              target="_self"
+              title="Nom du service"
+            >
+              Nom du service
+            </a>
+            <p
+              className="rf-header__service-tagline"
+            >
+              baseline - précisions sur l‘organisation
+            </p>
+          </div>
+        </div>
       </div>
       <div
         className="rf-header__navbar"
       >
-        <div
-          className="rf-service"
-        >
-          <a
-            className="rf-service__title"
-            href="/"
-            target="_self"
-            title="Nom du service"
-          >
-            Nom du service
-          </a>
-          <p
-            className="rf-service__tagline"
-          >
-            baseline - précisions sur l‘organisation
-          </p>
-        </div>
+        <button
+          aria-controls="header-nav-popin"
+          className="rf-btn rf-fi-menu-fill rf-btn--icon"
+          onClick={[Function]}
+          type="button"
+        />
       </div>
       <div
-        className="rf-header__tools"
-        id=""
+        className="rf-header__tools rf-modal"
       >
         <div
           className="rf-shortcuts"
@@ -88,16 +97,21 @@ exports[`<Header /> renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="rf-container"
-  >
     <nav
       aria-label="Menu principal"
-      className="rf-nav"
+      className="rf-nav rf-modal"
       id="header-nav-popin"
       role="navigation"
     >
+      <button
+        aria-controls="header-nav-popin"
+        className="rf-link--close rf-link"
+        onClick={[Function]}
+        title="Fermer"
+        type="button"
+      >
+        Fermer
+      </button>
       <ul
         className="rf-nav__list"
       >
@@ -105,7 +119,7 @@ exports[`<Header /> renders correctly 1`] = `
           className="rf-nav__item"
         >
           <a
-            className="rf-link"
+            className="rf-nav__link"
             href="/"
             target="_self"
           >
@@ -118,15 +132,15 @@ exports[`<Header /> renders correctly 1`] = `
           <button
             aria-controls="rf-nav-Resources"
             aria-expanded="false"
-            className="rf-btn"
+            className="rf-nav__btn"
             onClick={[Function]}
             type="button"
           >
             Resources
           </button>
           <div
-            className="rf-menu rf-collapse"
-            id="rf-nav-subitem-yyyyyy"
+            className="rf-menu rf-collapse rf-menu rf-collapse"
+            id="rf-nav-subitem-undefined"
             style={
               Object {
                 "--collapse": "-0pxpx",

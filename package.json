@@ -4,7 +4,8 @@
   "private": false,
   "description": "A React implementation of the french government design system.",
   "license": "MIT",
-  "main": "dist/index.esm.js",
+  "repository": "dataesr/react-rfds",
+  "main": "dist/index.js",
   "source": "src/index.js",
   "keywords": [
     "react",
@@ -12,16 +13,22 @@
     "design-system",
     "gouvfr"
   ],
+  "module": "dist/index.modern.js",
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
-    "@gouvfr/all": "^0.5.3",
+    "@gouvfr/dsfr": "^0.6.0",
     "classnames": "^2.2.6",
     "html-react-parser": "^1.2.4",
     "react-children-utilities": "2.2.4",
-    "react-router-dom": "^5.2.0",
+    "prop-types": "^15.7.2",
+    "react-dom": "^17.0.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/runtime": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-eslint": "^8.0.1",
@@ -30,15 +37,19 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^13.0.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.1",
     "gh-pages": "^3.1.0",
     "install": "^0.13.0",
     "jest-dom": "^4.0.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "microbundle-crl": "^0.13.11",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-styleguidist": "^11.1.5",
     "react-test-renderer": "^17.0.1",
@@ -50,14 +61,20 @@
     "web-vitals": "^1.0.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2"
+    "react": "^17.0.2"
   },
   "scripts": {
-    "build": "rollup -c",
-    "predeploy": "styleguidist build",
+    "build": "microbundle-crl --no-compress --format modern,cjs --jsxFragment React.Fragment",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --jsxFragment React.Fragment",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "build:rollup": "rollup -c",
+    "guide:predeploy": "styleguidist build",
     "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-rfds.git",
     "guide": "npx styleguidist server",
     "test:dev": "react-scripts test --watchAll",
@@ -66,9 +83,12 @@
     "test:nowatch": "react-scripts test --watchAll=false",
     "test:coverage": "CI=true npm test -- --coverage"
   },
+  "files": [
+    "dist"
+  ],
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-children-utilities|@gouvfr/all)/)"
+      "node_modules/(?!(react-children-utilities|@gouvfr/dsfr)/)"
     ]
   },
   "eslintConfig": {

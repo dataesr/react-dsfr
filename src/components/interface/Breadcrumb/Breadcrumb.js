@@ -1,8 +1,10 @@
-import {
+import React, {
   useState, useEffect, useRef, Children,
 } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+import '@gouvfr/dsfr/dist/css/breadcrumb.min.css';
 
 /**
  * @visibleName Breadcrumb

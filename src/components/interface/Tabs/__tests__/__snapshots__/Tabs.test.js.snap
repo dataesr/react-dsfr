@@ -25,22 +25,40 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
         tabIndex="0"
         type="button"
       >
-        Label
+        Label1
       </button>
-      <div
-        className="rf-tabs__panel rf-tabs__panel--selected"
-        id="rf-tabpanel-0"
-        role="tabpanel"
-        style={
-          Object {
-            "transform": "translate(0%)",
-          }
-        }
+    </li>
+    <li
+      className=""
+    >
+      <button
+        aria-controls="rf-tabpanel-1"
+        aria-selected="false"
+        className="rf-tabs__tab rf-tabs__tab--icon-left"
+        onClick={[Function]}
+        role="tab"
         tabIndex="0"
+        type="button"
       >
-        Tab #1
-      </div>
+        Label2
+      </button>
     </li>
   </ul>
+  <div
+    className="rf-tabs__panel rf-tabs__panel--selected"
+    id="rf-tabpanel-0"
+    role="tabpanel"
+    tabIndex="0"
+  >
+    Tab #1
+  </div>
+  <div
+    className="rf-tabs__panel "
+    id="rf-tabpanel-1"
+    role="tabpanel"
+    tabIndex="0"
+  >
+    Tab #2
+  </div>
 </div>
 `;

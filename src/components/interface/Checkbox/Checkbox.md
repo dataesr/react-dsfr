@@ -5,8 +5,6 @@ Elles sont utilisées pour effectuer des sélections multiples (de 0 à N élém
 La case à cocher peut être utilisée seule ou en liste. Évitez les listes de plus de 5 items et lorsque vous souhaitez contraindre le choix à un seul élément - utiliser les boutons radios 🔗 
 
 ```jsx
-import { useState } from 'react';
-
 <Checkbox
   value="value-1"
   onChange={() => {}}
@@ -16,8 +14,6 @@ import { useState } from 'react';
 
 L'état inactif indique que utilisateur ne peux pas interagir avec l'élément.
 ```jsx
-import { useState } from 'react';
-
 <Checkbox
   value="value-1"
   onChange={() => {}}
@@ -28,8 +24,6 @@ import { useState } from 'react';
 
 Texte sous le libellé de chaque case à cocher, afin d’apporter une précision à chaque élément.
 ```jsx
-import { useState } from 'react';
-
 <Checkbox
   value="value-1"
   onChange={() => {}}
@@ -41,8 +35,6 @@ import { useState } from 'react';
 ## Etat d’erreur
 Sur une case à cocher simple (choix binaire), l'état d’erreur est signalé par le changement de couleur de la bordure - qui devient rouge - ,  et par l’affichage un message d’erreur apparait en-dessous du composant  (cf. couleurs fonctionnelles 🔗 : le rouge est la couleur de l’état erreur). 
 ```jsx
-import { useState } from 'react';
-
 <Checkbox
   value="value-1"
   onChange={() => {}}
@@ -58,8 +50,6 @@ La taille par défaut est de 24px (taille Medium - MD) , ce qui permet optimiser
 
 Une taille ‘small’ (SM) de 16 px est également disponible. Il s’agit de la taille standard proposé par les navigateurs. Attention toutefois à laisser une zone de clic suffisante (notamment pour le tactile ou une zone de 44 px de hauteur est fortement conseillée) cf. proposition de fieldset.
 ```jsx
-import { useState } from 'react';
-
 <Checkbox
   value="value-1"
   onChange={() => {}}

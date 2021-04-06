@@ -1,6 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/tiles.min.css';
 
 /**
  * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
@@ -16,7 +19,7 @@ const Tile = ({
   children,
   scheme,
 }) => {
-  const _className = classNames('rf-tile', {
+  const _className = classNames('rf-tile rf-enlarge-link', {
     'rf-tile--horizontal': horizontal,
     'rf-tile--horizontal-md': !horizontal && horizontalMedium,
     'rf-tile--vertical-md': verticalMedium && horizontal,

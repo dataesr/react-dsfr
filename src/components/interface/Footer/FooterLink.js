@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link';
@@ -11,6 +12,7 @@ const FooterLink = ({
     </Link>
   </li>
 );
+
 FooterLink.propTypes = {
   children: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
