@@ -14,54 +14,52 @@
 * npm >=6.14
 * React >=17.01
 
-## Install project
-
-```bash
-$ yarn
-```
-
-## Install library
+## Installation
 
 ```bash
 $ yarn add @dataesr/react-dsfr
 ```
 
-## Available scripts
+## Library usage
 
-### Library usage
-
-#### Example page
+### Styleguide
 
 ```bash
-$ cd example
-$ yarn start
+$ yarn guide
 ```
+Visit [http://localhost:6060](http://localhost:6060).
 
-Visit [http://localhost:3000](http://localhost:3000).
+The complete styleguide is available online [https://dataesr.github.io/react-dsfr/](https://dataesr.github.io/react-dsfr/).
 
 ### Npm package
 
-#### Generate and watch dist folder
+#### Generate dist folder
 
+```bash
+$ yarn build
+```
+
+#### Generate and watch dist folder
 ```bash
 $ yarn 
 $ yarn start
 ```
 
+#### Example page
 
-### Styleguide
-
-Complete style guide is developed with [react-styleguidist](https://react-styleguidist.js.org/).
+> A playground to test components
 
 ```bash
-$ yarn guide
+$ cd example/
+$ yarn start
 ```
 
-Visit [http://localhost:6060](http://localhost:6060).
+Visit [http://localhost:3000](http://localhost:3000).
 
 ### Tests
 
 #### Run all tests using react-scripts with watcher option
+
 ```bash
 $ yarn test:dev
 ```
