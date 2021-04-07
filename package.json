@@ -63,7 +63,7 @@
     "react": "^17.0.2"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs --jsxFragment React.Fragment",
+    "build": "microbundle-crl --compress --format modern,cjs --jsxFragment React.Fragment",
     "build:rollup": "rollup -c",
     "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-dsfr.git",
     "guide": "npx styleguidist server",

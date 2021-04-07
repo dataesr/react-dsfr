@@ -24,5 +24,4 @@ yarn-error.log*
 .idea
 
 # lock
-package-lock.json
 yarn.lock
