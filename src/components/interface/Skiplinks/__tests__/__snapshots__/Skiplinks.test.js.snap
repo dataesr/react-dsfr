@@ -18,7 +18,6 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
           class="rf-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au contenu
         </a>
@@ -30,7 +29,6 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
           class="rf-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au menu
         </a>
@@ -42,7 +40,6 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
           class="rf-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder à la recherche
         </a>
@@ -54,7 +51,6 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
           class="rf-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au footer
         </a>

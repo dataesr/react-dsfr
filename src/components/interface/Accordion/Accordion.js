@@ -1,6 +1,9 @@
-import { useState, Children, cloneElement } from 'react';
+import React, { useState, Children, cloneElement } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import '@gouvfr/dsfr/dist/css/accordions.min.css';
 
 /**
  * Condenser l'espace
@@ -24,15 +27,13 @@ const Accordion = ({ className, children, as }) => {
       id,
       key: id,
       onClick: expand,
-      isExpanded: (isExpanded === id),
+      isExpanded: isExpanded === id,
     });
   });
 
   return (
     <HtmlTag className={classNames(className)} data-testid="accordion-group">
-      <ul className="rf-accordions-group">
-        {childs}
-      </ul>
+      <ul className="rf-accordions-group">{childs}</ul>
     </HtmlTag>
   );
 };

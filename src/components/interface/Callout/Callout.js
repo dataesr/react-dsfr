@@ -1,6 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import '@gouvfr/dsfr/dist/css/callouts.min.css';
 
 /**
  * La mise en avant est une proposition de mise en page du contenu éditorial pour

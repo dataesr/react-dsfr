@@ -11,7 +11,9 @@ const initialProps = {
   horizontal: true,
   verticalMedium: true,
   title: 'title',
+  linkTitle: 'linkTitle',
   linkHref: '/path',
+  linkTarget: 'linkTarget',
   alt: '',
   src: '/src.png',
   description: 'description',
@@ -27,9 +29,11 @@ describe('<Tile />', () => {
           className={initialProps.className}
         >
           <TileBody
+            title={initialProps.title}
             linkHref={initialProps.linkHref}
             description={initialProps.description}
-            title={initialProps.title}
+            linkTitle={initialProps.linkTitle}
+            linkTarget={initialProps.linkTarget}
           />
           <TileImage
             alt={initialProps.alt}

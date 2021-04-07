@@ -2,7 +2,7 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="rf-tile rf-tile--horizontal my-class"
+  className="rf-tile rf-enlarge-link rf-tile--horizontal my-class"
 >
   <div
     className="rf-tile__body"
@@ -13,8 +13,8 @@ exports[`<Tile /> renders correctly 1`] = `
       <a
         className="rf-tile__link"
         href="/path"
-        target=""
-        title=""
+        target="linkTarget"
+        title="linkTitle"
       >
         title
       </a>
@@ -26,7 +26,7 @@ exports[`<Tile /> renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="rf-tile__img-wrap"
+    className="rf-tile__img"
   >
     <img
       alt=""

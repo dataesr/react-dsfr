@@ -1,9 +1,13 @@
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+
 import { deepForEach } from 'react-children-utilities';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
+
+import '@gouvfr/dsfr/dist/css/navigation.min.css';
+import '@gouvfr/dsfr/dist/css/header.min.css';
 
 const Header = ({
   children,
@@ -17,11 +21,7 @@ const Header = ({
   let isSearchBar = false;
   let isNavBar = false;
   let isNavTool = false;
-  const isMobile = width < 768;
-  const _classNameNav = classNames('rf-nav', {
-    'rf-header__popin': isMobile,
-    'rf-header__popin--expanded': openNav,
-  });
+  const isMobile = width < 992;
 
   deepForEach(children, (child) => {
     if (child.type.name === 'HeaderNav') {
@@ -50,34 +50,26 @@ const Header = ({
         className={classNames(className, 'rf-header')}
         role="banner"
       >
-        {children}
-        {isMobile && isNavTool && !isNavBar && (
         <div className="rf-container">
+          {children}
+          {isNavTool && !isNavBar && (
           <nav
-            className={_classNameNav}
+            className="rf-nav"
             role="navigation"
             aria-label="Menu principal"
-            id="header-nav-popin"
           >
-            {isMobile && (
-            <div className="rf-shortcuts">
-              <ul className="rf-shortcuts__list" />
-            </div>
-            )}
-            {isMobile && (
             <button
               onClick={() => setOpenNav(false)}
               type="button"
-              className="rf-btn rf-fi-close-line rf-btn--icon-right rf-btn--sm"
+              className="rf-link--close rf-link"
               title="Fermer"
               aria-controls="header-nav-popin"
             >
               Fermer
             </button>
-            )}
           </nav>
+          )}
         </div>
-        )}
       </header>
     </HeaderContext.Provider>
   );

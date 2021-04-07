@@ -1,12 +1,16 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
+import Link from '../Link';
+
+import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *
  * @visibleName Bloc-marque
  */
-const BrandLogo = ({
+const Logo = ({
   children, href, className, splitCharacter, hrefTitle,
 }) => {
   // TODO Better system to split
@@ -17,26 +21,27 @@ const BrandLogo = ({
       key={uuidv4()}
     />
   ) : ''), []);
+
   return (
-    <a
-      className={classNames('rf-logo', className)}
-      href={href}
+    <Link
       title={hrefTitle || children}
+      href={href}
+      className={classNames('rf-logo', className)}
     >
       <span className="rf-logo__title">
         {title}
       </span>
-    </a>
+    </Link>
   );
 };
 
-BrandLogo.defaultProps = {
+Logo.defaultProps = {
   href: '/',
   hrefTitle: '',
   splitCharacter: 12,
   className: '',
 };
-BrandLogo.propTypes = {
+Logo.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -51,4 +56,4 @@ BrandLogo.propTypes = {
   splitCharacter: PropTypes.number,
 };
 
-export default BrandLogo;
+export default Logo;

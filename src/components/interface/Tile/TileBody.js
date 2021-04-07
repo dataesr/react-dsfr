@@ -1,5 +1,7 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Link from '../Link';
 
 /**
  *
@@ -18,14 +20,14 @@ const TileBody = ({
   return (
     <div className={classNames('rf-tile__body', className)}>
       <HtmlTag className="rf-tile__title">
-        <a
+        <Link
           className="rf-tile__link"
-          href={linkHref}
           title={linkTitle}
-          target={linkTarget}
+          target={linkTarget || undefined}
+          href={linkHref}
         >
           {title}
-        </a>
+        </Link>
       </HtmlTag>
       {description && <p className="rf-tile__desc">{description}</p>}
     </div>

@@ -1,18 +1,16 @@
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+
 import Link from '../Link';
 
 const ToolItem = ({
-  icon, link, title, className,
+  icon, link, className, children,
 }) => (
-  <li className={classNames('rf-shortcuts__item', className)} key={title}>
-    <Link
-      isSimple
-      icon={icon || ''}
-      iconPosition="left"
-      href={link}
-    >
-      {title}
+  <li className={classNames('rf-shortcuts__item', className)} key={uuidv4()}>
+    <Link isSimple icon={icon || ''} iconPosition="left" href={link}>
+      {children}
     </Link>
   </li>
 );
@@ -28,7 +26,7 @@ ToolItem.propTypes = {
     PropTypes.array,
   ]),
   icon: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };
 export default ToolItem;

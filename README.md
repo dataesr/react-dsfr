@@ -1,17 +1,75 @@
-[![Build & Test](https://github.com/dataesr/react-rfds/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-rfds/actions/workflows/check.yml)
+# @dataesr/react-dsfr
 
-# Non-official React version of the official @gouvfr Design System.
+:warning: Project is still beta version :hammer:
 
-This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476). For now those projects are still beta versions :hammer:
+[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml)
 
-## Available scripts for development
+[![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-### `yarn guide`
+> Non-official React version of the official @gouvfr/dsfr Design System. This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476)
 
-A complete style guide is developped with [react-styleguidist](https://react-styleguidist.js.org/) and visible on  [http://localhost:6060](http://localhost:6060).
+## Requirements
 
-Documentation of each component of the project is visible in /docs
+* node >=12.13
+* npm >=6.14
+* React >=17.01
 
-### `yarn test:dev`
+## Installation
 
-Run all tests using react-scripts with watcher option
+```bash
+$ yarn add @dataesr/react-dsfr
+```
+
+## Library usage
+
+### Styleguide
+
+```bash
+$ yarn guide
+```
+Visit [http://localhost:6060](http://localhost:6060).
+
+The complete styleguide is available online [https://dataesr.github.io/react-dsfr/](https://dataesr.github.io/react-dsfr/).
+
+### Npm package
+
+#### Generate dist folder
+
+```bash
+$ yarn build
+```
+
+#### Generate and watch dist folder
+```bash
+$ yarn 
+$ yarn start
+```
+
+#### Example page
+
+> A playground to test components
+
+```bash
+$ cd example/
+$ yarn start
+```
+
+Visit [http://localhost:3000](http://localhost:3000).
+
+### Tests
+
+#### Run all tests using react-scripts with watcher option
+
+```bash
+$ yarn test:dev
+```
+
+#### In Chrome
+
+```bash
+$ yarn test:debug
+```
+
+Access `about:inspect`
+
+See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
