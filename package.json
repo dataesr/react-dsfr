@@ -65,7 +65,7 @@
   "scripts": {
     "build": "microbundle-crl --compress --format modern,cjs --jsxFragment React.Fragment",
     "build:rollup": "rollup -c",
-    "deploy": "gh-pages -d build:rollup -r https://$GH_PAT@github.com/dataesr/react-dsfr.git",
+    "deploy": "gh-pages -d build -r https://$GH_PAT@github.com/dataesr/react-dsfr.git",
     "guide": "npx styleguidist server",
     "predeploy": "styleguidist build",
     "prepare": "run-s build",
