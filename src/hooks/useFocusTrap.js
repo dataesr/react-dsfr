@@ -5,9 +5,19 @@ const useFocusTrap = (ref) => {
   const [focus, setFocus] = useState(0);
   const [focusableElements, setFocusableElements] = useState(null);
 
-  const getKeyboardFocusableElements = (element) => [...element.querySelectorAll(
-    'a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])',
-  )].filter((el) => !el.hasAttribute('disabled'));
+  const getKeyboardFocusableElements = (element) => {
+    const filtered = [];
+    const arrayElements = Array.from(element.querySelectorAll(
+      'a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])',
+    ), (e) => e);
+
+    arrayElements.forEach((el) => {
+      if (el && !el.hasAttribute('disabled')) {
+        filtered.push(el);
+      }
+    });
+    return filtered;
+  };
 
   const handleTabulation = (e) => {
     e.preventDefault();

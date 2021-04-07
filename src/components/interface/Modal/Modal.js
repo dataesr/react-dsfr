@@ -36,8 +36,11 @@ const ModalDialog = ({
   const content = Children.toArray(children).filter((child) => child.type.name === 'ModalContent');
   const footer = Children.toArray(children).filter((child) => child.type.name === 'ModalFooter');
   const close = Children.toArray(children).filter((child) => child.type.name === 'ModalClose');
+
   const handleAnimatedUnmount = () => {
-    modalRef.current.style.opacity = '0';
+    if (modalRef.current) {
+      modalRef.current.style.opacity = '0';
+    }
     setTimeout(() => {
       if (focusBackTo) focusBackTo.focus();
       hide();
@@ -51,9 +54,13 @@ const ModalDialog = ({
   const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('rf-no-scroll');
 
   useEffect(() => {
-    modalRef.current.style.visibility = 'visible';
+    if (modalRef.current) {
+      modalRef.current.style.visibility = 'visible';
+    }
     setTimeout(() => {
-      modalRef.current.style.opacity = '1';
+      if (modalRef.current) {
+        modalRef.current.style.opacity = '1';
+      }
     }, 0);
     handleNoBodyScroll();
     return () => {
