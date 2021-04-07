@@ -13,7 +13,7 @@ jobs:
       - name: Install
         run: yarn --non-interactive --no-lockfile
       - name: Build
-        run: yarn predeploy:styleguide
+        run: yarn predeploy
       - name: Test
         run: yarn test:nowatch
       - uses: act10ns/slack@v1
