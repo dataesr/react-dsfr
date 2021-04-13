@@ -6,15 +6,12 @@ Le lien permet la navigation. Pour les actions d’un autre type, comme la soumi
 Le lien contextuel se trouve au sein d’un texte et reprend les caractéristiques typographiques de celui-ci (font, couleur, taille) tout en étant souligné.
 
 ```jsx
-import Link from './index';
-
 <Link title="titre lien interne" href="#">lien contextuel</Link>
 ```
 
 #### Usage avec react-router-dom
 
 ```jsx
-import Link from './index';
 import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router-dom';
 
 <Router>
@@ -23,15 +20,12 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 ```
     
 ```jsx
-import Link from './index';
-
 <Link icon="rf-fi-search-line" title="titre lien interne" href="/my-page">lien contextuel avec icône</Link>
 ```
 
 #### Usage avec react-router-dom
 
 ```jsx
-import Link from './index';
 import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router-dom';
 
 <Router>
@@ -43,23 +37,18 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 Le lien ‘externe’ doit être utilisé pour les liens pointant vers un autre site et ouvrant un nouvel onglet (via l’attribut target=”blank”).
 
 ```jsx
-import Link from './index';
-
 <Link title="titre lien externe - nouvelle fenêtre" href="#" target="_blank">lien externe - nouvelle fenêtre</Link>
 ```
 
 #### Lien simple
 
 ```jsx
-import Link from './index';
-
 <Link href="/my-page" isSimple>lien simple</Link>
 ```
 
 #### Usage avec react-router-dom
 
 ```jsx
-import Link from './index';
 import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router-dom';
 
 <Router>
@@ -68,20 +57,14 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 ```
 
 ```jsx
-import Link from './index';
-
 <Link href="#" isSimple icon="rf-fi-arrow-right-line">lien simple avec icône à droite</Link>
 ```
 
 ```jsx
-import Link from './index';
-
 <Link href="#" isSimple icon="rf-fi-arrow-left-line" iconPosition="left">lien simple avec icône à gauche</Link>
 ```
 
 L’icône seule n'est à utiliser que très rarement, et le lien doit contenir un texte afin d'être lu par les lecteurs d'écran.
 ```jsx
-import Link from './index';
-
 <Link href="#" isSimple icon="rf-fi-arrow-down-line" iconPosition="left" />
 ```

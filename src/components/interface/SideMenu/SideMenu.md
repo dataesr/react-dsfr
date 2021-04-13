@@ -1,38 +1,20 @@
 ## SideMenu - Menu latéral
 
+Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une rubrique ou d’un même thème.
+
 ```jsx
 import { SideMenu, SideMenuItem, SideMenuLink } from '.';
 
-<SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
-  <SideMenuItem title="Niveau 1">
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuItem title="Niveau 2">
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-    </SideMenuItem>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
+<SideMenu title="SideMenu Title" buttonLabel="SideMenu Button">
+  <SideMenuItem title="SideMenu Item #1">
+    <SideMenuLink href="/">SideMenu Link #1</SideMenuLink>
+    <SideMenuLink href="/">SideMenu Link #2</SideMenuLink>
   </SideMenuItem>
-  <SideMenuItem title="Niveau 1">
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuItem title="Niveau 2">
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
-      <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
+  <SideMenuItem title="SideMenu Item #2">
+    <SideMenuItem title="SideMenu Level 2 Item #1">
+      <SideMenuLink href="/">SideMenu Level 2 Link #1</SideMenuLink>
+          <SideMenuLink href="/">SideMenu Level 2 Link #2</SideMenuLink>
     </SideMenuItem>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
-    <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
   </SideMenuItem>
 </SideMenu>
 ```

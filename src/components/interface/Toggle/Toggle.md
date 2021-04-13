@@ -1,18 +1,13 @@
-## Interrupteur - Toggle
+## Toggle - Interrupteur
+L’usage des interrupteurs est à privilégier pour paramétrer des fonctionnalités transverses. Le changement d'état de l’interrupteur ne nécessite pas de validation.
 
 ### Toggle simple
 ```jsx
-import { useState } from 'react';
-const [checked, setCheched] = useState(true);
-
 <Toggle
-    isChecked={checked}
-    onChange={() => setCheched(!checked)}
-    label="Accepter les cookies"
+    label="Toggle Label"
 />
 ```
-
-### Toggle label à gauche avec séparateur
+### Usage avec React state
 ```jsx
 import { useState } from 'react';
 const [checked, setCheched] = useState(false);
@@ -20,7 +15,15 @@ const [checked, setCheched] = useState(false);
 <Toggle
     isChecked={checked}
     onChange={() => setCheched(!checked)}
-    label="Accepter les cookies"
+    label="Toggle Label"
+/>
+```
+
+### Toggle avec séparateur et label à gauche
+```jsx
+<Toggle
+    isChecked={false}
+    label="Toggle Label"
     hasSeparator
     hasLabelLeft
 />
@@ -31,7 +34,7 @@ const [checked, setCheched] = useState(false);
 <Toggle
     isDisabled
     isChecked
-    label="Accepter les cookies"
-    description="Je suis en état inactif"
+    label="Toggle Label"
+    description="Toggle descirption"
 />
 ```

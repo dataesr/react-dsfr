@@ -10,6 +10,10 @@ import TabButton from './TabButton';
 
 import '@gouvfr/dsfr/dist/css/tabs.min.css';
 
+/**
+ *
+ * @visibleName Tabs
+ */
 const Tabs = ({
   className, children, defaultActiveTab, scheme,
 }) => {

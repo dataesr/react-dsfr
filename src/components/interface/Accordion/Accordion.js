@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import '@gouvfr/dsfr/dist/css/accordions.min.css';
 
 /**
- * Condenser l'espace
  *
  * @visibleName Accordion
  */

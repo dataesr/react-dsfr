@@ -9,8 +9,8 @@ Il est possible d’opter pour un format 4:3 de la vidéo, à l’aide du modifi
 #### Ratio 16:9 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
-    buttonLabel="Transcription"
+    legend="Legend"
+    buttonLabel="Button Label"
   >
     <iframe title="titre de l’iframe" class="rf-responsive-vid__player" src="https://www.youtube.com/embed/HyirpmPL43I" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" />
   </MediaVideo>
@@ -19,7 +19,7 @@ Il est possible d’opter pour un format 4:3 de la vidéo, à l’aide du modifi
 #### Ratio 4:3 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
+    legend="Legend"
     ratio="4x3"
     buttonLabel="Transcription"
   >
@@ -38,7 +38,7 @@ La vidéo est plus grande que la zone de texte.
 Exemple de vidéo LG format 16/9 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
+    legend="Legend"
     size="lg"
     buttonLabel="Transcription"
   >
@@ -48,7 +48,7 @@ Exemple de vidéo LG format 16/9 :
 Exemple de vidéo LG format 4/3 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
+    legend="Legend"
     size="lg"
     ratio="4X3"
     buttonLabel="Transcription"
@@ -62,7 +62,7 @@ La largeur de la vidéo est plus petite que la zone de texte.
 Exemple de vidéo SM format 16/9 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
+    legend="Legend"
     size="sm"
     buttonLabel="Transcription"
   >
@@ -72,7 +72,7 @@ Exemple de vidéo SM format 16/9 :
 Exemple de vidéo SM format 4/3 :
 ```jsx
   <MediaVideo
-    legend="légende de l'image"
+    legend="Legend"
     size="sm"
     ratio="4X3"
     buttonLabel="Transcription"

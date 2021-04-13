@@ -6,8 +6,8 @@ Lorsqu’une image est intégrée dans un contenu éditorial, elle est présent�
 ```jsx
   <MediaImage
     src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
-    alt="description alternative à l‘image"
-    legend="légende de l'image"
+    alt="alternative description"
+    legend="legend"
   />
 ```
 
@@ -22,8 +22,8 @@ L’image est plus grande que la zone de texte.
 ```jsx
   <MediaImage
     src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
-    alt="description alternative à l‘image"
-    legend="légende de l'image"
+    alt="alternative description"
+    legend="legend"
     size="lg"
   />
 ```
@@ -33,8 +33,8 @@ L’image est plus petite que la zone de texte.
 ```jsx
   <MediaImage
     src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
-    alt="description alternative à l‘image"
-    legend="légende de l'image"
+    alt="alternative description"
+    legend="legend"
     size="sm"
   />
 ```

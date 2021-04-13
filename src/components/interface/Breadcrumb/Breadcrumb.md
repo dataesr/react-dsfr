@@ -4,8 +4,8 @@
 import { Breadcrumb, BreadcrumbItem } from '.';
 
 <Breadcrumb>
-  <BreadcrumbItem href="#">Home</BreadcrumbItem>
-  <BreadcrumbItem href="#">Productions</BreadcrumbItem>
-  <BreadcrumbItem current>Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué</BreadcrumbItem>
+  <BreadcrumbItem href="#">Breadcrumb Item #1</BreadcrumbItem>
+  <BreadcrumbItem href="#">Breadcrumb Item #2</BreadcrumbItem>
+  <BreadcrumbItem>Breadcrumb Item #3</BreadcrumbItem>
 </Breadcrumb>
 ```

@@ -6,8 +6,6 @@ import { SCHEMES } from '../../../utils/constants';
 import '@gouvfr/dsfr/dist/css/tags.min.css';
 
 /**
- * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
- * Il aide les utilisateurs à rechercher et à trouver facilement une information.
  *
  * @visibleName Tag
  */

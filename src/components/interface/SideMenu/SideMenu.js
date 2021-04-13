@@ -8,8 +8,6 @@ import useCollapse from '../../../hooks/useCollapse';
 import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
 
 /**
- * Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une
- * rubrique ou d’un même thème.
  *
  * @visibleName SideMenu
  */

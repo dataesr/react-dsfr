@@ -41,3 +41,23 @@
 ```jsx
 <Button icon="alert-fill" iconPosition='right' title="title">icon on the right</Button>
 ```
+
+```jsx
+import ButtonGroup from './ButtonGroup';
+
+<ButtonGroup size="sm" isEquisized align="center" isInlineFrom="md">
+  <Button secondary title="title">secondary sm button</Button>
+  <Button title="title">sm button</Button>
+</ButtonGroup>
+```
+
+
+```jsx
+import ButtonGroup from './ButtonGroup';
+
+<ButtonGroup size="lg">
+  <Button secondary title="title">secondary sm button</Button>
+  <Button title="title">sm button</Button>
+</ButtonGroup>
+```
+

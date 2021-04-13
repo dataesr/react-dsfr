@@ -1,8 +1,5 @@
-Les cases à cocher permettent à l’utilisateur de sélectionner une ou plusieurs options dans une liste.
-Elles sont utilisées pour effectuer des sélections multiples (de 0 à N éléments) ou bien pour permettre un choix binaire, lorsque l’utilisateur peut sélectionner ou désélectionner une seule option. 
-
 ## Checkbox - Case à cocher 
-La case à cocher peut être utilisée seule ou en liste. Évitez les listes de plus de 5 items et lorsque vous souhaitez contraindre le choix à un seul élément - utiliser les boutons radios 🔗 
+Les cases à cocher permettent à l’utilisateur de sélectionner une ou plusieurs options dans une liste.. La case à cocher peut être utilisée seule ou en liste. Évitez les listes de plus de 5 items et lorsque vous souhaitez contraindre le choix à un seul élément - utiliser les boutons radios 🔗 
 
 ```jsx
 <Checkbox
@@ -28,7 +25,7 @@ Texte sous le libellé de chaque case à cocher, afin d’apporter une précisio
   value="value-1"
   onChange={() => {}}
   label="Label checkbox"
-  hint="Texte de description additionnel"
+  hint="Additionnal description"
 />
 ```
 
@@ -40,7 +37,7 @@ Sur une case à cocher simple (choix binaire), l'état d’erreur est signalé p
   onChange={() => {}}
   label="Label checkbox"
   messageType="error"
-  message="Texte d’erreur obligatoire"
+  message="Error message"
   
 />
 ```
@@ -53,7 +50,7 @@ Une taille ‘small’ (SM) de 16 px est également disponible. Il s’agit de l
 <Checkbox
   value="value-1"
   onChange={() => {}}
-  label="Label checkbox taille sm"
+  label="Label checkbox size sm"
   size="sm"
 />
 ```
@@ -82,7 +79,7 @@ import { CheckboxGroup, Checkbox } from '.';
 import { CheckboxGroup, Checkbox } from '.';
 
 <CheckboxGroup
-  legend="Légende pour l’ensemble de champs"
+  legend="Legend"
 >
   <Checkbox
     label="Label checkbox 1"
@@ -119,13 +116,13 @@ import { CheckboxGroup, Checkbox } from '.';
 ## Liste avec texte d’aide
 Il est recommandé d’ajouter un texte d’aide afin de faciliter le choix de l’utilisateur. Ces précisions peuvent être apportés de 2 façons :
 
-- via un texte sous le titre du groupe des cases à cocher, afin d’apporter une précision à l’intitulé du groupe.
+### Via un texte sous le titre du groupe
 ```jsx
 import { CheckboxGroup, Checkbox } from '.';
 
 <CheckboxGroup
-  hint="Texte de description additionnel"
-  legend="Légende pour l’ensemble de champs"
+  hint="Additionnal descritption"
+  legend="Legend"
 >
   <Checkbox
     label="Label checkbox 1"
@@ -140,21 +137,21 @@ import { CheckboxGroup, Checkbox } from '.';
 </CheckboxGroup>
 ```
 
-- via un texte sous le libellé de chaque case à cocher, afin d’apporter une précision à chaque élément.
+### Via un texte sous le libellé de chaque case à cocher
 ```jsx
 import { CheckboxGroup, Checkbox } from '.';
 
 <CheckboxGroup
-  legend="Légende pour l’ensemble de champs"
+  legend="Legend"
 >
   <Checkbox
-    hint="Texte de description additionnel"
+    hint="Additionnal description"
     label="Label checkbox 1"
     onChange={e => alert(e.target.value)}
     value="value-1"
   />
   <Checkbox
-    hint="Texte de description additionnel"
+    hint="Additionnal description"
     label="Label checkbox 2"
     onChange={e => alert(e.target.value)}
     value="value-2"
@@ -168,9 +165,9 @@ Sur les groupes de cases à cocher, l'état d’erreur est signalé par un ligne
 import { CheckboxGroup, Checkbox } from '.';
 
 <CheckboxGroup
-  legend="Légende pour l’ensemble de champs"
+  legend="Legend"
   messageType="error"
-  message="Texte d’erreur obligatoire"
+  message="Error message"
 >
   <Checkbox
     label="Label checkbox 1"

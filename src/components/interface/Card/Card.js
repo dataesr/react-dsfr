@@ -7,7 +7,6 @@ import { SCHEMES } from '../../../utils/constants';
 import '@gouvfr/dsfr/dist/css/cards.min.css';
 
 /**
- * Carte
  *
  * @visibleName Card
  */

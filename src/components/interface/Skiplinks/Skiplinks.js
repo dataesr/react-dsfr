@@ -5,8 +5,6 @@ import classNames from 'classnames';
 import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
 
 /**
- * Les liens d’évitement permettent aux utilisateurs naviguant au clavier,
- * ou équipés de lecteurs d'écran, d’accéder plus rapidement à des zones précises de la page.
  *
  * @visibleName Skiplinks
  */

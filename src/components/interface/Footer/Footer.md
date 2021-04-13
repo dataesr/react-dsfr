@@ -1,4 +1,4 @@
-```jsx noeditor
+```jsx
 import {
     FooterBody,
     FooterTop,
@@ -15,46 +15,28 @@ import Logo from '../Logo';
 
 <Footer>
     <FooterTop>
-        <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
+        <FooterTopCategory title="Category #1">
+            <FooterLink href="/">Navigation link</FooterLink>
+            <FooterLink href="/">Navigation link</FooterLink>
         </FooterTopCategory>
-        <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
+        <FooterTopCategory title="Category #2">
+            <FooterLink href="/">Navigation link</FooterLink>
+            <FooterLink href="/">Navigation link</FooterLink>
+            <FooterLink href="/">Navigation link</FooterLink>
         </FooterTopCategory>
-        <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-        </FooterTopCategory>
-        <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-        </FooterTopCategory>
-        <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
-            <FooterLink href="/">Lien de navigation</FooterLink>
+        <FooterTopCategory title="Category #3">
+            <FooterLink href="/">Navigation link</FooterLink>
+            <FooterLink href="/">Navigation link</FooterLink>
+            <FooterLink href="/">Navigation link</FooterLink>
         </FooterTopCategory>
     </FooterTop>
     <FooterBody
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     >
-        <Logo>Ministère de l'enseignement supérieur de la rechercher et de l'innovation</Logo>
+        <Logo>bloc-marque</Logo>
     </FooterBody>
     <FooterPartners>
-        <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
+        <FooterPartnersTitle>Our partners</FooterPartnersTitle>
         <FooterPartnersLogo isMain href="/" imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
                             imageAlt="Logo 1"/>
         <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
@@ -65,12 +47,9 @@ import Logo from '../Logo';
                             imageAlt="Logo 4"/>
     </FooterPartners>
     <FooterBottom>
-        <FooterLink href="/">Plan du site</FooterLink>
-        <FooterLink href="/">Accessibilité: non/partiellement/totalement conforme</FooterLink>
-        <FooterLink href="/">Mentions légales</FooterLink>
-        <FooterLink href="/">Données personnelles</FooterLink>
-        <FooterLink href="/">Gestion des cookies</FooterLink>
-        <FooterCopy href="/">© République Française 2020</FooterCopy>
+        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink href="/">Footer Link</FooterLink>
     </FooterBottom>
 </Footer>
 ```

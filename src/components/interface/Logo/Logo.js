@@ -8,7 +8,7 @@ import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *
- * @visibleName Bloc-marque
+ * @visibleName Logo
  */
 const Logo = ({
   children, href, className, splitCharacter, hrefTitle,

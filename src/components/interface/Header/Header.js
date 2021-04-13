@@ -9,6 +9,11 @@ import HeaderContext from './headerContext';
 import '@gouvfr/dsfr/dist/css/navigation.min.css';
 import '@gouvfr/dsfr/dist/css/header.min.css';
 
+/**
+ *
+ * @visibleName Header
+ */
+
 const Header = ({
   children,
   className,

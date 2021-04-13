@@ -1,4 +1,4 @@
-## Onglets - Tabs
+## Tabs -  Onglets
 
 Le composant onglet permet aux utilisateurs de naviguer dans différentes sections de contenu au sein d’une même page.
 
