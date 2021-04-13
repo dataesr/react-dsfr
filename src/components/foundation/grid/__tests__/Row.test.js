@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Row from '..';
+import Row from '../Row';
 
 it('renders Row properly', () => {
   render(
@@ -11,9 +11,9 @@ it('renders Row properly', () => {
   expect(row.className).toBe('rf-grid-row');
 });
 
-it('renders Row with gutter properly', () => {
+it('renders Row with gutters properly', () => {
   render(
-    <Row gutter>Text</Row>,
+    <Row gutters>Text</Row>,
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
@@ -40,7 +40,7 @@ it('renders Row with justifyContent properly', () => {
 
 it('renders Row offset and n properly', () => {
   render(
-    <Row gutter alignItems="middle" justifyContent="center">Text</Row>,
+    <Row gutters alignItems="middle" justifyContent="center">Text</Row>,
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();

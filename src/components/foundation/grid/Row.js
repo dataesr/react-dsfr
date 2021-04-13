@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace } from '../../../../utils/getters';
-import { SCHEMES } from '../../../../utils/constants';
+import { getSpace } from '../../../utils/getters';
+import { SCHEMES } from '../../../utils/constants';
+
 /**
- * Design system Row
  *
  * @visibleName Row
  */
 const Row = ({
-  gutter, justifyContent, alignItems, children, scheme, className, ...rest
+  gutters, justifyContent, alignItems, children, scheme, className, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
   const _className = classNames(margin, padding, {
-    'rf-grid-row': !gutter,
-    'rf-grid-row rf-grid-row--gutters': gutter,
+    'rf-grid-row': !gutters,
+    'rf-grid-row rf-grid-row--gutters': gutters,
     [`rf-grid-row--${justifyContent}`]: justifyContent,
     [`rf-grid-row--${alignItems}`]: alignItems,
     [`rf-scheme-${scheme}`]: scheme,
@@ -32,9 +32,9 @@ Row.propTypes = {
     PropTypes.string,
   ]),
   /**
-  * Add gutter to row
+  * Add gutters to row
   */
-  gutter: PropTypes.bool,
+  gutters: PropTypes.bool,
   /**
   * Vertical alignment of children
   */
@@ -52,7 +52,7 @@ Row.propTypes = {
 };
 Row.defaultProps = {
   className: '',
-  gutter: false,
+  gutters: false,
   alignItems: null,
   justifyContent: null,
   scheme: '',
