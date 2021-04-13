@@ -11,9 +11,6 @@ import ModalClose from './ModalClose';
 import '@gouvfr/dsfr/dist/css/modal.min.css';
 
 /**
- * La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
- * un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite
- * une action de l’utilisateur afin d'être clôturé ou ouverte.
  *
  * @visibleName Modale -- Modal
  */

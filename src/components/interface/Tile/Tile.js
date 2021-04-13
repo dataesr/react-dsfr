@@ -6,8 +6,6 @@ import { SCHEMES } from '../../../utils/constants';
 import '@gouvfr/dsfr/dist/css/tiles.min.css';
 
 /**
- * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
- * Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
  *
  * @visibleName Tile
  */

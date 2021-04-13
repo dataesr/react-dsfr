@@ -17,7 +17,7 @@ const BreadcrumbItem = ({ className, children, href }) => {
       aria-current={!href && 'page'}
       data-testid="bc-item"
     >
-      {href ? <Link href={href}>{children}</Link> : children}
+      {href ? <Link className="rf-breadcrumb__link" href={href}>{children}</Link> : children}
     </li>
   );
 };

@@ -54,9 +54,11 @@ const Breadcrumb = ({
       >
         {buttonLabel}
       </button>
-      <ol ref={listRef} className="rf-breadcrumb__list" data-testid="bc-list" hidden={!open}>
-        {content}
-      </ol>
+      <div className="rf-collapse" id="breadcrumb">
+        <ol ref={listRef} className="rf-breadcrumb__list" data-testid="bc-list" hidden={!open}>
+          {content}
+        </ol>
+      </div>
     </nav>
   );
 };

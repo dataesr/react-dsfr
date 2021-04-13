@@ -1,27 +1,19 @@
 ## Highlight - Mise en exergue
 
-```jsx
-import Highlight from '.';
+La mise en exergue met en évidence une information déjà présente dans le reste du contenu.
 
-<Highlight>Highlight text that might be short and concise.</Highlight>
+```jsx
+<Highlight>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Highlight>
 ```
 
 ```jsx
-import Highlight from '.';
-
 <Highlight size="sm" scheme="soft-green-warm" >
-  Highlight text that might be short and concise.
-  Highlight text that might be short and concise.
-  Highlight text that might be short and concise.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </Highlight>
 ```
 
 ```jsx
-import Highlight from '.';
-
 <Highlight size="lg" >
-  Highlight text that might be short and concise.
-  Highlight text that might be short and concise.
-  Highlight text that might be short and concise.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </Highlight>
 ```

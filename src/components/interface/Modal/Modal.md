@@ -1,37 +1,7 @@
-## Modale simple
-
-La modale par défaut permet de mettre en évidence une information qui ne nécessite pas d’action de l’utilisateur. Elle s’affiche à la suite du clic sur un bouton.
-
-Elle se compose des éléments de base du composant à savoir :
-  - Le lien Fermer - obligatoire.
-  - Le titre obligatoire, avec icône optionnelle.
-  - La zone de contenu - obligatoire.
-    - Peut-être composée de texte ou d'élément de formulaires.
-  - Un overlay disposé à l’arrière du composant - obligatoire.
-
-En desktop, ce composant s’affiche au centre de la page.
-
-```jsx
-import { useState, useRef } from 'react';
-import Button from '../Button'
-import { Modal, ModalTitle, ModalContent, ModalFooter } from '.';
-const [isOpen, setIsOpen] = useState(false);
-
-const buttonRef = useRef();
-
-<>
-  <Button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</Button>
-  <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
-    <ModalTitle icon>I'm a title</ModalTitle>
-    <ModalContent>blah blah</ModalContent>
-    <ModalFooter>
-      <Button title="Une action">blah</Button>
-    </ModalFooter>
-  </Modal>
-</>
-```
-
-Le boutton de fermeture peut etre personnalisé, par exemple pour faciliter le changement de langue:
+## Modal - modale
+La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou
+ un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite
+ une action de l’utilisateur afin d'être clôturé ou ouverte.
 
 ```jsx
 import { useState, useRef } from 'react';
@@ -48,10 +18,10 @@ const hide = () => {
   <Button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</Button>
   <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
     <ModalClose hide={hide} title="Close the modal window">Close</ModalClose>
-    <ModalTitle icon>I'm a title</ModalTitle>
-    <ModalContent>blah blah</ModalContent>
+    <ModalTitle icon>Modal Title</ModalTitle>
+    <ModalContent>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</ModalContent>
     <ModalFooter>
-      <Button title="Une action">blah</Button>
+      <Button title="title">Modal Button</Button>
     </ModalFooter>
   </Modal>
 </>

@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import '@gouvfr/dsfr/dist/css/links.min.css';
 
 /**
- * Navigation
  *
  * @visibleName Link
  */

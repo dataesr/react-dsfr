@@ -9,7 +9,6 @@ import '@gouvfr/dsfr/dist/css/inputs.min.css';
 import '@gouvfr/dsfr/dist/css/search.min.css';
 
 /**
- * Système de navigation
  *
  * @visibleName SearchBar
  */

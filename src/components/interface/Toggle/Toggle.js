@@ -6,8 +6,6 @@ import '@gouvfr/dsfr/dist/css/toggles.min.css';
 
 /**
  *
- * L’usage des interrupteurs est à privilégier pour paramétrer des fonctionnalités transverses.
- * Le changement d'état de l’interrupteur ne nécessite pas de validation
  * @visibleName Toggle
  */
 const Toggle = ({

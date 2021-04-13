@@ -1,5 +1,7 @@
 ## Tag simple
 
+Le tag catégorise/classe/organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.
+
 ### Tag simple par défault
 ```jsx
   <Tag>Label tag</Tag>

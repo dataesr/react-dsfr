@@ -6,8 +6,6 @@ import { SCHEMES } from '../../../utils/constants';
 import '@gouvfr/dsfr/dist/css/callouts.min.css';
 
 /**
- * La mise en avant est une proposition de mise en page du contenu éditorial pour
- * mettre en évidence une information complémentaire.
  *
  * @visibleName Callout
  */

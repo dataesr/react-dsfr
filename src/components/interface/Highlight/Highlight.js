@@ -6,7 +6,6 @@ import { SCHEMES } from '../../../utils/constants';
 import '@gouvfr/dsfr/dist/css/highlights.min.css';
 
 /**
- * La mise en exergue met en évidence une information déjà présente dans le reste du contenu.
  *
  * @visibleName Highlight
  */

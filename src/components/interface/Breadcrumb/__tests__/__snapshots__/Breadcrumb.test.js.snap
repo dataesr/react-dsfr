@@ -14,42 +14,49 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
   >
     Voir le fil d'ariane
   </button>
-  <ol
-    class="rf-breadcrumb__list"
-    data-testid="bc-list"
-    hidden=""
+  <div
+    class="rf-collapse"
+    id="breadcrumb"
   >
-    <li
-      aria-current="false"
-      class="rf-breadcrumb__item"
-      data-testid="bc-item"
+    <ol
+      class="rf-breadcrumb__list"
+      data-testid="bc-list"
+      hidden=""
     >
-      <a
-        href="#"
-        target="_self"
+      <li
+        aria-current="false"
+        class="rf-breadcrumb__item"
+        data-testid="bc-item"
       >
-        Home
-      </a>
-    </li>
-    <li
-      aria-current="false"
-      class="rf-breadcrumb__item"
-      data-testid="bc-item"
-    >
-      <a
-        href="#"
-        target="_self"
+        <a
+          class="rf-breadcrumb__link"
+          href="#"
+          target="_self"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-current="false"
+        class="rf-breadcrumb__item"
+        data-testid="bc-item"
       >
-        Productions
-      </a>
-    </li>
-    <li
-      aria-current="page"
-      class="rf-breadcrumb__item rf-breadcrumb__item--current"
-      data-testid="bc-item"
-    >
-      Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué
-    </li>
-  </ol>
+        <a
+          class="rf-breadcrumb__link"
+          href="#"
+          target="_self"
+        >
+          Productions
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        class="rf-breadcrumb__item rf-breadcrumb__item--current"
+        data-testid="bc-item"
+      >
+        Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué
+      </li>
+    </ol>
+  </div>
 </nav>
 `;

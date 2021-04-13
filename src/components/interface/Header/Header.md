@@ -1,8 +1,8 @@
-L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.
+## Header - En-tête
 
 ### Header avec barre de recherche, raccourcis outils et navigation
 
-```jsx noeditor
+```jsx
 import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, ToolItemGroup } from '.';
 import SearchBar from '../SearchBar/index';
 import Logo from '../Logo';
@@ -11,30 +11,30 @@ import Logo from '../Logo';
     <HeaderBody>
         <Logo splitCharacter={10}>République Française</Logo>
         <Service
-            title="Nom du service"
-            description="baseline - précisions sur l‘organisation"/>
+            title="Service title"
+            description="Service Description"/>
         <Tool
-            buttonClose='fermer'
+            buttonClose='close'
         >
             <ToolItemGroup>
-                <ToolItem icon='rf-fi-lock-line' link='/path'>Se connecter</ToolItem>
-                <ToolItem icon='rf-fi-add-circle-line' link='/path'>Créer un espace</ToolItem>
+                <ToolItem icon='rf-fi-lock-line' link='/path'>Tool Item #1</ToolItem>
+                <ToolItem icon='rf-fi-add-circle-line' link='/path'>Tool Item #2</ToolItem>
             </ToolItemGroup>
             <SearchBar
                 onSearch={() => {
                 }}
-                label="SearchBar du gouvernement"
-                placeholder="Rechercher"
-                buttonLabel="Rechercher"
+                label="SearchBar"
+                placeholder="Search"
+                buttonLabel="Search"
             />
         </Tool>
     </HeaderBody>
     <HeaderNav>
-        <NavItem title='Home' link='/'/>
-        <NavItem title='Resources'>
-            <NavSubItem title='Ressource #1' link='/path-to-resources-1'/>
-            <NavSubItem title='Ressource #2' link='/path-to-resources-2'/>
-            <NavSubItem title='Ressource #3' link='/path-to-resources-3'/>
+        <NavItem title='nav item #1' link='/'/>
+        <NavItem title='nav item #2'>
+            <NavSubItem title='nav subItem #1' link='/path-to-resources-1'/>
+            <NavSubItem title='nav subItem #2' link='/path-to-resources-2'/>
+            <NavSubItem title='nav subItem #3' link='/path-to-resources-3'/>
         </NavItem>
     </HeaderNav>
 </Header>
