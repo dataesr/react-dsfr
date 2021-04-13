@@ -16,8 +16,6 @@ const Pagination = ({
 }) => {
   const surrendingLeft = getSurrendingLeft(currentPage, surrendingPages);
   const surrendingRight = getSurrendingRight(currentPage, surrendingPages, pageCount);
-  const prevClasses = classNames({ 'rf-pagination__item--disabled': currentPage === 1 });
-  const nextClasses = classNames({ 'rf-pagination__item--disabled': currentPage === pageCount });
   const Tag = `${anchorAs}`;
   const {
     navigationAria, prevLabel, nextLabel, prevAria,
@@ -25,14 +23,24 @@ const Pagination = ({
   } = buttonLabels;
 
   return (
-    <nav className="rf-pagination" aria-label={navigationAria} data-testid="pagination-nav">
+    <nav className="rf-pagination" aria-label={navigationAria} data-testid="pagination-nav" role="navigation">
       <ul className="rf-pagination__list">
-        <li className={`rf-pagination__item--first rf-pagination__item ${prevClasses}`}>
-          <Tag className="rf-pagination__link" aria-label={firstAria} title={firstAria} />
+        <li>
+          <Tag
+            href={currentPage > 1 ? buildURL(1) : undefined}
+            className={classNames({ 'rf-pagination__link--first': firstAria }, 'rf-pagination__link')}
+            aria-label={firstAria}
+            title={firstAria}
+          />
         </li>
-        <li className={`rf-pagination__item--prev rf-pagination__item ${prevClasses}`}>
-          <Tag className="rf-pagination__link" aria-label={prevAria} title={prevAria}>
-            <span className="rf-pagination__label">{prevLabel}</span>
+        <li>
+          <Tag
+            href={currentPage > 1 ? buildURL(currentPage - 1) : undefined}
+            className={classNames({ 'rf-pagination__link--prev': prevAria }, 'rf-pagination__link')}
+            aria-label={prevAria}
+            title={prevAria}
+          >
+            {prevLabel}
           </Tag>
         </li>
         <PaginationItem
@@ -44,7 +52,7 @@ const Pagination = ({
           aria={pageAria(1)}
         />
         { surrendingLeft.hasEllipsis && (
-          <li className="rf-pagination__item rf-pagination__item--from-md">…</li>)}
+          <li>…</li>)}
         {surrendingLeft.pages.map((p) => (
           <PaginationItem
             key={p}
@@ -67,24 +75,35 @@ const Pagination = ({
           />
         ))}
         { surrendingRight.hasEllipsis && (
-          <li className="rf-pagination__item rf-pagination__item--from-md">…</li>)}
+          <li>…</li>)}
         {(pageCount !== 1) && (
           <PaginationItem
             aria={pageAria(pageCount)}
             isVisibleOnMobile
+            aria-current={currentPage === pageCount ? 'page' : ''}
             isActive={currentPage === pageCount}
             page={pageCount}
             anchorAs={anchorAs}
             url={buildURL(pageCount)}
           />
         )}
-        <li className={`rf-pagination__item--next rf-pagination__item ${nextClasses}`}>
-          <Tag className="rf-pagination__link" aria-label={nextAria} title={nextAria}>
-            <span className="rf-pagination__label">{nextLabel}</span>
+        <li>
+          <Tag
+            href={currentPage < pageCount ? buildURL(currentPage + 1) : undefined}
+            className={classNames({ 'rf-pagination__link--next': nextAria }, 'rf-pagination__link')}
+            aria-label={nextAria}
+            title={nextAria}
+          >
+            {nextLabel}
           </Tag>
         </li>
-        <li className={`rf-pagination__item--last rf-pagination__item ${nextClasses}`}>
-          <Tag className="rf-pagination__link" aria-label={lastAria} title={lastAria} />
+        <li>
+          <Tag
+            href={currentPage < pageCount ? buildURL(pageCount) : undefined}
+            className={classNames({ 'rf-pagination__link--last': lastAria }, 'rf-pagination__link')}
+            aria-label={lastAria}
+            title={lastAria}
+          />
         </li>
       </ul>
     </nav>
@@ -96,7 +115,17 @@ Pagination.propTypes = {
   pageCount: PropTypes.number.isRequired,
   buildURL: PropTypes.func.isRequired,
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
-  buttonLabels: PropTypes.shape(),
+  buttonLabels: PropTypes.shape({
+    navigationAria: PropTypes.string,
+    currentAria: PropTypes.string,
+    pageAria: PropTypes.func,
+    prevLabel: PropTypes.string,
+    nextLabel: PropTypes.string,
+    prevAria: PropTypes.string,
+    nextAria: PropTypes.string,
+    firstAria: PropTypes.string,
+    lastAria: PropTypes.string,
+  }),
   surrendingPages: PropTypes.number,
 };
 
