@@ -56,6 +56,14 @@ $ yarn start
 
 Visit [http://localhost:3000](http://localhost:3000).
 
+#### Test your node module before you publish 
+
+```
+$ npm link @dataesr/react-dsfr
+```
+
+[How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
+
 ### Tests
 
 #### Run all tests using react-scripts with watcher option
