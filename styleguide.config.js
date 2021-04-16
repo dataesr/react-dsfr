@@ -39,7 +39,7 @@ module.exports = {
       sectionDepth: 2,
       sections: [
         {
-          name: 'Fondamentaux',
+          name: 'Fondamentaux technique',
           content: 'src/components/foundation/FOUNDATION.md',
           sectionDepth: 1,
           sections: [
@@ -49,7 +49,7 @@ module.exports = {
               components: 'src/components/foundation/grid/**/[A-Z]*.js',
             },
             {
-              name: 'Typography',
+              name: 'Typographie',
               content: 'src/components/foundation/typography/TYPOGRAPHY.md',
               components: 'src/components/foundation/typography/**/[A-Z]*.js',
             },
@@ -61,7 +61,7 @@ module.exports = {
           ],
         },
         {
-          name: 'Elements d\'interface',
+          name: 'Élements d\'interface',
           content: 'src/components/interface/INTERFACE.md',
           sectionDepth: 1,
           components: 'src/components/interface/**/[A-Z]*.js',

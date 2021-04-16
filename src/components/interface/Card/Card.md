@@ -32,12 +32,12 @@ import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 Utilisation avec Container, Row, Col
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
-import Row from '../../foundation/grid/Row/Row';
-import Container from '../../foundation/grid/Container/Container';
-import Col from '../../foundation/grid/Col/Col';
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
+import Col from '../../foundation/grid/Col';
 
 <Container>
-  <Row gutter={true}>
+  <Row>
     <Col>
       <Card href="/">
         <CardImage alt="alternative" src="http://fakeimg.pl/300/" />

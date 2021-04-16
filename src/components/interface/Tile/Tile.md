@@ -42,13 +42,14 @@ import { Tile, TileBody, TileImage } from '.';
 ### Usage avec Container, Row, Col
 
 ```jsx
-import Row from '../../foundation/grid/Row/Row';
-import Container from '../../foundation/grid/Container/Container';
-import Col from '../../foundation/grid/Col/Col';
 import { Tile, TileBody, TileImage } from '.';
 
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
+import Col from '../../foundation/grid/Col';
+
 <Container>
-    <Row gutter={true}>
+    <Row>
         <Col>
             <Tile>
                 <TileBody

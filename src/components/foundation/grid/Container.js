@@ -1,42 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getSpace, getColSize } from '../../../../utils/getters';
-import { SCHEMES } from '../../../../utils/constants';
+import { getSpace } from '../../../utils/getters';
+import { SCHEMES } from '../../../utils/constants';
 
 import '@gouvfr/dsfr/dist/css/content.min.css';
 
 /**
- * Design system Column
  *
- * @visibleName Col
+ * @visibleName Container
  */
-const Col = ({
-  offset, n, scheme, children, className, ...rest
+const Container = ({
+  fluid, children, scheme, className, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
-  const { n: size, offset: off } = getColSize(n, offset);
-  const _className = classNames(off, size, padding, margin, {
-    'rf-col': !n,
+  const _className = classNames(margin, padding, {
+    'rf-container': !fluid,
+    'rf-container-fluid': fluid,
     [`rf-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };
 
-Col.propTypes = {
+Container.propTypes = {
+  /**
+  * Container children node (should be Rows)
+  */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string,
   ]),
   /**
-  * Col size
+  * Container with no outer margins
   */
-  n: PropTypes.string,
-  /**
-  * Set Col offset.
-  */
-  offset: PropTypes.string,
+  fluid: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -44,12 +42,11 @@ Col.propTypes = {
   ]),
   scheme: PropTypes.oneOf(SCHEMES),
 };
-Col.defaultProps = {
-  n: null,
-  offset: null,
+Container.defaultProps = {
+  fluid: false,
   className: '',
   scheme: '',
   children: null,
 };
 
-export default Col;
+export default Container;

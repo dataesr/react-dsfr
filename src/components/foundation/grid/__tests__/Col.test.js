@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Col from '..';
+import Col from '../Col';
 
 it('renders Col properly', () => {
   render(
