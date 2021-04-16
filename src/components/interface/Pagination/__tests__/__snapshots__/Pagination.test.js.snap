@@ -5,37 +5,30 @@ exports[`<Pagination /> should render pagination properly 1`] = `
   aria-label="Pagination navigation"
   class="rf-pagination"
   data-testid="pagination-nav"
+  role="navigation"
 >
   <ul
     class="rf-pagination__list"
   >
-    <li
-      class="rf-pagination__item--first rf-pagination__item "
-    >
+    <li>
       <a
         aria-label="Première page"
-        class="rf-pagination__link"
+        class="rf-pagination__link--first rf-pagination__link"
+        href="page1"
         title="Première page"
       />
     </li>
-    <li
-      class="rf-pagination__item--prev rf-pagination__item "
-    >
+    <li>
       <a
         aria-label="Page précédente"
-        class="rf-pagination__link"
+        class="rf-pagination__link--prev rf-pagination__link"
+        href="page7"
         title="Page précédente"
       >
-        <span
-          class="rf-pagination__label"
-        >
-          Précédente
-        </span>
+        Précédente
       </a>
     </li>
-    <li
-      class="rf-pagination__item"
-    >
+    <li>
       <a
         aria-label="Page 1"
         class="rf-pagination__link"
@@ -45,14 +38,10 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         1
       </a>
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       …
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       <a
         aria-label="Page 6"
         class="rf-pagination__link"
@@ -62,9 +51,7 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         6
       </a>
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       <a
         aria-label="Page 7"
         class="rf-pagination__link"
@@ -74,15 +61,17 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         7
       </a>
     </li>
-    <li
-      aria-current="page"
-      class="rf-pagination__item rf-pagination__item--active"
-    >
-      8
+    <li>
+      <a
+        aria-current="page"
+        aria-label="page"
+        class="rf-pagination__link"
+        title="page"
+      >
+        8
+      </a>
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       <a
         aria-label="Page 9"
         class="rf-pagination__link"
@@ -92,9 +81,7 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         9
       </a>
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       <a
         aria-label="Page 10"
         class="rf-pagination__link"
@@ -104,14 +91,10 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         10
       </a>
     </li>
-    <li
-      class="rf-pagination__item rf-pagination__item--from-md"
-    >
+    <li>
       …
     </li>
-    <li
-      class="rf-pagination__item"
-    >
+    <li>
       <a
         aria-label="Page 15"
         class="rf-pagination__link"
@@ -121,27 +104,21 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         15
       </a>
     </li>
-    <li
-      class="rf-pagination__item--next rf-pagination__item "
-    >
+    <li>
       <a
         aria-label="Page suivante"
-        class="rf-pagination__link"
+        class="rf-pagination__link--next rf-pagination__link"
+        href="page9"
         title="Page suivante"
       >
-        <span
-          class="rf-pagination__label"
-        >
-          Suivante
-        </span>
+        Suivante
       </a>
     </li>
-    <li
-      class="rf-pagination__item--last rf-pagination__item "
-    >
+    <li>
       <a
         aria-label="Dernière Page"
-        class="rf-pagination__link"
+        class="rf-pagination__link--last rf-pagination__link"
+        href="page15"
         title="Dernière Page"
       />
     </li>
