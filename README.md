@@ -2,13 +2,12 @@
 
 :warning: beta version :hammer:
 
-Current version is using [@gouvfr/dsfr@1.0.0-rc1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
-[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml)
-
-[![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml) [![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Non-official React version of the official @gouvfr/dsfr Design System. This project aims to offer React components of the official french [Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476)
+
+Current version is using [@gouvfr/dsfr@1.0.0-rc1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
