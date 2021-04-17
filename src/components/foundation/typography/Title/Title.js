@@ -11,8 +11,8 @@ const Title = ({
 }) => {
   const HtmlTag = `${as}`;
   const _className = classNames(className, {
-    [`rf-${look}`]: (look !== as),
-    [`rf-${as}`]: (look === as),
+    [`fr-${look}`]: (look !== as),
+    [`fr-${as}`]: (look === as),
   });
   return (
     <HtmlTag className={_className}>

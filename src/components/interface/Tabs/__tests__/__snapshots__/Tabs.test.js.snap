@@ -2,7 +2,7 @@
 
 exports[`<Tabs /> should render Tabs properly 1`] = `
 <div
-  className="rf-tabs rf-scheme-soft-blue-soft"
+  className="fr-tabs fr-scheme-soft-blue-soft"
   style={
     Object {
       "height": 500,
@@ -10,16 +10,16 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
   }
 >
   <ul
-    className="rf-tabs__list"
+    className="fr-tabs__list"
     role="tablist"
   >
     <li
       className=""
     >
       <button
-        aria-controls="rf-tabpanel-0"
+        aria-controls="fr-tabpanel-0"
         aria-selected="true"
-        className="rf-tabs__tab rf-tabs__tab--icon-left"
+        className="fr-tabs__tab fr-tabs__tab--icon-left"
         onClick={[Function]}
         role="tab"
         tabIndex="0"
@@ -32,9 +32,9 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
       className=""
     >
       <button
-        aria-controls="rf-tabpanel-1"
+        aria-controls="fr-tabpanel-1"
         aria-selected="false"
-        className="rf-tabs__tab rf-tabs__tab--icon-left"
+        className="fr-tabs__tab fr-tabs__tab--icon-left"
         onClick={[Function]}
         role="tab"
         tabIndex="0"
@@ -45,16 +45,16 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
     </li>
   </ul>
   <div
-    className="rf-tabs__panel rf-tabs__panel--selected"
-    id="rf-tabpanel-0"
+    className="fr-tabs__panel fr-tabs__panel--selected"
+    id="fr-tabpanel-0"
     role="tabpanel"
     tabIndex="0"
   >
     Tab #1
   </div>
   <div
-    className="rf-tabs__panel "
-    id="rf-tabpanel-1"
+    className="fr-tabs__panel "
+    id="fr-tabpanel-1"
     role="tabpanel"
     tabIndex="0"
   >

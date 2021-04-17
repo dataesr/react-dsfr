@@ -8,38 +8,38 @@ const FooterBody = ({ children, description, className }) => {
     (child) => child.type.name === 'Logo',
   );
   return (
-    <div className={classNames('rf-footer__body', className)}>
-      <div className="rf-footer__brand">{Logo}</div>
-      <div className="rf-footer__content">
-        <p className="rf-footer__content-desc">{description}</p>
-        <ul className="rf-footer__content-list">
-          <li className="rf-footer__content-item">
+    <div className={classNames('fr-footer__body', className)}>
+      <div className="fr-footer__brand">{Logo}</div>
+      <div className="fr-footer__content">
+        <p className="fr-footer__content-desc">{description}</p>
+        <ul className="fr-footer__content-list">
+          <li className="fr-footer__content-item">
             <Link
-              className="rf-footer__content-link"
+              className="fr-footer__content-link"
               href="https://legifrance.gouv.fr"
             >
               legifrance.gouv.fr
             </Link>
           </li>
-          <li className="rf-footer__content-item">
+          <li className="fr-footer__content-item">
             <Link
-              className="rf-footer__content-link"
+              className="fr-footer__content-link"
               href="https://gouvernement.fr"
             >
               gouvernement.fr
             </Link>
           </li>
-          <li className="rf-footer__content-item">
+          <li className="fr-footer__content-item">
             <Link
-              className="rf-footer__content-link"
+              className="fr-footer__content-link"
               href="https://service-public.fr"
             >
               service-public.fr
             </Link>
           </li>
-          <li className="rf-footer__content-item">
+          <li className="fr-footer__content-item">
             <Link
-              className="rf-footer__content-link"
+              className="fr-footer__content-link"
               href="https://data.gouv.fr"
             >
               data.gouv.fr

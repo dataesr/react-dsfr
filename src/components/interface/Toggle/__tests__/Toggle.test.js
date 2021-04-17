@@ -23,7 +23,7 @@ describe('<Toggle />', () => {
       />,
     );
     const toggle = screen.getByTestId('toggle');
-    expect(toggle.className).toBe('rf-toggle rf-toggle--border-bottom rf-toggle--label-left');
+    expect(toggle.className).toBe('fr-toggle fr-toggle--border-bottom fr-toggle--label-left');
     expect(toggle).toBeInTheDocument();
     expect(toggle).toMatchSnapshot();
   });

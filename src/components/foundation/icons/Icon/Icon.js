@@ -8,8 +8,8 @@ import classNames from 'classnames';
  * @visibleName Icon
  */
 const Icon = ({ icon, size, className }) => {
-  const _className = classNames(className, `rf-fi-${icon}`, {
-    [`rf-fi--${size}`]: (size !== 'md'),
+  const _className = classNames(className, `fr-fi-${icon}`, {
+    [`fr-fi--${size}`]: (size !== 'md'),
   });
   return <span className={_className} />;
 };

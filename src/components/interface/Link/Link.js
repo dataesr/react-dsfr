@@ -9,20 +9,20 @@ import '@gouvfr/dsfr/dist/css/links.min.css';
  * @visibleName Link
  */
 const Link = ({
-  children, href, title, target, isSimple, icon, className, iconPosition, as,
+  children, href, title, target, isSimple, icon, className, iconPosition, as, current,
 }) => {
   const _className = classNames(icon, className, {
-    'rf-link': isSimple,
-    'rf-link--icon-left': !isSimple && icon,
-    [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
+    'fr-link': isSimple,
+    'fr-link--icon-left': !isSimple && icon,
+    [`fr-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
 
   const asLink = as ? cloneElement(as, { className: _className }) : null;
-
   return (
     as ? <>{asLink}</>
       : (
         <a
+          aria-current={current ? 'page' : undefined}
           href={href}
           title={title || undefined}
           target={target}
@@ -40,6 +40,7 @@ Link.defaultProps = {
   title: '',
   target: '_self',
   isSimple: false,
+  current: false,
   icon: '',
   as: null,
   iconPosition: 'right',
@@ -63,6 +64,7 @@ Link.propTypes = {
   title: PropTypes.string,
   target: PropTypes.string,
   isSimple: PropTypes.bool,
+  current: PropTypes.bool,
   icon: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };

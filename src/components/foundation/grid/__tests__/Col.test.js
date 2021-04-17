@@ -8,7 +8,7 @@ it('renders Col properly', () => {
   );
   const col = screen.getByText('Text');
   expect(col).toBeInTheDocument();
-  expect(col.className).toBe('rf-col');
+  expect(col.className).toBe('fr-col');
 });
 
 it('renders Col-n properly', () => {
@@ -17,7 +17,7 @@ it('renders Col-n properly', () => {
   );
   const col = screen.getByText('Text');
   expect(col).toBeInTheDocument();
-  expect(col.className).toBe('rf-col-6');
+  expect(col.className).toBe('fr-col-6');
 });
 
 it('renders Col-n by display properly', () => {
@@ -26,7 +26,7 @@ it('renders Col-n by display properly', () => {
   );
   const col = screen.getByText('Text');
   expect(col).toBeInTheDocument();
-  expect(col.className).toBe('rf-col-xs-6');
+  expect(col.className).toBe('fr-col-xs-6');
 });
 
 it('renders Col offset properly', () => {
@@ -35,7 +35,7 @@ it('renders Col offset properly', () => {
   );
   const col = screen.getByText('Text');
   expect(col).toBeInTheDocument();
-  expect(col.className).toContain('rf-col-offset-xs-6');
+  expect(col.className).toContain('fr-col-offset-xs-6');
 });
 
 it('renders Col offset and n properly', () => {
@@ -44,6 +44,6 @@ it('renders Col offset and n properly', () => {
   );
   const col = screen.getByText('Text');
   expect(col).toBeInTheDocument();
-  expect(col.className).toContain('rf-col-offset-xs-6');
-  expect(col.className).toContain('rf-col-6');
+  expect(col.className).toContain('fr-col-offset-xs-6');
+  expect(col.className).toContain('fr-col-6');
 });

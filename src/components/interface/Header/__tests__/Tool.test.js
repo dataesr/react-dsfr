@@ -41,9 +41,9 @@ describe('<Tool />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should find rf-fi-close-line class when isOpenSearch is true', () => {
+  it('should find fr-fi-close-line class when isOpenSearch is true', () => {
     wrapper(<Tool>Item #1</Tool>, { ...context });
-    expect(screen.getByRole('button')).toHaveClass('rf-link--close');
+    expect(screen.getByRole('button')).toHaveClass('fr-link--close');
   });
 
   it('should call onOpenSearch on click', () => {

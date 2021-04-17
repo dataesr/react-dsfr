@@ -7,13 +7,11 @@ import Link from '../Link';
 const Service = ({
   title, description, className, link,
 }) => (
-  <div className={classNames(className, 'rf-header__service')}>
-    <div className="rf-service">
-      <Link className="rf-header__service-title" href={link} title={title}>
-        {title}
-      </Link>
-      <p className="rf-header__service-tagline">{description}</p>
-    </div>
+  <div className={classNames(className, 'fr-header__service')}>
+    <Link className="fr-header__service-title" href={link} title={title}>
+      {title}
+    </Link>
+    <p className="fr-header__service-tagline">{description}</p>
   </div>
 );
 

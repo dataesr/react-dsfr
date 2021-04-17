@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CardDetail = ({ children, className }) => (
-  <p className={classNames('rf-card__detail', className)}>{children}</p>
+  <p className={classNames('fr-card__detail', className)}>{children}</p>
 );
 CardDetail.propTypes = {
   children: PropTypes.string.isRequired,

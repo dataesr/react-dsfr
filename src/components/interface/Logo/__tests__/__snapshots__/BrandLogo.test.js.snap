@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> should render Logo properly 1`] = `
-<span
-  class="rf-logo__title"
+<p
+  class="fr-logo"
 >
   Ministère de
   <br />
@@ -14,5 +14,5 @@ exports[`<Logo /> should render Logo properly 1`] = `
   <br />
   et de l'innovation
   
-</span>
+</p>
 `;

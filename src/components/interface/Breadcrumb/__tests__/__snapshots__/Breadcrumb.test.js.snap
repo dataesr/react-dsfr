@@ -3,33 +3,32 @@
 exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
 <nav
   aria-label="Fil d'ariane"
-  class="rf-breadcrumb"
+  class="fr-breadcrumb"
   data-testid="bc-nav"
   style="max-height: calc(0px + 1rem);"
 >
   <button
-    class="rf-breadcrumb__button"
+    class="fr-breadcrumb__button"
     data-testid="bc-button"
     type="button"
   >
     Voir le fil d'ariane
   </button>
   <div
-    class="rf-collapse"
-    id="breadcrumb"
+    class="fr-collapse"
   >
     <ol
-      class="rf-breadcrumb__list"
+      class="fr-breadcrumb__list"
       data-testid="bc-list"
       hidden=""
     >
       <li
         aria-current="false"
-        class="rf-breadcrumb__item"
+        class="fr-breadcrumb__item"
         data-testid="bc-item"
       >
         <a
-          class="rf-breadcrumb__link"
+          class="fr-breadcrumb__link"
           href="#"
           target="_self"
         >
@@ -38,11 +37,11 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       </li>
       <li
         aria-current="false"
-        class="rf-breadcrumb__item"
+        class="fr-breadcrumb__item"
         data-testid="bc-item"
       >
         <a
-          class="rf-breadcrumb__link"
+          class="fr-breadcrumb__link"
           href="#"
           target="_self"
         >
@@ -51,7 +50,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       </li>
       <li
         aria-current="page"
-        class="rf-breadcrumb__item rf-breadcrumb__item--current"
+        class="fr-breadcrumb__item fr-breadcrumb__item--current"
         data-testid="bc-item"
       >
         Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué

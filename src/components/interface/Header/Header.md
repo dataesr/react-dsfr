@@ -17,7 +17,7 @@ import Logo from '../Logo';
             buttonClose='close'
         >
             <ToolItemGroup>
-                <ToolItem icon='rf-fi-lock-line' link='/path'>Tool Item #1</ToolItem>
+                <ToolItem icon='fr-fi-lock-line' link='/path'>Tool Item #1</ToolItem>
                 <ToolItem icon='rf-fi-add-circle-line' link='/path'>Tool Item #2</ToolItem>
             </ToolItemGroup>
             <SearchBar
@@ -33,9 +33,10 @@ import Logo from '../Logo';
         <NavItem title='nav item #1' link='/'/>
         <NavItem title='nav item #2'>
             <NavSubItem title='nav subItem #1' link='/path-to-resources-1'/>
-            <NavSubItem title='nav subItem #2' link='/path-to-resources-2'/>
+            <NavSubItem title='nav subItem #2' link='/path-to-resources-2' current/>
             <NavSubItem title='nav subItem #3' link='/path-to-resources-3'/>
         </NavItem>
+        <NavItem title='nav item #3' link='/' current/>
     </HeaderNav>
 </Header>
 ```

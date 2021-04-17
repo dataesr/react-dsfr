@@ -9,7 +9,7 @@ const FooterPartnersLogo = ({
   if (!href) {
     return (
       <img
-        className={classNames('rf-footer__logo', className)}
+        className={classNames('fr-footer__logo', className)}
         src={imageSrc}
         alt={imageAlt}
       />
@@ -20,7 +20,7 @@ const FooterPartnersLogo = ({
       className={classNames('footer__partners-link', className)}
       href={href}
     >
-      <img className="rf-footer__logo" src={imageSrc} alt={imageAlt} />
+      <img className="fr-footer__logo" src={imageSrc} alt={imageAlt} />
     </Link>
   );
 };

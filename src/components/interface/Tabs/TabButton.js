@@ -9,11 +9,11 @@ const TabButton = ({
     <button
       onClick={() => setActiveTab(index)}
       type="button"
-      className={classNames('rf-tabs__tab', icon, { [`rf-tabs__tab--icon-${iconPosition}`]: iconPosition })}
+      className={classNames('fr-tabs__tab', icon, { [`fr-tabs__tab--icon-${iconPosition}`]: iconPosition })}
       tabIndex="0"
       role="tab"
       aria-selected={activeTab === index ? 'true' : 'false'}
-      aria-controls={`rf-tabpanel-${index}`}
+      aria-controls={`fr-tabpanel-${index}`}
     >
       {label}
     </button>

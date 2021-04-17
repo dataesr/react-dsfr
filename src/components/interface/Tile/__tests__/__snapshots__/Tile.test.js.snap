@@ -2,16 +2,16 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="rf-tile rf-enlarge-link rf-tile--horizontal my-class"
+  className="fr-tile fr-enlarge-link fr-tile--horizontal my-class"
 >
   <div
-    className="rf-tile__body"
+    className="fr-tile__body"
   >
     <p
-      className="rf-tile__title"
+      className="fr-tile__title"
     >
       <a
-        className="rf-tile__link"
+        className="fr-tile__link"
         href="/path"
         target="linkTarget"
         title="linkTitle"
@@ -20,13 +20,13 @@ exports[`<Tile /> renders correctly 1`] = `
       </a>
     </p>
     <p
-      className="rf-tile__desc"
+      className="fr-tile__desc"
     >
       description
     </p>
   </div>
   <div
-    className="rf-tile__img"
+    className="fr-tile__img"
   >
     <img
       alt=""

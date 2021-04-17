@@ -32,8 +32,8 @@ describe('<Header />', () => {
               buttonClose="fermer"
             >
               <ToolItemGroup>
-                <ToolItem icon="rf-fi-lock-line" link="/path">Se connecter</ToolItem>
-                <ToolItem icon="rf-fi-add-circle-line" link="/path">Créer un espace</ToolItem>
+                <ToolItem icon="fr-fi-lock-line" link="/path">Se connecter</ToolItem>
+                <ToolItem icon="fr-fi-add-circle-line" link="/path">Créer un espace</ToolItem>
               </ToolItemGroup>
             </Tool>
           </HeaderBody>

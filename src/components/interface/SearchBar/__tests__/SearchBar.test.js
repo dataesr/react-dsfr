@@ -36,8 +36,8 @@ describe('<SearchBar />', () => {
     );
     const search = screen.getByTestId('search-bar');
     expect(search).toBeInTheDocument();
-    expect(search.className).toBe('rf-search-bar rf-search-bar--lg');
-    expect(screen.getByText('Rechercher').className).toBe('rf-btn rf-btn--lg');
+    expect(search.className).toBe('fr-search-bar fr-search-bar--lg');
+    expect(screen.getByText('Rechercher').className).toBe('fr-btn fr-btn--lg');
     expect(search).toMatchSnapshot();
   });
 
@@ -54,7 +54,7 @@ describe('<SearchBar />', () => {
     expect(input).toBeInTheDocument();
     expect(input.value).toBe('');
     expect(input.type).toBe('search');
-    expect(input.className).toBe('rf-input');
+    expect(input.className).toBe('fr-input');
     expect(input.id).toBe('xxxxxxx');
   });
 
@@ -69,7 +69,7 @@ describe('<SearchBar />', () => {
     );
     const label = screen.getByText('SearchBar du gouvernement');
     expect(label).toBeInTheDocument();
-    expect(label.className).toBe('rf-label');
+    expect(label.className).toBe('fr-label');
     expect(label.htmlFor).toBe('xxxxxxx');
   });
 

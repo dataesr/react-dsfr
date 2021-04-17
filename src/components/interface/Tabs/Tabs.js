@@ -28,10 +28,10 @@ const Tabs = ({
     key: uuidv4(),
   }));
 
-  const _className = classNames('rf-tabs', className, { [`rf-scheme-${scheme}`]: scheme });
+  const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });
   return (
     <div className={_className} style={{ height: contentTabHeight }}>
-      <ul className="rf-tabs__list" role="tablist">
+      <ul className="fr-tabs__list" role="tablist">
         {tabsPanel.map((element, index) => (
           <TabButton
             key={uuidv4()}

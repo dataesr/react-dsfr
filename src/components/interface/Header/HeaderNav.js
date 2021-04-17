@@ -10,34 +10,37 @@ const HeaderNav = ({
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
   } = useContext(HeaderContext);
-  const _className = classNames(className, 'rf-nav rf-modal', {
-    'rf-modal--opened': isOpenNav,
+  const _className = classNames(className, 'fr-header__menu fr-modal', {
+    'fr-modal--opened': isOpenNav,
   });
   return (
-    <nav
-      className={_className}
-      role="navigation"
-      aria-label="Menu principal"
-      id="header-nav-popin"
-    >
-      {isMobile && (
-      <div className="rf-shortcuts">
-        <ul className={classNames(shortcutClassName, 'rf-shortcuts__list')} />
+    <div className={_className}>
+      <div className="fr-container">
+        <button
+          onClick={onOpenNav}
+          title={closeButtonLabel}
+          className="fr-link--close fr-link"
+          type="button"
+          aria-label="fermer la navigation"
+        >
+          {closeButtonLabel}
+        </button>
+        {isMobile && (
+        <div className="fr-header__menu-links">
+          <ul className={classNames(shortcutClassName, 'fr-links-group')} />
+        </div>
+        )}
+        <nav
+          className="fr-nav"
+          role="navigation"
+          aria-label="Menu principal"
+        >
+          <ul className="fr-nav__list">
+            {children}
+          </ul>
+        </nav>
       </div>
-      )}
-      <button
-        onClick={onOpenNav}
-        type="button"
-        className="rf-link--close rf-link"
-        title="Fermer"
-        aria-controls="header-nav-popin"
-      >
-        {closeButtonLabel}
-      </button>
-      <ul className="rf-nav__list">
-        {children}
-      </ul>
-    </nav>
+    </div>
   );
 };
 

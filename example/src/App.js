@@ -148,8 +148,8 @@ const App = () => {
                     buttonClose='fermer'
                 >
                     <ToolItemGroup>
-                        <ToolItem icon='rf-fi-lock-line' link='/path'>Example</ToolItem>
-                        <ToolItem icon='rf-fi-add-circle-line' link='/path'>Example</ToolItem>
+                        <ToolItem icon='fr-fi-lock-line' link='/path'>Example</ToolItem>
+                        <ToolItem icon='fr-fi-add-circle-line' link='/path'>Example</ToolItem>
                     </ToolItemGroup>
                     <SearchBar
                         onSearch={() => {
@@ -207,7 +207,7 @@ const App = () => {
             </Row>
             <Title as="h3">Sidemenu</Title>
             <Row>
-                <Col n="sm-12" className="rf-col-md-3">
+                <Col n="sm-12" className="fr-col-md-3">
                     <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
                         <SideMenuItem title="Niveau 1">
                             <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
@@ -334,7 +334,7 @@ const App = () => {
                     >
                         <iframe
                             title="titre de l’iframe"
-                            className="rf-responsive-vid__player"
+                            className="fr-responsive-vid__player"
                             src="https://www.youtube.com/embed/HyirpmPL43I"
                             width="100%"
                             height="100%"

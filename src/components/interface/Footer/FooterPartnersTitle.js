@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const FooterPartnersTitle = ({ as, children, className }) => {
   const Tag = `${as}`;
   return (
-    <Tag className={classNames('rf-footer__partners-title', className)}>
+    <Tag className={classNames('fr-footer__partners-title', className)}>
       {children}
     </Tag>
   );

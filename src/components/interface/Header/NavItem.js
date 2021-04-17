@@ -4,26 +4,28 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import Link from '../Link';
 
-const NavItem = ({ children, title, link }) => {
+const NavItem = ({
+  children, title, link, current,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
 
   const expandedItem = {
     false: {
-      class: 'rf-menu rf-collapse',
+      class: 'fr-menu fr-collapse',
       stateHeight: null,
-      aria: 'false',
+      ariaExpanded: 'false',
       expanded: false,
     },
     true: {
-      class: 'rf-menu rf-collapse rf-collapse--expanded',
+      class: 'fr-menu fr-collapse fr-collapse--expanded',
       stateHeight: 'none',
-      aria: 'true',
+      ariaExpanded: 'true',
       expanded: true,
     },
   };
   useEffect(() => {
-    const menuHeight = document.querySelector('.rf-menu');
+    const menuHeight = document.querySelector('.fr-menu');
     if (menuHeight) {
       setCollapse(menuHeight.getBoundingClientRect().height);
     }
@@ -32,27 +34,28 @@ const NavItem = ({ children, title, link }) => {
   const item = expandedItem[isExpanded];
   const subItems = Children.toArray(children).filter((child) => !!child);
   return subItems && subItems.length > 0 ? (
-    <li className="rf-nav__item">
+    <li className="fr-nav__item">
       <button
-        aria-controls={`rf-nav-${title}`}
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
-        aria-expanded={item.aria}
-        className="rf-nav__btn"
+        aria-expanded={item.ariaExpanded}
+        aria-current={current || undefined}
+        className="fr-nav__btn"
+        aria-label="ouvrir la navigation"
       >
         {title}
       </button>
       <div
-        id={`rf-nav-subitem-${uuidv4()}`}
-        className={`rf-menu rf-collapse ${item.class}`}
+        id={`fr-nav-subitem-${uuidv4()}`}
+        className={item.class}
         style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
       >
-        <ul className="rf-menu__list">{children}</ul>
+        <ul className="fr-menu__list">{children}</ul>
       </div>
     </li>
   ) : (
-    <li className="rf-nav__item">
-      <Link className="rf-nav__link" href={link}>
+    <li className="fr-nav__item">
+      <Link className="fr-nav__link" href={link} current={current}>
         {title}
       </Link>
     </li>
@@ -62,6 +65,7 @@ const NavItem = ({ children, title, link }) => {
 NavItem.defaultProps = {
   link: '',
   children: '',
+  current: false,
 };
 NavItem.propTypes = {
   children: PropTypes.oneOfType([
@@ -71,6 +75,7 @@ NavItem.propTypes = {
   ]),
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
+  current: PropTypes.bool,
 };
 
 export default NavItem;

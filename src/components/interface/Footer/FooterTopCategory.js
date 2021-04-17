@@ -13,8 +13,8 @@ const FooterTopCategory = ({
   const childs = children.filter((link) => link.type.name !== 'FooterLink');
   return (
     <Col n={n} offset={offset} className={classNames(className)}>
-      <div className="rf-footer__top-cat">{title}</div>
-      <ul className="rf-footer__top-list">
+      <div className="fr-footer__top-cat">{title}</div>
+      <ul className="fr-footer__top-list">
         {links}
         {childs}
       </ul>

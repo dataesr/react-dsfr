@@ -10,7 +10,7 @@ const TitleDisplay = ({
   as, size, children, className,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames(className, { [`rf-display-${size}`]: size });
+  const _className = classNames(className, { [`fr-display-${size}`]: size });
   return (
     <HtmlTag className={_className}>
       {children}

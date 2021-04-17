@@ -23,11 +23,11 @@ const TextInput = forwardRef((props, ref) => {
     className,
   } = props;
 
-  const _classNameWrapper = classNames('rf-input-group', {
-    [`rf-input-group--${messageType}`]: messageType,
+  const _classNameWrapper = classNames('fr-input-group', {
+    [`fr-input-group--${messageType}`]: messageType,
   }, className);
-  const _className = classNames('rf-input', {
-    [`rf-input--${messageType}`]: messageType,
+  const _className = classNames('fr-input', {
+    [`fr-input--${messageType}`]: messageType,
   });
 
   const inputId = uuidv4();
@@ -35,8 +35,8 @@ const TextInput = forwardRef((props, ref) => {
   const messageId = message && uuidv4();
   return (
     <div className={_classNameWrapper}>
-      {label && <label className="rf-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
-      {hint && <p className="rf-hint-text" id={hintId}>{hint}</p>}
+      {label && <label className="fr-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
+      {hint && <p className="fr-hint-text" id={hintId}>{hint}</p>}
       {
         (textarea)
           ? (
@@ -61,8 +61,8 @@ const TextInput = forwardRef((props, ref) => {
             />
           )
     }
-      {(message && messageType === 'error') && <p id={messageId} className="rf-error-text">{message}</p>}
-      {(message && messageType === 'valid') && <p id={messageId} className="rf-valid-text">{message}</p>}
+      {(message && messageType === 'error') && <p id={messageId} className="fr-error-text">{message}</p>}
+      {(message && messageType === 'valid') && <p id={messageId} className="fr-valid-text">{message}</p>}
     </div>
   );
 });

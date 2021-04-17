@@ -12,12 +12,15 @@ import '@gouvfr/dsfr/dist/css/callouts.min.css';
 const Callout = ({
   scheme, hasInfoIcon, children, className,
 }) => {
-  const _className = classNames('rf-callout', className, {
-    'rf-fi-information-line': hasInfoIcon,
-    [`rf-callout--scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-callout', className, {
+    'fr-fi-information-line': hasInfoIcon,
+    [`fr-callout--scheme-${scheme}`]: scheme,
   });
   return (
-    <div className={_className} data-testid="callout">
+    <div
+      className={_className}
+      data-testid="callout"
+    >
       {children}
     </div>
   );

@@ -20,7 +20,7 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 ```
     
 ```jsx
-<Link icon="rf-fi-search-line" title="titre lien interne" href="/my-page">lien contextuel avec icône</Link>
+<Link icon="fr-fi-search-line" title="titre lien interne" href="/my-page">lien contextuel avec icône</Link>
 ```
 
 #### Usage avec react-router-dom
@@ -29,7 +29,7 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router-dom';
 
 <Router>
-    <Route path="/" component={(props) => (<Link icon="rf-fi-search-line" title="titre lien interne" as={<RouterLink to="/my-page">lien contextuel avec icône</RouterLink>} />)} />
+    <Route path="/" component={(props) => (<Link icon="fr-fi-search-line" title="titre lien interne" as={<RouterLink to="/my-page">lien contextuel avec icône</RouterLink>} />)} />
 </Router>
 ```
 
@@ -57,14 +57,14 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
 ```
 
 ```jsx
-<Link href="#" isSimple icon="rf-fi-arrow-right-line">lien simple avec icône à droite</Link>
+<Link href="#" isSimple icon="fr-fi-arrow-right-line">lien simple avec icône à droite</Link>
 ```
 
 ```jsx
-<Link href="#" isSimple icon="rf-fi-arrow-left-line" iconPosition="left">lien simple avec icône à gauche</Link>
+<Link href="#" isSimple icon="fr-fi-arrow-left-line" iconPosition="left">lien simple avec icône à gauche</Link>
 ```
 
 L’icône seule n'est à utiliser que très rarement, et le lien doit contenir un texte afin d'être lu par les lecteurs d'écran.
 ```jsx
-<Link href="#" isSimple icon="rf-fi-arrow-down-line" iconPosition="left" />
+<Link href="#" isSimple icon="fr-fi-arrow-down-line" iconPosition="left" />
 ```

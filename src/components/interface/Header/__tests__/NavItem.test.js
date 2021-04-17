@@ -50,6 +50,6 @@ describe('<NavItem />', () => {
     const children = <NavSubItem title="Ressource #1" link="/path-to-resources-1" />;
     const component = wrapper(initialProps, children);
     component.find('[type="button"]').simulate('click');
-    expect(component.find('.rf-collapse--expanded').exists()).toBeTruthy();
+    expect(component.find('.fr-collapse--expanded').exists()).toBeTruthy();
   });
 });

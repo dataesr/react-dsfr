@@ -17,16 +17,19 @@ const ButtonGroup = ({
   align,
 }) => {
   const content = Children.toArray(children).map((child) => <li key={uuidv4()}>{child}</li>);
-  const _className = classNames('rf-btns-group', {
-    [`rf-btns-group--${size}`]: (size !== 'md'),
-    [`rf-btns-group--${align}`]: (align !== 'left'),
-    'rf-btns-group--inline': (isInlineFrom === 'xs'),
-    [`rf-btns-group--inline-${isInlineFrom}`]: (isInlineFrom !== 'xs'),
-    'rf-btns-group--inline-reverse': isReversed,
-    'rf-btns-group--equisized': isEquisized,
+  const _className = classNames('fr-btns-group', {
+    [`fr-btns-group--${size}`]: (size !== 'md'),
+    [`fr-btns-group--${align}`]: (align !== 'left'),
+    'fr-btns-group--inline': (isInlineFrom === 'xs'),
+    [`fr-btns-group--inline-${isInlineFrom}`]: (isInlineFrom !== 'xs'),
+    'fr-btns-group--inline-reverse': isReversed,
+    'fr-btns-group--equisized': isEquisized,
   }, className);
   return (
-    <ul className={_className} data-testid="button-group">
+    <ul
+      className={_className}
+      data-testid="button-group"
+    >
       {content}
     </ul>
   );

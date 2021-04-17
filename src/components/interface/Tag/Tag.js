@@ -22,11 +22,11 @@ const Tag = ({
   scheme,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames('rf-tag', {
-    [`rf-tag--${size}`]: size,
-    [`rf-fi-${icon}`]: icon,
-    [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
-    [`rf-scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-tag', {
+    [`fr-tag--${size}`]: size,
+    [`fr-fi-${icon}`]: icon,
+    [`fr-tag--icon-${iconPosition}`]: (icon && iconPosition),
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
 
   return (

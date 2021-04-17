@@ -9,9 +9,12 @@ import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
  * @visibleName Skiplinks
  */
 const Skiplinks = ({ children, className }) => (
-  <div data-testid="skiplinks" className={classNames('rf-skiplinks', className)}>
-    <div className="rf-container">
-      <ul className="rf-skiplinks__list">
+  <div
+    className={classNames('fr-skiplinks', className)}
+    data-testid="skiplinks"
+  >
+    <div className="fr-container">
+      <ul className="fr-skiplinks__list">
         {children}
       </ul>
     </div>

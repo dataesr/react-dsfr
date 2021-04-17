@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import Link from '../Link';
+import '../../../reset.css';
 
 import '@gouvfr/dsfr/dist/css/logo.min.css';
 
@@ -26,11 +27,11 @@ const Logo = ({
     <Link
       title={hrefTitle || children}
       href={href}
-      className={classNames('rf-logo', className)}
+      className={classNames(className)}
     >
-      <span className="rf-logo__title">
+      <p className="fr-logo">
         {title}
-      </span>
+      </p>
     </Link>
   );
 };

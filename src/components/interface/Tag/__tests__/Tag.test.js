@@ -12,7 +12,7 @@ describe('<Tag />', () => {
     render(<Tag size="sm" as="span">tag-test</Tag>);
     const tag = screen.getByText(/tag-test/i);
     expect(tag).toBeInTheDocument();
-    expect(tag.className).toBe('rf-tag rf-tag--sm');
+    expect(tag.className).toBe('fr-tag fr-tag--sm');
     expect(tag).toMatchSnapshot();
   });
   it('should renders TagGroup properly', () => {
@@ -27,7 +27,7 @@ describe('<Tag />', () => {
     const tagGroup = screen.getByTestId('tag-group');
     expect(tagGroup).toBeInTheDocument();
     const tags = screen.getAllByText('tag-test');
-    expect(tags[0].className).toBe('rf-tag rf-tag--sm');
+    expect(tags[0].className).toBe('fr-tag fr-tag--sm');
     expect(tags).toHaveLength(4);
     expect(tagGroup).toMatchSnapshot();
   });

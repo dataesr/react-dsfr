@@ -8,7 +8,7 @@ it('renders Row properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toBe('rf-grid-row');
+  expect(row.className).toBe('fr-grid-row');
 });
 
 it('renders Row with gutters properly', () => {
@@ -17,7 +17,7 @@ it('renders Row with gutters properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toBe('rf-grid-row rf-grid-row--gutters');
+  expect(row.className).toBe('fr-grid-row fr-grid-row--gutters');
 });
 
 it('renders Row with alignItems properly', () => {
@@ -26,7 +26,7 @@ it('renders Row with alignItems properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toContain('rf-grid-row--middle');
+  expect(row.className).toContain('fr-grid-row--middle');
 });
 
 it('renders Row with justifyContent properly', () => {
@@ -35,7 +35,7 @@ it('renders Row with justifyContent properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toContain('rf-grid-row--center');
+  expect(row.className).toContain('fr-grid-row--center');
 });
 
 it('renders Row offset and n properly', () => {
@@ -44,7 +44,7 @@ it('renders Row offset and n properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toContain('rf-grid-row--center');
-  expect(row.className).toContain('rf-grid-row--middle');
-  expect(row.className).toContain('rf-grid-row--gutters');
+  expect(row.className).toContain('fr-grid-row--center');
+  expect(row.className).toContain('fr-grid-row--middle');
+  expect(row.className).toContain('fr-grid-row--gutters');
 });

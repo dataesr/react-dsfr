@@ -1,6 +1,8 @@
 # @dataesr/react-dsfr
 
-:warning: Project is still beta version :hammer:
+:warning: beta version :hammer:
+
+Current version is using [@gouvfr/dsfr@1.0.0-rc1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 [![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml)
 

@@ -43,8 +43,8 @@ describe('<Select />', () => {
     expect(search).toBeInTheDocument();
   });
 
-  // test de la présence de la class rf-select
-  it('has rf-select class', () => {
+  // test de la présence de la class fr-select
+  it('has fr-select class', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
@@ -52,11 +52,11 @@ describe('<Select />', () => {
         messageType="valid"
       />,
     );
-    expect(container.getElementsByClassName('rf-select').length).toBe(1);
+    expect(container.getElementsByClassName('fr-select').length).toBe(1);
   });
 
   // test de la class d'erreur
-  it('has rf-select class', () => {
+  it('has fr-select class', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
@@ -64,11 +64,11 @@ describe('<Select />', () => {
         messageType="error"
       />,
     );
-    expect(container.getElementsByClassName('rf-select--error').length).toBe(1);
+    expect(container.getElementsByClassName('fr-select--error').length).toBe(1);
   });
 
   // test de la class succès
-  it('has rf-select class', () => {
+  it('has fr-select class', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
@@ -76,6 +76,6 @@ describe('<Select />', () => {
         messageType="valid"
       />,
     );
-    expect(container.getElementsByClassName('rf-select--valid').length).toBe(1);
+    expect(container.getElementsByClassName('fr-select--valid').length).toBe(1);
   });
 });

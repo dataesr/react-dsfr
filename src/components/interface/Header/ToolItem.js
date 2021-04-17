@@ -8,8 +8,14 @@ import Link from '../Link';
 const ToolItem = ({
   icon, link, className, children,
 }) => (
-  <li className={classNames('rf-shortcuts__item', className)} key={uuidv4()}>
-    <Link isSimple icon={icon || ''} iconPosition="left" href={link}>
+  <li key={uuidv4()}>
+    <Link
+      className={classNames(className)}
+      isSimple
+      icon={icon || ''}
+      iconPosition="left"
+      href={link}
+    >
       {children}
     </Link>
   </li>

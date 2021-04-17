@@ -52,29 +52,32 @@ const Header = ({
   return (
     <HeaderContext.Provider value={contextProps}>
       <header
-        className={classNames(className, 'rf-header')}
+        className={classNames(className, 'fr-header')}
         role="banner"
       >
-        <div className="rf-container">
-          {children}
-          {isNavTool && !isNavBar && (
-          <nav
-            className="rf-nav"
-            role="navigation"
-            aria-label="Menu principal"
-          >
-            <button
-              onClick={() => setOpenNav(false)}
-              type="button"
-              className="rf-link--close rf-link"
-              title="Fermer"
-              aria-controls="header-nav-popin"
+        {children}
+        {isNavTool && !isNavBar && (
+        <div className="fr-header__menu">
+          <div className="fr-container">
+            <div className="fr-header__menu-links" />
+            <nav
+              className="fr-nav"
+              role="navigation"
+              aria-label="Menu principal"
             >
-              Fermer
-            </button>
-          </nav>
-          )}
+              <button
+                onClick={() => setOpenNav(false)}
+                type="button"
+                className="fr-link--close fr-link"
+                title="Fermer"
+                aria-controls="header-nav-popin"
+              >
+                OLD Fermer
+              </button>
+            </nav>
+          </div>
         </div>
+        )}
       </header>
     </HeaderContext.Provider>
   );

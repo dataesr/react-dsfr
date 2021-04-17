@@ -23,25 +23,27 @@ const Radio = (props) => {
     value,
   } = props;
 
-  const messageClasses = (messageType !== '') ? `rf-radio-group--${messageType}` : null;
-  const sizeClass = (size !== 'md') ? 'rf-radio-group--sm' : null;
-  const inputClasses = classNames('rf-radio-group', className, messageClasses, sizeClass);
+  const messageClasses = (messageType !== '') ? `fr-radio-group--${messageType}` : null;
+  const sizeClass = (size !== 'md') ? 'fr-radio-group--sm' : null;
+  const inputClasses = classNames('fr-radio-group', className, messageClasses, sizeClass);
   const radioId = id || uuidv4();
   const messageId = uuidv4();
 
   return (
-    <div className={inputClasses}>
+    <div
+      className={inputClasses}
+      data-testid="radio"
+    >
       <input
-        data-testid="radio-testid"
         type="radio"
         id={radioId}
         name="radio"
         onChange={onChange}
         value={value}
       />
-      <label className="rf-label" htmlFor={radioId}>{label}</label>
-      {hint && <span className="rf-hint-text">{hint}</span>}
-      {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
+      <label className="fr-label" htmlFor={radioId}>{label}</label>
+      {hint && <span className="fr-hint-text">{hint}</span>}
+      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };

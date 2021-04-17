@@ -2,8 +2,8 @@
 
 exports[`<Tab /> renders Tab correctly 1`] = `
 <div
-  className="rf-tabs__panel rf-tabs__panel--selected my-class"
-  id="rf-tabpanel-0"
+  className="fr-tabs__panel fr-tabs__panel--selected my-class"
+  id="fr-tabpanel-0"
   role="tabpanel"
   tabIndex="0"
 >

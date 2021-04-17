@@ -17,11 +17,11 @@ const Tile = ({
   children,
   scheme,
 }) => {
-  const _className = classNames('rf-tile rf-enlarge-link', {
-    'rf-tile--horizontal': horizontal,
-    'rf-tile--horizontal-md': !horizontal && horizontalMedium,
-    'rf-tile--vertical-md': verticalMedium && horizontal,
-    [`rf-scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-tile fr-enlarge-link', {
+    'fr-tile--horizontal': horizontal,
+    'fr-tile--horizontal-md': !horizontal && horizontalMedium,
+    'fr-tile--vertical-md': verticalMedium && horizontal,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };

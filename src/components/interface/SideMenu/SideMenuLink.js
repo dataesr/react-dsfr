@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import Link from '../Link';
 
 const SideMenuLink = ({ children, href, className }) => (
-  <li className={classNames('rf-sidemenu__item', className)}>
-    <Link className="rf-sidemenu__link" href={href}>
+  <li className={classNames('fr-sidemenu__item', className)}>
+    <Link className="fr-sidemenu__link" href={href}>
       {children}
     </Link>
   </li>

@@ -20,30 +20,33 @@ const Toggle = ({
   onChange,
 }) => {
   const _id = id || uuidv4();
-  const _className = classNames('rf-toggle', {
-    'rf-toggle--border-bottom': hasSeparator,
-    'rf-toggle--label-left': hasLabelLeft,
+  const _className = classNames('fr-toggle', {
+    'fr-toggle--border-bottom': hasSeparator,
+    'fr-toggle--label-left': hasLabelLeft,
   }, className);
   return (
-    <div className={_className} data-testid="toggle">
+    <div
+      className={_className}
+      data-testid="toggle"
+    >
       <input
+        data-testid="toggle-input"
         type="checkbox"
         checked={isChecked}
         disabled={isDisabled}
         onChange={() => onChange()}
-        className="rf-toggle__input"
+        className="fr-toggle__input"
         id={_id}
-        data-testid="toggle-input"
       />
       <label
-        className="rf-toggle__label"
+        className="fr-toggle__label"
         htmlFor={_id}
-        data-rf-checked-label="Activé"
-        data-rf-unchecked-label="Désactivé"
+        data-fr-checked-label="Activé"
+        data-fr-unchecked-label="Désactivé"
       >
         {label}
       </label>
-      {description && <p className="rf-hint-text">{description}</p>}
+      {description && <p className="fr-hint-text">{description}</p>}
     </div>
   );
 };

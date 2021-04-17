@@ -6,17 +6,17 @@ import { createPortal } from 'react-dom';
 import HeaderContext from './headerContext';
 
 const ToolItemGroup = ({ children, className }) => {
-  const [shortcutListElement, setShortcutListElement] = useState();
+  const [menuLinkElement, setMenuLinkElement] = useState();
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
-    setShortcutListElement(document.querySelector('.rf-nav .rf-shortcuts__list'));
-  }, [shortcutClassName, setShortcutListElement]);
+    setMenuLinkElement(document.querySelector('.fr-header__menu .fr-links-group'));
+  }, [shortcutClassName, setMenuLinkElement, menuLinkElement]);
 
   return (
     <>
-      {isMobile && shortcutListElement && createPortal(children, shortcutListElement)}
-      <div className={classNames(className, 'rf-shortcuts')}>
-        <ul className="rf-shortcuts__list">
+      {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
+      <div className={classNames(className, 'fr-header__tools-links')}>
+        <ul className="fr-links-group">
           {children}
         </ul>
       </div>

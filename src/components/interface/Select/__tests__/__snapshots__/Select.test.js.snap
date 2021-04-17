@@ -2,18 +2,18 @@
 
 exports[`<Select /> renders correctly 1`] = `
 <div
-  className="rf-select-group rf-select-group--valid"
+  className="fr-select-group fr-select-group--valid"
 >
   <label
     aria-describedby="label-1-xxx"
-    className="rf-label"
+    className="fr-label"
     htmlFor="message-xxxxxxx"
   >
     Label pour liste déroulante
     
   </label>
   <select
-    className="rf-select rf-select--valid"
+    className="fr-select fr-select--valid"
     data-testid="select"
     disabled={false}
     id="message-xxxxxxx"

@@ -42,7 +42,7 @@ describe('<Tabs />', () => {
   });
 
   it('should have custom class', () => {
-    expect(wrapper.find('.rf-tabs').hasClass('my-class')).toBeTruthy();
+    expect(wrapper.find('.fr-tabs').hasClass('my-class')).toBeTruthy();
   });
 
   it('should call setHeight', () => {

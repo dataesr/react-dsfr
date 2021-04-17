@@ -2,7 +2,7 @@ import React, { useState, Children, cloneElement } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import '../../../reset.css';
 import '@gouvfr/dsfr/dist/css/accordions.min.css';
 
 /**
@@ -31,8 +31,11 @@ const Accordion = ({ className, children, as }) => {
   });
 
   return (
-    <HtmlTag className={classNames(className)} data-testid="accordion-group">
-      <ul className="rf-accordions-group">{childs}</ul>
+    <HtmlTag
+      className={classNames(className)}
+      data-testid="accordion-group"
+    >
+      <ul className="fr-accordion-group">{childs}</ul>
     </HtmlTag>
   );
 };

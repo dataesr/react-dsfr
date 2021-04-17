@@ -2,24 +2,20 @@
 
 exports[`<Service /> renders correctly 1`] = `
 <div
-  className="rf-header__service"
+  className="fr-header__service"
 >
-  <div
-    className="rf-service"
+  <a
+    className="fr-header__service-title"
+    href="/"
+    target="_self"
+    title="title"
   >
-    <a
-      className="rf-header__service-title"
-      href="/"
-      target="_self"
-      title="title"
-    >
-      title
-    </a>
-    <p
-      className="rf-header__service-tagline"
-    >
-      description service
-    </p>
-  </div>
+    title
+  </a>
+  <p
+    className="fr-header__service-tagline"
+  >
+    description service
+  </p>
 </div>
 `;

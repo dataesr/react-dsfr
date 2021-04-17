@@ -2,26 +2,26 @@
 
 exports[`<Toggle /> renders Toggle properly 1`] = `
 <div
-  class="rf-toggle rf-toggle--border-bottom rf-toggle--label-left"
+  class="fr-toggle fr-toggle--border-bottom fr-toggle--label-left"
   data-testid="toggle"
 >
   <input
     checked=""
-    class="rf-toggle__input"
+    class="fr-toggle__input"
     data-testid="toggle-input"
     id="xxxxxxx"
     type="checkbox"
   />
   <label
-    class="rf-toggle__label"
-    data-rf-checked-label="Activé"
-    data-rf-unchecked-label="Désactivé"
+    class="fr-toggle__label"
+    data-fr-checked-label="Activé"
+    data-fr-unchecked-label="Désactivé"
     for="xxxxxxx"
   >
     Accepter les cookies
   </label>
   <p
-    class="rf-hint-text"
+    class="fr-hint-text"
   >
     Activez-moi!
   </p>

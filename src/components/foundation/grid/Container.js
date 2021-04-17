@@ -15,9 +15,9 @@ const Container = ({
 }) => {
   const { margin, padding } = getSpace(rest);
   const _className = classNames(margin, padding, {
-    'rf-container': !fluid,
-    'rf-container-fluid': fluid,
-    [`rf-scheme-${scheme}`]: scheme,
+    'fr-container': !fluid,
+    'fr-container-fluid': fluid,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const FooterTop = ({ children, align, className }) => (
-  <div className={classNames('rf-footer__top', className)}>
-    <div className="rf-container">
-      <div className={`rf-grid-row rf-grid-row--${align} rf-grid-row--gutters`}>
+  <div className={classNames('fr-footer__top', className)}>
+    <div className="fr-container">
+      <div className={`fr-grid-row fr-grid-row--${align} fr-grid-row--gutters`}>
         {children}
       </div>
     </div>

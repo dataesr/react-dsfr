@@ -5,9 +5,9 @@ import Link from '../Link';
 
 const BreadcrumbItem = ({ className, children, href }) => {
   const _className = classNames(
-    'rf-breadcrumb__item',
+    'fr-breadcrumb__item',
     {
-      'rf-breadcrumb__item--current': !href,
+      'fr-breadcrumb__item--current': !href,
     },
     className,
   );
@@ -17,7 +17,7 @@ const BreadcrumbItem = ({ className, children, href }) => {
       aria-current={!href && 'page'}
       data-testid="bc-item"
     >
-      {href ? <Link className="rf-breadcrumb__link" href={href}>{children}</Link> : children}
+      {href ? <Link className="fr-breadcrumb__link" href={href}>{children}</Link> : children}
     </li>
   );
 };

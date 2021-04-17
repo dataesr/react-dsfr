@@ -10,15 +10,15 @@ const Tab = ({
   const getHeight = (el) => el.getBoundingClientRect().height;
   useEffect(() => {
     if (activeTab === index) {
-      const current = document.getElementById(`rf-tabpanel-${index}`);
-      const tab = document.querySelector('.rf-tabs__list');
+      const current = document.getElementById(`fr-tabpanel-${index}`);
+      const tab = document.querySelector('.fr-tabs__list');
       setHeight(current && tab ? getHeight(current) + getHeight(tab) : 0);
     }
   }, [index, setHeight, activeTab]);
   return (
     <div
-      id={`rf-tabpanel-${index}`}
-      className={classNames(`rf-tabs__panel ${activeTab === index ? 'rf-tabs__panel--selected' : ''}`, className)}
+      id={`fr-tabpanel-${index}`}
+      className={classNames(`fr-tabs__panel ${activeTab === index ? 'fr-tabs__panel--selected' : ''}`, className)}
       role="tabpanel"
       tabIndex="0"
     >

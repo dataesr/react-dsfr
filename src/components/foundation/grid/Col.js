@@ -15,8 +15,8 @@ const Col = ({
   const { margin, padding } = getSpace(rest);
   const { n: size, offset: off } = getColSize(n, offset);
   const _className = classNames(off, size, padding, margin, {
-    'rf-col': !n,
-    [`rf-scheme-${scheme}`]: scheme,
+    'fr-col': !n,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };

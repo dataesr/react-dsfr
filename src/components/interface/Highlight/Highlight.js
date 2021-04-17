@@ -12,12 +12,15 @@ import '@gouvfr/dsfr/dist/css/highlights.min.css';
 const Highlight = ({
   scheme, size, children, className,
 }) => {
-  const _className = classNames('rf-highlight', {
-    [`rf-highlight--scheme-${scheme}`]: scheme,
-    [`rf-highlight--${size}`]: (['sm', 'lg'].includes(size)),
+  const _className = classNames('fr-highlight', {
+    [`fr-highlight--scheme-${scheme}`]: scheme,
+    [`fr-highlight--${size}`]: (['sm', 'lg'].includes(size)),
   }, className);
   return (
-    <div className={_className} data-testid="highlight">
+    <div
+      className={_className}
+      data-testid="highlight"
+    >
       {children}
     </div>
   );

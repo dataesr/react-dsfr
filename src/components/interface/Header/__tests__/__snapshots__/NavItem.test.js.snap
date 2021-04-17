@@ -2,10 +2,10 @@
 
 exports[`<NavItem /> renders correctly 1`] = `
 <li
-  className="rf-nav__item"
+  className="fr-nav__item"
 >
   <a
-    className="rf-nav__link"
+    className="fr-nav__link"
     href="link"
     target="_self"
   >

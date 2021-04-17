@@ -6,8 +6,8 @@ import Link from '../Link';
 const FooterLink = ({
   children, href, section, className,
 }) => (
-  <li className={classNames(`rf-footer__${section}-item`, className)}>
-    <Link href={href} className={`rf-footer__${section}-link`}>
+  <li className={classNames(`fr-footer__${section}-item`, className)}>
+    <Link href={href} className={`fr-footer__${section}-link`}>
       {children}
     </Link>
   </li>

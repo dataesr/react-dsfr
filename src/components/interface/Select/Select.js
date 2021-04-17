@@ -22,33 +22,33 @@ const Select = ({
   options,
   selected,
 }) => {
-  const _className = classNames('rf-select', {
-    [`rf-select--${messageType}`]: messageType,
+  const _className = classNames('fr-select', {
+    [`fr-select--${messageType}`]: messageType,
   });
   const selectId = id || uuidv4();
   const messageId = uuidv4();
-  const _classNameWrapper = classNames('rf-select-group', {
-    [`rf-select-group--${messageType}`]: messageType,
+  const _classNameWrapper = classNames('fr-select-group', {
+    [`fr-select-group--${messageType}`]: messageType,
   }, className);
 
   return (
     <div className={_classNameWrapper}>
       {
       label && (
-        <label className="rf-label" htmlFor={selectId} aria-describedby={messageId}>
+        <label className="fr-label" htmlFor={selectId} aria-describedby={messageId}>
           {label}
-          {hint && <span className="rf-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
+          {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
         </label>
       )
       }
       <select
         className={_className}
-        data-testid="select"
         disabled={disabled}
         id={selectId}
         name={name}
         onChange={onChange}
         value={selected}
+        data-testid="select"
       >
         {
           options.map((opt) => (
@@ -63,7 +63,7 @@ const Select = ({
           ))
         }
       </select>
-      {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
+      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };

@@ -14,11 +14,11 @@ describe('<Callout />', () => {
       </Callout>,
     );
     const calloutTitle = screen.getByText('Callout title');
-    expect(calloutTitle.className).toBe('rf-callout__title');
+    expect(calloutTitle.className).toBe('fr-callout__title');
     const calloutText = screen.getByText('Callout text that might be short and concise.');
-    expect(calloutText.className).toBe('rf-callout__text');
+    expect(calloutText.className).toBe('fr-callout__text');
     const callout = screen.getByTestId('callout');
-    expect(callout.className).toBe('rf-callout rf-fi-information-line rf-callout--scheme-soft-green-warm');
+    expect(callout.className).toBe('fr-callout fr-fi-information-line fr-callout--scheme-soft-green-warm');
     expect(callout).toBeInTheDocument();
     expect(callout).toMatchSnapshot();
   });

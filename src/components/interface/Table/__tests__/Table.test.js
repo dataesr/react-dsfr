@@ -41,7 +41,7 @@ describe('<Table />', () => {
     expect(table).toBeInTheDocument();
     expect(caption).toBeInTheDocument();
     expect(caption).toHaveTextContent('Mon super tableau');
-    expect(table.className).toBe('rf-table rf-table--caption-bottom rf-table--bordered');
+    expect(table.className).toBe('fr-table fr-table--caption-bottom fr-table--bordered');
     expect(table).toMatchSnapshot();
   });
   it('renders simple table properly', () => {

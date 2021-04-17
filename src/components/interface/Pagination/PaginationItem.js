@@ -17,7 +17,7 @@ const PaginationItem = ({
         aria-current={isActive ? 'page' : undefined}
         href={href}
         to={to}
-        className="rf-pagination__link"
+        className="fr-pagination__link"
         aria-label={aria}
         title={aria}
       >

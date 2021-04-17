@@ -2,7 +2,7 @@
 
 exports[`<Highlight /> renders Highlight properly 1`] = `
 <div
-  class="rf-highlight rf-highlight--scheme-soft-green-warm"
+  class="fr-highlight fr-highlight--scheme-soft-green-warm"
   data-testid="highlight"
 >
   Highlight text that might be short and concise.

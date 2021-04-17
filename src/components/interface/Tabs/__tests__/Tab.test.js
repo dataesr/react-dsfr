@@ -13,7 +13,7 @@ describe('<Tab />', () => {
     setActiveTab: () => {},
     activeTab: 0,
     setHeight: () => {},
-    icon: 'rf-fi-home',
+    icon: 'fr-fi-home',
     iconPosition: 'right',
     label: 'Label',
   };
@@ -50,7 +50,7 @@ describe('<Tab />', () => {
 
   it('has --selected class', () => {
     const component = wrapper({ ...initProps });
-    expect(component.find('.rf-tabs__panel').hasClass('rf-tabs__panel--selected')).toBeTruthy();
+    expect(component.find('.fr-tabs__panel').hasClass('fr-tabs__panel--selected')).toBeTruthy();
   });
 
   test('on load setHeight', () => {

@@ -13,11 +13,11 @@ const Row = ({
 }) => {
   const { margin, padding } = getSpace(rest);
   const _className = classNames(margin, padding, {
-    'rf-grid-row': !gutters,
-    'rf-grid-row rf-grid-row--gutters': gutters,
-    [`rf-grid-row--${justifyContent}`]: justifyContent,
-    [`rf-grid-row--${alignItems}`]: alignItems,
-    [`rf-scheme-${scheme}`]: scheme,
+    'fr-grid-row': !gutters,
+    'fr-grid-row fr-grid-row--gutters': gutters,
+    [`fr-grid-row--${justifyContent}`]: justifyContent,
+    [`fr-grid-row--${alignItems}`]: alignItems,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };

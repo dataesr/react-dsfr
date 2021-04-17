@@ -2,6 +2,23 @@
 
 exports[`<Tool /> renders correctly 1`] = `
 <div
-  className="rf-header__tools rf-modal"
-/>
+  className="fr-header__tools"
+>
+  <div
+    className="fr-header__search fr-modal"
+  >
+    <div
+      className="fr-container fr-container-lg--fluid"
+    >
+      <button
+        aria-controls="header-tools-popin"
+        className="fr-link--close fr-link"
+        title="Fermer"
+        type="button"
+      >
+        Fermer
+      </button>
+    </div>
+  </div>
+</div>
 `;

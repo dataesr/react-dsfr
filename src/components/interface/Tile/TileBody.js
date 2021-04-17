@@ -18,10 +18,10 @@ const TileBody = ({
 }) => {
   const HtmlTag = `${titleAs}`;
   return (
-    <div className={classNames('rf-tile__body', className)}>
-      <HtmlTag className="rf-tile__title">
+    <div className={classNames('fr-tile__body', className)}>
+      <HtmlTag className="fr-tile__title">
         <Link
-          className="rf-tile__link"
+          className="fr-tile__link"
           title={linkTitle}
           target={linkTarget || undefined}
           href={linkHref}
@@ -29,7 +29,7 @@ const TileBody = ({
           {title}
         </Link>
       </HtmlTag>
-      {description && <p className="rf-tile__desc">{description}</p>}
+      {description && <p className="fr-tile__desc">{description}</p>}
     </div>
   );
 };

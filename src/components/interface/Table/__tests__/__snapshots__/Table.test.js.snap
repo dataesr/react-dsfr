@@ -2,7 +2,7 @@
 
 exports[`<Table /> renders Table properly 1`] = `
 <div
-  class="rf-table rf-table--caption-bottom rf-table--bordered"
+  class="fr-table fr-table--caption-bottom fr-table--bordered"
   data-testid="table"
 >
   <table>

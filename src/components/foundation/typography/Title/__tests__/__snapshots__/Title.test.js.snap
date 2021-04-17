@@ -2,7 +2,7 @@
 
 exports[`<Title /> renders correctly 1`] = `
 <h2
-  className="rf-h4"
+  className="fr-h4"
 >
   Title
 </h2>

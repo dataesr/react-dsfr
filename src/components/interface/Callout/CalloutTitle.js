@@ -7,7 +7,7 @@ import '@gouvfr/dsfr/dist/css/callouts.min.css';
 const CalloutTitle = ({ as, children, className }) => {
   const HtmlTitleTag = `${as}`;
   return (
-    <HtmlTitleTag className={classNames('rf-callout__title', className)}>
+    <HtmlTitleTag className={classNames('fr-callout__title', className)}>
       {children}
     </HtmlTitleTag>
   );

@@ -17,19 +17,19 @@ const CheckboxGroup = ({
   message,
   messageType,
 }) => {
-  const _className = classNames('rf-form-group', {
-    'rf-fieldset--inline': isInline,
-    [`rf-fieldset--${messageType}`]: messageType,
+  const _className = classNames('fr-form-group', {
+    'fr-fieldset--inline': isInline,
+    [`fr-fieldset--${messageType}`]: messageType,
   }, className);
   return (
     <div className={_className}>
-      <fieldset className="rf-fieldset">
-        {legend && <legend className="rf-fieldset__legend">{legend}</legend>}
-        {hint && <p className="rf-hint-text">{hint}</p>}
-        <div className="rf-fieldset__content">
+      <fieldset className="fr-fieldset">
+        {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
+        {hint && <p className="fr-hint-text">{hint}</p>}
+        <div className="fr-fieldset__content">
           {children}
         </div>
-        {(message && messageType) && <p className={`rf-${messageType}-text`}>{message}</p>}
+        {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
       </fieldset>
     </div>
   );

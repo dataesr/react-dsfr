@@ -22,17 +22,19 @@ const Checkbox = forwardRef((props, ref) => {
     size,
     value,
   } = props;
-  const _className = classNames('rf-checkbox-group', {
-    [`rf-checkbox-group--${messageType}`]: messageType,
-    'rf-checkbox-group--sm': (size !== 'md'),
+  const _className = classNames('fr-checkbox-group', {
+    [`fr-checkbox-group--${messageType}`]: messageType,
+    'fr-checkbox-group--sm': (size !== 'md'),
   }, className);
   const checkboxId = id || uuidv4();
   const messageId = uuidv4();
 
   return (
-    <div className={_className}>
+    <div
+      className={_className}
+      data-testid="checkbox"
+    >
       <input
-        data-testid="checkbox-testid"
         type="checkbox"
         id={checkboxId}
         name="checkbox"
@@ -41,9 +43,9 @@ const Checkbox = forwardRef((props, ref) => {
         value={value}
         disabled={isDisabled}
       />
-      <label className="rf-label" htmlFor={checkboxId}>{label}</label>
-      {hint && <span className="rf-hint-text">{hint}</span>}
-      {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
+      <label className="fr-label" htmlFor={checkboxId}>{label}</label>
+      {hint && <span className="fr-hint-text">{hint}</span>}
+      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 });

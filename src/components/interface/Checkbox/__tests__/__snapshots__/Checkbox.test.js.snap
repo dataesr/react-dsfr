@@ -2,10 +2,10 @@
 
 exports[`<Checkbox /> renders correctly 1`] = `
 <div
-  className="rf-checkbox-group"
+  className="fr-checkbox-group"
+  data-testid="checkbox"
 >
   <input
-    data-testid="checkbox-testid"
     disabled={false}
     id="xxxxxxx"
     name="checkbox"
@@ -14,7 +14,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
     value="value"
   />
   <label
-    className="rf-label"
+    className="fr-label"
     htmlFor="xxxxxxx"
   >
     Label de la checkbox

@@ -23,12 +23,17 @@ const Pagination = ({
   } = buttonLabels;
 
   return (
-    <nav className="rf-pagination" aria-label={navigationAria} data-testid="pagination-nav" role="navigation">
-      <ul className="rf-pagination__list">
+    <nav
+      className="fr-pagination"
+      aria-label={navigationAria}
+      role="navigation"
+      data-testid="pagination-nav"
+    >
+      <ul className="fr-pagination__list">
         <li>
           <Tag
             href={currentPage > 1 ? buildURL(1) : undefined}
-            className={classNames({ 'rf-pagination__link--first': firstAria }, 'rf-pagination__link')}
+            className={classNames({ 'fr-pagination__link--first': firstAria }, 'fr-pagination__link')}
             aria-label={firstAria}
             title={firstAria}
           />
@@ -36,7 +41,7 @@ const Pagination = ({
         <li>
           <Tag
             href={currentPage > 1 ? buildURL(currentPage - 1) : undefined}
-            className={classNames({ 'rf-pagination__link--prev': prevAria }, 'rf-pagination__link')}
+            className={classNames({ 'fr-pagination__link--prev': prevAria }, 'fr-pagination__link')}
             aria-label={prevAria}
             title={prevAria}
           >
@@ -90,7 +95,7 @@ const Pagination = ({
         <li>
           <Tag
             href={currentPage < pageCount ? buildURL(currentPage + 1) : undefined}
-            className={classNames({ 'rf-pagination__link--next': nextAria }, 'rf-pagination__link')}
+            className={classNames({ 'fr-pagination__link--next': nextAria }, 'fr-pagination__link')}
             aria-label={nextAria}
             title={nextAria}
           >
@@ -100,7 +105,7 @@ const Pagination = ({
         <li>
           <Tag
             href={currentPage < pageCount ? buildURL(pageCount) : undefined}
-            className={classNames({ 'rf-pagination__link--last': lastAria }, 'rf-pagination__link')}
+            className={classNames({ 'fr-pagination__link--last': lastAria }, 'fr-pagination__link')}
             aria-label={lastAria}
             title={lastAria}
           />

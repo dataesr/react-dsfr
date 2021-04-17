@@ -21,36 +21,44 @@ const HeaderBody = ({ children, className }) => {
   } = context;
 
   return (
-    <div className={classNames(className, 'rf-header__body')} role="banner">
-      <div className="rf-header__brand">
-        {logo}
-        {service}
+    <div className="fr-header__body">
+      <div className="fr-container">
+        <div className={classNames(className, 'fr-header__body-row')} role="banner">
+          <div className="fr-header__brand fr-enlarge-link">
+            <div className="fr-header__brand-top">
+              <div className="fr-header__logo">
+                {logo}
+              </div>
+              {(isNavBar || isNavTool) && (
+                <div className="fr-header__navbar">
+                  <button
+                    onClick={onOpenNav}
+                    type="button"
+                    className="fr-btn--menu fr-btn"
+                    title={navButton}
+                    aria-label="ouvrir la navigation"
+                  >
+                    {navButton}
+                  </button>
+                  {isSearchBar && (
+                  <button
+                    onClick={onOpenSearch}
+                    type="button"
+                    className="fr-btn--search fr-btn fr-fi-search-line fr-btn--icon"
+                    title={searchButton}
+                    aria-label="ouvrir la recherche"
+                  >
+                    {searchButton}
+                  </button>
+                  )}
+                </div>
+              )}
+            </div>
+            {service}
+          </div>
+          {elements}
+        </div>
       </div>
-      {(isNavBar || isNavTool) && (
-      <div className="rf-header__navbar">
-        <button
-          onClick={onOpenNav}
-          type="button"
-          className="rf-btn rf-fi-menu-fill rf-btn--icon"
-          title={navButton}
-          aria-controls="header-nav-popin"
-        >
-          {navButton}
-        </button>
-        {isSearchBar && (
-        <button
-          onClick={onOpenSearch}
-          type="button"
-          className="rf-btn rf-fi-search-line rf-btn--icon "
-          title={searchButton}
-          aria-controls="header-tools-popin"
-        >
-          {searchButton}
-        </button>
-        )}
-      </div>
-      )}
-      {elements}
     </div>
   );
 };

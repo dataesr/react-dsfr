@@ -2,17 +2,17 @@
 
 exports[`<TextInput /> renders correctly 1`] = `
 <div
-  className="rf-input-group"
+  className="fr-input-group"
 >
   <label
-    className="rf-label"
+    className="fr-label"
     htmlFor="xxxxxxx"
   >
     label
   </label>
   
   <input
-    className="rf-input"
+    className="fr-input"
     disabled={false}
     id="text-input"
     onChange={[MockFunction]}

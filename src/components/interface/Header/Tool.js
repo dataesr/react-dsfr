@@ -16,26 +16,26 @@ const Tool = ({
   const {
     isOpenSearch, onOpenSearch,
   } = useContext(HeaderContext);
-  const _className = classNames('rf-header__tools rf-modal', {
-    'rf-modal--opened': isOpenSearch,
-  }, className);
+  const _className = classNames('fr-header__tools', className);
   return (
     <div
       className={_className}
     >
-      {isOpenSearch && (
-      <button
-        onClick={onOpenSearch}
-        type="button"
-        className="rf-link--close rf-link"
-        title={buttonClose}
-        aria-controls="header-tools-popin"
-      >
-        {buttonClose}
-      </button>
-      )}
       {!isOpenSearch && toolItemGroup}
-      {searchBar}
+      <div className={classNames('fr-header__search fr-modal', { 'fr-modal--opened': isOpenSearch })}>
+        <div className="fr-container fr-container-lg--fluid">
+          <button
+            onClick={onOpenSearch}
+            type="button"
+            className="fr-link--close fr-link"
+            title={buttonClose}
+            aria-controls="header-tools-popin"
+          >
+            {buttonClose}
+          </button>
+          {searchBar}
+        </div>
+      </div>
     </div>
   );
 };

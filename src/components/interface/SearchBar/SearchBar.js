@@ -25,23 +25,27 @@ const SearchBar = forwardRef((props, ref) => {
   const [text, setText] = useState(defaultValue);
   const inputId = uuidv4();
   const onKeyDown = (e) => (e.keyCode === 13) && onSearch(text);
-  const _className = classNames('rf-search-bar', {
-    'rf-search-bar--lg': (size === 'lg'),
+  const _className = classNames('fr-search-bar', {
+    'fr-search-bar--lg': (size === 'lg'),
   }, className);
-  const _classNameButton = classNames('rf-btn', { 'rf-btn--lg': (size === 'lg') });
+  const _classNameButton = classNames('fr-btn', { 'fr-btn--lg': (size === 'lg') });
   return (
-    <form role="search" className={_className} data-testid="search-bar">
-      <label className="rf-label" htmlFor={inputId}>{label}</label>
+    <form
+      role="search"
+      className={_className}
+      data-testid="search-bar"
+    >
+      <label className="fr-label" htmlFor={inputId}>{label}</label>
       <input
         ref={ref}
-        className="rf-input"
+        className="fr-input"
         placeholder={placeholder}
         type="search"
         id={inputId}
-        data-testid="search-input"
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={onKeyDown}
+        data-testid="search-input"
       />
       <button
         type="button"

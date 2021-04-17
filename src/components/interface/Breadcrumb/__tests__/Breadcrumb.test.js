@@ -28,15 +28,15 @@ describe('<Breadcrumb />', () => {
       </Breadcrumb>,
     );
     const nav = screen.getByTestId('bc-nav');
-    expect(nav.className).toBe('rf-breadcrumb');
+    expect(nav.className).toBe('fr-breadcrumb');
     const bcList = screen.getByTestId('bc-list');
-    expect(bcList.className).toBe('rf-breadcrumb__list');
+    expect(bcList.className).toBe('fr-breadcrumb__list');
     const button = screen.getByTestId('bc-button');
-    expect(button.className).toBe('rf-breadcrumb__button');
+    expect(button.className).toBe('fr-breadcrumb__button');
     const items = screen.getAllByTestId('bc-item');
     expect(items).toHaveLength(3);
-    expect(items[0].className).toBe('rf-breadcrumb__item');
-    expect(items[2].className).toMatch(/rf-breadcrumb__item--current/);
+    expect(items[0].className).toBe('fr-breadcrumb__item');
+    expect(items[2].className).toMatch(/fr-breadcrumb__item--current/);
     expect(nav).toMatchSnapshot();
   });
 });

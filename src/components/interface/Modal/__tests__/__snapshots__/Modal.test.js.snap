@@ -2,30 +2,29 @@
 
 exports[`<Modal /> should render modal properly 1`] = `
 <dialog
-  aria-labelledby="rf-modal-title-modal"
-  class="rf-modal"
+  aria-labelledby="fr-modal-title-modal"
+  class="fr-modal"
   data-testid="modal"
-  id="rf-modal"
   style="visibility: visible;"
 >
   <div
-    class="rf-container--fluid rf-container-md"
+    class="fr-container--fluid fr-container-md"
   >
     <div
-      class="rf-grid-row rf-grid-row--center"
+      class="fr-grid-row fr-grid-row--center"
     >
       <div
-        class="rf-col-12 rf-col-md-6"
+        class="fr-col-12 fr-col-md-6"
       >
         <div
-          class="rf-modal__body"
+          class="fr-modal__body"
         >
           <div
-            class="rf-modal__header"
+            class="fr-modal__header"
           >
             <button
-              aria-controls="rf-modal"
-              class="rf-link--close rf-link"
+              aria-controls="fr-modal"
+              class="fr-link--close fr-link"
               data-testid="modal-close"
               title="Close the modal window"
               type="button"
@@ -34,14 +33,14 @@ exports[`<Modal /> should render modal properly 1`] = `
             </button>
           </div>
           <div
-            class="rf-modal__content"
+            class="fr-modal__content"
           >
             <h1
-              class="rf-modal__title"
-              id="rf-modal-title-modal"
+              class="fr-modal__title"
+              id="fr-modal-title-modal"
             >
               <span
-                class="rf-fi-arrow-right-line rf-fi--lg"
+                class="fr-fi-arrow-right-line fr-fi--lg"
               />
               I am a title
             </h1>
@@ -52,7 +51,7 @@ exports[`<Modal /> should render modal properly 1`] = `
             </div>
           </div>
           <div
-            class="rf-modal__footer"
+            class="fr-modal__footer"
           >
             blah
           </div>

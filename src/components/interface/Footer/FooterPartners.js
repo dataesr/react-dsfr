@@ -13,13 +13,13 @@ const FooterPartners = ({ children, className }) => {
     (child) => child.type.name === 'FooterPartnersLogo' && !child.props.isMain,
   );
   return (
-    <div className={classNames('rf-footer__partners', className)}>
+    <div className={classNames('fr-footer__partners', className)}>
       {title}
-      <div className="rf-footer__partners-logos">
+      <div className="fr-footer__partners-logos">
         {mainLogos && (
-          <div className="rf-footer__partners-main">{mainLogos}</div>
+          <div className="fr-footer__partners-main">{mainLogos}</div>
         )}
-        {subLogos && <div className="rf-footer__partners-sub">{subLogos}</div>}
+        {subLogos && <div className="fr-footer__partners-sub">{subLogos}</div>}
       </div>
     </div>
   );

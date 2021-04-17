@@ -7,11 +7,15 @@ import '@gouvfr/dsfr/dist/css/footer.min.css';
 const Footer = ({ children, className }) => {
   const top = children.filter((child) => child.type.name === 'FooterTop');
   const rest = children.filter((child) => child.type.name !== 'FooterTop');
-  const _className = classNames('rf-footer', className);
+  const _className = classNames('fr-footer', className);
   return (
-    <footer data-testid="footer" className={_className} role="contentinfo" id="footer">
+    <footer
+      className={_className}
+      role="contentinfo"
+      data-testid="footer"
+    >
       {top}
-      <div className="rf-container">
+      <div className="fr-container">
         {rest}
       </div>
     </footer>

@@ -1,26 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HeaderNav /> renders correctly 1`] = `
-<nav
-  aria-label="Menu principal"
-  className="rf-nav rf-modal"
-  id="header-nav-popin"
-  role="navigation"
+<div
+  className="fr-header__menu fr-modal"
 >
-  <button
-    aria-controls="header-nav-popin"
-    className="rf-link--close rf-link"
-    title="Fermer"
-    type="button"
+  <div
+    className="fr-container"
   >
-    Fermer
-  </button>
-  <ul
-    className="rf-nav__list"
-  >
-    <li>
-      nav #1
-    </li>
-  </ul>
-</nav>
+    <button
+      aria-label="fermer la navigation"
+      className="fr-link--close fr-link"
+      title="Fermer"
+      type="button"
+    >
+      Fermer
+    </button>
+    <nav
+      aria-label="Menu principal"
+      className="fr-nav"
+      role="navigation"
+    >
+      <ul
+        className="fr-nav__list"
+      >
+        <li>
+          nav #1
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
 `;

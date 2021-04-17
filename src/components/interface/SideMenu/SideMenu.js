@@ -19,12 +19,16 @@ const SideMenu = ({
   const { item, collapse } = useCollapse(itemID, isExpanded);
 
   return (
-    <nav className={classNames('rf-sidemenu', className)} aria-label="Menu latéral" data-testid="sidemenu">
-      <div className="rf-sidemenu__inner">
+    <nav
+      className={classNames('fr-sidemenu', className)}
+      aria-label="Menu latéral"
+      data-testid="sidemenu"
+    >
+      <div className="fr-sidemenu__inner">
         <button
           onClick={() => setExpanded(!isExpanded)}
           type="button"
-          className="rf-sidemenu__btn"
+          className="fr-sidemenu__btn"
           hidden={isExpanded}
           aria-controls={itemID}
           aria-expanded={isExpanded}
@@ -36,8 +40,8 @@ const SideMenu = ({
           id={itemID}
           style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
         >
-          <div className="rf-sidemenu__title">{title}</div>
-          <ul className="rf-sidemenu__list">
+          <div className="fr-sidemenu__title">{title}</div>
+          <ul className="fr-sidemenu__list">
             {children}
           </ul>
         </div>

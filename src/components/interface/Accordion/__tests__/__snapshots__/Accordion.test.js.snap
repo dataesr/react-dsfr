@@ -6,37 +6,37 @@ exports[`<Accordion /> should render accordion properly 1`] = `
   data-testid="accordion-group"
 >
   <ul
-    class="rf-accordions-group"
+    class="fr-accordion-group"
   >
     <li
       class=""
       data-testid="accordion"
     >
       <section
-        class="rf-accordion"
+        class="fr-accordion"
       >
         <p
-          class="rf-accordion__title"
+          class="fr-accordion__title"
         >
           <button
-            aria-controls="rf-accordion-0"
+            aria-controls="fr-accordion-0"
             aria-expanded="false"
-            class="rf-accordion__btn"
+            class="fr-accordion__btn"
             data-testid="accordion-button"
             id="button0"
             type="button"
           >
             first line accordion
           </button>
+          <div
+            class="fr-collapse"
+            data-testid="accordion-div"
+            id="fr-accordion-0"
+            style="--collapse: -0px;"
+          >
+            Anything I want
+          </div>
         </p>
-        <div
-          class="rf-collapse"
-          data-testid="accordion-div"
-          id="rf-accordion-0"
-          style="--collapse: -0px;"
-        >
-          Anything I want
-        </div>
       </section>
     </li>
     <li
@@ -44,30 +44,30 @@ exports[`<Accordion /> should render accordion properly 1`] = `
       data-testid="accordion"
     >
       <section
-        class="rf-accordion"
+        class="fr-accordion"
       >
         <p
-          class="rf-accordion__title"
+          class="fr-accordion__title"
         >
           <button
-            aria-controls="rf-accordion-1"
+            aria-controls="fr-accordion-1"
             aria-expanded="false"
-            class="rf-accordion__btn"
+            class="fr-accordion__btn"
             data-testid="accordion-button"
             id="button1"
             type="button"
           >
             first line accordion
           </button>
+          <div
+            class="fr-collapse"
+            data-testid="accordion-div"
+            id="fr-accordion-1"
+            style="--collapse: -0px;"
+          >
+            Anything I want
+          </div>
         </p>
-        <div
-          class="rf-collapse"
-          data-testid="accordion-div"
-          id="rf-accordion-1"
-          style="--collapse: -0px;"
-        >
-          Anything I want
-        </div>
       </section>
     </li>
   </ul>

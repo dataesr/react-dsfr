@@ -16,17 +16,20 @@ const MediaImage = ({
   src,
 }) => {
   const _className = classNames(
-    'rf-content-media',
-    `rf-content-media--${size}`,
+    'fr-content-media',
+    `fr-content-media--${size}`,
     className,
   );
 
   return (
-    <figure className={_className} data-testid="image-test">
-      <div className="rf-content-media__img">
+    <figure
+      className={_className}
+      data-testid="image"
+    >
+      <div className="fr-content-media__img">
         <img src={src} alt={alt} />
       </div>
-      <figcaption className="rf-content-media__caption">{legend}</figcaption>
+      <figcaption className="fr-content-media__caption">{legend}</figcaption>
     </figure>
   );
 };

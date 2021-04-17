@@ -24,8 +24,8 @@ const ModalDialog = ({
   className,
 }) => {
   const modalRef = useRef();
-  const _className = classNames('rf-modal', {
-    [`rf-modal--${size}`]: (size !== 'md'),
+  const _className = classNames('fr-modal', {
+    [`fr-modal--${size}`]: (size !== 'md'),
   }, className);
   const focusBackTo = document.activeElement;
   const handleTabulation = useFocusTrap(modalRef);
@@ -48,7 +48,7 @@ const ModalDialog = ({
       handleAnimatedUnmount();
     }
   };
-  const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('rf-no-scroll');
+  const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('fr-no-scroll');
 
   useEffect(() => {
     if (modalRef.current) {
@@ -79,26 +79,25 @@ const ModalDialog = ({
     ReactDOM.createPortal(
       // eslint-disable-next-line
       <dialog
-        aria-labelledby="rf-modal-title-modal"
-        id="rf-modal"
+        aria-labelledby="fr-modal-title-modal"
         className={_className}
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
         onClick={(e) => handleOverlayClick(e)}
         data-testid="modal"
       >
-        <div className="rf-container--fluid rf-container-md">
-          <div className="rf-grid-row rf-grid-row--center">
-            <div className="rf-col-12 rf-col-md-6">
-              <div className="rf-modal__body">
-                <div className="rf-modal__header">
+        <div className="fr-container--fluid fr-container-md">
+          <div className="fr-grid-row fr-grid-row--center">
+            <div className="fr-col-12 fr-col-md-6">
+              <div className="fr-modal__body">
+                <div className="fr-modal__header">
                   {
                     (close.length > 0)
                       ? cloneElement(close[0], { hide: handleAnimatedUnmount })
                       : <ModalClose hide={handleAnimatedUnmount} />
                   }
                 </div>
-                <div className="rf-modal__content">
+                <div className="fr-modal__content">
                   {title}
                   {content}
                 </div>

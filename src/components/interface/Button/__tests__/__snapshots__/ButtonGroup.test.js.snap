@@ -2,12 +2,12 @@
 
 exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
 <ul
-  class="rf-btns-group rf-btns-group--sm rf-btns-group--center rf-btns-group--inline-md rf-btns-group--equisized"
+  class="fr-btns-group fr-btns-group--sm fr-btns-group--center fr-btns-group--inline-md fr-btns-group--equisized"
   data-testid="button-group"
 >
   <li>
     <button
-      class="rf-btn rf-btn--md rf-btn--secondary"
+      class="fr-btn fr-btn--md fr-btn--secondary"
       title="title"
       type="button"
     >
@@ -16,7 +16,7 @@ exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
   </li>
   <li>
     <button
-      class="rf-btn rf-btn--md"
+      class="fr-btn fr-btn--md"
       title="title"
       type="button"
     >

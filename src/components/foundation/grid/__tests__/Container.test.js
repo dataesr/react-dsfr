@@ -8,7 +8,7 @@ it('renders Container properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toBe('rf-container');
+  expect(row.className).toBe('fr-container');
 });
 
 it('renders Container fluid properly', () => {
@@ -17,5 +17,5 @@ it('renders Container fluid properly', () => {
   );
   const row = screen.getByText('Text');
   expect(row).toBeInTheDocument();
-  expect(row.className).toBe('rf-container-fluid');
+  expect(row.className).toBe('fr-container-fluid');
 });

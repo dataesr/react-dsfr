@@ -13,6 +13,6 @@ describe('<ButtonGroup />', () => {
     const group = screen.getByTestId('button-group');
     expect(group).toBeInTheDocument();
     expect(group).toMatchSnapshot();
-    expect(group.className).toBe('rf-btns-group rf-btns-group--sm rf-btns-group--center rf-btns-group--inline-md rf-btns-group--equisized');
+    expect(group.className).toBe('fr-btns-group fr-btns-group--sm fr-btns-group--center fr-btns-group--inline-md fr-btns-group--equisized');
   });
 });
