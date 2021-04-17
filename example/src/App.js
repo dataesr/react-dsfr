@@ -142,7 +142,7 @@ const App = () => {
             <HeaderBody>
                 <Logo splitCharacter={10}>République Française</Logo>
                 <Service
-                    title="Playground @dataesr/rfds"
+                    title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
                     buttonClose='fermer'
