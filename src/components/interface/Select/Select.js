@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 
-import '@gouvfr/dsfr/dist/css/selects.min.css';
+import './selects.css';
 
 /**
  *

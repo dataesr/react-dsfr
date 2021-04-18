@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
-import '@gouvfr/dsfr/dist/css/core.min.css';
 
 export default class Wrapper extends Component {
   componentDidMount() {

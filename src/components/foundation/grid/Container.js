@@ -4,8 +4,6 @@ import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
 import { SCHEMES } from '../../../utils/constants';
 
-import '@gouvfr/dsfr/dist/css/content.min.css';
-
 /**
  *
  * @visibleName Container

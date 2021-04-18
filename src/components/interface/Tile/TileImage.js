@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
- * Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
  *
  * @visibleName Tuile horizontale ou verticale
  */

@@ -3,9 +3,8 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+
 /**
- * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
- * Il aide les utilisateurs à rechercher et à trouver facilement une information.
  *
  * @visibleName Tag
  */

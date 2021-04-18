@@ -2,8 +2,9 @@ import React, { useState, Children, cloneElement } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import '../../../reset.css';
-import '@gouvfr/dsfr/dist/css/accordions.min.css';
+
+import '../../../style.css';
+import './accordions.css';
 
 /**
  *

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
-import '@gouvfr/dsfr/dist/css/toggles.min.css';
+import './toggles.css';
 
 /**
  *

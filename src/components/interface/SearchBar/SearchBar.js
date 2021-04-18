@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-import '@gouvfr/dsfr/dist/css/search.min.css';
+import './search.css';
 
 /**
  *

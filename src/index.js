@@ -40,7 +40,6 @@ import { Tabs, Tab } from './components/interface/Tabs';
 import { Tag, TagGroup } from './components/interface/Tag';
 import TextInput from './components/interface/TextInput';
 import { Tile, TileImage, TileBody } from './components/interface/Tile';
-import '@gouvfr/dsfr/dist/css/core.min.css';
 
 export {
   Accordion, AccordionItem,

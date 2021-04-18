@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { SCHEMES } from '../../../utils/constants';
 import TabButton from './TabButton';
 
-import '@gouvfr/dsfr/dist/css/tabs.min.css';
+import './tabs.css';
 
 /**
  *

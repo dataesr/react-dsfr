@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { getSpace, getColSize } from '../../../utils/getters';
 import { SCHEMES } from '../../../utils/constants';
 
-import '@gouvfr/dsfr/dist/css/content.min.css';
 /**
  *
  * @visibleName Col
@@ -30,7 +29,7 @@ Col.propTypes = {
   /**
   * Col size
   */
-  n: PropTypes.number,
+  n: PropTypes.string,
   /**
   * Set Col offset.
   */
@@ -43,7 +42,7 @@ Col.propTypes = {
   scheme: PropTypes.oneOf(SCHEMES),
 };
 Col.defaultProps = {
-  n: null,
+  n: '',
   offset: null,
   className: '',
   scheme: '',

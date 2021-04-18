@@ -4,7 +4,8 @@ import React, {
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import '@gouvfr/dsfr/dist/css/breadcrumb.min.css';
+import '../../../style.css';
+import './breadcrumbs.css';
 
 /**
  * @visibleName Breadcrumb

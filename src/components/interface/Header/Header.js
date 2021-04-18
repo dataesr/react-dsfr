@@ -6,8 +6,8 @@ import { deepForEach } from 'react-children-utilities';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
-import '@gouvfr/dsfr/dist/css/navigation.min.css';
-import '@gouvfr/dsfr/dist/css/header.min.css';
+import './navigation.css';
+import './header.css';
 
 /**
  *

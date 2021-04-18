@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
 
-import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
+import './sidemenu.css';
 
 /**
  *

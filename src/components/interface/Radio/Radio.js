@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/radios.min.css';
+import './radios.css';
 
 /**
  *
