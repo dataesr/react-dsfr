@@ -21,7 +21,6 @@
     "classnames": "^2.3.1",
     "html-react-parser": "^1.2.5",
     "prop-types": "^15.7.2",
-    "react-children-utilities": "^2.5.0",
     "react-scripts": "4.0.3",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
@@ -88,11 +87,6 @@
   "files": [
     "dist"
   ],
-  "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/(?!(react-children-utilities|@gouvfr/dsfr)/)"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",

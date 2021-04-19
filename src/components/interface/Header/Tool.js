@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { deepFilter, deepForEach } from 'react-children-utilities';
+import { deepFilter, deepForEach } from '../../../utils/children-utilities';
 import HeaderContext from './headerContext';
 
 const Tool = ({

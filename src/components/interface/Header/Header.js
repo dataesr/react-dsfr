@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { deepForEach } from 'react-children-utilities';
+import { deepForEach } from '../../../utils/children-utilities';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { deepFilter } from 'react-children-utilities';
 import classNames from 'classnames';
 import HeaderContext from './headerContext';
+import { deepFilter } from '../../../utils/children-utilities';
 
 const HeaderBody = ({ children, className }) => {
   const elements = deepFilter(children, (child) => child.type && (child.type.name !== 'Logo' && child.type.name !== 'Service'));
