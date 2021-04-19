@@ -29,13 +29,12 @@ MODE.forEach((m) => {
         'prop-types': 'PropTypes',
         classnames: 'classNames',
         uuid: 'uuid',
-        'react-children-utilities': 'reactChildrenUtilities',
         '@babel/runtime/helpers/slicedToArray': '_slicedToArray',
         '@babel/runtime/helpers/defineProperty': '_defineProperty',
         '@babel/runtime/helpers/objectWithoutProperties': '_objectWithoutProperties',
       },
     },
-    external: ['uuid', 'react-children-utilities', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/],
+    external: ['uuid', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/],
     plugins: [
       babel({
         exclude: 'node_modules/**',
