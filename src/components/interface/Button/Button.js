@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-// import '../../../style.css';
+import '../../../style.css';
 import './schemes.css';
 import './buttons.css';
 
