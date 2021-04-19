@@ -207,7 +207,7 @@ const App = () => {
             </Row>
             <Title as="h3">Sidemenu</Title>
             <Row>
-                <Col n="12" className="fr-col-md-3">
+                <Col n="sm-12" className="fr-col-md-3">
                     <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
                         <SideMenuItem title="Niveau 1">
                             <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>

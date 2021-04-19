@@ -71,7 +71,10 @@ Visit [http://localhost:3000](http://localhost:3000).
 $ npm link @dataesr/react-dsfr
 ```
 
+#### Help
+
 [How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
+[How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
 
 ### Tests
 

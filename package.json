@@ -85,6 +85,9 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom"
   },
+  "files": [
+    "dist"
+  ],
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(react-children-utilities|@gouvfr/dsfr)/)"
