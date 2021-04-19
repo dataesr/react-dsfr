@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
-import Link from '../Link';
+import Link from '../Link/index';
 
 const ToolItem = ({
   icon, link, className, children,

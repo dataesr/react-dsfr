@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Link';
+import Link from '../Link/index';
 
 const FooterBody = ({ children, description, className }) => {
   const Logo = Children.toArray(children).filter(

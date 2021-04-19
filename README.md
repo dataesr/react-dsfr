@@ -34,13 +34,15 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 
 ### Npm package
 
-#### Generate dist folder
+#### Generate /dist folder containing bundles
+
+> [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
 $ yarn build
 ```
 
-#### Generate and watch dist folder
+#### Generate and watch /dist folder containing bundles
 ```bash
 $ yarn 
 $ yarn start

@@ -5,6 +5,10 @@
   LOGO
 \* ------------------------------------ */
 
+.test {
+    background: greenyellow;
+}
+
 .fr-logo {
     --is-link: false;
     display: inline-block;

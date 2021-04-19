@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Link';
+import Link from '../Link/index';
 
 const SideMenuLink = ({ children, href, className }) => (
   <li className={classNames('fr-sidemenu__item', className)}>
