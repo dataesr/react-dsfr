@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 
-import '@gouvfr/dsfr/dist/css/highlights.min.css';
+import './highlights.css';
 
 /**
  *

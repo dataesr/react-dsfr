@@ -1,0 +1,15 @@
+/* ------------------------------------ *\
+  RESET
+\* ------------------------------------ */
+
+ul > li:before {
+    display: none;
+}
+
+ol, ol > li, ul, ul > li {
+    padding-bottom: 0;
+}
+
+a {
+    box-shadow: none
+}

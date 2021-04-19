@@ -2,7 +2,7 @@ import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import '@gouvfr/dsfr/dist/css/links.min.css';
+import './links.css';
 
 /**
  *

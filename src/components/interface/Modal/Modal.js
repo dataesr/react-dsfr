@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
 
-import '@gouvfr/dsfr/dist/css/modal.min.css';
+import './modal.css';
 
 /**
  *

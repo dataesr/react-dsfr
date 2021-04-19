@@ -1,28 +1,59 @@
+import styles from 'rollup-plugin-styles';
 import babel from '@rollup/plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
-import eslint from '@rollup/plugin-eslint';
-import css from 'rollup-plugin-css-only';
-import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
-const external = Object.keys(pkg.peerDependencies || {});
-external.push(/@babel\/runtime/);
-export default {
-  input: pkg.source,
-  output: [
-    { file: pkg.main, format: 'esm' },
-  ],
-  external,
-  plugins: [
-    eslint(),
-    babel({
-      babelHelpers: 'runtime',
-      exclude: '**/node_modules/**',
-    }),
-    resolve(),
-    commonjs(),
-    terser(),
-    css({ output: 'style.css' }),
-  ],
-};
+const autoprefixer = require('autoprefixer');
+
+const MODE = [
+  {
+    format: 'cjs',
+  },
+  {
+    format: 'esm',
+  },
+];
+
+const config = [];
+
+MODE.forEach((m) => {
+  const conf = {
+    input: pkg.source,
+    output: {
+      name: '@dataesr/react-dsfr',
+      file: `dist/index.${m.format}.js`,
+      format: m.format,
+      exports: 'auto',
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM',
+        'prop-types': 'PropTypes',
+        classnames: 'classNames',
+        uuid: 'uuid',
+        'react-children-utilities': 'reactChildrenUtilities',
+        '@babel/runtime/helpers/slicedToArray': '_slicedToArray',
+        '@babel/runtime/helpers/defineProperty': '_defineProperty',
+        '@babel/runtime/helpers/objectWithoutProperties': '_objectWithoutProperties',
+      },
+    },
+    external: ['uuid', 'react-children-utilities', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/],
+    plugins: [
+      babel({
+        exclude: 'node_modules/**',
+        plugins: ['@babel/transform-runtime'],
+        babelHelpers: 'runtime',
+      }),
+      styles({
+        postcss: {
+          plugins: [
+            autoprefixer(),
+          ],
+        },
+      }),
+    ],
+  };
+  config.push(conf);
+});
+
+export default [
+  ...config,
+];

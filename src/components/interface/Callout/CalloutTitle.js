@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import '@gouvfr/dsfr/dist/css/callouts.min.css';
-
 const CalloutTitle = ({ as, children, className }) => {
   const HtmlTitleTag = `${as}`;
   return (

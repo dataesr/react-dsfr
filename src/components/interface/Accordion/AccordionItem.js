@@ -41,7 +41,7 @@ const AccordionItem = ({
 };
 
 AccordionItem.defaultProps = {
-  titleAs: 'p',
+  titleAs: 'h3',
   className: '',
   isExpanded: false,
   onClick: () => {},
@@ -52,7 +52,7 @@ AccordionItem.propTypes = {
   /**
    * Html tag to render in accordion title.
    */
-  titleAs: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  titleAs: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   /**
    * @ignore
    */

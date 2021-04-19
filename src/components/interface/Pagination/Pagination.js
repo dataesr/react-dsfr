@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
 
-import '@gouvfr/dsfr/dist/css/pagination.min.css';
+import './pagination.css';
 
 const Pagination = ({
   pageCount,
