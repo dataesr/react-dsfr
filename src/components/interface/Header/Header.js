@@ -47,7 +47,7 @@ const Header = ({
     isOpenSearch: openSearch,
     onOpenSearch: () => setOpenSearch(!openSearch),
     isOpenNav: openNav,
-    onOpenNav: () => setOpenNav(!openNav),
+    onOpenNav: (v) => setOpenNav(v),
   };
   return (
     <HeaderContext.Provider value={contextProps}>
@@ -57,9 +57,8 @@ const Header = ({
       >
         {children}
         {isNavTool && !isNavBar && (
-        <div className="fr-header__menu">
+        <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
-            <div className="fr-header__menu-links" />
             <nav
               className="fr-nav"
               role="navigation"
@@ -72,9 +71,12 @@ const Header = ({
                 title="Fermer"
                 aria-controls="header-nav-popin"
               >
-                OLD Fermer
+                Fermer
               </button>
             </nav>
+            <div className="fr-header__menu-links">
+              <ul className="fr-links-group" />
+            </div>
           </div>
         </div>
         )}

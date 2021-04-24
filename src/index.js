@@ -40,6 +40,7 @@ import { Tabs, Tab } from './components/interface/Tabs/index';
 import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
+import Toggle from './components/interface/Toggle/index';
 
 const library = () => ({
   Accordion,
@@ -113,5 +114,6 @@ const library = () => ({
   Tile,
   TileBody,
   TileImage,
+  Toggle,
 });
 export default library();

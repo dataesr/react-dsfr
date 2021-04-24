@@ -10,6 +10,7 @@ exports[`<HeaderNav /> renders correctly 1`] = `
     <button
       aria-label="fermer la navigation"
       className="fr-link--close fr-link"
+      onClick={[Function]}
       title="Fermer"
       type="button"
     >

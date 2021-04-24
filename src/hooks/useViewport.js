@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const useViewport = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window ? window.innerWidth : null);
+  const [height, setHeight] = useState(window ? window.innerHeight : null);
 
   useEffect(() => {
     const handleWindowResize = () => {

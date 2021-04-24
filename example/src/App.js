@@ -46,7 +46,7 @@ import {
     Select, SideMenu, SideMenuItem, SideMenuLink,
     Skiplinks, SkiplinkItem, SimpleTable,
     Tag, TagGroup, TextInput,
-    Tile, TileImage, TileBody,
+    Tile, TileImage, TileBody, Toggle
 } from '@dataesr/react-dsfr';
 
 const App = () => {
@@ -484,6 +484,17 @@ const App = () => {
                         secondary sm button
                     </Button>
                 </Col>
+            </Row>
+            <Title as="h3">Toggle</Title>
+            <Row>
+                <Toggle
+                    onChange={()=>{
+                        console.log('==== test ==== ');}}
+                    isDisabled
+                    isChecked
+                    label="Toggle Label"
+                    description="Toggle descirption"
+                />
             </Row>
             <Title as="h3">Accordion</Title>
             <Row>
