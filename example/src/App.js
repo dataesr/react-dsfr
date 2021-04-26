@@ -488,8 +488,7 @@ const App = () => {
             <Title as="h3">Toggle</Title>
             <Row>
                 <Toggle
-                    onChange={()=>{
-                        console.log('==== test ==== ');}}
+                    onChange={()=>{console.log('==== Change Toggle ==== ');}}
                     isDisabled
                     isChecked
                     label="Toggle Label"

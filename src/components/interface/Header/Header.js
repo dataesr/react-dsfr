@@ -47,7 +47,7 @@ const Header = ({
     isOpenSearch: openSearch,
     onOpenSearch: () => setOpenSearch(!openSearch),
     isOpenNav: openNav,
-    onOpenNav: (v) => setOpenNav(v),
+    onOpenNav: (open) => setOpenNav(open),
   };
   return (
     <HeaderContext.Provider value={contextProps}>
