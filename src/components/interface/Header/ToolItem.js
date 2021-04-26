@@ -1,16 +1,16 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import Link from '../Link/index';
 
 const ToolItem = ({
-  icon, link, className, children,
+  icon, link, className, children, asLink,
 }) => (
   <li key={uuidv4()}>
     <Link
-      className={classNames(className)}
+      as={asLink}
+      className={className}
       isSimple
       icon={icon || ''}
       iconPosition="left"
@@ -23,6 +23,8 @@ const ToolItem = ({
 ToolItem.defaultProps = {
   className: '',
   icon: '',
+  link: '',
+  asLink: null,
 };
 
 ToolItem.propTypes = {
@@ -33,6 +35,7 @@ ToolItem.propTypes = {
   ]),
   icon: PropTypes.string,
   children: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  asLink: PropTypes.element,
 };
 export default ToolItem;

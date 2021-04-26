@@ -23,7 +23,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       hidden=""
     >
       <li
-        aria-current="false"
         class="fr-breadcrumb__item"
         data-testid="bc-item"
       >
@@ -36,7 +35,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
         </a>
       </li>
       <li
-        aria-current="false"
         class="fr-breadcrumb__item"
         data-testid="bc-item"
       >
@@ -49,11 +47,17 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
         </a>
       </li>
       <li
-        aria-current="page"
         class="fr-breadcrumb__item fr-breadcrumb__item--current"
         data-testid="bc-item"
       >
-        Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué
+        <a
+          aria-current="page"
+          class="fr-breadcrumb__link"
+          href=""
+          target="_self"
+        >
+          Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué
+        </a>
       </li>
     </ol>
   </div>

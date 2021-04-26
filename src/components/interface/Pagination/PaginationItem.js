@@ -14,7 +14,7 @@ const PaginationItem = ({
   return (
     <li>
       <Tag
-        aria-current={isActive ? 'page' : undefined}
+        aria-current={(isActive && 'page') || undefined}
         href={href}
         to={to}
         className="fr-pagination__link"

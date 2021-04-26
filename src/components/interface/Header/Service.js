@@ -5,10 +5,15 @@ import PropTypes from 'prop-types';
 import Link from '../Link/index';
 
 const Service = ({
-  title, description, className, link,
+  title, description, className, link, asLink,
 }) => (
   <div className={classNames(className, 'fr-header__service')}>
-    <Link className="fr-header__service-title" href={link} title={title}>
+    <Link
+      as={asLink}
+      className="fr-header__service-title"
+      href={link}
+      title={title}
+    >
       {title}
     </Link>
     <p className="fr-header__service-tagline">{description}</p>
@@ -19,6 +24,7 @@ Service.defaultProps = {
   className: '',
   description: 'Ouvrir le menu',
   link: '/',
+  asLink: null,
 };
 
 Service.propTypes = {
@@ -30,5 +36,7 @@ Service.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  asLink: PropTypes.element,
 };
+
 export default Service;

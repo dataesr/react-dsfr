@@ -3,21 +3,26 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../Link/index';
 
-const BreadcrumbItem = ({ className, children, href }) => {
+const BreadcrumbItem = ({
+  className, children, href, asLink,
+}) => {
   const _className = classNames(
-    'fr-breadcrumb__item',
-    {
-      'fr-breadcrumb__item--current': !href,
-    },
-    className,
+    'fr-breadcrumb__item', { 'fr-breadcrumb__item--current': !href }, className,
   );
+
   return (
     <li
       className={_className}
-      aria-current={!href && 'page'}
       data-testid="bc-item"
     >
-      {href ? <Link className="fr-breadcrumb__link" href={href}>{children}</Link> : children}
+      <Link
+        current={!href && !asLink}
+        className="fr-breadcrumb__link"
+        as={asLink}
+        href={href}
+      >
+        {children}
+      </Link>
     </li>
   );
 };
@@ -25,6 +30,7 @@ const BreadcrumbItem = ({ className, children, href }) => {
 BreadcrumbItem.defaultProps = {
   className: '',
   href: '',
+  asLink: null,
 };
 
 BreadcrumbItem.propTypes = {
@@ -35,6 +41,7 @@ BreadcrumbItem.propTypes = {
     PropTypes.array,
   ]),
   href: PropTypes.string,
+  asLink: PropTypes.element,
 };
 
 export default BreadcrumbItem;

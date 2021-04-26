@@ -22,7 +22,7 @@ describe('<Breadcrumb />', () => {
       <Breadcrumb>
         <BreadcrumbItem href="#">Home</BreadcrumbItem>
         <BreadcrumbItem href="#">Productions</BreadcrumbItem>
-        <BreadcrumbItem current>
+        <BreadcrumbItem>
           Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué
         </BreadcrumbItem>
       </Breadcrumb>,

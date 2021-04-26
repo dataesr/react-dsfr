@@ -48,6 +48,7 @@ import {
     Tag, TagGroup, TextInput,
     Tile, TileImage, TileBody,
 } from '@dataesr/react-dsfr';
+import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -137,19 +138,22 @@ const App = () => {
             name_en: 'Earth System Science',
         }
     ];
-    return <>
+    return <BrowserRouter>
         <Header>
             <HeaderBody>
                 <Logo splitCharacter={10}>République Française</Logo>
                 <Service
+                    asLink={<RouterLink to="/myLinkUrl"/>}
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
-                    buttonClose='fermer'
+                    buttonClose="fermer"
                 >
                     <ToolItemGroup>
-                        <ToolItem icon='fr-fi-lock-line' link='/path'>Example</ToolItem>
-                        <ToolItem icon='fr-fi-add-circle-line' link='/path'>Example</ToolItem>
+                        <ToolItem
+                            icon="fr-fi-lock-line"
+                            asLink={<RouterLink to="myNavItem"/>}>Example</ToolItem>
+                        <ToolItem icon="fr-fi-add-circle-line" link="/path">Example</ToolItem>
                     </ToolItemGroup>
                     <SearchBar
                         onSearch={() => {
@@ -161,28 +165,47 @@ const App = () => {
                 </Tool>
             </HeaderBody>
             <HeaderNav>
-                <NavItem title='Home' link='/'/>
-                <NavItem title='Resources'>
-                    <NavSubItem title='Ressource #1' link='/path-to-resources-1'/>
-                    <NavSubItem title='Ressource #2' link='/path-to-resources-2'/>
-                    <NavSubItem title='Ressource #3' link='/path-to-resources-3'/>
+                <NavItem title="Home" link="/"/>
+                <NavItem
+                    title="Countries"
+                    current
+                    asLink={<RouterLink to="myNavItem"/>}/>
+                <NavItem title="Resources">
+                    <NavSubItem title="Ressource #1" link="/path-to-resources-1"/>
+                    <NavSubItem
+                        current
+                        asLink={<RouterLink to="myNavSubItem"/>}
+                        title="Ressource #2"
+                        link="/path-to-resources-2"
+                    />
+                    <NavSubItem title="Ressource #3" link="/path-to-resources-3"/>
                 </NavItem>
             </HeaderNav>
         </Header>
         <Container>
             <Title as="h3">Tile - Tuile</Title>
-            <Row>
+            <Row gutters>
                 <Col>
-                    <Tile horizontal={true} verticalMedium={true}>
+                    <Tile horizontal verticalMedium>
                         <TileBody
                             title="Tuile horizontale par défaut"
                             description="Et verticale en desktop"
-                            linkHref='/myPath'>
+                            linkHref="/myPath">
                         </TileBody>
                         <TileImage
                             alt="un petit carré"
                             src="https://place-hold.it/80x80">
                         </TileImage>
+                    </Tile>
+                </Col>
+                <Col>
+                    <Tile>
+                        <TileBody
+                            titleAs="h5"
+                            title="Tile Title"
+                            description="Tile description"
+                            asLink={<RouterLink to="myTileLink"/>}>
+                        </TileBody>
                     </Tile>
                 </Col>
             </Row>
@@ -210,7 +233,7 @@ const App = () => {
                 <Col n="sm-12" className="fr-col-md-3">
                     <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
                         <SideMenuItem title="Niveau 1">
-                            <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
+                            <SideMenuLink href="/" asLink={<RouterLink to="mySideMenuLink"/>}>Accès direct niveau 2</SideMenuLink>
                             <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
                             <SideMenuItem title="Niveau 2">
                                 <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
@@ -245,7 +268,7 @@ const App = () => {
                     <Title as="h3">Modal</Title>
                     <Row>
                         <Col>
-                            <Button title='open modal' onClick={() => setIsOpen(true)}>open modal</Button>
+                            <Button title="open modal" onClick={() => setIsOpen(true)}>open modal</Button>
                             <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
                                 <ModalTitle icon>I'm a title</ModalTitle>
                                 <ModalContent>blah blah</ModalContent>
@@ -374,7 +397,7 @@ const App = () => {
             <Title as="h3">Lien</Title>
             <Row>
                 <Col>
-                    <Link title='title'>Link</Link>
+                    <Link title="title">Link</Link>
                 </Col>
             </Row>
             <Title as="h3">Bloc marque</Title>
@@ -462,11 +485,15 @@ const App = () => {
             <Row>
                 <Col>
                     <Breadcrumb>
-                        <BreadcrumbItem>
-                            test
+                        <BreadcrumbItem
+                            asLink={<RouterLink to="/myBreadcrumbLink"/>}>
+                            test #1
+                        </BreadcrumbItem>
+                        <BreadcrumbItem href='/path'>
+                            test #2
                         </BreadcrumbItem>
                         <BreadcrumbItem>
-                            test #2
+                            test #3
                         </BreadcrumbItem>
                     </Breadcrumb>
                 </Col>
@@ -477,7 +504,7 @@ const App = () => {
                     <Button title="title">Button</Button>
                 </Col>
                 <Col>
-                    <Button icon="alert-fill" iconPosition='right' title="title">icon on the right</Button>
+                    <Button icon="alert-fill" iconPosition="right" title="title">icon on the right</Button>
                 </Col>
                 <Col>
                     <Button size="sm" secondary title="title">
@@ -500,7 +527,7 @@ const App = () => {
             <Row>
                 <Col>
                     <Skiplinks>
-                        <SkiplinkItem href="#">Accéder au contenu</SkiplinkItem>
+                        <SkiplinkItem asLink={<RouterLink to="/mySkiplinkItem"/>}>Accéder au contenu</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder au menu</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder à la recherche</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder au footer</SkiplinkItem>
@@ -511,7 +538,10 @@ const App = () => {
             <Footer>
                 <FooterTop>
                     <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
+                        <FooterLink
+                            asLink={<RouterLink to="/myFooterLink"/>}>
+                            Footer Link Router
+                        </FooterLink>
                         <FooterLink href="/">Footer Link</FooterLink>
                         <FooterLink href="/">Footer Link</FooterLink>
                         <FooterLink href="/">Footer Link</FooterLink>
@@ -553,8 +583,10 @@ const App = () => {
                     <FooterPartnersLogo isMain href="/"
                                         imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
                                         imageAlt="Logo 1"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
-                                        imageAlt="Logo 2"/>
+                    <FooterPartnersLogo
+                        asLink={<RouterLink to="/myFooterLink"/>}
+                        imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
+                        imageAlt="Logo 2"/>
                     <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3"
                                         imageAlt="Logo 3"/>
                     <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4"
@@ -569,7 +601,8 @@ const App = () => {
                     <FooterCopy href="/">© République Française 2020</FooterCopy>
                 </FooterBottom>
             </Footer>
-        </Container></>;
+        </Container>
+    </BrowserRouter>;
 };
 
 export default App;

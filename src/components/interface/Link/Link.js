@@ -17,12 +17,12 @@ const Link = ({
     [`fr-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
 
-  const asLink = as ? cloneElement(as, { className: _className }) : null;
+  const asLink = as ? cloneElement(as, { className: _className, children, 'aria-current': (current && 'page') || undefined }) : null;
   return (
     as ? <>{asLink}</>
       : (
         <a
-          aria-current={current ? 'page' : undefined}
+          aria-current={(current && 'page') || undefined}
           href={href}
           title={title || undefined}
           target={target}
