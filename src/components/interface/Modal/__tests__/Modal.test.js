@@ -30,23 +30,6 @@ describe('<Modal />', () => {
     expect(modal).toMatchSnapshot();
   });
 
-  // it('should close modal on Close button click', () => {
-  //   const hide = jest.fn();
-  //   render(
-  //     <Modal isOpen hide={hide}>
-  //       <ModalClose title="Close the modal window">Close</ModalClose>
-  //       <ModalTitle icon>I am a title</ModalTitle>
-  //       <ModalContent>blah blah</ModalContent>
-  //       <ModalFooter>
-  //         <Button title="blah" />
-  //       </ModalFooter>
-  //     </Modal>,
-  //   );
-  //   const close = screen.getByTestId('modal-close');
-  //   fireEvent.click(close);
-  //   expect(hide).toHaveBeenCalledTimes(1);
-  // });
-
   it('should close modal on dialog click', async () => {
     jest.useFakeTimers();
     const hide = jest.fn();
@@ -61,9 +44,8 @@ describe('<Modal />', () => {
       </Modal>,
     );
     const modal = screen.getByTestId('modal');
-    expect(setTimeout).toHaveBeenCalledTimes(1);
     fireEvent.click(modal);
-    expect(setTimeout).toHaveBeenCalledTimes(2);
+    expect(setTimeout).toHaveBeenCalledTimes(1);
     expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 300);
   });
 });
