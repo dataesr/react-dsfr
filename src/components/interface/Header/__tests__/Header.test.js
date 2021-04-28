@@ -29,7 +29,7 @@ describe('<Header />', () => {
               description="baseline - précisions sur l‘organisation"
             />
             <Tool
-              buttonClose="fermer"
+              closeButtonLabel="fermer"
             >
               <ToolItemGroup>
                 <ToolItem icon="fr-fi-lock-line" link="/path">Se connecter</ToolItem>

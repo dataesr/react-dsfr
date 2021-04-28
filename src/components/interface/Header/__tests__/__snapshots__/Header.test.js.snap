@@ -107,10 +107,10 @@ exports[`<Header /> renders correctly 1`] = `
                 aria-controls="header-tools-popin"
                 className="fr-link--close fr-link"
                 onClick={[Function]}
-                title="fermer"
+                title="Fermer"
                 type="button"
               >
-                fermer
+                Fermer
               </button>
             </div>
           </div>

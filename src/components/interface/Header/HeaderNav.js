@@ -17,7 +17,7 @@ const HeaderNav = ({
     <div className={_className}>
       <div className="fr-container">
         <button
-          onClick={onOpenNav}
+          onClick={() => onOpenNav(false)}
           title={closeButtonLabel}
           className="fr-link--close fr-link"
           type="button"

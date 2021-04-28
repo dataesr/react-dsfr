@@ -46,7 +46,7 @@ import {
     Select, SideMenu, SideMenuItem, SideMenuLink,
     Skiplinks, SkiplinkItem, SimpleTable,
     Tag, TagGroup, TextInput,
-    Tile, TileImage, TileBody,
+    Tile, TileImage, TileBody, Toggle
 } from '@dataesr/react-dsfr';
 
 const App = () => {
@@ -145,7 +145,7 @@ const App = () => {
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
-                    buttonClose='fermer'
+                    closeButtonLabel='fermer'
                 >
                     <ToolItemGroup>
                         <ToolItem icon='fr-fi-lock-line' link='/path'>Example</ToolItem>
@@ -484,6 +484,16 @@ const App = () => {
                         secondary sm button
                     </Button>
                 </Col>
+            </Row>
+            <Title as="h3">Toggle</Title>
+            <Row>
+                <Toggle
+                    onChange={()=>{console.log('==== Change Toggle ==== ');}}
+                    isDisabled
+                    isChecked
+                    label="Toggle Label"
+                    description="Toggle descirption"
+                />
             </Row>
             <Title as="h3">Accordion</Title>
             <Row>

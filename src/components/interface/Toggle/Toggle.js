@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -34,7 +35,7 @@ const Toggle = ({
         type="checkbox"
         checked={isChecked}
         disabled={isDisabled}
-        onChange={() => onChange()}
+        onChange={onChange}
         className="fr-toggle__input"
         id={_id}
       />
@@ -52,13 +53,13 @@ const Toggle = ({
 };
 
 Toggle.defaultProps = {
-  id: null,
+  id: '',
   className: '',
   isChecked: false,
   isDisabled: false,
   hasSeparator: false,
   hasLabelLeft: false,
-  description: null,
+  description: '',
   onChange: () => {},
 };
 
