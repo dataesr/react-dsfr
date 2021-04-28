@@ -1,10 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const ModalTitle = ({ children, icon, className }) => (
-  <h1 id="rf-modal-title-modal" className="rf-modal__title">
+  <h1 id="fr-modal-title-modal" className="fr-modal__title">
     {icon && (
-      <span className={classNames('rf-fi-arrow-right-line rf-fi--lg', className)} />
+      <span className={classNames('fr-fi-arrow-right-line fr-fi--lg', className)} />
     )}
     {children}
   </h1>

@@ -3,58 +3,58 @@
 exports[`<SideMenu /> should render SideMenu properly 1`] = `
 <nav
   aria-label="Menu latéral"
-  class="rf-sidemenu"
+  class="fr-sidemenu"
   data-testid="sidemenu"
 >
   <div
-    class="rf-sidemenu__inner"
+    class="fr-sidemenu__inner"
   >
     <button
       aria-controls="xxxxxxx"
       aria-expanded="false"
-      class="rf-sidemenu__btn"
+      class="fr-sidemenu__btn"
       type="button"
     >
       Dans cette rubrique
     </button>
     <div
-      class="rf-collapse"
+      class="fr-collapse"
       id="xxxxxxx"
       style="--collapse: -0px;"
     >
       <div
-        class="rf-sidemenu__title"
+        class="fr-sidemenu__title"
       >
         Titre de rubrique
       </div>
       <ul
-        class="rf-sidemenu__list"
+        class="fr-sidemenu__list"
       >
         <li
-          class="rf-sidemenu__item"
+          class="fr-sidemenu__item"
         >
           <button
             aria-controls="xxxxxxx"
             aria-expanded="false"
-            class="rf-sidemenu__btn"
+            class="fr-sidemenu__btn"
             type="button"
           >
             Niveau 1
           </button>
           <div
-            class="rf-collapse"
+            class="fr-collapse"
             data-testid="xxxxxxx"
             id="xxxxxxx"
             style="--collapse: -0px;"
           >
             <ul
-              class="rf-sidemenu__list"
+              class="fr-sidemenu__list"
             >
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -62,10 +62,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -73,30 +73,30 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <button
                   aria-controls="xxxxxxx"
                   aria-expanded="false"
-                  class="rf-sidemenu__btn"
+                  class="fr-sidemenu__btn"
                   type="button"
                 >
                   Niveau 2
                 </button>
                 <div
-                  class="rf-collapse"
+                  class="fr-collapse"
                   data-testid="xxxxxxx"
                   id="xxxxxxx"
                   style="--collapse: -0px;"
                 >
                   <ul
-                    class="rf-sidemenu__list"
+                    class="fr-sidemenu__list"
                   >
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -104,10 +104,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -115,10 +115,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -126,10 +126,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -137,10 +137,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -148,10 +148,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -162,10 +162,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </div>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -173,10 +173,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -184,10 +184,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -198,30 +198,30 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
           </div>
         </li>
         <li
-          class="rf-sidemenu__item"
+          class="fr-sidemenu__item"
         >
           <button
             aria-controls="xxxxxxx"
             aria-expanded="false"
-            class="rf-sidemenu__btn"
+            class="fr-sidemenu__btn"
             type="button"
           >
             Niveau 1
           </button>
           <div
-            class="rf-collapse"
+            class="fr-collapse"
             data-testid="xxxxxxx"
             id="xxxxxxx"
             style="--collapse: -0px;"
           >
             <ul
-              class="rf-sidemenu__list"
+              class="fr-sidemenu__list"
             >
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -229,10 +229,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -240,30 +240,30 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <button
                   aria-controls="xxxxxxx"
                   aria-expanded="false"
-                  class="rf-sidemenu__btn"
+                  class="fr-sidemenu__btn"
                   type="button"
                 >
                   Niveau 2
                 </button>
                 <div
-                  class="rf-collapse"
+                  class="fr-collapse"
                   data-testid="xxxxxxx"
                   id="xxxxxxx"
                   style="--collapse: -0px;"
                 >
                   <ul
-                    class="rf-sidemenu__list"
+                    class="fr-sidemenu__list"
                   >
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -271,10 +271,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -282,10 +282,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -293,10 +293,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -304,10 +304,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -315,10 +315,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       </a>
                     </li>
                     <li
-                      class="rf-sidemenu__item"
+                      class="fr-sidemenu__item"
                     >
                       <a
-                        class="rf-sidemenu__link"
+                        class="fr-sidemenu__link"
                         href="/"
                         target="_self"
                       >
@@ -329,10 +329,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </div>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -340,10 +340,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >
@@ -351,10 +351,10 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                class="rf-sidemenu__item"
+                class="fr-sidemenu__item"
               >
                 <a
-                  class="rf-sidemenu__link"
+                  class="fr-sidemenu__link"
                   href="/"
                   target="_self"
                 >

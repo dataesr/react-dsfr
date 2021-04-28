@@ -30,23 +30,23 @@ describe('<Radio />', () => {
         value="value"
       />,
     );
-    const search = screen.getByTestId('radio-testid');
+    const search = screen.getByTestId('radio');
     expect(search).toBeInTheDocument();
   });
 
-  // test de la présence de la class rf-radio-group
-  it('has rf-radio-group class', () => {
+  // test de la présence de la class fr-radio-group
+  it('has fr-radio-group class', () => {
     const { container } = render(
       <Radio
         label="Label de la radio"
         value="value"
       />,
     );
-    expect(container.getElementsByClassName('rf-radio-group').length).toBe(1);
+    expect(container.getElementsByClassName('fr-radio-group').length).toBe(1);
   });
 
   // test de la class d'erreur
-  it('has rf-select class', () => {
+  it('has fr-select class', () => {
     const { container } = render(
       <Radio
         label="Label de la radio"
@@ -54,6 +54,6 @@ describe('<Radio />', () => {
         messageType="error"
       />,
     );
-    expect(container.getElementsByClassName('rf-radio-group--error').length).toBe(1);
+    expect(container.getElementsByClassName('fr-radio-group--error').length).toBe(1);
   });
 });

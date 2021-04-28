@@ -1,23 +1,24 @@
-### Barre de recherche Medium
+## Searchbar - Barre de recherche
 
+### Barre de recherche medium
 ```jsx
 <SearchBar
   onSearch={() => {}}
-  label="SearchBar du gouvernement"
-  placeholder="Rechercher dans..."
-  buttonLabel="Rechercher"
+  label="Searchbar Label"
+  placeholder="Placeholder"
+  buttonLabel="Search button"
 />
 ```
 
-### Barre de recherche Large
+### Barre de recherche large
 
 ```jsx
 <SearchBar
   size="lg"
   onSearch={() => {}}
-  label="SearchBar du gouvernement"
-  placeholder="Rechercher dans..."
-  buttonLabel="Rechercher"
+  label="Searchbar Label"
+  placeholder="Placeholder"
+  buttonLabel="Search button"
 />
 ```
 

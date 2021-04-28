@@ -2,23 +2,22 @@
 
 exports[`<SkipLinks /> should renders Tag properly 1`] = `
 <div
-  class="rf-skiplinks"
+  class="fr-skiplinks"
   data-testid="skiplinks"
 >
   <div
-    class="rf-container"
+    class="fr-container"
   >
     <ul
-      class="rf-skiplinks__list"
+      class="fr-skiplinks__list"
     >
       <li
         class=""
       >
         <a
-          class="rf-link"
+          class="fr-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au contenu
         </a>
@@ -27,10 +26,9 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
         class=""
       >
         <a
-          class="rf-link"
+          class="fr-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au menu
         </a>
@@ -39,10 +37,9 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
         class=""
       >
         <a
-          class="rf-link"
+          class="fr-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder à la recherche
         </a>
@@ -51,10 +48,9 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
         class=""
       >
         <a
-          class="rf-link"
+          class="fr-link"
           href="#"
           target="_self"
-          title=""
         >
           Accéder au footer
         </a>

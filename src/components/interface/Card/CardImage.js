@@ -1,8 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CardImage = ({ alt, src, className }) => (
-  <div className={classNames('rf-card__img', className)}>
+  <div className={classNames('fr-card__img', className)}>
     <img src={src} alt={alt} />
   </div>
 );

@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import useCollapse from '../../../hooks/useCollapse';
@@ -6,38 +7,41 @@ const AccordionItem = ({
   title, titleAs, isExpanded, onClick, children, className, id,
 }) => {
   const TitleTag = `${titleAs}`;
-  const { item, collapse } = useCollapse(`rf-accordion-${id}`, isExpanded);
+  const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
   return (
-    <li className={classNames(className)} data-testid="accordion">
-      <section className="rf-accordion">
-        <TitleTag className="rf-accordion__title">
+    <li
+      className={classNames(className)}
+      data-testid="accordion"
+    >
+      <section className="fr-accordion">
+        <TitleTag className="fr-accordion__title">
           <button
-            data-testid="accordion-button"
+            className="fr-accordion__btn"
             id={`button${id}`}
             onClick={onClick}
             type="button"
-            className="rf-accordion__btn"
-            aria-controls={`rf-accordion-${id}`}
+            aria-controls={`fr-accordion-${id}`}
             aria-expanded={isExpanded}
+            data-testid="accordion-button"
           >
             {title}
           </button>
+          <div
+            style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
+            className={item.class}
+            id={`fr-accordion-${id}`}
+            data-testid="accordion-div"
+          >
+            {children}
+          </div>
         </TitleTag>
-        <div
-          data-testid="accordion-div"
-          style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
-          className={item.class}
-          id={`rf-accordion-${id}`}
-        >
-          {children}
-        </div>
       </section>
     </li>
   );
 };
 
 AccordionItem.defaultProps = {
-  titleAs: 'p',
+  titleAs: 'h3',
   className: '',
   isExpanded: false,
   onClick: () => {},
@@ -48,7 +52,7 @@ AccordionItem.propTypes = {
   /**
    * Html tag to render in accordion title.
    */
-  titleAs: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  titleAs: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   /**
    * @ignore
    */

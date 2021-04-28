@@ -2,7 +2,7 @@
 
 exports[`<TitleDisplay /> renders correctly 1`] = `
 <h2
-  className="rf-display-xl"
+  className="fr-display-xl"
 >
   Title Alt xl
 </h2>

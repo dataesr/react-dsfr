@@ -1,8 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const ModalFooter = ({ children, className }) => (
-  <div className={classNames('rf-modal__footer', className)}>
+  <div className={classNames('fr-modal__footer', className)}>
     {children}
   </div>
 );

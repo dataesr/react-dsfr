@@ -1,29 +1,37 @@
+import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import './links.css';
+
 /**
- * Navigation
  *
- * @visibleName Links
+ * @visibleName Link
  */
 const Link = ({
-  children, href, title, target, isSimple, icon, className, iconPosition,
+  children, href, title, target, isSimple, icon, className, iconPosition, as, current,
 }) => {
   const _className = classNames(icon, className, {
-    'rf-link': isSimple,
-    'rf-link--icon-left': !isSimple && icon && children,
-    [`rf-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
+    'fr-link': isSimple,
+    'fr-link--icon-left': !isSimple && icon,
+    [`fr-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
   });
+
+  const asLink = as ? cloneElement(as, { className: _className }) : null;
   return (
-    <a
-      href={href}
-      title={title}
-      target={target}
-      rel={(target === '_blank') ? 'noopener noreferrer' : null}
-      className={_className}
-    >
-      {children}
-    </a>
+    as ? <>{asLink}</>
+      : (
+        <a
+          aria-current={current ? 'page' : undefined}
+          href={href}
+          title={title || undefined}
+          target={target}
+          rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
+          className={_className || undefined}
+        >
+          {children}
+        </a>
+      )
   );
 };
 
@@ -32,8 +40,12 @@ Link.defaultProps = {
   title: '',
   target: '_self',
   isSimple: false,
+  current: false,
   icon: '',
+  as: null,
   iconPosition: 'right',
+  href: '',
+  children: '',
 };
 
 Link.propTypes = {
@@ -42,11 +54,17 @@ Link.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  children: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  href: PropTypes.string,
+  as: PropTypes.element,
   title: PropTypes.string,
   target: PropTypes.string,
   isSimple: PropTypes.bool,
+  current: PropTypes.bool,
   icon: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -7,8 +8,8 @@ const CardTitle = ({
   const Tag = `${as}`;
   const AnchorTag = `${anchorAs}`;
   return (
-    <Tag className={classNames('rf-card__title', className)}>
-      <AnchorTag href={href} className="rf-card__link">{children}</AnchorTag>
+    <Tag className={classNames('fr-card__title', className)}>
+      <AnchorTag href={href} className="fr-card__link">{children}</AnchorTag>
     </Tag>
   );
 };

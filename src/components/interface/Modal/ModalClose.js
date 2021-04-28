@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -5,11 +6,11 @@ const ModalClose = ({
   hide, title, children, className,
 }) => (
   <button
-    className={classNames('rf-link--close rf-link', className)}
+    className={classNames('fr-link--close fr-link', className)}
     type="button"
     onClick={hide}
     title={title}
-    aria-controls="rf-modal"
+    aria-controls="fr-modal"
     data-testid="modal-close"
   >
     {children}

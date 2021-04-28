@@ -1,62 +1,74 @@
-## Tuile - Tile
+## Tile - Tuile
 
+La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu. Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
 
-### Tuile horizontale
+### Tuile horizontale par défaut et verticale en desktop
 ```jsx
 
 import { Tile, TileBody, TileImage } from '.';
 
 <Tile horizontal={true} verticalMedium={true}>
-    <TileImage
-        alt="un petit carré"
-        src="https://place-hold.it/80x80">
-    </TileImage>
     <TileBody
-        title="Tuile horizontale par défaut"
-        description="Et verticale en desktop"
+        title="Tile Title"
+        description="Tile description"
         linkHref='/myPath'>
     </TileBody>
+    <TileImage
+        alt="alternative"
+        src="https://place-hold.it/80x80">
+    </TileImage>
 </Tile>
 ```
 
-### Tuile verticale
+### Tuile verticale par défaut et horizontale en desktop
 ```jsx
 
 import { Tile, TileBody, TileImage } from '.';
 
 <Tile horizontalMedium={true} scheme="soft-orange-dark">
-    <TileImage
-        alt="un petit carré"
-        src="https://place-hold.it/80x80">
-    </TileImage>
     <TileBody
-        title="Tuile verticale par défaut"
-        description="Et horizontale en desktop"
+        title="Tile Title"
+        description="Tile description"
         linkHref='/myPath'>
     </TileBody>
+    <TileImage
+        alt="alternative"
+        src="https://place-hold.it/80x80">
+    </TileImage>
 </Tile>
 ```
 
 
-### Utilisation avec Container, Row, Col
+### Usage avec Container, Row, Col
 
 ```jsx
-import Row from '../../foundation/grid/Row/Row';
-import Container from '../../foundation/grid/Container/Container';
-import Col from '../../foundation/grid/Col/Col';
 import { Tile, TileBody, TileImage } from '.';
 
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
+import Col from '../../foundation/grid/Col';
+
 <Container>
-    <Row gutter={true}>
+    <Row>
         <Col>
             <Tile>
+                <TileBody
+                    titleAs="h5"
+                    title="Tile Title"
+                    linkHref='/myPath'>
+                </TileBody>
                 <TileImage
-                    alt="un petit carré"
+                    alt="alternative"
                     src="https://place-hold.it/80x80">
                 </TileImage>
+            </Tile>
+        </Col>
+        <Col>
+            <Tile>
                 <TileBody
                     titleAs="h5"
-                    title="Ceci est mon titre #1"
+                    title="Tile Title"
+                    description="Tile description"
                     linkHref='/myPath'>
                 </TileBody>
             </Tile>
@@ -65,24 +77,14 @@ import { Tile, TileBody, TileImage } from '.';
             <Tile>
                 <TileBody
                     titleAs="h5"
-                    title="Ceci est mon titre #2"
-                    description="Ceci est ma description"
+                    title="Tile Title"
                     linkHref='/myPath'>
                 </TileBody>
-            </Tile>
-        </Col>
-        <Col>
-            <Tile>
                 <TileImage
-                    alt="un petit carré"
+                    alt="alternative"
                     src="https://place-hold.it/80x80"
                     linkHref='/myPath'>
                 </TileImage>
-                <TileBody
-                    titleAs="h5"
-                    title="Ceci est mon titre #3"
-                    linkHref='/myPath'>
-                </TileBody>
             </Tile>
         </Col>
     </Row>

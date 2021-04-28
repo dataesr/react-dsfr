@@ -2,181 +2,214 @@
 
 exports[`<Header /> renders correctly 1`] = `
 <header
-  className="rf-header"
+  className="fr-header"
   role="banner"
 >
   <div
-    className="rf-container"
+    className="fr-header__body"
   >
     <div
-      className="rf-header__body"
-      role="banner"
+      className="fr-container"
     >
       <div
-        className="rf-header__brand"
-      >
-        <a
-          className="rf-logo"
-          href="/"
-          title="République française"
-        >
-          <span
-            className="rf-logo__title"
-          >
-            République
-            <br />
-            française
-            
-          </span>
-        </a>
-      </div>
-      <div
-        className="rf-header__navbar"
+        className="fr-header__body-row"
+        role="banner"
       >
         <div
-          className="rf-service"
+          className="fr-header__brand fr-enlarge-link"
         >
-          <a
-            className="rf-service__title"
-            href="/"
-            title="Nom du service"
+          <div
+            className="fr-header__brand-top"
           >
-            Nom du service
-          </a>
-          <p
-            className="rf-service__tagline"
+            <div
+              className="fr-header__logo"
+            >
+              <a
+                href="/"
+                target="_self"
+                title="République française"
+              >
+                <p
+                  className="fr-logo"
+                >
+                  République
+                  <br />
+                  française
+                  
+                </p>
+              </a>
+            </div>
+            <div
+              className="fr-header__navbar"
+            >
+              <button
+                aria-label="ouvrir la navigation"
+                className="fr-btn--menu fr-btn"
+                onClick={[Function]}
+                type="button"
+              />
+            </div>
+          </div>
+          <div
+            className="fr-header__service"
           >
-            baseline - précisions sur l‘organisation
-          </p>
+            <a
+              className="fr-header__service-title"
+              href="/"
+              target="_self"
+              title="Nom du service"
+            >
+              Nom du service
+            </a>
+            <p
+              className="fr-header__service-tagline"
+            >
+              baseline - précisions sur l‘organisation
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        className="rf-header__tools"
-        id=""
-      >
         <div
-          className="rf-shortcuts"
+          className="fr-header__tools"
         >
-          <ul
-            className="rf-shortcuts__list"
+          <div
+            className="fr-header__tools-links"
           >
-            <li
-              className="rf-shortcuts__item"
+            <ul
+              className="fr-links-group"
             >
-              <a
-                className="rf-fi-lock-line rf-link rf-link--icon-left"
-                href="/path"
-                rel={null}
-                target="_self"
-                title=""
-              >
-                Se connecter
-              </a>
-            </li>
-            <li
-              className="rf-shortcuts__item"
+              <li>
+                <a
+                  className="fr-fi-lock-line fr-link fr-link--icon-left"
+                  href="/path"
+                  target="_self"
+                >
+                  Se connecter
+                </a>
+              </li>
+              <li>
+                <a
+                  className="fr-fi-add-circle-line fr-link fr-link--icon-left"
+                  href="/path"
+                  target="_self"
+                >
+                  Créer un espace
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="fr-header__search fr-modal"
+          >
+            <div
+              className="fr-container fr-container-lg--fluid"
             >
-              <a
-                className="rf-fi-add-circle-line rf-link rf-link--icon-left"
-                href="/path"
-                rel={null}
-                target="_self"
-                title=""
+              <button
+                aria-controls="header-tools-popin"
+                className="fr-link--close fr-link"
+                onClick={[Function]}
+                title="fermer"
+                type="button"
               >
-                Créer un espace
-              </a>
-            </li>
-          </ul>
+                fermer
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="rf-container"
+    className="fr-header__menu fr-modal"
   >
-    <nav
-      aria-label="Menu principal"
-      className="rf-nav"
-      id="header-nav-popin"
-      role="navigation"
+    <div
+      className="fr-container"
     >
-      <ul
-        className="rf-nav__list"
+      <button
+        aria-label="fermer la navigation"
+        className="fr-link--close fr-link"
+        onClick={[Function]}
+        title="Fermer"
+        type="button"
       >
-        <li
-          className="rf-nav__item"
+        Fermer
+      </button>
+      <nav
+        aria-label="Menu principal"
+        className="fr-nav"
+        role="navigation"
+      >
+        <ul
+          className="fr-nav__list"
         >
-          <a
-            className="rf-link"
-            href="/"
-            target="_self"
+          <li
+            className="fr-nav__item"
           >
-            Home
-          </a>
-        </li>
-        <li
-          className="rf-nav__item"
-        >
-          <button
-            aria-controls="rf-nav-Resources"
-            aria-expanded="false"
-            className="rf-btn"
-            onClick={[Function]}
-            type="button"
-          >
-            Resources
-          </button>
-          <div
-            className="rf-menu rf-collapse"
-            id="rf-nav-subitem-yyyyyy"
-            style={
-              Object {
-                "--collapse": "-0pxpx",
-                "maxHeight": null,
-              }
-            }
-          >
-            <ul
-              className="rf-menu__list"
+            <a
+              className="fr-nav__link"
+              href="/"
+              target="_self"
             >
-              <li
-                className="rf-menu__item"
+              Home
+            </a>
+          </li>
+          <li
+            className="fr-nav__item"
+          >
+            <button
+              aria-expanded="false"
+              aria-label="ouvrir la navigation"
+              className="fr-nav__btn"
+              onClick={[Function]}
+              type="button"
+            >
+              Resources
+            </button>
+            <div
+              className="fr-menu fr-collapse"
+              id="fr-nav-subitem-undefined"
+              style={
+                Object {
+                  "--collapse": "-0pxpx",
+                  "maxHeight": null,
+                }
+              }
+            >
+              <ul
+                className="fr-menu__list"
               >
-                <a
-                  className="rf-link"
-                  href="/path-to-resources-1"
-                  target="_self"
-                >
-                  Ressource #1
-                </a>
-              </li>
-              <li
-                className="rf-menu__item"
-              >
-                <a
-                  className="rf-link"
-                  href="/path-to-resources-2"
-                  target="_self"
-                >
-                  Ressource #2
-                </a>
-              </li>
-              <li
-                className="rf-menu__item"
-              >
-                <a
-                  className="rf-link"
-                  href="/path-to-resources-3"
-                  target="_self"
-                >
-                  Ressource #3
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </nav>
+                <li>
+                  <a
+                    className="fr-nav__link"
+                    href="/path-to-resources-1"
+                    target="_self"
+                  >
+                    Ressource #1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="fr-nav__link"
+                    href="/path-to-resources-2"
+                    target="_self"
+                  >
+                    Ressource #2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="fr-nav__link"
+                    href="/path-to-resources-3"
+                    target="_self"
+                  >
+                    Ressource #3
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 `;

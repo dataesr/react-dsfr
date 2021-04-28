@@ -1,7 +1,6 @@
-Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page. Ils sont utilisés pour condenser l'espace en cachant le contenu et en le révélant au besoin.
+## Accordions - Accordéons
 
-## Les accordéons
-
+Condenser l'espace
 ### Accordéon simple
 
 ```jsx
@@ -9,7 +8,7 @@ import { AccordionItem, Accordion } from '.';
 
 <Accordion className="custom-class">
   <AccordionItem title="first line accordion">
-    Anything I want
+      Accordion Item #1
   </AccordionItem>
 </Accordion>
 ```
@@ -19,17 +18,16 @@ import { AccordionItem, Accordion } from '.';
 ```jsx
 import { AccordionItem, Accordion } from '.';
 
-
 <Accordion className="custom-class">
   <AccordionItem title="first line accordion">
-    Anything I want
+    Accordion Item #1
   </AccordionItem>
   <AccordionItem title="second line accordion">
-    Anything I want
+    Accordion Item #2
   </AccordionItem>
   <AccordionItem title="third line accordion">
     <article>
-      <h1>Content title</h1>
+      <h1>Title</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto assumenda autem deleniti eius error
         eum exercitationem hic libero modi mollitia numquam obcaecati provident quis quisquam, repellendus tempore

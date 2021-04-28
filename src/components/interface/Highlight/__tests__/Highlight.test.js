@@ -9,7 +9,7 @@ describe('<Highlight />', () => {
       </Highlight>,
     );
     const highlight = screen.getByTestId('highlight');
-    expect(highlight.className).toBe('rf-highlight rf-highlight--scheme-soft-green-warm');
+    expect(highlight.className).toBe('fr-highlight fr-highlight--scheme-soft-green-warm');
     expect(highlight).toHaveTextContent('Highlight text that might be short and concise.');
     expect(highlight).toBeInTheDocument();
     expect(highlight).toMatchSnapshot();
@@ -21,6 +21,6 @@ describe('<Highlight />', () => {
       </Highlight>,
     );
     const highlight = screen.getByTestId('highlight');
-    expect(highlight.className).toBe('rf-highlight rf-highlight--lg');
+    expect(highlight.className).toBe('fr-highlight fr-highlight--lg');
   });
 });

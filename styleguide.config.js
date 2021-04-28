@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  title: 'react-rfds',
+  title: '@dataesr/react-dsfr',
   styleguideDir: 'build',
   skipComponentsWithoutExample: true,
   pagePerSection: true,
@@ -17,7 +17,7 @@ module.exports = {
       base: "'Marianne', sans-serif",
     },
   },
-  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-rfds/master/favicon.ico' },
+  template: { favicon: 'https://raw.githubusercontent.com/dataesr/react-dsfr/master/favicon.ico' },
   styleguideComponents: {
     Wrapper: path.join(__dirname, './styleguide/Wrapper'),
   },
@@ -26,11 +26,11 @@ module.exports = {
   },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js');
-    return `import { ${name} } from '@dataesr/react-rfds';`;
+    return `import { ${name} } from '@dataesr/react-dsfr';`;
   },
   sections: [
     {
-      name: 'Pour commencer',
+      name: '',
       content: './README.md',
       sectionDepth: 0,
     }, {
@@ -39,7 +39,7 @@ module.exports = {
       sectionDepth: 2,
       sections: [
         {
-          name: 'Fondamentaux',
+          name: 'Fondamentaux technique',
           content: 'src/components/foundation/FOUNDATION.md',
           sectionDepth: 1,
           sections: [
@@ -49,7 +49,7 @@ module.exports = {
               components: 'src/components/foundation/grid/**/[A-Z]*.js',
             },
             {
-              name: 'Typography',
+              name: 'Typographie',
               content: 'src/components/foundation/typography/TYPOGRAPHY.md',
               components: 'src/components/foundation/typography/**/[A-Z]*.js',
             },
@@ -61,7 +61,7 @@ module.exports = {
           ],
         },
         {
-          name: 'Elements d\'interface',
+          name: 'Élements d\'interface',
           content: 'src/components/interface/INTERFACE.md',
           sectionDepth: 1,
           components: 'src/components/interface/**/[A-Z]*.js',

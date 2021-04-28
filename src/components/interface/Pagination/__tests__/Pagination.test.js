@@ -7,7 +7,7 @@ describe('<Pagination />', () => {
       <Pagination buildURL={(page) => `page${page}`} currentPage={8} pageCount={15} />,
     );
     const pagination = screen.getByTestId('pagination-nav');
-    expect(pagination.className).toBe('rf-pagination');
+    expect(pagination.className).toBe('fr-pagination');
     const pages = screen.getByRole('list');
     const { getAllByRole } = within(pages);
     const items = getAllByRole('listitem');

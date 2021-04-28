@@ -1,24 +1,10 @@
-Le système de grille sur 12 colonnes proposé par le Design System vous permet de structurer vos contenus. Il met à disposition 5 mises en page, basées sur 4 points de rupture:
-
-  - `xs`: de 0 à 575px
-  - `sm`: de 576px à 676px
-  - `md`: de 768px à 991px
-  - `lg`: de 992px à 1247px
-  - `xl`: ≥ 1248px
-
-Par défaut la grille est proposée sans gouttière, et avec des marges externes dans le code. Vous pouvez néanmoins utiliser les props des composants pour:
-
-  - ajouter les gouttières de la grille
-  - supprimer les marges externes
-  - adapter la largeur et l’affichage de vos blocs de contenu
-  - adapter les alignements
+##### [Fondamentaux techniques du DS de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/pages/603882709/Fondamentaux+techniques)
 
 ### Règle d'utilisation
 
-Pour que la grille s’affiche correctement, il faut respecter la structure : `<Container />` ou `<Container fluid/>` contenant une ou plusieurs `<Row />` qui elles mêmes contiennent des `<Col />`.
+Pour que la grille s’affiche correctement, il faut respecter la structure : `<Container />` contenant une ou plusieurs `<Row />` qui elles mêmes contiennent des `<Col />`.
 
-### Examples
-
+#### Grille simple
 ```jsx
 import Container from './Container';
 import Row from './Row';
@@ -26,36 +12,57 @@ import Col from './Col';
 
 <Container>
   <Row alignItems="middle">
-    <Col>JE SUIS UNE COLONE</Col>
-    <Col>JE SUIS UNE COLONE</Col>
-    <Col>JE SUIS UNE COLONE</Col>
-    <Col>JE SUIS UNE COLONE</Col>
+    <Col>Column #1</Col>
+    <Col>Column #2</Col>
+    <Col>Column #3</Col>
+    <Col>Column #4</Col>
   </Row>
 </Container>
 ```
 
+#### Grille avec Container fluid et gouttières
 ```jsx
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
 <Container fluid>
-  <Row alignItems="bottom" justifyContent="center">
-    <Col>JE SUIS UNE COLONE dans un conteneur fluid. J'ai pas de offset mais une taille de 6 et je suis seule dans ma row et elle m'a dit de m'aligner au centre. Du coup je suis bien centrée aussi.</Col>
+  <Row justifyContent="center" gutters>
+    <Col n="6">Column #1</Col>
+    <Col n="6">Column #2</Col>
   </Row>
 </Container>
 ```
 
+#### Grille avec alignement vertical
 ```jsx
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
-<Container fluid>
-  <Row alignItems="bottom">
-    <Col offset="4">JE SUIS UNE COLONE dans un conteneur fluid et avec un offset de 4</Col>
-    <Col>JE SUIS UNE COLONE et mon alignement m'est imposé par la Row</Col>
-    <Col>JE SUIS UNE COLONE</Col>
+<Container>
+  <Row alignItems="middle">
+    <Col>Column #1</Col>
+    <Col n="6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Col>
+    <Col>Column #3</Col>
+  </Row>
+</Container>
+```
+
+
+#### Grille avec offsets
+```jsx
+import Container from './Container';
+import Row from './Row';
+import Col from './Col';
+
+<Container>
+  <Row>
+    <Col offset="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Col>
+  </Row>
+  <Row>
+      <Col offset="2">Column #1</Col>
+      <Col>Column #2</Col>
   </Row>
 </Container>
 ```

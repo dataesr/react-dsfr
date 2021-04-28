@@ -1,9 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
- * Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
  *
  * @visibleName Tuile horizontale ou verticale
  */
@@ -13,7 +12,7 @@ const TileImage = ({
   alt,
   className,
 }) => (
-  <div className={classNames('rf-tile__img-wrap', className)}>
+  <div className={classNames('fr-tile__img', className)}>
     <img
       src={src}
       title={title}

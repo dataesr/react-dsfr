@@ -1,5 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import '../../../style.css';
+import './schemes.css';
+import './buttons.css';
 
 /**
  * @visibleName Button
@@ -15,10 +20,10 @@ const Button = ({
   children,
   className,
 }) => {
-  const _className = classNames('rf-btn', `rf-btn--${size}`, className, {
-    [`rf-btn--icon rf-fi-${icon}`]: icon,
-    'rf-btn--secondary': secondary,
-    [`rf-btn--icon-${iconPosition}`]: icon && children,
+  const _className = classNames('fr-btn', `fr-btn--${size}`, className, {
+    [`fr-btn--icon fr-fi-${icon}`]: icon,
+    'fr-btn--secondary': secondary,
+    [`fr-btn--icon-${iconPosition}`]: icon && children,
   });
 
   // TODO manage all icons from remix library

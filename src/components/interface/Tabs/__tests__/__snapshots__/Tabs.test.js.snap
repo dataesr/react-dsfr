@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> should render Tabs properly 1`] = `
+<div
+  className="fr-tabs fr-scheme-soft-blue-soft"
+  style={
+    Object {
+      "height": 500,
+    }
+  }
+>
+  <ul
+    className="fr-tabs__list"
+    role="tablist"
+  >
+    <li
+      className=""
+    >
+      <button
+        aria-controls="fr-tabpanel-0"
+        aria-selected="true"
+        className="fr-tabs__tab fr-tabs__tab--icon-left"
+        onClick={[Function]}
+        role="tab"
+        tabIndex="0"
+        type="button"
+      >
+        Label1
+      </button>
+    </li>
+    <li
+      className=""
+    >
+      <button
+        aria-controls="fr-tabpanel-1"
+        aria-selected="false"
+        className="fr-tabs__tab fr-tabs__tab--icon-left"
+        onClick={[Function]}
+        role="tab"
+        tabIndex="0"
+        type="button"
+      >
+        Label2
+      </button>
+    </li>
+  </ul>
+  <div
+    className="fr-tabs__panel fr-tabs__panel--selected"
+    id="fr-tabpanel-0"
+    role="tabpanel"
+    tabIndex="0"
+  >
+    Tab #1
+  </div>
+  <div
+    className="fr-tabs__panel "
+    id="fr-tabpanel-1"
+    role="tabpanel"
+    tabIndex="0"
+  >
+    Tab #2
+  </div>
+</div>
+`;

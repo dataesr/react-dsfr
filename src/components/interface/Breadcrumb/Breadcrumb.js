@@ -1,8 +1,11 @@
-import {
+import React, {
   useState, useEffect, useRef, Children,
 } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+import '../../../style.css';
+import './breadcrumbs.css';
 
 /**
  * @visibleName Breadcrumb
@@ -21,7 +24,7 @@ const Breadcrumb = ({
   const content = Children.toArray(children).filter(
     (child) => child.type.name === 'BreadcrumbItem',
   );
-  const _className = classNames('rf-breadcrumb', className);
+  const _className = classNames('fr-breadcrumb', className);
   const handleOpenBreadcrumb = () => {
     const height = buttonRef.current.offsetHeight;
     breadRef.current.style.maxHeight = `calc(${height}px + 1rem)`;
@@ -41,20 +44,34 @@ const Breadcrumb = ({
   }, [open, clicked]);
 
   return (
-    <nav ref={breadRef} className={_className} aria-label={label} data-testid="bc-nav">
+    <nav
+      ref={breadRef}
+      className={_className}
+      aria-label={label}
+      data-testid="bc-nav"
+    >
       <button
         ref={buttonRef}
         type="button"
         onClick={handleOpenBreadcrumb}
-        className="rf-breadcrumb__button"
+        className="fr-breadcrumb__button"
         hidden={open}
         data-testid="bc-button"
       >
         {buttonLabel}
       </button>
-      <ol ref={listRef} className="rf-breadcrumb__list" data-testid="bc-list" hidden={!open}>
-        {content}
-      </ol>
+      <div
+        className="fr-collapse"
+      >
+        <ol
+          ref={listRef}
+          className="fr-breadcrumb__list"
+          hidden={!open}
+          data-testid="bc-list"
+        >
+          {content}
+        </ol>
+      </div>
     </nav>
   );
 };

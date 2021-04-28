@@ -2,21 +2,21 @@
 
 exports[`<Callout /> renders Callout properly 1`] = `
 <div
-  class="rf-callout rf-fi-information-line rf-callout--scheme-soft-green-warm"
+  class="fr-callout fr-fi-information-line fr-callout--scheme-soft-green-warm"
   data-testid="callout"
 >
   <h3
-    class="rf-callout__title"
+    class="fr-callout__title"
   >
     Callout title
   </h3>
   <p
-    class="rf-callout__text"
+    class="fr-callout__text"
   >
     Callout text that might be short and concise.
   </p>
   <button
-    class="rf-btn rf-btn--md"
+    class="fr-btn fr-btn--md"
     title="acceder..."
     type="button"
   >

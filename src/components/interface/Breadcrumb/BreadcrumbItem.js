@@ -1,15 +1,23 @@
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Link from '../Link/index';
 
-const BreadcrumbItem = ({
-  className, children, href,
-}) => {
-  const _className = classNames('rf-breadcrumb__item', {
-    'rf-breadcrumb__item--current': !href,
-  }, className);
+const BreadcrumbItem = ({ className, children, href }) => {
+  const _className = classNames(
+    'fr-breadcrumb__item',
+    {
+      'fr-breadcrumb__item--current': !href,
+    },
+    className,
+  );
   return (
-    <li className={_className} aria-current={!href && 'page'} data-testid="bc-item">
-      {(href) ? <a href={href}>{children}</a> : children}
+    <li
+      className={_className}
+      aria-current={!href && 'page'}
+      data-testid="bc-item"
+    >
+      {href ? <Link className="fr-breadcrumb__link" href={href}>{children}</Link> : children}
     </li>
   );
 };

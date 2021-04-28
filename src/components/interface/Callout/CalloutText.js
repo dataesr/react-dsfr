@@ -1,8 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CalloutText = ({ children, className }) => (
-  <p className={classNames('rf-callout__text', className)}>
+  <p className={classNames('fr-callout__text', className)}>
     {children}
   </p>
 );

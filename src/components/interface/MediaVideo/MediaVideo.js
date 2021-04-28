@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -15,26 +16,29 @@ const MediaVideo = ({
   size,
 }) => {
   const _className = classNames(
-    'rf-content-media',
-    `rf-content-media--${size}`,
+    'fr-content-media',
+    `fr-content-media--${size}`,
     className,
   );
   const _classNameRatio = classNames(
-    'rf-responsive-vid',
-    { 'rf-responsive-vid--4x3': ratio },
+    'fr-responsive-vid',
+    { 'fr-responsive-vid--4x3': ratio },
   );
 
   return (
-    <div className={_className} data-testid="video-test">
+    <div
+      className={_className}
+      data-testid="video"
+    >
       <div className={_classNameRatio}>
         {children}
       </div>
-      <div className="rf-content-media__caption">{legend}</div>
+      <div className="fr-content-media__caption">{legend}</div>
       {
         (buttonLabel) ? (
-          <div className="rf-content-media__transcription">
+          <div className="fr-content-media__transcription">
             <button
-              className="rf-btn"
+              className="fr-btn"
               title={buttonLabel}
               type="button"
               onClick={onTranscriptionClick}

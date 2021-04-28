@@ -37,6 +37,6 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toBe('rf-card rf-card--horizontal');
+    expect(card.className).toBe('fr-card fr-card--horizontal');
   });
 });

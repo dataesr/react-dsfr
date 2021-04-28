@@ -61,11 +61,11 @@ describe('<SideMenu />', () => {
     const { getByRole, getByTestId } = within(niveau1);
     const button = getByRole('button');
     const item = getByTestId('xxxxxxx');
-    expect(button.className).toBe('rf-sidemenu__btn');
-    expect(item.className).toBe('rf-collapse');
+    expect(button.className).toBe('fr-sidemenu__btn');
+    expect(item.className).toBe('fr-collapse');
     fireEvent.click(button);
-    expect(item.className).toBe('rf-collapse rf-collapse--expanded');
+    expect(item.className).toBe('fr-collapse fr-collapse--expanded');
     fireEvent.click(button);
-    expect(item.className).toBe('rf-collapse');
+    expect(item.className).toBe('fr-collapse');
   });
 });

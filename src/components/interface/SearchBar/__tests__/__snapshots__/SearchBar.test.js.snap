@@ -2,18 +2,18 @@
 
 exports[`<SearchBar /> renders SearchBar properly 1`] = `
 <form
-  class="rf-search-bar"
+  class="fr-search-bar"
   data-testid="search-bar"
   role="search"
 >
   <label
-    class="rf-label"
+    class="fr-label"
     for="xxxxxxx"
   >
     SearchBar du gouvernement
   </label>
   <input
-    class="rf-input"
+    class="fr-input"
     data-testid="search-input"
     id="xxxxxxx"
     placeholder=""
@@ -21,7 +21,7 @@ exports[`<SearchBar /> renders SearchBar properly 1`] = `
     value=""
   />
   <button
-    class="rf-btn"
+    class="fr-btn"
     title="Rechercher"
     type="button"
   >
@@ -32,18 +32,18 @@ exports[`<SearchBar /> renders SearchBar properly 1`] = `
 
 exports[`<SearchBar /> renders large SearchBar properly 1`] = `
 <form
-  class="rf-search-bar rf-search-bar--lg"
+  class="fr-search-bar fr-search-bar--lg"
   data-testid="search-bar"
   role="search"
 >
   <label
-    class="rf-label"
+    class="fr-label"
     for="xxxxxxx"
   >
     SearchBar du gouvernement
   </label>
   <input
-    class="rf-input"
+    class="fr-input"
     data-testid="search-input"
     id="xxxxxxx"
     placeholder=""
@@ -51,7 +51,7 @@ exports[`<SearchBar /> renders large SearchBar properly 1`] = `
     value=""
   />
   <button
-    class="rf-btn rf-btn--lg"
+    class="fr-btn fr-btn--lg"
     title="Rechercher"
     type="button"
   >

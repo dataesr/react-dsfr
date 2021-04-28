@@ -2,16 +2,16 @@
 
 exports[`<MediaVideo /> renders correctly 1`] = `
 <div
-  className="rf-content-media rf-content-media--sm"
-  data-testid="video-test"
+  className="fr-content-media fr-content-media--sm"
+  data-testid="video"
 >
   <div
-    className="rf-responsive-vid"
+    className="fr-responsive-vid"
   >
     <iframe
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen=""
-      className="rf-responsive-vid__player"
+      className="fr-responsive-vid__player"
       frameBorder="0"
       height="100%"
       src="https://www.youtube.com/embed/HyirpmPL43I"
@@ -20,15 +20,15 @@ exports[`<MediaVideo /> renders correctly 1`] = `
     />
   </div>
   <div
-    className="rf-content-media__caption"
+    className="fr-content-media__caption"
   >
     légende de l'image
   </div>
   <div
-    className="rf-content-media__transcription"
+    className="fr-content-media__transcription"
   >
     <button
-      className="rf-btn"
+      className="fr-btn"
       onClick={[Function]}
       title="Transcription"
       type="button"

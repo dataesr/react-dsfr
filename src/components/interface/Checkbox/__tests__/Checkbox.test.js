@@ -30,23 +30,23 @@ describe('<Checkbox />', () => {
         value="value"
       />,
     );
-    const search = screen.getByTestId('checkbox-testid');
+    const search = screen.getByTestId('checkbox');
     expect(search).toBeInTheDocument();
   });
 
-  // test de la présence de la class rf-checkbox-group
-  it('has rf-checkbox-group class', () => {
+  // test de la présence de la class fr-checkbox-group
+  it('has fr-checkbox-group class', () => {
     const { container } = render(
       <Checkbox
         label="Label de la checkbox"
         value="value"
       />,
     );
-    expect(container.getElementsByClassName('rf-checkbox-group').length).toBe(1);
+    expect(container.getElementsByClassName('fr-checkbox-group').length).toBe(1);
   });
 
   // test de la class d'erreur
-  it('has rf-select class', () => {
+  it('has fr-select class', () => {
     const { container } = render(
       <Checkbox
         label="Label de la checkbox"
@@ -54,6 +54,6 @@ describe('<Checkbox />', () => {
         messageType="error"
       />,
     );
-    expect(container.getElementsByClassName('rf-checkbox-group--error').length).toBe(1);
+    expect(container.getElementsByClassName('fr-checkbox-group--error').length).toBe(1);
   });
 });

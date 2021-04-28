@@ -2,10 +2,10 @@
 
 exports[`<Radio /> renders correctly 1`] = `
 <div
-  className="rf-radio-group"
+  className="fr-radio-group"
+  data-testid="radio"
 >
   <input
-    data-testid="radio-testid"
     id="xxxxxxx"
     name="radio"
     onChange={[Function]}
@@ -13,7 +13,7 @@ exports[`<Radio /> renders correctly 1`] = `
     value="value"
   />
   <label
-    className="rf-label"
+    className="fr-label"
     htmlFor="xxxxxxx"
   >
     Label de la radio

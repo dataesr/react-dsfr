@@ -2,67 +2,70 @@
 
 exports[`<Footer /> should render Footer properly 1`] = `
 <footer
-  class="rf-footer"
+  class="fr-footer"
   data-testid="footer"
-  id="footer"
   role="contentinfo"
 >
   <div
-    class="rf-footer__top"
+    class="fr-footer__top"
   >
     <div
-      class="rf-container"
+      class="fr-container"
     >
       <div
-        class="rf-grid-row rf-grid-row--center rf-grid-row--gutters"
+        class="fr-grid-row fr-grid-row--center fr-grid-row--gutters"
       >
         <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
         >
           <div
-            class="rf-footer__top-cat"
+            class="fr-footer__top-cat"
           >
             Nom de la catégorie
           </div>
           <ul
-            class="rf-footer__top-list"
+            class="fr-footer__top-list"
           >
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -70,72 +73,78 @@ exports[`<Footer /> should render Footer properly 1`] = `
           </ul>
         </div>
         <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
         >
           <div
-            class="rf-footer__top-cat"
+            class="fr-footer__top-cat"
           >
             Nom de la catégorie
           </div>
           <ul
-            class="rf-footer__top-list"
+            class="fr-footer__top-list"
           >
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -143,52 +152,56 @@ exports[`<Footer /> should render Footer properly 1`] = `
           </ul>
         </div>
         <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
         >
           <div
-            class="rf-footer__top-cat"
+            class="fr-footer__top-cat"
           >
             Nom de la catégorie
           </div>
           <ul
-            class="rf-footer__top-list"
+            class="fr-footer__top-list"
           >
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -196,52 +209,56 @@ exports[`<Footer /> should render Footer properly 1`] = `
           </ul>
         </div>
         <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
         >
           <div
-            class="rf-footer__top-cat"
+            class="fr-footer__top-cat"
           >
             Nom de la catégorie
           </div>
           <ul
-            class="rf-footer__top-list"
+            class="fr-footer__top-list"
           >
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -249,52 +266,56 @@ exports[`<Footer /> should render Footer properly 1`] = `
           </ul>
         </div>
         <div
-          class="rf-col-12 rf-col-sm-4 rf-col-md-2"
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
         >
           <div
-            class="rf-footer__top-cat"
+            class="fr-footer__top-cat"
           >
             Nom de la catégorie
           </div>
           <ul
-            class="rf-footer__top-list"
+            class="fr-footer__top-list"
           >
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
             </li>
             <li
-              class="rf-footer__top-item"
+              class="fr-footer__top-item"
             >
               <a
-                class="rf-footer__top-link"
+                class="fr-footer__top-link"
                 href="/"
+                target="_self"
               >
                 Lien de navigation
               </a>
@@ -305,21 +326,21 @@ exports[`<Footer /> should render Footer properly 1`] = `
     </div>
   </div>
   <div
-    class="rf-container"
+    class="fr-container"
   >
     <div
-      class="rf-footer__body"
+      class="fr-footer__body"
     >
       <div
-        class="rf-footer__brand"
+        class="fr-footer__brand"
       >
         <a
-          class="rf-logo"
           href="/"
+          target="_self"
           title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"
         >
-          <span
-            class="rf-logo__title"
+          <p
+            class="fr-logo"
           >
             Ministère de
             <br />
@@ -331,56 +352,60 @@ exports[`<Footer /> should render Footer properly 1`] = `
             <br />
             et de l'innovation
             
-          </span>
+          </p>
         </a>
       </div>
       <div
-        class="rf-footer__content"
+        class="fr-footer__content"
       >
         <p
-          class="rf-footer__content-desc"
+          class="fr-footer__content-desc"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <ul
-          class="rf-footer__content-list"
+          class="fr-footer__content-list"
         >
           <li
-            class="rf-footer__content-item"
+            class="fr-footer__content-item"
           >
             <a
-              class="rf-footer__content-link"
+              class="fr-footer__content-link"
               href="https://legifrance.gouv.fr"
+              target="_self"
             >
               legifrance.gouv.fr
             </a>
           </li>
           <li
-            class="rf-footer__content-item"
+            class="fr-footer__content-item"
           >
             <a
-              class="rf-footer__content-link"
+              class="fr-footer__content-link"
               href="https://gouvernement.fr"
+              target="_self"
             >
               gouvernement.fr
             </a>
           </li>
           <li
-            class="rf-footer__content-item"
+            class="fr-footer__content-item"
           >
             <a
-              class="rf-footer__content-link"
+              class="fr-footer__content-link"
               href="https://service-public.fr"
+              target="_self"
             >
               service-public.fr
             </a>
           </li>
           <li
-            class="rf-footer__content-item"
+            class="fr-footer__content-item"
           >
             <a
-              class="rf-footer__content-link"
+              class="fr-footer__content-link"
               href="https://data.gouv.fr"
+              target="_self"
             >
               data.gouv.fr
             </a>
@@ -389,60 +414,64 @@ exports[`<Footer /> should render Footer properly 1`] = `
       </div>
     </div>
     <div
-      class="rf-footer__partners"
+      class="fr-footer__partners"
     >
       <p
-        class="rf-footer__partners-title"
+        class="fr-footer__partners-title"
       >
         Nos partenaires
       </p>
       <div
-        class="rf-footer__partners-logos"
+        class="fr-footer__partners-logos"
       >
         <div
-          class="rf-footer__partners-main"
+          class="fr-footer__partners-main"
         >
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 1"
-              class="rf-footer__logo"
+              class="fr-footer__logo"
               src="img/logo1"
             />
           </a>
         </div>
         <div
-          class="rf-footer__partners-sub"
+          class="fr-footer__partners-sub"
         >
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 2"
-              class="rf-footer__logo"
+              class="fr-footer__logo"
               src="img/logo2"
             />
           </a>
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 3"
-              class="rf-footer__logo"
+              class="fr-footer__logo"
               src="img/logo3"
             />
           </a>
           <a
             class="footer__partners-link"
             href="/"
+            target="_self"
           >
             <img
               alt="Logo 4"
-              class="rf-footer__logo"
+              class="fr-footer__logo"
               src="img/logo4"
             />
           </a>
@@ -450,64 +479,69 @@ exports[`<Footer /> should render Footer properly 1`] = `
       </div>
     </div>
     <div
-      class="rf-footer__bottom"
+      class="fr-footer__bottom"
     >
       <ul
-        class="rf-footer__bottom-list"
+        class="fr-footer__bottom-list"
       >
         <li
-          class="rf-footer__bottom-item"
+          class="fr-footer__bottom-item"
         >
           <a
-            class="rf-footer__bottom-link"
+            class="fr-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Plan du site
           </a>
         </li>
         <li
-          class="rf-footer__bottom-item"
+          class="fr-footer__bottom-item"
         >
           <a
-            class="rf-footer__bottom-link"
+            class="fr-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Accessibilité: non/partiellement/totalement conforme
           </a>
         </li>
         <li
-          class="rf-footer__bottom-item"
+          class="fr-footer__bottom-item"
         >
           <a
-            class="rf-footer__bottom-link"
+            class="fr-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Mentions légales
           </a>
         </li>
         <li
-          class="rf-footer__bottom-item"
+          class="fr-footer__bottom-item"
         >
           <a
-            class="rf-footer__bottom-link"
+            class="fr-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Données personnelles
           </a>
         </li>
         <li
-          class="rf-footer__bottom-item"
+          class="fr-footer__bottom-item"
         >
           <a
-            class="rf-footer__bottom-link"
+            class="fr-footer__bottom-link"
             href="/"
+            target="_self"
           >
             Gestion des cookies
           </a>
         </li>
       </ul>
       <div
-        class="rf-footer__bottom-copy"
+        class="fr-footer__bottom-copy"
       >
         © République Française 2020
       </div>

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
+<ul
+  class="fr-btns-group fr-btns-group--sm fr-btns-group--center fr-btns-group--inline-md fr-btns-group--equisized"
+  data-testid="button-group"
+>
+  <li>
+    <button
+      class="fr-btn fr-btn--md fr-btn--secondary"
+      title="title"
+      type="button"
+    >
+      secondary sm button
+    </button>
+  </li>
+  <li>
+    <button
+      class="fr-btn fr-btn--md"
+      title="title"
+      type="button"
+    >
+      sm button
+    </button>
+  </li>
+</ul>
+`;

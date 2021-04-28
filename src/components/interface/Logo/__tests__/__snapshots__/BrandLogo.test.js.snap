@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render Logo properly 1`] = `
+<p
+  class="fr-logo"
+>
+  Ministère de
+  <br />
+  l'enseignement
+  <br />
+  supérieur de
+  <br />
+  la rechercher
+  <br />
+  et de l'innovation
+  
+</p>
+`;

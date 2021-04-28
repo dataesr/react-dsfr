@@ -1,35 +1,41 @@
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+
+import { deepFilter, deepForEach } from '../../../utils/children-utilities';
 import HeaderContext from './headerContext';
 
 const Tool = ({
   children, className, buttonClose,
 }) => {
+  const searchBar = deepFilter(children, (child) => child.props && !!child.props.onSearch);
+  let toolItemGroup = null;
+  deepForEach(children, (child) => {
+    if (child.type && child.type.name === 'ToolItemGroup') toolItemGroup = child;
+  });
   const {
-    isOpenSearch, onOpenSearch, isMobile,
+    isOpenSearch, onOpenSearch,
   } = useContext(HeaderContext);
-  const _className = classNames('rf-header__tools', {
-    'rf-header__popin': isMobile,
-    'rf-header__popin--expanded': isOpenSearch,
-  }, className);
+  const _className = classNames('fr-header__tools', className);
   return (
     <div
-      id={isMobile ? 'header-tools-popin' : ''}
       className={_className}
     >
-      {children}
-      {isOpenSearch && (
-      <button
-        onClick={onOpenSearch}
-        type="button"
-        className="rf-btn rf-fi-close-line rf-btn--icon-right rf-btn--sm"
-        title={buttonClose}
-        aria-controls="header-tools-popin"
-      >
-        {buttonClose}
-      </button>
-      )}
+      {!isOpenSearch && toolItemGroup}
+      <div className={classNames('fr-header__search fr-modal', { 'fr-modal--opened': isOpenSearch })}>
+        <div className="fr-container fr-container-lg--fluid">
+          <button
+            onClick={onOpenSearch}
+            type="button"
+            className="fr-link--close fr-link"
+            title={buttonClose}
+            aria-controls="header-tools-popin"
+          >
+            {buttonClose}
+          </button>
+          {searchBar}
+        </div>
+      </div>
     </div>
   );
 };

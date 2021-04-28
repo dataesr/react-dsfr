@@ -1,0 +1,9 @@
+@import './style/reset.css';
+
+/*
+ * DSFR v1.0.0-rc1.0
+ */
+@import './style/core.css';
+@import './style/content.css';
+@import './style/forms.css';
+@import './style/inputs.css';

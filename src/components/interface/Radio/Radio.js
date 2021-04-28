@@ -1,6 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+
+import './radios.css';
 
 /**
  *
@@ -21,6 +24,7 @@ const Radio = (props) => {
     value,
   } = props;
 
+  const inputClasses = classNames('fr-radio-group', className, messageClasses, sizeClass);
   const messageClasses = (messageType !== '') ? `rf-radio-group--${messageType}` : null;
   const extendedClasses = (isExtended) ? 'rf-radio-rich' : null;
   const sizeClass = (size !== 'md') ? 'rf-radio-group--sm' : null;
@@ -30,9 +34,12 @@ const Radio = (props) => {
   const messageId = uuidv4();
 
   return (
+    <div
+      className={inputClasses}
+      data-testid="radio"
+    >
     <div className={_className}>
       <input
-        data-testid="radio-testid"
         type="radio"
         id={radioId}
         name="radio"
@@ -40,8 +47,8 @@ const Radio = (props) => {
         value={value}
       />
       <label className={_labelClassName} htmlFor={radioId} {...(style && { style })}>{label}</label>
-      {hint && <span className="rf-hint-text">{hint}</span>}
-      {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
+      {hint && <span className="fr-hint-text">{hint}</span>}
+      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };

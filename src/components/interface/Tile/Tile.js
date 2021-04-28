@@ -1,10 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 
+import './tiles.css';
+
 /**
- * La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu.
- * Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
  *
  * @visibleName Tile
  */
@@ -16,11 +17,11 @@ const Tile = ({
   children,
   scheme,
 }) => {
-  const _className = classNames('rf-tile', {
-    'rf-tile--horizontal': horizontal,
-    'rf-tile--horizontal-md': !horizontal && horizontalMedium,
-    'rf-tile--vertical-md': verticalMedium && horizontal,
-    [`rf-scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-tile fr-enlarge-link', {
+    'fr-tile--horizontal': horizontal,
+    'fr-tile--horizontal-md': !horizontal && horizontalMedium,
+    'fr-tile--vertical-md': verticalMedium && horizontal,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderNav /> renders correctly 1`] = `
+<div
+  className="fr-header__menu fr-modal"
+>
+  <div
+    className="fr-container"
+  >
+    <button
+      aria-label="fermer la navigation"
+      className="fr-link--close fr-link"
+      title="Fermer"
+      type="button"
+    >
+      Fermer
+    </button>
+    <nav
+      aria-label="Menu principal"
+      className="fr-nav"
+      role="navigation"
+    >
+      <ul
+        className="fr-nav__list"
+      >
+        <li>
+          nav #1
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

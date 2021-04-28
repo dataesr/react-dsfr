@@ -1,15 +1,31 @@
 {
+  "parser": "babel-eslint",
   "extends": [
     "react-app",
     "airbnb",
     "airbnb/hooks"
   ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "17"
+    }
+  },
   "rules": {
     "no-underscore-dangle": 0,
     "react/jsx-props-no-spreading": 0,
     "react/prefer-stateless-function": 0,
-    "react/jsx-uses-react": 0,
     "react/react-in-jsx-scope": 0,
+    "react/jsx-fragments": 0,
     "react/jsx-filename-extension": [
       1,
       {

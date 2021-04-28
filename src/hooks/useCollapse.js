@@ -4,11 +4,11 @@ import classNames from 'classnames';
 const useCollapse = (id, isExpanded, className) => {
   const expandedItem = {
     false: {
-      class: classNames(className, 'rf-collapse'),
+      class: classNames(className, 'fr-collapse'),
       stateHeight: null,
     },
     true: {
-      class: classNames(className, 'rf-collapse rf-collapse--expanded'),
+      class: classNames(className, 'fr-collapse fr-collapse--expanded'),
       stateHeight: 'none',
     },
   };

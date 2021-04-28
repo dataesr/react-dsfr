@@ -1,10 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 
+import './tags.css';
+
 /**
- * Le tag catégorise/classe/organise les contenus à l'aide de mots-clés.
- * Il aide les utilisateurs à rechercher et à trouver facilement une information.
  *
  * @visibleName Tag
  */
@@ -21,11 +22,11 @@ const Tag = ({
   scheme,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames('rf-tag', {
-    [`rf-tag--${size}`]: size,
-    [`rf-fi-${icon}`]: icon,
-    [`rf-tag--icon-${iconPosition}`]: (icon && iconPosition),
-    [`rf-scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-tag', {
+    [`fr-tag--${size}`]: size,
+    [`fr-fi-${icon}`]: icon,
+    [`fr-tag--icon-${iconPosition}`]: (icon && iconPosition),
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
 
   return (

@@ -1,9 +1,12 @@
-import { Children, cloneElement } from 'react';
+import React, { Children, cloneElement } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+
+import './cards.css';
+
 /**
- * Carte
  *
  * @visibleName Card
  */
@@ -23,15 +26,18 @@ const Card = ({
   );
   const title = Children.toArray(children).find((child) => child.type.name === 'CardTitle');
   const displayTitle = title && cloneElement(title, { href, anchorAs });
-  const _className = classNames('rf-card', {
-    'rf-card--horizontal': isHorizontal,
-    'rf-card--no-arrow': !hasArrow,
-    [`rf-scheme-${scheme}`]: scheme,
+  const _className = classNames('fr-card', {
+    'fr-card--horizontal': isHorizontal,
+    'fr-card--no-arrow': !hasArrow,
+    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return (
-    <div className={_className} data-testid="card">
+    <div
+      className={_className}
+      data-testid="card"
+    >
       {img}
-      <div className="rf-card__body">
+      <div className="fr-card__body">
         {detail}
         {displayTitle}
         {description}

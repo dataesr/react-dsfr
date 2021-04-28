@@ -34,11 +34,11 @@ describe('<Accordion />', () => {
     expect(item.isExpanded).toBeFalsy();
     const button = screen.getAllByTestId('accordion-button')[0];
     const itemDiv = screen.getAllByTestId('accordion-div')[0];
-    expect(itemDiv.className).toBe('rf-collapse');
+    expect(itemDiv.className).toBe('fr-collapse');
     fireEvent.click(button);
-    expect(itemDiv.className).toBe('rf-collapse rf-collapse--expanded');
+    expect(itemDiv.className).toBe('fr-collapse fr-collapse--expanded');
     fireEvent.click(button);
-    expect(itemDiv.className).toBe('rf-collapse');
+    expect(itemDiv.className).toBe('fr-collapse');
   });
   it('should toggle on click another accordion', () => {
     render(
@@ -54,9 +54,9 @@ describe('<Accordion />', () => {
     const buttons = screen.getAllByTestId('accordion-button');
     const itemDivs = screen.getAllByTestId('accordion-div');
     fireEvent.click(buttons[0]);
-    expect(itemDivs[0].className).toBe('rf-collapse rf-collapse--expanded');
+    expect(itemDivs[0].className).toBe('fr-collapse fr-collapse--expanded');
     fireEvent.click(buttons[1]);
-    expect(itemDivs[0].className).toBe('rf-collapse');
-    expect(itemDivs[1].className).toBe('rf-collapse rf-collapse--expanded');
+    expect(itemDivs[0].className).toBe('fr-collapse');
+    expect(itemDivs[1].className).toBe('fr-collapse fr-collapse--expanded');
   });
 });

@@ -11,7 +11,16 @@ describe('<MediaVideo />', () => {
           size="sm"
           buttonLabel="Transcription"
         >
-          <iframe title="titre de l’iframe" className="rf-responsive-vid__player" src="https://www.youtube.com/embed/HyirpmPL43I" width="100%" height="100%" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" />
+          <iframe
+            title="titre de l’iframe"
+            className="fr-responsive-vid__player"
+            src="https://www.youtube.com/embed/HyirpmPL43I"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen=""
+          />
         </MediaVideo>,
       )
       .toJSON();
@@ -21,14 +30,23 @@ describe('<MediaVideo />', () => {
   it('in document', () => {
     render(
       <MediaVideo
-          legend="légende de l'image"
-          size="sm"
-          buttonLabel="Transcription"
-        >
-        <iframe title="titre de l’iframe" className="rf-responsive-vid__player" src="https://www.youtube.com/embed/HyirpmPL43I" width="100%" height="100%" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" />
+        legend="légende de l'image"
+        size="sm"
+        buttonLabel="Transcription"
+      >
+        <iframe
+          title="titre de l’iframe"
+          className="fr-responsive-vid__player"
+          src="https://www.youtube.com/embed/HyirpmPL43I"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen=""
+        />
       </MediaVideo>,
     );
-    const search = screen.getByTestId('video-test');
+    const search = screen.getByTestId('video');
     expect(search).toBeInTheDocument();
   });
 });

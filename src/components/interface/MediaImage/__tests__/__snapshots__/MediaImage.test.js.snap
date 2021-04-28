@@ -2,11 +2,11 @@
 
 exports[`<MediaImage /> renders correctly 1`] = `
 <figure
-  className="rf-content-media rf-content-media--md"
-  data-testid="image-test"
+  className="fr-content-media fr-content-media--md"
+  data-testid="image"
 >
   <div
-    className="rf-content-media__img"
+    className="fr-content-media__img"
   >
     <img
       alt=""
@@ -14,7 +14,7 @@ exports[`<MediaImage /> renders correctly 1`] = `
     />
   </div>
   <figcaption
-    className="rf-content-media__caption"
+    className="fr-content-media__caption"
   >
     
   </figcaption>

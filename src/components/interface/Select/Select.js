@@ -1,7 +1,9 @@
-/* eslint-disable react/no-array-index-key */
+import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
+
+import './selects.css';
 
 /**
  *
@@ -20,40 +22,40 @@ const Select = ({
   options,
   selected,
 }) => {
-  const _className = classNames('rf-select', {
-    [`rf-select--${messageType}`]: messageType,
+  const _className = classNames('fr-select', {
+    [`fr-select--${messageType}`]: messageType,
   });
   const selectId = id || uuidv4();
   const messageId = uuidv4();
-  const _classNameWrapper = classNames('rf-select-group', {
-    [`rf-select-group--${messageType}`]: messageType,
+  const _classNameWrapper = classNames('fr-select-group', {
+    [`fr-select-group--${messageType}`]: messageType,
   }, className);
 
   return (
     <div className={_classNameWrapper}>
       {
       label && (
-        <label className="rf-label" htmlFor={selectId} aria-describedby={messageId}>
+        <label className="fr-label" htmlFor={selectId} aria-describedby={messageId}>
           {label}
-          {hint && <span className="rf-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
+          {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
         </label>
       )
       }
       <select
         className={_className}
-        data-testid="select"
         disabled={disabled}
         id={selectId}
         name={name}
         onChange={onChange}
         value={selected}
+        data-testid="select"
       >
         {
-          options.map((opt, i) => (
+          options.map((opt) => (
             <option
               disabled={opt.disabled || false}
               hidden={opt.hidden || false}
-              key={`${selectId}-${i}`}
+              key={`${selectId}-${uuidv4()}`}
               value={opt.value}
             >
               {opt.label}
@@ -61,7 +63,7 @@ const Select = ({
           ))
         }
       </select>
-      {(message && messageType) && <p id={messageId} className={`rf-${messageType}-text`}>{message}</p>}
+      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };
@@ -73,7 +75,7 @@ Select.defaultProps = {
   id: null,
   label: '',
   message: '',
-  messageType: '',
+  messageType: 'valid',
   name: null,
   onChange: () => {},
   selected: '',

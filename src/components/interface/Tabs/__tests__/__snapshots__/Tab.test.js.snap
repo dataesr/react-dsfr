@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab /> renders Tab correctly 1`] = `
+<div
+  className="fr-tabs__panel fr-tabs__panel--selected my-class"
+  id="fr-tabpanel-0"
+  role="tabpanel"
+  tabIndex="0"
+>
+  Tabinouze
+</div>
+`;

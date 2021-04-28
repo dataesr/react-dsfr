@@ -1,19 +1,23 @@
+import React from 'react';
 import PropTypes from 'prop-types';
+import Link from '../Link/index';
 
-const NavSubItem = ({ title, link }) => (
-  <li className="rf-menu__item" key={title}>
-    <a className="rf-link" href={link} target="_self">
+const NavSubItem = ({ title, link, current }) => (
+  <li key={title}>
+    <Link className="fr-nav__link" href={link} current={current}>
       {title}
-    </a>
+    </Link>
   </li>
 );
 
 NavSubItem.defaultProps = {
   link: '',
+  current: false,
 };
 NavSubItem.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
+  current: PropTypes.bool,
 };
 
 export default NavSubItem;
