@@ -19,7 +19,7 @@ describe('<Tool />', () => {
   };
 
   const initProps = {
-    buttonClose: 'close',
+    closeButtonLabel: 'close',
   };
 
   beforeEach(() => {
@@ -54,7 +54,7 @@ describe('<Tool />', () => {
 
   it('should have text close', () => {
     const props = {
-      buttonClose: 'close it!',
+      closeButtonLabel: 'close it!',
     };
     wrapper(<Tool {...props}>Item #1</Tool>, { context });
     expect(screen.getByRole('button').textContent).toBe('close it!');

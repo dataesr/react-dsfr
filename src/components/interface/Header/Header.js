@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, cloneElement } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -19,6 +19,7 @@ const Header = ({
   className,
   isOpenNav,
   isOpenSearch,
+  closeButtonLabel,
 }) => {
   const { width } = useViewport();
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
@@ -55,7 +56,7 @@ const Header = ({
         className={classNames(className, 'fr-header')}
         role="banner"
       >
-        {children}
+        {children.map((child) => cloneElement(child, { closeButtonLabel }))}
         {isNavTool && !isNavBar && (
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
@@ -68,10 +69,10 @@ const Header = ({
                 onClick={() => setOpenNav(false)}
                 type="button"
                 className="fr-link--close fr-link"
-                title="Fermer"
+                title={closeButtonLabel}
                 aria-controls="header-nav-popin"
               >
-                Fermer
+                {closeButtonLabel}
               </button>
             </nav>
             <div className="fr-header__menu-links">
@@ -89,6 +90,7 @@ Header.defaultProps = {
   className: '',
   isOpenNav: false,
   isOpenSearch: false,
+  closeButtonLabel: 'Fermer',
 };
 
 Header.propTypes = {
@@ -109,6 +111,7 @@ Header.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  closeButtonLabel: PropTypes.string,
 };
 
 export default Header;

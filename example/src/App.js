@@ -145,7 +145,7 @@ const App = () => {
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
-                    buttonClose='fermer'
+                    closeButtonLabel='fermer'
                 >
                     <ToolItemGroup>
                         <ToolItem icon='fr-fi-lock-line' link='/path'>Example</ToolItem>
