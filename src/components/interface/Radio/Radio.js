@@ -24,21 +24,19 @@ const Radio = (props) => {
     value,
   } = props;
 
-  const inputClasses = classNames('fr-radio-group', className, messageClasses, sizeClass);
-  const messageClasses = (messageType !== '') ? `rf-radio-group--${messageType}` : null;
-  const extendedClasses = (isExtended) ? 'rf-radio-rich' : null;
-  const sizeClass = (size !== 'md') ? 'rf-radio-group--sm' : null;
-  const _className = classNames('rf-radio-group', extendedClasses, className, messageClasses, sizeClass);
-  const _labelClassName = classNames('rf-label', { 'rf-ifi-no-icon': isExtended });
+  const messageClasses = (messageType !== '') ? `fr-radio-group--${messageType}` : null;
+  const extendedClasses = (isExtended) ? 'fr-radio-rich' : null;
+  const sizeClass = (size !== 'md') ? 'fr-radio-group--sm' : null;
+  const _className = classNames('fr-radio-group', extendedClasses, className, messageClasses, sizeClass);
+  const _labelClassName = classNames('fr-label', { 'fr-ifi-no-icon': isExtended });
   const radioId = id || uuidv4();
   const messageId = uuidv4();
 
   return (
     <div
-      className={inputClasses}
+      className={_className}
       data-testid="radio"
     >
-    <div className={_className}>
       <input
         type="radio"
         id={radioId}
@@ -46,7 +44,13 @@ const Radio = (props) => {
         onChange={onChange}
         value={value}
       />
-      <label className={_labelClassName} htmlFor={radioId} {...(style && { style })}>{label}</label>
+      <label
+        className={_labelClassName}
+        htmlFor={radioId}
+        {...(style && { style })}
+      >
+        {label}
+      </label>
       {hint && <span className="fr-hint-text">{hint}</span>}
       {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
     </div>
