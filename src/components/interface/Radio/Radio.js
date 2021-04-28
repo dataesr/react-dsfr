@@ -20,7 +20,7 @@ const Radio = (props) => {
     messageType,
     onChange,
     size,
-    style,
+    imageURL,
     value,
   } = props;
 
@@ -47,7 +47,7 @@ const Radio = (props) => {
       <label
         className={_labelClassName}
         htmlFor={radioId}
-        {...(style && { style })}
+        style={(imageURL && { backgroundImage: `url(${imageURL})` }) || undefined}
       >
         {label}
       </label>
@@ -60,13 +60,13 @@ const Radio = (props) => {
 Radio.defaultProps = {
   className: '',
   hint: '',
-  id: null,
+  id: '',
   isExtended: false,
   size: 'md',
   onChange: () => {},
   messageType: '',
   message: '',
-  style: null,
+  imageURL: '',
 };
 
 Radio.propTypes = {
@@ -83,8 +83,7 @@ Radio.propTypes = {
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   onChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
-  // eslint-disable-next-line react/forbid-prop-types
-  style: PropTypes.object,
+  imageURL: PropTypes.string,
   value: PropTypes.string.isRequired,
 };
 

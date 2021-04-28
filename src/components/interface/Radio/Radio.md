@@ -268,19 +268,19 @@ import { RadioGroup, Radio } from '.';
     label="Label radio 1"
     value="value-1"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
   <Radio
     label="Label radio 2"
     value="value-2"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
   <Radio
     label="Label radio 3"
     value="value-3"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
 </RadioGroup>
 ```
@@ -297,19 +297,19 @@ import { RadioGroup, Radio } from '.';
     label="Label radio 1"
     value="value-1"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
   <Radio
     label="Label radio 2"
     value="value-2"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
   <Radio
     label="Label radio 3"
     value="value-3"
     isExtended
-    style={{backgroundImage: "url('https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg')"}}
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
 </RadioGroup>
 ```
