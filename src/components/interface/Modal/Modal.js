@@ -1,5 +1,5 @@
 import React, {
-  cloneElement, Children, useRef, useEffect,
+  cloneElement, Children, useRef, useEffect, useState,
 } from 'react';
 
 import ReactDOM from 'react-dom';
@@ -22,10 +22,13 @@ const ModalDialog = ({
   hide,
   size,
   className,
+  isOpen,
 }) => {
   const modalRef = useRef();
+  const [openedModal, setOpenedModal] = useState(() => isOpen);
   const _className = classNames('fr-modal', {
     [`fr-modal--${size}`]: (size !== 'md'),
+    'fr-modal--opened': openedModal,
   }, className);
   const focusBackTo = document.activeElement;
   const handleTabulation = useFocusTrap(modalRef);
@@ -34,35 +37,28 @@ const ModalDialog = ({
   const footer = Children.toArray(children).filter((child) => child.type.name === 'ModalFooter');
   const close = Children.toArray(children).filter((child) => child.type.name === 'ModalClose');
 
-  const handleAnimatedUnmount = () => {
+  const handleModal = (open) => {
     if (modalRef.current) {
-      modalRef.current.style.opacity = '0';
+      setOpenedModal(open);
+      document.body.style.overflow = open ? 'hidden' : null;
     }
+  };
+
+  const handleAnimatedUnmount = () => {
+    handleModal(false);
     setTimeout(() => {
       if (focusBackTo) focusBackTo.focus();
       hide();
     }, MODAL_ANIMATION_TIME);
   };
   const handleOverlayClick = (e) => {
-    if (!modalRef.current || (modalRef.current === e.target)) {
+    if (!modalRef.current || (modalRef.current === e.target) || e.target.className.indexOf('closing-overlay') > -1) {
       handleAnimatedUnmount();
     }
   };
-  const handleNoBodyScroll = () => document.querySelector('html').classList.toggle('fr-no-scroll');
 
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.style.visibility = 'visible';
-    }
-    setTimeout(() => {
-      if (modalRef.current) {
-        modalRef.current.style.opacity = '1';
-      }
-    }, 0);
-    handleNoBodyScroll();
-    return () => {
-      handleNoBodyScroll();
-    };
+    handleModal(true);
   }, []);
 
   const handleAllKeyDown = (e) => {
@@ -87,7 +83,7 @@ const ModalDialog = ({
         data-testid="modal"
       >
         <div className="fr-container--fluid fr-container-md">
-          <div className="fr-grid-row fr-grid-row--center">
+          <div className="fr-grid-row fr-grid-row--center closing-overlay">
             <div className="fr-col-12 fr-col-md-6">
               <div className="fr-modal__body">
                 <div className="fr-modal__header">
