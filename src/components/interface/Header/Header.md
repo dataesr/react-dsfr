@@ -55,10 +55,6 @@ import Logo from '../Logo';
             linkLabel='This is a link'
             link='/'>
             <MegaNavSubItem
-                title="Category #0"
-                link='/path-to-resources-2'>
-            </MegaNavSubItem>
-            <MegaNavSubItem
                 title="Category #1"
                 link='/path-to-resources-1'>
                 <Link title='title' href='/path'>Link #1</Link>

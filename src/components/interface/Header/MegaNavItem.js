@@ -62,13 +62,15 @@ const MegaNavItem = ({
             <div className="fr-col-12 fr-col-lg-8 fr-col-offset-lg-4--right">
               <div className="fr-mega-menu__leader">
                 <Tag className="fr-h4 fr-mb-2v">{title}</Tag>
-                <p className="fr-hidden fr-displayed-lg">{description}</p>
+                {description && <p className="fr-hidden fr-displayed-lg">{description}</p>}
+                {link && linkLabel && (
                 <Link
                   className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
                   href={link}
                 >
                   {linkLabel}
                 </Link>
+                )}
               </div>
             </div>
             {children}
