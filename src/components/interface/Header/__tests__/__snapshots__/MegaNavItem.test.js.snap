@@ -68,17 +68,3 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
   </div>
 </li>
 `;
-
-exports[`<NavItem /> renders correctly 1`] = `
-<li
-  className="fr-nav__item"
->
-  <a
-    className="fr-nav__link"
-    href="link"
-    target="_self"
-  >
-    title
-  </a>
-</li>
-`;
