@@ -2,11 +2,14 @@
 
 exports[`<Link /> renders correctly 1`] = `
 <a
-  className="alert-fill fr-link--icon-left"
+  className="ds-fr--inline"
   href="/page"
   target="_self"
   title="title"
 >
   test button
+  <span
+    className="ri-1x icon-right alert-fill"
+  />
 </a>
 `;

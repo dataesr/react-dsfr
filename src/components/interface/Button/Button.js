@@ -1,45 +1,62 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Icon from '../Icon';
 
 import '../../../style.css';
 import './schemes.css';
 import './buttons.css';
 
+const iconSize = {
+  sm: 'lg',
+  md: 'lg',
+  lg: '2x',
+};
+
 /**
  * @visibleName Button
  */
-const Button = ({
-  size,
-  secondary,
-  disabled,
-  title,
-  icon,
-  iconPosition,
-  onClick,
-  children,
-  className,
-}) => {
-  const _className = classNames('fr-btn', `fr-btn--${size}`, className, {
-    [`fr-btn--icon fr-fi-${icon}`]: icon,
-    'fr-btn--secondary': secondary,
-    [`fr-btn--icon-${iconPosition}`]: icon && children,
-  });
-
-  // TODO manage all icons from remix library
-  return (
+const Button = forwardRef((props, ref) => {
+  const {
+    size,
+    secondary,
+    disabled,
+    title,
+    icon,
+    iconPosition,
+    onClick,
+    children,
+    className,
+  } = props;
+  const _className = classNames('fr-btn',
+    `fr-btn--${size}`,
+    className,
+    {
+      'fr-fi-icon': !children && icon,
+      'fr-btn--secondary': secondary,
+    });
+  const _button = (
     <button
+      ref={ref}
       type="button"
       onClick={onClick}
       className={_className}
       title={title}
       disabled={disabled}
     >
-      {icon && children ? (<span className="sr-only">{children}</span>)
-        : children}
+      {children}
     </button>
   );
-};
+  return icon ? (
+    <Icon
+      name={icon}
+      size={iconSize[size]}
+      iconPosition={children && `${iconPosition}`}
+    >
+      {_button}
+    </Icon>
+  ) : _button;
+});
 
 Button.defaultProps = {
   size: 'md',

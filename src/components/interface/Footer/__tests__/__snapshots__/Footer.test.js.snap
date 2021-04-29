@@ -335,6 +335,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
         class="fr-footer__brand"
       >
         <a
+          class=""
           href="/"
           target="_self"
           title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"

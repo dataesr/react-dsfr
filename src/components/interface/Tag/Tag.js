@@ -2,9 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+import Icon from '../Icon';
 
 import './tags.css';
 
+const iconSize = {
+  sm: 'lg',
+  md: 'lg',
+  lg: '2x',
+};
 /**
  *
  * @visibleName Tag
@@ -24,12 +30,11 @@ const Tag = ({
   const HtmlTag = `${as}`;
   const _className = classNames('fr-tag', {
     [`fr-tag--${size}`]: size,
-    [`fr-fi-${icon}`]: icon,
-    [`fr-tag--icon-${iconPosition}`]: (icon && iconPosition),
+    'fr-fi-icon': (icon && iconPosition),
     [`fr-scheme-${scheme}`]: scheme,
   }, className);
 
-  return (
+  const _tag = (
     <HtmlTag
       className={_className}
       title={title || undefined}
@@ -39,6 +44,17 @@ const Tag = ({
     >
       {children}
     </HtmlTag>
+  );
+  return (
+    icon ? (
+      <Icon
+        name={icon}
+        size={iconSize[size]}
+        iconPosition={children && `${iconPosition}`}
+      >
+        {_tag}
+      </Icon>
+    ) : _tag
   );
 };
 

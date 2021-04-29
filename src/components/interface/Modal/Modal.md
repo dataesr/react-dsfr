@@ -15,10 +15,10 @@ const hide = () => {
 };
 
 <>
-  <Button ref={buttonRef} onClick={() => setIsOpen(true)}>open modal</Button>
+  <Button ref={buttonRef} title="open modal" onClick={() => setIsOpen(true)}>open modal</Button>
   <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
     <ModalClose hide={hide} title="Close the modal window">Close</ModalClose>
-    <ModalTitle icon>Modal Title</ModalTitle>
+    <ModalTitle icon="ri-arrow-right-fill">Modal Title</ModalTitle>
     <ModalContent>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</ModalContent>
     <ModalFooter>
       <Button title="title">Modal Button</Button>

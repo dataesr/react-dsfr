@@ -1,53 +1,81 @@
 ```jsx
-<Button size="sm" title="title">
+<Button
+    size="sm"
+    title="title">
     basic sm button
 </Button>
 ```
 
 ```jsx
-<Button title="title">
+<Button
+    title="title">
     basic md button
 </Button>
 ```
 
 ```jsx
-<Button size="lg" title="title">
+<Button
+    size="lg"
+    title="title">
     basic lg button
 </Button>
 ```
 
 ```jsx
-<Button size="sm" secondary title="title">
+<Button
+    size="sm"
+    secondary
+    title="title">
     secondary sm button
 </Button>
 ```
 
 ```jsx
-<Button disabled title="title">
+<Button
+    disabled
+    title="title">
     disabled button
 </Button>
 ```
 
 ```jsx
-<Button icon="lock-line" title="title">
+<Button
+    icon="ri-lock-line"
+    title="title">
     icon button
 </Button>
 ```
 
 ```jsx
-<Button icon="alert-fill" title="title" />
+<Button
+    icon="ri-alert-fill"
+    iconPosition='right'
+    size="md"
+    title="title">icon on the right
+</Button>
 ```
 
 ```jsx
-<Button icon="alert-fill" iconPosition='right' title="title">icon on the right</Button>
+<Button
+    icon="ri-alert-fill"
+    title="title" />
 ```
 
 ```jsx
 import ButtonGroup from './ButtonGroup';
 
-<ButtonGroup size="sm" isEquisized align="center" isInlineFrom="md">
-  <Button secondary title="title">secondary sm button</Button>
-  <Button title="title">sm button</Button>
+<ButtonGroup
+    size="sm"
+    isEquisized
+    align="center"
+    isInlineFrom="md">
+  <Button
+    secondary 
+    title="title">secondary sm button
+  </Button>
+  <Button
+    title="title">sm button
+  </Button>
 </ButtonGroup>
 ```
 
@@ -55,9 +83,15 @@ import ButtonGroup from './ButtonGroup';
 ```jsx
 import ButtonGroup from './ButtonGroup';
 
-<ButtonGroup size="lg">
-  <Button secondary title="title">secondary sm button</Button>
-  <Button title="title">sm button</Button>
+<ButtonGroup
+    size="lg">
+  <Button
+      secondary
+      title="title">secondary sm button
+  </Button>
+  <Button
+      title="title">sm button
+  </Button>
 </ButtonGroup>
 ```
 

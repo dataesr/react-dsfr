@@ -35,11 +35,11 @@ exports[`<Modal /> should render modal properly 1`] = `
             class="fr-modal__content"
           >
             <h1
-              class="fr-modal__title"
+              class="fr-modal__title ds-fr--inline-block"
               id="fr-modal-title-modal"
             >
               <span
-                class="fr-fi-arrow-right-line fr-fi--lg"
+                class="ri-lg icon-left ds-fr--v-middle"
               />
               I am a title
             </h1>
