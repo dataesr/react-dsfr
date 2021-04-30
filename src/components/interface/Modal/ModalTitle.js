@@ -28,13 +28,13 @@ const ModalTitle = ({
 };
 
 ModalTitle.defaultProps = {
-  icon: true,
+  icon: '',
   className: '',
 };
 
 ModalTitle.propTypes = {
   children: PropTypes.string.isRequired,
-  icon: PropTypes.bool,
+  icon: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

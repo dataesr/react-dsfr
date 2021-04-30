@@ -9,7 +9,7 @@ exports[`<Link /> renders correctly 1`] = `
 >
   test button
   <span
-    className="ri-1x icon-right alert-fill"
+    className="ri-1x icon-right alert-fill ds-fr--v-top"
   />
 </a>
 `;

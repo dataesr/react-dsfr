@@ -19,7 +19,6 @@ const Link = ({
     className, {
       [`ds-fr--${display}`]: display && icon,
       'fr-link': isSimple,
-      [`fr-fi-icon fr-btn--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
     },
   );
 
@@ -39,9 +38,10 @@ const Link = ({
   const _element = as ? asLink : _link;
   return icon ? (
     <Icon
+      className={classNames({ 'ds-fr--v-top': display && icon })}
       name={icon}
       size={iconSize}
-      iconPosition={_element.props.children ? iconPosition : ''}
+      iconPosition={_element.props?.children ? iconPosition : 'center'}
     >
       {_element}
     </Icon>

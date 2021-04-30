@@ -1,23 +1,20 @@
 ```jsx
 <Button
     size="sm"
-    title="title">
-    basic sm button
+    title="title">basic sm button
 </Button>
 ```
 
 ```jsx
 <Button
-    title="title">
-    basic md button
+    title="title">basic md button
 </Button>
 ```
 
 ```jsx
 <Button
     size="lg"
-    title="title">
-    basic lg button
+    title="title">basic lg button
 </Button>
 ```
 
@@ -25,24 +22,21 @@
 <Button
     size="sm"
     secondary
-    title="title">
-    secondary sm button
+    title="title">secondary sm button
 </Button>
 ```
 
 ```jsx
 <Button
     disabled
-    title="title">
-    disabled button
+    title="title">disabled button
 </Button>
 ```
 
 ```jsx
 <Button
     icon="ri-lock-line"
-    title="title">
-    icon button
+    title="title">icon button
 </Button>
 ```
 

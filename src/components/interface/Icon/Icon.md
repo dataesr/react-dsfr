@@ -1,19 +1,25 @@
 ## Icons - Icônes
 
-Tous les icônes de la librairie [remixicon](https://remixicon.com/) sont utilisables.
+Toutes les icônes de la librairie [remixicon](https://remixicon.com/) sont utilisables.
 
 ### Usage simple
 ```jsx
 import Icon from './Icon';
 
-<Icon name="ri-bubble-chart-line">
+<Icon
+    name="ri-bubble-chart-line"
+    size="1x">
     <p>Lorem ipsum</p>
 </Icon>
 ```
 
 ```jsx
-<Icon name="ri-flag-line" iconPosition="right" size="lg">
-    <p>Lorem ipsum</p>
+<Icon
+    className="ds-fr--v-middle"
+    name="ri-music-2-line"
+    iconPosition="right"
+    size="lg">
+    <h3>Title</h3>
 </Icon>
 ```
 
@@ -28,5 +34,20 @@ import Button from './../Button/Button';
     iconPosition="right">click
 </Button>
 ```
+
+### Usage avec un composant Link
+```jsx
+import Icon from './Icon';
+import Link from './../Link/Link';
+
+<Link
+    title="title"
+    icon="ri-twitter-line"
+    iconPosition="left"
+    >this is a link
+</Link>
+```
+
+
 
 

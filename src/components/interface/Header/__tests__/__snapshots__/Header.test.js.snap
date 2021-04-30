@@ -80,24 +80,24 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <li>
                 <a
-                  className="ds-fr--flex fr-link fr-fi-icon fr-btn--icon-left"
+                  className="ds-fr--flex fr-link"
                   href="/path"
                   target="_self"
                 >
                   <span
-                    className="ri-1x icon-left fr-fi-lock-line"
+                    className="ri-1x icon-left fr-fi-lock-line ds-fr--v-top"
                   />
                   Se connecter
                 </a>
               </li>
               <li>
                 <a
-                  className="ds-fr--flex fr-link fr-fi-icon fr-btn--icon-left"
+                  className="ds-fr--flex fr-link"
                   href="/path"
                   target="_self"
                 >
                   <span
-                    className="ri-1x icon-left fr-fi-add-circle-line"
+                    className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-top"
                   />
                   Créer un espace
                 </a>

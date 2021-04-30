@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import 'remixicon/fonts/remixicon.css';
-import './icon.css';
+import './icons.css';
+
+// TODO add tests
+// TODO vertical-align props
 
 /**
  *
@@ -15,7 +18,7 @@ const Icon = ({
   const Tag = `${as}`;
   const _className = classNames(
     `ri-${size}`,
-    { [`icon-${iconPosition}`]: iconPosition },
+    { [`icon-${iconPosition}`]: iconPosition !== 'center' },
     name,
     className,
   );
@@ -51,7 +54,7 @@ Icon.propTypes = {
   size: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
-  iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconPosition: PropTypes.oneOf(['left', 'right', 'center']),
   as: PropTypes.oneOf(['span', 'i']),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),

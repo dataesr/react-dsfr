@@ -1,9 +1,9 @@
 ﻿:root {
-    --is-link: ; /**/
+    --is-link: ; /* hack needed because of DSFR style */
 }
 
 /* ------------------------------------ *\
-  ALIGN
+  ALIGNMENT
 \* ------------------------------------ */
 
 

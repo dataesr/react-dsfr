@@ -79,7 +79,7 @@ Tag.propTypes = {
   scheme: PropTypes.oneOf(SCHEMES),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['sm', 'md']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   href: PropTypes.string,
   title: PropTypes.string,
   target: PropTypes.string,

@@ -51,7 +51,7 @@ const Button = forwardRef((props, ref) => {
     <Icon
       name={icon}
       size={iconSize[size]}
-      iconPosition={children && `${iconPosition}`}
+      iconPosition={(children && `${iconPosition}`) || 'center'}
     >
       {_button}
     </Icon>
