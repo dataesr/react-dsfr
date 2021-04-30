@@ -2,6 +2,7 @@ import React, { useState, cloneElement } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import { v4 as uuidv4 } from 'uuid';
 import { deepForEach } from '../../../utils/children-utilities';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
@@ -56,7 +57,7 @@ const Header = ({
         className={classNames(className, 'fr-header')}
         role="banner"
       >
-        {children.map((child) => cloneElement(child, { closeButtonLabel }))}
+        {children.map((child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }))}
         {isNavTool && !isNavBar && (
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
