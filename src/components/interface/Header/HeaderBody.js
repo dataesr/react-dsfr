@@ -57,8 +57,7 @@ const HeaderBody = ({ children, className, closeButtonLabel }) => {
             </div>
             {service}
           </div>
-          {headerBodyChildren.map((child) => cloneElement(child,
-            { key: uuidv4(), closeButtonLabel }))}
+          {headerBodyChildren.map((child) => cloneElement(child, { closeButtonLabel }))}
         </div>
       </div>
     </div>
