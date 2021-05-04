@@ -14,34 +14,34 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="fr-tabpanel-0"
+      aria-selected="true"
       className=""
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex="0"
     >
-      <button
-        aria-controls="fr-tabpanel-0"
-        aria-selected="true"
+      <div
         className="fr-tabs__tab"
-        onClick={[Function]}
-        role="tab"
-        tabIndex="0"
-        type="button"
       >
         Label1
-      </button>
+      </div>
     </li>
     <li
+      aria-controls="fr-tabpanel-1"
+      aria-selected="false"
       className=""
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex="0"
     >
-      <button
-        aria-controls="fr-tabpanel-1"
-        aria-selected="false"
+      <div
         className="fr-tabs__tab"
-        onClick={[Function]}
-        role="tab"
-        tabIndex="0"
-        type="button"
       >
         Label2
-      </button>
+      </div>
     </li>
   </ul>
   <div

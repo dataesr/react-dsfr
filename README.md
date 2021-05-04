@@ -3,7 +3,9 @@
 :warning: beta version :hammer:
 
 
-[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml) [![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+[![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml) [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
 
 > Non-official React components of the official [French Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
@@ -82,6 +84,23 @@ $ npm link @dataesr/react-dsfr
 
 ```bash
 $ yarn test:dev
+```
+
+#### Accessibility
+
+Components can be tested in Example's page `App.js` with [@axe-core/react](https://www.npmjs.com/package/@axe-core/react)
+
+```bash
+$ npm install --save-dev @axe-core/react
+```
+
+An other solution to test accessibility is CLI module [https://pa11y.org/](https://pa11y.org/)
+
+Check configuration file `.pa11y-ci`
+
+```bash
+$ npm install -g pa11y-ci
+$ pa11y-ci
 ```
 
 #### In Chrome

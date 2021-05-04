@@ -13,7 +13,6 @@ exports[`<Header /> renders correctly 1`] = `
     >
       <div
         className="fr-header__body-row"
-        role="banner"
       >
         <div
           className="fr-header__brand fr-enlarge-link"

@@ -199,7 +199,7 @@ const App = () => {
                 </MegaNavItem>
             </HeaderNav>
         </Header>
-        <Container>
+        <Container role="main">
             <Title as="h3">Tile - Tuile</Title>
             <Row>
                 <Col>
@@ -339,7 +339,7 @@ const App = () => {
             <Title as="h3">Checkbox</Title>
             <Row>
                 <Col>
-                    <CheckboxGroup>
+                    <CheckboxGroup ariaLabel="This is aia label" legend="This is the legend">
                         <Checkbox
                             label="Label checkbox 1"
                             onChange={() => {
@@ -474,7 +474,7 @@ const App = () => {
                     <TitleDisplay as="h1" size="sm">Title sm</TitleDisplay>
                 </Col>
             </Row>
-            <Title as="h3">Callout</Title>
+            <Title as="h2">Callout</Title>
             <Row>
                 <Col>
                     <Callout scheme="soft-green-warm">
@@ -553,69 +553,69 @@ const App = () => {
                     </Skiplinks>
                 </Col>
             </Row>
-            <Title as="h3">Footer</Title>
-            <Footer>
-                <FooterTop>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                </FooterTop>
-                <FooterBody
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                >
-                    <Logo>Ministère de l'enseignement supérieur de la rechercher et de l'innovation</Logo>
-                </FooterBody>
-                <FooterPartners>
-                    <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
-                    <FooterPartnersLogo isMain href="/"
-                                        imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
-                                        imageAlt="Logo 1"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
-                                        imageAlt="Logo 2"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3"
-                                        imageAlt="Logo 3"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4"
-                                        imageAlt="Logo 4"/>
-                </FooterPartners>
-                <FooterBottom>
+        </Container>
+        <Footer>
+            <FooterTop>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterCopy href="/">© République Française 2020</FooterCopy>
-                </FooterBottom>
-            </Footer>
-        </Container></>;
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+            </FooterTop>
+            <FooterBody
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            >
+                <Logo>Ministère de l'enseignement supérieur de la rechercher et de l'innovation</Logo>
+            </FooterBody>
+            <FooterPartners>
+                <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
+                <FooterPartnersLogo isMain href="/"
+                                    imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
+                                    imageAlt="Logo 1"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
+                                    imageAlt="Logo 2"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3"
+                                    imageAlt="Logo 3"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4"
+                                    imageAlt="Logo 4"/>
+            </FooterPartners>
+            <FooterBottom>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterCopy href="/">© République Française 2020</FooterCopy>
+            </FooterBottom>
+        </Footer>
+    </>;
 };
 
 export default App;
