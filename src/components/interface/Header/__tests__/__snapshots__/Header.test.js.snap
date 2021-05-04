@@ -25,6 +25,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
+                className=""
                 href="/"
                 target="_self"
                 title="République française"
@@ -79,19 +80,25 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <li>
                 <a
-                  className="fr-fi-lock-line fr-link fr-link--icon-left"
+                  className="ds-fr--flex fr-link"
                   href="/path"
                   target="_self"
                 >
+                  <span
+                    className="ri-1x icon-left fr-fi-lock-line ds-fr--v-top"
+                  />
                   Se connecter
                 </a>
               </li>
               <li>
                 <a
-                  className="fr-fi-add-circle-line fr-link fr-link--icon-left"
+                  className="ds-fr--flex fr-link"
                   href="/path"
                   target="_self"
                 >
+                  <span
+                    className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-top"
+                  />
                   Créer un espace
                 </a>
               </li>

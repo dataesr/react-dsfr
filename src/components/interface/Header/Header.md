@@ -28,8 +28,8 @@ import Logo from '../Logo';
             description="Service Description"/>
         <Tool>
             <ToolItemGroup>
-                <ToolItem icon='fr-fi-lock-line' link='/path'>Tool Item #1</ToolItem>
-                <ToolItem icon='rf-fi-add-circle-line' link='/path'>Tool Item #2</ToolItem>
+                <ToolItem icon='ri-lock-line' link='/path'>Tool Item #1</ToolItem>
+                <ToolItem icon='ri-add-circle-line' link='/path'>Tool Item #2</ToolItem>
             </ToolItemGroup>
             <SearchBar
                 onSearch={() => {

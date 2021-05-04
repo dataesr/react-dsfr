@@ -12,14 +12,17 @@ const ToolItem = ({
     <Link
       className={classNames(className)}
       isSimple
-      icon={icon || ''}
+      display="flex"
+      icon={icon}
       iconPosition="left"
+      iconSize="1x"
       href={link}
     >
       {children}
     </Link>
   </li>
 );
+
 ToolItem.defaultProps = {
   className: '',
   icon: '',
@@ -35,4 +38,5 @@ ToolItem.propTypes = {
   children: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };
+
 export default ToolItem;

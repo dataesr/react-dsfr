@@ -1,6 +1,7 @@
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Icon from '../Icon';
 
 import './links.css';
 
@@ -9,30 +10,42 @@ import './links.css';
  * @visibleName Link
  */
 const Link = ({
-  children, href, title, target, isSimple, icon, className, iconPosition, as, current,
+  children, href,
+  title, target, isSimple,
+  className, as, current, display,
+  iconSize, icon, iconPosition,
 }) => {
-  const _className = classNames(icon, className, {
-    'fr-link': isSimple,
-    'fr-link--icon-left': !isSimple && icon,
-    [`fr-link--icon-${iconPosition}`]: iconPosition && isSimple && icon && children,
-  });
+  const _className = classNames(
+    className, {
+      [`ds-fr--${display}`]: display && icon,
+      'fr-link': isSimple,
+    },
+  );
 
   const asLink = as ? cloneElement(as, { className: _className }) : null;
-  return (
-    as ? <>{asLink}</>
-      : (
-        <a
-          aria-current={current ? 'page' : undefined}
-          href={href}
-          title={title || undefined}
-          target={target}
-          rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
-          className={_className || undefined}
-        >
-          {children}
-        </a>
-      )
+  const _link = (
+    <a
+      aria-current={current ? 'page' : undefined}
+      href={href}
+      title={title || undefined}
+      target={target}
+      rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
+      className={_className}
+    >
+      {children}
+    </a>
   );
+  const _element = as ? asLink : _link;
+  return icon ? (
+    <Icon
+      className={classNames({ 'ds-fr--v-top': display && icon })}
+      name={icon}
+      size={iconSize}
+      iconPosition={_element.props?.children ? iconPosition : 'center'}
+    >
+      {_element}
+    </Icon>
+  ) : _element;
 };
 
 Link.defaultProps = {
@@ -46,6 +59,8 @@ Link.defaultProps = {
   iconPosition: 'right',
   href: '',
   children: '',
+  display: 'inline',
+  iconSize: '1x',
 };
 
 Link.propTypes = {
@@ -67,6 +82,11 @@ Link.propTypes = {
   current: PropTypes.bool,
   icon: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
+  /**
+   * @ignore
+   */
+  display: PropTypes.oneOf(['inline', 'flex']),
 };
 
 export default Link;

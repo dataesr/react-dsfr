@@ -39,6 +39,7 @@ const Tabs = ({
             setActiveTab={setActiveTab}
             index={index}
             label={element.props.label}
+            icon={element.props.icon}
           />
         ))}
       </ul>

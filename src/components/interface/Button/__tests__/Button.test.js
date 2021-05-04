@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const initialProps = {
   size: 'lg',
   title: 'title',
-  icon: 'alert-fill',
+  icon: 'ri-alert-fill',
   secondary: true,
   children: 'test button',
   iconPosition: 'right',
