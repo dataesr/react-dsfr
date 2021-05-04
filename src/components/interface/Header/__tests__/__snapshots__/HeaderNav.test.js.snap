@@ -19,6 +19,7 @@ exports[`<HeaderNav /> renders correctly 1`] = `
     <nav
       aria-label="Menu principal"
       className="fr-nav"
+      id="header-navigation"
       role="navigation"
     >
       <ul

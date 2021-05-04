@@ -7,7 +7,7 @@ exports[`<TabButton /> should render TabButton properly 1`] = `
   <button
     aria-controls="fr-tabpanel-0"
     aria-selected="true"
-    className="fr-tabs__tab fr-tabs__tab--icon-left"
+    className="fr-tabs__tab"
     onClick={[Function]}
     role="tab"
     tabIndex="0"

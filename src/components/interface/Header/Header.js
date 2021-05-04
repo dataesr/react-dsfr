@@ -31,10 +31,10 @@ const Header = ({
   const isMobile = width < 992;
 
   deepForEach(children, (child) => {
-    if (child.type.name === 'HeaderNav') {
+    if (child.type && child.type.name === 'HeaderNav') {
       isNavBar = true;
     }
-    if (child.type.name === 'ToolItemGroup') {
+    if (child.type && child.type.name === 'ToolItemGroup') {
       isNavTool = true;
     }
     if (child && !!child.props.onSearch) {
@@ -62,6 +62,7 @@ const Header = ({
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
             <nav
+              id="header-navigation"
               className="fr-nav"
               role="navigation"
               aria-label="Menu principal"

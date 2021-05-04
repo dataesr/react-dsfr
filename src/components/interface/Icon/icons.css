@@ -1,0 +1,20 @@
+/* ------------------------------------ *\
+  ICONS
+\* ------------------------------------ */
+
+[class^="ri-"]:before,
+[class*=" ri-"]:before {
+    font-family: 'remixicon', serif !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+}
+
+[class^="ri-"].icon-left {
+    margin-right: .5rem;
+}
+
+[class^="ri-"].icon-right {
+    margin-left: .5rem;
+}
