@@ -45,16 +45,16 @@ module.exports = {
           sections: [
             {
               name: 'Grid system',
-              content: 'src/components/foundation/Grid/GRID.md',
+              content: 'src/components/foundation/Grid/Grid.md',
               components: 'src/components/foundation/Grid/**/[A-Z]*.js',
             },
             {
               name: 'Icons',
-              content: 'src/components/foundation/Icon/Icon.md',
-              components: 'src/components/foundation/Icon/[A-Z]*.js',
+              content: 'src/components/foundation/Icon/Icons.md',
+              components: 'src/components/foundation/Icon/**/[A-Z]*.js',
             },
             {
-              name: 'Media',
+              name: 'Medias',
               content: 'src/components/foundation/Media/MEDIA.md',
               components: 'src/components/foundation/Media/**/[A-Z]*.js',
             },
