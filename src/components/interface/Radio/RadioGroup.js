@@ -15,13 +15,18 @@ const RadioGroup = ({
   legend,
   message,
   messageType,
+  ariaLabel,
 }) => {
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
   const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
   return (
     <div className={_className}>
-      <fieldset className="fr-fieldset" disabled={isDisabled}>
+      <fieldset
+        className="fr-fieldset"
+        aria-label={ariaLabel || legend}
+        disabled={isDisabled}
+      >
         {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
         {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
@@ -39,9 +44,9 @@ RadioGroup.defaultProps = {
   hint: '',
   isDisabled: false,
   isInline: false,
-  legend: '',
   messageType: '',
   message: '',
+  ariaLabel: '',
 };
 
 RadioGroup.propTypes = {
@@ -56,9 +61,10 @@ RadioGroup.propTypes = {
     PropTypes.array,
   ]),
   hint: PropTypes.string,
+  ariaLabel: PropTypes.string,
   isDisabled: PropTypes.bool,
   isInline: PropTypes.bool,
-  legend: PropTypes.string,
+  legend: PropTypes.string.isRequired,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
 };

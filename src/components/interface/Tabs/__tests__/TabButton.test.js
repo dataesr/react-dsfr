@@ -47,7 +47,7 @@ describe('<TabButton />', () => {
 
   it('onClick setActiveTab', () => {
     const component = wrapper({ ...initProps });
-    component.find('button').simulate('click');
+    component.find('li').simulate('click');
     expect(mockSetActiveTab).toHaveBeenCalledWith(initProps.index);
   });
 });

@@ -7,30 +7,33 @@ const TabButton = ({
   className, index, activeTab, icon, iconPosition, label, setActiveTab,
 }) => {
   const _tab = (
-    <button
-      onClick={() => setActiveTab(index)}
-      type="button"
-      className={classNames('fr-tabs__tab', {
-        [`fr-tabs__tab--icon-${iconPosition}`]: icon && iconPosition,
-        [`icon-${iconPosition}`]: icon && iconPosition,
-      })}
-      tabIndex="0"
+    <li
       role="tab"
       aria-selected={activeTab === index ? 'true' : 'false'}
+      className={classNames(className)}
+      tabIndex="0"
       aria-controls={`fr-tabpanel-${index}`}
+      onClick={() => setActiveTab(index)}
+      onKeyDown={() => setActiveTab(index)}
     >
-      {label}
-    </button>
+      <div
+        className={classNames('fr-tabs__tab', {
+          [`fr-tabs__tab--icon-${iconPosition}`]: icon && iconPosition,
+          [`icon-${iconPosition}`]: icon && iconPosition,
+        })}
+      >
+        {label}
+      </div>
+    </li>
   );
   return (
-
-    <li className={classNames(className)}>
+    <>
       {icon ? (
         <Icon name={icon} size="lg" iconPosition={icon && 'left'}>
           {_tab}
         </Icon>
       ) : _tab}
-    </li>
+    </>
   );
 };
 

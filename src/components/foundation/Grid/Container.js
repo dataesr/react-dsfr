@@ -9,7 +9,7 @@ import { SCHEMES } from '../../../utils/constants';
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, scheme, className, ...rest
+  fluid, children, scheme, className, role, ...rest
 }) => {
   const { margin, padding } = getSpace(rest);
   const _className = classNames(margin, padding, {
@@ -17,7 +17,15 @@ const Container = ({
     'fr-container-fluid': fluid,
     [`fr-scheme-${scheme}`]: scheme,
   }, className);
-  return <div className={_className}>{children}</div>;
+  return <div role={role || undefined} className={_className}>{children}</div>;
+};
+
+Container.defaultProps = {
+  fluid: false,
+  className: '',
+  scheme: '',
+  role: '',
+  children: null,
 };
 
 Container.propTypes = {
@@ -33,18 +41,13 @@ Container.propTypes = {
   * Container with no outer margins
   */
   fluid: PropTypes.bool,
+  role: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
   scheme: PropTypes.oneOf(SCHEMES),
-};
-Container.defaultProps = {
-  fluid: false,
-  className: '',
-  scheme: '',
-  children: null,
 };
 
 export default Container;
