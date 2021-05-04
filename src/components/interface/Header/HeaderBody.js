@@ -1,7 +1,6 @@
 import React, { useContext, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { v4 as uuidv4 } from 'uuid';
 import HeaderContext from './headerContext';
 import { deepFilter } from '../../../utils/children-utilities';
 
