@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import MediaVideo from '..';
+import MediaVideo from '../index';
 
 describe('<MediaVideo />', () => {
   it('renders correctly', () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import MediaImage from '..';
+import MediaImage from '../index';
 
 describe('<MediaImage />', () => {
   it('renders correctly', () => {

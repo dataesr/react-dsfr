@@ -150,8 +150,8 @@ const App = () => {
                     closeButtonLabel="fermer"
                 >
                     <ToolItemGroup>
-                        <ToolItem icon="fr-fi-lock-line" link="/path">Example</ToolItem>
-                        <ToolItem icon="fr-fi-add-circle-line" link="/path">Example</ToolItem>
+                        <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
+                        <ToolItem icon="ri-add-circle-line" link="/path">Example</ToolItem>
                     </ToolItemGroup>
                     <SearchBar
                         onSearch={() => {
@@ -221,11 +221,11 @@ const App = () => {
                 <Col>
                     <TagGroup>
                         <Tag size="sm" as="span">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line" iconPosition="left">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line">Label tag</Tag>
                         <Tag size="sm" as="span">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line" iconPosition="left">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line">Label tag</Tag>
                     </TagGroup>
                 </Col>
             </Row>
@@ -277,7 +277,7 @@ const App = () => {
                         <Col>
                             <Button title="open modal" onClick={() => setIsOpen(true)}>open modal</Button>
                             <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
-                                <ModalTitle icon>I'm a title</ModalTitle>
+                                <ModalTitle icon="ri-arrow-right-fill">I'm a title</ModalTitle>
                                 <ModalContent>blah blah</ModalContent>
                                 <ModalFooter>
                                     <Button title="Une action">blah</Button>
@@ -459,7 +459,11 @@ const App = () => {
             <Title as="h3">Texts / icons</Title>
             <Row>
                 <Col>
-                    <Icon icon="alert-fill" size="xl"/>
+                    <Icon
+                        name="ri-bubble-chart-line"
+                        size="1x">
+                        <p>Lorem ipsum</p>
+                    </Icon>
                     <Text size="xs">Text xs</Text>
                     <Title as="h4">Title h4</Title>
                 </Col>
@@ -507,7 +511,7 @@ const App = () => {
                     <Button title="title">Button</Button>
                 </Col>
                 <Col>
-                    <Button icon="alert-fill" iconPosition="right" title="title">icon on the right</Button>
+                    <Button icon="ri-alert-fill" iconPosition="right" title="title">icon on the right</Button>
                 </Col>
                 <Col>
                     <Button size="sm" secondary title="title">
