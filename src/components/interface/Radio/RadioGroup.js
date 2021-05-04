@@ -18,9 +18,9 @@ const RadioGroup = ({
 }) => {
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
-  const classes = classNames('fr-form-group', className, inlineClass, messageClasses);
+  const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
   return (
-    <div className={classes}>
+    <div className={_className}>
       <fieldset className="fr-fieldset" disabled={isDisabled}>
         {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
         {hint && <p className="fr-hint-text">{hint}</p>}
