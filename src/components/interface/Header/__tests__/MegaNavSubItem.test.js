@@ -11,7 +11,7 @@ describe('<MegaNavSubItem />', () => {
   it('renders correctly', () => {
     const component = renderer
       .create(
-        <MegaNavSubItem {...initialProps}>
+        <MegaNavSubItem title={initialProps.title} link={initialProps.link}>
           <Link title="title" href="/">Link #1</Link>
         </MegaNavSubItem>,
       )

@@ -10,10 +10,18 @@ import './links.css';
  * @visibleName Link
  */
 const Link = ({
-  children, href,
-  title, target, isSimple,
-  className, as, current, display,
-  iconSize, icon, iconPosition,
+  children,
+  href,
+  title,
+  target,
+  isSimple,
+  className,
+  as,
+  current,
+  display,
+  iconSize,
+  icon,
+  iconPosition,
 }) => {
   const _className = classNames(
     className, {
