@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Icon from '../Icon';
+import Icon from '../../foundation/Icon/index';
 
 const TabButton = ({
   className, index, activeTab, icon, iconPosition, label, setActiveTab,
