@@ -30,6 +30,8 @@ import {
     HeaderBody,
     NavItem,
     NavSubItem,
+    MegaNavItem,
+    MegaNavSubItem,
     Service,
     Tool,
     ToolItem,
@@ -145,11 +147,11 @@ const App = () => {
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
-                    closeButtonLabel='fermer'
+                    closeButtonLabel="fermer"
                 >
                     <ToolItemGroup>
-                        <ToolItem icon='fr-fi-lock-line' link='/path'>Example</ToolItem>
-                        <ToolItem icon='fr-fi-add-circle-line' link='/path'>Example</ToolItem>
+                        <ToolItem icon="fr-fi-lock-line" link="/path">Example</ToolItem>
+                        <ToolItem icon="fr-fi-add-circle-line" link="/path">Example</ToolItem>
                     </ToolItemGroup>
                     <SearchBar
                         onSearch={() => {
@@ -161,12 +163,40 @@ const App = () => {
                 </Tool>
             </HeaderBody>
             <HeaderNav>
-                <NavItem title='Home' link='/'/>
-                <NavItem title='Resources'>
-                    <NavSubItem title='Ressource #1' link='/path-to-resources-1'/>
-                    <NavSubItem title='Ressource #2' link='/path-to-resources-2'/>
-                    <NavSubItem title='Ressource #3' link='/path-to-resources-3'/>
+                <NavItem title="Home" link="/"/>
+                <NavItem title="Resources">
+                    <NavSubItem title="Ressource #1" link="/path-to-resources-1" current/>
+                    <NavSubItem title="Ressource #2" link="/path-to-resources-2"/>
+                    <NavSubItem title="Ressource #3" link="/path-to-resources-3"/>
                 </NavItem>
+                <MegaNavItem
+                    title='Santé'
+                    description='Croquez des pommes'
+                    as='h3'
+                    closeButtonLabel="Fermeture"
+                    linkLabel="Vers l'au delà"
+                    link='/'>
+                    <MegaNavSubItem
+                        title='Category #1'
+                        link='/path-to-resources-1'>
+                        <Link title='title' href='/path'>Link #1</Link>
+                        <Link title='title' href='/path'current>Link #2</Link>
+                    </MegaNavSubItem>
+                    <MegaNavSubItem
+                        title="Category #2"
+                        link='/path-to-resources-2'
+                        current>
+                        <Link title='title' href='/path'>Link #1</Link>
+                        <Link title='title' href='/path'>Link #2</Link>
+                        <Link title='title' href='/path'>Link #3</Link>
+                    </MegaNavSubItem>
+                    <MegaNavSubItem
+                        title="Category #3"
+                        link='/path-to-resources-2'
+                        current>
+                        <Link title='title' href='/path'>Link #1</Link>
+                    </MegaNavSubItem>
+                </MegaNavItem>
             </HeaderNav>
         </Header>
         <Container>
@@ -245,7 +275,7 @@ const App = () => {
                     <Title as="h3">Modal</Title>
                     <Row>
                         <Col>
-                            <Button title='open modal' onClick={() => setIsOpen(true)}>open modal</Button>
+                            <Button title="open modal" onClick={() => setIsOpen(true)}>open modal</Button>
                             <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
                                 <ModalTitle icon>I'm a title</ModalTitle>
                                 <ModalContent>blah blah</ModalContent>
@@ -374,7 +404,7 @@ const App = () => {
             <Title as="h3">Lien</Title>
             <Row>
                 <Col>
-                    <Link title='title'>Link</Link>
+                    <Link title="title">Link</Link>
                 </Col>
             </Row>
             <Title as="h3">Bloc marque</Title>
@@ -477,7 +507,7 @@ const App = () => {
                     <Button title="title">Button</Button>
                 </Col>
                 <Col>
-                    <Button icon="alert-fill" iconPosition='right' title="title">icon on the right</Button>
+                    <Button icon="alert-fill" iconPosition="right" title="title">icon on the right</Button>
                 </Col>
                 <Col>
                     <Button size="sm" secondary title="title">
@@ -488,7 +518,9 @@ const App = () => {
             <Title as="h3">Toggle</Title>
             <Row>
                 <Toggle
-                    onChange={()=>{console.log('==== Change Toggle ==== ');}}
+                    onChange={() => {
+                        console.log('==== Change Toggle ==== ');
+                    }}
                     isDisabled
                     isChecked
                     label="Toggle Label"

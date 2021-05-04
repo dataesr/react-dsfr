@@ -87,7 +87,7 @@
     transition: transform 0.3s;
 }
 
-.fr-nav__btn[aria-expanded="true" i]::before {
+.fr-nav__btn[aria-expanded="true"]::after {
     transform: rotate(-180deg);
 }
 

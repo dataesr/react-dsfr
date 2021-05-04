@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MegaNavItem /> renders correctly 1`] = `
+<li
+  className="fr-nav__item"
+>
+  <button
+    aria-expanded="false"
+    aria-label="ouvrir la navigation"
+    className="fr-nav__btn"
+    onClick={[Function]}
+    type="button"
+  >
+    title
+  </button>
+  <div
+    className="fr-mega-menu fr-collapse"
+    style={
+      Object {
+        "--collapse": "-0pxpx",
+        "maxHeight": null,
+        "padding": 0,
+      }
+    }
+  >
+    <div
+      className="fr-container fr-container--fluid fr-container-lg"
+    >
+      <button
+        aria-controls="mega-menu-775"
+        className="fr-link--close fr-link"
+        onClick={[Function]}
+        type="button"
+      >
+        close
+      </button>
+      <div
+        className="fr-grid-row fr-grid-row-lg--gutters"
+      >
+        <div
+          className="fr-col-12 fr-col-lg-8 fr-col-offset-lg-4--right"
+        >
+          <div
+            className="fr-mega-menu__leader"
+          >
+            <h6
+              className="fr-h4 fr-mb-2v"
+            >
+              title
+            </h6>
+            <p
+              className="fr-hidden fr-displayed-lg"
+            >
+              description
+            </p>
+            <a
+              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
+              href="link"
+              target="_self"
+            >
+              label
+            </a>
+          </div>
+        </div>
+        child
+      </div>
+    </div>
+  </div>
+</li>
+`;

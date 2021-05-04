@@ -31,6 +31,7 @@ const HeaderNav = ({
         </div>
         )}
         <nav
+          id="header-navigation"
           className="fr-nav"
           role="navigation"
           aria-label="Menu principal"
