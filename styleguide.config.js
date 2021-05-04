@@ -39,24 +39,29 @@ module.exports = {
       sectionDepth: 2,
       sections: [
         {
-          name: 'Fondamentaux technique',
+          name: 'Fondamentaux',
           content: 'src/components/foundation/FOUNDATION.md',
           sectionDepth: 1,
           sections: [
             {
               name: 'Grid system',
-              content: 'src/components/foundation/grid/GRID.md',
-              components: 'src/components/foundation/grid/**/[A-Z]*.js',
-            },
-            {
-              name: 'Typographie',
-              content: 'src/components/foundation/typography/TYPOGRAPHY.md',
-              components: 'src/components/foundation/typography/**/[A-Z]*.js',
+              content: 'src/components/foundation/Grid/GRID.md',
+              components: 'src/components/foundation/Grid/**/[A-Z]*.js',
             },
             {
               name: 'Icons',
-              content: 'src/components/foundation/icons/ICONS.md',
-              components: 'src/components/foundation/icons/**/[A-Z]*.js',
+              content: 'src/components/foundation/Icon/Icon.md',
+              components: 'src/components/foundation/Icon/[A-Z]*.js',
+            },
+            {
+              name: 'Media',
+              content: 'src/components/foundation/Media/MEDIA.md',
+              components: 'src/components/foundation/Media/**/[A-Z]*.js',
+            },
+            {
+              name: 'Typographie',
+              content: 'src/components/foundation/Typography/TYPOGRAPHY.md',
+              components: 'src/components/foundation/Typography/**/[A-Z]*.js',
             },
           ],
         },

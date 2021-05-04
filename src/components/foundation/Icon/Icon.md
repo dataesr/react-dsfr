@@ -14,6 +14,7 @@ import Icon from './Icon';
 ```
 
 ```jsx
+import Icon from './Icon';
 <Icon
     className="ds-fr--v-middle"
     name="ri-music-2-line"
@@ -24,9 +25,10 @@ import Icon from './Icon';
 ```
 
 ### Usage avec un composant Button
+
 ```jsx
 import Icon from './Icon';
-import Button from './../Button/Button';
+import Button from '../../interface/Button';
 
 <Button
     title="title"
@@ -38,7 +40,7 @@ import Button from './../Button/Button';
 ### Usage avec un composant Link
 ```jsx
 import Icon from './Icon';
-import Link from './../Link/Link';
+import Link from '../../interface/Link';
 
 <Link
     title="title"

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
-import Icon from '../Icon';
+import Icon from '../../foundation/Icon/index';
 
 import './tags.css';
 

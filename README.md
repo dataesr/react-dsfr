@@ -67,7 +67,7 @@ Visit [http://localhost:3000](http://localhost:3000).
 
 #### Test your node module before you publish 
 
-```
+```bash
 $ npm link @dataesr/react-dsfr
 ```
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from '../Icon/index';
+import Icon from '../../foundation/Icon/index';
 
 const ModalTitle = ({
   children, className, icon,
