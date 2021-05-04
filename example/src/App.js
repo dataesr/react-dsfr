@@ -142,7 +142,7 @@ const App = () => {
     return <>
         <Header>
             <HeaderBody>
-                <Logo splitCharacter={10}>République Française</Logo>
+                <Logo splitCharacter={10}>République Française & cie</Logo>
                 <Service
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>

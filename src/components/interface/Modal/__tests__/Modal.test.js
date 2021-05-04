@@ -10,7 +10,7 @@ describe('<Modal />', () => {
     render(
       <Modal isOpen hide={hide}>
         <ModalClose title="Close the modal window">Close</ModalClose>
-        <ModalTitle icon>I am a title</ModalTitle>
+        <ModalTitle icon="ri-arrow-right-line">I am a title</ModalTitle>
         <ModalContent>blah blah</ModalContent>
         <ModalFooter>
           blah
@@ -36,7 +36,7 @@ describe('<Modal />', () => {
     render(
       <Modal isOpen hide={hide}>
         <ModalClose title="Close the modal window">Close</ModalClose>
-        <ModalTitle icon>I am a title</ModalTitle>
+        <ModalTitle icon="ri-arrow-right-line">I am a title</ModalTitle>
         <ModalContent>blah blah</ModalContent>
         <ModalFooter>
           <Button title="blah" />
