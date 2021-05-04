@@ -14,6 +14,7 @@ const CheckboxGroup = ({
   legend,
   message,
   messageType,
+  ariaLabel,
 }) => {
   const _className = classNames('fr-form-group', {
     'fr-fieldset--inline': isInline,
@@ -21,7 +22,7 @@ const CheckboxGroup = ({
   }, className);
   return (
     <div className={_className}>
-      <fieldset className="fr-fieldset">
+      <fieldset className="fr-fieldset" aria-label={ariaLabel || legend}>
         {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
         {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
@@ -37,9 +38,9 @@ CheckboxGroup.defaultProps = {
   className: '',
   hint: '',
   isInline: false,
-  legend: '',
   messageType: '',
   message: '',
+  ariaLabel: '',
 };
 
 CheckboxGroup.propTypes = {
@@ -53,8 +54,9 @@ CheckboxGroup.propTypes = {
     PropTypes.array,
   ]),
   hint: PropTypes.string,
+  ariaLabel: PropTypes.string,
   isInline: PropTypes.bool,
-  legend: PropTypes.string,
+  legend: PropTypes.string.isRequired,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
 };

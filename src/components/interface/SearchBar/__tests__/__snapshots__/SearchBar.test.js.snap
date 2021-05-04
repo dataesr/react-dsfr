@@ -23,7 +23,7 @@ exports[`<SearchBar /> renders SearchBar properly 1`] = `
   <button
     class="fr-btn"
     title="Rechercher"
-    type="button"
+    type="submit"
   >
     Rechercher
   </button>
@@ -53,7 +53,7 @@ exports[`<SearchBar /> renders large SearchBar properly 1`] = `
   <button
     class="fr-btn fr-btn--lg"
     title="Rechercher"
-    type="button"
+    type="submit"
   >
     Rechercher
   </button>
