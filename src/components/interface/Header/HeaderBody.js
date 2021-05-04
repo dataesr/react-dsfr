@@ -1,6 +1,7 @@
 import React, { useContext, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import HeaderContext from './headerContext';
 import { deepFilter } from '../../../utils/children-utilities';
 
@@ -56,7 +57,8 @@ const HeaderBody = ({ children, className, closeButtonLabel }) => {
             </div>
             {service}
           </div>
-          {headerBodyChildren.map((child) => cloneElement(child, { closeButtonLabel }))}
+          {headerBodyChildren.map((child) => cloneElement(child,
+            { key: uuidv4(), closeButtonLabel }))}
         </div>
       </div>
     </div>

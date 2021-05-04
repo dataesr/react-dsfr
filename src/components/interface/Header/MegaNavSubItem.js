@@ -1,6 +1,8 @@
 import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
+import { v4 as uuidv4 } from 'uuid';
+
 const MegaNavSubItem = ({
   children, title, link,
 }) => {
@@ -11,7 +13,7 @@ const MegaNavSubItem = ({
         <a className="fr-nav__link" href={link} target="_self">{title}</a>
       </h5>
       <ul className="fr-mega-menu__list">
-        {childs.map((child) => <li>{child}</li>)}
+        {childs.map((child) => <li key={uuidv4()}>{child}</li>)}
       </ul>
     </div>
   );
@@ -25,7 +27,10 @@ MegaNavSubItem.defaultProps = {
 MegaNavSubItem.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
-  children: PropTypes.arrayOf([PropTypes.element]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default MegaNavSubItem;
