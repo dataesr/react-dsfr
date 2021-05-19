@@ -16,6 +16,8 @@ const Table = ({
   bordered,
   fixedLayout,
   className,
+  tableID,
+  tableClassName,
 }) => {
   const _className = classNames('fr-table', {
     'fr-table--no-caption': (captionPosition === 'none'),
@@ -29,7 +31,7 @@ const Table = ({
       className={_className}
       data-testid="table"
     >
-      <table>
+      <table id={tableID || undefined} className={tableClassName || undefined}>
         <caption data-testid="table-caption">{caption}</caption>
         {children}
       </table>
@@ -43,11 +45,15 @@ Table.defaultProps = {
   bordered: false,
   captionPosition: 'top',
   className: '',
+  tableID: '',
+  tableClassName: '',
   children: null,
 };
 
 Table.propTypes = {
   fixedLayout: PropTypes.bool,
+  tableID: PropTypes.string,
+  tableClassName: PropTypes.string,
   noScroll: PropTypes.bool,
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
