@@ -232,7 +232,7 @@ const App = () => {
             <Title as="h3">Table</Title>
             <Row>
                 <Col>
-                    <SimpleTable caption="Simple Table" data={data}/>
+                    <SimpleTable tableClassName="tableClassName" tableID='tableID-1' caption="Simple Table" data={data}/>
                 </Col>
             </Row>
             <Title as="h3">Sidemenu</Title>
