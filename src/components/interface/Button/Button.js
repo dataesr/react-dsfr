@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from '../../foundation/Icon/index';
+import Icon from '../../foundation/icon/index';
 
 import '../../../style.css';
 import './schemes.css';

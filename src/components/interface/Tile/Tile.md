@@ -44,9 +44,9 @@ import { Tile, TileBody, TileImage } from '.';
 ```jsx
 import { Tile, TileBody, TileImage } from '.';
 
-import Row from '../../foundation/Grid/Row';
-import Container from '../../foundation/Grid/Container';
-import Col from '../../foundation/Grid/Col';
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
+import Col from '../../foundation/grid/Col';
 
 <Container>
     <Row>

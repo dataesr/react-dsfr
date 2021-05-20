@@ -45,23 +45,23 @@ module.exports = {
           sections: [
             {
               name: 'Grid system',
-              content: 'src/components/foundation/Grid/Grid.md',
-              components: 'src/components/foundation/Grid/**/[A-Z]*.js',
+              content: 'src/components/foundation/grid/Grid.md',
+              components: 'src/components/foundation/grid/**/[A-Z]*.js',
             },
             {
               name: 'Icons',
-              content: 'src/components/foundation/Icon/Icons.md',
-              components: 'src/components/foundation/Icon/**/[A-Z]*.js',
+              content: 'src/components/foundation/icon/Icons.md',
+              components: 'src/components/foundation/icon/**/[A-Z]*.js',
             },
             {
               name: 'Medias',
-              content: 'src/components/foundation/Media/MEDIA.md',
-              components: 'src/components/foundation/Media/**/[A-Z]*.js',
+              content: 'src/components/foundation/media/MEDIA.md',
+              components: 'src/components/foundation/media/**/[A-Z]*.js',
             },
             {
               name: 'Typographie',
-              content: 'src/components/foundation/Typography/TYPOGRAPHY.md',
-              components: 'src/components/foundation/Typography/**/[A-Z]*.js',
+              content: 'src/components/foundation/typography/TYPOGRAPHY.md',
+              components: 'src/components/foundation/typography/**/[A-Z]*.js',
             },
           ],
         },

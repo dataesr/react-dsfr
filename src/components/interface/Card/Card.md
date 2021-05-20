@@ -33,9 +33,9 @@ Utilisation avec Container, Row, Col
 
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
-import Row from '../../foundation/Grid/Row';
-import Container from '../../foundation/Grid/Container';
-import Col from '../../foundation/Grid/Col';
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
+import Col from '../../foundation/grid/Col';
 
 <Container>
     <Row>

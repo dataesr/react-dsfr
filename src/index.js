@@ -1,7 +1,7 @@
 import Col from './components/foundation/Grid/Col';
 import Row from './components/foundation/Grid/Row';
 import Container from './components/foundation/Grid/Container';
-import Icon from './components/foundation/Icon/index';
+import Icon from './components/foundation/icon/index';
 import Text from './components/foundation/Typography/Text/index';
 import Title from './components/foundation/Typography/Title/index';
 import TitleDisplay from './components/foundation/Typography/TitleDisplay/index';
@@ -24,8 +24,8 @@ import {
 import Highlight from './components/interface/Highlight/index';
 import Link from './components/interface/Link/index';
 import Logo from './components/interface/Logo/index';
-import MediaImage from './components/foundation/Media/MediaImage/index';
-import MediaVideo from './components/foundation/Media/MediaVideo/index';
+import MediaImage from './components/foundation/media/MediaImage/index';
+import MediaVideo from './components/foundation/media/MediaVideo/index';
 import {
   Modal, ModalClose, ModalContent, ModalFooter, ModalTitle,
 } from './components/interface/Modal/index';
