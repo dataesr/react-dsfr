@@ -1,10 +1,10 @@
-import Col from './components/foundation/grid/Col';
-import Row from './components/foundation/grid/Row';
-import Container from './components/foundation/grid/Container';
-import Icon from './components/foundation/icons/Icon/index';
-import Text from './components/foundation/typography/Text/index';
-import Title from './components/foundation/typography/Title/index';
-import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
+import Col from './components/foundation/Grid/Col';
+import Row from './components/foundation/Grid/Row';
+import Container from './components/foundation/Grid/Container';
+import Icon from './components/foundation/Icon/index';
+import Text from './components/foundation/Typography/Text/index';
+import Title from './components/foundation/Typography/Title/index';
+import TitleDisplay from './components/foundation/Typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import Button from './components/interface/Button/index';
@@ -18,14 +18,14 @@ import {
   FooterPartnersTitle, FooterTop, FooterTopCategory,
 } from './components/interface/Footer/index';
 import {
-  Header, HeaderNav, HeaderBody, NavItem, NavSubItem, Service, Tool,
+  Header, HeaderNav, HeaderBody, NavItem, NavSubItem, MegaNavItem, MegaNavSubItem, Service, Tool,
   ToolItem, ToolItemGroup,
 } from './components/interface/Header/index';
 import Highlight from './components/interface/Highlight/index';
 import Link from './components/interface/Link/index';
 import Logo from './components/interface/Logo/index';
-import MediaImage from './components/interface/MediaImage/index';
-import MediaVideo from './components/interface/MediaVideo/index';
+import MediaImage from './components/foundation/Media/MediaImage/index';
+import MediaVideo from './components/foundation/Media/MediaVideo/index';
 import {
   Modal, ModalClose, ModalContent, ModalFooter, ModalTitle,
 } from './components/interface/Modal/index';
@@ -40,6 +40,7 @@ import { Tabs, Tab } from './components/interface/Tabs/index';
 import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
+import Toggle from './components/interface/Toggle/index';
 
 const library = () => ({
   Accordion,
@@ -79,6 +80,8 @@ const library = () => ({
   HeaderNav,
   NavSubItem,
   NavItem,
+  MegaNavItem,
+  MegaNavSubItem,
   Service,
   ToolItemGroup,
   Tool,
@@ -113,5 +116,6 @@ const library = () => ({
   Tile,
   TileBody,
   TileImage,
+  Toggle,
 });
 export default library();

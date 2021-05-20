@@ -1,24 +1,41 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Icon from '../../foundation/Icon/index';
 
 const TabButton = ({
   className, index, activeTab, icon, iconPosition, label, setActiveTab,
-}) => (
-  <li className={classNames(className)}>
-    <button
-      onClick={() => setActiveTab(index)}
-      type="button"
-      className={classNames('fr-tabs__tab', icon, { [`fr-tabs__tab--icon-${iconPosition}`]: iconPosition })}
-      tabIndex="0"
+}) => {
+  const _tab = (
+    <li
       role="tab"
       aria-selected={activeTab === index ? 'true' : 'false'}
+      className={classNames(className)}
+      tabIndex="0"
       aria-controls={`fr-tabpanel-${index}`}
+      onClick={() => setActiveTab(index)}
+      onKeyDown={() => setActiveTab(index)}
     >
-      {label}
-    </button>
-  </li>
-);
+      <div
+        className={classNames('fr-tabs__tab', {
+          [`fr-tabs__tab--icon-${iconPosition}`]: icon && iconPosition,
+          [`icon-${iconPosition}`]: icon && iconPosition,
+        })}
+      >
+        {label}
+      </div>
+    </li>
+  );
+  return (
+    <>
+      {icon ? (
+        <Icon name={icon} size="lg" iconPosition={icon && 'left'}>
+          {_tab}
+        </Icon>
+      ) : _tab}
+    </>
+  );
+};
 
 TabButton.defaultProps = {
   className: '',

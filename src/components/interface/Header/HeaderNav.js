@@ -17,7 +17,7 @@ const HeaderNav = ({
     <div className={_className}>
       <div className="fr-container">
         <button
-          onClick={onOpenNav}
+          onClick={() => onOpenNav(false)}
           title={closeButtonLabel}
           className="fr-link--close fr-link"
           type="button"
@@ -31,6 +31,7 @@ const HeaderNav = ({
         </div>
         )}
         <nav
+          id="header-navigation"
           className="fr-nav"
           role="navigation"
           aria-label="Menu principal"

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MegaNavSubItem /> renders correctly 1`] = `
+<div
+  className="fr-col-12 fr-col-lg-3"
+>
+  <h5
+    className="fr-mega-menu__category"
+  >
+    <a
+      className="fr-nav__link"
+      href="link"
+      target="_self"
+    >
+      title
+    </a>
+  </h5>
+  <ul
+    className="fr-mega-menu__list"
+  >
+    <li>
+      <a
+        className="fr-nav__link"
+        href="/"
+        target="_self"
+        title="title"
+      >
+        Link #1
+      </a>
+    </li>
+  </ul>
+</div>
+`;

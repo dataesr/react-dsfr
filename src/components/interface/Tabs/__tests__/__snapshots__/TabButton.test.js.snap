@@ -2,18 +2,18 @@
 
 exports[`<TabButton /> should render TabButton properly 1`] = `
 <li
+  aria-controls="fr-tabpanel-0"
+  aria-selected="true"
   className="my-class"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="tab"
+  tabIndex="0"
 >
-  <button
-    aria-controls="fr-tabpanel-0"
-    aria-selected="true"
-    className="fr-tabs__tab fr-tabs__tab--icon-left"
-    onClick={[Function]}
-    role="tab"
-    tabIndex="0"
-    type="button"
+  <div
+    className="fr-tabs__tab"
   >
     Label #1
-  </button>
+  </div>
 </li>
 `;

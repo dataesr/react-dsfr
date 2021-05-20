@@ -3,15 +3,14 @@
 exports[`<Modal /> should render modal properly 1`] = `
 <dialog
   aria-labelledby="fr-modal-title-modal"
-  class="fr-modal"
+  class="fr-modal fr-modal--opened"
   data-testid="modal"
-  style="visibility: visible;"
 >
   <div
     class="fr-container--fluid fr-container-md"
   >
     <div
-      class="fr-grid-row fr-grid-row--center"
+      class="fr-grid-row fr-grid-row--center closing-overlay"
     >
       <div
         class="fr-col-12 fr-col-md-6"
@@ -36,11 +35,11 @@ exports[`<Modal /> should render modal properly 1`] = `
             class="fr-modal__content"
           >
             <h1
-              class="fr-modal__title"
+              class="fr-modal__title ds-fr--inline-block"
               id="fr-modal-title-modal"
             >
               <span
-                class="fr-fi-arrow-right-line fr-fi--lg"
+                class="ri-lg icon-left ri-arrow-right-line ds-fr--v-middle"
               />
               I am a title
             </h1>

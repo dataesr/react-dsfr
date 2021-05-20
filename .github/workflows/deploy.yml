@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 14
       - run: npm install
-      - run: git config --global user.name "dataesr"
+      - run: git config --global user.name "folland87"
       - run: git config --global user.email "frederic+dataesr@olland.me"
       - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
       - run: npm run deploy

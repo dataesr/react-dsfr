@@ -1,5 +1,3 @@
-@import './style/reset.css';
-
 /*
  * DSFR v1.0.0-rc1.0
  */
@@ -7,3 +5,9 @@
 @import './style/content.css';
 @import './style/forms.css';
 @import './style/inputs.css';
+
+/*
+ * react-ds-fr
+ */
+@import './style/colors.css';
+@import './style/custom.css';

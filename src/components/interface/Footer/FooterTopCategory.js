@@ -2,7 +2,7 @@ import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
-import Col from '../../foundation/grid/Col';
+import Col from '../../foundation/Grid/Col';
 
 const FooterTopCategory = ({
   children, title, n, offset, className,

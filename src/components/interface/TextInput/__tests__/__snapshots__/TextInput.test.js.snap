@@ -14,7 +14,7 @@ exports[`<TextInput /> renders correctly 1`] = `
   <input
     className="fr-input"
     disabled={false}
-    id="text-input"
+    id="xxxxxxx"
     onChange={[MockFunction]}
     type="text"
     value="init-value"

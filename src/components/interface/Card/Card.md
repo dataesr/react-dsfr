@@ -30,50 +30,54 @@ import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 ```
 
 Utilisation avec Container, Row, Col
+
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
-import Row from '../../foundation/grid/Row';
-import Container from '../../foundation/grid/Container';
-import Col from '../../foundation/grid/Col';
+import Row from '../../foundation/Grid/Row';
+import Container from '../../foundation/Grid/Container';
+import Col from '../../foundation/Grid/Col';
 
 <Container>
-  <Row>
-    <Col>
-      <Card href="/">
-        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
-        <CardDetail>Detail</CardDetail>
-        <CardTitle>
-          Card Title
-        </CardTitle>
-        <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam.
-        </CardDescription>
-      </Card>
-    </Col>
-    <Col>  
-      <Card href="/">
-        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
-        <CardDetail>Detail</CardDetail>
-        <CardTitle>
-          Card Title
-        </CardTitle>
-        <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam.
-        </CardDescription>
-      </Card>
-    </Col>
-    <Col>
-      <Card href="/">
-        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
-        <CardDetail>Detail</CardDetail>
-        <CardTitle>
-          Card Title
-        </CardTitle>
-        <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam.
-        </CardDescription>
-      </Card>
-    </Col>
-  </Row>
+    <Row>
+        <Col>
+            <Card href="/">
+                <CardImage alt="alternative" src="http://fakeimg.pl/300/"/>
+                <CardDetail>Detail</CardDetail>
+                <CardTitle>
+                    Card Title
+                </CardTitle>
+                <CardDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Uenim ad minim veniam.
+                </CardDescription>
+            </Card>
+        </Col>
+        <Col>
+            <Card href="/">
+                <CardImage alt="alternative" src="http://fakeimg.pl/300/"/>
+                <CardDetail>Detail</CardDetail>
+                <CardTitle>
+                    Card Title
+                </CardTitle>
+                <CardDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Uenim ad minim veniam.
+                </CardDescription>
+            </Card>
+        </Col>
+        <Col>
+            <Card href="/">
+                <CardImage alt="alternative" src="http://fakeimg.pl/300/"/>
+                <CardDetail>Detail</CardDetail>
+                <CardTitle>
+                    Card Title
+                </CardTitle>
+                <CardDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Uenim ad minim veniam.
+                </CardDescription>
+            </Card>
+        </Col>
+    </Row>
 </Container>
 ```

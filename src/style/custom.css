@@ -1,0 +1,32 @@
+﻿:root {
+    --is-link: ; /* hack needed because of DSFR style */
+}
+
+/* ------------------------------------ *\
+  ALIGNMENT
+\* ------------------------------------ */
+
+
+a.ds-fr--inline {
+    display: inline;
+}
+
+a.ds-fr--flex {
+    display: flex;
+}
+
+.ds-fr--inline-block {
+    display: inline-block;
+}
+
+.ds-fr--v-top {
+    vertical-align: text-top;
+}
+
+span.ds-fr--v-middle {
+    vertical-align: middle;
+}
+
+.span.ds-fr--v-middle {
+    vertical-align: sub;
+}

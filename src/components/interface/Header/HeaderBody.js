@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import HeaderContext from './headerContext';
 import { deepFilter } from '../../../utils/children-utilities';
 
-const HeaderBody = ({ children, className }) => {
-  const elements = deepFilter(children, (child) => child.type && (child.type.name !== 'Logo' && child.type.name !== 'Service'));
+const HeaderBody = ({ children, className, closeButtonLabel }) => {
+  const headerBodyChildren = deepFilter(children, (child) => child.type && (child.type.name !== 'Logo' && child.type.name !== 'Service'));
   const logo = deepFilter(children, (child) => child.type && child.type.name === 'Logo');
   const service = deepFilter(children, (child) => child.type && child.type.name === 'Service');
 
@@ -23,7 +23,7 @@ const HeaderBody = ({ children, className }) => {
   return (
     <div className="fr-header__body">
       <div className="fr-container">
-        <div className={classNames(className, 'fr-header__body-row')} role="banner">
+        <div className={classNames(className, 'fr-header__body-row')}>
           <div className="fr-header__brand fr-enlarge-link">
             <div className="fr-header__brand-top">
               <div className="fr-header__logo">
@@ -56,7 +56,7 @@ const HeaderBody = ({ children, className }) => {
             </div>
             {service}
           </div>
-          {elements}
+          {headerBodyChildren.map((child) => cloneElement(child, { closeButtonLabel }))}
         </div>
       </div>
     </div>
@@ -66,6 +66,7 @@ const HeaderBody = ({ children, className }) => {
 HeaderBody.defaultProps = {
   className: '',
   children: '',
+  closeButtonLabel: 'Fermer',
 };
 
 HeaderBody.propTypes = {
@@ -79,6 +80,7 @@ HeaderBody.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  closeButtonLabel: PropTypes.string,
 };
 
 export default HeaderBody;

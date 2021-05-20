@@ -30,6 +30,8 @@ import {
     HeaderBody,
     NavItem,
     NavSubItem,
+    MegaNavItem,
+    MegaNavSubItem,
     Service,
     Tool,
     ToolItem,
@@ -46,7 +48,7 @@ import {
     Select, SideMenu, SideMenuItem, SideMenuLink,
     Skiplinks, SkiplinkItem, SimpleTable,
     Tag, TagGroup, TextInput,
-    Tile, TileImage, TileBody,
+    Tile, TileImage, TileBody, Toggle
 } from '@dataesr/react-dsfr';
 import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 
@@ -141,19 +143,20 @@ const App = () => {
     return <BrowserRouter>
         <Header>
             <HeaderBody>
-                <Logo splitCharacter={10}>République Française</Logo>
+                <Logo splitCharacter={10}>République Française & cie</Logo>
                 <Service
                     asLink={<RouterLink to="/myLinkUrl"/>}
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
-                    buttonClose="fermer"
+                    closeButtonLabel="fermer"
                 >
                     <ToolItemGroup>
                         <ToolItem
-                            icon="fr-fi-lock-line"
+                            icon="ri-lock-line"
                             asLink={<RouterLink to="myNavItem"/>}>Example</ToolItem>
-                        <ToolItem icon="fr-fi-add-circle-line" link="/path">Example</ToolItem>
+                        <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
+                        <ToolItem icon="ri-add-circle-line" link="/path">Example</ToolItem>
                     </ToolItemGroup>
                     <SearchBar
                         onSearch={() => {
@@ -171,7 +174,7 @@ const App = () => {
                     current
                     asLink={<RouterLink to="myNavItem"/>}/>
                 <NavItem title="Resources">
-                    <NavSubItem title="Ressource #1" link="/path-to-resources-1"/>
+                    <NavSubItem title="Ressource #1" link="/path-to-resources-1" current/>
                     <NavSubItem
                         current
                         asLink={<RouterLink to="myNavSubItem"/>}
@@ -180,9 +183,37 @@ const App = () => {
                     />
                     <NavSubItem title="Ressource #3" link="/path-to-resources-3"/>
                 </NavItem>
+                <MegaNavItem
+                    title='Santé'
+                    description='Croquez des pommes'
+                    as='h3'
+                    closeButtonLabel="Fermeture"
+                    linkLabel="Vers l'au delà"
+                    link='/'>
+                    <MegaNavSubItem
+                        title='Category #1'
+                        link='/path-to-resources-1'>
+                        <Link title='title' href='/path'>Link #1</Link>
+                        <Link title='title' href='/path'current>Link #2</Link>
+                    </MegaNavSubItem>
+                    <MegaNavSubItem
+                        title="Category #2"
+                        link='/path-to-resources-2'
+                        current>
+                        <Link title='title' href='/path'>Link #1</Link>
+                        <Link title='title' href='/path'>Link #2</Link>
+                        <Link title='title' href='/path'>Link #3</Link>
+                    </MegaNavSubItem>
+                    <MegaNavSubItem
+                        title="Category #3"
+                        link='/path-to-resources-2'
+                        current>
+                        <Link title='title' href='/path'>Link #1</Link>
+                    </MegaNavSubItem>
+                </MegaNavItem>
             </HeaderNav>
         </Header>
-        <Container>
+        <Container role="main">
             <Title as="h3">Tile - Tuile</Title>
             <Row gutters>
                 <Col>
@@ -214,18 +245,18 @@ const App = () => {
                 <Col>
                     <TagGroup>
                         <Tag size="sm" as="span">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line" iconPosition="left">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line">Label tag</Tag>
                         <Tag size="sm" as="span">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line" iconPosition="left">Label tag</Tag>
-                        <Tag size="sm" as="span" icon="arrow-right-line">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line" iconPosition="left">Label tag</Tag>
+                        <Tag size="sm" as="span" icon="ri-arrow-right-line">Label tag</Tag>
                     </TagGroup>
                 </Col>
             </Row>
             <Title as="h3">Table</Title>
             <Row>
                 <Col>
-                    <SimpleTable caption="Simple Table" data={data}/>
+                    <SimpleTable tableClassName="tableClassName" tableID='tableID-1' caption="Simple Table" data={data}/>
                 </Col>
             </Row>
             <Title as="h3">Sidemenu</Title>
@@ -270,7 +301,7 @@ const App = () => {
                         <Col>
                             <Button title="open modal" onClick={() => setIsOpen(true)}>open modal</Button>
                             <Modal isOpen={isOpen} hide={() => setIsOpen(false)}>
-                                <ModalTitle icon>I'm a title</ModalTitle>
+                                <ModalTitle icon="ri-arrow-right-fill">I'm a title</ModalTitle>
                                 <ModalContent>blah blah</ModalContent>
                                 <ModalFooter>
                                     <Button title="Une action">blah</Button>
@@ -332,7 +363,7 @@ const App = () => {
             <Title as="h3">Checkbox</Title>
             <Row>
                 <Col>
-                    <CheckboxGroup>
+                    <CheckboxGroup ariaLabel="This is aia label" legend="This is the legend">
                         <Checkbox
                             label="Label checkbox 1"
                             onChange={() => {
@@ -452,7 +483,11 @@ const App = () => {
             <Title as="h3">Texts / icons</Title>
             <Row>
                 <Col>
-                    <Icon icon="alert-fill" size="xl"/>
+                    <Icon
+                        name="ri-bubble-chart-line"
+                        size="1x">
+                        <p>Lorem ipsum</p>
+                    </Icon>
                     <Text size="xs">Text xs</Text>
                     <Title as="h4">Title h4</Title>
                 </Col>
@@ -463,7 +498,7 @@ const App = () => {
                     <TitleDisplay as="h1" size="sm">Title sm</TitleDisplay>
                 </Col>
             </Row>
-            <Title as="h3">Callout</Title>
+            <Title as="h2">Callout</Title>
             <Row>
                 <Col>
                     <Callout scheme="soft-green-warm">
@@ -504,13 +539,25 @@ const App = () => {
                     <Button title="title">Button</Button>
                 </Col>
                 <Col>
-                    <Button icon="alert-fill" iconPosition="right" title="title">icon on the right</Button>
+                    <Button icon="ri-alert-fill" iconPosition="right" title="title">icon on the right</Button>
                 </Col>
                 <Col>
                     <Button size="sm" secondary title="title">
                         secondary sm button
                     </Button>
                 </Col>
+            </Row>
+            <Title as="h3">Toggle</Title>
+            <Row>
+                <Toggle
+                    onChange={() => {
+                        console.log('==== Change Toggle ==== ');
+                    }}
+                    isDisabled
+                    isChecked
+                    label="Toggle Label"
+                    description="Toggle descirption"
+                />
             </Row>
             <Title as="h3">Accordion</Title>
             <Row>
@@ -534,75 +581,72 @@ const App = () => {
                     </Skiplinks>
                 </Col>
             </Row>
-            <Title as="h3">Footer</Title>
-            <Footer>
-                <FooterTop>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink
-                            asLink={<RouterLink to="/myFooterLink"/>}>
-                            Footer Link Router
-                        </FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                    <FooterTopCategory title="Nom de la catégorie">
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                        <FooterLink href="/">Footer Link</FooterLink>
-                    </FooterTopCategory>
-                </FooterTop>
-                <FooterBody
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                >
-                    <Logo>Ministère de l'enseignement supérieur de la rechercher et de l'innovation</Logo>
-                </FooterBody>
-                <FooterPartners>
-                    <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
-                    <FooterPartnersLogo isMain href="/"
-                                        imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
-                                        imageAlt="Logo 1"/>
-                    <FooterPartnersLogo
-                        asLink={<RouterLink to="/myFooterLink"/>}
-                        imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
-                        imageAlt="Logo 2"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3"
-                                        imageAlt="Logo 3"/>
-                    <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4"
-                                        imageAlt="Logo 4"/>
-                </FooterPartners>
-                <FooterBottom>
-                    <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterLink href="/">Footer Link</FooterLink>
-                    <FooterCopy href="/">© République Française 2020</FooterCopy>
-                </FooterBottom>
-            </Footer>
         </Container>
-    </BrowserRouter>;
+        <Footer>
+            <FooterTop>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink
+                        asLink={<RouterLink to="/myFooterLink"/>}>
+                        Footer Link Router
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+                <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                    <FooterLink href="/">Footer Link</FooterLink>
+                </FooterTopCategory>
+            </FooterTop>
+            <FooterBody
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            >
+                <Logo>Ministère de l'enseignement supérieur de la rechercher et de l'innovation</Logo>
+            </FooterBody>
+            <FooterPartners>
+                <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
+                <FooterPartnersLogo isMain href="/"
+                                    imageSrc="https://dummyimage.com/140x80/000/fff.png&text=main-logo"
+                                    imageAlt="Logo 1"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+2"
+                                    imageAlt="Logo 2"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+3"
+                                    imageAlt="Logo 3"/>
+                <FooterPartnersLogo href="/" imageSrc="https://dummyimage.com/100x80/000/fff.png&text=logo+4"
+                                    imageAlt="Logo 4"/>
+            </FooterPartners>
+            <FooterBottom>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterLink href="/">Footer Link</FooterLink>
+                <FooterCopy href="/">© République Française 2020</FooterCopy>
+            </FooterBottom>
+        </Footer>
+    </>;
 };
 
 export default App;

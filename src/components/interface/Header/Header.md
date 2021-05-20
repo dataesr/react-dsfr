@@ -3,22 +3,33 @@
 ### Header avec barre de recherche, raccourcis outils et navigation
 
 ```jsx
-import { Header, HeaderBody, Service, Tool, ToolItem, HeaderNav, NavItem, NavSubItem, ToolItemGroup } from '.';
+import {
+    Header,
+    HeaderBody,
+    Service,
+    Tool,
+    ToolItem,
+    HeaderNav,
+    NavItem,
+    NavSubItem,
+    ToolItemGroup,
+    MegaNavItem,
+    MegaNavSubItem,
+} from '.';
+import Link from './../Link/index';
 import SearchBar from '../SearchBar/index';
 import Logo from '../Logo';
 
-<Header>
+<Header closeButtonLabel='Close it!'>
     <HeaderBody>
         <Logo splitCharacter={10}>République Française</Logo>
         <Service
             title="Service title"
             description="Service Description"/>
-        <Tool
-            buttonClose='close'
-        >
+        <Tool>
             <ToolItemGroup>
-                <ToolItem icon='fr-fi-lock-line' link='/path'>Tool Item #1</ToolItem>
-                <ToolItem icon='rf-fi-add-circle-line' link='/path'>Tool Item #2</ToolItem>
+                <ToolItem icon='ri-lock-line' link='/path'>Tool Item #1</ToolItem>
+                <ToolItem icon='ri-add-circle-line' link='/path'>Tool Item #2</ToolItem>
             </ToolItemGroup>
             <SearchBar
                 onSearch={() => {
@@ -36,7 +47,27 @@ import Logo from '../Logo';
             <NavSubItem title='nav subItem #2' link='/path-to-resources-2' current/>
             <NavSubItem title='nav subItem #3' link='/path-to-resources-3'/>
         </NavItem>
-        <NavItem title='nav item #3' link='/' current/>
+        <MegaNavItem
+            title='mega nav item #3'
+            description='This is the description'
+            as='h5'
+            closeButtonLabel="Close"
+            linkLabel='This is a link'
+            link='/'>
+            <MegaNavSubItem
+                title="Category #1"
+                link='/path-to-resources-1'>
+                <Link title='title' href='/path'>Link #1</Link>
+                <Link title='title' href='/path'current>Link #2</Link>
+            </MegaNavSubItem>
+            <MegaNavSubItem
+                title="Category #2"
+                link='/path-to-resources-2'
+                current>
+                <Link title='title' href='/path'>Link #1</Link>
+            </MegaNavSubItem>
+        </MegaNavItem>
+        <NavItem title='nav item #4' link='/' current/>
     </HeaderNav>
 </Header>
 ```

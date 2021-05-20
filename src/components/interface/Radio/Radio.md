@@ -11,17 +11,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -37,17 +34,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label Radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label Radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -64,17 +58,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -93,17 +84,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -118,19 +106,16 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
     hint="Additionnal description"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
     hint="Additionnal description"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
     hint="Additionnal description"
   />
@@ -151,22 +136,18 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
 ```
-
 
 #### Pour les liste de boutons radio en ligne
 ```jsx
@@ -180,17 +161,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -210,17 +188,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -239,17 +214,14 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
   />
 </RadioGroup>
@@ -267,21 +239,77 @@ import { RadioGroup, Radio } from '.';
 >
   <Radio
     label="Label radio 1"
-    onChange={() => {}}
     value="value-1"
     size="sm"
   />
   <Radio
     label="Label radio 2"
-    onChange={() => {}}
     value="value-2"
     size="sm"
   />
   <Radio
     label="Label radio 3"
-    onChange={() => {}}
     value="value-3"
     size="sm"
+  />
+</RadioGroup>
+```
+## Bouton radio riche
+A la différence du bouton radio simple, l’image et le texte du bouton radio riche permettent d’illustrer et d’accompagner l’utilisateur dans son choix.
+
+### Liste verticale
+```jsx
+import { RadioGroup, Radio } from '.';
+
+<RadioGroup
+  legend="Légende pour l’ensemble de champs"
+>
+  <Radio
+    label="Label radio 1"
+    value="value-1"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
+  />
+  <Radio
+    label="Label radio 2"
+    value="value-2"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
+  />
+  <Radio
+    label="Label radio 3"
+    value="value-3"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
+  />
+</RadioGroup>
+```
+
+### Liste horizontale
+```jsx
+import { RadioGroup, Radio } from '.';
+
+<RadioGroup
+  legend="Légende pour l’ensemble de champs"
+  isInline
+>
+  <Radio
+    label="Label radio 1"
+    value="value-1"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
+  />
+  <Radio
+    label="Label radio 2"
+    value="value-2"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
+  />
+  <Radio
+    label="Label radio 3"
+    value="value-3"
+    isExtended
+    imageURL="https://scanr.enseignementsup-recherche.gouv.fr/static/media/icon-entities.78c41aef.svg"
   />
 </RadioGroup>
 ```

@@ -6,7 +6,7 @@ import { deepFilter, deepForEach } from '../../../utils/children-utilities';
 import HeaderContext from './headerContext';
 
 const Tool = ({
-  children, className, buttonClose,
+  children, className, closeButtonLabel,
 }) => {
   const searchBar = deepFilter(children, (child) => child.props && !!child.props.onSearch);
   let toolItemGroup = null;
@@ -28,10 +28,10 @@ const Tool = ({
             onClick={onOpenSearch}
             type="button"
             className="fr-link--close fr-link"
-            title={buttonClose}
+            title={closeButtonLabel}
             aria-controls="header-tools-popin"
           >
-            {buttonClose}
+            {closeButtonLabel}
           </button>
           {searchBar}
         </div>
@@ -41,7 +41,7 @@ const Tool = ({
 };
 Tool.defaultProps = {
   className: '',
-  buttonClose: 'Fermer',
+  closeButtonLabel: 'Fermer',
 };
 
 Tool.propTypes = {
@@ -55,6 +55,6 @@ Tool.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  buttonClose: PropTypes.string,
+  closeButtonLabel: PropTypes.string,
 };
 export default Tool;

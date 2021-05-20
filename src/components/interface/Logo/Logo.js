@@ -18,17 +18,14 @@ const Logo = ({
   const regex = new RegExp(`.{${splitCharacter.toString()}}\\S*\\s+`, 'g');
   const arrayStr = children.replace(regex, '$&@').split(/\s+@/);
   const title = arrayStr.reduce((el, a, i) => el.concat(a, i < arrayStr.length - 1 ? (
-    <br
-      key={uuidv4()}
-    />
-  ) : ''), []);
+    <br key={uuidv4()} />) : ''), []);
 
   return (
     <Link
+      className={classNames(className)}
       as={asLink}
       title={hrefTitle || children}
       href={href}
-      className={classNames(className)}
     >
       <p className="fr-logo">
         {title}
