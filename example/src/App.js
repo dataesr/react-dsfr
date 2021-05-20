@@ -588,6 +588,7 @@ const App = () => {
                     <FooterLink
                         asLink={<RouterLink to="/myFooterLink"/>}>
                         Footer Link Router
+                    </FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
@@ -646,7 +647,7 @@ const App = () => {
                 <FooterCopy href="/">© République Française 2020</FooterCopy>
             </FooterBottom>
         </Footer>
-    </>;
+    </BrowserRouter>;
 };
 
 export default App;
