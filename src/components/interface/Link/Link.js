@@ -30,7 +30,7 @@ const Link = ({
     },
   );
 
-  const asLink = as ? cloneElement(as, { className: _className }) : null;
+  const asLink = as ? cloneElement(as, { className: _className, children, 'aria-current': (current && 'page') || undefined }) : null;
   const _link = (
     <a
       aria-current={current ? 'page' : undefined}

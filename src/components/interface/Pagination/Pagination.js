@@ -85,7 +85,7 @@ const Pagination = ({
           <PaginationItem
             aria={pageAria(pageCount)}
             isVisibleOnMobile
-            aria-current={currentPage === pageCount ? 'page' : ''}
+            aria-current={(currentPage === pageCount && 'page') || undefined}
             isActive={currentPage === pageCount}
             page={pageCount}
             anchorAs={anchorAs}

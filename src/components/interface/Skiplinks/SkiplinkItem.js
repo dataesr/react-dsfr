@@ -4,28 +4,37 @@ import classNames from 'classnames';
 import Link from '../Link/index';
 
 const SkiplinkItem = ({
-  href, target, children, className,
+  href, target, children, className, asLink,
 }) => (
   <li className={classNames(className)}>
-    <Link isSimple href={href} target={target}>
+    <Link
+      as={asLink}
+      isSimple
+      href={href}
+      target={target}
+    >
       {children}
     </Link>
   </li>
 );
 
+SkiplinkItem.defaultProps = {
+  className: '',
+  href: '',
+  target: '_self',
+  asLink: null,
+};
+
 SkiplinkItem.propTypes = {
   children: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.arrayOf(PropTypes.string, PropTypes.object),
   ]),
   target: PropTypes.string,
+  asLink: PropTypes.element,
 };
 
-SkiplinkItem.defaultProps = {
-  className: '',
-  target: '_self',
-};
 export default SkiplinkItem;

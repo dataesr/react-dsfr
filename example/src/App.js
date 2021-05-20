@@ -50,6 +50,7 @@ import {
     Tag, TagGroup, TextInput,
     Tile, TileImage, TileBody, Toggle
 } from '@dataesr/react-dsfr';
+import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -139,17 +140,21 @@ const App = () => {
             name_en: 'Earth System Science',
         }
     ];
-    return <>
+    return <BrowserRouter>
         <Header>
             <HeaderBody>
                 <Logo splitCharacter={10}>République Française & cie</Logo>
                 <Service
+                    asLink={<RouterLink to="/myLinkUrl"/>}
                     title="Playground @dataesr/react-dsfr"
                     description="messy tests"/>
                 <Tool
                     closeButtonLabel="fermer"
                 >
                     <ToolItemGroup>
+                        <ToolItem
+                            icon="ri-lock-line"
+                            asLink={<RouterLink to="myNavItem"/>}>Example</ToolItem>
                         <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
                         <ToolItem icon="ri-add-circle-line" link="/path">Example</ToolItem>
                     </ToolItemGroup>
@@ -164,9 +169,18 @@ const App = () => {
             </HeaderBody>
             <HeaderNav>
                 <NavItem title="Home" link="/"/>
+                <NavItem
+                    title="Countries"
+                    current
+                    asLink={<RouterLink to="myNavItem"/>}/>
                 <NavItem title="Resources">
                     <NavSubItem title="Ressource #1" link="/path-to-resources-1" current/>
-                    <NavSubItem title="Ressource #2" link="/path-to-resources-2"/>
+                    <NavSubItem
+                        current
+                        asLink={<RouterLink to="myNavSubItem"/>}
+                        title="Ressource #2"
+                        link="/path-to-resources-2"
+                    />
                     <NavSubItem title="Ressource #3" link="/path-to-resources-3"/>
                 </NavItem>
                 <MegaNavItem
@@ -201,18 +215,28 @@ const App = () => {
         </Header>
         <Container role="main">
             <Title as="h3">Tile - Tuile</Title>
-            <Row>
+            <Row gutters>
                 <Col>
-                    <Tile horizontal={true} verticalMedium={true}>
+                    <Tile horizontal verticalMedium>
                         <TileBody
                             title="Tuile horizontale par défaut"
                             description="Et verticale en desktop"
-                            linkHref='/myPath'>
+                            linkHref="/myPath">
                         </TileBody>
                         <TileImage
                             alt="un petit carré"
                             src="https://place-hold.it/80x80">
                         </TileImage>
+                    </Tile>
+                </Col>
+                <Col>
+                    <Tile>
+                        <TileBody
+                            titleAs="h5"
+                            title="Tile Title"
+                            description="Tile description"
+                            asLink={<RouterLink to="myTileLink"/>}>
+                        </TileBody>
                     </Tile>
                 </Col>
             </Row>
@@ -240,7 +264,7 @@ const App = () => {
                 <Col n="sm-12" className="fr-col-md-3">
                     <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
                         <SideMenuItem title="Niveau 1">
-                            <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
+                            <SideMenuLink href="/" asLink={<RouterLink to="mySideMenuLink"/>}>Accès direct niveau 2</SideMenuLink>
                             <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
                             <SideMenuItem title="Niveau 2">
                                 <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>
@@ -496,11 +520,15 @@ const App = () => {
             <Row>
                 <Col>
                     <Breadcrumb>
-                        <BreadcrumbItem>
-                            test
+                        <BreadcrumbItem
+                            asLink={<RouterLink to="/myBreadcrumbLink"/>}>
+                            test #1
+                        </BreadcrumbItem>
+                        <BreadcrumbItem href='/path'>
+                            test #2
                         </BreadcrumbItem>
                         <BreadcrumbItem>
-                            test #2
+                            test #3
                         </BreadcrumbItem>
                     </Breadcrumb>
                 </Col>
@@ -546,7 +574,7 @@ const App = () => {
             <Row>
                 <Col>
                     <Skiplinks>
-                        <SkiplinkItem href="#">Accéder au contenu</SkiplinkItem>
+                        <SkiplinkItem asLink={<RouterLink to="/mySkiplinkItem"/>}>Accéder au contenu</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder au menu</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder à la recherche</SkiplinkItem>
                         <SkiplinkItem href="#">Accéder au footer</SkiplinkItem>
@@ -557,6 +585,10 @@ const App = () => {
         <Footer>
             <FooterTop>
                 <FooterTopCategory title="Nom de la catégorie">
+                    <FooterLink
+                        asLink={<RouterLink to="/myFooterLink"/>}>
+                        Footer Link Router
+                    </FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
                     <FooterLink href="/">Footer Link</FooterLink>
@@ -615,7 +647,7 @@ const App = () => {
                 <FooterCopy href="/">© République Française 2020</FooterCopy>
             </FooterBottom>
         </Footer>
-    </>;
+    </BrowserRouter>;
 };
 
 export default App;

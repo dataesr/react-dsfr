@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Link from '../Link/index';
 
 const NavItem = ({
-  children, title, link, current,
+  children, title, link, current, asLink,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
@@ -39,7 +39,7 @@ const NavItem = ({
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
         aria-expanded={item.ariaExpanded}
-        aria-current={current || undefined}
+        aria-current={(current && 'page') || undefined}
         className="fr-nav__btn"
         aria-label="ouvrir la navigation"
       >
@@ -55,7 +55,12 @@ const NavItem = ({
     </li>
   ) : (
     <li className="fr-nav__item">
-      <Link className="fr-nav__link" href={link} current={current}>
+      <Link
+        as={asLink}
+        className="fr-nav__link"
+        href={link}
+        current={current}
+      >
         {title}
       </Link>
     </li>
@@ -66,7 +71,9 @@ NavItem.defaultProps = {
   link: '',
   children: '',
   current: false,
+  asLink: null,
 };
+
 NavItem.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -76,6 +83,7 @@ NavItem.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
   current: PropTypes.bool,
+  asLink: PropTypes.element,
 };
 
 export default NavItem;
