@@ -4,15 +4,19 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
+import dataAttributes from '../../../utils/data-attributes';
 
 const SideMenuItem = ({
-  children, expandedDefault, title, className,
+  children, expandedDefault, title, className, ...remainingProps
 }) => {
   const itemID = uuidv4();
   const [isExpanded, setExpanded] = useState(expandedDefault);
   const { item, collapse } = useCollapse(itemID, isExpanded);
   return (
-    <li className={classNames('fr-sidemenu__item', className)}>
+    <li
+      className={classNames('fr-sidemenu__item', className)}
+      {...dataAttributes(remainingProps)}
+    >
       <button
         type="button"
         onClick={() => setExpanded(!isExpanded)}

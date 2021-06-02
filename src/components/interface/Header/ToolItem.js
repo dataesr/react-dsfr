@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const ToolItem = ({
-  icon, link, className, children, asLink,
+  icon, link, className, children, asLink, ...remainingProps
 }) => (
-  <li key={uuidv4()}>
+  <li
+    key={uuidv4()}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       className={className}

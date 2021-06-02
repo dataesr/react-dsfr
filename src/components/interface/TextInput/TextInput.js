@@ -3,6 +3,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
@@ -19,6 +20,7 @@ const TextInput = forwardRef((props, ref) => {
     onChange,
     messageType,
     className,
+    ...remainingProps
   } = props;
 
   const _classNameWrapper = classNames('fr-input-group', {
@@ -32,7 +34,10 @@ const TextInput = forwardRef((props, ref) => {
   const hintId = hint && uuidv4();
   const messageId = message && uuidv4();
   return (
-    <div className={_classNameWrapper}>
+    <div
+      className={_classNameWrapper}
+      {...dataAttributes(remainingProps)}
+    >
       {label && <label className="fr-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
       {hint && <p className="fr-hint-text" id={hintId}>{hint}</p>}
       {

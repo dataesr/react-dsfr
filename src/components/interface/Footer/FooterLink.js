@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const FooterLink = ({
-  children, href, section, className, asLink,
+  children, href, section, className, asLink, ...remainingProps
 }) => (
-  <li className={classNames(`fr-footer__${section}-item`, className)}>
+  <li
+    className={classNames(`fr-footer__${section}-item`, className)}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       href={href}

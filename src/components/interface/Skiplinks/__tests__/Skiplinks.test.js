@@ -4,11 +4,11 @@ import { SkiplinkItem, Skiplinks } from '..';
 describe('<SkipLinks />', () => {
   it('should renders Tag properly', () => {
     render(
-      <Skiplinks>
-        <SkiplinkItem href="#">Accéder au contenu</SkiplinkItem>
-        <SkiplinkItem href="#">Accéder au menu</SkiplinkItem>
-        <SkiplinkItem href="#">Accéder à la recherche</SkiplinkItem>
-        <SkiplinkItem href="#">Accéder au footer</SkiplinkItem>
+      <Skiplinks data-testid="skiplinks">
+        <SkiplinkItem href="#" data-testid="skiplinkitem1">Accéder au contenu</SkiplinkItem>
+        <SkiplinkItem href="#" data-test-id="skiplinkitem2">Accéder au menu</SkiplinkItem>
+        <SkiplinkItem href="#" data-test--id="skiplinkitem3">Accéder à la recherche</SkiplinkItem>
+        <SkiplinkItem href="#" data-test="skiplinkitem4">Accéder au footer</SkiplinkItem>
       </Skiplinks>,
     );
     const skiplinks = screen.getByTestId('skiplinks');

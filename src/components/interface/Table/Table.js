@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './table.css';
 
@@ -18,6 +19,7 @@ const Table = ({
   className,
   tableID,
   tableClassName,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-table', {
     'fr-table--no-caption': (captionPosition === 'none'),
@@ -29,7 +31,7 @@ const Table = ({
   return (
     <div
       className={_className}
-      data-testid="table"
+      {...dataAttributes(remainingProps)}
     >
       <table id={tableID || undefined} className={tableClassName || undefined}>
         <caption data-testid="table-caption">{caption}</caption>

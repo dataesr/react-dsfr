@@ -3,6 +3,7 @@
 exports[`<Tab /> renders Tab correctly 1`] = `
 <div
   className="fr-tabs__panel fr-tabs__panel--selected my-class"
+  data-testid="tab"
   id="fr-tabpanel-0"
   role="tabpanel"
   tabIndex="0"

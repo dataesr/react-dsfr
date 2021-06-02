@@ -3,6 +3,7 @@ import React, { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import '../../../style.css';
 import './search.css';
@@ -20,6 +21,7 @@ const SearchBar = forwardRef((props, ref) => {
     onSearch,
     defaultValue,
     className,
+    ...remainingProps
   } = props;
   const [text, setText] = useState(defaultValue);
   const inputId = uuidv4();
@@ -32,7 +34,7 @@ const SearchBar = forwardRef((props, ref) => {
     <form
       role="search"
       className={_className}
-      data-testid="search-bar"
+      {...dataAttributes(remainingProps)}
     >
       <label className="fr-label" htmlFor={inputId}>{label}</label>
       <input

@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterTop = ({ children, align, className }) => (
-  <div className={classNames('fr-footer__top', className)}>
+const FooterTop = ({
+  children, align, className, ...remainingProps
+}) => (
+  <div
+    className={classNames('fr-footer__top', className)}
+    {...dataAttributes(remainingProps)}
+  >
     <div className="fr-container">
       <div className={`fr-grid-row fr-grid-row--${align} fr-grid-row--gutters`}>
         {children}

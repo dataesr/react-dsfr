@@ -3,6 +3,7 @@
 exports[`<TextInput /> renders correctly 1`] = `
 <div
   className="fr-input-group"
+  data-testid="textinput"
 >
   <label
     className="fr-label"

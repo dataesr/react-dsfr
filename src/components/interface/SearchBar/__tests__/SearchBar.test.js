@@ -18,9 +18,10 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        data-testid="searchbar"
       />,
     );
-    const search = screen.getByTestId('search-bar');
+    const search = screen.getByTestId('searchbar');
     expect(search).toBeInTheDocument();
     expect(search).toMatchSnapshot();
   });
@@ -32,9 +33,10 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        data-testid="searchbar"
       />,
     );
-    const search = screen.getByTestId('search-bar');
+    const search = screen.getByTestId('searchbar');
     expect(search).toBeInTheDocument();
     expect(search.className).toBe('fr-search-bar fr-search-bar--lg');
     expect(screen.getByText('Rechercher').className).toBe('fr-btn fr-btn--lg');

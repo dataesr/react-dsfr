@@ -4,7 +4,7 @@ import Highlight from '..';
 describe('<Highlight />', () => {
   it('renders Highlight properly', () => {
     render(
-      <Highlight scheme="soft-green-warm">
+      <Highlight scheme="soft-green-warm" data-testid="highlight">
         Highlight text that might be short and concise.
       </Highlight>,
     );
@@ -16,7 +16,7 @@ describe('<Highlight />', () => {
   });
   it('renders Highlight size properly', () => {
     render(
-      <Highlight size="lg">
+      <Highlight size="lg" data-testid="highlight">
         Highlight text that might be short and concise.
       </Highlight>,
     );

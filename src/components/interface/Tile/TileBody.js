@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
@@ -16,10 +17,14 @@ const TileBody = ({
   linkTitle,
   linkTarget,
   asLink,
+  ...remainingProps
 }) => {
   const HtmlTag = `${titleAs}`;
   return (
-    <div className={classNames('fr-tile__body', className)}>
+    <div
+      className={classNames('fr-tile__body', className)}
+      {...dataAttributes(remainingProps)}
+    >
       <HtmlTag className="fr-tile__title">
         <Link
           as={asLink}

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 const ModalClose = ({
-  hide, title, children, className,
+  hide, title, children, className, ...remainingProps
 }) => (
   <button
     className={classNames('fr-link--close fr-link', className)}
@@ -11,7 +12,7 @@ const ModalClose = ({
     onClick={hide}
     title={title}
     aria-controls="fr-modal"
-    data-testid="modal-close"
+    {...dataAttributes(remainingProps)}
   >
     {children}
   </button>

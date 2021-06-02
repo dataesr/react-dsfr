@@ -38,6 +38,7 @@ describe('<Button />', () => {
           secondary={initialProps.secondary}
           size={initialProps.size}
           title={initialProps.title}
+          data-testid="button"
         >
           {initialProps.children}
         </Button>,

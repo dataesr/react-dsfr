@@ -22,6 +22,7 @@ describe('<Link />', () => {
           icon={initialProps.icon}
           size={initialProps.size}
           title={initialProps.title}
+          data-testid="link"
         >
           {initialProps.children}
         </Link>,

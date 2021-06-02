@@ -13,6 +13,7 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
     >
       <li
         class=""
+        data-testid="skiplinkitem1"
       >
         <a
           class="fr-link"
@@ -24,6 +25,7 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
       </li>
       <li
         class=""
+        data-test-id="skiplinkitem2"
       >
         <a
           class="fr-link"
@@ -35,6 +37,7 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
       </li>
       <li
         class=""
+        data-test--id="skiplinkitem3"
       >
         <a
           class="fr-link"
@@ -46,6 +49,7 @@ exports[`<SkipLinks /> should renders Tag properly 1`] = `
       </li>
       <li
         class=""
+        data-test="skiplinkitem4"
       >
         <a
           class="fr-link"

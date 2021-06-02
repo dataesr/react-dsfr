@@ -3,6 +3,7 @@ import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './cards.css';
 
@@ -18,6 +19,7 @@ const Card = ({
   className,
   hasArrow,
   scheme,
+  ...remainingProps
 }) => {
   const img = Children.toArray(children).find((child) => child.type.name === 'CardImage');
   const detail = Children.toArray(children).find((child) => child.type.name === 'CardDetail');
@@ -34,7 +36,7 @@ const Card = ({
   return (
     <div
       className={_className}
-      data-testid="card"
+      {...dataAttributes(remainingProps)}
     >
       {img}
       <div className="fr-card__body">

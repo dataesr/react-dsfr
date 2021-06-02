@@ -3,11 +3,12 @@
 exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
 <ul
   class="fr-btns-group fr-btns-group--sm fr-btns-group--center fr-btns-group--inline-md fr-btns-group--equisized"
-  data-testid="button-group"
+  data-testid="buttongroup"
 >
   <li>
     <button
       class="fr-btn fr-btn--md fr-btn--secondary"
+      data-testid="button"
       title="title"
       type="button"
     >
@@ -17,6 +18,7 @@ exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
   <li>
     <button
       class="fr-btn fr-btn--md"
+      data-test-id="button"
       title="title"
       type="button"
     >

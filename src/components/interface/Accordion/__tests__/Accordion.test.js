@@ -4,16 +4,16 @@ import { Accordion, AccordionItem } from '..';
 describe('<Accordion />', () => {
   it('should render accordion properly', () => {
     render(
-      <Accordion className="custom-class">
-        <AccordionItem title="first line accordion">
+      <Accordion className="custom-class" data-testid="accordiongroup">
+        <AccordionItem title="first line accordion" data-testid="accordion">
           Anything I want
         </AccordionItem>
-        <AccordionItem title="first line accordion">
+        <AccordionItem title="first line accordion" data-testid="accordion">
           Anything I want
         </AccordionItem>
       </Accordion>,
     );
-    const group = screen.getByTestId('accordion-group');
+    const group = screen.getByTestId('accordiongroup');
     const items = screen.getAllByTestId('accordion');
     expect(items).toHaveLength(2);
     expect(group).toMatchSnapshot();
@@ -22,10 +22,10 @@ describe('<Accordion />', () => {
   it('should toggle on click', () => {
     render(
       <Accordion className="custom-class">
-        <AccordionItem title="first line accordion">
+        <AccordionItem title="first line accordion" data-testid="accordion">
           Anything I want
         </AccordionItem>
-        <AccordionItem title="first line accordion">
+        <AccordionItem title="first line accordion" data-testid="accordion">
           Anything I want
         </AccordionItem>
       </Accordion>,

@@ -4,6 +4,8 @@ import React, {
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import dataAttributes from '../../../utils/data-attributes';
+
 import '../../../style.css';
 import './breadcrumbs.css';
 
@@ -15,6 +17,7 @@ const Breadcrumb = ({
   buttonLabel,
   className,
   children,
+  ...remainingProps
 }) => {
   const breadRef = useRef();
   const buttonRef = useRef();
@@ -48,7 +51,7 @@ const Breadcrumb = ({
       ref={breadRef}
       className={_className}
       aria-label={label}
-      data-testid="bc-nav"
+      {...dataAttributes(remainingProps)}
     >
       <button
         ref={buttonRef}

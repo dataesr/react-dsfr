@@ -2,14 +2,18 @@ import React, { Children, cloneElement } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterBottom = ({ children, className }) => {
+const FooterBottom = ({ children, className, ...remainingProps }) => {
   const links = Children.toArray(children)
     .filter((link) => link.type.name === 'FooterLink')
     .map((link) => cloneElement(link, { section: 'bottom' }));
   const childs = children.filter((link) => link.type.name !== 'FooterLink');
   return (
-    <div className={classNames('fr-footer__bottom', className)}>
+    <div
+      className={classNames('fr-footer__bottom', className)}
+      {...dataAttributes(remainingProps)}
+    >
       <ul className="fr-footer__bottom-list">
         {links}
       </ul>

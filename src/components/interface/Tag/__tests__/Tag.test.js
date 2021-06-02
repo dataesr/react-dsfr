@@ -17,14 +17,14 @@ describe('<Tag />', () => {
   });
   it('should renders TagGroup properly', () => {
     render(
-      <TagGroup>
-        <Tag size="sm" as="span">tag-test</Tag>
-        <Tag size="sm" as="span">tag-test</Tag>
-        <Tag size="sm" as="span">tag-test</Tag>
-        <Tag size="sm" as="span">tag-test</Tag>
+      <TagGroup data-testid="taggroup">
+        <Tag size="sm" as="span" data-testid="tag1">tag-test</Tag>
+        <Tag size="sm" as="span" data-test-id="tag2">tag-test</Tag>
+        <Tag size="sm" as="span" data-test--id="tag3">tag-test</Tag>
+        <Tag size="sm" as="span" data-test="tag4">tag-test</Tag>
       </TagGroup>,
     );
-    const tagGroup = screen.getByTestId('tag-group');
+    const tagGroup = screen.getByTestId('taggroup');
     expect(tagGroup).toBeInTheDocument();
     const tags = screen.getAllByText('tag-test');
     expect(tags[0].className).toBe('fr-tag fr-tag--sm');

@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Table from './Table';
 
-const SimpleTable = ({ data, ...rest }) => {
+const SimpleTable = ({ data, ...remainingProps }) => {
   const headers = Object.keys(data?.[0]);
   return (
-    <Table {...rest}>
+    <Table {...remainingProps}>
       <thead>
         <tr key="headers">
           { headers.map((header) => (<th key={header} scope="col">{header}</th>)) }

@@ -24,7 +24,7 @@ exports[`<Modal /> should render modal properly 1`] = `
             <button
               aria-controls="fr-modal"
               class="fr-link--close fr-link"
-              data-testid="modal-close"
+              data-testid="modalclose"
               title="Close the modal window"
               type="button"
             >
@@ -36,6 +36,7 @@ exports[`<Modal /> should render modal properly 1`] = `
           >
             <h1
               class="fr-modal__title ds-fr--inline-block"
+              data-testid="modaltitle"
               id="fr-modal-title-modal"
             >
               <span
@@ -45,12 +46,14 @@ exports[`<Modal /> should render modal properly 1`] = `
             </h1>
             <div
               class=""
+              data-testid="modalcontent"
             >
               blah blah
             </div>
           </div>
           <div
             class="fr-modal__footer"
+            data-testid="modalfooter"
           >
             blah
           </div>

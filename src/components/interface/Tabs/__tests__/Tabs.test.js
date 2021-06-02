@@ -19,8 +19,9 @@ describe('<Tabs />', () => {
         className={initProps.className}
         scheme={initProps.scheme}
         defaultActiveTab={1}
+        data-testid="tabs"
       >
-        <Tab label="Label">Tab</Tab>
+        <Tab label="Label" data-test-id="tab">Tab</Tab>
       </Tabs>,
     );
   });

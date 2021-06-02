@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 
 import withProps from '../../../utils/withProps';
 
 const Tab = ({
-  className, index, activeTab, setHeight, children,
+  className, index, activeTab, setHeight, children, ...remainingProps
 }) => {
   const getHeight = (el) => el.getBoundingClientRect().height;
   useEffect(() => {
@@ -21,6 +22,7 @@ const Tab = ({
       className={classNames(`fr-tabs__panel ${activeTab === index ? 'fr-tabs__panel--selected' : ''}`, className)}
       role="tabpanel"
       tabIndex="0"
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </div>

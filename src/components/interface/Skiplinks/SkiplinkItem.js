@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const SkiplinkItem = ({
-  href, target, children, className, asLink,
+  href, target, children, className, asLink, ...remainingProps
 }) => (
-  <li className={classNames(className)}>
+  <li
+    className={classNames(className)}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       isSimple

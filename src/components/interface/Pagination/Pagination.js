@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
 
@@ -13,6 +14,7 @@ const Pagination = ({
   buildURL,
   buttonLabels,
   surrendingPages,
+  ...remainingProps
 }) => {
   const surrendingLeft = getSurrendingLeft(currentPage, surrendingPages);
   const surrendingRight = getSurrendingRight(currentPage, surrendingPages, pageCount);
@@ -27,7 +29,7 @@ const Pagination = ({
       className="fr-pagination"
       aria-label={navigationAria}
       role="navigation"
-      data-testid="pagination-nav"
+      {...dataAttributes(remainingProps)}
     >
       <ul className="fr-pagination__list">
         <li>

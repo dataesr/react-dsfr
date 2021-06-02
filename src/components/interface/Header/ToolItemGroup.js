@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { createPortal } from 'react-dom';
+import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
 
-const ToolItemGroup = ({ children, className }) => {
+const ToolItemGroup = ({ children, className, ...remainingProps }) => {
   const [menuLinkElement, setMenuLinkElement] = useState();
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
@@ -13,14 +14,16 @@ const ToolItemGroup = ({ children, className }) => {
   }, [shortcutClassName, setMenuLinkElement, menuLinkElement]);
 
   return (
-    <>
+    <div
+      {...dataAttributes(remainingProps)}
+    >
       {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
       <div className={classNames(className, 'fr-header__tools-links')}>
         <ul className="fr-links-group">
           {children}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 ToolItemGroup.defaultProps = {

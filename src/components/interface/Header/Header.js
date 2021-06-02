@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { v4 as uuidv4 } from 'uuid';
 import { deepForEach } from '../../../utils/children-utilities';
+import dataAttributes from '../../../utils/data-attributes';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
@@ -21,6 +22,7 @@ const Header = ({
   isOpenNav,
   isOpenSearch,
   closeButtonLabel,
+  ...remainingProps
 }) => {
   const { width } = useViewport();
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
@@ -56,6 +58,7 @@ const Header = ({
       <header
         className={classNames(className, 'fr-header')}
         role="banner"
+        {...dataAttributes(remainingProps)}
       >
         {children.map((child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }))}
         {isNavTool && !isNavBar && (

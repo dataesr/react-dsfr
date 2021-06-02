@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const CalloutTitle = ({ as, children, className }) => {
+const CalloutTitle = ({
+  as, children, className, ...remainingProps
+}) => {
   const HtmlTitleTag = `${as}`;
   return (
-    <HtmlTitleTag className={classNames('fr-callout__title', className)}>
+    <HtmlTitleTag
+      className={classNames('fr-callout__title', className)}
+      {...dataAttributes(remainingProps)}
+    >
       {children}
     </HtmlTitleTag>
   );

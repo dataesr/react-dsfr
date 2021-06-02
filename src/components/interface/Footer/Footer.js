@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './footer.css';
 
-const Footer = ({ children, className }) => {
+const Footer = ({ children, className, ...remainingProps }) => {
   const top = children.filter((child) => child.type.name === 'FooterTop');
   const rest = children.filter((child) => child.type.name !== 'FooterTop');
   const _className = classNames('fr-footer', className);
@@ -12,7 +13,7 @@ const Footer = ({ children, className }) => {
     <footer
       className={_className}
       role="contentinfo"
-      data-testid="footer"
+      {...dataAttributes(remainingProps)}
     >
       {top}
       <div className="fr-container">

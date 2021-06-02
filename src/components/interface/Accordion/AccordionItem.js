@@ -2,16 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import useCollapse from '../../../hooks/useCollapse';
+import dataAttributes from '../../../utils/data-attributes';
 
 const AccordionItem = ({
-  title, titleAs, isExpanded, onClick, children, className, id,
+  title, titleAs, isExpanded, onClick, children, className, id, ...remainingProps
 }) => {
   const TitleTag = `${titleAs}`;
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
   return (
     <li
       className={classNames(className)}
-      data-testid="accordion"
+      {...dataAttributes(remainingProps)}
     >
       <section className="fr-accordion">
         <TitleTag className="fr-accordion__title">

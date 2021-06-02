@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const ModalTitle = ({
-  children, className, icon,
+  children, className, icon, ...remainingProps
 }) => {
   const _title = (
     <h1
@@ -12,6 +13,7 @@ const ModalTitle = ({
         'ds-fr--inline-block': icon,
       })}
       id="fr-modal-title-modal"
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </h1>

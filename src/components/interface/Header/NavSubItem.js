@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const NavSubItem = ({
-  title, link, current, asLink,
+  title, link, current, asLink, ...remainingProps
 }) => (
-  <li key={title}>
+  <li
+    key={title}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       className="fr-nav__link"

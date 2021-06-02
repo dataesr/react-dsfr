@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 
 const PaginationItem = ({
   page,
@@ -7,12 +8,15 @@ const PaginationItem = ({
   isActive,
   url,
   aria,
+  ...remainingProps
 }) => {
   const Tag = `${anchorAs}`;
   const href = (anchorAs === 'a') ? url : undefined;
   const to = (anchorAs !== 'a') ? url : undefined;
   return (
-    <li>
+    <li
+      {...dataAttributes(remainingProps)}
+    >
       <Tag
         aria-current={(isActive && 'page') || undefined}
         href={href}

@@ -35,7 +35,7 @@ describe('<TextInput />', () => {
 
   it('renders correctly', () => {
     const component = renderer
-      .create(<TextInput {...initialProps} />)
+      .create(<TextInput {...initialProps} data-testid="textinput" />)
       .toJSON();
     expect(component).toMatchSnapshot();
   });

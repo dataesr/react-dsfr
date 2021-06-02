@@ -2,6 +2,7 @@ import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './links.css';
 
@@ -22,6 +23,7 @@ const Link = ({
   iconSize,
   icon,
   iconPosition,
+  ...remainingProps
 }) => {
   const _className = classNames(
     className, {
@@ -39,6 +41,7 @@ const Link = ({
       target={target}
       rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
       className={_className}
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </a>

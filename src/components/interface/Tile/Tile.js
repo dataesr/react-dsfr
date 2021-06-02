@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './tiles.css';
 
@@ -16,6 +17,7 @@ const Tile = ({
   verticalMedium,
   children,
   scheme,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-tile fr-enlarge-link', {
     'fr-tile--horizontal': horizontal,
@@ -23,7 +25,14 @@ const Tile = ({
     'fr-tile--vertical-md': verticalMedium && horizontal,
     [`fr-scheme-${scheme}`]: scheme,
   }, className);
-  return <div className={_className}>{children}</div>;
+  return (
+    <div
+      className={_className}
+      {...dataAttributes(remainingProps)}
+    >
+      {children}
+    </div>
+  );
 };
 
 Tile.defaultProps = {

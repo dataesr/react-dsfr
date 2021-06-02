@@ -39,6 +39,7 @@ describe('<TabButton />', () => {
           index={0}
           label="Label #1"
           className={initProps.className}
+          data-testid="tabbutton"
         />,
       )
       .toJSON();

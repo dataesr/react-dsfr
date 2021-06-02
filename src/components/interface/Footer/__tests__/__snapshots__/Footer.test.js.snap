@@ -8,6 +8,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
 >
   <div
     class="fr-footer__top"
+    data-testid="footertop"
   >
     <div
       class="fr-container"
@@ -28,6 +29,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
           >
             <li
               class="fr-footer__top-item"
+              data-testid="footerlink"
             >
               <a
                 class="fr-footer__top-link"
@@ -330,12 +332,14 @@ exports[`<Footer /> should render Footer properly 1`] = `
   >
     <div
       class="fr-footer__body"
+      data-testid="footerbody"
     >
       <div
         class="fr-footer__brand"
       >
         <a
           class=""
+          data-testid="footerlogo"
           href="/"
           target="_self"
           title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"
@@ -416,9 +420,11 @@ exports[`<Footer /> should render Footer properly 1`] = `
     </div>
     <div
       class="fr-footer__partners"
+      data-testid="footerpartners"
     >
       <p
         class="fr-footer__partners-title"
+        data-testid="title"
       >
         Nos partenaires
       </p>
@@ -430,6 +436,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
         >
           <a
             class="footer__partners-link"
+            data-testid="logo"
             href="/"
             target="_self"
           >
@@ -481,12 +488,14 @@ exports[`<Footer /> should render Footer properly 1`] = `
     </div>
     <div
       class="fr-footer__bottom"
+      data-testid="bottom"
     >
       <ul
         class="fr-footer__bottom-list"
       >
         <li
           class="fr-footer__bottom-item"
+          data-testid="link"
         >
           <a
             class="fr-footer__bottom-link"

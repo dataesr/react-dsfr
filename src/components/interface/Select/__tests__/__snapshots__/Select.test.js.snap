@@ -3,6 +3,7 @@
 exports[`<Select /> renders correctly 1`] = `
 <div
   className="fr-select-group fr-select-group--valid"
+  data-testid="select"
 >
   <label
     aria-describedby="label-1-xxx"

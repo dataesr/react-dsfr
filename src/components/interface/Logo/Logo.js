@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 import '../../../style.css';
 import './logo.css';
@@ -12,7 +13,7 @@ import './logo.css';
  * @visibleName Logo
  */
 const Logo = ({
-  children, href, className, splitCharacter, hrefTitle, asLink,
+  children, href, className, splitCharacter, hrefTitle, asLink, ...remainingProps
 }) => {
   // TODO Better system to split
   const regex = new RegExp(`.{${splitCharacter.toString()}}\\S*\\s+`, 'g');
@@ -26,6 +27,7 @@ const Logo = ({
       as={asLink}
       title={hrefTitle || children}
       href={href}
+      {...dataAttributes(remainingProps)}
     >
       <p className="fr-logo">
         {title}

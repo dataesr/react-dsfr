@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import { deepFilter, deepForEach } from '../../../utils/children-utilities';
+import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
 
 const Tool = ({
-  children, className, closeButtonLabel,
+  children, className, closeButtonLabel, ...remainingProps
 }) => {
   const searchBar = deepFilter(children, (child) => child.props && !!child.props.onSearch);
   let toolItemGroup = null;
@@ -20,6 +21,7 @@ const Tool = ({
   return (
     <div
       className={_className}
+      {...dataAttributes(remainingProps)}
     >
       {!isOpenSearch && toolItemGroup}
       <div className={classNames('fr-header__search fr-modal', { 'fr-modal--opened': isOpenSearch })}>

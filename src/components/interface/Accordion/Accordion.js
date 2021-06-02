@@ -3,6 +3,8 @@ import React, { useState, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import dataAttributes from '../../../utils/data-attributes';
+
 import '../../../style.css';
 import './accordions.css';
 
@@ -10,7 +12,9 @@ import './accordions.css';
  *
  * @visibleName Accordion
  */
-const Accordion = ({ className, children, as }) => {
+const Accordion = ({
+  className, children, as, ...remainingProps
+}) => {
   const HtmlTag = `${as}`;
   const [isExpanded, setIsExpanded] = useState('');
   const expand = (e) => {
@@ -34,7 +38,7 @@ const Accordion = ({ className, children, as }) => {
   return (
     <HtmlTag
       className={classNames(className)}
-      data-testid="accordion-group"
+      {...dataAttributes(remainingProps)}
     >
       <ul className="fr-accordion-group">{childs}</ul>
     </HtmlTag>

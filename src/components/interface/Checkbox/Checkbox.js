@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './checkboxes.css';
 
@@ -21,6 +22,7 @@ const Checkbox = forwardRef((props, ref) => {
     onChange,
     size,
     value,
+    ...remainingProps
   } = props;
   const _className = classNames('fr-checkbox-group', {
     [`fr-checkbox-group--${messageType}`]: messageType,
@@ -32,7 +34,7 @@ const Checkbox = forwardRef((props, ref) => {
   return (
     <div
       className={_className}
-      data-testid="checkbox"
+      {...dataAttributes(remainingProps)}
     >
       <input
         type="checkbox"

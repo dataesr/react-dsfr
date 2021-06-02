@@ -3,10 +3,12 @@
 exports[`<Header /> renders correctly 1`] = `
 <header
   className="fr-header"
+  data-testid="header"
   role="banner"
 >
   <div
     className="fr-header__body"
+    data-testid="headerbody"
   >
     <div
       className="fr-container"
@@ -25,6 +27,7 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <a
                 className=""
+                data-test-id="headerlogo"
                 href="/"
                 target="_self"
                 title="République française"
@@ -52,6 +55,7 @@ exports[`<Header /> renders correctly 1`] = `
           </div>
           <div
             className="fr-header__service"
+            data-testid="service"
           >
             <a
               className="fr-header__service-title"
@@ -70,38 +74,47 @@ exports[`<Header /> renders correctly 1`] = `
         </div>
         <div
           className="fr-header__tools"
+          data-testid="tool"
         >
           <div
-            className="fr-header__tools-links"
+            data-testid="toolitemgroup"
           >
-            <ul
-              className="fr-links-group"
+            <div
+              className="fr-header__tools-links"
             >
-              <li>
-                <a
-                  className="ds-fr--flex fr-link"
-                  href="/path"
-                  target="_self"
+              <ul
+                className="fr-links-group"
+              >
+                <li
+                  data-testid="toolitem"
                 >
-                  <span
-                    className="ri-1x icon-left fr-fi-lock-line ds-fr--v-top"
-                  />
-                  Se connecter
-                </a>
-              </li>
-              <li>
-                <a
-                  className="ds-fr--flex fr-link"
-                  href="/path"
-                  target="_self"
+                  <a
+                    className="ds-fr--flex fr-link"
+                    href="/path"
+                    target="_self"
+                  >
+                    <span
+                      className="ri-1x icon-left fr-fi-lock-line ds-fr--v-top"
+                    />
+                    Se connecter
+                  </a>
+                </li>
+                <li
+                  data-test-id="toolitem"
                 >
-                  <span
-                    className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-top"
-                  />
-                  Créer un espace
-                </a>
-              </li>
-            </ul>
+                  <a
+                    className="ds-fr--flex fr-link"
+                    href="/path"
+                    target="_self"
+                  >
+                    <span
+                      className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-top"
+                    />
+                    Créer un espace
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div
             className="fr-header__search fr-modal"
@@ -126,6 +139,7 @@ exports[`<Header /> renders correctly 1`] = `
   </div>
   <div
     className="fr-header__menu fr-modal"
+    data-testid="headernav"
   >
     <div
       className="fr-container"
@@ -161,6 +175,7 @@ exports[`<Header /> renders correctly 1`] = `
           </li>
           <li
             className="fr-nav__item"
+            data-test-id="navitem"
           >
             <button
               aria-expanded="false"
@@ -184,7 +199,9 @@ exports[`<Header /> renders correctly 1`] = `
               <ul
                 className="fr-menu__list"
               >
-                <li>
+                <li
+                  data-test-id="navsubitem"
+                >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-1"
@@ -193,7 +210,9 @@ exports[`<Header /> renders correctly 1`] = `
                     Ressource #1
                   </a>
                 </li>
-                <li>
+                <li
+                  data-test--id="navsubitem"
+                >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-2"
@@ -202,7 +221,9 @@ exports[`<Header /> renders correctly 1`] = `
                     Ressource #2
                   </a>
                 </li>
-                <li>
+                <li
+                  data-test="navsubitem"
+                >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-3"
