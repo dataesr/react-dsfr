@@ -33,10 +33,10 @@ const Header = ({
   const isMobile = width < 992;
 
   deepForEach(children, (child) => {
-    if (child.type && child.type.name === 'HeaderNav') {
+    if (child.type && child.props.__TYPE === 'HeaderNav') {
       isNavBar = true;
     }
-    if (child.type && child.type.name === 'ToolItemGroup') {
+    if (child.type && child.props.__TYPE === 'ToolItemGroup') {
       isNavTool = true;
     }
     if (child && !!child.props.onSearch) {

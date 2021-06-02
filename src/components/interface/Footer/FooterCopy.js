@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const FooterCopy = ({ children, className, ...remainingProps }) => (
   <div
@@ -12,6 +13,8 @@ const FooterCopy = ({ children, className, ...remainingProps }) => (
   </div>
 );
 FooterCopy.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('FooterCopy'),
   children: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -19,6 +22,9 @@ FooterCopy.propTypes = {
     PropTypes.array,
   ]),
 };
-FooterCopy.defaultProps = { className: '' };
+FooterCopy.defaultProps = {
+  __TYPE: 'FooterCopy',
+  className: '',
+};
 
 export default FooterCopy;

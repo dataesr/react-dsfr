@@ -34,10 +34,10 @@ const ModalDialog = ({
   }, className);
   const focusBackTo = document.activeElement;
   const handleTabulation = useFocusTrap(modalRef);
-  const title = Children.toArray(children).filter((child) => child.type.name === 'ModalTitle');
-  const content = Children.toArray(children).filter((child) => child.type.name === 'ModalContent');
-  const footer = Children.toArray(children).filter((child) => child.type.name === 'ModalFooter');
-  const close = Children.toArray(children).filter((child) => child.type.name === 'ModalClose');
+  const title = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalTitle');
+  const content = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalContent');
+  const footer = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalFooter');
+  const close = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalClose');
 
   const handleModal = (open) => {
     if (modalRef.current) {

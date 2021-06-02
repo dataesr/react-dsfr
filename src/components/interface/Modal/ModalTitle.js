@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const ModalTitle = ({
   children, className, icon, ...remainingProps
@@ -30,11 +31,14 @@ const ModalTitle = ({
 };
 
 ModalTitle.defaultProps = {
+  __TYPE: 'ModalTitle',
   icon: '',
   className: '',
 };
 
 ModalTitle.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('ModalTitle'),
   children: PropTypes.string.isRequired,
   icon: PropTypes.string,
   className: PropTypes.oneOfType([

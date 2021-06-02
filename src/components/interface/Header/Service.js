@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const Service = ({
   title, description, className, link, asLink, ...remainingProps
@@ -25,6 +26,7 @@ const Service = ({
 );
 
 Service.defaultProps = {
+  __TYPE: 'Service',
   className: '',
   description: 'Ouvrir le menu',
   link: '/',
@@ -32,6 +34,8 @@ Service.defaultProps = {
 };
 
 Service.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('Service'),
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   link: PropTypes.string,

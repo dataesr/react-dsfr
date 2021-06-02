@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 import '../../../style.css';
 import './logo.css';
@@ -37,6 +38,7 @@ const Logo = ({
 };
 
 Logo.defaultProps = {
+  __TYPE: 'Logo',
   href: '/',
   hrefTitle: '',
   splitCharacter: 12,
@@ -45,6 +47,8 @@ Logo.defaultProps = {
 };
 
 Logo.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('Logo'),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

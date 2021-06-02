@@ -21,12 +21,12 @@ const Card = ({
   scheme,
   ...remainingProps
 }) => {
-  const img = Children.toArray(children).find((child) => child.type.name === 'CardImage');
-  const detail = Children.toArray(children).find((child) => child.type.name === 'CardDetail');
+  const img = Children.toArray(children).find((child) => child.props.__TYPE === 'CardImage');
+  const detail = Children.toArray(children).find((child) => child.props.__TYPE === 'CardDetail');
   const description = Children.toArray(children).find(
-    (child) => child.type.name === 'CardDescription',
+    (child) => child.props.__TYPE === 'CardDescription',
   );
-  const title = Children.toArray(children).find((child) => child.type.name === 'CardTitle');
+  const title = Children.toArray(children).find((child) => child.props.__TYPE === 'CardTitle');
   const displayTitle = title && cloneElement(title, { href, anchorAs });
   const _className = classNames('fr-card', {
     'fr-card--horizontal': isHorizontal,

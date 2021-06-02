@@ -6,8 +6,8 @@ import dataAttributes from '../../../utils/data-attributes';
 import './footer.css';
 
 const Footer = ({ children, className, ...remainingProps }) => {
-  const top = children.filter((child) => child.type.name === 'FooterTop');
-  const rest = children.filter((child) => child.type.name !== 'FooterTop');
+  const top = children.filter((child) => child.props.__TYPE === 'FooterTop');
+  const rest = children.filter((child) => child.props.__TYPE !== 'FooterTop');
   const _className = classNames('fr-footer', className);
   return (
     <footer

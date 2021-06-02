@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const FooterPartnersLogo = ({
   href, imageSrc, imageAlt, className, asLink, ...remainingProps
@@ -34,6 +35,7 @@ const FooterPartnersLogo = ({
 };
 
 FooterPartnersLogo.defaultProps = {
+  __TYPE: 'FooterPartnersLogo',
   href: '',
   imageSrc: '',
   className: '',
@@ -41,6 +43,8 @@ FooterPartnersLogo.defaultProps = {
 };
 
 FooterPartnersLogo.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('FooterPartnersLogo'),
   href: PropTypes.string,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
