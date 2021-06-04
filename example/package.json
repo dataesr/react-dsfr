@@ -10,6 +10,7 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "prop-types": "file:../node_modules/prop-types",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "@dataesr/react-dsfr": "file:..",
