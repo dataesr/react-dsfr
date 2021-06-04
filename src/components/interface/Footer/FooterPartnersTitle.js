@@ -1,11 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterPartnersTitle = ({ as, children, className }) => {
+const FooterPartnersTitle = ({
+  as, children, className, ...remainingProps
+}) => {
   const Tag = `${as}`;
   return (
-    <Tag className={classNames('fr-footer__partners-title', className)}>
+    <Tag
+      className={classNames('fr-footer__partners-title', className)}
+      {...dataAttributes(remainingProps)}
+    >
       {children}
     </Tag>
   );

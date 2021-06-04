@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
@@ -16,12 +17,16 @@ const RadioGroup = ({
   message,
   messageType,
   ariaLabel,
+  ...remainingProps
 }) => {
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
   const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
   return (
-    <div className={_className}>
+    <div
+      className={_className}
+      {...dataAttributes(remainingProps)}
+    >
       <fieldset
         className="fr-fieldset"
         aria-label={ariaLabel || legend}

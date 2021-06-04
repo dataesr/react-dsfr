@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import HeaderContext from './headerContext';
 import { deepFilter } from '../../../utils/children-utilities';
+import dataAttributes from '../../../utils/data-attributes';
 
-const HeaderBody = ({ children, className, closeButtonLabel }) => {
+const HeaderBody = ({
+  children, className, closeButtonLabel, ...remainingProps
+}) => {
   const headerBodyChildren = deepFilter(children, (child) => child.type && (child.type.name !== 'Logo' && child.type.name !== 'Service'));
   const logo = deepFilter(children, (child) => child.type && child.type.name === 'Logo');
   const service = deepFilter(children, (child) => child.type && child.type.name === 'Service');
@@ -21,7 +24,10 @@ const HeaderBody = ({ children, className, closeButtonLabel }) => {
   } = context;
 
   return (
-    <div className="fr-header__body">
+    <div
+      className="fr-header__body"
+      {...dataAttributes(remainingProps)}
+    >
       <div className="fr-container">
         <div className={classNames(className, 'fr-header__body-row')}>
           <div className="fr-header__brand fr-enlarge-link">

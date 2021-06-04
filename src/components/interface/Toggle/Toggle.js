@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './toggles.css';
 
@@ -19,6 +20,7 @@ const Toggle = ({
   isChecked,
   isDisabled,
   onChange,
+  ...remainingProps
 }) => {
   const _id = id || uuidv4();
   const _className = classNames('fr-toggle', {
@@ -28,7 +30,7 @@ const Toggle = ({
   return (
     <div
       className={_className}
-      data-testid="toggle"
+      {...dataAttributes(remainingProps)}
     >
       <input
         data-testid="toggle-input"

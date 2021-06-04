@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterPartners = ({ children, className }) => {
+const FooterPartners = ({ children, className, ...remainingProps }) => {
   const title = children.filter(
     (child) => child.type.name === 'FooterPartnersTitle',
   );
@@ -13,7 +14,10 @@ const FooterPartners = ({ children, className }) => {
     (child) => child.type.name === 'FooterPartnersLogo' && !child.props.isMain,
   );
   return (
-    <div className={classNames('fr-footer__partners', className)}>
+    <div
+      className={classNames('fr-footer__partners', className)}
+      {...dataAttributes(remainingProps)}
+    >
       {title}
       <div className="fr-footer__partners-logos">
         {mainLogos && (

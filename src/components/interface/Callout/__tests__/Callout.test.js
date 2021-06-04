@@ -5,9 +5,9 @@ import Button from '../../Button';
 describe('<Callout />', () => {
   it('renders Callout properly', () => {
     render(
-      <Callout scheme="soft-green-warm">
-        <CalloutTitle as="h3">Callout title</CalloutTitle>
-        <CalloutText>Callout text that might be short and concise.</CalloutText>
+      <Callout scheme="soft-green-warm" data-testid="callout">
+        <CalloutTitle as="h3" data-testid="title">Callout title</CalloutTitle>
+        <CalloutText data-testid="text">Callout text that might be short and concise.</CalloutText>
         <Button title="acceder...">
           Accéder au service
         </Button>

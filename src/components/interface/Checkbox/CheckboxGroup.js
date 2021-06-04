@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
@@ -15,13 +16,17 @@ const CheckboxGroup = ({
   message,
   messageType,
   ariaLabel,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-form-group', {
     'fr-fieldset--inline': isInline,
     [`fr-fieldset--${messageType}`]: messageType,
   }, className);
   return (
-    <div className={_className}>
+    <div
+      className={_className}
+      {...dataAttributes(remainingProps)}
+    >
       <fieldset className="fr-fieldset" aria-label={ariaLabel || legend}>
         {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
         {hint && <p className="fr-hint-text">{hint}</p>}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './radios.css';
 
@@ -22,6 +23,7 @@ const Radio = (props) => {
     size,
     imageURL,
     value,
+    ...remainingProps
   } = props;
 
   const messageClasses = (messageType !== '') ? `fr-radio-group--${messageType}` : null;
@@ -35,7 +37,7 @@ const Radio = (props) => {
   return (
     <div
       className={_className}
-      data-testid="radio"
+      {...dataAttributes(remainingProps)}
     >
       <input
         type="radio"

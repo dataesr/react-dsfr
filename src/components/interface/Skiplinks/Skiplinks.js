@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './skiplinks.css';
 
@@ -8,10 +9,10 @@ import './skiplinks.css';
  *
  * @visibleName Skiplinks
  */
-const Skiplinks = ({ children, className }) => (
+const Skiplinks = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames('fr-skiplinks', className)}
-    data-testid="skiplinks"
+    {...dataAttributes(remainingProps)}
   >
     <div className="fr-container">
       <ul className="fr-skiplinks__list">

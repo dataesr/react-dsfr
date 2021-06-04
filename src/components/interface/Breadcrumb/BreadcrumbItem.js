@@ -1,10 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const BreadcrumbItem = ({
-  className, children, href, asLink,
+  className, children, href, asLink, ...remainingProps
 }) => {
   const _className = classNames(
     'fr-breadcrumb__item', { 'fr-breadcrumb__item--current': !href }, className,
@@ -13,7 +14,7 @@ const BreadcrumbItem = ({
   return (
     <li
       className={_className}
-      data-testid="bc-item"
+      {...dataAttributes(remainingProps)}
     >
       <Link
         current={!href && !asLink}

@@ -3,6 +3,7 @@
 exports[`<Link /> renders correctly 1`] = `
 <a
   className="ds-fr--inline"
+  data-testid="link"
   href="/page"
   target="_self"
   title="title"

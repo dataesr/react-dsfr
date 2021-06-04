@@ -1,10 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 const TabButton = ({
-  className, index, activeTab, icon, iconPosition, label, setActiveTab,
+  className, index, activeTab, icon, iconPosition, label, setActiveTab, ...remainingProps
 }) => {
   const _tab = (
     <li
@@ -27,13 +28,15 @@ const TabButton = ({
     </li>
   );
   return (
-    <>
+    <div
+      {...dataAttributes(remainingProps)}
+    >
       {icon ? (
         <Icon name={icon} size="lg" iconPosition={icon && 'left'}>
           {_tab}
         </Icon>
       ) : _tab}
-    </>
+    </div>
   );
 };
 

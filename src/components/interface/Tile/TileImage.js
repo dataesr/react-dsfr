@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
@@ -11,8 +12,12 @@ const TileImage = ({
   src,
   alt,
   className,
+  ...remainingProps
 }) => (
-  <div className={classNames('fr-tile__img', className)}>
+  <div
+    className={classNames('fr-tile__img', className)}
+    {...dataAttributes(remainingProps)}
+  >
     <img
       src={src}
       title={title}

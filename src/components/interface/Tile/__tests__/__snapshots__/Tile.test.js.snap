@@ -3,9 +3,11 @@
 exports[`<Tile /> renders correctly 1`] = `
 <div
   className="fr-tile fr-enlarge-link fr-tile--horizontal my-class"
+  data-testid="tile"
 >
   <div
     className="fr-tile__body"
+    data-test-id="tilebody"
   >
     <p
       className="fr-tile__title"
@@ -27,6 +29,7 @@ exports[`<Tile /> renders correctly 1`] = `
   </div>
   <div
     className="fr-tile__img"
+    data-id="titleimage"
   >
     <img
       alt=""

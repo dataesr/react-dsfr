@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 const CardTitle = ({
-  href, children, as, anchorAs, className,
+  href, children, as, anchorAs, className, ...remainingProps
 }) => {
   const Tag = `${as}`;
   const AnchorTag = `${anchorAs}`;
   return (
-    <Tag className={classNames('fr-card__title', className)}>
+    <Tag
+      className={classNames('fr-card__title', className)}
+      {...dataAttributes(remainingProps)}
+    >
       <AnchorTag href={href} className="fr-card__link">{children}</AnchorTag>
     </Tag>
   );

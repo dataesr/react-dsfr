@@ -16,10 +16,10 @@ import Logo from '../../Logo';
 describe('<Footer />', () => {
   it('should render Footer properly', () => {
     render(
-      <Footer>
-        <FooterTop>
-          <FooterTopCategory title="Nom de la catégorie">
-            <FooterLink href="/">Lien de navigation</FooterLink>
+      <Footer data-testid="footer">
+        <FooterTop data-testid="footertop">
+          <FooterTopCategory title="Nom de la catégorie" data-testid="footertopcategory">
+            <FooterLink href="/" data-testid="footerlink">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
             <FooterLink href="/">Lien de navigation</FooterLink>
@@ -53,20 +53,21 @@ describe('<Footer />', () => {
         </FooterTop>
         <FooterBody
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          data-testid="footerbody"
         >
-          <Logo splitCharacter={10}>
+          <Logo splitCharacter={10} data-testid="footerlogo">
             Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
           </Logo>
         </FooterBody>
-        <FooterPartners>
-          <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
-          <FooterPartnersLogo isMain href="/" imageSrc="img/logo1" imageAlt="Logo 1" />
+        <FooterPartners data-testid="footerpartners">
+          <FooterPartnersTitle data-testid="title">Nos partenaires</FooterPartnersTitle>
+          <FooterPartnersLogo isMain href="/" imageSrc="img/logo1" imageAlt="Logo 1" data-testid="logo" />
           <FooterPartnersLogo href="/" imageSrc="img/logo2" imageAlt="Logo 2" />
           <FooterPartnersLogo href="/" imageSrc="img/logo3" imageAlt="Logo 3" />
           <FooterPartnersLogo href="/" imageSrc="img/logo4" imageAlt="Logo 4" />
         </FooterPartners>
-        <FooterBottom>
-          <FooterLink href="/">Plan du site</FooterLink>
+        <FooterBottom data-testid="bottom">
+          <FooterLink href="/" data-testid="link">Plan du site</FooterLink>
           <FooterLink href="/">Accessibilité: non/partiellement/totalement conforme</FooterLink>
           <FooterLink href="/">Mentions légales</FooterLink>
           <FooterLink href="/">Données personnelles</FooterLink>

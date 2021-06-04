@@ -5,6 +5,7 @@ import React, {
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import TabButton from './TabButton';
 
@@ -15,7 +16,7 @@ import './tabs.css';
  * @visibleName Tabs
  */
 const Tabs = ({
-  className, children, defaultActiveTab, scheme,
+  className, children, defaultActiveTab, scheme, ...remainingProps
 }) => {
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
   const [contentTabHeight, setHeight] = useState(() => 500);
@@ -30,7 +31,11 @@ const Tabs = ({
 
   const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });
   return (
-    <div className={_className} style={{ height: contentTabHeight }}>
+    <div
+      className={_className}
+      style={{ height: contentTabHeight }}
+      {...dataAttributes(remainingProps)}
+    >
       <ul className="fr-tabs__list" role="tablist">
         {tabsPanel.map((element, index) => (
           <TabButton

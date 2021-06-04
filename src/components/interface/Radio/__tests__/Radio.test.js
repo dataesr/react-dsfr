@@ -17,6 +17,7 @@ describe('<Radio />', () => {
         <Radio
           label="Label de la radio"
           value="value"
+          data-testid="radio"
         />,
       )
       .toJSON();
@@ -28,6 +29,7 @@ describe('<Radio />', () => {
       <Radio
         label="Label de la radio"
         value="value"
+        data-testid="radio"
       />,
     );
     const search = screen.getByTestId('radio');

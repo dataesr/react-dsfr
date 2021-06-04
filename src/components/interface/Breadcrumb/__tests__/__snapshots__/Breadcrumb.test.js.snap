@@ -4,7 +4,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
 <nav
   aria-label="Fil d'ariane"
   class="fr-breadcrumb"
-  data-testid="bc-nav"
+  data-testid="breadcrumb"
   style="max-height: calc(0px + 1rem);"
 >
   <button
@@ -24,7 +24,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
     >
       <li
         class="fr-breadcrumb__item"
-        data-testid="bc-item"
+        data-testid="bcitem"
       >
         <a
           class="fr-breadcrumb__link"
@@ -36,7 +36,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       </li>
       <li
         class="fr-breadcrumb__item"
-        data-testid="bc-item"
+        data-testid="bcitem"
       >
         <a
           class="fr-breadcrumb__link"
@@ -48,7 +48,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       </li>
       <li
         class="fr-breadcrumb__item fr-breadcrumb__item--current"
-        data-testid="bc-item"
+        data-testid="bcitem"
       >
         <a
           aria-current="page"

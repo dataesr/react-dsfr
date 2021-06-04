@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
+import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const MegaNavItem = ({
-  children, title, linkLabel, link, current, as, description, closeButtonLabel,
+  children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
 }) => {
   const Tag = `${as}`;
   const [isExpanded, setIsExpanded] = useState(false);
@@ -34,7 +35,10 @@ const MegaNavItem = ({
   const item = expandedItem[isExpanded];
 
   return (
-    <li className="fr-nav__item">
+    <li
+      className="fr-nav__item"
+      {...dataAttributes(remainingProps)}
+    >
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"

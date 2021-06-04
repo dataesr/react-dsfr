@@ -5,7 +5,7 @@ import { Table, SimpleTable } from '..';
 describe('<Table />', () => {
   it('renders Table properly', () => {
     render(
-      <Table bordered captionPosition="bottom" caption="Mon super tableau">
+      <Table bordered captionPosition="bottom" caption="Mon super tableau" data-testid="table">
         <thead>
           <tr>
             <th scope="col">Titre</th>

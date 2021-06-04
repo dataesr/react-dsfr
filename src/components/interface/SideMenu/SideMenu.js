@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './sidemenu.css';
 
@@ -12,7 +13,7 @@ import './sidemenu.css';
  * @visibleName SideMenu
  */
 const SideMenu = ({
-  children, title, buttonLabel, className,
+  children, title, buttonLabel, className, ...remainingProps
 }) => {
   const itemID = uuidv4();
   const [isExpanded, setExpanded] = useState(false);
@@ -22,7 +23,7 @@ const SideMenu = ({
     <nav
       className={classNames('fr-sidemenu', className)}
       aria-label="Menu latéral"
-      data-testid="sidemenu"
+      {...dataAttributes(remainingProps)}
     >
       <div className="fr-sidemenu__inner">
         <button

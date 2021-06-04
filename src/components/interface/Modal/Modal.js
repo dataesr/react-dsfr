@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './modal.css';
 
@@ -23,6 +24,7 @@ const ModalDialog = ({
   size,
   className,
   isOpen,
+  ...remainingProps
 }) => {
   const modalRef = useRef();
   const [openedModal, setOpenedModal] = useState(() => isOpen);
@@ -80,7 +82,7 @@ const ModalDialog = ({
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
         onClick={(e) => handleOverlayClick(e)}
-        data-testid="modal"
+        {...dataAttributes(remainingProps)}
       >
         <div className="fr-container--fluid fr-container-md">
           <div className="fr-grid-row fr-grid-row--center closing-overlay">
@@ -108,9 +110,17 @@ const ModalDialog = ({
 };
 
 const Modal = ({
-  size, hide, children, isOpen, className,
+  size, hide, children, isOpen, className, ...remainingProps
 }) => (isOpen) && (
-  <ModalDialog className={className} size={size} hide={hide}>{children}</ModalDialog>
+  <ModalDialog
+    className={className}
+    size={size}
+    hide={hide}
+    {...dataAttributes(remainingProps)}
+  >
+    {children}
+
+  </ModalDialog>
 );
 
 Modal.propTypes = {

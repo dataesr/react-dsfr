@@ -3,7 +3,7 @@
 exports[`<SearchBar /> renders SearchBar properly 1`] = `
 <form
   class="fr-search-bar"
-  data-testid="search-bar"
+  data-testid="searchbar"
   role="search"
 >
   <label
@@ -33,7 +33,7 @@ exports[`<SearchBar /> renders SearchBar properly 1`] = `
 exports[`<SearchBar /> renders large SearchBar properly 1`] = `
 <form
   class="fr-search-bar fr-search-bar--lg"
-  data-testid="search-bar"
+  data-testid="searchbar"
   role="search"
 >
   <label

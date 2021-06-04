@@ -7,6 +7,7 @@ exports[`<Card /> renders Card properly 1`] = `
 >
   <div
     class="fr-card__img"
+    data-testid="cardimage"
   >
     <img
       alt="alternative"
@@ -18,11 +19,13 @@ exports[`<Card /> renders Card properly 1`] = `
   >
     <p
       class="fr-card__detail"
+      data-testid="carddetail"
     >
       Détail
     </p>
     <p
       class="fr-card__title"
+      data-testid="cardtitle"
     >
       <a
         class="fr-card__link"
@@ -33,6 +36,7 @@ exports[`<Card /> renders Card properly 1`] = `
     </p>
     <p
       class="fr-card__desc"
+      data-testid="carddescription"
     >
       Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
     </p>

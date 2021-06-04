@@ -20,6 +20,7 @@ describe('<Toggle />', () => {
         description="Activez-moi!"
         hasSeparator
         hasLabelLeft
+        data-testid="toggle"
       />,
     );
     const toggle = screen.getByTestId('toggle');

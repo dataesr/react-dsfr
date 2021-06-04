@@ -4,9 +4,9 @@ import Pagination from '..';
 describe('<Pagination />', () => {
   it('should render pagination properly', () => {
     render(
-      <Pagination buildURL={(page) => `page${page}`} currentPage={8} pageCount={15} />,
+      <Pagination buildURL={(page) => `page${page}`} currentPage={8} pageCount={15} data-testid="pagination" />,
     );
-    const pagination = screen.getByTestId('pagination-nav');
+    const pagination = screen.getByTestId('pagination');
     expect(pagination.className).toBe('fr-pagination');
     const pages = screen.getByRole('list');
     const { getAllByRole } = within(pages);

@@ -1,10 +1,10 @@
-import Col from './components/foundation/Grid/Col';
-import Row from './components/foundation/Grid/Row';
-import Container from './components/foundation/Grid/Container';
+import Col from './components/foundation/grid/Col';
+import Row from './components/foundation/grid/Row';
+import Container from './components/foundation/grid/Container';
 import Icon from './components/foundation/icon/index';
-import Text from './components/foundation/Typography/Text/index';
-import Title from './components/foundation/Typography/Title/index';
-import TitleDisplay from './components/foundation/Typography/TitleDisplay/index';
+import Text from './components/foundation/typography/Text/index';
+import Title from './components/foundation/typography/Title/index';
+import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import Button from './components/interface/Button/index';

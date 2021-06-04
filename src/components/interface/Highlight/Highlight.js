@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './highlights.css';
 
@@ -10,7 +11,7 @@ import './highlights.css';
  * @visibleName Highlight
  */
 const Highlight = ({
-  scheme, size, children, className,
+  scheme, size, children, className, ...remainingProps
 }) => {
   const _className = classNames('fr-highlight', {
     [`fr-highlight--scheme-${scheme}`]: scheme,
@@ -19,7 +20,7 @@ const Highlight = ({
   return (
     <div
       className={_className}
-      data-testid="highlight"
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </div>

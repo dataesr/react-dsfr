@@ -13,11 +13,12 @@ exports[`<Tag /> should renders Tag properly 1`] = `
 exports[`<Tag /> should renders TagGroup properly 1`] = `
 <ul
   class="fr-tags-group"
-  data-testid="tag-group"
+  data-testid="taggroup"
 >
   <li>
     <span
       class="fr-tag fr-tag--sm"
+      data-testid="tag1"
     >
       tag-test
     </span>
@@ -25,6 +26,7 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   <li>
     <span
       class="fr-tag fr-tag--sm"
+      data-test-id="tag2"
     >
       tag-test
     </span>
@@ -32,6 +34,7 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   <li>
     <span
       class="fr-tag fr-tag--sm"
+      data-test--id="tag3"
     >
       tag-test
     </span>
@@ -39,6 +42,7 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   <li>
     <span
       class="fr-tag fr-tag--sm"
+      data-test="tag4"
     >
       tag-test
     </span>

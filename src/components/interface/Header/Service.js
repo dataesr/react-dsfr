@@ -3,11 +3,15 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
 const Service = ({
-  title, description, className, link, asLink,
+  title, description, className, link, asLink, ...remainingProps
 }) => (
-  <div className={classNames(className, 'fr-header__service')}>
+  <div
+    className={classNames(className, 'fr-header__service')}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       className="fr-header__service-title"

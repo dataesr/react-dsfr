@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './selects.css';
 
@@ -21,6 +22,7 @@ const Select = ({
   onChange,
   options,
   selected,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-select', {
     [`fr-select--${messageType}`]: messageType,
@@ -32,7 +34,10 @@ const Select = ({
   }, className);
 
   return (
-    <div className={_classNameWrapper}>
+    <div
+      className={_classNameWrapper}
+      {...dataAttributes(remainingProps)}
+    >
       {
       label && (
         <label className="fr-label" htmlFor={selectId} aria-describedby={messageId}>

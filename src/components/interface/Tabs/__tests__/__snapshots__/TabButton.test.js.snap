@@ -1,19 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TabButton /> should render TabButton properly 1`] = `
-<li
-  aria-controls="fr-tabpanel-0"
-  aria-selected="true"
-  className="my-class"
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  role="tab"
-  tabIndex="0"
+<div
+  data-testid="tabbutton"
 >
-  <div
-    className="fr-tabs__tab"
+  <li
+    aria-controls="fr-tabpanel-0"
+    aria-selected="true"
+    className="my-class"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex="0"
   >
-    Label #1
-  </div>
-</li>
+    <div
+      className="fr-tabs__tab"
+    >
+      Label #1
+    </div>
+  </li>
+</div>
 `;

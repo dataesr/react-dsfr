@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
+import dataAttributes from '../../../utils/data-attributes';
 
 import './callouts.css';
 
@@ -10,7 +11,7 @@ import './callouts.css';
  * @visibleName Callout
  */
 const Callout = ({
-  scheme, hasInfoIcon, children, className,
+  scheme, hasInfoIcon, children, className, ...remainingProps
 }) => {
   const _className = classNames('fr-callout', className, {
     'fr-fi-information-line': hasInfoIcon,
@@ -19,7 +20,7 @@ const Callout = ({
   return (
     <div
       className={_className}
-      data-testid="callout"
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </div>

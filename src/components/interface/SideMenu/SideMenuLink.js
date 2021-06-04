@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const SideMenuLink = ({
-  children, href, className, asLink,
+  children, href, className, asLink, ...remainingProps
 }) => (
-  <li className={classNames('fr-sidemenu__item', className)}>
+  <li
+    className={classNames('fr-sidemenu__item', className)}
+    {...dataAttributes(remainingProps)}
+  >
     <Link
       as={asLink}
       className="fr-sidemenu__link"

@@ -2,13 +2,19 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from '../Link/index';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterBody = ({ children, description, className }) => {
+const FooterBody = ({
+  children, description, className, ...remainingProps
+}) => {
   const Logo = Children.toArray(children).filter(
     (child) => child.type.name === 'Logo',
   );
   return (
-    <div className={classNames('fr-footer__body', className)}>
+    <div
+      className={classNames('fr-footer__body', className)}
+      {...dataAttributes(remainingProps)}
+    >
       <div className="fr-footer__brand">{Logo}</div>
       <div className="fr-footer__content">
         <p className="fr-footer__content-desc">{description}</p>

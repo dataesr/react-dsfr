@@ -2,10 +2,11 @@ import React, { useState, useEffect, Children } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const NavItem = ({
-  children, title, link, current, asLink,
+  children, title, link, current, asLink, ...remainingProps
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
@@ -34,7 +35,10 @@ const NavItem = ({
   const item = expandedItem[isExpanded];
   const subItems = Children.toArray(children).filter((child) => !!child);
   return subItems && subItems.length > 0 ? (
-    <li className="fr-nav__item">
+    <li
+      className="fr-nav__item"
+      {...dataAttributes(remainingProps)}
+    >
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"

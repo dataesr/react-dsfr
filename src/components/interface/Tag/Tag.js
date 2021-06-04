@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import Icon from '../../foundation/icon/index';
 
@@ -26,6 +27,7 @@ const Tag = ({
   iconPosition,
   className,
   scheme,
+  ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
   const _className = classNames('fr-tag', {
@@ -41,6 +43,7 @@ const Tag = ({
       href={href || undefined}
       target={target || undefined}
       rel={target === '_blank' ? 'noopener noreferer' : undefined}
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </HtmlTag>

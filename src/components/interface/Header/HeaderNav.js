@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, children, closeButtonLabel,
+  className, children, closeButtonLabel, ...remainingProps
 }) => {
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
@@ -14,7 +15,10 @@ const HeaderNav = ({
     'fr-modal--opened': isOpenNav,
   });
   return (
-    <div className={_className}>
+    <div
+      className={_className}
+      {...dataAttributes(remainingProps)}
+    >
       <div className="fr-container">
         <button
           onClick={() => onOpenNav(false)}

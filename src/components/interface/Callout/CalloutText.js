@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const CalloutText = ({ children, className }) => (
-  <p className={classNames('fr-callout__text', className)}>
+const CalloutText = ({ children, className, ...remainingProps }) => (
+  <p
+    className={classNames('fr-callout__text', className)}
+    {...dataAttributes(remainingProps)}
+  >
     {children}
   </p>
 );

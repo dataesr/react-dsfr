@@ -17,6 +17,7 @@ describe('<Checkbox />', () => {
         <Checkbox
           label="Label de la checkbox"
           value="value"
+          data-testid="checkbox"
         />,
       )
       .toJSON();
@@ -28,6 +29,7 @@ describe('<Checkbox />', () => {
       <Checkbox
         label="Label de la checkbox"
         value="value"
+        data-testid="checkbox"
       />,
     );
     const search = screen.getByTestId('checkbox');

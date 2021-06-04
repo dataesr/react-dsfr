@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 
-const FooterCopy = ({ children, className }) => (
-  <div className={classNames('fr-footer__bottom-copy', className)}>
+const FooterCopy = ({ children, className, ...remainingProps }) => (
+  <div
+    className={classNames('fr-footer__bottom-copy', className)}
+    {...dataAttributes(remainingProps)}
+  >
     {children}
   </div>
 );

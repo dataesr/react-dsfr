@@ -4,7 +4,7 @@ import Logo from '..';
 describe('<Logo />', () => {
   it('should render Logo properly', () => {
     render(
-      <Logo>
+      <Logo data-testid="logo">
         Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
       </Logo>,
     );

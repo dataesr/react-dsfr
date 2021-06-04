@@ -27,6 +27,7 @@ describe('<Tile />', () => {
         <Tile
           horizontal={initialProps.horizontal}
           className={initialProps.className}
+          data-testid="tile"
         >
           <TileBody
             title={initialProps.title}
@@ -34,10 +35,12 @@ describe('<Tile />', () => {
             description={initialProps.description}
             linkTitle={initialProps.linkTitle}
             linkTarget={initialProps.linkTarget}
+            data-test-id="tilebody"
           />
           <TileImage
             alt={initialProps.alt}
             src={initialProps.src}
+            data-id="titleimage"
           />
         </Tile>,
       )

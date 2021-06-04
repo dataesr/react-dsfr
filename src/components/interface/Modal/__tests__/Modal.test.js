@@ -8,11 +8,11 @@ describe('<Modal />', () => {
   it('should render modal properly', () => {
     const hide = jest.fn();
     render(
-      <Modal isOpen hide={hide}>
-        <ModalClose title="Close the modal window">Close</ModalClose>
-        <ModalTitle icon="ri-arrow-right-line">I am a title</ModalTitle>
-        <ModalContent>blah blah</ModalContent>
-        <ModalFooter>
+      <Modal isOpen hide={hide} data-testid="modal">
+        <ModalClose title="Close the modal window" data-testid="modalclose">Close</ModalClose>
+        <ModalTitle icon="ri-arrow-right-line" data-testid="modaltitle">I am a title</ModalTitle>
+        <ModalContent data-testid="modalcontent">blah blah</ModalContent>
+        <ModalFooter data-testid="modalfooter">
           blah
         </ModalFooter>
       </Modal>,
@@ -21,7 +21,7 @@ describe('<Modal />', () => {
     const title = screen.getByText('I am a title');
     const content = screen.getByText('blah blah');
     const footer = screen.getByText('blah');
-    const close = screen.getByTestId('modal-close');
+    const close = screen.getByTestId('modalclose');
     expect(modal).toBeInTheDocument();
     expect(title).toBeInTheDocument();
     expect(content).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe('<Modal />', () => {
     jest.useFakeTimers();
     const hide = jest.fn();
     render(
-      <Modal isOpen hide={hide}>
+      <Modal isOpen hide={hide} data-testid="modal">
         <ModalClose title="Close the modal window">Close</ModalClose>
         <ModalTitle icon="ri-arrow-right-line">I am a title</ModalTitle>
         <ModalContent>blah blah</ModalContent>

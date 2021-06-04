@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 import { v4 as uuidv4 } from 'uuid';
 
+import dataAttributes from '../../../utils/data-attributes';
+
 const MegaNavSubItem = ({
-  children, title, link,
+  children, title, link, ...remainingProps
 }) => {
   const childs = Children.toArray(children).map((child) => cloneElement(child, { className: 'fr-nav__link' }));
   return (
-    <div className="fr-col-12 fr-col-lg-3">
+    <div
+      className="fr-col-12 fr-col-lg-3"
+      {...dataAttributes(remainingProps)}
+    >
       <h5 className="fr-mega-menu__category">
         <a className="fr-nav__link" href={link} target="_self">{title}</a>
       </h5>

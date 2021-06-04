@@ -40,6 +40,7 @@ describe('<Tab />', () => {
           activeTab={initProps.activeTab}
           iconPosition={initProps.iconPosition}
           setHeight={initProps.setHeight}
+          data-testid="tab"
         >
           {initProps.children}
         </Tab>,

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 import '../../../style.css';
@@ -27,6 +28,7 @@ const Button = forwardRef((props, ref) => {
     onClick,
     children,
     className,
+    ...remainingProps
   } = props;
   const _className = classNames('fr-btn',
     `fr-btn--${size}`,
@@ -43,6 +45,7 @@ const Button = forwardRef((props, ref) => {
       className={_className}
       title={title}
       disabled={disabled}
+      {...dataAttributes(remainingProps)}
     >
       {children}
     </button>
