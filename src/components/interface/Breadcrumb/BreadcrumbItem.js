@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
+import typeValidation from '../../../utils/type-validation';
 
 const BreadcrumbItem = ({
   className, children, href, asLink, ...remainingProps
@@ -29,12 +30,15 @@ const BreadcrumbItem = ({
 };
 
 BreadcrumbItem.defaultProps = {
+  __TYPE: 'BreadcrumbItem',
   className: '',
   href: '',
   asLink: null,
 };
 
 BreadcrumbItem.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('BreadcrumbItem'),
   children: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,

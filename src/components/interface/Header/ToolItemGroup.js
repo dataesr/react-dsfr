@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import { createPortal } from 'react-dom';
+
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
+
 import HeaderContext from './headerContext';
 
 const ToolItemGroup = ({ children, className, ...remainingProps }) => {
@@ -27,10 +29,13 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
   );
 };
 ToolItemGroup.defaultProps = {
+  __TYPE: 'ToolItemGroup',
   className: '',
 };
 
 ToolItemGroup.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('ToolItemGroup'),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

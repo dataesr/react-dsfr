@@ -12,7 +12,7 @@ const Tool = ({
   const searchBar = deepFilter(children, (child) => child.props && !!child.props.onSearch);
   let toolItemGroup = null;
   deepForEach(children, (child) => {
-    if (child.type && child.type.name === 'ToolItemGroup') toolItemGroup = child;
+    if (child.type && child.props.__TYPE === 'ToolItemGroup') toolItemGroup = child;
   });
   const {
     isOpenSearch, onOpenSearch,

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const CardDescription = ({ children, className, ...remainingProps }) => (
   <p
@@ -13,6 +14,8 @@ const CardDescription = ({ children, className, ...remainingProps }) => (
   </p>
 );
 CardDescription.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('CardDescription'),
   children: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -21,6 +24,7 @@ CardDescription.propTypes = {
   ]),
 };
 CardDescription.defaultProps = {
+  __TYPE: 'CardDescription',
   className: '',
 };
 

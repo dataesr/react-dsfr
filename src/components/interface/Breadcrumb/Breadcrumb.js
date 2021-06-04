@@ -25,7 +25,7 @@ const Breadcrumb = ({
   const [open, setOpen] = useState(true);
   const [clicked, setClicked] = useState(false);
   const content = Children.toArray(children).filter(
-    (child) => child.type.name === 'BreadcrumbItem',
+    (child) => child.props.__TYPE === 'BreadcrumbItem',
   );
   const _className = classNames('fr-breadcrumb', className);
   const handleOpenBreadcrumb = () => {

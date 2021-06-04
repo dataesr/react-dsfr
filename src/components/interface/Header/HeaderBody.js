@@ -8,9 +8,9 @@ import dataAttributes from '../../../utils/data-attributes';
 const HeaderBody = ({
   children, className, closeButtonLabel, ...remainingProps
 }) => {
-  const headerBodyChildren = deepFilter(children, (child) => child.type && (child.type.name !== 'Logo' && child.type.name !== 'Service'));
-  const logo = deepFilter(children, (child) => child.type && child.type.name === 'Logo');
-  const service = deepFilter(children, (child) => child.type && child.type.name === 'Service');
+  const headerBodyChildren = deepFilter(children, (child) => child.type && (child.props.__TYPE !== 'Logo' && child.props.__TYPE !== 'Service'));
+  const logo = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Logo');
+  const service = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Service');
 
   const context = useContext(HeaderContext);
   const {

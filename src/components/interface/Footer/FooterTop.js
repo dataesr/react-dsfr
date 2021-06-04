@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 const FooterTop = ({
   children, align, className, ...remainingProps
@@ -18,6 +19,8 @@ const FooterTop = ({
   </div>
 );
 FooterTop.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('FooterTop'),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -30,6 +33,7 @@ FooterTop.propTypes = {
   ]),
 };
 FooterTop.defaultProps = {
+  __TYPE: 'FooterTop',
   align: 'center',
   className: '',
 };
