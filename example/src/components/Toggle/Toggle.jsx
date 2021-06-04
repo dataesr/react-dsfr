@@ -7,9 +7,7 @@ import {
 const ToggleExample = () => (
   <Col>
     <Toggle
-      onChange={() => {
-        console.log('==== Change Toggle ==== ');
-      }}
+      onChange={() => { }}
       isDisabled
       isChecked
       label="Toggle Label"
