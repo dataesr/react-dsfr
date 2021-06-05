@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@dataesr/react-dsfr';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import HeaderExample from './components/Header/Header';
 import FooterExample from './components/Footer/Footer';
@@ -26,6 +26,8 @@ import ButtonExample from './components/Button/Button';
 import ToggleExample from './components/Toggle/Toggle';
 import AccordionExample from './components/Accordion/Accordion';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
+import Page1 from './Page-1';
+import Page2 from './Page-2';
 
 const App = () => {
   const elements = [
@@ -55,11 +57,19 @@ const App = () => {
   return (
     <BrowserRouter>
       <HeaderExample />
-      <Container role="main">
-        {elements.map((element) => (
-          <Element title={element.title}>{element.component}</Element>
-        ))}
-      </Container>
+      <Switch>
+        <Route exact path="/page-1">
+          <Page1 />
+        </Route>
+        <Route exact path="/page-2">
+          <Page2 />
+        </Route>
+        <Container role="main">
+          {elements.map((element) => (
+            <Element key={element.title} title={element.title}>{element.component}</Element>
+          ))}
+        </Container>
+      </Switch>
       <FooterExample />
     </BrowserRouter>
   );

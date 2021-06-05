@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, cloneElement, Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, children, closeButtonLabel, ...remainingProps
+  className, children, closeButtonLabel, path, ...remainingProps
 }) => {
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
@@ -15,6 +16,9 @@ const HeaderNav = ({
   const _className = classNames(className, 'fr-header__menu fr-modal', {
     'fr-modal--opened': isOpenNav,
   });
+  const childs = Children.toArray(children).map(
+    (child) => cloneElement(child, { key: uuidv4(), path: path || undefined }),
+  );
   return (
     <div
       className={_className}
@@ -41,9 +45,11 @@ const HeaderNav = ({
           role="navigation"
           aria-label="Menu principal"
         >
+          {children && (
           <ul className="fr-nav__list">
-            {children}
+            {childs}
           </ul>
+          )}
         </nav>
       </div>
     </div>
@@ -53,6 +59,7 @@ const HeaderNav = ({
 HeaderNav.defaultProps = {
   __TYPE: 'HeaderNav',
   className: '',
+  path: '',
   closeButtonLabel: 'Fermer',
 };
 
@@ -60,6 +67,7 @@ HeaderNav.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('HeaderNav'),
   closeButtonLabel: PropTypes.string,
+  path: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

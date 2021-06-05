@@ -1,16 +1,20 @@
-import React, { useState, useEffect, Children } from 'react';
+import React, {
+  useState, useEffect, Children, useContext, useRef,
+} from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
+import HeaderContext from './headerContext';
 
 const NavItem = ({
-  children, title, link, current, asLink, ...remainingProps
+  children, title, link, path, current, asLink, ...remainingProps
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
-
+  const { currentPath, setCurrentPath } = useContext(HeaderContext);
+  const itemRef = useRef(null);
   const expandedItem = {
     false: {
       class: 'fr-menu fr-collapse',
@@ -30,44 +34,49 @@ const NavItem = ({
     if (menuHeight) {
       setCollapse(menuHeight.getBoundingClientRect().height);
     }
-  }, [collapse]);
+    if (path && path !== currentPath) {
+      setCurrentPath(path);
+    }
+  }, [path, setCurrentPath, currentPath, collapse]);
 
   const item = expandedItem[isExpanded];
   const subItems = Children.toArray(children).filter((child) => !!child);
-  return subItems && subItems.length > 0 ? (
-    <li
-      className="fr-nav__item"
-      {...dataAttributes(remainingProps)}
-    >
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        type="button"
-        aria-expanded={item.ariaExpanded}
-        aria-current={(current && 'page') || undefined}
-        className="fr-nav__btn"
-        aria-label="ouvrir la navigation"
+  return (
+    subItems && subItems.length > 0 ? (
+      <li
+        className="fr-nav__item"
+        {...dataAttributes(remainingProps)}
       >
-        {title}
-      </button>
-      <div
-        id={`fr-nav-subitem-${uuidv4()}`}
-        className={item.class}
-        style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
-      >
-        <ul className="fr-menu__list">{children}</ul>
-      </div>
-    </li>
-  ) : (
-    <li className="fr-nav__item">
-      <Link
-        as={asLink}
-        className="fr-nav__link"
-        href={link}
-        current={current}
-      >
-        {title}
-      </Link>
-    </li>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          type="button"
+          aria-expanded={item.ariaExpanded}
+          aria-current={(current && 'page') || undefined}
+          className="fr-nav__btn"
+          aria-label="ouvrir la navigation"
+        >
+          {title}
+        </button>
+        <div
+          id={`fr-nav-subitem-${uuidv4()}`}
+          className={item.class}
+          style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
+        >
+          <ul className="fr-menu__list">{children}</ul>
+        </div>
+      </li>
+    ) : (
+      <li ref={itemRef} className="fr-nav__item">
+        <Link
+          as={asLink}
+          className="fr-nav__link"
+          href={link}
+          current={current}
+        >
+          {title}
+        </Link>
+      </li>
+    )
   );
 };
 
@@ -75,6 +84,7 @@ NavItem.defaultProps = {
   link: '',
   children: '',
   current: false,
+  path: '',
   asLink: null,
 };
 
@@ -87,6 +97,7 @@ NavItem.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
   current: PropTypes.bool,
+  path: PropTypes.string,
   asLink: PropTypes.element,
 };
 

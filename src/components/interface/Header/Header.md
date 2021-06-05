@@ -2,7 +2,7 @@
 
 ### Header avec barre de recherche, raccourcis outils et navigation
 
-```jsx
+```
 import {
     Header,
     HeaderBody,
@@ -70,4 +70,14 @@ import Logo from '../Logo';
         <NavItem title='nav item #4' link='/' current/>
     </HeaderNav>
 </Header>
+```
+
+> Le composant Navigation peut être utilisé avec le package react-router-dom
+```markup
+<HeaderNav path={path}>
+    <NavItem
+      title="Countries"
+      asLink={<RouterLink to="/myCountries" />}
+    />
+</HeaderNav>
 ```
