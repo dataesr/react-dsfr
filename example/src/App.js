@@ -66,7 +66,7 @@ const App = () => {
         </Route>
         <Container role="main">
           {elements.map((element) => (
-            <Element title={element.title}>{element.component}</Element>
+            <Element key={element.title} title={element.title}>{element.component}</Element>
           ))}
         </Container>
       </Switch>

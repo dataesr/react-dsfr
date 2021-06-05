@@ -13,7 +13,12 @@ const Element = ({ title, children }) => (
 );
 
 Element.propTypes = {
-  children: React.Children.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+    PropTypes.func,
+  ]).isRequired,
   title: PropTypes.string.isRequired,
 };
 

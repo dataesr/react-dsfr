@@ -28,6 +28,8 @@ $ yarn add @dataesr/react-dsfr
 
 ### Styleguide
 
+Styleguide gives you access to the list of props needed and a working example for each component available in the library. To launch it on your local machine:
+
 ```bash
 $ yarn guide
 ```
@@ -54,6 +56,8 @@ $ yarn start
 #### Example page
 
 > A playground to test components
+
+An example page is available containing all components. To launch it on your local machine, first launch watcher of the project (see above) and then:
 
 ```bash
 $ cd example/

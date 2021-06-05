@@ -1,4 +1,4 @@
-import React, { useContext, cloneElement } from 'react';
+import React, { useContext, cloneElement, Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
@@ -16,7 +16,9 @@ const HeaderNav = ({
   const _className = classNames(className, 'fr-header__menu fr-modal', {
     'fr-modal--opened': isOpenNav,
   });
-
+  const childs = Children.toArray(children).map(
+    (child) => cloneElement(child, { key: uuidv4(), path: path || undefined }),
+  );
   return (
     <div
       className={_className}
@@ -43,9 +45,11 @@ const HeaderNav = ({
           role="navigation"
           aria-label="Menu principal"
         >
+          {children && (
           <ul className="fr-nav__list">
-            {children.map((child) => cloneElement(child, { key: uuidv4(), path }))}
+            {childs}
           </ul>
+          )}
         </nav>
       </div>
     </div>
