@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 import HeaderContext from './headerContext';
 
 const HeaderNav = ({
-  className, children, closeButtonLabel, ...remainingProps
+  className, children, closeButtonLabel, path, ...remainingProps
 }) => {
   const {
     isOpenNav, onOpenNav, isMobile, shortcutClassName,
@@ -15,6 +16,7 @@ const HeaderNav = ({
   const _className = classNames(className, 'fr-header__menu fr-modal', {
     'fr-modal--opened': isOpenNav,
   });
+
   return (
     <div
       className={_className}
@@ -42,7 +44,7 @@ const HeaderNav = ({
           aria-label="Menu principal"
         >
           <ul className="fr-nav__list">
-            {children}
+            {children.map((child) => cloneElement(child, { key: uuidv4(), path }))}
           </ul>
         </nav>
       </div>
@@ -53,6 +55,7 @@ const HeaderNav = ({
 HeaderNav.defaultProps = {
   __TYPE: 'HeaderNav',
   className: '',
+  path: '',
   closeButtonLabel: 'Fermer',
 };
 
@@ -60,6 +63,7 @@ HeaderNav.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('HeaderNav'),
   closeButtonLabel: PropTypes.string,
+  path: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
