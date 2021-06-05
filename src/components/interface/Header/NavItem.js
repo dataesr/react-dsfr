@@ -97,8 +97,11 @@ NavItem.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
   current: PropTypes.bool,
-  path: PropTypes.string,
   asLink: PropTypes.element,
+  /**
+   * @ignore
+   */
+  path: PropTypes.string,
 };
 
 export default NavItem;
