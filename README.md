@@ -44,7 +44,8 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 > [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
-$ yarn build
+$ npm login
+$ npm publish [--tag <tag>] [--access <public|restricted>]
 ```
 
 #### Generate and watch /dist folder containing bundles

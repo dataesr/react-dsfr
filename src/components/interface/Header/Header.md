@@ -73,11 +73,24 @@ import Logo from '../Logo';
 ```
 
 > Le composant Navigation peut être utilisé avec le package react-router-dom
+
 ```markup
+import { Link, useLocation } from 'react-router-dom';
+
+const location = useLocation();
+const [path, setPath] = useState(() => location.pathname || '');
+
+useEffect(() => {
+    if (path !== location.pathname) {
+      setPath(location.pathname);
+    }
+}, [path, setPath, location]);
+
 <HeaderNav path={path}>
     <NavItem
-      title="Countries"
-      asLink={<RouterLink to="/myCountries" />}
+      current={path === '/myPath'}
+      title="Title"
+      asLink={<Link to="/myPath" />}
     />
 </HeaderNav>
 ```
