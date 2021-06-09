@@ -6,6 +6,7 @@ import HeaderExample from './components/Header/Header';
 import FooterExample from './components/Footer/Footer';
 import Element from './Element';
 
+import SummaryExample from './components/Summary/Summary';
 import TileExample from './components/Tile/Tile';
 import TagExample from './components/Tag/Tag';
 import TableExample from './components/Table/Table';
@@ -31,6 +32,7 @@ import Page2 from './Page-2';
 
 const App = () => {
   const elements = [
+    { title: 'Sommaire', component: <SummaryExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Tag', component: <TagExample /> },
     { title: 'Table', component: <TableExample /> },
