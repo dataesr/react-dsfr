@@ -7,7 +7,7 @@ import Title from './components/foundation/typography/Title/index';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
-import Button from './components/interface/Button/index';
+import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
 import {
   Card, CardDescription, CardDetail, CardImage, CardTitle,
@@ -49,6 +49,7 @@ const library = () => ({
   Breadcrumb,
   BreadcrumbItem,
   Button,
+  ButtonGroup,
   Callout,
   CalloutTitle,
   CalloutText,
