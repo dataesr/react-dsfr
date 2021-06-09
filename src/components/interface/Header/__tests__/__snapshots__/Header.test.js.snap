@@ -43,6 +43,14 @@ exports[`<Header /> renders correctly 1`] = `
               </a>
             </div>
             <div
+              className="fr-header__operator"
+            >
+              <img
+                alt="texte alternatif"
+                src="https://fakeimg.pl/145x81/"
+              />
+            </div>
+            <div
               className="fr-header__navbar"
             >
               <button
