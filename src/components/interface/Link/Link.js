@@ -1,9 +1,9 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
-
+import useRouterContext from '../../../hooks/useRouterContext';
 import './links.css';
 
 /**
@@ -13,6 +13,7 @@ import './links.css';
 const Link = ({
   children,
   href,
+  to,
   title,
   target,
   isSimple,
@@ -25,18 +26,19 @@ const Link = ({
   iconPosition,
   ...remainingProps
 }) => {
+  const Router = useRouterContext();
   const _className = classNames(
     className, {
       [`ds-fr--${display}`]: display && icon,
       'fr-link': isSimple,
     },
   );
-
-  const asLink = as ? cloneElement(as, { className: _className, children, 'aria-current': (current && 'page') || undefined }) : null;
+  const Component = (Router && to) ? Router : 'a';
   const _link = (
-    <a
+    <Component
       aria-current={current ? 'page' : undefined}
-      href={href}
+      href={href || undefined}
+      to={to || undefined}
       title={title || undefined}
       target={target}
       rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
@@ -44,19 +46,18 @@ const Link = ({
       {...dataAttributes(remainingProps)}
     >
       {children}
-    </a>
+    </Component>
   );
-  const _element = as ? asLink : _link;
   return icon ? (
     <Icon
       className={classNames({ 'ds-fr--v-top': display && icon })}
       name={icon}
       size={iconSize}
-      iconPosition={_element.props?.children ? iconPosition : 'center'}
+      iconPosition={_link.props?.children ? iconPosition : 'center'}
     >
-      {_element}
+      {_link}
     </Icon>
-  ) : _element;
+  ) : _link;
 };
 
 Link.defaultProps = {
@@ -69,6 +70,7 @@ Link.defaultProps = {
   as: null,
   iconPosition: 'right',
   href: '',
+  to: '',
   children: '',
   display: 'inline',
   iconSize: '1x',
@@ -86,6 +88,7 @@ Link.propTypes = {
     PropTypes.string,
   ]),
   href: PropTypes.string,
+  to: PropTypes.string,
   as: PropTypes.element,
   title: PropTypes.string,
   target: PropTypes.string,
