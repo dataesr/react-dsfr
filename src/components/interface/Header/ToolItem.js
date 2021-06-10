@@ -41,7 +41,7 @@ ToolItem.propTypes = {
     PropTypes.array,
   ]),
   icon: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
   asLink: PropTypes.element,
 };

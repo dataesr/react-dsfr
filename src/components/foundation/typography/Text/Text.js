@@ -32,7 +32,7 @@ Text.propTypes = {
   * If true Spectral is used instead of Marianne.
   */
   alt: PropTypes.bool,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

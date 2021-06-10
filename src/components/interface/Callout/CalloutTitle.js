@@ -18,7 +18,7 @@ const CalloutTitle = ({
 };
 
 CalloutTitle.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   className: PropTypes.oneOfType([
     PropTypes.string,

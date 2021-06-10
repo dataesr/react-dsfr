@@ -85,7 +85,7 @@ Button.propTypes = {
     PropTypes.array,
   ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 export default Button;

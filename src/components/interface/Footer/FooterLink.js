@@ -33,7 +33,7 @@ FooterLink.defaultProps = {
 FooterLink.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('FooterLink'),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   href: PropTypes.string,
   section: PropTypes.oneOf(['bottom', 'top']),
   className: PropTypes.oneOfType([

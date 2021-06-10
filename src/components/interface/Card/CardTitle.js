@@ -37,7 +37,7 @@ CardTitle.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('CardTitle'),
   anchorAs: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
