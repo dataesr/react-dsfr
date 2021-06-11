@@ -1,38 +1,27 @@
-import React, { useState, useEffect } from 'react';
-
+import { useCallback, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
+import useCollapse from '../../../hooks/useCollapse';
+import useOnClickOutside from '../../../hooks/useOnClickOutside';
 
 const MegaNavItem = ({
   children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
 }) => {
   const Tag = `${as}`;
+  const id = uuidv4();
   const [isExpanded, setIsExpanded] = useState(false);
-  const [collapse, setCollapse] = useState('0px');
-
-  const expandedItem = {
-    false: {
-      class: 'fr-mega-menu fr-collapse',
-      stateHeight: null,
-      ariaExpanded: 'false',
-      expanded: false,
-    },
-    true: {
-      class: 'fr-mega-menu fr-collapse fr-collapse--expanded',
-      stateHeight: 'none',
-      ariaExpanded: 'true',
-      expanded: true,
-    },
-  };
-  useEffect(() => {
-    const menuHeight = document.querySelector('.fr-mega-menu');
-    if (menuHeight) {
-      setCollapse(menuHeight.getBoundingClientRect().height);
+  const { item, collapse } = useCollapse(null, isExpanded, 'fr-mega-menu');
+  const expandedRef = useRef(null);
+  const buttonRef = useRef(null);
+  const close = useCallback((e) => {
+    if ((buttonRef?.current !== e.target) && isExpanded) {
+      setIsExpanded(false);
     }
-  }, [collapse]);
-
-  const item = expandedItem[isExpanded];
+  }, [isExpanded]);
+  useOnClickOutside(expandedRef, close);
 
   return (
     <li
@@ -40,9 +29,11 @@ const MegaNavItem = ({
       {...dataAttributes(remainingProps)}
     >
       <button
+        ref={buttonRef}
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
-        aria-expanded={item.ariaExpanded}
+        aria-expanded={isExpanded}
+        aria-controls={id}
         aria-current={current || undefined}
         className="fr-nav__btn"
         aria-label="ouvrir la navigation"
@@ -50,8 +41,10 @@ const MegaNavItem = ({
         {title}
       </button>
       <div
+        ref={expandedRef}
+        id={id}
         className={item.class}
-        style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px`, padding: 0 }}
+        style={{ maxHeight: item.stateHeight, '--collapse': collapse, padding: 0 }}
       >
         <div className="fr-container fr-container--fluid fr-container-lg">
           <button
