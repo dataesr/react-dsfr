@@ -37,6 +37,23 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toBe('fr-card fr-card--horizontal');
+    expect(card.className).toEqual('fr-card fr-card--horizontal fr-enlarge-link');
+  });
+  it('renders Card without enlarge link properly', () => {
+    render(
+      <Card href="/" enlargeLink={false} data-testid="card">
+        <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
+          Qu’est-ce que le Pass Culture et comment l’obtenir ?
+        </CardTitle>
+        <CardDescription>
+          Description texte body small regular consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore…
+        </CardDescription>
+      </Card>,
+    );
+    const card = screen.getByTestId('card');
+    expect(card.className).toEqual('fr-card');
   });
 });
