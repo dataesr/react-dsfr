@@ -18,8 +18,8 @@ import {
   FooterPartnersTitle, FooterTop, FooterTopCategory,
 } from './components/interface/Footer/index';
 import {
-  Header, HeaderNav, HeaderBody, NavItem, NavSubItem, MegaNavItem, MegaNavSubItem, Service, Tool,
-  ToolItem, ToolItemGroup,
+  Header, HeaderOperator, HeaderNav, HeaderBody, NavItem, NavSubItem,
+  MegaNavItem, MegaNavSubItem, Service, Tool, ToolItem, ToolItemGroup,
 } from './components/interface/Header/index';
 import Highlight from './components/interface/Highlight/index';
 import Link from './components/interface/Link/index';
@@ -88,6 +88,7 @@ const library = () => ({
   ToolItemGroup,
   Tool,
   Header,
+  HeaderOperator,
   HeaderBody,
   ToolItem,
   Highlight,

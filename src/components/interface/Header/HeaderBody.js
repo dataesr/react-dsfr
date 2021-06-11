@@ -1,4 +1,4 @@
-import React, { useContext, cloneElement } from 'react';
+import React, { useContext, cloneElement, Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import HeaderContext from './headerContext';
@@ -8,9 +8,12 @@ import dataAttributes from '../../../utils/data-attributes';
 const HeaderBody = ({
   children, className, closeButtonLabel, ...remainingProps
 }) => {
-  const headerBodyChildren = deepFilter(children, (child) => child.type && (child.props.__TYPE !== 'Logo' && child.props.__TYPE !== 'Service'));
+  const managedTypes = ['HeaderOperator', 'Logo', 'Service'];
+  const headerBodyChildren = deepFilter(children,
+    (child) => child.type && !managedTypes.includes(child.props.__TYPE));
   const logo = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Logo');
   const service = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Service');
+  const headerOperator = Children.toArray(children).find((child) => child.type && child.props.__TYPE === 'HeaderOperator');
 
   const context = useContext(HeaderContext);
   const {
@@ -35,6 +38,7 @@ const HeaderBody = ({
               <div className="fr-header__logo">
                 {logo}
               </div>
+              {headerOperator}
               {(isNavBar || isNavTool) && (
                 <div className="fr-header__navbar">
                   <button
