@@ -28,8 +28,9 @@ const ModalDialog = ({
 }) => {
   const modalRef = useRef();
   const [openedModal, setOpenedModal] = useState(() => isOpen);
+  const colSizes = { sm: 4, lg: 8, md: 6 };
+  const colSize = colSizes[size];
   const _className = classNames('fr-modal', {
-    [`fr-modal--${size}`]: (size !== 'md'),
     'fr-modal--opened': openedModal,
   }, className);
   const focusBackTo = document.activeElement;
@@ -84,9 +85,9 @@ const ModalDialog = ({
         onClick={(e) => handleOverlayClick(e)}
         {...dataAttributes(remainingProps)}
       >
-        <div className="fr-container--fluid fr-container-md">
+        <div className="fr-container fr-container--fluid fr-container-md">
           <div className="fr-grid-row fr-grid-row--center closing-overlay">
-            <div className="fr-col-12 fr-col-md-6">
+            <div className={`fr-col-12 fr-col-md-${colSize}`}>
               <div className="fr-modal__body">
                 <div className="fr-modal__header">
                   {

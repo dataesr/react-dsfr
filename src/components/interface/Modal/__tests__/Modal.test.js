@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import {
   Modal, ModalTitle, ModalContent, ModalFooter, ModalClose,
 } from '..';
-import Button from '../../Button';
+import { Button } from '../../Button';
 
 describe('<Modal />', () => {
   it('should render modal properly', () => {

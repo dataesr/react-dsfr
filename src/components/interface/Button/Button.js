@@ -26,24 +26,28 @@ const Button = forwardRef((props, ref) => {
     icon,
     iconPosition,
     onClick,
+    styleAsLink,
     children,
     className,
     ...remainingProps
   } = props;
-  const _className = classNames('fr-btn',
+  const _className = classNames(
     `fr-btn--${size}`,
     className,
     {
+      'fr-btn': !styleAsLink,
+      'fr-link': styleAsLink,
       'fr-fi-icon': !children && icon,
       'fr-btn--secondary': secondary,
-    });
+    },
+  );
   const _button = (
     <button
       ref={ref}
       type="button"
       onClick={onClick}
       className={_className}
-      title={title}
+      title={title || undefined}
       disabled={disabled}
       {...dataAttributes(remainingProps)}
     >
@@ -67,9 +71,11 @@ Button.defaultProps = {
   disabled: false,
   iconPosition: 'left',
   icon: '',
-  onClick: () => {},
+  onClick: () => { },
   children: '',
   className: '',
+  styleAsLink: false,
+  title: null,
 };
 
 Button.propTypes = {
@@ -78,7 +84,8 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  styleAsLink: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

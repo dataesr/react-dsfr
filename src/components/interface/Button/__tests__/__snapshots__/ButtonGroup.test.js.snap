@@ -7,7 +7,7 @@ exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
 >
   <li>
     <button
-      class="fr-btn fr-btn--md fr-btn--secondary"
+      class="fr-btn--md fr-btn fr-btn--secondary"
       data-testid="button"
       title="title"
       type="button"
@@ -17,7 +17,7 @@ exports[`<ButtonGroup /> renders ButtonGroup properly 1`] = `
   </li>
   <li>
     <button
-      class="fr-btn fr-btn--md"
+      class="fr-btn--md fr-btn"
       data-test-id="button"
       title="title"
       type="button"
