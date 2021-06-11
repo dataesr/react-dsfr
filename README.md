@@ -118,3 +118,7 @@ $ yarn test:debug
 Access `about:inspect`
 
 See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
+
+### They use react-dsfr
+
+[santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
