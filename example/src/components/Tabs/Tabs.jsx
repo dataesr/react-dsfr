@@ -16,10 +16,10 @@ const TabsExample = () => (
           Aspernatur atque porro quis quod!
         </p>
       </Tab>
-      <Tab label="Label tab #2">
+      <Tab label="Label tab #2" icon="fr-fi-checkbox-line">
         <h3>Content tab #2</h3>
       </Tab>
-      <Tab label="Label tab #3">
+      <Tab label="Label tab #3" icon="fr-fi-checkbox-line">
         <h3>Content tab #3</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.

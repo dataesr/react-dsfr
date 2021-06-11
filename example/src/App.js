@@ -28,6 +28,7 @@ import AccordionExample from './components/Accordion/Accordion';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
+import TabsExample from './components/Tabs/Tabs';
 
 const App = () => {
   const elements = [
@@ -44,7 +45,7 @@ const App = () => {
     { title: 'Lien', component: <LinkExample /> },
     { title: 'Bloc marque', component: <LogoExample /> },
     { title: 'Card', component: <CardExample /> },
-    { title: 'Tabs - Onglets', component: <TableExample /> },
+    { title: 'Tabs - Onglets', component: <TabsExample /> },
     { title: 'Texts / icons', component: <TextsExample /> },
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Breadcrumbs', component: <BreadcrumbsExample /> },
