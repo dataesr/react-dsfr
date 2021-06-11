@@ -67,8 +67,11 @@ $ yarn start
 ```
 
 #### Publish it
+
+First update the version in `package.json`
+
 ```bash
-$ yarn publish --tag [latest] --access public
+$ npm publish --tag [latest] --access public
 ```
 
 Visit [http://localhost:3000](http://localhost:3000).
