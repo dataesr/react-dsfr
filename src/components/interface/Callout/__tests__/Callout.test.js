@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Callout, CalloutText, CalloutTitle } from '..';
-import Button from '../../Button';
+import { Button } from '../../Button';
 
 describe('<Callout />', () => {
   it('renders Callout properly', () => {

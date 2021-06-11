@@ -2,7 +2,7 @@
 
 exports[`<Button /> renders correctly 1`] = `
 <button
-  className="fr-btn fr-btn--lg fr-btn--secondary"
+  className="fr-btn--lg fr-btn fr-btn--secondary"
   data-testid="button"
   disabled={false}
   onClick={[Function]}
