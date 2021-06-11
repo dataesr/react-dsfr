@@ -55,7 +55,7 @@ Icon.propTypes = {
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right', 'center']),
-  as: PropTypes.oneOf(['span', 'i']),
+  as: PropTypes.oneOf(['span', 'i', 'div', 'p']),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
