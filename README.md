@@ -72,7 +72,7 @@ First update the version number in `package.json`
 ```bash
 $ npm i --package-lock-only
 $ npm login
-$ npm publish [--tag <tag>] [--access <public|restricted>]
+$ npm publish --tag beta --access public
 ```
 
 Visit [http://localhost:3000](http://localhost:3000).
