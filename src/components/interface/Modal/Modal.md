@@ -5,7 +5,7 @@ La modale permet de concentrer l’attention de l’utilisateur exclusivement su
 
 ```jsx
 import { useState, useRef } from 'react';
-import Button from '../Button'
+import { Button } from '../Button'
 import { Modal, ModalTitle, ModalContent, ModalFooter, ModalClose } from '.';
 const [isOpen, setIsOpen] = useState(false);
 

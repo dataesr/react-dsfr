@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import '../../foundation/icon/icons.css';
 
 const TabButton = ({
   className, index, activeTab, icon, label, setActiveTab, ...remainingProps
@@ -17,12 +18,14 @@ const TabButton = ({
       tabIndex="0"
       aria-controls={`fr-tabpanel-${index}`}
       className={classNames('fr-tabs__tab', {
-        [icon]: icon,
         'fr-tabs__tab--icon-left': icon,
       })}
       onClick={() => setActiveTab(index)}
       onKeyDown={() => setActiveTab(index)}
     >
+      {icon && (
+      <i className={classNames({ [icon]: icon })} />
+      )}
       {label}
     </button>
   </li>

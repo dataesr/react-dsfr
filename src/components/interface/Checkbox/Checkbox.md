@@ -60,7 +60,7 @@ Cette organisation verticale d’une liste de cases à cocher est les plus coura
 ```jsx
 import { CheckboxGroup, Checkbox } from '.';
 
-<CheckboxGroup>
+<CheckboxGroup  legend="Legend">
   <Checkbox
     label="Label checkbox 1"
     onChange={() => {}}
@@ -99,7 +99,7 @@ Cette organisation doit être uniquement utilisée lorsque il y a 2 options ou q
 ```jsx
 import { CheckboxGroup, Checkbox } from '.';
 
-<CheckboxGroup isInline>
+<CheckboxGroup isInline legend="Legend">
   <Checkbox
     label="Label checkbox 1"
     onChange={() => {}}

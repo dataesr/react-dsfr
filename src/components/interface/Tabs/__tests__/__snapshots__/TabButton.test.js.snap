@@ -15,6 +15,7 @@ exports[`<TabButton /> should render TabButton properly 1`] = `
     tabIndex="0"
     type="button"
   >
+    
     Label #1
   </button>
 </li>

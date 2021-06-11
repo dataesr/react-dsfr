@@ -22,9 +22,6 @@ const Summary = ({ title, children, ...remainingProps }) => (
   </nav>
 );
 
-Summary.defaultProps = {
-};
-
 Summary.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
