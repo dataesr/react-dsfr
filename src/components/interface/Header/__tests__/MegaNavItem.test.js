@@ -1,9 +1,14 @@
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { v4 as uuidv4 } from 'uuid';
 import { MegaNavItem } from '../index';
 
 Enzyme.configure({ adapter: new Adapter() });
+
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
 
 describe('<MegaNavItem />', () => {
   let wrapper;
@@ -20,6 +25,7 @@ describe('<MegaNavItem />', () => {
   };
 
   beforeEach(() => {
+    uuidv4.mockImplementationOnce(() => 'xyx');
     wrapper = (props = {}, children) => shallow(
       <MegaNavItem
         {...props}
