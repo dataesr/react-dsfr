@@ -44,13 +44,12 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 > [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
-$ npm login
-$ npm publish [--tag <tag>] [--access <public|restricted>]
+$ yarn build
 ```
 
 #### Generate and watch /dist folder containing bundles
+
 ```bash
-$ yarn 
 $ yarn start
 ```
 
@@ -66,12 +65,14 @@ $ yarn
 $ yarn start
 ```
 
-#### Publish it
+#### Publish it on mpn registry
 
-First update the version in `package.json`
+First update the version number in `package.json`
 
 ```bash
-$ npm publish --tag [latest] --access public
+$ npm i --package-lock-only
+$ npm login
+$ npm publish [--tag <tag>] [--access <public|restricted>]
 ```
 
 Visit [http://localhost:3000](http://localhost:3000).
