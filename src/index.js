@@ -35,6 +35,7 @@ import SearchBar from './components/interface/SearchBar/index';
 import Select from './components/interface/Select/index';
 import { SideMenu, SideMenuLink, SideMenuItem } from './components/interface/SideMenu/index';
 import { Skiplinks, SkiplinkItem } from './components/interface/Skiplinks/index';
+import { Summary, SummaryItem } from './components/interface/Summary/index';
 import { Table, SimpleTable } from './components/interface/Table/index';
 import { Tabs, Tab } from './components/interface/Tabs/index';
 import { Tag, TagGroup } from './components/interface/Tag/index';
@@ -107,6 +108,8 @@ const library = () => ({
   SideMenuLink,
   Skiplinks,
   SkiplinkItem,
+  Summary,
+  SummaryItem,
   Table,
   SimpleTable,
   Tab,
