@@ -10,51 +10,55 @@ import './radios.css';
  *
  * @visibleName Radio
  */
-const Radio = (props) => {
-  const {
+const Radio = ({
+  className,
+  hint,
+  id,
+  isExtended,
+  label,
+  message,
+  messageType,
+  onChange,
+  size,
+  imageURL,
+  value,
+  name,
+  ...remainingProps
+}) => {
+  const messageClasses = messageType !== '' ? `fr-radio-group--${messageType}` : null;
+  const extendedClasses = isExtended ? 'fr-radio-rich' : null;
+  const sizeClass = size !== 'md' ? 'fr-radio-group--sm' : null;
+  const _className = classNames(
+    'fr-radio-group',
+    extendedClasses,
     className,
-    hint,
-    id,
-    isExtended,
-    label,
-    message,
-    messageType,
-    onChange,
-    size,
-    imageURL,
-    value,
-    ...remainingProps
-  } = props;
-
-  const messageClasses = (messageType !== '') ? `fr-radio-group--${messageType}` : null;
-  const extendedClasses = (isExtended) ? 'fr-radio-rich' : null;
-  const sizeClass = (size !== 'md') ? 'fr-radio-group--sm' : null;
-  const _className = classNames('fr-radio-group', extendedClasses, className, messageClasses, sizeClass);
-  const _labelClassName = classNames('fr-label', { 'fr-ifi-no-icon': isExtended });
+    messageClasses,
+    sizeClass,
+  );
+  const _labelClassName = classNames('fr-label', {
+    'fr-ifi-no-icon': isExtended,
+  });
   const radioId = id || uuidv4();
   const messageId = uuidv4();
 
   return (
-    <div
-      className={_className}
-      {...dataAttributes(remainingProps)}
-    >
-      <input
-        type="radio"
-        id={radioId}
-        name="radio"
-        onChange={onChange}
-        value={value}
-      />
+    <div className={_className} {...dataAttributes(remainingProps)}>
+      <input type="radio" id={radioId} onChange={onChange} value={value} name={name} />
       <label
         className={_labelClassName}
         htmlFor={radioId}
-        style={(imageURL && { backgroundImage: `url(${imageURL})` }) || undefined}
+        style={
+          (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
+        }
       >
         {label}
       </label>
       {hint && <span className="fr-hint-text">{hint}</span>}
-      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
+      {message && messageType && (
+        <p id={messageId} className={`fr-${messageType}-text`}>
+          {message}
+        </p>
+      )}
     </div>
   );
 };
@@ -69,6 +73,7 @@ Radio.defaultProps = {
   messageType: '',
   message: '',
   imageURL: '',
+  name: undefined,
 };
 
 Radio.propTypes = {
@@ -86,6 +91,7 @@ Radio.propTypes = {
   onChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
   imageURL: PropTypes.string,
+  name: PropTypes.string,
   value: PropTypes.string.isRequired,
 };
 

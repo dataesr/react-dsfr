@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {
+  useEffect, useState, Children, cloneElement,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
+
 import dataAttributes from '../../../utils/data-attributes';
 
 /**
@@ -17,8 +21,18 @@ const RadioGroup = ({
   message,
   messageType,
   ariaLabel,
+  name,
   ...remainingProps
 }) => {
+  const [radioName, setRadioName] = useState(name || uuidv4());
+
+  useEffect(() => {
+    setRadioName(name || uuidv4());
+  }, [name]);
+
+  const childs = Children.toArray(children).map((child) => cloneElement(child, {
+    name: child.props.name || radioName,
+  }));
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
   const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
@@ -35,7 +49,7 @@ const RadioGroup = ({
         {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
         {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
-          {children}
+          {childs}
         </div>
         {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
       </fieldset>
@@ -52,6 +66,7 @@ RadioGroup.defaultProps = {
   messageType: '',
   message: '',
   ariaLabel: '',
+  name: undefined,
 };
 
 RadioGroup.propTypes = {
@@ -72,6 +87,7 @@ RadioGroup.propTypes = {
   legend: PropTypes.string.isRequired,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
+  name: PropTypes.string,
 };
 
 export default RadioGroup;
