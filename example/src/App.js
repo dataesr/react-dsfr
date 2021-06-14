@@ -30,6 +30,7 @@ import SkiplinksExample from './components/Skiplinks/Skiplinks';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
 import TabsExample from './components/Tabs/Tabs';
+import TextInputExample from './components/TextInput/TextInput';
 
 const App = () => {
   const elements = [
@@ -39,7 +40,8 @@ const App = () => {
     { title: 'Table', component: <TableExample /> },
     { title: 'Sidemenu', component: <SidemenuExample /> },
     { title: 'Modal', component: <ModalExample /> },
-    { title: 'Select - TextInput', component: <SelectExample /> },
+    { title: 'TextInput', component: <TextInputExample /> },
+    { title: 'Select', component: <SelectExample /> },
     { title: 'Radio', component: <RadioExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
     { title: 'Media', component: <MediaExample /> },
