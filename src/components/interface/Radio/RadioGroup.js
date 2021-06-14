@@ -22,16 +22,28 @@ const RadioGroup = ({
   messageType,
   ariaLabel,
   name,
+  value,
+  onChange,
   ...remainingProps
 }) => {
   const [radioName, setRadioName] = useState(name || uuidv4());
+  const [internalValue, setInternalValue] = useState('');
 
   useEffect(() => {
     setRadioName(name || uuidv4());
   }, [name]);
 
+  const onGroupChange = (newValue, event) => {
+    onChange(newValue, event);
+    if (!value) {
+      setInternalValue(newValue);
+    }
+  };
+
   const childs = Children.toArray(children).map((child) => cloneElement(child, {
     name: child.props.name || radioName,
+    checked: value ? child.props.value === value : child.props.value === internalValue,
+    onGroupChange,
   }));
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
@@ -67,6 +79,8 @@ RadioGroup.defaultProps = {
   message: '',
   ariaLabel: '',
   name: undefined,
+  value: '',
+  onChange: () => {},
 };
 
 RadioGroup.propTypes = {
@@ -88,6 +102,8 @@ RadioGroup.propTypes = {
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   name: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default RadioGroup;

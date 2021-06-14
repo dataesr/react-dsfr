@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
@@ -19,12 +19,21 @@ const Radio = ({
   message,
   messageType,
   onChange,
+  onGroupChange,
   size,
   imageURL,
   value,
   name,
+  checked,
   ...remainingProps
 }) => {
+  const [radioId, setRadioId] = useState(id || uuidv4());
+  const [messageId] = useState(uuidv4());
+
+  useEffect(() => {
+    setRadioId(id || uuidv4());
+  }, [id]);
+
   const messageClasses = messageType !== '' ? `fr-radio-group--${messageType}` : null;
   const extendedClasses = isExtended ? 'fr-radio-rich' : null;
   const sizeClass = size !== 'md' ? 'fr-radio-group--sm' : null;
@@ -38,12 +47,22 @@ const Radio = ({
   const _labelClassName = classNames('fr-label', {
     'fr-ifi-no-icon': isExtended,
   });
-  const radioId = id || uuidv4();
-  const messageId = uuidv4();
+
+  const handleChange = (event) => {
+    onChange(event);
+    onGroupChange(value, event);
+  };
 
   return (
     <div className={_className} {...dataAttributes(remainingProps)}>
-      <input type="radio" id={radioId} onChange={onChange} value={value} name={name} />
+      <input
+        type="radio"
+        id={radioId}
+        onChange={handleChange}
+        value={value}
+        name={name}
+        defaultChecked={checked}
+      />
       <label
         className={_labelClassName}
         htmlFor={radioId}
@@ -70,10 +89,12 @@ Radio.defaultProps = {
   isExtended: false,
   size: 'md',
   onChange: () => {},
+  onGroupChange: () => {},
   messageType: '',
   message: '',
   imageURL: '',
   name: undefined,
+  checked: undefined,
 };
 
 Radio.propTypes = {
@@ -89,10 +110,12 @@ Radio.propTypes = {
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   onChange: PropTypes.func,
+  onGroupChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
   imageURL: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
 };
 
 export default Radio;
