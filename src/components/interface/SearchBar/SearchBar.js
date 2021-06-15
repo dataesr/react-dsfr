@@ -5,7 +5,20 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '../../../style.css';
+/*
+* DSFR v1.0.0-rc1.0
+*/
+import '../../../style/core.css';
+import '../../../style/content.css';
+import '../../../style/forms.css';
+import '../../../style/inputs.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
 import './search.css';
 
 /**
