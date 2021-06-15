@@ -1,6 +1,6 @@
 import { visualizer } from 'rollup-plugin-visualizer';
 import babel from '@rollup/plugin-babel';
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json';
 
