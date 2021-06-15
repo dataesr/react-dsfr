@@ -24,6 +24,7 @@ const ModalDialog = ({
   size,
   className,
   isOpen,
+  canClose,
   ...remainingProps
 }) => {
   const modalRef = useRef();
@@ -54,7 +55,12 @@ const ModalDialog = ({
       hide();
     }, MODAL_ANIMATION_TIME);
   };
+
   const handleOverlayClick = (e) => {
+    if (!canClose) {
+      return;
+    }
+
     if (!modalRef.current || (modalRef.current === e.target) || e.target.className.indexOf('closing-overlay') > -1) {
       handleAnimatedUnmount();
     }
@@ -74,6 +80,12 @@ const ModalDialog = ({
     }
   };
 
+  let closeComponent;
+  if (close.length > 0) {
+    closeComponent = cloneElement(close[0], { hide: handleAnimatedUnmount });
+  } else {
+    closeComponent = canClose ? <ModalClose hide={handleAnimatedUnmount} /> : <></>;
+  }
   return (
     ReactDOM.createPortal(
       // eslint-disable-next-line
@@ -90,11 +102,7 @@ const ModalDialog = ({
             <div className={`fr-col-12 fr-col-md-${colSize}`}>
               <div className="fr-modal__body">
                 <div className="fr-modal__header">
-                  {
-                    (close.length > 0)
-                      ? cloneElement(close[0], { hide: handleAnimatedUnmount })
-                      : <ModalClose hide={handleAnimatedUnmount} />
-                  }
+                  {closeComponent}
                 </div>
                 <div className="fr-modal__content">
                   {title}
@@ -111,12 +119,13 @@ const ModalDialog = ({
 };
 
 const Modal = ({
-  size, hide, children, isOpen, className, ...remainingProps
+  size, hide, children, isOpen, className, canClose, ...remainingProps
 }) => (isOpen) && (
   <ModalDialog
     className={className}
     size={size}
     hide={hide}
+    canClose={canClose}
     {...dataAttributes(remainingProps)}
   >
     {children}
@@ -137,11 +146,13 @@ Modal.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  canClose: PropTypes.bool,
 };
 Modal.defaultProps = {
   isOpen: false,
   size: 'md',
   className: '',
+  canClose: true,
 };
 
 export default Modal;
