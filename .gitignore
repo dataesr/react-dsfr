@@ -25,3 +25,5 @@ yarn-error.log*
 
 # lock
 yarn.lock
+
+stats.html
