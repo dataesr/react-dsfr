@@ -83,3 +83,22 @@ Il est recommandé d’ajouter un texte d’aide sous le libellé afin de facili
     options={options}
   />
 ```
+
+### Usage avec le hook useState
+```jsx
+import { useState } from 'react';
+
+const [selectedValue, setSelectedvalue] = useState('');
+
+<Select
+    selected={selectedValue}
+    label="Label"
+    options={ [
+        { value: '1', label: 'Burgers' },
+        { value: '2', label: 'Build your own' },
+        { value: '3', label: 'Friendly meals' }]}
+    onChange={(e) => {
+        setSelectedvalue(e.target.value);
+    }}
+/>
+```

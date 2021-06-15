@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Col, Select, TextInput,
@@ -13,26 +13,33 @@ const options = [
   { value: '4', label: 'Save menu &amp; more' },
 ];
 
-const SelectExample = () => (
-  <Col>
-    <Select
-      label="Label pour liste déroulante"
-      options={options}
-    />
-    <Select
-      label="Label pour liste déroulante"
-      options={options}
-      message="Texte d'erreur obligatoire"
-      messageType="error"
-    />
+const SelectExample = () => {
+  const [v, setV] = useState('');
+  return (
+    <Col>
+      <Select
+        selected={v}
+        label="Label pour liste déroulante"
+        options={options}
+        onChange={(e) => {
+          setV(e.target.value);
+        }}
+      />
+      <Select
+        label="Label pour liste déroulante"
+        options={options}
+        message="Texte d'erreur obligatoire"
+        messageType="error"
+      />
 
-    <TextInput
-      value="Value"
-      onChange={() => {
-      }}
-      label="Text input"
-    />
-  </Col>
-);
+      <TextInput
+        value="Value"
+        onChange={() => {
+        }}
+        label="Text input"
+      />
+    </Col>
+  );
+};
 
 export default SelectExample;
