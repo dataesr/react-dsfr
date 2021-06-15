@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> renders correctly 1`] = `
+<div
+  className="fr-form-group"
+>
+  <fieldset
+    aria-label="Légende pour l’ensemble de champs"
+    className="fr-fieldset"
+    disabled={false}
+  >
+    <legend
+      className="fr-fieldset__legend"
+    >
+      Légende pour l’ensemble de champs
+    </legend>
+    
+    <div
+      className="fr-fieldset__content"
+    >
+      <div
+        className="fr-radio-group"
+        data-testid="radio 1"
+      >
+        <input
+          defaultChecked={false}
+          id="xxxxxxx"
+          name="radio-test"
+          onChange={[Function]}
+          type="radio"
+          value="value 1"
+        />
+        <label
+          className="fr-label"
+          htmlFor="xxxxxxx"
+        >
+          Label de la radio 1
+        </label>
+        
+        
+      </div>
+      <div
+        className="fr-radio-group"
+        data-test-id="radio 2"
+      >
+        <input
+          defaultChecked={false}
+          name="radio-test"
+          onChange={[Function]}
+          type="radio"
+          value="value 2"
+        />
+        <label
+          className="fr-label"
+        >
+          Label de la radio 2
+        </label>
+        
+        
+      </div>
+    </div>
+    
+  </fieldset>
+</div>
+`;
