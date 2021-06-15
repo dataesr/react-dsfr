@@ -7,7 +7,6 @@ exports[`<Radio /> renders correctly 1`] = `
 >
   <input
     id="xxxxxxx"
-    name="radio"
     onChange={[Function]}
     type="radio"
     value="value"

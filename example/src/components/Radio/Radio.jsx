@@ -1,36 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
-  Col, Radio, RadioGroup,
+  Row, Col, Radio, RadioGroup,
 } from '@dataesr/react-dsfr';
 
-const RadioExample = () => (
-  <Col>
+const RadioExample = () => {
+  const [value, setValue] = useState();
+  return (
     <Col>
-      <RadioGroup
-        legend="Légende pour l’ensemble de champs"
-      >
-        <Radio
-          label="Label radio 1"
-          onChange={() => {
-          }}
-          value="value-1"
-        />
-        <Radio
-          label="Label radio 2"
-          onChange={() => {
-          }}
-          value="value-2"
-        />
-        <Radio
-          label="Label radio 3"
-          onChange={() => {
-          }}
-          value="value-3"
-        />
-      </RadioGroup>
+      <Row>
+        <Col>
+          <h3>Non controllé</h3>
+          <RadioGroup
+            legend="Légende pour l’ensemble de champs"
+          >
+            <Radio
+              label="Label radio 1"
+              onChange={() => {
+              }}
+              value="value-1"
+            />
+            <Radio
+              label="Label radio 2"
+              onChange={() => {
+              }}
+              value="value-2"
+            />
+            <Radio
+              label="Label radio 3"
+              onChange={() => {
+              }}
+              value="value-3"
+            />
+          </RadioGroup>
+        </Col>
+        <Col>
+          <h3>Controllé</h3>
+          <RadioGroup
+            legend="Légende pour l’ensemble de champs"
+            value={value}
+            onChange={(newValue) => {
+              setValue(newValue);
+            }}
+          >
+            <Radio
+              label="Label radio 1"
+              value="value-1"
+            />
+            <Radio
+              label="Label radio 2"
+              value="value-2"
+            />
+            <Radio
+              label="Label radio 3"
+              value="value-3"
+            />
+          </RadioGroup>
+        </Col>
+      </Row>
     </Col>
-  </Col>
-);
+  );
+};
 
 export default RadioExample;
