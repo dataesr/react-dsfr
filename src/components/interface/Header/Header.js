@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from 'react';
+import React, { useState, cloneElement, Children } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -68,8 +68,10 @@ const Header = ({
         role="banner"
         {...dataAttributes(remainingProps)}
       >
-        {children.map((child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }))}
-        {isNavTool && !isNavBar && (
+        {Children.toArray(children).map(
+          (child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }),
+        )}
+        {isNavTool && openNav && !isNavBar && (
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
             <nav
