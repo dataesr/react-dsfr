@@ -39,6 +39,7 @@ const Header = ({
   };
 
   deepForEach(children, (child) => {
+    if (!child) return;
     if (child.type && child.props.__TYPE === 'HeaderNav') {
       isNavBar = true;
     }
