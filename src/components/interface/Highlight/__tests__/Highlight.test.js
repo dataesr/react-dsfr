@@ -4,12 +4,12 @@ import Highlight from '..';
 describe('<Highlight />', () => {
   it('renders Highlight properly', () => {
     render(
-      <Highlight scheme="soft-green-warm" data-testid="highlight">
+      <Highlight data-testid="highlight">
         Highlight text that might be short and concise.
       </Highlight>,
     );
     const highlight = screen.getByTestId('highlight');
-    expect(highlight.className).toBe('fr-highlight fr-highlight--scheme-soft-green-warm');
+    expect(highlight.className).toBe('fr-highlight');
     expect(highlight).toHaveTextContent('Highlight text that might be short and concise.');
     expect(highlight).toBeInTheDocument();
     expect(highlight).toMatchSnapshot();
