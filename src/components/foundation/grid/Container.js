@@ -12,7 +12,6 @@ import '../../../style/utilities.css';
 const Container = ({
   fluid, children, scheme, className, role, spacing,
 }) => {
-  console.log(spacing);
   const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
     'fr-container': !fluid,
