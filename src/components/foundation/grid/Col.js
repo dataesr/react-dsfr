@@ -9,9 +9,9 @@ import { SCHEMES } from '../../../utils/constants';
  * @visibleName Col
  */
 const Col = ({
-  offset, n, scheme, children, className, ...rest
+  offset, n, scheme, children, className, spacing,
 }) => {
-  const { margin, padding } = getSpace(rest);
+  const { margin, padding } = getSpace(spacing);
   const { n: size, offset: off } = getColSize(n, offset);
   const _className = classNames(off, size, padding, margin, {
     'fr-col': !n,
@@ -26,6 +26,7 @@ Col.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  spacing: PropTypes.string,
   /**
   * Col size
   */
@@ -47,6 +48,7 @@ Col.defaultProps = {
   className: '',
   scheme: '',
   children: null,
+  spacing: null,
 };
 
 export default Col;

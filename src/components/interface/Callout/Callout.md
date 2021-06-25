@@ -12,7 +12,7 @@ import { Callout, CalloutText, CalloutTitle } from '.';
 
 ```jsx
 import { Callout, CalloutText, CalloutTitle } from '.';
-<Callout scheme="soft-green-warm">
+<Callout scheme="light-grey-100">
   <CalloutTitle as="h3">Callout title</CalloutTitle>
   <CalloutText>Callout text that might be short and concise.</CalloutText>
 </Callout>
@@ -20,8 +20,8 @@ import { Callout, CalloutText, CalloutTitle } from '.';
 
 ```jsx
 import { Callout, CalloutText, CalloutTitle } from '.';
-import Button from '../Button';
-<Callout scheme="soft-green-warm">
+import { Button } from '../Button';
+<Callout scheme="light-grey-100">
   <CalloutTitle as="h3">Callout title</CalloutTitle>
   <CalloutText>Callout text that might be short and concise.</CalloutText>
   <Button title="access">

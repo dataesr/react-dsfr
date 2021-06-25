@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
 import './highlights.css';
@@ -11,10 +10,9 @@ import './highlights.css';
  * @visibleName Highlight
  */
 const Highlight = ({
-  scheme, size, children, className, ...remainingProps
+  size, children, className, ...remainingProps
 }) => {
   const _className = classNames('fr-highlight', {
-    [`fr-highlight--scheme-${scheme}`]: scheme,
     [`fr-highlight--${size}`]: (['sm', 'lg'].includes(size)),
   }, className);
   return (
@@ -27,7 +25,6 @@ const Highlight = ({
   );
 };
 Highlight.propTypes = {
-  scheme: PropTypes.oneOf(SCHEMES),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
@@ -37,7 +34,6 @@ Highlight.propTypes = {
   ]),
 };
 Highlight.defaultProps = {
-  scheme: null,
   size: 'md',
   className: '',
 };
