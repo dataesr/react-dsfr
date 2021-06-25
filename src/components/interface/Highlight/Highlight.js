@@ -29,7 +29,7 @@ const Highlight = ({
 Highlight.propTypes = {
   scheme: PropTypes.oneOf(SCHEMES),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

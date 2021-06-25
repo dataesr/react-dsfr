@@ -27,7 +27,7 @@ SideMenuLink.defaultProps = {
 };
 
 SideMenuLink.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   href: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,

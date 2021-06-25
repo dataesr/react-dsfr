@@ -67,7 +67,7 @@ Logo.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   hrefTitle: PropTypes.string,
   href: PropTypes.string,
   /**

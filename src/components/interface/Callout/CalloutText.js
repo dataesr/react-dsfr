@@ -13,7 +13,7 @@ const CalloutText = ({ children, className, ...remainingProps }) => (
 );
 
 CalloutText.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
