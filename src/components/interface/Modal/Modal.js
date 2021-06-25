@@ -41,6 +41,10 @@ const ModalDialog = ({
   const footer = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalFooter');
   const close = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalClose');
 
+  useEffect(() => () => {
+    document.body.style.overflow = null;
+  }, []);
+
   const handleModal = (open) => {
     if (modalRef.current) {
       setOpenedModal(open);
