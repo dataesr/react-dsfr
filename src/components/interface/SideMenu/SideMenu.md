@@ -8,7 +8,8 @@ import { SideMenu, SideMenuItem, SideMenuLink } from '.';
 <SideMenu title="SideMenu Title" buttonLabel="SideMenu Button">
   <SideMenuItem title="SideMenu Item #1">
     <SideMenuLink href="/">SideMenu Link #1</SideMenuLink>
-    <SideMenuLink href="/">SideMenu Link #2</SideMenuLink>
+    <SideMenuLink onClick={()=>{
+        console.debug('==== DEBUG ==== ');}}>SideMenu Link #2</SideMenuLink>
   </SideMenuItem>
   <SideMenuItem title="SideMenu Item #2">
     <SideMenuItem title="SideMenu Level 2 Item #1">

@@ -23,6 +23,7 @@ const Link = ({
   iconSize,
   icon,
   iconPosition,
+  onClick,
   ...remainingProps
 }) => {
   const _className = classNames(
@@ -31,10 +32,15 @@ const Link = ({
       'fr-link': isSimple,
     },
   );
+  const onClickLink = (e) => {
+    e.preventDefault();
+    onClick();
+  };
 
   const asLink = as ? cloneElement(as, { className: _className, children, 'aria-current': (current && 'page') || undefined }) : null;
   const _link = (
     <a
+      onClick={onClick ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
       href={href}
       title={title || undefined}
@@ -70,6 +76,7 @@ Link.defaultProps = {
   iconPosition: 'right',
   href: '',
   children: '',
+  onClick: null,
   display: 'inline',
   iconSize: '1x',
 };
@@ -92,6 +99,7 @@ Link.propTypes = {
   isSimple: PropTypes.bool,
   current: PropTypes.bool,
   icon: PropTypes.string,
+  onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
   /**
