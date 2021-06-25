@@ -41,6 +41,7 @@ const Breadcrumb = ({
     (child) => child.props.__TYPE === 'BreadcrumbItem',
   );
   const _className = classNames('fr-breadcrumb', className);
+  const _collapsed = classNames({ 'fr-collapse': !open, 'fr-collapse--expanded': open });
   const handleOpenBreadcrumb = () => {
     const height = buttonRef.current.offsetHeight;
     breadRef.current.style.maxHeight = `calc(${height}px + 1rem)`;
@@ -76,9 +77,7 @@ const Breadcrumb = ({
       >
         {buttonLabel}
       </button>
-      <div
-        className="fr-collapse"
-      >
+      <div className={_collapsed}>
         <ol
           ref={listRef}
           className="fr-breadcrumb__list"
