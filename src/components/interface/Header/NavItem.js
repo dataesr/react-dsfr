@@ -1,5 +1,5 @@
 import React, {
-  useState, useEffect, Children, useContext, useRef,
+  useCallback, useState, useEffect, Children, useContext, useRef,
 } from 'react';
 
 import PropTypes from 'prop-types';
@@ -7,60 +7,57 @@ import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 import HeaderContext from './headerContext';
+import useCollapse from '../../../hooks/useCollapse';
+import useOnClickOutside from '../../../hooks/useOnClickOutside';
 
 const NavItem = ({
   children, title, link, path, current, asLink, ...remainingProps
 }) => {
+  const id = `fr-nav-subitem-${uuidv4()}`;
   const [isExpanded, setIsExpanded] = useState(false);
-  const [collapse, setCollapse] = useState('0px');
+  const { item, collapse } = useCollapse(null, isExpanded, 'fr-menu');
   const { currentPath, setCurrentPath } = useContext(HeaderContext);
   const itemRef = useRef(null);
-  const expandedItem = {
-    false: {
-      class: 'fr-menu fr-collapse',
-      stateHeight: null,
-      ariaExpanded: 'false',
-      expanded: false,
-    },
-    true: {
-      class: 'fr-menu fr-collapse fr-collapse--expanded',
-      stateHeight: 'none',
-      ariaExpanded: 'true',
-      expanded: true,
-    },
-  };
-  useEffect(() => {
-    const menuHeight = document.querySelector('.fr-menu');
-    if (menuHeight) {
-      setCollapse(menuHeight.getBoundingClientRect().height);
+  const expandedRef = useRef(null);
+  const buttonRef = useRef(null);
+  const close = useCallback((e) => {
+    if ((buttonRef?.current !== e.target) && isExpanded) {
+      setIsExpanded(false);
     }
+  }, [isExpanded]);
+  useOnClickOutside(expandedRef, close);
+
+  useEffect(() => {
     if (path && path !== currentPath) {
       setCurrentPath(path);
     }
-  }, [path, setCurrentPath, currentPath, collapse]);
+  }, [path, setCurrentPath, currentPath]);
 
-  const item = expandedItem[isExpanded];
   const subItems = Children.toArray(children).filter((child) => !!child);
   return (
     subItems && subItems.length > 0 ? (
       <li
+        ref={itemRef}
         className="fr-nav__item"
         {...dataAttributes(remainingProps)}
       >
         <button
+          ref={buttonRef}
           onClick={() => setIsExpanded(!isExpanded)}
           type="button"
-          aria-expanded={item.ariaExpanded}
+          aria-expanded={isExpanded}
           aria-current={(current && 'page') || undefined}
+          aria-controls={id}
           className="fr-nav__btn"
           aria-label="ouvrir la navigation"
         >
           {title}
         </button>
         <div
-          id={`fr-nav-subitem-${uuidv4()}`}
+          ref={expandedRef}
+          id={id}
           className={item.class}
-          style={{ maxHeight: item.stateHeight, '--collapse': `-${collapse}px` }}
+          style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
         >
           <ul className="fr-menu__list">{children}</ul>
         </div>
