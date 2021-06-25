@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './cards.css';
+import '@gouvfr/dsfr/dist/css/cards.min.css';
 
 /**
  *

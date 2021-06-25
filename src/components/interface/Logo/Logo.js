@@ -7,12 +7,12 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 /*
-* DSFR v1.0.0-rc1.0
+* DSFR v1.0.0
 */
-import '../../../style/core.css';
-import '../../../style/content.css';
-import '../../../style/forms.css';
-import '../../../style/inputs.css';
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/css/content.min.css';
+import '@gouvfr/dsfr/dist/css/forms.min.css';
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
 
 /*
 * react-ds-fr
@@ -20,7 +20,7 @@ import '../../../style/inputs.css';
 import '../../../style/colors.css';
 import '../../../style/custom.css';
 
-import './logo.css';
+import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *

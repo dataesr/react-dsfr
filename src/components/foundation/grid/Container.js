@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
 import { SCHEMES } from '../../../utils/constants';
-import '../../../style/utilities.css';
+import '@gouvfr/dsfr/dist/css/utilities.min.css';
 
 /**
  *

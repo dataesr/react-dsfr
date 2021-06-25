@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './table.css';
+import '@gouvfr/dsfr/dist/css/table.min.css';
 
 /**
  *

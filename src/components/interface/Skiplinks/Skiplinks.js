@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './skiplinks.css';
+import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
 
 /**
  *
