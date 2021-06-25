@@ -10,7 +10,7 @@
 
 > Non-official React components of the official [French Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.0.0-rc1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.0.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -64,6 +64,8 @@ $ cd example/
 $ yarn 
 $ yarn start
 ```
+
+In case of error during install try using `npm` instead of `yarn`.
 
 #### Publish it on mpn registry
 
