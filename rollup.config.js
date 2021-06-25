@@ -1,4 +1,5 @@
 import { visualizer } from 'rollup-plugin-visualizer';
+import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 
@@ -45,6 +46,7 @@ MODE.forEach((m) => {
         plugins: [],
       }),
       visualizer(),
+      resolve(),
     ],
   };
   config.push(conf);

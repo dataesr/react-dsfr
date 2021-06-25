@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './callouts.css';
+import '@gouvfr/dsfr/dist/css/callouts.min.css';
 
 /**
  *

@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import useCollapse from '../../../hooks/useCollapse';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './sidemenu.css';
+import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
 
 /**
  *

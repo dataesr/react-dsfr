@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './highlights.css';
+import '@gouvfr/dsfr/dist/css/highlights.min.css';
 
 /**
  *

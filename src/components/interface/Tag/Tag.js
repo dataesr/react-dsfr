@@ -5,7 +5,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import Icon from '../../foundation/icon/index';
 
-import './tags.css';
+import '@gouvfr/dsfr/dist/css/tags.min.css';
 
 const iconSize = {
   sm: 'lg',

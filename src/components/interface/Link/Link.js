@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './links.css';
+import '@gouvfr/dsfr/dist/css/links.min.css';
 
 /**
  *

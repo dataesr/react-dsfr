@@ -9,7 +9,7 @@ import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './modal.css';
+import '@gouvfr/dsfr/dist/css/modal.min.css';
 
 /**
  *
