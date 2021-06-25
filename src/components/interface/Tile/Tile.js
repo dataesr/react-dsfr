@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './tiles.css';
+import '@gouvfr/dsfr/dist/css/tiles.min.css';
 
 /**
  *

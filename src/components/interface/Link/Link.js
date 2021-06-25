@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 import useRouterContext from '../../../hooks/useRouterContext';
-import './links.css';
+
+import '@gouvfr/dsfr/dist/css/links.min.css';
 
 /**
  *
@@ -24,6 +25,7 @@ const Link = ({
   iconSize,
   icon,
   iconPosition,
+  onClick,
   ...remainingProps
 }) => {
   const Router = useRouterContext();
@@ -33,7 +35,11 @@ const Link = ({
       'fr-link': isSimple,
     },
   );
-  const Component = (Router && to) ? Router : 'a';
+  const onClickLink = (e) => {
+    e.preventDefault();
+    onClick();
+  };
+
   const _link = (
     <Component
       aria-current={current ? 'page' : undefined}
@@ -72,6 +78,7 @@ Link.defaultProps = {
   href: '',
   to: '',
   children: '',
+  onClick: null,
   display: 'inline',
   iconSize: '1x',
 };
@@ -95,6 +102,7 @@ Link.propTypes = {
   isSimple: PropTypes.bool,
   current: PropTypes.bool,
   icon: PropTypes.string,
+  onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
   /**

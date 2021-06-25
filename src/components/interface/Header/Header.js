@@ -8,8 +8,8 @@ import dataAttributes from '../../../utils/data-attributes';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
-import './navigation.css';
-import './header.css';
+import '@gouvfr/dsfr/dist/css/navigation.min.css';
+import '@gouvfr/dsfr/dist/css/header.min.css';
 
 /**
  *

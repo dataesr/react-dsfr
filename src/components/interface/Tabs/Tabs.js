@@ -9,7 +9,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import TabButton from './TabButton';
 
-import './tabs.css';
+import '@gouvfr/dsfr/dist/css/tabs.min.css';
 
 /**
  *

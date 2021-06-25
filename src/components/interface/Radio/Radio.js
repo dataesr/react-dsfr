@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './radios.css';
+import '@gouvfr/dsfr/dist/css/radios.min.css';
 
 /**
  *
