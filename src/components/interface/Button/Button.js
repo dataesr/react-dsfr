@@ -4,7 +4,20 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
-import '../../../style.css';
+/*
+* DSFR v1.0.0-rc1.0
+*/
+import '../../../style/core.css';
+import '../../../style/content.css';
+import '../../../style/forms.css';
+import '../../../style/inputs.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
 import './schemes.css';
 import './buttons.css';
 
@@ -26,24 +39,28 @@ const Button = forwardRef((props, ref) => {
     icon,
     iconPosition,
     onClick,
+    styleAsLink,
     children,
     className,
     ...remainingProps
   } = props;
-  const _className = classNames('fr-btn',
+  const _className = classNames(
     `fr-btn--${size}`,
     className,
     {
+      'fr-btn': !styleAsLink,
+      'fr-link': styleAsLink,
       'fr-fi-icon': !children && icon,
       'fr-btn--secondary': secondary,
-    });
+    },
+  );
   const _button = (
     <button
       ref={ref}
       type="button"
       onClick={onClick}
       className={_className}
-      title={title}
+      title={title || undefined}
       disabled={disabled}
       {...dataAttributes(remainingProps)}
     >
@@ -67,9 +84,11 @@ Button.defaultProps = {
   disabled: false,
   iconPosition: 'left',
   icon: '',
-  onClick: () => {},
+  onClick: () => { },
   children: '',
   className: '',
+  styleAsLink: false,
+  title: null,
 };
 
 Button.propTypes = {
@@ -78,14 +97,15 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  styleAsLink: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 export default Button;

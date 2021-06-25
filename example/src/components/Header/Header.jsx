@@ -3,6 +3,7 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 import {
   Header,
+  HeaderOperator,
   HeaderBody,
   Logo,
   Service,
@@ -32,6 +33,9 @@ const HeaderExample = () => {
     <Header>
       <HeaderBody>
         <Logo splitCharacter={10}>République Française & cie</Logo>
+        <HeaderOperator>
+          <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
+        </HeaderOperator>
         <Service
           asLink={<RouterLink to="/myLinkUrl" />}
           title="Playground @dataesr/react-dsfr"

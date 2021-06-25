@@ -16,6 +16,26 @@ La liste déroule fournit une liste d’option parmi laquelle l’utilisateur pe
   />
 ```
 
+### Usage avec React state
+```jsx
+import { useState } from 'react';
+const [selected, setSelected] = useState('');
+
+   const options = [
+    {value: "", label: "- Select -", disabled: true, hidden: true},
+    {value: "1", label: "Option Label #1"},
+    {value: "2", label: "Option Label #2"},
+    {value: "3", label: "Option Label #3"},
+    {value: "4", label: "Option Label #4"}
+  ];
+  <Select
+    label="Select Label"
+    options={options}
+    selected={selected}
+    onChange={(e) => setSelected(e.target.value)}
+  />
+```
+
 ### État d'erreur
 L'état d’erreur est signalé par un changement de couleur et par l’apparition d'un message d’erreur en-dessous du composant (cf. couleurs fonctionnelles 🔗 : le rouge est la couleur de l’état erreur).
 
@@ -82,4 +102,23 @@ Il est recommandé d’ajouter un texte d’aide sous le libellé afin de facili
     hint="Additionnal description"
     options={options}
   />
+```
+
+### Usage avec le hook useState
+```jsx
+import { useState } from 'react';
+
+const [selectedValue, setSelectedvalue] = useState('');
+
+<Select
+    selected={selectedValue}
+    label="Label"
+    options={ [
+        { value: '1', label: 'Burgers' },
+        { value: '2', label: 'Build your own' },
+        { value: '3', label: 'Friendly meals' }]}
+    onChange={(e) => {
+        setSelectedvalue(e.target.value);
+    }}
+/>
 ```

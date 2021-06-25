@@ -30,7 +30,7 @@ SkiplinkItem.defaultProps = {
 };
 
 SkiplinkItem.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   href: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,

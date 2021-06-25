@@ -6,6 +6,7 @@
 import {
     Header,
     HeaderBody,
+    HeaderOperator,
     Service,
     Tool,
     ToolItem,
@@ -23,6 +24,9 @@ import Logo from '../Logo';
 <Header closeButtonLabel='Close it!'>
     <HeaderBody>
         <Logo splitCharacter={10}>République Française</Logo>
+        <HeaderOperator>
+            <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
+        </HeaderOperator>
         <Service
             title="Service title"
             description="Service Description"/>

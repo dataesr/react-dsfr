@@ -43,6 +43,14 @@ exports[`<Header /> renders correctly 1`] = `
               </a>
             </div>
             <div
+              className="fr-header__operator"
+            >
+              <img
+                alt="texte alternatif"
+                src="https://fakeimg.pl/145x81/"
+              />
+            </div>
+            <div
               className="fr-header__navbar"
             >
               <button
@@ -178,7 +186,8 @@ exports[`<Header /> renders correctly 1`] = `
             data-test-id="navitem"
           >
             <button
-              aria-expanded="false"
+              aria-controls="fr-nav-subitem-undefined"
+              aria-expanded={false}
               aria-label="ouvrir la navigation"
               className="fr-nav__btn"
               onClick={[Function]}
@@ -191,7 +200,7 @@ exports[`<Header /> renders correctly 1`] = `
               id="fr-nav-subitem-undefined"
               style={
                 Object {
-                  "--collapse": "-0pxpx",
+                  "--collapse": "0px",
                   "maxHeight": null,
                 }
               }

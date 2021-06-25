@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
-const useCollapse = (id, isExpanded, className) => {
+export default function useCollapse(id, isExpanded, className) {
   const expandedItem = {
     false: {
       class: classNames(className, 'fr-collapse'),
@@ -16,10 +16,10 @@ const useCollapse = (id, isExpanded, className) => {
   const item = expandedItem[isExpanded];
 
   useEffect(() => {
-    setCollapse(`-${document.getElementById(id).getBoundingClientRect().height}px`);
-  }, [id]);
-
+    const element = (id)
+      ? document.getElementById(id)
+      : document.querySelector(`.${className}`);
+    setCollapse(`-${element.getBoundingClientRect().height}px`);
+  }, [id, className]);
   return { item, collapse };
-};
-
-export default useCollapse;
+}

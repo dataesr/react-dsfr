@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ButtonGroup from '../ButtonGroup';
-import Button from '../index';
+import { Button } from '../index';
 
 describe('<ButtonGroup />', () => {
   it('renders ButtonGroup properly', () => {
