@@ -30,8 +30,7 @@ describe('<Modal />', () => {
     expect(close).toBeInTheDocument();
     expect(modal).toMatchSnapshot();
   });
-
-  it('should close modal on dialog click', async () => {
+  it('should close modal on dialog click', () => {
     jest.useFakeTimers();
     const hide = jest.fn();
     render(
@@ -86,8 +85,10 @@ describe('<Modal />', () => {
     screen.getByTestId('open-modal-button').click();
     expect(document.body.style.overflow).toBe('hidden');
     screen.getByTestId('close-modal-button').click();
+
     // not ideal, but we need to wait for the component to unmount :/
-    await new Promise((r) => setTimeout(r, 2000));
+    jest.useRealTimers();
+    await new Promise((resolve) => setTimeout(resolve, 500));
     expect(document.body.style.overflow).toBe('');
   });
 });
