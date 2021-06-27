@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Footer,
@@ -19,41 +18,39 @@ const FooterExample = () => (
   <Footer>
     <FooterTop>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink
-          asLink={<RouterLink to="/myFooterLink" />}
-        >
+        <FooterLink to="/myFooterLink">
           Footer Link Router
         </FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
       </FooterTopCategory>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
       </FooterTopCategory>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
       </FooterTopCategory>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
       </FooterTopCategory>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
-        <FooterLink href="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
+        <FooterLink to="/">Footer Link</FooterLink>
       </FooterTopCategory>
     </FooterTop>
     <FooterBody
@@ -86,12 +83,12 @@ const FooterExample = () => (
       />
     </FooterPartners>
     <FooterBottom>
-      <FooterLink href="/">Footer Link</FooterLink>
-      <FooterLink href="/">Footer Link</FooterLink>
-      <FooterLink href="/">Footer Link</FooterLink>
-      <FooterLink href="/">Footer Link</FooterLink>
-      <FooterLink href="/">Footer Link</FooterLink>
-      <FooterCopy href="/">© République Française 2020</FooterCopy>
+      <FooterLink to="/">Footer Link</FooterLink>
+      <FooterLink to="/">Footer Link</FooterLink>
+      <FooterLink to="/">Footer Link</FooterLink>
+      <FooterLink to="/">Footer Link</FooterLink>
+      <FooterLink to="/">Footer Link</FooterLink>
+      <FooterCopy to="/">© République Française 2020</FooterCopy>
     </FooterBottom>
   </Footer>
 );

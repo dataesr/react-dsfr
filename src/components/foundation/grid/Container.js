@@ -9,15 +9,16 @@ import { SCHEMES } from '../../../utils/constants';
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, scheme, className, role, ...rest
+  fluid, children, scheme, className, role, as, ...rest
 }) => {
+  const Tag = as ? `${as}` : 'div';
   const { margin, padding } = getSpace(rest);
   const _className = classNames(margin, padding, {
     'fr-container': !fluid,
     'fr-container-fluid': fluid,
     [`fr-scheme-${scheme}`]: scheme,
   }, className);
-  return <div role={role || undefined} className={_className}>{children}</div>;
+  return <Tag role={role || undefined} className={_className}>{children}</Tag>;
 };
 
 Container.defaultProps = {
@@ -25,6 +26,7 @@ Container.defaultProps = {
   className: '',
   scheme: '',
   role: '',
+  as: 'div',
   children: null,
 };
 
@@ -42,6 +44,7 @@ Container.propTypes = {
   */
   fluid: PropTypes.bool,
   role: PropTypes.string,
+  role: PropTypes.oneOf(['div', 'section']),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

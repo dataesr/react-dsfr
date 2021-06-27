@@ -14,7 +14,7 @@ import './logo.css';
  * @visibleName Logo
  */
 const Logo = ({
-  children, href, className, splitCharacter, hrefTitle, asLink, ...remainingProps
+  children, href, to, className, splitCharacter, hrefTitle, ...remainingProps
 }) => {
   // TODO Better system to split
   const regex = new RegExp(`.{${splitCharacter.toString()}}\\S*\\s+`, 'g');
@@ -25,9 +25,9 @@ const Logo = ({
   return (
     <Link
       className={classNames(className)}
-      as={asLink}
       title={hrefTitle || children}
       href={href}
+      to={to}
       {...dataAttributes(remainingProps)}
     >
       <p className="fr-logo">
@@ -39,11 +39,11 @@ const Logo = ({
 
 Logo.defaultProps = {
   __TYPE: 'Logo',
-  href: '/',
+  href: undefined,
+  to: undefined,
   hrefTitle: '',
   splitCharacter: 12,
   className: '',
-  asLink: null,
 };
 
 Logo.propTypes = {
@@ -57,11 +57,11 @@ Logo.propTypes = {
   children: PropTypes.string.isRequired,
   hrefTitle: PropTypes.string,
   href: PropTypes.string,
+  to: PropTypes.string,
   /**
   * Number of characters to split title
   */
   splitCharacter: PropTypes.number,
-  asLink: PropTypes.element,
 };
 
 export default Logo;

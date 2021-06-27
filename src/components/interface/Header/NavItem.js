@@ -1,19 +1,17 @@
 import React, {
-  useState, useEffect, Children, useContext, useRef,
+  useState, useEffect, Children, useRef,
 } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
-import HeaderContext from './headerContext';
 
 const NavItem = ({
-  children, title, link, path, current, asLink, ...remainingProps
+  children, title, href, to, current, ...remainingProps
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [collapse, setCollapse] = useState('0px');
-  const { currentPath, setCurrentPath } = useContext(HeaderContext);
   const itemRef = useRef(null);
   const expandedItem = {
     false: {
@@ -34,10 +32,7 @@ const NavItem = ({
     if (menuHeight) {
       setCollapse(menuHeight.getBoundingClientRect().height);
     }
-    if (path && path !== currentPath) {
-      setCurrentPath(path);
-    }
-  }, [path, setCurrentPath, currentPath, collapse]);
+  }, [collapse]);
 
   const item = expandedItem[isExpanded];
   const subItems = Children.toArray(children).filter((child) => !!child);
@@ -68,9 +63,9 @@ const NavItem = ({
     ) : (
       <li ref={itemRef} className="fr-nav__item">
         <Link
-          as={asLink}
           className="fr-nav__link"
-          href={link}
+          href={href}
+          to={to}
           current={current}
         >
           {title}
@@ -81,11 +76,10 @@ const NavItem = ({
 };
 
 NavItem.defaultProps = {
-  link: '',
   children: '',
   current: false,
-  path: '',
-  asLink: null,
+  href: undefined,
+  to: undefined,
 };
 
 NavItem.propTypes = {
@@ -95,13 +89,12 @@ NavItem.propTypes = {
     PropTypes.string,
   ]),
   title: PropTypes.string.isRequired,
-  link: PropTypes.string,
+  href: PropTypes.string,
+  to: PropTypes.string,
   current: PropTypes.bool,
-  asLink: PropTypes.element,
   /**
    * @ignore
    */
-  path: PropTypes.string,
 };
 
 export default NavItem;

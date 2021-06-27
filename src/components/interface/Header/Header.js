@@ -26,17 +26,11 @@ const Header = ({
 }) => {
   const { width } = useViewport();
   const [openSearch, setOpenSearch] = useState(isOpenSearch || false);
-  const [currentPath, setCurrentPath] = useState('');
   const [openNav, setOpenNav] = useState(isOpenNav || false);
   let isSearchBar = false;
   let isNavBar = false;
   let isNavTool = false;
   const isMobile = width < 992;
-
-  const onChangePath = (path) => {
-    setCurrentPath(path);
-    setOpenNav(false);
-  };
 
   deepForEach(children, (child) => {
     if (child.type && child.props.__TYPE === 'HeaderNav') {
@@ -58,8 +52,6 @@ const Header = ({
     onOpenSearch: () => setOpenSearch(!openSearch),
     isOpenNav: !!openNav,
     onOpenNav: (open) => setOpenNav(open),
-    currentPath,
-    setCurrentPath: (path) => onChangePath(path),
   };
   return (
     <HeaderContext.Provider value={contextProps}>

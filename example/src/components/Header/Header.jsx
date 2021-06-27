@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import {
   Header,
@@ -19,36 +19,23 @@ import {
 } from '@dataesr/react-dsfr';
 
 const HeaderExample = () => {
-  const location = useLocation();
-  const [path, setPath] = useState(() => location.pathname || '');
-
-  useEffect(() => {
-    if (path !== location.pathname) {
-      setPath(location.pathname);
-    }
-  }, [path, setPath, location]);
+  const { pathname } = useLocation();
 
   return (
     <Header>
       <HeaderBody>
         <Logo splitCharacter={10}>République Française & cie</Logo>
         <Service
-          asLink={<RouterLink to="/myLinkUrl" />}
+          to="/"
           title="Playground @dataesr/react-dsfr"
           description="messy tests"
         />
-        <Tool
-          closeButtonLabel="fermer"
-        >
+        <Tool closeButtonLabel="fermer">
           <ToolItemGroup>
-            <ToolItem
-              icon="ri-lock-line"
-              asLink={<RouterLink to="myNavItem" />}
-            >
-              Example
+            <ToolItem icon="ri-lock-line" href="https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476">
+              Documentation officielle
             </ToolItem>
-            <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
-            <ToolItem icon="ri-add-circle-line" link="/path">Example</ToolItem>
+            <ToolItem icon="ri-lock-line" to="/path">Paramètres d&apos;affichage</ToolItem>
           </ToolItemGroup>
           <SearchBar
             onSearch={() => {
@@ -59,62 +46,57 @@ const HeaderExample = () => {
           />
         </Tool>
       </HeaderBody>
-      <HeaderNav path={path}>
-        <NavItem title="Home" link="/" />
-        <NavItem
-          title="Countries"
-          asLink={<RouterLink to="/myCountries" />}
-        />
-        <NavItem
-          title="page-1"
-          current={path.startsWith('/page-1')}
-          asLink={<RouterLink to="/page-1" />}
-        />
-        <NavItem
-          title="page-2"
-          current={path.startsWith('/page-2')}
-          asLink={<RouterLink to="/page-2" />}
-        />
-        <NavItem title="Pages">
+      <HeaderNav>
+        <NavItem title="Acceuil" to="/" />
+        <NavItem title="Examples" current={pathname.startsWith('/examples/forms')}>
           <NavSubItem
-            current={path.startsWith('/page-1')}
-            title="Page #1"
-            asLink={<RouterLink to="/page-1" />}
+            current={pathname.startsWith('/examples/forms')}
+            title="Formulaires"
+            to="/examples/forms"
           />
           <NavSubItem
-            current={path.startsWith('/page-2')}
-            asLink={<RouterLink to="/page-2" />}
-            title="Page #2"
+            current={pathname.startsWith('/examples/components')}
+            to="/examples/components"
+            title="Composants"
           />
-          <NavSubItem title="Ressource #3" link="/path-to-resources-3" />
+          <NavSubItem
+            current={pathname.startsWith('/examples/layout')}
+            title="Layout"
+            to="/examples/layout"
+          />
+        </NavItem>
+        <NavItem title="Couleurs" current={pathname.startsWith('/couleurs')}>
+          <NavSubItem
+            current={pathname.startsWith('/couleurs/palette')}
+            title="Palette"
+            to="/couleurs/palette"
+          />
+          <NavSubItem
+            current={pathname.startsWith('/couleurs/combinaisons')}
+            title="Combinaisons"
+            to="/couleurs/combinaisons"
+          />
         </NavItem>
         <MegaNavItem
-          title="Santé"
-          description="Croquez des pommes"
+          title="Composants"
           as="h3"
           closeButtonLabel="Fermeture"
-          linkLabel="Vers l'au delà"
-          link="/"
         >
-          <MegaNavSubItem
-            title="Category #1"
-            link="/path-to-resources-1"
-          >
-            <Link title="title" href="/path">Link #1</Link>
-            <Link title="title" href="/path" current>Link #2</Link>
+          <MegaNavSubItem title="Fondations">
+            <Link to="/boutton">Bouttons</Link>
+            <Link to="/tile" current>Tuile</Link>
           </MegaNavSubItem>
           <MegaNavSubItem
-            title="Category #2"
-            link="/path-to-resources-2"
+            title="Formulaires"
             current
           >
-            <Link title="title" href="/path">Link #1</Link>
-            <Link title="title" href="/path">Link #2</Link>
-            <Link title="title" href="/path">Link #3</Link>
+            <Link href="/path">Link #1</Link>
+            <Link href="/path">Link #2</Link>
+            <Link href="/path">Link #3</Link>
           </MegaNavSubItem>
           <MegaNavSubItem
             title="Category #3"
-            link="/path-to-resources-2"
+            to="/path-to-resources-2"
             current
           >
             <Link title="title" href="/path">Link #1</Link>

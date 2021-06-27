@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Col, Breadcrumb, BreadcrumbItem,
@@ -8,17 +7,9 @@ import {
 const BreadcrumbsExample = () => (
   <Col>
     <Breadcrumb>
-      <BreadcrumbItem
-        asLink={<RouterLink to="/myBreadcrumbLink" />}
-      >
-        test #1
-      </BreadcrumbItem>
-      <BreadcrumbItem href="/path">
-        test #2
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        test #3
-      </BreadcrumbItem>
+      <BreadcrumbItem to="/myBreadcrumbLink">test #1</BreadcrumbItem>
+      <BreadcrumbItem to="/path">test #2</BreadcrumbItem>
+      <BreadcrumbItem>test #3</BreadcrumbItem>
     </Breadcrumb>
   </Col>
 );

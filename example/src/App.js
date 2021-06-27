@@ -1,6 +1,11 @@
 import React from 'react';
-import { Container } from '@dataesr/react-dsfr';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  Container, RouterContextProvider,
+  Col, Row, SideMenu, SideMenuItem, SideMenuLink,
+} from '@dataesr/react-dsfr';
+import {
+  BrowserRouter, Route, Switch, Link as RouterLink,
+} from 'react-router-dom';
 
 import HeaderExample from './components/Header/Header';
 import FooterExample from './components/Footer/Footer';
@@ -26,8 +31,6 @@ import ButtonExample from './components/Button/Button';
 import ToggleExample from './components/Toggle/Toggle';
 import AccordionExample from './components/Accordion/Accordion';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
-import Page1 from './Page-1';
-import Page2 from './Page-2';
 
 const App = () => {
   const elements = [
@@ -56,21 +59,32 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <HeaderExample />
-      <Switch>
-        <Route exact path="/page-1">
-          <Page1 />
-        </Route>
-        <Route exact path="/page-2">
-          <Page2 />
-        </Route>
-        <Container role="main">
-          {elements.map((element) => (
-            <Element key={element.title} title={element.title}>{element.component}</Element>
-          ))}
+      <RouterContextProvider Router={RouterLink}>
+        <HeaderExample />
+        <Container role="main" spacing="my-6w">
+          <Row>
+            <Col n="12 md-3">
+              <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique">
+                <SideMenuItem title="Composants">
+                  {elements.map((element) => (
+                    <SideMenuLink key={element.title} to={element.title.split(' ')[0].toLowerCase()}>{element.title}</SideMenuLink>
+                  ))}
+                </SideMenuItem>
+              </SideMenu>
+            </Col>
+            <Col n="12 md-9">
+              <Switch>
+                {elements.map((element) => (
+                  <Route exact key={element.title} path={`/${element.title.split(' ')[0].toLowerCase()}`}>
+                    <Element title={element.title}>{element.component}</Element>
+                  </Route>
+                ))}
+              </Switch>
+            </Col>
+          </Row>
         </Container>
-      </Switch>
-      <FooterExample />
+        <FooterExample />
+      </RouterContextProvider>
     </BrowserRouter>
   );
 };

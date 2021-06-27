@@ -10,10 +10,11 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "@dataesr/react-dsfr": "file:..",
+    "eslint-config-react-app": "^6.0.0",
     "prop-types": "file:../node_modules/prop-types",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "@dataesr/react-dsfr": "file:..",
     "react-router-dom": "file:../node_modules/react-router-dom",
     "react-scripts": "file:../node_modules/react-scripts"
   },

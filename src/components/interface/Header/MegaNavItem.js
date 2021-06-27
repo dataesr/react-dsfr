@@ -5,7 +5,8 @@ import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const MegaNavItem = ({
-  children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
+  children, title, linkLabel, href, to, current,
+  as, description, closeButtonLabel, ...remainingProps
 }) => {
   const Tag = `${as}`;
   const [isExpanded, setIsExpanded] = useState(false);
@@ -67,10 +68,11 @@ const MegaNavItem = ({
               <div className="fr-mega-menu__leader">
                 <Tag className="fr-h4 fr-mb-2v">{title}</Tag>
                 {description && <p className="fr-hidden fr-displayed-lg">{description}</p>}
-                {link && linkLabel && (
+                {(href || to) && linkLabel && (
                 <Link
                   className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
-                  href={link}
+                  href={href}
+                  to={to}
                 >
                   {linkLabel}
                 </Link>
@@ -88,7 +90,8 @@ const MegaNavItem = ({
 MegaNavItem.defaultProps = {
   linkLabel: '',
   closeButtonLabel: 'Fermer',
-  link: '',
+  href: undefined,
+  to: undefined,
   children: '',
   current: false,
   as: 'h4',
@@ -104,7 +107,8 @@ MegaNavItem.propTypes = {
   title: PropTypes.string.isRequired,
   closeButtonLabel: PropTypes.string,
   linkLabel: PropTypes.string,
-  link: PropTypes.string,
+  href: PropTypes.string,
+  to: PropTypes.string,
   description: PropTypes.string,
   current: PropTypes.bool,
 };

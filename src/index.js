@@ -41,6 +41,7 @@ import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
+import { RouterContextProvider } from './hooks/useRouterContext';
 
 const library = () => ({
   Accordion,
@@ -117,5 +118,6 @@ const library = () => ({
   TileBody,
   TileImage,
   Toggle,
+  RouterContextProvider,
 });
 export default library();

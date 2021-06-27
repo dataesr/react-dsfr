@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Row, Col, Tile, TileBody, TileImage,
@@ -13,7 +12,7 @@ const TileExample = () => (
           <TileBody
             title="Tuile horizontale par défaut"
             description="Et verticale en desktop"
-            linkHref="/myPath"
+            href="/myPath"
           />
           <TileImage
             alt="un petit carré"
@@ -27,7 +26,7 @@ const TileExample = () => (
             titleAs="h5"
             title="Tile Title"
             description="Tile description"
-            asLink={<RouterLink to="myTileLink" />}
+            to="myTileLink"
           />
         </Tile>
       </Col>

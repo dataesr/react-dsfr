@@ -7,6 +7,8 @@ import {
 const LinkExample = () => (
   <Col>
     <Link title="title" href="/#">Link</Link>
+    <br />
+    <Link title="title" to="/">Link</Link>
   </Col>
 );
 
