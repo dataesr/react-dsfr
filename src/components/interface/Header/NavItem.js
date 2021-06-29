@@ -24,7 +24,7 @@ const NavItem = ({
     }
   }, [isExpanded]);
   useOnClickOutside(expandedRef, close);
-  
+
   const subItems = Children.toArray(children).filter((child) => !!child);
   return (
     subItems && subItems.length > 0 ? (

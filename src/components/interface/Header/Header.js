@@ -1,4 +1,4 @@
-import React, { 
+import React, {
   useState, useEffect, cloneElement, Children,
 } from 'react';
 import classNames from 'classnames';
@@ -59,7 +59,7 @@ const Header = ({
   };
 
   useEffect(() => { setOpenNav(false); }, [path]);
-  
+
   return (
     <HeaderContext.Provider value={contextProps}>
       <header
