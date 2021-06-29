@@ -50,7 +50,7 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
   </ul>
   <div
     className="fr-tabs__panel fr-tabs__panel--selected"
-    id="fr-tabpanel-b43e1950-0ff9-4435-b7be-d3bbfc4f5c3c"
+    id="fr-tabpanel-1aaaf35f-f7d4-4a9a-a33c-7f354149c435"
     role="tabpanel"
     tabIndex="0"
   >
@@ -58,7 +58,7 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
   </div>
   <div
     className="fr-tabs__panel "
-    id="fr-tabpanel-ec7a2a98-abc2-490c-ab52-ae027a082d4b"
+    id="fr-tabpanel-2df0460f-ba49-474a-88f5-eca0690249f8"
     role="tabpanel"
     tabIndex="0"
   >

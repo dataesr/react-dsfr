@@ -11,11 +11,8 @@
   },
   "dependencies": {
     "@dataesr/react-dsfr": "file:..",
-    "eslint-config-react-app": "file:../node_modules/eslint-config-react-app",
     "prop-types": "file:../node_modules/prop-types",
     "react-code-blocks": "file:../node_modules/react-code-blocks",
-    "jsx-to-string": "file:../node_modules/jsx-to-string",
-    "react-docgen": "file:../node_modules/react-docgen",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-router-dom": "file:../node_modules/react-router-dom",
