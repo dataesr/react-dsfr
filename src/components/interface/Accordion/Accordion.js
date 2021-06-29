@@ -53,7 +53,7 @@ const Accordion = ({
       className={classNames(className)}
       {...dataAttributes(remainingProps)}
     >
-      <ul className="fr-accordion-group">{childs}</ul>
+      <ul className="fr-accordions-group">{childs}</ul>
     </HtmlTag>
   );
 };
