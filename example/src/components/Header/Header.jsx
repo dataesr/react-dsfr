@@ -70,12 +70,12 @@ const HeaderExample = () => {
           asLink={<RouterLink to="/myCountries" />}
         />
         <NavItem
-          title="page-1"
+          title="page 1"
           current={path.startsWith('/page-1')}
           asLink={<RouterLink to="/page-1" />}
         />
         <NavItem
-          title="page-2"
+          title="page 2"
           current={path.startsWith('/page-2')}
           asLink={<RouterLink to="/page-2" />}
         />

@@ -10,10 +10,14 @@ const LinkExample = () => (
       <DSLink title="title" href="/#">Link</DSLink>
     </Col>
     <Col>
-      <DSLink title="title" as={<RouterLink to="/my-path">Internal Router Dom Link</RouterLink>} />
+      <DSLink title="title" as={<RouterLink to="/my-path" />}>
+        Internal Router Dom Link
+      </DSLink>
     </Col>
     <Col>
-      <DSLink title="title" as={<RouterLink to="/page-1">Page 1</RouterLink>} />
+      <DSLink title="title" as={<RouterLink to="/page-1" />}>
+        Page 1
+      </DSLink>
     </Col>
   </>
 );
