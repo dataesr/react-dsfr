@@ -64,7 +64,10 @@ FooterBody.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
