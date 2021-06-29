@@ -42,6 +42,7 @@ const Button = forwardRef((props, ref) => {
     styleAsLink,
     children,
     className,
+    submit,
     ...remainingProps
   } = props;
   const _className = classNames(
@@ -57,7 +58,7 @@ const Button = forwardRef((props, ref) => {
   const _button = (
     <button
       ref={ref}
-      type="button"
+      type={submit ? 'submit' : 'button'}
       onClick={onClick}
       className={_className}
       title={title || undefined}
@@ -89,6 +90,7 @@ Button.defaultProps = {
   className: '',
   styleAsLink: false,
   title: null,
+  submit: false,
 };
 
 Button.propTypes = {
@@ -106,6 +108,7 @@ Button.propTypes = {
   ]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  submit: PropTypes.bool,
 };
 
 export default Button;
