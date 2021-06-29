@@ -28,15 +28,15 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           >
             first line accordion
           </button>
-          <div
-            class="fr-collapse"
-            data-testid="accordion-div"
-            id="fr-accordion-0"
-            style="--collapse: -0px;"
-          >
-            Anything I want
-          </div>
         </h3>
+        <div
+          class="fr-collapse"
+          data-testid="accordion-div"
+          id="fr-accordion-0"
+          style="--collapse: -0px;"
+        >
+          Anything I want
+        </div>
       </section>
     </li>
     <li
@@ -59,15 +59,15 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           >
             first line accordion
           </button>
-          <div
-            class="fr-collapse"
-            data-testid="accordion-div"
-            id="fr-accordion-1"
-            style="--collapse: -0px;"
-          >
-            Anything I want
-          </div>
         </h3>
+        <div
+          class="fr-collapse"
+          data-testid="accordion-div"
+          id="fr-accordion-1"
+          style="--collapse: -0px;"
+        >
+          Anything I want
+        </div>
       </section>
     </li>
   </ul>
