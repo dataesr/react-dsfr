@@ -19,7 +19,9 @@ export default function useCollapse(id, isExpanded, className) {
     const element = (id)
       ? document.getElementById(id)
       : document.querySelector(`.${className}`);
-    setCollapse(`-${element.getBoundingClientRect().height}px`);
+    if (element) {
+      setCollapse(`-${element.getBoundingClientRect().height}px`);
+    }
   }, [id, className]);
   return { item, collapse };
 }
