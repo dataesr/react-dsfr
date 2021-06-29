@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { createContext, useContext } from 'react';
 
 export const RouterContext = createContext(null);
 

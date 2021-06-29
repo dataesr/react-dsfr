@@ -17,6 +17,7 @@ import {
   MegaNavItem,
   Link,
 } from '@dataesr/react-dsfr';
+import SwitchThemeButton from './SwitchThemeButton';
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -32,7 +33,7 @@ const Header = () => {
         />
         <Tool closeButtonLabel="fermer">
           <ToolItemGroup>
-            <ToolItem icon="ri-sun-line" to="/path">Paramètres d&apos;affichage</ToolItem>
+            <SwitchThemeButton />
             <ToolItem
               icon="ri-external-link-line"
               href="https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476"

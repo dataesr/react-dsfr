@@ -43,6 +43,7 @@ import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
 import { RouterContextProvider } from './hooks/useRouterContext';
+import useTheme, { ThemeContextProvider } from './hooks/useTheme';
 
 const library = () => ({
   Accordion,
@@ -124,5 +125,7 @@ const library = () => ({
   TileImage,
   Toggle,
   RouterContextProvider,
+  useTheme,
+  ThemeContextProvider,
 });
 export default library();
