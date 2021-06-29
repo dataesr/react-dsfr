@@ -172,6 +172,7 @@ exports[`<Header /> renders correctly 1`] = `
         >
           <li
             className="fr-nav__item"
+            data-testid="navitem"
           >
             <a
               className="fr-nav__link"

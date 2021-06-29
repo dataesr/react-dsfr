@@ -4,6 +4,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
 <footer
   class="fr-footer"
   data-testid="footer"
+  id="footer"
   role="contentinfo"
 >
   <div

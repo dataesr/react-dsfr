@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { v4 as uuidv4 } from 'uuid';
 import {
   NavItem, NavSubItem,
@@ -13,24 +13,8 @@ jest.mock('uuid', () => ({
 }));
 
 describe('<NavItem />', () => {
-  let wrapper;
-
-  const initialProps = {
-    title: 'title',
-    link: 'link',
-    children: 'child',
-  };
-
   beforeEach(() => {
     uuidv4.mockImplementationOnce(() => 'xyx');
-    wrapper = (props = {}, children) => shallow(
-      <NavItem
-        title={props.title}
-        link={props.link}
-      >
-        {children || props.children}
-      </NavItem>,
-    );
   });
   it('renders correctly', () => {
     const component = renderer
@@ -41,14 +25,23 @@ describe('<NavItem />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should have button with title as text', () => {
-    const component = wrapper(initialProps);
-    expect(component.find('button').text()).toBe(initialProps.title);
+  it('should render simple header', () => {
+    mount(<NavItem
+      title="title"
+      link="link"
+    />);
   });
 
-  it('should', () => {
-    const children = <NavSubItem title="Ressource #1" link="/path-to-resources-1" />;
-    const component = wrapper(initialProps, children);
+  it('should manage NavSubItem', () => {
+    const component = mount(
+      <NavItem
+        title="title"
+        link="link"
+      >
+        <NavSubItem title="Ressource #1" link="/path-to-resources-1" />
+      </NavItem>,
+    );
+    expect(component.find('button').text()).toBe('title');
     component.find('[type="button"]').simulate('click');
     expect(component.find('.fr-collapse--expanded').exists()).toBeTruthy();
   });

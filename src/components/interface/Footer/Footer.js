@@ -11,6 +11,7 @@ const Footer = ({ children, className, ...remainingProps }) => {
   const _className = classNames('fr-footer', className);
   return (
     <footer
+      id="footer"
       className={_className}
       role="contentinfo"
       {...dataAttributes(remainingProps)}
