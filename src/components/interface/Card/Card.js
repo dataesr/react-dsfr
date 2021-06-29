@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './cards.css';
+import '@gouvfr/dsfr/dist/css/cards.min.css';
 
 /**
  *
@@ -19,6 +19,7 @@ const Card = ({
   className,
   hasArrow,
   scheme,
+  enlargeLink,
   ...remainingProps
 }) => {
   const img = Children.toArray(children).find((child) => child.props.__TYPE === 'CardImage');
@@ -31,6 +32,7 @@ const Card = ({
   const _className = classNames('fr-card', {
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
+    'fr-enlarge-link': enlargeLink,
     [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return (
@@ -38,12 +40,12 @@ const Card = ({
       className={_className}
       {...dataAttributes(remainingProps)}
     >
-      {img}
       <div className="fr-card__body">
         {detail}
         {displayTitle}
         {description}
       </div>
+      {img}
     </div>
   );
 };
@@ -53,6 +55,7 @@ Card.defaultProps = {
   isHorizontal: false,
   className: '',
   hasArrow: true,
+  enlargeLink: true,
   scheme: '',
 };
 Card.propTypes = {
@@ -69,6 +72,7 @@ Card.propTypes = {
     PropTypes.array,
   ]),
   hasArrow: PropTypes.bool,
+  enlargeLink: PropTypes.bool,
   scheme: PropTypes.oneOf(SCHEMES),
 };
 

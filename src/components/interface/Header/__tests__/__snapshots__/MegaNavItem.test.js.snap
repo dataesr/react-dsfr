@@ -5,7 +5,8 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
   className="fr-nav__item"
 >
   <button
-    aria-expanded="false"
+    aria-controls="xyx"
+    aria-expanded={false}
     aria-label="ouvrir la navigation"
     className="fr-nav__btn"
     onClick={[Function]}
@@ -15,9 +16,10 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
   </button>
   <div
     className="fr-mega-menu fr-collapse"
+    id="xyx"
     style={
       Object {
-        "--collapse": "-0pxpx",
+        "--collapse": "0px",
         "maxHeight": null,
         "padding": 0,
       }
@@ -53,13 +55,6 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
             >
               description
             </p>
-            <a
-              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
-              href="link"
-              target="_self"
-            >
-              label
-            </a>
           </div>
         </div>
         child

@@ -10,7 +10,7 @@
 
 > Non-official React components of the official [French Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.0.0-rc1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.0.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -44,13 +44,12 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 > [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
-$ npm login
-$ npm publish [--tag <tag>] [--access <public|restricted>]
+$ yarn build
 ```
 
 #### Generate and watch /dist folder containing bundles
+
 ```bash
-$ yarn 
 $ yarn start
 ```
 
@@ -66,9 +65,16 @@ $ yarn
 $ yarn start
 ```
 
-#### Publish it
+In case of error during install try using `npm` instead of `yarn`.
+
+#### Publish it on mpn registry
+
+First update the version number in `package.json`
+
 ```bash
-$ yarn publish --tag [latest] --access public
+$ npm i --package-lock-only
+$ npm login
+$ npm publish --tag latest --access public
 ```
 
 Visit [http://localhost:3000](http://localhost:3000).
@@ -118,3 +124,7 @@ $ yarn test:debug
 Access `about:inspect`
 
 See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
+
+### They use react-dsfr
+
+[santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)

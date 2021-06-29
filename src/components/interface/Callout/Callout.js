@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './callouts.css';
+import '@gouvfr/dsfr/dist/css/callouts.min.css';
 
 /**
  *
  * @visibleName Callout
  */
 const Callout = ({
-  scheme, hasInfoIcon, children, className, ...remainingProps
+  hasInfoIcon, children, className, ...remainingProps
 }) => {
   const _className = classNames('fr-callout', className, {
     'fr-fi-information-line': hasInfoIcon,
-    [`fr-callout--scheme-${scheme}`]: scheme,
   });
   return (
     <div
@@ -27,7 +25,6 @@ const Callout = ({
   );
 };
 Callout.propTypes = {
-  scheme: PropTypes.oneOf(SCHEMES),
   hasInfoIcon: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -40,7 +37,6 @@ Callout.propTypes = {
   ]),
 };
 Callout.defaultProps = {
-  scheme: null,
   hasInfoIcon: true,
   className: '',
 };

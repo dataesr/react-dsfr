@@ -22,7 +22,7 @@ const Title = ({
 };
 
 Title.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   /**
   * html tag to render
   */

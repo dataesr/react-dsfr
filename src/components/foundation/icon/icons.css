@@ -11,6 +11,7 @@
     text-transform: none;
 }
 
+[class*="ri-"],
 [class^="ri-"].icon-left {
     margin-right: .5rem;
 }

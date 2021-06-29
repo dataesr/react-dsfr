@@ -13,44 +13,44 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
     className="fr-tabs__list"
     role="tablist"
   >
-    <div>
-      <li
+    <li
+      role="presentation"
+    >
+      <button
         aria-controls="fr-tabpanel-0"
         aria-selected="true"
-        className=""
+        className="fr-tabs__tab"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
         tabIndex="0"
+        type="button"
       >
-        <div
-          className="fr-tabs__tab"
-        >
-          Label1
-        </div>
-      </li>
-    </div>
-    <div>
-      <li
+        
+        Label1
+      </button>
+    </li>
+    <li
+      role="presentation"
+    >
+      <button
         aria-controls="fr-tabpanel-1"
         aria-selected="false"
-        className=""
+        className="fr-tabs__tab"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
         tabIndex="0"
+        type="button"
       >
-        <div
-          className="fr-tabs__tab"
-        >
-          Label2
-        </div>
-      </li>
-    </div>
+        
+        Label2
+      </button>
+    </li>
   </ul>
   <div
     className="fr-tabs__panel fr-tabs__panel--selected"
-    id="fr-tabpanel-0"
+    id="fr-tabpanel-b43e1950-0ff9-4435-b7be-d3bbfc4f5c3c"
     role="tabpanel"
     tabIndex="0"
   >
@@ -58,7 +58,7 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
   </div>
   <div
     className="fr-tabs__panel "
-    id="fr-tabpanel-1"
+    id="fr-tabpanel-ec7a2a98-abc2-490c-ab52-ae027a082d4b"
     role="tabpanel"
     tabIndex="0"
   >

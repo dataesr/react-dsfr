@@ -3,7 +3,8 @@ import renderer from 'react-test-renderer';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  Header, HeaderBody, Service, Tool, ToolItemGroup, HeaderNav, NavItem, NavSubItem, ToolItem,
+  Header, HeaderBody, HeaderOperator, Service, Tool, ToolItemGroup,
+  HeaderNav, NavItem, NavSubItem, ToolItem,
 } from '../index';
 import Logo from '../../Logo';
 
@@ -24,6 +25,9 @@ describe('<Header />', () => {
         <Header data-testid="header">
           <HeaderBody data-testid="headerbody">
             <Logo splitCharacter={10} data-test-id="headerlogo">République française</Logo>
+            <HeaderOperator>
+              <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
+            </HeaderOperator>
             <Service
               title="Nom du service"
               description="baseline - précisions sur l‘organisation"

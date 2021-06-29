@@ -7,13 +7,13 @@ La mise en exergue met en évidence une information déjà présente dans le res
 ```
 
 ```jsx
-<Highlight size="sm" scheme="soft-green-warm" >
+<Highlight size="sm">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </Highlight>
 ```
 
 ```jsx
-<Highlight size="lg" >
+<Highlight size="lg">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </Highlight>
 ```

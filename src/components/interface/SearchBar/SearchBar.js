@@ -5,8 +5,21 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '../../../style.css';
-import './search.css';
+/*
+* DSFR v1.0.0
+*/
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/css/content.min.css';
+import '@gouvfr/dsfr/dist/css/forms.min.css';
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
+import '@gouvfr/dsfr/dist/css/search.min.css';
 
 /**
  *

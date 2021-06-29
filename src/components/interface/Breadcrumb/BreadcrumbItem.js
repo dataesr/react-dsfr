@@ -39,7 +39,7 @@ BreadcrumbItem.defaultProps = {
 BreadcrumbItem.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('BreadcrumbItem'),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

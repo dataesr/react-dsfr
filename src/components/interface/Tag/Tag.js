@@ -5,7 +5,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import Icon from '../../foundation/icon/index';
 
-import './tags.css';
+import '@gouvfr/dsfr/dist/css/tags.min.css';
 
 const iconSize = {
   sm: 'lg',
@@ -81,7 +81,7 @@ Tag.propTypes = {
   ]),
   scheme: PropTypes.oneOf(SCHEMES),
   as: PropTypes.oneOf(['a', 'span', 'p']),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   href: PropTypes.string,
   title: PropTypes.string,

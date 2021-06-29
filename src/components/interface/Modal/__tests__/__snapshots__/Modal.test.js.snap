@@ -7,7 +7,7 @@ exports[`<Modal /> should render modal properly 1`] = `
   data-testid="modal"
 >
   <div
-    class="fr-container--fluid fr-container-md"
+    class="fr-container fr-container--fluid fr-container-md"
   >
     <div
       class="fr-grid-row fr-grid-row--center closing-overlay"

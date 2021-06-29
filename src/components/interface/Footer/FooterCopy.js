@@ -15,7 +15,7 @@ const FooterCopy = ({ children, className, ...remainingProps }) => (
 FooterCopy.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('FooterCopy'),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

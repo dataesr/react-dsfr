@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './selects.css';
+import '@gouvfr/dsfr/dist/css/selects.min.css';
 
 /**
  *

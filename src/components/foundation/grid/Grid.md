@@ -10,9 +10,9 @@ import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
-<Container>
-  <Row alignItems="middle">
-    <Col>Column #1</Col>
+<Container spacing="m-4w" scheme="soft-yellow-medium">
+  <Row alignItems="middle" spacing="p-4w">
+    <Col spacing="p-2w m-6w">Column #1</Col>
     <Col>Column #2</Col>
     <Col>Column #3</Col>
     <Col>Column #4</Col>
@@ -26,10 +26,10 @@ import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
-<Container fluid>
+<Container fluid scheme="blue-france-200">
   <Row justifyContent="center" gutters>
-    <Col n="6">Column #1</Col>
-    <Col n="6">Column #2</Col>
+    <Col>Column #1</Col>
+    <Col spacing="ml-auto">Column #2</Col>
   </Row>
 </Container>
 ```

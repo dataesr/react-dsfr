@@ -49,7 +49,8 @@ const [value, setValue] = useState('');
 L'état inactif est utilisé lorsque le champ ne peut être utilisé.
 
 ```jsx
-<TextInput
+<TextInput 
+  value=""
   inactive
   label="Text input du gouvernement"
 />

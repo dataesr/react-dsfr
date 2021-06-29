@@ -9,9 +9,9 @@ import { SCHEMES } from '../../../utils/constants';
  * @visibleName Row
  */
 const Row = ({
-  gutters, justifyContent, alignItems, children, scheme, className, ...rest
+  gutters, justifyContent, alignItems, children, scheme, className, spacing,
 }) => {
-  const { margin, padding } = getSpace(rest);
+  const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
     'fr-grid-row': !gutters,
     'fr-grid-row fr-grid-row--gutters': gutters,
@@ -35,6 +35,7 @@ Row.propTypes = {
   * Add gutters to row
   */
   gutters: PropTypes.bool,
+  spacing: PropTypes.string,
   /**
   * Vertical alignment of children
   */
@@ -57,6 +58,7 @@ Row.defaultProps = {
   justifyContent: null,
   scheme: '',
   children: null,
+  spacing: '',
 };
 
 export default Row;

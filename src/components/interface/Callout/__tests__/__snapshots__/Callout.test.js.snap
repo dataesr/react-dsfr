@@ -2,7 +2,7 @@
 
 exports[`<Callout /> renders Callout properly 1`] = `
 <div
-  class="fr-callout fr-fi-information-line fr-callout--scheme-soft-green-warm"
+  class="fr-callout fr-fi-information-line"
   data-testid="callout"
 >
   <h3
@@ -18,7 +18,7 @@ exports[`<Callout /> renders Callout properly 1`] = `
     Callout text that might be short and concise.
   </p>
   <button
-    class="fr-btn fr-btn--md"
+    class="fr-btn--md fr-btn"
     title="acceder..."
     type="button"
   >

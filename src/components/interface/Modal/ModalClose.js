@@ -21,7 +21,7 @@ const ModalClose = ({
 ModalClose.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('ModalClose'),
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.string,
   /**
    * @ignore

@@ -6,8 +6,21 @@ import PropTypes from 'prop-types';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-import '../../../style.css';
-import './breadcrumbs.css';
+/*
+* DSFR v1.0.0
+*/
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/css/content.min.css';
+import '@gouvfr/dsfr/dist/css/forms.min.css';
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
+import '@gouvfr/dsfr/dist/css/breadcrumb.min.css';
 
 /**
  * @visibleName Breadcrumb

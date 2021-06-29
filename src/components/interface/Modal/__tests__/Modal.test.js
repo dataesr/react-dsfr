@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import {
   Modal, ModalTitle, ModalContent, ModalFooter, ModalClose,
 } from '..';
-import Button from '../../Button';
+import { Button } from '../../Button';
 
 describe('<Modal />', () => {
   it('should render modal properly', () => {
@@ -29,8 +30,7 @@ describe('<Modal />', () => {
     expect(close).toBeInTheDocument();
     expect(modal).toMatchSnapshot();
   });
-
-  it('should close modal on dialog click', async () => {
+  it('should close modal on dialog click', () => {
     jest.useFakeTimers();
     const hide = jest.fn();
     render(
@@ -47,5 +47,48 @@ describe('<Modal />', () => {
     fireEvent.click(modal);
     expect(setTimeout).toHaveBeenCalledTimes(1);
     expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 300);
+  });
+
+  it('should disable overflow hidden when closing modal manually', async () => {
+    const FullModal = () => {
+      const [isOpen, setIsOpen] = useState(false);
+      return (
+        <>
+          <Button
+            title="force action modal"
+            onClick={() => setIsOpen(true)}
+            data-testid="open-modal-button"
+
+          >
+            Force action modal
+          </Button>
+          <Modal isOpen={isOpen} hide={() => setIsOpen(false)} canClose={false}>
+            <ModalTitle icon="ri-arrow-right-fill">I am a title</ModalTitle>
+            <ModalContent>blah blah</ModalContent>
+            <ModalFooter>
+              <Button
+                data-testid="close-modal-button"
+                title="Une action"
+                onClick={() => setIsOpen(false)}
+              >
+                blah
+              </Button>
+            </ModalFooter>
+          </Modal>
+        </>
+      );
+    };
+
+    render(<FullModal />);
+
+    expect(document.body.style.overflow).toBe('');
+    screen.getByTestId('open-modal-button').click();
+    expect(document.body.style.overflow).toBe('hidden');
+    screen.getByTestId('close-modal-button').click();
+
+    // not ideal, but we need to wait for the component to unmount :/
+    jest.useRealTimers();
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    expect(document.body.style.overflow).toBe('');
   });
 });

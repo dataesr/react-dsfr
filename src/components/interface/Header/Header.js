@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from 'react';
+import React, { useState, useEffect, cloneElement, Children } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -8,8 +8,8 @@ import dataAttributes from '../../../utils/data-attributes';
 import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
-import './navigation.css';
-import './header.css';
+import '@gouvfr/dsfr/dist/css/navigation.min.css';
+import '@gouvfr/dsfr/dist/css/header.min.css';
 
 /**
  *
@@ -22,6 +22,7 @@ const Header = ({
   isOpenNav,
   isOpenSearch,
   closeButtonLabel,
+  path,
   ...remainingProps
 }) => {
   const { width } = useViewport();
@@ -33,6 +34,7 @@ const Header = ({
   const isMobile = width < 992;
 
   deepForEach(children, (child) => {
+    if (!child) return;
     if (child.type && child.props.__TYPE === 'HeaderNav') {
       isNavBar = true;
     }
@@ -53,6 +55,11 @@ const Header = ({
     isOpenNav: !!openNav,
     onOpenNav: (open) => setOpenNav(open),
   };
+
+  useEffect(() => {
+    setOpenNav(false)
+  }, [path])
+  
   return (
     <HeaderContext.Provider value={contextProps}>
       <header
@@ -60,8 +67,10 @@ const Header = ({
         role="banner"
         {...dataAttributes(remainingProps)}
       >
-        {children.map((child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }))}
-        {isNavTool && !isNavBar && (
+        {Children.toArray(children).map(
+          (child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }),
+        )}
+        {isNavTool && openNav && !isNavBar && (
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
           <div className="fr-container">
             <nav
@@ -96,9 +105,11 @@ Header.defaultProps = {
   isOpenNav: false,
   isOpenSearch: false,
   closeButtonLabel: 'Fermer',
+  path: undefined,
 };
 
 Header.propTypes = {
+  path: PropTypes.string,
   /**
    * Ouverture de la popin de recherche en mobile
    */

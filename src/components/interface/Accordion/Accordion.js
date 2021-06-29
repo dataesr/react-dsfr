@@ -5,8 +5,21 @@ import classNames from 'classnames';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-import '../../../style.css';
-import './accordions.css';
+/*
+* DSFR v1.0.0
+*/
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/css/content.min.css';
+import '@gouvfr/dsfr/dist/css/forms.min.css';
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
+import '@gouvfr/dsfr/dist/css/accordions.min.css';
 
 /**
  *
@@ -40,7 +53,7 @@ const Accordion = ({
       className={classNames(className)}
       {...dataAttributes(remainingProps)}
     >
-      <ul className="fr-accordion-group">{childs}</ul>
+      <ul className="fr-accordions-group">{childs}</ul>
     </HtmlTag>
   );
 };

@@ -9,7 +9,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import { SCHEMES } from '../../../utils/constants';
 import TabButton from './TabButton';
 
-import './tabs.css';
+import '@gouvfr/dsfr/dist/css/tabs.min.css';
 
 /**
  *
@@ -27,6 +27,7 @@ const Tabs = ({
     ...addProps,
     index,
     key: uuidv4(),
+    _id: uuidv4(),
   }));
 
   const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });

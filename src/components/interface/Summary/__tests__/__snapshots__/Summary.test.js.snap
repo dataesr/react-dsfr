@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Summary /> should renders Summary properly 1`] = `
+<nav
+  aria-labelledby="fr-summary-title"
+  class="fr-summary"
+  data-testid="summary"
+  role="navigation"
+>
+  <div
+    class="fr-summary__title"
+  >
+    Sommaire
+  </div>
+  <ol
+    class="fr-summary__list"
+  >
+    <li
+      data-testid="item1"
+    >
+      <a
+        class="fr-summary__link fr-link"
+        href="#"
+        target="_self"
+      >
+        Item 1
+      </a>
+    </li>
+    <li
+      data-test-id="item2"
+    >
+      <a
+        class="fr-summary__link fr-link"
+        href="#"
+        target="_self"
+      >
+        Item 2
+      </a>
+    </li>
+    <li
+      data-id="item3"
+    >
+      <a
+        class="fr-summary__link fr-link"
+        href="#"
+        target="_self"
+      >
+        Item 3
+      </a>
+    </li>
+    <li
+      data-test--id="item4"
+    >
+      <a
+        class="fr-summary__link fr-link"
+        href="#"
+        target="_self"
+      >
+        Item 4
+      </a>
+    </li>
+  </ol>
+</nav>
+`;

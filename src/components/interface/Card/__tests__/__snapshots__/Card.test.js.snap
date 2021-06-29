@@ -2,18 +2,9 @@
 
 exports[`<Card /> renders Card properly 1`] = `
 <div
-  class="fr-card"
+  class="fr-card fr-enlarge-link"
   data-testid="card"
 >
-  <div
-    class="fr-card__img"
-    data-testid="cardimage"
-  >
-    <img
-      alt="alternative"
-      src="http://fakeimg.pl/300/"
-    />
-  </div>
   <div
     class="fr-card__body"
   >
@@ -30,6 +21,7 @@ exports[`<Card /> renders Card properly 1`] = `
       <a
         class="fr-card__link"
         href="/"
+        target="_self"
       >
         Qu’est-ce que le Pass Culture et comment l’obtenir ?
       </a>
@@ -40,6 +32,15 @@ exports[`<Card /> renders Card properly 1`] = `
     >
       Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
     </p>
+  </div>
+  <div
+    class="fr-card__img"
+    data-testid="cardimage"
+  >
+    <img
+      alt="alternative"
+      src="http://fakeimg.pl/300/"
+    />
   </div>
 </div>
 `;

@@ -9,7 +9,7 @@ import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
 import dataAttributes from '../../../utils/data-attributes';
 
-import './modal.css';
+import '@gouvfr/dsfr/dist/css/modal.min.css';
 
 /**
  *
@@ -24,12 +24,14 @@ const ModalDialog = ({
   size,
   className,
   isOpen,
+  canClose,
   ...remainingProps
 }) => {
   const modalRef = useRef();
   const [openedModal, setOpenedModal] = useState(() => isOpen);
+  const colSizes = { sm: 4, lg: 8, md: 6 };
+  const colSize = colSizes[size];
   const _className = classNames('fr-modal', {
-    [`fr-modal--${size}`]: (size !== 'md'),
     'fr-modal--opened': openedModal,
   }, className);
   const focusBackTo = document.activeElement;
@@ -38,6 +40,10 @@ const ModalDialog = ({
   const content = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalContent');
   const footer = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalFooter');
   const close = Children.toArray(children).filter((child) => child.props.__TYPE === 'ModalClose');
+
+  useEffect(() => () => {
+    document.body.style.overflow = null;
+  }, []);
 
   const handleModal = (open) => {
     if (modalRef.current) {
@@ -53,7 +59,12 @@ const ModalDialog = ({
       hide();
     }, MODAL_ANIMATION_TIME);
   };
+
   const handleOverlayClick = (e) => {
+    if (!canClose) {
+      return;
+    }
+
     if (!modalRef.current || (modalRef.current === e.target) || e.target.className.indexOf('closing-overlay') > -1) {
       handleAnimatedUnmount();
     }
@@ -73,6 +84,12 @@ const ModalDialog = ({
     }
   };
 
+  let closeComponent;
+  if (close.length > 0) {
+    closeComponent = cloneElement(close[0], { hide: handleAnimatedUnmount });
+  } else {
+    closeComponent = canClose ? <ModalClose hide={handleAnimatedUnmount} /> : <></>;
+  }
   return (
     ReactDOM.createPortal(
       // eslint-disable-next-line
@@ -84,16 +101,12 @@ const ModalDialog = ({
         onClick={(e) => handleOverlayClick(e)}
         {...dataAttributes(remainingProps)}
       >
-        <div className="fr-container--fluid fr-container-md">
+        <div className="fr-container fr-container--fluid fr-container-md">
           <div className="fr-grid-row fr-grid-row--center closing-overlay">
-            <div className="fr-col-12 fr-col-md-6">
+            <div className={`fr-col-12 fr-col-md-${colSize}`}>
               <div className="fr-modal__body">
                 <div className="fr-modal__header">
-                  {
-                    (close.length > 0)
-                      ? cloneElement(close[0], { hide: handleAnimatedUnmount })
-                      : <ModalClose hide={handleAnimatedUnmount} />
-                  }
+                  {closeComponent}
                 </div>
                 <div className="fr-modal__content">
                   {title}
@@ -110,12 +123,13 @@ const ModalDialog = ({
 };
 
 const Modal = ({
-  size, hide, children, isOpen, className, ...remainingProps
+  size, hide, children, isOpen, className, canClose, ...remainingProps
 }) => (isOpen) && (
   <ModalDialog
     className={className}
     size={size}
     hide={hide}
+    canClose={canClose}
     {...dataAttributes(remainingProps)}
   >
     {children}
@@ -136,11 +150,13 @@ Modal.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  canClose: PropTypes.bool,
 };
 Modal.defaultProps = {
   isOpen: false,
   size: 'md',
   className: '',
+  canClose: true,
 };
 
 export default Modal;

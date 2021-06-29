@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
 import { SCHEMES } from '../../../utils/constants';
+import '@gouvfr/dsfr/dist/css/utilities.min.css';
 
 /**
  *
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, scheme, className, role, as, ...rest
+  fluid, children, scheme, className, role, as, spacing
 }) => {
   const Tag = as ? `${as}` : 'div';
-  const { margin, padding } = getSpace(rest);
+  const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
     'fr-container': !fluid,
     'fr-container-fluid': fluid,
@@ -28,6 +29,7 @@ Container.defaultProps = {
   role: '',
   as: 'div',
   children: null,
+  spacing: '',
 };
 
 Container.propTypes = {
@@ -43,6 +45,7 @@ Container.propTypes = {
   * Container with no outer margins
   */
   fluid: PropTypes.bool,
+  spacing: PropTypes.string,
   role: PropTypes.string,
   role: PropTypes.oneOf(['div', 'section']),
   className: PropTypes.oneOfType([

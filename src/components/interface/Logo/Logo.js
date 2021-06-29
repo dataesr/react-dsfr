@@ -6,8 +6,21 @@ import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
-import '../../../style.css';
-import './logo.css';
+/*
+* DSFR v1.0.0
+*/
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/css/content.min.css';
+import '@gouvfr/dsfr/dist/css/forms.min.css';
+import '@gouvfr/dsfr/dist/css/inputs.min.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/colors.css';
+import '../../../style/custom.css';
+
+import '@gouvfr/dsfr/dist/css/logo.min.css';
 
 /**
  *
@@ -54,7 +67,7 @@ Logo.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   hrefTitle: PropTypes.string,
   href: PropTypes.string,
   to: PropTypes.string,

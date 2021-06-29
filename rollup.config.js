@@ -1,8 +1,9 @@
-import styles from 'rollup-plugin-styles';
+import { visualizer } from 'rollup-plugin-visualizer';
+import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
-import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss';
 
-const autoprefixer = require('autoprefixer');
+import pkg from './package.json';
 
 const MODE = [
   {
@@ -41,13 +42,11 @@ MODE.forEach((m) => {
         plugins: ['@babel/transform-runtime'],
         babelHelpers: 'runtime',
       }),
-      styles({
-        postcss: {
-          plugins: [
-            autoprefixer(),
-          ],
-        },
+      postcss({
+        plugins: [],
       }),
+      visualizer(),
+      resolve(),
     ],
   };
   config.push(conf);
