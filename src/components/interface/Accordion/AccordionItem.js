@@ -27,15 +27,15 @@ const AccordionItem = ({
           >
             {title}
           </button>
-          <div
-            style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
-            className={item.class}
-            id={`fr-accordion-${id}`}
-            data-testid="accordion-div"
-          >
-            {children}
-          </div>
         </TitleTag>
+        <div
+          style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
+          className={item.class}
+          id={`fr-accordion-${id}`}
+          data-testid="accordion-div"
+        >
+          {children}
+        </div>
       </section>
     </li>
   );
