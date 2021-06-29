@@ -15,7 +15,7 @@ const Tab = ({
       const tab = document.querySelector('.fr-tabs__list');
       setHeight(current && tab ? getHeight(current) + getHeight(tab) : 0);
     }
-  }, [index, setHeight, activeTab]);
+  }, [_id, index, setHeight, activeTab]);
   return (
     <div
       id={`fr-tabpanel-${_id}`}
@@ -34,7 +34,7 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
-  _id: PropTypes.string,
+  _id: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

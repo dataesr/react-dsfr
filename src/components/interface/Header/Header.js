@@ -1,4 +1,6 @@
-import React, { useState, useEffect, cloneElement, Children } from 'react';
+import React, { 
+  useState, useEffect, cloneElement, Children,
+} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -56,9 +58,7 @@ const Header = ({
     onOpenNav: (open) => setOpenNav(open),
   };
 
-  useEffect(() => {
-    setOpenNav(false)
-  }, [path])
+  useEffect(() => { setOpenNav(false); }, [path]);
   
   return (
     <HeaderContext.Provider value={contextProps}>

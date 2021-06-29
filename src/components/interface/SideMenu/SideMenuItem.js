@@ -14,7 +14,7 @@ const SideMenuItem = ({
   const { item, collapse } = useCollapse(itemID, isExpanded);
   return (
     <li
-      className={classNames('fr-sidemenu__item', {'fr-sidemenu__item--active': current}, className)}
+      className={classNames('fr-sidemenu__item', { 'fr-sidemenu__item--active': current }, className)}
       {...dataAttributes(remainingProps)}
     >
       <button

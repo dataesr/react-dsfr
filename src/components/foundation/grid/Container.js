@@ -10,7 +10,7 @@ import '@gouvfr/dsfr/dist/css/utilities.min.css';
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, scheme, className, role, as, spacing
+  fluid, children, scheme, className, role, as, spacing,
 }) => {
   const Tag = as ? `${as}` : 'div';
   const { margin, padding } = getSpace(spacing);
@@ -47,7 +47,7 @@ Container.propTypes = {
   fluid: PropTypes.bool,
   spacing: PropTypes.string,
   role: PropTypes.string,
-  role: PropTypes.oneOf(['div', 'section']),
+  as: PropTypes.oneOf(['div', 'section']),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

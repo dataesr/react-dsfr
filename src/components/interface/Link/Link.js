@@ -41,7 +41,8 @@ const Link = ({
     onClick();
   };
 
-  const _link = (<Component
+  const _link = (
+    <Component
       onClick={onClick ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
       href={href || undefined}
