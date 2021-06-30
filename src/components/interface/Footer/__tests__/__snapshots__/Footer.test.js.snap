@@ -375,46 +375,38 @@ exports[`<Footer /> should render Footer properly 1`] = `
           <li
             class="fr-footer__content-item"
           >
-            <a
+            <div
               class="fr-footer__content-link"
-              href="https://legifrance.gouv.fr"
-              target="_self"
             >
               legifrance.gouv.fr
-            </a>
+            </div>
           </li>
           <li
             class="fr-footer__content-item"
           >
-            <a
+            <div
               class="fr-footer__content-link"
-              href="https://gouvernement.fr"
-              target="_self"
             >
               gouvernement.fr
-            </a>
+            </div>
           </li>
           <li
             class="fr-footer__content-item"
           >
-            <a
+            <div
               class="fr-footer__content-link"
-              href="https://service-public.fr"
-              target="_self"
             >
               service-public.fr
-            </a>
+            </div>
           </li>
           <li
             class="fr-footer__content-item"
           >
-            <a
+            <div
               class="fr-footer__content-link"
-              href="https://data.gouv.fr"
-              target="_self"
             >
               data.gouv.fr
-            </a>
+            </div>
           </li>
         </ul>
       </div>

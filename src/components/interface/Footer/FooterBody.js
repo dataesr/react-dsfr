@@ -1,7 +1,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
@@ -10,6 +9,9 @@ const FooterBody = ({
 }) => {
   const Logo = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'Logo',
+  );
+  const items = Children.toArray(children).filter(
+    (child) => child.props.__TYPE === 'FooterBodyItem',
   );
   return (
     <div
@@ -20,38 +22,7 @@ const FooterBody = ({
       <div className="fr-footer__content">
         <p className="fr-footer__content-desc">{description}</p>
         <ul className="fr-footer__content-list">
-          <li className="fr-footer__content-item">
-            <Link
-              className="fr-footer__content-link"
-              href="https://legifrance.gouv.fr"
-            >
-              legifrance.gouv.fr
-            </Link>
-          </li>
-          <li className="fr-footer__content-item">
-            <Link
-              className="fr-footer__content-link"
-              href="https://gouvernement.fr"
-            >
-              gouvernement.fr
-            </Link>
-          </li>
-          <li className="fr-footer__content-item">
-            <Link
-              className="fr-footer__content-link"
-              href="https://service-public.fr"
-            >
-              service-public.fr
-            </Link>
-          </li>
-          <li className="fr-footer__content-item">
-            <Link
-              className="fr-footer__content-link"
-              href="https://data.gouv.fr"
-            >
-              data.gouv.fr
-            </Link>
-          </li>
+          {items}
         </ul>
       </div>
     </div>

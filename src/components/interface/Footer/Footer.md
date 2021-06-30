@@ -1,6 +1,7 @@
 ```jsx
 import {
     FooterBody,
+    FooterBodyItem,
     FooterTop,
     FooterTopCategory,
     FooterBottom,
@@ -10,6 +11,7 @@ import {
     FooterPartnersTitle,
     FooterPartnersLogo,
     Footer,
+    Link,
 } from '.';
 import Logo from '../Logo';
 
@@ -34,6 +36,16 @@ import Logo from '../Logo';
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     >
         <Logo>bloc-marque</Logo>
+        <FooterBodyItem>
+            <Link href="https://service-public.fr">
+                service-public.fr
+            </Link>
+        </FooterBodyItem>
+        <FooterBodyItem>
+            <Link href="https://data.gouv.fr">
+                data.gouv.fr
+            </Link>
+        </FooterBodyItem>
     </FooterBody>
     <FooterPartners>
         <FooterPartnersTitle>Our partners</FooterPartnersTitle>
