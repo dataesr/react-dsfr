@@ -7,12 +7,14 @@ import {
   FooterLink,
   FooterTop,
   FooterBody,
+  FooterBodyItem,
   FooterPartners,
   FooterPartnersTitle,
   FooterPartnersLogo,
   Logo,
   FooterBottom,
   FooterCopy,
+  Link,
 } from '@dataesr/react-dsfr';
 
 const FooterExample = () => (
@@ -60,6 +62,26 @@ const FooterExample = () => (
       description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     >
       <Logo>Ministère de l‘enseignement supérieur de la rechercher et de l‘innovation</Logo>
+      <FooterBodyItem>
+        <Link href="https://legifrance.gouv.fr">
+          legifrance.gouv.fr
+        </Link>
+      </FooterBodyItem>
+      <FooterBodyItem>
+        <Link href="https://gouvernement.fr">
+          gouvernement.fr
+        </Link>
+      </FooterBodyItem>
+      <FooterBodyItem>
+        <Link href="https://service-public.fr">
+          service-public.fr
+        </Link>
+      </FooterBodyItem>
+      <FooterBodyItem>
+        <Link href="https://data.gouv.fr">
+          data.gouv.fr
+        </Link>
+      </FooterBodyItem>
     </FooterBody>
     <FooterPartners>
       <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>

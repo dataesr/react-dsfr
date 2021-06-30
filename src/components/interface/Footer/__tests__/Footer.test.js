@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import {
   FooterBody,
+  FooterBodyItem,
   FooterTop,
   FooterTopCategory,
   FooterBottom,
@@ -58,6 +59,18 @@ describe('<Footer />', () => {
           <Logo splitCharacter={10} data-testid="footerlogo">
             Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
           </Logo>
+          <FooterBodyItem>
+            legifrance.gouv.fr
+          </FooterBodyItem>
+          <FooterBodyItem>
+            gouvernement.fr
+          </FooterBodyItem>
+          <FooterBodyItem>
+            service-public.fr
+          </FooterBodyItem>
+          <FooterBodyItem>
+            data.gouv.fr
+          </FooterBodyItem>
         </FooterBody>
         <FooterPartners data-testid="footerpartners">
           <FooterPartnersTitle data-testid="title">Nos partenaires</FooterPartnersTitle>
