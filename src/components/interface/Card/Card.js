@@ -19,6 +19,7 @@ const Card = ({
   className,
   hasArrow,
   scheme,
+  bodyClassName,
   enlargeLink,
   ...remainingProps
 }) => {
@@ -40,10 +41,10 @@ const Card = ({
       className={_className}
       {...dataAttributes(remainingProps)}
     >
-      <div className="fr-card__body">
-        {detail}
+      <div className={classNames('fr-card__body', bodyClassName)}>
         {displayTitle}
         {description}
+        {detail}
       </div>
       {img}
     </div>
@@ -54,6 +55,7 @@ Card.defaultProps = {
   anchorAs: 'a',
   isHorizontal: false,
   className: '',
+  bodyClassName: '',
   hasArrow: true,
   enlargeLink: true,
   scheme: '',
@@ -71,6 +73,7 @@ Card.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  bodyClassName: PropTypes.string,
   hasArrow: PropTypes.bool,
   enlargeLink: PropTypes.bool,
   scheme: PropTypes.oneOf(SCHEMES),

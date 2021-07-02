@@ -9,12 +9,6 @@ exports[`<Card /> renders Card properly 1`] = `
     class="fr-card__body"
   >
     <p
-      class="fr-card__detail"
-      data-testid="carddetail"
-    >
-      Détail
-    </p>
-    <p
       class="fr-card__title"
       data-testid="cardtitle"
     >
@@ -30,6 +24,12 @@ exports[`<Card /> renders Card properly 1`] = `
       data-testid="carddescription"
     >
       Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
+    </p>
+    <p
+      class="fr-card__detail"
+      data-testid="carddetail"
+    >
+      Détail
     </p>
   </div>
   <div
