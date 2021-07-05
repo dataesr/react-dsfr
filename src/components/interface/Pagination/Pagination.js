@@ -12,6 +12,7 @@ const Pagination = ({
   currentPage,
   anchorAs,
   buildURL,
+  onClick,
   buttonLabels,
   surrendingPages,
   ...remainingProps
@@ -24,6 +25,34 @@ const Pagination = ({
     nextAria, firstAria, lastAria, currentAria, pageAria,
   } = buttonLabels;
 
+  const getItem = (down, index, aria, icon, label) => {
+    const check = down ? currentPage > 1 : currentPage < pageCount;
+    if (buildURL) {
+      return (
+        <Tag
+          href={check ? buildURL(index) : undefined}
+          className={classNames({ [`fr-pagination__link--${icon}`]: aria }, 'fr-pagination__link')}
+          aria-label={aria}
+          title={aria}
+        >
+          {label}
+        </Tag>
+      );
+    }
+
+    return (
+      <button
+        type="button"
+        onClick={() => onClick(index)}
+        disabled={!check}
+        className={classNames({ [`fr-pagination__link--${icon}`]: aria }, 'fr-pagination__link')}
+        aria-label={aria}
+      >
+        {label}
+      </button>
+    );
+  };
+
   return (
     <nav
       className="fr-pagination"
@@ -33,29 +62,18 @@ const Pagination = ({
     >
       <ul className="fr-pagination__list">
         <li>
-          <Tag
-            href={currentPage > 1 ? buildURL(1) : undefined}
-            className={classNames({ 'fr-pagination__link--first': firstAria }, 'fr-pagination__link')}
-            aria-label={firstAria}
-            title={firstAria}
-          />
+          {getItem(true, 1, firstAria, 'first')}
         </li>
         <li>
-          <Tag
-            href={currentPage > 1 ? buildURL(currentPage - 1) : undefined}
-            className={classNames({ 'fr-pagination__link--prev': prevAria }, 'fr-pagination__link')}
-            aria-label={prevAria}
-            title={prevAria}
-          >
-            {prevLabel}
-          </Tag>
+          {getItem(true, currentPage - 1, prevAria, 'prev', prevLabel)}
         </li>
         <PaginationItem
           isVisibleOnMobile
           page={1}
           anchorAs={anchorAs}
           isActive={currentPage === 1}
-          url={buildURL(1)}
+          buildURL={buildURL}
+          onClick={onClick}
           aria={pageAria(1)}
         />
         { surrendingLeft.hasEllipsis && (
@@ -65,7 +83,8 @@ const Pagination = ({
             key={p}
             page={p}
             anchorAs={anchorAs}
-            url={buildURL(p)}
+            buildURL={buildURL}
+            onClick={onClick}
             aria={pageAria(p)}
           />
         ))}
@@ -77,7 +96,8 @@ const Pagination = ({
             key={p}
             page={p}
             anchorAs={anchorAs}
-            url={buildURL(p)}
+            buildURL={buildURL}
+            onClick={onClick}
             aria={pageAria(p)}
           />
         ))}
@@ -91,26 +111,15 @@ const Pagination = ({
             isActive={currentPage === pageCount}
             page={pageCount}
             anchorAs={anchorAs}
-            url={buildURL(pageCount)}
+            buildURL={buildURL}
+            onClick={onClick}
           />
         )}
         <li>
-          <Tag
-            href={currentPage < pageCount ? buildURL(currentPage + 1) : undefined}
-            className={classNames({ 'fr-pagination__link--next': nextAria }, 'fr-pagination__link')}
-            aria-label={nextAria}
-            title={nextAria}
-          >
-            {nextLabel}
-          </Tag>
+          {getItem(false, currentPage + 1, nextAria, 'next', nextLabel)}
         </li>
         <li>
-          <Tag
-            href={currentPage < pageCount ? buildURL(pageCount) : undefined}
-            className={classNames({ 'fr-pagination__link--last': lastAria }, 'fr-pagination__link')}
-            aria-label={lastAria}
-            title={lastAria}
-          />
+          {getItem(false, pageCount, lastAria, 'last')}
         </li>
       </ul>
     </nav>
@@ -120,7 +129,36 @@ const Pagination = ({
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   pageCount: PropTypes.number.isRequired,
-  buildURL: PropTypes.func.isRequired,
+  buildURL: (props, propName, componentName) => {
+    const { buildURL, onClick } = props;
+    if ((!buildURL && !onClick) || (buildURL && onClick)) {
+      return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
+    }
+    if (buildURL) {
+      PropTypes.checkPropTypes({
+        buildURL: PropTypes.func,
+      },
+      { buildURL },
+      'prop',
+      'Pagination');
+    }
+    return null;
+  },
+  onClick: (props, propName, componentName) => {
+    const { buildURL, onClick } = props;
+    if ((!buildURL && !onClick) || (buildURL && onClick)) {
+      return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
+    }
+    if (onClick) {
+      PropTypes.checkPropTypes({
+        onClick: PropTypes.func,
+      },
+      { onClick },
+      'prop',
+      'Pagination');
+    }
+    return null;
+  },
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
   buttonLabels: PropTypes.shape({
     navigationAria: PropTypes.string,
@@ -139,6 +177,8 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   anchorAs: 'a',
   surrendingPages: 2,
+  buildURL: undefined,
+  onClick: undefined,
   buttonLabels: {
     navigationAria: 'Pagination navigation',
     currentAria: 'page',
