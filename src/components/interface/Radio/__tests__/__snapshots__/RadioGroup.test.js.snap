@@ -27,6 +27,7 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           id="xxxxxxx"
           name="radio-test"
           onChange={[Function]}
+          required={false}
           type="radio"
           value="value 1"
         />
@@ -47,6 +48,7 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           defaultChecked={false}
           name="radio-test"
           onChange={[Function]}
+          required={false}
           type="radio"
           value="value 2"
         />
