@@ -25,6 +25,7 @@ const Radio = ({
   value,
   name,
   checked,
+  required,
   ...remainingProps
 }) => {
   const [radioId, setRadioId] = useState(id || uuidv4());
@@ -62,6 +63,7 @@ const Radio = ({
         value={value}
         name={name}
         defaultChecked={checked}
+        required={required}
       />
       <label
         className={_labelClassName}
@@ -95,6 +97,7 @@ Radio.defaultProps = {
   imageURL: '',
   name: undefined,
   checked: undefined,
+  required: false,
 };
 
 Radio.propTypes = {
@@ -116,6 +119,7 @@ Radio.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string.isRequired,
   checked: PropTypes.bool,
+  required: PropTypes.bool,
 };
 
 export default Radio;

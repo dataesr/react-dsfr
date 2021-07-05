@@ -44,6 +44,16 @@ const [value, setValue] = useState('');
 />
 ```
 
+### Champ obligatoire
+
+```jsx
+<TextInput 
+  value=""
+  required
+  label="Text input du gouvernement"
+/>
+```
+
 ### État inactif
 
 L'état inactif est utilisé lorsque le champ ne peut être utilisé.

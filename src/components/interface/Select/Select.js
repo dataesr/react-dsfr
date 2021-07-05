@@ -22,6 +22,7 @@ const Select = ({
   onChange,
   options,
   selected,
+  required,
   ...remainingProps
 }) => {
   const _className = classNames('fr-select', {
@@ -42,6 +43,7 @@ const Select = ({
       label && (
         <label className="fr-label" htmlFor={selectId} aria-describedby={messageId}>
           {label}
+          {required && <span className="error"> *</span>}
           {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
         </label>
       )
@@ -84,6 +86,7 @@ Select.defaultProps = {
   name: null,
   onChange: () => {},
   selected: '',
+  required: false,
 };
 
 Select.propTypes = {
@@ -107,6 +110,7 @@ Select.propTypes = {
     hidden: PropTypes.bool,
   })).isRequired,
   selected: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 export default Select;

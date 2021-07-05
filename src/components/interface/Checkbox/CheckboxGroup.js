@@ -16,6 +16,7 @@ const CheckboxGroup = ({
   message,
   messageType,
   ariaLabel,
+  required,
   ...remainingProps
 }) => {
   const _className = classNames('fr-form-group', {
@@ -28,7 +29,12 @@ const CheckboxGroup = ({
       {...dataAttributes(remainingProps)}
     >
       <fieldset className="fr-fieldset" aria-label={ariaLabel || legend}>
-        {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
+        {legend && (
+        <legend className="fr-fieldset__legend">
+          {legend}
+          {required && <span className="error"> *</span>}
+        </legend>
+        )}
         {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
           {children}
@@ -46,6 +52,7 @@ CheckboxGroup.defaultProps = {
   messageType: '',
   message: '',
   ariaLabel: '',
+  required: false,
 };
 
 CheckboxGroup.propTypes = {
@@ -64,6 +71,7 @@ CheckboxGroup.propTypes = {
   legend: PropTypes.string.isRequired,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
+  required: PropTypes.bool,
 };
 
 export default CheckboxGroup;
