@@ -65,6 +65,19 @@ L'état inactif est utilisé lorsque le champ ne peut être utilisé.
 />
 ```
 
+### Avec placeholder
+Évitez l’utilisation de placeholder car il peut créer de la confusion chez l’utilisateur. 
+Si toutefois vous souhaitez l’utiliser, son contenu doit présenter des informations non indispensables à la compréhension du champ. 
+En aucun cas il ne peut remplacer un label et il est uniquement à réserver pour des aides à la saisie secondaires: 
+
+```jsx
+<TextInput
+  hint="Additionnal description"
+  placeholder="Info non essentielle"
+  label="Text input Label"
+/>
+```
+
 ## Textarea - Zone de texte
 Le champs “zone de texte” est un champ de saisie libre, qui accepte plus d’une ligne de contenu (texte ou/ et nombre). Il reprend le style du champ simple et augmente uniquement sa hauteur.
 
