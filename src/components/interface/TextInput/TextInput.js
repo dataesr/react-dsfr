@@ -21,6 +21,8 @@ const TextInput = forwardRef((props, ref) => {
     messageType,
     className,
     placeholder,
+    pattern,
+    title,
     ...remainingProps
   } = props;
 
@@ -50,6 +52,9 @@ const TextInput = forwardRef((props, ref) => {
               disabled={inactive}
               id={inputId}
               value={value}
+              placeholder={placeholder}
+              pattern={pattern}
+              title={title}
               onChange={onChange}
             />
           )
@@ -62,6 +67,8 @@ const TextInput = forwardRef((props, ref) => {
               id={inputId}
               value={value}
               placeholder={placeholder}
+              pattern={pattern}
+              title={title}
               onChange={onChange}
             />
           )
@@ -81,6 +88,8 @@ TextInput.defaultProps = {
   label: null,
   className: '',
   placeholder: undefined,
+  pattern: undefined,
+  title: undefined,
 };
 TextInput.propTypes = {
   textarea: PropTypes.bool,
@@ -92,6 +101,8 @@ TextInput.propTypes = {
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
   placeholder: PropTypes.string,
+  pattern: PropTypes.string,
+  title: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
