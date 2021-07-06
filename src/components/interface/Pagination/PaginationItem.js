@@ -39,8 +39,11 @@ const PaginationItem = ({
       <button
         type="button"
         aria-current={(isActive && 'page') || undefined}
-        onClick={() => onClick(page)}
-        disabled={!onClick}
+        onClick={() => {
+          if (onClick) {
+            onClick(page);
+          }
+        }}
         className="fr-pagination__link"
         aria-label={aria}
       >

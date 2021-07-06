@@ -89,7 +89,12 @@ const Pagination = ({
           />
         ))}
         {((currentPage !== 1) && (currentPage !== pageCount)) && (
-          <PaginationItem page={currentPage} isVisibleOnMobile isActive aria={currentAria} />
+          <PaginationItem
+            page={currentPage}
+            isVisibleOnMobile
+            isActive
+            aria={currentAria}
+          />
         )}
         {surrendingRight.pages.map((p) => (
           <PaginationItem

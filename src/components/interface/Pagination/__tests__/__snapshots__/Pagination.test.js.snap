@@ -66,7 +66,6 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         aria-current="page"
         aria-label="page"
         class="fr-pagination__link"
-        disabled=""
         type="button"
       >
         8
@@ -188,7 +187,6 @@ exports[`<Pagination /> should render state pagination properly 1`] = `
         aria-current="page"
         aria-label="page"
         class="fr-pagination__link"
-        disabled=""
         type="button"
       >
         8
