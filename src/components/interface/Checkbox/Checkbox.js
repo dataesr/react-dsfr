@@ -22,6 +22,7 @@ const Checkbox = forwardRef((props, ref) => {
     onChange,
     size,
     value,
+    defaultChecked,
     ...remainingProps
   } = props;
   const _className = classNames('fr-checkbox-group', {
@@ -40,6 +41,7 @@ const Checkbox = forwardRef((props, ref) => {
         type="checkbox"
         id={checkboxId}
         name="checkbox"
+        defaultChecked={defaultChecked}
         onChange={onChange}
         ref={ref}
         value={value}
@@ -61,6 +63,7 @@ Checkbox.defaultProps = {
   onChange: () => {},
   messageType: '',
   message: '',
+  defaultChecked: false,
 };
 
 Checkbox.propTypes = {
@@ -78,6 +81,7 @@ Checkbox.propTypes = {
   onChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
   value: PropTypes.string.isRequired,
+  defaultChecked: PropTypes.bool,
 };
 
 export default Checkbox;
