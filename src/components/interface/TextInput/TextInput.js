@@ -24,6 +24,7 @@ const TextInput = forwardRef((props, ref) => {
     pattern,
     title,
     required,
+    type,
     ...remainingProps
   } = props;
 
@@ -74,7 +75,7 @@ const TextInput = forwardRef((props, ref) => {
               ref={ref}
               className={_className}
               disabled={inactive}
-              type="text"
+              type={type}
               id={inputId}
               value={value}
               placeholder={placeholder}
@@ -103,6 +104,7 @@ TextInput.defaultProps = {
   pattern: undefined,
   title: undefined,
   required: false,
+  type: 'text',
 };
 TextInput.propTypes = {
   textarea: PropTypes.bool,
@@ -117,6 +119,7 @@ TextInput.propTypes = {
   pattern: PropTypes.string,
   title: PropTypes.string,
   required: PropTypes.bool,
+  type: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
