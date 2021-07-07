@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import withProps from '../../../utils/withProps';
 
 const Tab = ({
-  className, index, activeTab, setHeight, children, ...remainingProps
+  className, index, activeTab, children, ...remainingProps
 }) => (
   <div
     id={`fr-tabpanel-${index}`}
@@ -34,7 +34,6 @@ Tab.propTypes = {
   ]),
   index: PropTypes.number.isRequired,
   activeTab: PropTypes.number.isRequired,
-  setHeight: PropTypes.func.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
