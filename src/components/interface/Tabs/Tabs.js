@@ -19,9 +19,8 @@ const Tabs = ({
   className, children, defaultActiveTab, scheme, ...remainingProps
 }) => {
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
-  const [contentTabHeight, setHeight] = useState(() => 500);
   const addProps = {
-    activeTab, setHeight,
+    activeTab,
   };
   const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
     ...addProps,
@@ -33,10 +32,12 @@ const Tabs = ({
   return (
     <div
       className={_className}
-      style={{ height: contentTabHeight }}
       {...dataAttributes(remainingProps)}
     >
-      <ul className="fr-tabs__list" role="tablist">
+      <ul
+        className="fr-tabs__list"
+        role="tablist"
+      >
         {tabsPanel.map((element, index) => (
           <TabButton
             key={uuidv4()}

@@ -3,11 +3,6 @@
 exports[`<Tabs /> should render Tabs properly 1`] = `
 <div
   className="fr-tabs fr-scheme-soft-blue-soft"
-  style={
-    Object {
-      "height": 500,
-    }
-  }
 >
   <ul
     className="fr-tabs__list"
