@@ -53,10 +53,4 @@ describe('<Tab />', () => {
     const component = wrapper({ ...initProps });
     expect(component.find('.fr-tabs__panel').hasClass('fr-tabs__panel--selected')).toBeTruthy();
   });
-
-  test('on load setHeight', () => {
-    const mockSetHeight = jest.fn();
-    wrapper({ ...initProps, setHeight: mockSetHeight });
-    expect(mockSetHeight).toHaveBeenCalled();
-  });
 });
