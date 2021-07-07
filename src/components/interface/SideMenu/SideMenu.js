@@ -41,7 +41,7 @@ const SideMenu = ({
           id={itemID}
           style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
         >
-          <div className="fr-sidemenu__title">{title}</div>
+          {title && <div className="fr-sidemenu__title">{title}</div>}
           <ul className="fr-sidemenu__list">
             {children}
           </ul>
@@ -61,8 +61,8 @@ SideMenu.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
 };
-SideMenu.defaultProps = { className: '' };
+SideMenu.defaultProps = { className: '', title: undefined };
 export default SideMenu;
