@@ -6,27 +6,49 @@ const PaginationItem = ({
   page,
   anchorAs,
   isActive,
-  url,
+  buildURL,
+  onClick,
   aria,
   ...remainingProps
 }) => {
   const Tag = `${anchorAs}`;
-  const href = (anchorAs === 'a') ? url : undefined;
-  const to = (anchorAs !== 'a') ? url : undefined;
+  if (buildURL) {
+    const href = (anchorAs === 'a') ? buildURL(page) : undefined;
+    const to = (anchorAs !== 'a') ? buildURL(page) : undefined;
+    return (
+      <li
+        {...dataAttributes(remainingProps)}
+      >
+        <Tag
+          aria-current={(isActive && 'page') || undefined}
+          href={href}
+          to={to}
+          className="fr-pagination__link"
+          aria-label={aria}
+          title={aria}
+        >
+          {page}
+        </Tag>
+      </li>
+    );
+  }
   return (
     <li
       {...dataAttributes(remainingProps)}
     >
-      <Tag
+      <button
+        type="button"
         aria-current={(isActive && 'page') || undefined}
-        href={href}
-        to={to}
+        onClick={() => {
+          if (onClick) {
+            onClick(page);
+          }
+        }}
         className="fr-pagination__link"
         aria-label={aria}
-        title={aria}
       >
         {page}
-      </Tag>
+      </button>
     </li>
   );
 };
@@ -34,7 +56,8 @@ const PaginationItem = ({
 PaginationItem.propTypes = {
   page: PropTypes.number.isRequired,
   isActive: PropTypes.bool,
-  url: PropTypes.string,
+  buildURL: PropTypes.func,
+  onClick: PropTypes.func,
   aria: PropTypes.string,
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
 };
@@ -42,7 +65,8 @@ PaginationItem.propTypes = {
 PaginationItem.defaultProps = {
   anchorAs: 'a',
   isActive: false,
-  url: null,
+  buildURL: undefined,
+  onClick: undefined,
   aria: null,
 };
 export default PaginationItem;
