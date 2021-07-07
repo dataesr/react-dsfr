@@ -49,7 +49,7 @@ const SearchBar = forwardRef((props, ref) => {
       className={_className}
       {...dataAttributes(remainingProps)}
     >
-      <label className="fr-label" htmlFor={inputId}>{label}</label>
+      { label && <label className="fr-label" htmlFor={inputId}>{label}</label>}
       <input
         ref={ref}
         className="fr-input"
@@ -77,9 +77,10 @@ SearchBar.defaultProps = {
   placeholder: '',
   defaultValue: '',
   className: '',
+  label: '',
 };
 SearchBar.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   /**

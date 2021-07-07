@@ -44,6 +44,16 @@ const [value, setValue] = useState('');
 />
 ```
 
+### Champ obligatoire
+
+```jsx
+<TextInput 
+  value=""
+  required
+  label="Text input du gouvernement"
+/>
+```
+
 ### État inactif
 
 L'état inactif est utilisé lorsque le champ ne peut être utilisé.
@@ -61,6 +71,30 @@ L'état inactif est utilisé lorsque le champ ne peut être utilisé.
 ```jsx
 <TextInput
   hint="Additionnal description"
+  label="Text input Label"
+/>
+```
+
+### Avec placeholder
+Évitez l’utilisation de placeholder car il peut créer de la confusion chez l’utilisateur. 
+Si toutefois vous souhaitez l’utiliser, son contenu doit présenter des informations non indispensables à la compréhension du champ. 
+En aucun cas il ne peut remplacer un label et il est uniquement à réserver pour des aides à la saisie secondaires.
+
+```jsx
+<TextInput
+  hint="Additionnal description"
+  placeholder="Info non essentielle"
+  label="Text input Label"
+/>
+```
+
+### Vérification de l'entrée
+Vous pouvez specifier un pattern à respecter pour l'input, avec optionellement un message d'erreur si ce dernier n'est pas valide.
+
+```jsx
+<TextInput
+  pattern="[a-z]{4,8}" 
+  title="4 à 8 lettres en minuscules"
   label="Text input Label"
 />
 ```
