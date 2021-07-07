@@ -20,6 +20,11 @@ const TextInput = forwardRef((props, ref) => {
     onChange,
     messageType,
     className,
+    placeholder,
+    pattern,
+    title,
+    required,
+    type,
     ...remainingProps
   } = props;
 
@@ -38,7 +43,16 @@ const TextInput = forwardRef((props, ref) => {
       className={_classNameWrapper}
       {...dataAttributes(remainingProps)}
     >
-      {label && <label className="fr-label" htmlFor={inputId} aria-describedby={hintId || messageId || undefined}>{label}</label>}
+      {label && (
+      <label
+        className="fr-label"
+        htmlFor={inputId}
+        aria-describedby={hintId || messageId || undefined}
+      >
+        {label}
+        {required && <span className="error"> *</span>}
+      </label>
+      )}
       {hint && <p className="fr-hint-text" id={hintId}>{hint}</p>}
       {
         (textarea)
@@ -49,6 +63,10 @@ const TextInput = forwardRef((props, ref) => {
               disabled={inactive}
               id={inputId}
               value={value}
+              placeholder={placeholder}
+              pattern={pattern}
+              title={title}
+              required={required}
               onChange={onChange}
             />
           )
@@ -57,9 +75,13 @@ const TextInput = forwardRef((props, ref) => {
               ref={ref}
               className={_className}
               disabled={inactive}
-              type="text"
+              type={type}
               id={inputId}
               value={value}
+              placeholder={placeholder}
+              pattern={pattern}
+              title={title}
+              required={required}
               onChange={onChange}
             />
           )
@@ -78,6 +100,11 @@ TextInput.defaultProps = {
   message: '',
   label: null,
   className: '',
+  placeholder: undefined,
+  pattern: undefined,
+  title: undefined,
+  required: false,
+  type: 'text',
 };
 TextInput.propTypes = {
   textarea: PropTypes.bool,
@@ -88,6 +115,11 @@ TextInput.propTypes = {
   onChange: PropTypes.func,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
+  placeholder: PropTypes.string,
+  pattern: PropTypes.string,
+  title: PropTypes.string,
+  required: PropTypes.bool,
+  type: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

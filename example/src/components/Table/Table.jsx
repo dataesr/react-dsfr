@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
-  Col, SimpleTable,
+  Col, SimpleTable, Pagination,
 } from '@dataesr/react-dsfr';
 
 const data = [
@@ -85,10 +85,23 @@ const data = [
   },
 ];
 
-const TableExample = () => (
-  <Col>
-    <SimpleTable tableClassName="tableClassName" tableID="tableID-1" caption="Simple Table" data={data} />
-  </Col>
-);
+const TableExample = () => {
+  const [page, setPage] = useState(1);
+  return (
+    <Col>
+      <SimpleTable
+        tableClassName="tableClassName"
+        tableID="tableID-1"
+        caption="Simple Table"
+        data={data.slice((page - 1) * 3, page * 3)}
+      />
+      <Pagination
+        currentPage={page}
+        pageCount={5}
+        onClick={setPage}
+      />
+    </Col>
+  );
+};
 
 export default TableExample;

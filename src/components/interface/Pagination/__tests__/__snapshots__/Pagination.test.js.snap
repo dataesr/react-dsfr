@@ -62,14 +62,14 @@ exports[`<Pagination /> should render pagination properly 1`] = `
       </a>
     </li>
     <li>
-      <a
+      <button
         aria-current="page"
         aria-label="page"
         class="fr-pagination__link"
-        title="page"
+        type="button"
       >
         8
-      </a>
+      </button>
     </li>
     <li>
       <a
@@ -120,6 +120,122 @@ exports[`<Pagination /> should render pagination properly 1`] = `
         class="fr-pagination__link--last fr-pagination__link"
         href="page15"
         title="Dernière Page"
+      />
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<Pagination /> should render state pagination properly 1`] = `
+<nav
+  aria-label="Pagination navigation"
+  class="fr-pagination"
+  data-testid="pagination"
+  role="navigation"
+>
+  <ul
+    class="fr-pagination__list"
+  >
+    <li>
+      <button
+        aria-label="Première page"
+        class="fr-pagination__link--first fr-pagination__link"
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Page précédente"
+        class="fr-pagination__link--prev fr-pagination__link"
+        type="button"
+      >
+        Précédente
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Page 1"
+        class="fr-pagination__link"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      …
+    </li>
+    <li>
+      <button
+        aria-label="Page 6"
+        class="fr-pagination__link"
+        type="button"
+      >
+        6
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Page 7"
+        class="fr-pagination__link"
+        type="button"
+      >
+        7
+      </button>
+    </li>
+    <li>
+      <button
+        aria-current="page"
+        aria-label="page"
+        class="fr-pagination__link"
+        type="button"
+      >
+        8
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Page 9"
+        class="fr-pagination__link"
+        type="button"
+      >
+        9
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Page 10"
+        class="fr-pagination__link"
+        type="button"
+      >
+        10
+      </button>
+    </li>
+    <li>
+      …
+    </li>
+    <li>
+      <button
+        aria-label="Page 15"
+        class="fr-pagination__link"
+        type="button"
+      >
+        15
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Page suivante"
+        class="fr-pagination__link--next fr-pagination__link"
+        type="button"
+      >
+        Suivante
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Dernière Page"
+        class="fr-pagination__link--last fr-pagination__link"
+        type="button"
       />
     </li>
   </ul>

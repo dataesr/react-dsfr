@@ -24,6 +24,7 @@ const RadioGroup = ({
   name,
   value,
   onChange,
+  required,
   ...remainingProps
 }) => {
   const [radioName, setRadioName] = useState(name || uuidv4());
@@ -43,6 +44,7 @@ const RadioGroup = ({
   const childs = Children.toArray(children).map((child) => cloneElement(child, {
     name: child.props.name || radioName,
     checked: value ? child.props.value === value : child.props.value === internalValue,
+    required,
     onGroupChange,
   }));
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
@@ -58,7 +60,12 @@ const RadioGroup = ({
         aria-label={ariaLabel || legend}
         disabled={isDisabled}
       >
-        {legend && <legend className="fr-fieldset__legend">{legend}</legend>}
+        {legend && (
+        <legend className="fr-fieldset__legend">
+          {legend}
+          {required && <span className="error"> *</span>}
+        </legend>
+        )}
         {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
           {childs}
@@ -81,6 +88,7 @@ RadioGroup.defaultProps = {
   name: undefined,
   value: '',
   onChange: () => {},
+  required: false,
 };
 
 RadioGroup.propTypes = {
@@ -104,6 +112,7 @@ RadioGroup.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  required: PropTypes.bool,
 };
 
 export default RadioGroup;
