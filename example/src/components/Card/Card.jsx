@@ -12,7 +12,12 @@ const TagExample = () => (
       <CardTitle>
         Qu’est-ce que le Pass Culture et comment l’obtenir ?
       </CardTitle>
-      <CardDescription>
+      <CardDescription as="div">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Ab ad assumenda dolores eius fuga in iste labore laborum.
+          Deleniti error exercitationem fugit libero.
+        </div>
         Description texte body small regular consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore…
       </CardDescription>

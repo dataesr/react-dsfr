@@ -4,15 +4,26 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
-const CardDescription = ({ children, className, ...remainingProps }) => (
-  <p
-    className={classNames('fr-card__desc', className)}
-    {...dataAttributes(remainingProps)}
-  >
-    {children}
+const CardDescription = ({
+  children, className, as, ...remainingProps
+}) => {
+  const Tag = `${as}`;
+  return (
+    <Tag
+      className={classNames('fr-card__desc', className)}
+      {...dataAttributes(remainingProps)}
+    >
+      {children}
 
-  </p>
-);
+    </Tag>
+  );
+};
+CardDescription.defaultProps = {
+  __TYPE: 'CardDescription',
+  className: '',
+  as: 'p',
+};
+
 CardDescription.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('CardDescription'),
@@ -22,10 +33,7 @@ CardDescription.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-};
-CardDescription.defaultProps = {
-  __TYPE: 'CardDescription',
-  className: '',
+  as: PropTypes.oneOf(['span', 'div', 'p']),
 };
 
 export default CardDescription;
