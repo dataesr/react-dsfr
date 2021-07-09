@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -29,7 +29,7 @@ const Select = ({
     [`fr-select--${messageType}`]: messageType,
   });
   const selectId = id || uuidv4();
-  const messageId = uuidv4();
+  const [messageId] = useState(uuidv4());
   const _classNameWrapper = classNames('fr-select-group', {
     [`fr-select-group--${messageType}`]: messageType,
   }, className);
@@ -82,7 +82,7 @@ Select.defaultProps = {
   id: null,
   label: '',
   message: '',
-  messageType: 'valid',
+  messageType: undefined,
   name: null,
   onChange: () => {},
   selected: '',
