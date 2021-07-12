@@ -37,7 +37,14 @@ const Link = ({
     onClick();
   };
 
-  const asLink = as ? cloneElement(as, { className: _className, children, 'aria-current': (current && 'page') || undefined }) : null;
+  const asLink = as
+    ? cloneElement(as, {
+      className: _className,
+      children,
+      'aria-current': (current && 'page') || undefined,
+      onClick,
+    })
+    : null;
   const _link = (
     <a
       onClick={onClick ? (e) => onClickLink(e) : undefined}
