@@ -6,7 +6,7 @@ import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
 
 const ToolItem = ({
-  icon, link, className, children, asLink, ...remainingProps
+  icon, link, className, children, asLink, target, ...remainingProps
 }) => (
   <li
     key={uuidv4()}
@@ -14,6 +14,7 @@ const ToolItem = ({
   >
     <Link
       as={asLink}
+      target={target}
       className={className}
       isSimple
       display="flex"
@@ -32,6 +33,7 @@ ToolItem.defaultProps = {
   icon: '',
   link: '',
   asLink: null,
+  target: '_self',
 };
 
 ToolItem.propTypes = {
@@ -44,6 +46,7 @@ ToolItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
   asLink: PropTypes.element,
+  target: PropTypes.string,
 };
 
 export default ToolItem;
