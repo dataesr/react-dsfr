@@ -6,6 +6,7 @@ import Text from './components/foundation/typography/Text/index';
 import Title from './components/foundation/typography/Title/index';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
+import Alert from './components/interface/Alert/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
@@ -46,6 +47,7 @@ import Toggle from './components/interface/Toggle/index';
 const library = () => ({
   Accordion,
   AccordionItem,
+  Alert,
   Logo,
   Breadcrumb,
   BreadcrumbItem,
