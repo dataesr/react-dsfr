@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/selects.min.css';
+import SelectWrapper from './SelectWrapper';
 
 /**
  *
@@ -28,26 +27,19 @@ const Select = ({
   const _className = classNames('fr-select', {
     [`fr-select--${messageType}`]: messageType,
   });
-  const selectId = id || uuidv4();
-  const messageId = uuidv4();
-  const _classNameWrapper = classNames('fr-select-group', {
-    [`fr-select-group--${messageType}`]: messageType,
-  }, className);
+  const [selectId] = useState(id || uuidv4());
 
   return (
-    <div
-      className={_classNameWrapper}
-      {...dataAttributes(remainingProps)}
+    <SelectWrapper
+      className={className}
+      hint={hint}
+      selectId={selectId}
+      label={label}
+      message={message}
+      messageType={messageType}
+      required={required}
+      {...remainingProps}
     >
-      {
-      label && (
-        <label className="fr-label" htmlFor={selectId} aria-describedby={messageId}>
-          {label}
-          {required && <span className="error"> *</span>}
-          {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
-        </label>
-      )
-      }
       <select
         className={_className}
         disabled={disabled}
@@ -62,7 +54,7 @@ const Select = ({
             <option
               disabled={opt.disabled || false}
               hidden={opt.hidden || false}
-              key={`${selectId}-${uuidv4()}`}
+              key={`${selectId}-${opt.value}`}
               value={opt.value}
             >
               {opt.label}
@@ -70,8 +62,7 @@ const Select = ({
           ))
         }
       </select>
-      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
-    </div>
+    </SelectWrapper>
   );
 };
 
@@ -82,7 +73,7 @@ Select.defaultProps = {
   id: null,
   label: '',
   message: '',
-  messageType: 'valid',
+  messageType: undefined,
   name: null,
   onChange: () => {},
   selected: '',

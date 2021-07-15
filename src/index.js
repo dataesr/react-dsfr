@@ -32,7 +32,7 @@ import {
 import Pagination from './components/interface/Pagination/index';
 import { Radio, RadioGroup } from './components/interface/Radio/index';
 import SearchBar from './components/interface/SearchBar/index';
-import Select from './components/interface/Select/index';
+import { Select, SearcheableSelect } from './components/interface/Select/index';
 import { SideMenu, SideMenuLink, SideMenuItem } from './components/interface/SideMenu/index';
 import { Skiplinks, SkiplinkItem } from './components/interface/Skiplinks/index';
 import { Summary, SummaryItem } from './components/interface/Summary/index';
@@ -105,6 +105,7 @@ const library = () => ({
   RadioGroup,
   SearchBar,
   Select,
+  SearcheableSelect,
   SideMenu,
   SideMenuItem,
   SideMenuLink,

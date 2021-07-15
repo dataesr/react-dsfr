@@ -1,0 +1,28 @@
+﻿.select-search-options {
+    background-color: white;
+    box-shadow: 0px 4px 30px rgba(43, 43, 43, 0.13);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    max-height: 32vh;
+    overflow: scroll;
+    display: none;
+}
+
+.select-search-options__visible {
+    display: inherit;
+}
+
+.select-search-option__disabled,
+.select-search-option {
+    padding: 8px 16px;
+    color: var(--bf500);
+}
+
+.select-search-option {
+    cursor: pointer;
+}
+
+.select-search-option:hover {
+    background-color: var(--block-color-hover);
+}
