@@ -28,10 +28,6 @@ const Select = ({
     [`fr-select--${messageType}`]: messageType,
   });
   const [selectId] = useState(id || uuidv4());
-  const [messageId] = useState(uuidv4());
-  const _classNameWrapper = classNames('fr-select-group', {
-    [`fr-select-group--${messageType}`]: messageType,
-  }, className);
 
   return (
     <SelectWrapper
