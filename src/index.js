@@ -6,6 +6,7 @@ import Text from './components/foundation/typography/Text/index';
 import Title from './components/foundation/typography/Title/index';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
+import Alert from './components/interface/Alert/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
@@ -32,7 +33,7 @@ import {
 import Pagination from './components/interface/Pagination/index';
 import { Radio, RadioGroup } from './components/interface/Radio/index';
 import SearchBar from './components/interface/SearchBar/index';
-import Select from './components/interface/Select/index';
+import { Select, SearcheableSelect } from './components/interface/Select/index';
 import { SideMenu, SideMenuLink, SideMenuItem } from './components/interface/SideMenu/index';
 import { Skiplinks, SkiplinkItem } from './components/interface/Skiplinks/index';
 import { Summary, SummaryItem } from './components/interface/Summary/index';
@@ -46,6 +47,7 @@ import Toggle from './components/interface/Toggle/index';
 const library = () => ({
   Accordion,
   AccordionItem,
+  Alert,
   Logo,
   Breadcrumb,
   BreadcrumbItem,
@@ -105,6 +107,7 @@ const library = () => ({
   RadioGroup,
   SearchBar,
   Select,
+  SearcheableSelect,
   SideMenu,
   SideMenuItem,
   SideMenuLink,
