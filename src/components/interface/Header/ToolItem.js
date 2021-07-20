@@ -7,17 +7,16 @@ import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
 
 const ToolItem = ({
-  icon, link, className, children, asLink, ...remainingProps
-}) => {
-  const { onOpenNav } = useContext(HeaderContext);
-  return (
-    <li
-      key={uuidv4()}
-      {...dataAttributes(remainingProps)}
+  icon, link, className, children, asLink, target, ...remainingProps
+}) => (
+  <li
+    key={uuidv4()}
+    {...dataAttributes(remainingProps)}
     >
       <Link
         onClick={() => onOpenNav(false)}
         as={asLink}
+        target={target}
         className={className}
         isSimple
         display="flex"
@@ -37,6 +36,7 @@ ToolItem.defaultProps = {
   icon: '',
   link: '',
   asLink: null,
+  target: '_self',
 };
 
 ToolItem.propTypes = {
@@ -49,6 +49,7 @@ ToolItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
   asLink: PropTypes.element,
+  target: PropTypes.string,
 };
 
 export default ToolItem;
