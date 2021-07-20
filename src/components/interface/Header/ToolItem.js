@@ -8,10 +8,12 @@ import HeaderContext from './headerContext';
 
 const ToolItem = ({
   icon, link, className, children, asLink, target, ...remainingProps
-}) => (
-  <li
-    key={uuidv4()}
-    {...dataAttributes(remainingProps)}
+}) => {
+  const { onOpenNav } = useContext(HeaderContext);
+  return (
+    <li
+      key={uuidv4()}
+      {...dataAttributes(remainingProps)}
     >
       <Link
         onClick={() => onOpenNav(false)}
