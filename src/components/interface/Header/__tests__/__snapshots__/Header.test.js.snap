@@ -103,7 +103,7 @@ exports[`<Header /> renders correctly 1`] = `
                     target="_self"
                   >
                     <span
-                      className="ri-1x icon-left fr-fi-lock-line ds-fr--v-top"
+                      className="ri-1x icon-left fr-fi-lock-line ds-fr--v-middle"
                     />
                     Se connecter
                   </a>
@@ -118,7 +118,7 @@ exports[`<Header /> renders correctly 1`] = `
                     target="_self"
                   >
                     <span
-                      className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-top"
+                      className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-middle"
                     />
                     Créer un espace
                   </a>

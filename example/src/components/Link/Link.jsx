@@ -7,6 +7,16 @@ import {
 const LinkExample = () => (
   <>
     <Col>
+      <DSLink
+        className="bso-link"
+        icon="ri-arrow-right-line"
+        iconPosition="right"
+        iconSize="lg"
+      >
+        Link with icon on the right
+      </DSLink>
+    </Col>
+    <Col>
       <DSLink title="title" href="/#">Link</DSLink>
     </Col>
     <Col>
