@@ -39,11 +39,11 @@ Row.propTypes = {
   /**
   * Vertical alignment of children
   */
-  alignItems: PropTypes.oneOf(['start', 'middle', 'end']),
+  alignItems: PropTypes.oneOf(['top', 'middle', 'bottom']),
   /**
   * Horizontal alignement.
   */
-  justifyContent: PropTypes.oneOf(['start', 'center', 'end']),
+  justifyContent: PropTypes.oneOf(['right', 'center', 'left']),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
