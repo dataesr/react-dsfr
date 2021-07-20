@@ -99,6 +99,7 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
+                    onClick={[Function]}
                     target="_self"
                   >
                     <span
@@ -113,6 +114,7 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
+                    onClick={[Function]}
                     target="_self"
                   >
                     <span
@@ -177,6 +179,7 @@ exports[`<Header /> renders correctly 1`] = `
             <a
               className="fr-nav__link"
               href="/"
+              onClick={[Function]}
               target="_self"
             >
               Home
@@ -215,6 +218,7 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-1"
+                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #1
@@ -226,6 +230,7 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-2"
+                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #2
@@ -237,6 +242,7 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-3"
+                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #3
