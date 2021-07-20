@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should render alert properly 1`] = `
+<div
+  class="fr-alert fr-alert--info custom-class"
+  data-testid="alert"
+  role="alert"
+>
+  <p
+    class="fr-alert__title"
+  >
+    Titre
+  </p>
+  <p>
+    Description
+  </p>
+</div>
+`;
