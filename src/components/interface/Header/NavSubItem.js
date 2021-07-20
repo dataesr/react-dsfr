@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
+import HeaderContext from './headerContext';
 
 const NavSubItem = ({
   title, link, current, asLink, ...remainingProps
-}) => (
-  <li
-    key={title}
-    {...dataAttributes(remainingProps)}
-  >
-    <Link
-      as={asLink}
-      className="fr-nav__link"
-      href={link}
-      current={current}
+}) => {
+  const { onOpenNav } = useContext(HeaderContext);
+
+  return (
+    <li
+      key={title}
+      {...dataAttributes(remainingProps)}
     >
-      {title}
-    </Link>
-  </li>
-);
+      <Link
+        onClick={() => onOpenNav(false)}
+        as={asLink}
+        className="fr-nav__link"
+        href={link}
+        current={current}
+      >
+        {title}
+      </Link>
+    </li>
+  );
+};
 
 NavSubItem.defaultProps = {
   __TYPE: 'NavSubItem',

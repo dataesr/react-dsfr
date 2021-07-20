@@ -31,6 +31,7 @@ import Page1 from './Page-1';
 import Page2 from './Page-2';
 import TabsExample from './components/Tabs/Tabs';
 import TextInputExample from './components/TextInput/TextInput';
+import AlertExample from './components/Alert/Alert';
 
 const App = () => {
   const elements = [
@@ -57,6 +58,7 @@ const App = () => {
     { title: 'Toggle', component: <ToggleExample /> },
     { title: 'Accordion', component: <AccordionExample /> },
     { title: 'Skiplinks', component: <SkiplinksExample /> },
+    { title: 'Alert', component: <AlertExample /> },
   ];
 
   return (
