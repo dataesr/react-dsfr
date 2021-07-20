@@ -1,14 +1,17 @@
-import React, { Children } from 'react';
+import React, { Children, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 import NavItemWithSubItems from './NavItemWithSubItems';
+import HeaderContext from './headerContext';
 
 const NavItem = ({
   children, title, link, path, current, asLink, ...remainingProps
 }) => {
+  const { onOpenNav } = useContext(HeaderContext);
+
   const subItems = Children.toArray(children).filter(
     (child) => child.props && child.props.__TYPE === 'NavSubItem',
   );
@@ -31,6 +34,7 @@ const NavItem = ({
         {...dataAttributes(remainingProps)}
       >
         <Link
+          onClick={() => onOpenNav(false)}
           as={asLink}
           className="fr-nav__link"
           href={link}
