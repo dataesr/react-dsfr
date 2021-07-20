@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  Col, Select,
+  Col, Select, SearcheableSelect,
 } from '@dataesr/react-dsfr';
+import DEPARTEMENTS from './departments';
 
 const options = [
   {
@@ -16,6 +17,7 @@ const options = [
 const SelectExample = () => {
   const [selectValue1, setSelectValue1] = useState('');
   const [selectValue2, setSelectValue2] = useState('');
+  const [department, setDepartment] = useState('');
   return (
     <Col>
       <Select
@@ -31,6 +33,12 @@ const SelectExample = () => {
         onChange={(e) => { setSelectValue2(e.target.value); }}
         message="Texte d'erreur obligatoire"
         messageType="error"
+      />
+      <SearcheableSelect
+        label="Select avec recherche"
+        selected={department}
+        onChange={setDepartment}
+        options={DEPARTEMENTS.map((departement) => ({ value: departement, label: departement }))}
       />
     </Col>
   );

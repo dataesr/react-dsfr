@@ -122,3 +122,23 @@ const [selectedValue, setSelectedvalue] = useState('');
     }}
 />
 ```
+
+### Avec recherche
+
+```jsx
+import { useState } from 'react';
+import { SearcheableSelect } from '.';
+
+const [selectedValue, setSelectedvalue] = useState('');
+
+<SearcheableSelect
+    selected={selectedValue}
+    label="Label"
+    options={ [
+        { value: '1', label: 'Burgers' },
+        { value: '2', label: 'Build your own' },
+        { value: '3', label: 'Friendly meals' }]}
+    onChange={setSelectedvalue}
+/>
+```
+
