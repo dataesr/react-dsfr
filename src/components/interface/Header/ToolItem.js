@@ -7,28 +7,39 @@ import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
 
 const ToolItem = ({
-  icon, link, className, children, asLink, target, ...remainingProps
+  icon, link, className, children, asLink, target, as, ...remainingProps
 }) => {
   const { onOpenNav } = useContext(HeaderContext);
+  const HtmlTag = `${as}`;
+
   return (
     <li
       key={uuidv4()}
       {...dataAttributes(remainingProps)}
     >
-      <Link
-        onClick={() => onOpenNav(false)}
-        as={asLink}
-        target={target}
-        className={className}
-        isSimple
-        display="flex"
-        icon={icon}
-        iconPosition="left"
-        iconSize="1x"
-        href={link}
-      >
-        {children}
-      </Link>
+      {as ? (
+        <HtmlTag
+          onClick={() => onOpenNav(false)}
+          className={className}
+        >
+          {children}
+        </HtmlTag>
+      ) : (
+        <Link
+          onClick={() => onOpenNav(false)}
+          as={asLink}
+          target={target}
+          className={className}
+          isSimple
+          display="flex"
+          icon={icon}
+          iconPosition="left"
+          iconSize="1x"
+          href={link}
+        >
+          {children}
+        </Link>
+      )}
     </li>
   );
 };
@@ -38,6 +49,7 @@ ToolItem.defaultProps = {
   icon: '',
   link: '',
   asLink: null,
+  as: '',
   target: '_self',
 };
 
@@ -48,6 +60,10 @@ ToolItem.propTypes = {
     PropTypes.array,
   ]),
   icon: PropTypes.string,
+  /**
+   * html tag to render
+   */
+  as: PropTypes.oneOf(['p', 'span', 'div']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
   asLink: PropTypes.element,
