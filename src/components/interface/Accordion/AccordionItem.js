@@ -5,9 +5,19 @@ import useCollapse from '../../../hooks/useCollapse';
 import dataAttributes from '../../../utils/data-attributes';
 
 const AccordionItem = ({
-  title, titleAs, isExpanded, onClick, children, className, id, ...remainingProps
+  title,
+  titleAs,
+  expandedItems,
+  onClick,
+  children,
+  className,
+  id,
+  keepOpen,
+  forceExpand,
+  ...remainingProps
 }) => {
   const TitleTag = `${titleAs}`;
+  const isExpanded = forceExpand ? true : !!expandedItems.find((item) => item === id);
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
   return (
     <li
@@ -44,9 +54,11 @@ const AccordionItem = ({
 AccordionItem.defaultProps = {
   titleAs: 'h3',
   className: '',
-  isExpanded: false,
+  forceExpand: false,
+  expandedItems: [],
+  keepOpen: false,
   onClick: () => {},
-  id: '',
+  id: 0,
 };
 
 AccordionItem.propTypes = {
@@ -57,7 +69,7 @@ AccordionItem.propTypes = {
   /**
    * @ignore
    */
-  isExpanded: PropTypes.bool,
+  forceExpand: PropTypes.bool,
   /**
    * @ignore
    */
@@ -65,8 +77,10 @@ AccordionItem.propTypes = {
   /**
    * @ignore
    */
-  id: PropTypes.string,
+  expandedItems: PropTypes.arrayOf(PropTypes.number),
+  id: PropTypes.number,
   title: PropTypes.string.isRequired,
+  keepOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

@@ -19,11 +19,11 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           class="fr-accordion__title"
         >
           <button
-            aria-controls="fr-accordion-0"
+            aria-controls="fr-accordion-1"
             aria-expanded="false"
             class="fr-accordion__btn"
             data-testid="accordion-button"
-            id="button0"
+            id="button1"
             type="button"
           >
             first line accordion
@@ -32,7 +32,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
         <div
           class="fr-collapse"
           data-testid="accordion-div"
-          id="fr-accordion-0"
+          id="fr-accordion-1"
           style="--collapse: -0px;"
         >
           Anything I want
@@ -50,11 +50,11 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           class="fr-accordion__title"
         >
           <button
-            aria-controls="fr-accordion-1"
+            aria-controls="fr-accordion-2"
             aria-expanded="false"
             class="fr-accordion__btn"
             data-testid="accordion-button"
-            id="button1"
+            id="button2"
             type="button"
           >
             first line accordion
@@ -63,7 +63,7 @@ exports[`<Accordion /> should render accordion properly 1`] = `
         <div
           class="fr-collapse"
           data-testid="accordion-div"
-          id="fr-accordion-1"
+          id="fr-accordion-2"
           style="--collapse: -0px;"
         >
           Anything I want

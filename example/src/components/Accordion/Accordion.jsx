@@ -6,9 +6,9 @@ import {
 
 const AccordionExample = () => (
   <Col>
-    <Accordion>
+    <Accordion keepOpen>
       <AccordionItem title="title">Test</AccordionItem>
-      <AccordionItem title="title">Test</AccordionItem>
+      <AccordionItem forceExpand title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>
     </Accordion>

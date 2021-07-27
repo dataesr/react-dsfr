@@ -26,25 +26,29 @@ import '@gouvfr/dsfr/dist/css/accordions.min.css';
  * @visibleName Accordion
  */
 const Accordion = ({
-  className, children, as, ...remainingProps
+  className, children, as, keepOpen, ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
-  const [isExpanded, setIsExpanded] = useState('');
+  const [expandedItems, setExpandedItems] = useState([]);
   const expand = (e) => {
-    if (e.target.id.slice(6) === isExpanded) {
-      setIsExpanded('');
+    const newItem = parseFloat(e.target.id.slice(6));
+    if (expandedItems.indexOf(newItem) > -1) {
+      setExpandedItems(expandedItems.filter((item) => item !== newItem));
+    } else if (!keepOpen) {
+      setExpandedItems(() => [...[], newItem]);
     } else {
-      setIsExpanded(e.target.id.slice(6));
+      setExpandedItems((oldArray) => [...oldArray, newItem]);
     }
   };
 
   const childs = Children.toArray(children).map((child, i) => {
-    const id = i.toString();
+    const id = i + 1;
     return cloneElement(child, {
       id,
       key: id,
       onClick: expand,
-      isExpanded: isExpanded === id,
+      keepOpen,
+      expandedItems,
     });
   });
 
@@ -61,6 +65,7 @@ const Accordion = ({
 Accordion.defaultProps = {
   as: 'div',
   className: '',
+  keepOpen: false,
 };
 
 Accordion.propTypes = {
@@ -68,6 +73,7 @@ Accordion.propTypes = {
    * Html tag to render accordion wrapper.
    */
   as: PropTypes.oneOf(['div', 'section']),
+  keepOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
