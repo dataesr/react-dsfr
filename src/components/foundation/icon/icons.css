@@ -1,15 +1,6 @@
-/* ------------------------------------ *\
-  ICONS
-\* ------------------------------------ */
-
-[class^="ri-"]:before,
-[class*=" ri-"]:before {
-    font-family: 'remixicon', serif !important;
-    font-style: normal;
-    font-weight: normal !important;
-    font-variant: normal;
-    text-transform: none;
-}
+/*!* ------------------------------------ *\*/
+/*  ICONS*/
+/*\* ------------------------------------ *!*/
 
 [class*="ri-"],
 [class^="ri-"].icon-left {

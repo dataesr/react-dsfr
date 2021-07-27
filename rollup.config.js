@@ -35,7 +35,7 @@ MODE.forEach((m) => {
         '@babel/runtime/helpers/objectWithoutProperties': '_objectWithoutProperties',
       },
     },
-    external: ['uuid', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/, 'remixicon/fonts/remixicon.css'],
+    external: ['uuid', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/],
     plugins: [
       babel({
         exclude: 'node_modules/**',

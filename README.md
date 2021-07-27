@@ -115,6 +115,12 @@ $ npm install -g pa11y-ci
 $ pa11y-ci
 ```
 
+#### Use Icons
+
+:warning: CDN link must be added to <head> of your website.
+
+`<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
+
 #### In Chrome
 
 ```bash

@@ -2,7 +2,6 @@ import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import 'remixicon/fonts/remixicon.css';
 import './icons.css';
 
 // TODO add tests
