@@ -43,6 +43,7 @@ import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
+import SwitchTheme from './components/interface/SwitchTheme/SwitchTheme';
 
 const library = () => ({
   Accordion,
@@ -122,6 +123,7 @@ const library = () => ({
   Tag,
   TagGroup,
   TextInput,
+  SwitchTheme,
   Tile,
   TileBody,
   TileImage,

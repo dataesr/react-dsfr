@@ -7,11 +7,17 @@ import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
 
 const ToolItem = ({
-  icon, link, className, children, asLink, target, as, ...remainingProps
+  icon, link, className, children, asLink, target, as, onClick, ...remainingProps
 }) => {
   const { onOpenNav } = useContext(HeaderContext);
   const HtmlTag = `${as}`;
 
+  const closeNav = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
+    onOpenNav(false);
+  };
   return (
     <li
       key={uuidv4()}
@@ -19,14 +25,14 @@ const ToolItem = ({
     >
       {as ? (
         <HtmlTag
-          onClick={() => onOpenNav(false)}
+          onClick={closeNav}
           className={className}
         >
           {children}
         </HtmlTag>
       ) : (
         <Link
-          onClick={() => onOpenNav(false)}
+          onClick={closeNav}
           as={asLink}
           target={target}
           className={className}
@@ -49,8 +55,9 @@ ToolItem.defaultProps = {
   icon: '',
   link: '',
   asLink: null,
-  as: '',
+  as: undefined,
   target: '_self',
+  onClick: undefined,
 };
 
 ToolItem.propTypes = {
@@ -66,6 +73,7 @@ ToolItem.propTypes = {
   as: PropTypes.oneOf(['p', 'span', 'div', '']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
+  onClick: PropTypes.func,
   asLink: PropTypes.element,
   target: PropTypes.string,
 };

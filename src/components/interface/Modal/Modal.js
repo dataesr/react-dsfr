@@ -123,9 +123,10 @@ const ModalDialog = ({
 };
 
 const Modal = ({
-  size, hide, children, isOpen, className, canClose, ...remainingProps
+  id, size, hide, children, isOpen, className, canClose, ...remainingProps
 }) => (isOpen) && (
   <ModalDialog
+    id={id}
     className={className}
     size={size}
     hide={hide}
@@ -138,6 +139,7 @@ const Modal = ({
 );
 
 Modal.propTypes = {
+  id: PropTypes.string,
   isOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -153,6 +155,7 @@ Modal.propTypes = {
   canClose: PropTypes.bool,
 };
 Modal.defaultProps = {
+  id: undefined,
   isOpen: false,
   size: 'md',
   className: '',
