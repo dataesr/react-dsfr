@@ -39,6 +39,14 @@ https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
     display: none;
 }
 
+.fr-table tbody tr:nth-child(odd) {
+    background-color: var(--w) !important;
+}
+
+button.fr-pagination__link:not([aria-current]) {
+    color: var(--g600-g400);
+}
+
 span.error {
     color: var(--error);
 }
