@@ -1,5 +1,5 @@
 import React, {
-  useState, Children, cloneElement, useEffect,
+  useState, Children, cloneElement,
 } from 'react';
 
 import PropTypes from 'prop-types';
