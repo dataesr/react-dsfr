@@ -85,8 +85,21 @@ const data = [
 ];
 
 const columns = [
+  // Avec customisation de la ligne
   { name: 'level', label: 'Niveau', render: ({ level }) => `Niveau ${level}` },
-  { name: 'name_fr', label: 'Français', sortable: true },
+  // Avec customisation du header
+  {
+    name: 'name_fr',
+    headerRender: () => (
+      <span
+        className="fr-fi-theme-fill fr-link--icon-left"
+      >
+        Français
+      </span>
+    ),
+    sortable: true,
+  },  
+  // Avec render simple du texte
   { name: 'name_en', label: 'Anglais', sortable: true },
 ];
 

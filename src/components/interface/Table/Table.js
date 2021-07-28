@@ -93,7 +93,7 @@ const Table = ({
                   }
                 }}
               >
-                {column.label}
+                {column.headerRender ? column.headerRender() : column.label}
                 {sort && sort.column.name === column.name && (
                   sort.direction === 'dsc'
                     ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
