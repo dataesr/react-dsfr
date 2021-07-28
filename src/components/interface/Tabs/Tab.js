@@ -15,6 +15,7 @@ const Tab = ({
       className,
     )}
     role="tabpanel"
+    aria-labelledby={`fr-tab-${index}`}
     tabIndex="0"
     {...dataAttributes(remainingProps)}
   >
