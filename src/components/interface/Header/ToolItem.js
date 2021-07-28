@@ -63,7 +63,7 @@ ToolItem.propTypes = {
   /**
    * html tag to render
    */
-  as: PropTypes.oneOf(['p', 'span', 'div']),
+  as: PropTypes.oneOf(['p', 'span', 'div', '']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,
   asLink: PropTypes.element,
