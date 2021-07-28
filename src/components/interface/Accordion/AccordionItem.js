@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  useCallback, useEffect, useRef, useState,
+} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import useCollapse from '../../../hooks/useCollapse';
@@ -13,12 +15,27 @@ const AccordionItem = ({
   className,
   id,
   keepOpen,
-  forceExpand,
+  initExpand,
   ...remainingProps
 }) => {
   const TitleTag = `${titleAs}`;
-  const isExpanded = forceExpand ? true : !!expandedItems.find((item) => item === id);
+  const ref = useRef();
+  const [initItem, setInitItem] = useState(initExpand);
+  const checkExpanded = useCallback(() => {
+    const idsExpanded = !!expandedItems.find((it) => it === id);
+    return initItem ? true : idsExpanded;
+  }, [initItem, expandedItems, id]);
+  const [isExpanded, setIsExpanded] = useState(checkExpanded);
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
+  const onItemClick = (e) => {
+    const trullyExpanded = (ref.current.ariaExpanded === 'true');
+    onClick(e, parseFloat(e.target.id.slice(6)), trullyExpanded);
+    setInitItem(false);
+  };
+  useEffect(() => {
+    setIsExpanded(checkExpanded());
+  }, [isExpanded, setIsExpanded, checkExpanded]);
+
   return (
     <li
       className={classNames(className)}
@@ -27,9 +44,10 @@ const AccordionItem = ({
       <section className="fr-accordion">
         <TitleTag className="fr-accordion__title">
           <button
+            ref={ref}
             className="fr-accordion__btn"
             id={`button${id}`}
-            onClick={onClick}
+            onClick={(e) => onItemClick(e)}
             type="button"
             aria-controls={`fr-accordion-${id}`}
             aria-expanded={isExpanded}
@@ -54,7 +72,7 @@ const AccordionItem = ({
 AccordionItem.defaultProps = {
   titleAs: 'h3',
   className: '',
-  forceExpand: false,
+  initExpand: false,
   expandedItems: [],
   keepOpen: false,
   onClick: () => {},
@@ -69,7 +87,7 @@ AccordionItem.propTypes = {
   /**
    * @ignore
    */
-  forceExpand: PropTypes.bool,
+  initExpand: PropTypes.bool,
   /**
    * @ignore
    */

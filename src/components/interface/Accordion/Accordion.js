@@ -1,4 +1,6 @@
-import React, { useState, Children, cloneElement } from 'react';
+import React, {
+  useState, Children, cloneElement, useEffect,
+} from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -30,15 +32,19 @@ const Accordion = ({
 }) => {
   const HtmlTag = `${as}`;
   const [expandedItems, setExpandedItems] = useState([]);
-  const expand = (e) => {
-    const newItem = parseFloat(e.target.id.slice(6));
-    if (expandedItems.indexOf(newItem) > -1) {
-      setExpandedItems(expandedItems.filter((item) => item !== newItem));
+  const expand = (e, newItem, isExpanded) => {
+    let action = 'open';
+    const actionObject = {
+      open: (oldArray) => [...oldArray, newItem],
+      close: expandedItems.filter((item) => item !== newItem),
+      closeOthers: () => [...[], newItem],
+    };
+    if (expandedItems.indexOf(newItem) > -1 || isExpanded) {
+      action = 'close';
     } else if (!keepOpen) {
-      setExpandedItems(() => [...[], newItem]);
-    } else {
-      setExpandedItems((oldArray) => [...oldArray, newItem]);
+      action = 'closeOthers';
     }
+    setExpandedItems(actionObject[action]);
   };
 
   const childs = Children.toArray(children).map((child, i) => {

@@ -8,9 +8,9 @@ const AccordionExample = () => (
   <Col>
     <Accordion keepOpen>
       <AccordionItem title="title">Test</AccordionItem>
-      <AccordionItem forceExpand title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>
+      <AccordionItem initExpand title="title">Test</AccordionItem>
     </Accordion>
   </Col>
 );
