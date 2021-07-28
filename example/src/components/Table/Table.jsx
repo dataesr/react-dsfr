@@ -88,7 +88,17 @@ const data = [
 const columns = [
   // eslint-disable-next-line react/prop-types
   { name: 'level', label: 'Niveau', render: ({ level }) => `Niveau ${level}` },
-  { name: 'name_fr', label: 'Français', sortable: true },
+  {
+    name: 'name_fr',
+    headerRender: () => (
+      <span
+        className="fr-fi-theme-fill fr-link--icon-left"
+      >
+        Français
+      </span>
+    ),
+    sortable: true,
+  },
   { name: 'name_en', label: 'Anglais', sortable: true },
 ];
 
