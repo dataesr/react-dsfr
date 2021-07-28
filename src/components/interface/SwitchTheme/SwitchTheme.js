@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
 
-const themes = [
-  { label: 'Thème clair', value: 'light' },
-  { label: 'Thème sombre', value: 'dark' },
-];
-
-const SwitchTheme = ({ isOpen, setIsOpen }) => {
+const SwitchTheme = ({
+  isOpen, setIsOpen, title, legend, darkLabel, lightLabel,
+}) => {
   const getInitialTheme = () => {
     let initialTheme = window.localStorage.getItem('prefers-color-scheme');
     if (!initialTheme) {
@@ -18,6 +15,11 @@ const SwitchTheme = ({ isOpen, setIsOpen }) => {
     return initialTheme;
   };
   const [currentTheme, setCurrentTheme] = useState(getInitialTheme);
+
+  const themes = [
+    { label: lightLabel, value: 'light' },
+    { label: darkLabel, value: 'dark' },
+  ];
 
   useEffect(() => {
     document.documentElement.setAttribute('data-fr-theme', currentTheme);
@@ -30,11 +32,11 @@ const SwitchTheme = ({ isOpen, setIsOpen }) => {
       hide={() => setIsOpen(false)}
       aria-labelledby="fr-theme-modal-title"
     >
-      <ModalTitle>Paramètres d’affichage</ModalTitle>
+      <ModalTitle>{title}</ModalTitle>
       <ModalContent className="fr-switch-theme">
         <RadioGroup
           className="fr-text--regular"
-          legend="Choisissez un thème pour personnaliser l’apparence du site."
+          legend={legend}
           value={currentTheme}
           onChange={(value) => {
             window.localStorage.setItem('prefers-color-scheme', value);
@@ -56,9 +58,17 @@ const SwitchTheme = ({ isOpen, setIsOpen }) => {
 };
 
 SwitchTheme.defaultProps = {
+  title: 'Paramètres d’affichage',
+  legend: 'Choisissez un thème pour personnaliser l’apparence du site.',
+  darkLabel: 'Thème sombre',
+  lightLabel: 'Thème clair',
 };
 
 SwitchTheme.propTypes = {
+  title: PropTypes.string,
+  legend: PropTypes.string,
+  darkLabel: PropTypes.string,
+  lightLabel: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
 };
