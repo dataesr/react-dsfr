@@ -19,14 +19,40 @@ const Tabs = ({
   className, children, defaultActiveTab, scheme, ...remainingProps
 }) => {
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
-  const addProps = {
-    activeTab,
-  };
   const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
-    ...addProps,
+    activeTab,
     index,
     key: uuidv4(),
   }));
+
+  const onKeyDownTab = (e, index) => {
+    // Behavior from WAI-ARIA Authoring Practices 1.1
+    // https://www.w3.org/TR/wai-aria-practices/#keyboard-interaction-19
+    switch (e.key) {
+      case 'ArrowRight':
+        e.preventDefault();
+        setActiveTab((index + 1) % tabsPanel.length);
+        break;
+
+      case 'ArrowLeft':
+        e.preventDefault();
+        setActiveTab(index - 1 < 0 ? tabsPanel.length - 1 : index - 1);
+        break;
+
+      case 'Home':
+        e.preventDefault();
+        setActiveTab(0);
+        break;
+
+      case 'End':
+        e.preventDefault();
+        setActiveTab(tabsPanel.length - 1);
+        break;
+
+      default:
+        // do nothing => apply normal behavior
+    }
+  };
 
   const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });
   return (
@@ -42,7 +68,8 @@ const Tabs = ({
           <TabButton
             key={uuidv4()}
             activeTab={activeTab}
-            setActiveTab={setActiveTab}
+            onClickTab={setActiveTab}
+            onKeyDownTab={onKeyDownTab}
             index={index}
             label={element.props.label}
             icon={element.props.icon}
