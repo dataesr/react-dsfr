@@ -9,10 +9,11 @@ exports[`<TabButton /> should render TabButton properly 1`] = `
     aria-controls="fr-tabpanel-0"
     aria-selected="true"
     className="fr-tabs__tab"
+    id="fr-tab-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="tab"
-    tabIndex="0"
+    tabIndex={0}
     type="button"
   >
     

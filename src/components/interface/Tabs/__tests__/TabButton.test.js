@@ -12,13 +12,15 @@ describe('<TabButton />', () => {
     index: 0,
   };
   let wrapper;
-  const mockSetActiveTab = jest.fn();
+  const mockSetonClickTab = jest.fn();
+  const mockSetonKeyDownTab = jest.fn();
 
   beforeEach(() => {
     wrapper = () => shallow(
       <TabButton
         activeTab={0}
-        setActiveTab={mockSetActiveTab}
+        onClickTab={mockSetonClickTab}
+        onKeyDownTab={mockSetonKeyDownTab}
         index={0}
         label="Label #1"
         className={initProps.className}
@@ -35,7 +37,8 @@ describe('<TabButton />', () => {
       .create(
         <TabButton
           activeTab={0}
-          setActiveTab={mockSetActiveTab}
+          onClickTab={mockSetonClickTab}
+          onKeyDownTab={mockSetonKeyDownTab}
           index={0}
           label="Label #1"
           className={initProps.className}
@@ -46,9 +49,15 @@ describe('<TabButton />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('onClick setActiveTab', () => {
+  it('on onClickTab', () => {
     const component = wrapper({ ...initProps });
     component.find('button').simulate('click');
-    expect(mockSetActiveTab).toHaveBeenCalledWith(initProps.index);
+    expect(mockSetonClickTab).toHaveBeenCalledWith(initProps.index);
+  });
+
+  it('on mockSetonKeyDownTab', () => {
+    const component = wrapper({ ...initProps });
+    component.find('button').simulate('keydown', { keyCode: 13 });
+    expect(mockSetonKeyDownTab).toHaveBeenCalledTimes(1);
   });
 });
