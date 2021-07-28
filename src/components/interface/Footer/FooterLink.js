@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const FooterLink = ({
-  children, href, section, className, asLink, ...remainingProps
+  children, href, section, className, asLink, onClick, ...remainingProps
 }) => (
   <li
     className={classNames(`fr-footer__${section}-item`, className)}
@@ -16,6 +16,7 @@ const FooterLink = ({
       as={asLink}
       href={href}
       className={`fr-footer__${section}-link`}
+      onClick={onClick}
     >
       {children}
     </Link>
@@ -28,6 +29,7 @@ FooterLink.defaultProps = {
   className: '',
   asLink: null,
   href: '',
+  onClick: undefined,
 };
 
 FooterLink.propTypes = {
@@ -35,6 +37,7 @@ FooterLink.propTypes = {
   __TYPE: typeValidation('FooterLink'),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   href: PropTypes.string,
+  onClick: PropTypes.func,
   section: PropTypes.oneOf(['bottom', 'top']),
   className: PropTypes.oneOfType([
     PropTypes.string,
