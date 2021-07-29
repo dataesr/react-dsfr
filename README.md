@@ -8,9 +8,9 @@
 [![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple)
 
 
-> Non-official React components of the official [French Governement Design System](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
+> Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.0.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -67,7 +67,15 @@ $ yarn start
 
 In case of error during install try using `npm` instead of `yarn`.
 
-#### Publish it on mpn registry
+#### Use Icons
+
+We are using [remixicon](https://remixicon.com/)
+
+:warning: CDN link of css must be added to the `<head>` of your website.
+
+`<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
+
+#### Publish it on npm registry
 
 First update the version number in `package.json`
 
@@ -85,12 +93,15 @@ Visit [http://localhost:3000](http://localhost:3000).
 $ npm link @dataesr/react-dsfr
 ```
 
-#### Help
+#### Help from outside
 
-[How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
-[How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
+Thanks to the internet world.
 
-### Tests
+* [How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
+
+* [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
+
+### Unit tests
 
 #### Run all tests using react-scripts with watcher option
 
@@ -115,12 +126,6 @@ $ npm install -g pa11y-ci
 $ pa11y-ci
 ```
 
-#### Use Icons
-
-:warning: CDN link must be added to <head> of your website.
-
-`<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
-
 #### In Chrome
 
 ```bash
@@ -131,6 +136,6 @@ Access `about:inspect`
 
 See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
-### They use react-dsfr
+### They use react-dsfr and we like it!
 
 [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
