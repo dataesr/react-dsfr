@@ -22,7 +22,6 @@ const Tabs = ({
   const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
     activeTab,
     index,
-    key: uuidv4(),
   }));
 
   const onKeyDownTab = (e, index) => {
@@ -66,7 +65,7 @@ const Tabs = ({
       >
         {tabsPanel.map((element, index) => (
           <TabButton
-            key={uuidv4()}
+            key={element.props.label}
             activeTab={activeTab}
             onClickTab={setActiveTab}
             onKeyDownTab={onKeyDownTab}

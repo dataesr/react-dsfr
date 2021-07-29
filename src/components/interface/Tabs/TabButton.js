@@ -17,11 +17,13 @@ const TabButton = (props) => {
   } = props;
 
   const ref = useRef();
+  const mounted = useRef(false);
 
   useEffect(() => {
-    if (activeTab === index) {
+    if (mounted.current && activeTab === index) {
       ref.current.focus();
     }
+    mounted.current = true;
   }, [activeTab, index]);
 
   return (
