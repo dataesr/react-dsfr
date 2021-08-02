@@ -52,7 +52,7 @@ const Accordion = ({
     return cloneElement(child, {
       id,
       key: id,
-      onClick: expand,
+      onClickInternal: expand,
       keepOpen,
       expandedItems,
     });
