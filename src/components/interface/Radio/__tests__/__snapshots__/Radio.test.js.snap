@@ -6,6 +6,7 @@ exports[`<Radio /> renders correctly 1`] = `
   data-testid="radio"
 >
   <input
+    disabled={false}
     id="xxxxxxx"
     onChange={[Function]}
     required={false}

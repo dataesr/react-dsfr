@@ -24,7 +24,7 @@ import { RadioGroup, Radio } from '.';
 </RadioGroup>
 ```
 
-L'état inactif indique que l'utilisateur ne peux pas interagir avec l'élément
+L'état inactif sur le groupe indique que l'utilisateur ne peux pas interagir avec tous les éléments
 ```jsx
 import { RadioGroup, Radio } from '.';
 
@@ -46,6 +46,30 @@ import { RadioGroup, Radio } from '.';
   />
 </RadioGroup>
 ```
+
+L'état inactif sur un radio indique que l'utilisateur ne peux pas interagir avec cet élément
+```jsx
+import { RadioGroup, Radio } from '.';
+
+<RadioGroup
+  legend="Legend"
+>
+  <Radio
+    label="Label Radio 1"
+    value="value-1"
+  />
+  <Radio
+    label="Label Radio 2"
+    value="value-2"
+    isDisabled
+  />
+  <Radio
+    label="Label radio 3"
+    value="value-3"
+  />
+</RadioGroup>
+```
+
 ### Liste horizontale (radio buttons inline)
 Il faut privilégier les listes verticales aux listes horizontales, plus difficile à lire pour l’utilisateur. 
 Cette organisation est donc à utiliser uniquement lorsqu'il n’y a que  2 options ou que les libellés sont courts.
