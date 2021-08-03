@@ -21,7 +21,7 @@ const Icon = ({
     name,
     className,
   );
-  const i = <Tag className={_className} title={title} />;
+  const i = title ? <Tag className={_className} title={title} /> : <Tag className={_className} />;
   const newChildren = (
     <>
       {iconPosition === 'right' ? children?.props?.children : i}
