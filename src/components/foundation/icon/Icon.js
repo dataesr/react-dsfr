@@ -24,20 +24,19 @@ const Icon = ({
   const i = <Tag className={_className} />;
   const newChildren = (
     <>
-      {iconPosition === 'right' ? children.props?.children : i}
-      {iconPosition === 'right' ? i : children.props?.children}
+      {iconPosition === 'right' ? children?.props?.children : i}
+      {iconPosition === 'right' ? i : children?.props?.children}
     </>
   );
-
   return (
     <>
-      {cloneElement(children, {
+      {children ? cloneElement(children, {
         ...children.props,
         className: classNames({
           [`${children.props.className}`]: children.props.className,
         }),
         children: newChildren,
-      })}
+      }) : i}
     </>
   );
 };
@@ -47,6 +46,7 @@ Icon.defaultProps = {
   as: 'span',
   className: '',
   iconPosition: 'left',
+  children: null,
 };
 
 Icon.propTypes = {
@@ -58,7 +58,7 @@ Icon.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
-  ]).isRequired,
+  ]),
 };
 
 export default Icon;
