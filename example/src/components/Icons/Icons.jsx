@@ -18,6 +18,7 @@ const IconsExample = () => (
       <Icon
         name="ri-alert-fill"
         size="1x"
+        title="Here is a title"
       />
     </Col>
   </>

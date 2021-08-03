@@ -12,7 +12,7 @@ import './icons.css';
  * @visibleName Icon
  */
 const Icon = ({
-  size, name, as, children, className, iconPosition,
+  size, name, as, children, className, iconPosition, title,
 }) => {
   const Tag = `${as}`;
   const _className = classNames(
@@ -21,7 +21,7 @@ const Icon = ({
     name,
     className,
   );
-  const i = <Tag className={_className} />;
+  const i = <Tag className={_className} title={title} />;
   const newChildren = (
     <>
       {iconPosition === 'right' ? children?.props?.children : i}
@@ -47,6 +47,7 @@ Icon.defaultProps = {
   className: '',
   iconPosition: 'left',
   children: null,
+  title: '',
 };
 
 Icon.propTypes = {
@@ -59,6 +60,7 @@ Icon.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
   ]),
+  title: PropTypes.string,
 };
 
 export default Icon;
