@@ -14,14 +14,14 @@ Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gou
 
 ## Requirements
 
-* node >=12.13
-* npm >=6.14
-* React >=17.01
+* node >= 12.13
+* npm >= 6.14
+* React >= 17.01
 
 ## Installation
 
 ```bash
-$ yarn add @dataesr/react-dsfr
+yarn add @dataesr/react-dsfr
 ```
 
 ## Library usage
@@ -31,7 +31,7 @@ $ yarn add @dataesr/react-dsfr
 Styleguide gives you access to the list of props needed and a working example for each component available in the library. To launch it on your local machine:
 
 ```bash
-$ yarn guide
+yarn guide
 ```
 Visit [http://localhost:6060](http://localhost:6060).
 
@@ -44,32 +44,31 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 > [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
-$ yarn build
+yarn build
 ```
 
 #### Generate and watch /dist folder containing bundles
 
 ```bash
-$ yarn start
+npm install
+npm start
 ```
 
 #### Example page
 
 > A playground to test components
 
-An example page is available containing all components. To launch it on your local machine, first launch watcher of the project (see above) and then:
+An example page is available containing all components. To launch it on your local machine, first [launch watcher of the project](#generate-and-watch-dist-folder-containing-bundles) and then:
 
 ```bash
-$ cd example/
-$ yarn 
-$ yarn start
+cd example
+npm install 
+npm start
 ```
-
-In case of error during install try using `npm` instead of `yarn`.
 
 #### Use Icons
 
-We are using [remixicon](https://remixicon.com/)
+We are using [remixicon](https://remixicon.com/).
 
 :warning: CDN link of css must be added to the `<head>` of your website.
 
@@ -80,9 +79,9 @@ We are using [remixicon](https://remixicon.com/)
 First update the version number in `package.json`
 
 ```bash
-$ npm i --package-lock-only
-$ npm login
-$ npm publish --tag latest --access public
+npm i --package-lock-only
+npm login
+npm publish --tag latest --access public
 ```
 
 Visit [http://localhost:3000](http://localhost:3000).
@@ -90,7 +89,7 @@ Visit [http://localhost:3000](http://localhost:3000).
 #### Test your node module before you publish 
 
 ```bash
-$ npm link @dataesr/react-dsfr
+npm link @dataesr/react-dsfr
 ```
 
 #### Help from outside
@@ -106,7 +105,7 @@ Thanks to the internet world.
 #### Run all tests using react-scripts with watcher option
 
 ```bash
-$ yarn test:dev
+yarn test:dev
 ```
 
 #### Accessibility
@@ -114,22 +113,22 @@ $ yarn test:dev
 Components can be tested in Example's page `App.js` with [@axe-core/react](https://www.npmjs.com/package/@axe-core/react)
 
 ```bash
-$ npm install --save-dev @axe-core/react
+npm install --save-dev @axe-core/react
 ```
 
-An other solution to test accessibility is CLI module [https://pa11y.org/](https://pa11y.org/)
+Another solution to test accessibility is CLI module [https://pa11y.org/](https://pa11y.org/)
 
 Check configuration file `.pa11y-ci`
 
 ```bash
-$ npm install -g pa11y-ci
-$ pa11y-ci
+npm install -g pa11y-ci
+pa11y-ci
 ```
 
 #### In Chrome
 
 ```bash
-$ yarn test:debug
+yarn test:debug
 ```
 
 Access `about:inspect`
