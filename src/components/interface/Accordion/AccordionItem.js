@@ -13,7 +13,6 @@ const AccordionItem = forwardRef((props, ref) => {
     titleAs,
     expandedItems,
     onClick,
-    onClickInternal,
     children,
     className,
     id,
@@ -32,8 +31,7 @@ const AccordionItem = forwardRef((props, ref) => {
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
   const onItemClick = (e) => {
     const trullyExpanded = (buttonRef.current.ariaExpanded === 'true');
-    onClick(trullyExpanded, e);
-    onClickInternal(e, parseFloat(e.target.id.slice(6)), trullyExpanded);
+    onClick(trullyExpanded, e, parseFloat(e.target.id.slice(6)));
     setInitItem(false);
   };
   useEffect(() => {
@@ -81,7 +79,6 @@ AccordionItem.defaultProps = {
   expandedItems: [],
   keepOpen: false,
   onClick: () => {},
-  onClickInternal: () => {},
   id: 0,
 };
 
@@ -95,10 +92,6 @@ AccordionItem.propTypes = {
      */
   initExpand: PropTypes.bool,
   onClick: PropTypes.func,
-  /**
-     * @ignore
-     */
-  onClickInternal: PropTypes.func,
   /**
      * @ignore
      */

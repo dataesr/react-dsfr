@@ -32,7 +32,7 @@ const Accordion = ({
 }) => {
   const HtmlTag = `${as}`;
   const [expandedItems, setExpandedItems] = useState([]);
-  const expand = (e, newItem, isExpanded) => {
+  const expand = (isExpanded, e, newItem) => {
     let action = 'open';
     const actionObject = {
       open: (oldArray) => [...oldArray, newItem],
@@ -52,7 +52,10 @@ const Accordion = ({
     return cloneElement(child, {
       id,
       key: id,
-      onClickInternal: expand,
+      onClick: (isExpanded, e, newItem) => {
+        child.props.onClick(isExpanded, e, newItem);
+        expand(isExpanded, e, newItem);
+      },
       keepOpen,
       expandedItems,
     });
