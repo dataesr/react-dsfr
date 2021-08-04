@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
 
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
@@ -20,7 +19,6 @@ const ToolItem = ({
   };
   return (
     <li
-      key={uuidv4()}
       {...dataAttributes(remainingProps)}
     >
       {as ? (

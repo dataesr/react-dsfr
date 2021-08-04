@@ -12,7 +12,7 @@ import useOnClickOutside from '../../../hooks/useOnClickOutside';
 const NavItemWithSubItem = ({
   children, title, link, path, current, asLink, ...remainingProps
 }) => {
-  const [id] = useState(`fr-nav-subitem-${uuidv4()}`);
+  const id = useRef(uuidv4());
   const [isExpanded, setIsExpanded] = useState(false);
   const { item, collapse } = useCollapse(null, isExpanded, 'fr-menu');
   const { currentPath, setCurrentPath } = useContext(HeaderContext);
@@ -42,7 +42,7 @@ const NavItemWithSubItem = ({
         type="button"
         aria-expanded={isExpanded}
         aria-current={(current && 'page') || undefined}
-        aria-controls={id}
+        aria-controls={id.current}
         className="fr-nav__btn"
         aria-label="ouvrir la navigation"
       >
@@ -50,7 +50,7 @@ const NavItemWithSubItem = ({
       </button>
       <div
         ref={expandedRef}
-        id={id}
+        id={id.current}
         className={item.class}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
       >

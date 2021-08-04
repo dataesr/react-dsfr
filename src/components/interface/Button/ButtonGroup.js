@@ -1,7 +1,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
 /**
@@ -18,7 +17,8 @@ const ButtonGroup = ({
   align,
   ...remainingProps
 }) => {
-  const content = Children.toArray(children).map((child) => <li key={uuidv4()}>{child}</li>);
+  const content = Children.toArray(children)
+    .map((child) => <li key={child.props.title}>{child}</li>);
   const _className = classNames('fr-btns-group', {
     [`fr-btns-group--${size}`]: (size !== 'md'),
     [`fr-btns-group--${align}`]: (align !== 'left'),

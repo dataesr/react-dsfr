@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useRef } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -35,9 +35,8 @@ const TextInput = forwardRef((props, ref) => {
     [`fr-input--${messageType}`]: messageType,
   });
 
-  const inputId = uuidv4();
-  const hintId = hint && uuidv4();
-  const messageId = message && uuidv4();
+  const inputId = useRef(uuidv4());
+  const hintId = useRef(uuidv4());
   return (
     <div
       className={_classNameWrapper}
@@ -46,14 +45,14 @@ const TextInput = forwardRef((props, ref) => {
       {label && (
       <label
         className="fr-label"
-        htmlFor={inputId}
-        aria-describedby={hintId || messageId || undefined}
+        htmlFor={inputId.current}
+        aria-describedby={hint && hintId.current}
       >
         {label}
         {required && <span className="error"> *</span>}
       </label>
       )}
-      {hint && <p className="fr-hint-text" id={hintId}>{hint}</p>}
+      {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
       {
         (textarea)
           ? (
@@ -61,7 +60,7 @@ const TextInput = forwardRef((props, ref) => {
               ref={ref}
               className={_className}
               disabled={inactive}
-              id={inputId}
+              id={inputId.current}
               value={value}
               placeholder={placeholder}
               pattern={pattern}
@@ -76,7 +75,7 @@ const TextInput = forwardRef((props, ref) => {
               className={_className}
               disabled={inactive}
               type={type}
-              id={inputId}
+              id={inputId.current}
               value={value}
               placeholder={placeholder}
               pattern={pattern}
@@ -86,8 +85,8 @@ const TextInput = forwardRef((props, ref) => {
             />
           )
     }
-      {(message && messageType === 'error') && <p id={messageId} className="fr-error-text">{message}</p>}
-      {(message && messageType === 'valid') && <p id={messageId} className="fr-valid-text">{message}</p>}
+      {(message && messageType === 'error') && <p className="fr-error-text">{message}</p>}
+      {(message && messageType === 'valid') && <p className="fr-valid-text">{message}</p>}
     </div>
   );
 });

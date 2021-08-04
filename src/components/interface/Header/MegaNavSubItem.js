@@ -1,8 +1,6 @@
 import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
-import { v4 as uuidv4 } from 'uuid';
-
 import dataAttributes from '../../../utils/data-attributes';
 
 const MegaNavSubItem = ({
@@ -18,7 +16,8 @@ const MegaNavSubItem = ({
         <a className="fr-nav__link" href={link} target="_self">{title}</a>
       </h5>
       <ul className="fr-mega-menu__list">
-        {childs.map((child) => <li key={uuidv4()}>{child}</li>)}
+        {/* eslint-disable-next-line react/no-array-index-key */}
+        {childs.map((child, index) => <li key={index}>{child}</li>)}
       </ul>
     </div>
   );

@@ -6,6 +6,7 @@ exports[`<TextInput /> renders correctly 1`] = `
   data-testid="textinput"
 >
   <label
+    aria-describedby=""
     className="fr-label"
     htmlFor="xxxxxxx"
   >

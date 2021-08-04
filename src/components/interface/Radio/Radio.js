@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
@@ -28,11 +28,10 @@ const Radio = ({
   required,
   ...remainingProps
 }) => {
-  const [radioId, setRadioId] = useState(id || uuidv4());
-  const [messageId] = useState(uuidv4());
+  const radioId = useRef(id || uuidv4());
 
   useEffect(() => {
-    setRadioId(id || uuidv4());
+    radioId.current = id || uuidv4();
   }, [id]);
 
   const messageClasses = messageType !== '' ? `fr-radio-group--${messageType}` : null;
@@ -58,7 +57,7 @@ const Radio = ({
     <div className={_className} {...dataAttributes(remainingProps)}>
       <input
         type="radio"
-        id={radioId}
+        id={radioId.current}
         onChange={handleChange}
         value={value}
         name={name}
@@ -67,7 +66,7 @@ const Radio = ({
       />
       <label
         className={_labelClassName}
-        htmlFor={radioId}
+        htmlFor={radioId.current}
         style={
           (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
         }
@@ -76,7 +75,7 @@ const Radio = ({
       </label>
       {hint && <span className="fr-hint-text">{hint}</span>}
       {message && messageType && (
-        <p id={messageId} className={`fr-${messageType}-text`}>
+        <p className={`fr-${messageType}-text`}>
           {message}
         </p>
       )}

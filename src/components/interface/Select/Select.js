@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -27,13 +27,17 @@ const Select = ({
   const _className = classNames('fr-select', {
     [`fr-select--${messageType}`]: messageType,
   });
-  const [selectId] = useState(id || uuidv4());
+  const selectId = useRef(id || uuidv4());
+
+  useEffect(() => {
+    selectId.current = id || uuidv4();
+  }, [id]);
 
   return (
     <SelectWrapper
       className={className}
       hint={hint}
-      selectId={selectId}
+      selectId={selectId.current}
       label={label}
       message={message}
       messageType={messageType}
@@ -43,7 +47,7 @@ const Select = ({
       <select
         className={_className}
         disabled={disabled}
-        id={selectId}
+        id={selectId.current}
         name={name}
         onChange={onChange}
         value={selected}
@@ -54,7 +58,7 @@ const Select = ({
             <option
               disabled={opt.disabled || false}
               hidden={opt.hidden || false}
-              key={`${selectId}-${opt.value}`}
+              key={`${selectId.current}-${opt.value}`}
               value={opt.value}
             >
               {opt.label}

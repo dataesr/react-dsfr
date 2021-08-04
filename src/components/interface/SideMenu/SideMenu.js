@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -15,7 +15,7 @@ import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
 const SideMenu = ({
   children, title, buttonLabel, className, ...remainingProps
 }) => {
-  const itemID = uuidv4();
+  const itemID = useRef(uuidv4());
   const [isExpanded, setExpanded] = useState(false);
   const { item, collapse } = useCollapse(itemID, isExpanded);
 
@@ -31,14 +31,14 @@ const SideMenu = ({
           type="button"
           className="fr-sidemenu__btn"
           hidden={isExpanded}
-          aria-controls={itemID}
+          aria-controls={itemID.current}
           aria-expanded={isExpanded}
         >
           {buttonLabel}
         </button>
         <div
           className={item.class}
-          id={itemID}
+          id={itemID.current}
           style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
         >
           {title && <div className="fr-sidemenu__title">{title}</div>}

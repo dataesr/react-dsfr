@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState, forwardRef, useRef } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -37,7 +37,7 @@ const SearchBar = forwardRef((props, ref) => {
     ...remainingProps
   } = props;
   const [text, setText] = useState(defaultValue);
-  const inputId = uuidv4();
+  const inputId = useRef(uuidv4());
   const onKeyDown = (e) => (e.keyCode === 13) && onSearch(text);
   const _className = classNames('fr-search-bar', {
     'fr-search-bar--lg': (size === 'lg'),
@@ -49,13 +49,13 @@ const SearchBar = forwardRef((props, ref) => {
       className={_className}
       {...dataAttributes(remainingProps)}
     >
-      { label && <label className="fr-label" htmlFor={inputId}>{label}</label>}
+      { label && <label className="fr-label" htmlFor={inputId.current}>{label}</label>}
       <input
         ref={ref}
         className="fr-input"
         placeholder={placeholder}
         type="search"
-        id={inputId}
+        id={inputId.current}
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={onKeyDown}

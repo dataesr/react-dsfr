@@ -2,7 +2,6 @@ import React, { useState, cloneElement, Children } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { v4 as uuidv4 } from 'uuid';
 import { deepForEach } from '../../../utils/children-utilities';
 import dataAttributes from '../../../utils/data-attributes';
 import useViewport from '../../../hooks/useViewport';
@@ -70,7 +69,7 @@ const Header = ({
         {...dataAttributes(remainingProps)}
       >
         {Children.toArray(children).map(
-          (child) => cloneElement(child, { key: uuidv4(), closeButtonLabel }),
+          (child, index) => cloneElement(child, { key: index, closeButtonLabel }),
         )}
         {isNavTool && openNav && !isNavBar && (
         <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
