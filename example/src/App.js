@@ -2,36 +2,36 @@ import React from 'react';
 import { Container } from '@dataesr/react-dsfr';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import HeaderExample from './components/Header/Header';
-import FooterExample from './components/Footer/Footer';
-import Element from './Element';
-
-import SummaryExample from './components/Summary/Summary';
-import TileExample from './components/Tile/Tile';
-import TagExample from './components/Tag/Tag';
-import TableExample from './components/Table/Table';
-import SidemenuExample from './components/Sidemenu/Sidemenu';
-import ModalExample from './components/Modal/Modal';
-import SelectExample from './components/Select/Select';
-import RadioExample from './components/Radio/Radio';
-import CheckboxExample from './components/Checkbox/Checkbox';
-import MediaExample from './components/Media/Media';
-import HighlightExample from './components/Highlight/Highlight';
-import LinkExample from './components/Link/Link';
-import LogoExample from './components/Logo/Logo';
-import CardExample from './components/Card/Card';
-import TextsExample from './components/Texts/Texts';
-import CalloutExample from './components/Callout/Callout';
+import AccordionExample from './components/Accordion/Accordion';
+import AlertExample from './components/Alert/Alert';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
 import ButtonExample from './components/Button/Button';
+import CalloutExample from './components/Callout/Callout';
+import CardExample from './components/Card/Card';
+import CheckboxExample from './components/Checkbox/Checkbox';
+import FooterExample from './components/Footer/Footer';
+import HeaderExample from './components/Header/Header';
+import HighlightExample from './components/Highlight/Highlight';
+import IconsExample from './components/Icons/Icons';
+import LinkExample from './components/Link/Link';
+import LogoExample from './components/Logo/Logo';
+import MediaExample from './components/Media/Media';
+import ModalExample from './components/Modal/Modal';
+import RadioExample from './components/Radio/Radio';
+import SelectExample from './components/Select/Select';
+import SidemenuExample from './components/Sidemenu/Sidemenu';
+import SummaryExample from './components/Summary/Summary';
+import TableExample from './components/Table/Table';
+import TabsExample from './components/Tabs/Tabs';
+import TagExample from './components/Tag/Tag';
+import TextInputExample from './components/TextInput/TextInput';
+import TextsExample from './components/Texts/Texts';
+import TileExample from './components/Tile/Tile';
 import ToggleExample from './components/Toggle/Toggle';
-import AccordionExample from './components/Accordion/Accordion';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
+import Element from './Element';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
-import TabsExample from './components/Tabs/Tabs';
-import TextInputExample from './components/TextInput/TextInput';
-import AlertExample from './components/Alert/Alert';
 
 const App = () => {
   const elements = [
@@ -44,13 +44,14 @@ const App = () => {
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
+    { title: 'Icons', component: <IconsExample /> },
     { title: 'Lien', component: <LinkExample /> },
     { title: 'Media', component: <MediaExample /> },
     { title: 'Modal', component: <ModalExample /> },
     { title: 'Table', component: <TableExample /> },
     { title: 'Tabs - Onglets', component: <TabsExample /> },
     { title: 'Tag', component: <TagExample /> },
-    { title: 'Texts / icons', component: <TextsExample /> },
+    { title: 'Texts', component: <TextsExample /> },
     { title: 'TextInput', component: <TextInputExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },

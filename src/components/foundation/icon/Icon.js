@@ -12,7 +12,7 @@ import './icons.css';
  * @visibleName Icon
  */
 const Icon = ({
-  size, name, as, children, className, iconPosition,
+  size, name, as, children, className, iconPosition, title,
 }) => {
   const Tag = `${as}`;
   const _className = classNames(
@@ -21,23 +21,22 @@ const Icon = ({
     name,
     className,
   );
-  const i = <Tag className={_className} />;
+  const i = title ? <Tag className={_className} title={title} /> : <Tag className={_className} />;
   const newChildren = (
     <>
-      {iconPosition === 'right' ? children.props?.children : i}
-      {iconPosition === 'right' ? i : children.props?.children}
+      {iconPosition === 'right' ? children?.props?.children : i}
+      {iconPosition === 'right' ? i : children?.props?.children}
     </>
   );
-
   return (
     <>
-      {cloneElement(children, {
+      {children ? cloneElement(children, {
         ...children.props,
         className: classNames({
           [`${children.props.className}`]: children.props.className,
         }),
         children: newChildren,
-      })}
+      }) : i}
     </>
   );
 };
@@ -47,6 +46,8 @@ Icon.defaultProps = {
   as: 'span',
   className: '',
   iconPosition: 'left',
+  children: null,
+  title: '',
 };
 
 Icon.propTypes = {
@@ -58,7 +59,8 @@ Icon.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
-  ]).isRequired,
+  ]),
+  title: PropTypes.string,
 };
 
 export default Icon;
