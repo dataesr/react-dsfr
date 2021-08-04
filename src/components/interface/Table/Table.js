@@ -59,7 +59,7 @@ const Table = ({
   if (sort) {
     let sortMethod = sort.column.sort;
     if (!sortMethod) {
-      sortMethod = (a, b) => (a > b ? 1 : -1);
+      sortMethod = (a, b) => (a[sort.column.name] > b[sort.column.name] ? 1 : -1);
     }
     sortedData = data.sort((a, b) => {
       let current = a;
@@ -69,7 +69,7 @@ const Table = ({
         next = a;
       }
 
-      return sortMethod(current[sort.column.name], next[sort.column.name]);
+      return sortMethod(current, next);
     });
   }
 
