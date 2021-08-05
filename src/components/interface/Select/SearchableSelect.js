@@ -4,13 +4,13 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 
 import SelectWrapper from './SelectWrapper';
-import './searcheableSelect.css';
+import './searchableSelect.css';
 
 /**
  *
- * @visibleName SearcheableSelect
+ * @visibleName SearchableSelect
  */
-const SearcheableSelect = ({
+const SearchableSelect = ({
   className,
   disabled,
   hint,
@@ -114,7 +114,7 @@ const SearcheableSelect = ({
   );
 };
 
-SearcheableSelect.defaultProps = {
+SearchableSelect.defaultProps = {
   className: '',
   disabled: false,
   hint: '',
@@ -132,7 +132,7 @@ SearcheableSelect.defaultProps = {
   ) => option.label.toLowerCase().includes(internalValue.toLowerCase()),
 };
 
-SearcheableSelect.propTypes = {
+SearchableSelect.propTypes = {
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -157,4 +157,4 @@ SearcheableSelect.propTypes = {
   filter: PropTypes.func,
 };
 
-export default SearcheableSelect;
+export default SearchableSelect;

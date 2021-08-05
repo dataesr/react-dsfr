@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import {
-  Col, Select, SearcheableSelect,
+  Col, Select, SearchableSelect,
 } from '@dataesr/react-dsfr';
 import DEPARTEMENTS from './departments';
 
@@ -34,7 +34,7 @@ const SelectExample = () => {
         message="Texte d'erreur obligatoire"
         messageType="error"
       />
-      <SearcheableSelect
+      <SearchableSelect
         label="Select avec recherche"
         selected={department}
         onChange={setDepartment}
