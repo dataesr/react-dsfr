@@ -127,11 +127,11 @@ const [selectedValue, setSelectedvalue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { SearcheableSelect } from '.';
+import { SearchableSelect } from '.';
 
 const [selectedValue, setSelectedvalue] = useState('');
 
-<SearcheableSelect
+<SearchableSelect
     selected={selectedValue}
     label="Label"
     options={ [

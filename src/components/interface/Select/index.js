@@ -1,7 +1,7 @@
-import SearcheableSelect from './SearcheableSelect';
+import SearchableSelect from './SearchableSelect';
 import Select from './Select';
 
 export {
-  SearcheableSelect,
+  SearchableSelect,
   Select,
 };
