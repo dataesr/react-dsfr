@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
+import useTheme from './useTheme';
 
 const SwitchTheme = ({
   isOpen, setIsOpen, title, legend, darkLabel, lightLabel,
 }) => {
-  const getInitialTheme = () => {
-    let initialTheme = window.localStorage.getItem('prefers-color-scheme');
-    if (!initialTheme) {
-      initialTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
-    }
-
-    return initialTheme;
-  };
-  const [currentTheme, setCurrentTheme] = useState(getInitialTheme);
+  const currentTheme = useTheme();
 
   const themes = [
     { label: lightLabel, value: 'light' },
@@ -22,8 +15,13 @@ const SwitchTheme = ({
   ];
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-fr-theme', currentTheme);
-  }, [currentTheme]);
+    let initialTheme = window.localStorage.getItem('prefers-color-scheme');
+    if (!initialTheme) {
+      initialTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+    }
+
+    document.documentElement.setAttribute('data-fr-theme', initialTheme);
+  }, []);
 
   return (
     <Modal
@@ -34,13 +32,14 @@ const SwitchTheme = ({
     >
       <ModalTitle>{title}</ModalTitle>
       <ModalContent className="fr-switch-theme">
+        {currentTheme && (
         <RadioGroup
           className="fr-text--regular"
           legend={legend}
           value={currentTheme}
           onChange={(value) => {
             window.localStorage.setItem('prefers-color-scheme', value);
-            setCurrentTheme(value);
+            document.documentElement.setAttribute('data-fr-theme', value);
           }}
         >
           {themes.map((theme) => (
@@ -52,6 +51,7 @@ const SwitchTheme = ({
             />
           ))}
         </RadioGroup>
+        )}
       </ModalContent>
     </Modal>
   );
