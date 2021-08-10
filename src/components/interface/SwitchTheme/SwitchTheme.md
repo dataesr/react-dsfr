@@ -131,14 +131,12 @@ il est possible de recuperer l'état courant du theme avec un hook react
 ```jsx
 import { useState } from 'react';
 import {
-  Header,
-  HeaderBody,
-  Tool,
-  ToolItem,
-  ToolItemGroup,
-  SwitchTheme,
-  useTheme
-} from '@dataesr/react-dsfr';
+    Header,
+    HeaderBody,
+    Tool,
+    ToolItem,
+    ToolItemGroup,
+} from '../Header';
 
 const [isOpen, setIsOpen] = useState(false);
 const theme = useTheme();
