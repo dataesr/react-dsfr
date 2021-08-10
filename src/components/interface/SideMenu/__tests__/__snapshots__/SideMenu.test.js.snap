@@ -20,7 +20,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
     <div
       class="fr-collapse"
       id="xxxxxxx"
-      style="--collapse: -0px;"
+      style="--collapse: 0px;"
     >
       <div
         class="fr-sidemenu__title"
@@ -46,7 +46,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
             class="fr-collapse"
             data-testid="xxxxxxx"
             id="xxxxxxx"
-            style="--collapse: -0px;"
+            style="--collapse: 0px;"
           >
             <ul
               class="fr-sidemenu__list"
@@ -91,7 +91,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                   class="fr-collapse"
                   data-testid="xxxxxxx"
                   id="xxxxxxx"
-                  style="--collapse: -0px;"
+                  style="--collapse: 0px;"
                 >
                   <ul
                     class="fr-sidemenu__list"
@@ -218,7 +218,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
             class="fr-collapse"
             data-testid="xxxxxxx"
             id="xxxxxxx"
-            style="--collapse: -0px;"
+            style="--collapse: 0px;"
           >
             <ul
               class="fr-sidemenu__list"
@@ -260,7 +260,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                   class="fr-collapse"
                   data-testid="xxxxxxx"
                   id="xxxxxxx"
-                  style="--collapse: -0px;"
+                  style="--collapse: 0px;"
                 >
                   <ul
                     class="fr-sidemenu__list"

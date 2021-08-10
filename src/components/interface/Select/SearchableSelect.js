@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -26,7 +26,11 @@ const SearchableSelect = ({
   filter,
   ...remainingProps
 }) => {
-  const [selectId] = useState(id || uuidv4());
+  const selectId = useRef(id || uuidv4());
+
+  useEffect(() => {
+    selectId.current = id || uuidv4();
+  }, [id]);
 
   const _className = classNames('fr-select', {
     [`fr-select--${messageType}`]: messageType,
@@ -64,7 +68,7 @@ const SearchableSelect = ({
     <SelectWrapper
       className={className}
       hint={hint}
-      selectId={selectId}
+      selectId={selectId.current}
       label={label}
       message={message}
       messageType={messageType}
@@ -72,7 +76,7 @@ const SearchableSelect = ({
       {...remainingProps}
     >
       <input
-        id={selectId}
+        id={selectId.current}
         className={_className}
         autoComplete="off"
         required={required}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -22,7 +22,12 @@ const Toggle = ({
   onChange,
   ...remainingProps
 }) => {
-  const _id = id || uuidv4();
+  const _id = useRef(id || uuidv4());
+
+  useEffect(() => {
+    _id.current = id || uuidv4();
+  }, [id]);
+
   const _className = classNames('fr-toggle', {
     'fr-toggle--border-bottom': hasSeparator,
     'fr-toggle--label-left': hasLabelLeft,
@@ -39,11 +44,11 @@ const Toggle = ({
         disabled={isDisabled}
         onChange={onChange}
         className="fr-toggle__input"
-        id={_id}
+        id={_id.current}
       />
       <label
         className="fr-toggle__label"
-        htmlFor={_id}
+        htmlFor={_id.current}
         data-fr-checked-label="Activé"
         data-fr-unchecked-label="Désactivé"
       >

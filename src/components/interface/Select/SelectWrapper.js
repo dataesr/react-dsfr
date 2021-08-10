@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -21,7 +21,7 @@ const SelectWrapper = ({
   children,
   ...remainingProps
 }) => {
-  const [messageId] = useState(uuidv4());
+  const hintId = useRef(uuidv4());
   const _classNameWrapper = classNames('fr-select-group', {
     [`fr-select-group--${messageType}`]: messageType,
   }, className);
@@ -36,16 +36,16 @@ const SelectWrapper = ({
         <label
           className="fr-label"
           htmlFor={selectId}
-          aria-describedby={messageId}
+          aria-describedby={hint && hintId.current}
         >
           {label}
           {required && <span className="error"> *</span>}
-          {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
+          {hint && <span id={hintId.current} className="fr-hint-text">{hint}</span>}
         </label>
       )
       }
       {children}
-      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
+      {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };
