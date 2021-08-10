@@ -43,7 +43,7 @@ const RadioGroup = ({
 
   const childs = Children.toArray(children).map((child) => cloneElement(child, {
     name: child.props.name || radioName,
-    checked: value ? child.props.value === value : child.props.value === internalValue,
+    isChecked: value ? child.props.value === value : child.props.value === internalValue,
     required,
     onGroupChange,
   }));
