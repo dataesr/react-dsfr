@@ -11,7 +11,7 @@ const MegaNavItem = ({
   children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
 }) => {
   const Tag = `${as}`;
-  const id = uuidv4();
+  const id = useRef(uuidv4());
   const [isExpanded, setIsExpanded] = useState(false);
   const { item, collapse } = useCollapse(null, isExpanded, 'fr-mega-menu');
   const expandedRef = useRef(null);
@@ -33,7 +33,7 @@ const MegaNavItem = ({
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
         aria-expanded={isExpanded}
-        aria-controls={id}
+        aria-controls={id.current}
         aria-current={current || undefined}
         className="fr-nav__btn"
         aria-label="ouvrir la navigation"
@@ -42,7 +42,7 @@ const MegaNavItem = ({
       </button>
       <div
         ref={expandedRef}
-        id={id}
+        id={id.current}
         className={item.class}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse, padding: 0 }}
       >

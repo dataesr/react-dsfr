@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
@@ -29,8 +29,11 @@ const Checkbox = forwardRef((props, ref) => {
     [`fr-checkbox-group--${messageType}`]: messageType,
     'fr-checkbox-group--sm': (size !== 'md'),
   }, className);
-  const checkboxId = id || uuidv4();
-  const messageId = uuidv4();
+  const checkboxId = useRef(id || uuidv4());
+
+  useEffect(() => {
+    checkboxId.current = id || uuidv4();
+  }, [id]);
 
   return (
     <div
@@ -39,7 +42,7 @@ const Checkbox = forwardRef((props, ref) => {
     >
       <input
         type="checkbox"
-        id={checkboxId}
+        id={checkboxId.current}
         name="checkbox"
         defaultChecked={defaultChecked}
         onChange={onChange}
@@ -47,9 +50,9 @@ const Checkbox = forwardRef((props, ref) => {
         value={value}
         disabled={isDisabled}
       />
-      <label className="fr-label" htmlFor={checkboxId}>{label}</label>
+      <label className="fr-label" htmlFor={checkboxId.current}>{label}</label>
       {hint && <span className="fr-hint-text">{hint}</span>}
-      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
+      {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 });

@@ -190,7 +190,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-test-id="navitem"
           >
             <button
-              aria-controls="fr-nav-subitem-undefined"
+              aria-controls="xxxxxxx"
               aria-expanded={false}
               aria-label="ouvrir la navigation"
               className="fr-nav__btn"
@@ -201,7 +201,7 @@ exports[`<Header /> renders correctly 1`] = `
             </button>
             <div
               className="fr-menu fr-collapse"
-              id="fr-nav-subitem-undefined"
+              id="xxxxxxx"
               style={
                 Object {
                   "--collapse": "0px",
