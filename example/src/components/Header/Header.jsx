@@ -18,10 +18,12 @@ import {
   MegaNavItem,
   Link,
   SwitchTheme,
+  useTheme,
 } from '@dataesr/react-dsfr';
 
 const HeaderExample = () => {
   const location = useLocation();
+  const theme = useTheme();
   const [path, setPath] = useState(() => location.pathname || '');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -42,7 +44,7 @@ const HeaderExample = () => {
           <Service
             asLink={<RouterLink to="/myLinkUrl" />}
             title="Playground @dataesr/react-dsfr"
-            description="messy tests"
+            description={`${theme} mode`}
           />
           <Tool
             closeButtonLabel="fermer"
