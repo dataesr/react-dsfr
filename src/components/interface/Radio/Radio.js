@@ -24,7 +24,7 @@ const Radio = ({
   imageURL,
   value,
   name,
-  checked,
+  isChecked,
   required,
   isDisabled,
   ...remainingProps
@@ -62,7 +62,7 @@ const Radio = ({
         onChange={handleChange}
         value={value}
         name={name}
-        defaultChecked={checked}
+        defaultChecked={isChecked || undefined}
         disabled={isDisabled}
         required={required}
       />
@@ -97,7 +97,7 @@ Radio.defaultProps = {
   message: '',
   imageURL: '',
   name: undefined,
-  checked: undefined,
+  isChecked: false,
   required: false,
   isDisabled: false,
 };
@@ -120,7 +120,7 @@ Radio.propTypes = {
   imageURL: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string.isRequired,
-  checked: PropTypes.bool,
+  isChecked: PropTypes.bool,
   required: PropTypes.bool,
   isDisabled: PropTypes.bool,
 };

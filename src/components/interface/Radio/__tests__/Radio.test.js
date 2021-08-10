@@ -17,6 +17,7 @@ describe('<Radio />', () => {
         <Radio
           label="Label de la radio"
           value="value"
+          isChecked
           data-testid="radio"
         />,
       )

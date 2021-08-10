@@ -12,6 +12,7 @@ import { RadioGroup, Radio } from '.';
   <Radio
     label="Label radio 1"
     value="value-1"
+    isChecked
   />
   <Radio
     label="Label radio 2"

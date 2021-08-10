@@ -50,6 +50,7 @@ const RadioExample = () => {
             <Radio
               label="Label radio 2"
               value="value-2"
+              isChecked
             />
             <Radio
               label="Label radio 3"

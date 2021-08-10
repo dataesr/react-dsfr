@@ -23,7 +23,6 @@ exports[`<RadioGroup /> renders correctly 1`] = `
         data-testid="radio 1"
       >
         <input
-          defaultChecked={false}
           disabled={false}
           id="xxxxxxx"
           name="radio-test"
@@ -46,7 +45,6 @@ exports[`<RadioGroup /> renders correctly 1`] = `
         data-test-id="radio 2"
       >
         <input
-          defaultChecked={false}
           disabled={false}
           name="radio-test"
           onChange={[Function]}

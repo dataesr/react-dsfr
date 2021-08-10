@@ -104,7 +104,7 @@ Select.propTypes = {
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
   })).isRequired,
-  selected: PropTypes.string,
+  selected: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   required: PropTypes.bool,
 };
 
