@@ -127,7 +127,7 @@ const TableExample = () => {
       <Row>
         <Table
           caption="Complexe Table"
-          rowKey="id"
+          rowKey={(x) => x.id}
           data={data}
           columns={columns}
           pagination

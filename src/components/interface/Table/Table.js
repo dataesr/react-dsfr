@@ -84,6 +84,8 @@ const Table = ({
     return <span className="empty-sort-icon" />;
   };
 
+  const getRowKey = typeof rowKey === 'string' ? (row) => row[rowKey] : rowKey;
+
   return (
     <div
       className={_className}
@@ -116,7 +118,7 @@ const Table = ({
           {sortedData
             .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map((row) => (
-              <tr key={row[rowKey]}>
+              <tr key={getRowKey(row)}>
                 {columns.map((column) => (
                   <td key={column.name}>
                     {column.render ? column.render(row) : row[column.name]}
@@ -164,7 +166,10 @@ Table.propTypes = {
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
   caption: PropTypes.string.isRequired,
-  rowKey: PropTypes.string.isRequired,
+  rowKey: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]).isRequired,
   children: PropTypes.node,
   className: PropTypes.oneOfType([
     PropTypes.string,

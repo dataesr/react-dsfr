@@ -19,6 +19,7 @@ describe('<Table />', () => {
     render(
       <Table
         bordered
+        rowKey="1"
         captionPosition="bottom"
         caption="Mon super tableau"
         data-testid="table"
