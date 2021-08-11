@@ -33,7 +33,6 @@ const SwitchTheme = ({
     >
       <ModalTitle>{title}</ModalTitle>
       <ModalContent className="fr-switch-theme">
-        {currentTheme && (
         <RadioGroup
           className="fr-text--regular"
           legend={legend}
@@ -52,7 +51,6 @@ const SwitchTheme = ({
             />
           ))}
         </RadioGroup>
-        )}
       </ModalContent>
     </Modal>
   );
