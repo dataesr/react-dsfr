@@ -102,7 +102,11 @@ RadioGroup.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   ariaLabel: PropTypes.string,
   isDisabled: PropTypes.bool,
   isInline: PropTypes.bool,

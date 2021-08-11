@@ -109,7 +109,11 @@ TextInput.propTypes = {
   textarea: PropTypes.bool,
   inactive: PropTypes.bool,
   label: PropTypes.string,
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   messageType: PropTypes.oneOf(['error', 'valid', '']),

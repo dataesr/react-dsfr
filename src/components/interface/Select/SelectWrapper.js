@@ -65,7 +65,11 @@ SelectWrapper.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   selectId: PropTypes.string.isRequired,
   label: PropTypes.string,
   message: PropTypes.string,

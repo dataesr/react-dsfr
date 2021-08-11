@@ -222,7 +222,11 @@ SearchableSelect.propTypes = {
     PropTypes.array,
   ]),
   disabled: PropTypes.bool,
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   id: PropTypes.string,
   label: PropTypes.string,
   message: PropTypes.string,

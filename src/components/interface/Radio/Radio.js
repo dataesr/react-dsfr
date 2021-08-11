@@ -108,7 +108,11 @@ Radio.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   id: PropTypes.string,
   isExtended: PropTypes.bool,
   label: PropTypes.string.isRequired,
