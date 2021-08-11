@@ -17,19 +17,31 @@ exports[`<Table /> renders Table properly 1`] = `
           class=""
           scope="col"
         >
-          Titre 1
+          <div
+            class="table-column-header"
+          >
+            Titre 1
+          </div>
         </th>
         <th
           class=""
           scope="col"
         >
-          Titre 2
+          <div
+            class="table-column-header"
+          >
+            Titre 2
+          </div>
         </th>
         <th
           class=""
           scope="col"
         >
-          Titre 3
+          <div
+            class="table-column-header"
+          >
+            Titre 3
+          </div>
         </th>
       </tr>
     </thead>

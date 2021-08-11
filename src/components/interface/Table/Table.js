@@ -5,6 +5,7 @@ import Pagination from '../Pagination';
 
 import dataAttributes from '../../../utils/data-attributes';
 
+import './table.css';
 import '@gouvfr/dsfr/dist/css/table.min.css';
 
 /**
@@ -73,6 +74,16 @@ const Table = ({
     });
   }
 
+  const getSortIcon = (column) => {
+    if (sort && sort.column.name === column.name) {
+      return sort.direction === 'dsc'
+        ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
+        : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />;
+    }
+
+    return <span className="empty-sort-icon" />;
+  };
+
   return (
     <div
       className={_className}
@@ -93,12 +104,10 @@ const Table = ({
                   }
                 }}
               >
-                {column.headerRender ? column.headerRender() : column.label}
-                {sort && sort.column.name === column.name && (
-                  sort.direction === 'dsc'
-                    ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
-                    : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />
-                )}
+                <div className="table-column-header">
+                  {column.headerRender ? column.headerRender() : column.label}
+                  {column.sortable && getSortIcon(column)}
+                </div>
               </th>
             ))}
           </tr>

@@ -1,0 +1,8 @@
+.empty-sort-icon {
+    width: 24px;
+}
+
+.table-column-header {
+    display: flex;
+    align-items: center;
+}
