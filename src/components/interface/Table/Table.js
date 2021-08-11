@@ -144,6 +144,7 @@ Table.defaultProps = {
   fixedLayout: false,
   noScroll: false,
   bordered: false,
+  caption: undefined,
   captionPosition: 'top',
   className: '',
   tableID: '',
@@ -165,7 +166,7 @@ Table.propTypes = {
   noScroll: PropTypes.bool,
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
-  caption: PropTypes.string.isRequired,
+  caption: PropTypes.string,
   rowKey: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
