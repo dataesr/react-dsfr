@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  createRef, useEffect, useRef, useState,
+} from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
@@ -27,17 +29,32 @@ const SearchableSelect = ({
   ...remainingProps
 }) => {
   const selectId = useRef(id || uuidv4());
+  const optionsRef = useRef([]);
+  const [arrowSelected, setArrowSelected] = useState();
+  const [internalValue, setInternalValue] = useState(selected);
+  const [showOptions, setShowOptions] = useState(false);
+
+  if (options.length !== optionsRef.length) {
+    optionsRef.current = Array(options.length)
+      .fill()
+      .map((option, i) => optionsRef.current[i] || createRef());
+  }
 
   useEffect(() => {
     selectId.current = id || uuidv4();
   }, [id]);
 
+  useEffect(() => {
+    if (arrowSelected) {
+      optionsRef.current[arrowSelected].current.scrollIntoView();
+    } else if (optionsRef.current[0].current) {
+      optionsRef.current[0].current.scrollIntoView();
+    }
+  }, [arrowSelected]);
+
   const _className = classNames('fr-select', {
     [`fr-select--${messageType}`]: messageType,
   });
-
-  const [internalValue, setInternalValue] = useState(selected);
-  const [showOptions, setShowOptions] = useState(false);
 
   const filteredOptions = options
     .filter((option, index, arr) => filter(internalValue, option, index, arr));
@@ -50,6 +67,7 @@ const SearchableSelect = ({
   const onFocus = () => {
     onInternalChange('', '');
     setShowOptions(true);
+    setArrowSelected(null);
   };
 
   const onBlur = () => {
@@ -64,6 +82,37 @@ const SearchableSelect = ({
     setShowOptions(false);
   };
 
+  const onKeyDown = (e) => {
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setShowOptions(true);
+        if (arrowSelected === null) {
+          setArrowSelected(0);
+        } else if (arrowSelected < filteredOptions.length - 1) {
+          setArrowSelected(arrowSelected + 1);
+        }
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setShowOptions(true);
+        if (arrowSelected && arrowSelected > 0) {
+          setArrowSelected(arrowSelected - 1);
+        }
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (arrowSelected !== null) {
+          const option = filteredOptions[arrowSelected];
+          setInternalValue(option.value, option.label);
+          setShowOptions(false);
+        }
+        break;
+      default:
+        setArrowSelected(null);
+    }
+  };
+
   return (
     <SelectWrapper
       className={className}
@@ -75,44 +124,51 @@ const SearchableSelect = ({
       required={required}
       {...remainingProps}
     >
-      <input
-        id={selectId.current}
-        className={_className}
-        autoComplete="off"
-        required={required}
-        disabled={disabled}
-        onChange={(e) => setInternalValue(e.target.value)}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        value={internalValue}
-      />
-      <div
-        className={classNames(
-          'select-search-options',
-          'midlength-input',
-          { 'select-search-options__visible': showOptions },
-        )}
-      >
-        {filteredOptions.length === 0 ? (
-          <div className="select-search-option__disabled">
-            Aucun résultat
-          </div>
-        ) : (
-          <>
-            {filteredOptions.map((option) => (
-              <option
-                className="select-search-option"
-                disabled={option.disabled || false}
-                hidden={option.hidden || false}
-                key={`${selectId}-${option.value}`}
-                value={option.value}
-                onMouseDown={() => onInternalChange(option.value, option.label)}
-              >
-                {option.label}
-              </option>
-            ))}
-          </>
-        )}
+      <div className="select-search-input">
+        <input
+          onKeyDown={onKeyDown}
+          id={selectId.current}
+          className={_className}
+          autoComplete="off"
+          required={required}
+          disabled={disabled}
+          onChange={(e) => setInternalValue(e.target.value)}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          value={internalValue}
+        />
+        <div
+          className={classNames(
+            'select-search-options',
+            'midlength-input',
+            { 'select-search-options__visible': showOptions },
+          )}
+        >
+          {filteredOptions.length === 0 ? (
+            <div className="select-search-option__disabled">
+              Aucun résultat
+            </div>
+          ) : (
+            <>
+              {filteredOptions.map((option, i) => (
+                <option
+                  ref={optionsRef.current[i]}
+                  className={classNames(
+                    'select-search-option',
+                    { 'select-search-option__selected': i === arrowSelected },
+                  )}
+                  disabled={option.disabled || false}
+                  hidden={option.hidden || false}
+                  key={`${selectId}-${option.value}`}
+                  value={option.value}
+                  onMouseDown={() => onInternalChange(option.value, option.label)}
+                >
+                  {option.label}
+                </option>
+              ))}
+            </>
+          )}
+        </div>
       </div>
     </SelectWrapper>
   );
