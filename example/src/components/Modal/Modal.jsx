@@ -14,7 +14,74 @@ const ModalExample = () => {
           <Button title="open modal" onClick={() => setIsOpenModal1(true)}>open modal</Button>
           <Modal isOpen={isOpenModal1} hide={() => setIsOpenModal1(false)}>
             <ModalTitle icon="ri-arrow-right-fill">I am a title</ModalTitle>
-            <ModalContent>blah blah</ModalContent>
+            <ModalContent>
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+              blah blah
+              <br />
+            </ModalContent>
             <ModalFooter>
               <Button title="Une action">blah</Button>
             </ModalFooter>
