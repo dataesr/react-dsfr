@@ -17,7 +17,7 @@ const options = [
 const SelectExample = () => {
   const [selectValue1, setSelectValue1] = useState('');
   const [selectValue2, setSelectValue2] = useState('');
-  const [department, setDepartment] = useState('');
+  const [department, setDepartment] = useState(5);
   return (
     <Col>
       <Select
@@ -38,7 +38,7 @@ const SelectExample = () => {
         label="Select avec recherche"
         selected={department}
         onChange={setDepartment}
-        options={DEPARTEMENTS.map((departement) => ({ value: departement, label: departement }))}
+        options={DEPARTEMENTS.map((departement, i) => ({ value: i, label: departement }))}
       />
     </Col>
   );

@@ -31,7 +31,16 @@ const SearchableSelect = ({
   const selectId = useRef(id || uuidv4());
   const optionsRef = useRef([]);
   const [arrowSelected, setArrowSelected] = useState();
-  const [internalValue, setInternalValue] = useState(selected);
+
+  const getSelectedLabel = () => {
+    if (selected) {
+      const selectedOption = options.find((option) => option.value === selected);
+      return selectedOption ? selectedOption.label : '';
+    }
+    return '';
+  };
+
+  const [internalLabel, setInternalLabel] = useState(getSelectedLabel());
   const [showOptions, setShowOptions] = useState(false);
 
   if (options.length !== optionsRef.length) {
@@ -57,11 +66,11 @@ const SearchableSelect = ({
   });
 
   const filteredOptions = options
-    .filter((option, index, arr) => filter(internalValue, option, index, arr));
+    .filter((option, index, arr) => filter(internalLabel, option, index, arr));
 
-  const onInternalChange = (value, newValue) => {
-    setInternalValue(newValue);
-    onChange(value);
+  const onInternalChange = (newValue, newLabel) => {
+    setInternalLabel(newLabel);
+    onChange(newValue);
   };
 
   const onFocus = () => {
@@ -74,9 +83,9 @@ const SearchableSelect = ({
     if (filteredOptions.length === 1) {
       onInternalChange(filteredOptions[0].value, filteredOptions[0].label);
     } else {
-      const foundValue = options.find((option) => option.label === internalValue);
+      const foundValue = options.find((option) => option.label === internalLabel);
       if (!foundValue) {
-        setInternalValue('');
+        setInternalLabel('');
       }
     }
     setShowOptions(false);
@@ -104,7 +113,7 @@ const SearchableSelect = ({
         e.preventDefault();
         if (arrowSelected !== null) {
           const option = filteredOptions[arrowSelected];
-          setInternalValue(option.value, option.label);
+          setInternalLabel(option.value, option.label);
           setShowOptions(false);
         }
         break;
@@ -132,10 +141,10 @@ const SearchableSelect = ({
           autoComplete="off"
           required={required}
           disabled={disabled}
-          onChange={(e) => setInternalValue(e.target.value)}
+          onChange={(e) => setInternalLabel(e.target.value)}
           onFocus={onFocus}
           onBlur={onBlur}
-          value={internalValue}
+          value={internalLabel}
         />
         <div
           className={classNames(
@@ -187,9 +196,9 @@ SearchableSelect.defaultProps = {
   selected: '',
   required: false,
   filter: (
-    internalValue,
+    label,
     option,
-  ) => option.label.toLowerCase().includes(internalValue.toLowerCase()),
+  ) => option.label.toLowerCase().includes(label.toLowerCase()),
 };
 
 SearchableSelect.propTypes = {
