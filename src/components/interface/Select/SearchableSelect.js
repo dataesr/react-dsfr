@@ -30,6 +30,7 @@ const SearchableSelect = ({
 }) => {
   const selectId = useRef(id || uuidv4());
   const optionsRef = useRef([]);
+  const optionsContainerRef = useRef();
   const [arrowSelected, setArrowSelected] = useState();
 
   const getSelectedLabel = () => {
@@ -55,9 +56,12 @@ const SearchableSelect = ({
 
   useEffect(() => {
     if (arrowSelected) {
-      optionsRef.current[arrowSelected].current.scrollIntoView();
-    } else if (optionsRef.current[0].current) {
-      optionsRef.current[0].current.scrollIntoView();
+      optionsContainerRef.current.scrollTop = Math.max(
+        0,
+        optionsRef.current[arrowSelected].current.offsetTop - 20,
+      );
+    } else {
+      optionsContainerRef.current.scrollTop = 0;
     }
   }, [arrowSelected]);
 
@@ -98,7 +102,7 @@ const SearchableSelect = ({
         setShowOptions(true);
         if (arrowSelected === null) {
           setArrowSelected(0);
-        } else if (arrowSelected < filteredOptions.length - 1) {
+        } else if (arrowSelected < filteredOptions.filter((o) => !o.disabled).length - 1) {
           setArrowSelected(arrowSelected + 1);
         }
         break;
@@ -112,8 +116,8 @@ const SearchableSelect = ({
       case 'Enter':
         e.preventDefault();
         if (arrowSelected !== null) {
-          const option = filteredOptions[arrowSelected];
-          setInternalLabel(option.value, option.label);
+          const option = filteredOptions.filter((o) => !o.disabled)[arrowSelected];
+          onInternalChange(option.value, option.label);
           setShowOptions(false);
         }
         break;
@@ -122,6 +126,7 @@ const SearchableSelect = ({
     }
   };
 
+  let refCount = -1;
   return (
     <SelectWrapper
       className={className}
@@ -147,6 +152,7 @@ const SearchableSelect = ({
           value={internalLabel}
         />
         <div
+          ref={optionsContainerRef}
           className={classNames(
             'select-search-options',
             'midlength-input',
@@ -159,22 +165,30 @@ const SearchableSelect = ({
             </div>
           ) : (
             <>
-              {filteredOptions.map((option, i) => (
-                <option
-                  ref={optionsRef.current[i]}
-                  className={classNames(
-                    'select-search-option',
-                    { 'select-search-option__selected': i === arrowSelected },
-                  )}
-                  disabled={option.disabled || false}
-                  hidden={option.hidden || false}
-                  key={`${selectId}-${option.value}`}
-                  value={option.value}
-                  onMouseDown={() => onInternalChange(option.value, option.label)}
-                >
-                  {option.label}
-                </option>
-              ))}
+              {filteredOptions.map((option) => {
+                if (!option.disabled) {
+                  refCount += 1;
+                }
+                return (
+                  <option
+                    ref={option.disabled ? null : optionsRef.current[refCount]}
+                    className={classNames(
+                      'select-search-option',
+                      {
+                        'select-search-option__selected': !option.disabled && refCount === arrowSelected,
+                        'select-search-option__disabled': option.disabled,
+                      },
+                    )}
+                    disabled={option.disabled || false}
+                    hidden={option.hidden || false}
+                    key={`${selectId}-${option.value}`}
+                    value={option.value}
+                    onMouseDown={() => onInternalChange(option.value, option.label)}
+                  >
+                    {option.label}
+                  </option>
+                );
+              })}
             </>
           )}
         </div>

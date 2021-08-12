@@ -31,3 +31,12 @@
 .select-search-option:hover {
     background-color: var(--block-color-hover);
 }
+
+.select-search-option__disabled {
+    cursor: not-allowed;
+    color: var(--g500);
+}
+
+.select-search-option__disabled:hover {
+    background-color: transparent;
+}

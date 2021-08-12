@@ -9,7 +9,8 @@ const options = [
   {
     value: '', label: '- Select -', disabled: true, hidden: true,
   },
-  { value: '1', label: 'Burgers & sandwiches' }, { value: '2', label: 'Build your own' },
+  { value: '1', label: 'Burgers & sandwiches' },
+  { value: '2', label: 'Build your own', disabled: true },
   { value: '3', label: 'Friendly meals' },
   { value: '4', label: 'Save menu & more' },
 ];
@@ -17,7 +18,7 @@ const options = [
 const SelectExample = () => {
   const [selectValue1, setSelectValue1] = useState('');
   const [selectValue2, setSelectValue2] = useState('');
-  const [department, setDepartment] = useState(5);
+  const [department, setDepartment] = useState('5');
   return (
     <Col>
       <Select
@@ -38,7 +39,11 @@ const SelectExample = () => {
         label="Select avec recherche"
         selected={department}
         onChange={setDepartment}
-        options={DEPARTEMENTS.map((departement, i) => ({ value: i, label: departement }))}
+        options={DEPARTEMENTS.map((departement, i) => ({
+          value: i.toString(),
+          label: departement,
+          disabled: i % 15 === 0,
+        }))}
       />
     </Col>
   );
