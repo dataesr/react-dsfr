@@ -159,7 +159,8 @@ Table.defaultProps = {
 
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.array.isRequired,
   fixedLayout: PropTypes.bool,
   tableID: PropTypes.string,
   tableClassName: PropTypes.string,
