@@ -81,8 +81,16 @@ Alert.defaultProps = {
 
 Alert.propTypes = {
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]).isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   type: PropTypes.oneOf(['error', 'success', 'info']),
   small: PropTypes.bool,
   show: PropTypes.bool,
