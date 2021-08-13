@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Children } from "react";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const FooterPartners = ({ children, className, ...remainingProps }) => {
-  const title = children.filter(
+  const title = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersTitle',
   );
-  const mainLogos = children.filter(
+  const mainLogos = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersLogo' && child.props.isMain,
   );
-  const subLogos = children.filter(
+  const subLogos = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersLogo' && !child.props.isMain,
   );
   return (

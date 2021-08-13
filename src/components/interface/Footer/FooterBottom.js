@@ -9,7 +9,7 @@ const FooterBottom = ({ children, className, ...remainingProps }) => {
   const links = Children.toArray(children)
     .filter((link) => link.props.__TYPE === 'FooterLink')
     .map((link) => cloneElement(link, { section: 'bottom' }));
-  const childs = children.filter((link) => link.props.__TYPE !== 'FooterLink');
+  const childs = Children.toArray(children).filter((link) => link.props.__TYPE !== 'FooterLink');
   return (
     <div
       className={classNames('fr-footer__bottom', className)}
