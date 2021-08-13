@@ -5,6 +5,7 @@ import Pagination from '../Pagination';
 
 import dataAttributes from '../../../utils/data-attributes';
 
+import './table.css';
 import '@gouvfr/dsfr/dist/css/table.min.css';
 
 /**
@@ -73,6 +74,18 @@ const Table = ({
     });
   }
 
+  const getSortIcon = (column) => {
+    if (sort && sort.column.name === column.name) {
+      return sort.direction === 'dsc'
+        ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
+        : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />;
+    }
+
+    return <span className="empty-sort-icon" />;
+  };
+
+  const getRowKey = typeof rowKey === 'string' ? (row) => row[rowKey] : rowKey;
+
   return (
     <div
       className={_className}
@@ -93,12 +106,10 @@ const Table = ({
                   }
                 }}
               >
-                {column.headerRender ? column.headerRender() : column.label}
-                {sort && sort.column.name === column.name && (
-                  sort.direction === 'dsc'
-                    ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
-                    : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />
-                )}
+                <div className="table-column-header">
+                  {column.headerRender ? column.headerRender() : column.label}
+                  {column.sortable && getSortIcon(column)}
+                </div>
               </th>
             ))}
           </tr>
@@ -107,7 +118,7 @@ const Table = ({
           {sortedData
             .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map((row) => (
-              <tr key={row[rowKey]}>
+              <tr key={getRowKey(row)}>
                 {columns.map((column) => (
                   <td key={column.name}>
                     {column.render ? column.render(row) : row[column.name]}
@@ -155,7 +166,10 @@ Table.propTypes = {
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
   caption: PropTypes.string.isRequired,
-  rowKey: PropTypes.string.isRequired,
+  rowKey: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]).isRequired,
   children: PropTypes.node,
   className: PropTypes.oneOfType([
     PropTypes.string,
