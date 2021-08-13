@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
