@@ -35,7 +35,7 @@ const Link = ({
   );
   const onClickLink = (e) => {
     e.preventDefault();
-    onClick();
+    onClick(e);
   };
 
   const asLink = as
