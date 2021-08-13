@@ -144,6 +144,7 @@ Table.defaultProps = {
   fixedLayout: false,
   noScroll: false,
   bordered: false,
+  caption: undefined,
   captionPosition: 'top',
   className: '',
   tableID: '',
@@ -158,14 +159,15 @@ Table.defaultProps = {
 
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.array.isRequired,
   fixedLayout: PropTypes.bool,
   tableID: PropTypes.string,
   tableClassName: PropTypes.string,
   noScroll: PropTypes.bool,
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
-  caption: PropTypes.string.isRequired,
+  caption: PropTypes.string,
   rowKey: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,

@@ -37,6 +37,13 @@ const SelectExample = () => {
       />
       <SearchableSelect
         label="Select avec recherche"
+        hint={(
+          <span>
+            Vous pouvez trouvé la liste des département
+            {' '}
+            <a href="https://fr.wikipedia.org/wiki/Liste_des_d%C3%A9partements_fran%C3%A7ais">ici</a>
+          </span>
+)}
         selected={department}
         onChange={setDepartment}
         options={DEPARTEMENTS.map((departement, i) => ({

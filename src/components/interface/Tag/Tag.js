@@ -53,7 +53,7 @@ const Tag = ({
       <Icon
         name={icon}
         size={iconSize[size]}
-        iconPosition={children && `${iconPosition}`}
+        iconPosition={children ? iconPosition : 'center'}
       >
         {_tag}
       </Icon>
@@ -71,6 +71,7 @@ Tag.defaultProps = {
   target: '',
   icon: '',
   iconPosition: 'right',
+  children: undefined,
 };
 
 Tag.propTypes = {
@@ -81,7 +82,7 @@ Tag.propTypes = {
   ]),
   scheme: PropTypes.oneOf(SCHEMES),
   as: PropTypes.oneOf(['a', 'span', 'p']),
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   href: PropTypes.string,
   title: PropTypes.string,

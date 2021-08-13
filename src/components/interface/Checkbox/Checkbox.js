@@ -76,7 +76,11 @@ Checkbox.propTypes = {
     PropTypes.array,
   ]),
   id: PropTypes.string,
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   isDisabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,

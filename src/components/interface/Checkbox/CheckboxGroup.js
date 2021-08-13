@@ -65,7 +65,11 @@ CheckboxGroup.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   ariaLabel: PropTypes.string,
   isInline: PropTypes.bool,
   legend: PropTypes.string.isRequired,
