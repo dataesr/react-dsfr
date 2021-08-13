@@ -86,6 +86,10 @@ const Table = ({
 
   const getRowKey = typeof rowKey === 'string' ? (row) => row[rowKey] : rowKey;
 
+  if (pagination) {
+    sortedData = sortedData.slice((currentPage - 1) * perPage, currentPage * perPage);
+  }
+
   return (
     <div
       className={_className}
@@ -116,7 +120,6 @@ const Table = ({
         </thead>
         <tbody>
           {sortedData
-            .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map((row) => (
               <tr key={getRowKey(row)}>
                 {columns.map((column) => (
