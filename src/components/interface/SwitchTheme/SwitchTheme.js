@@ -17,7 +17,8 @@ const SwitchTheme = ({
   useEffect(() => {
     let initialTheme = window.localStorage.getItem('prefers-color-scheme');
     if (!initialTheme) {
-      initialTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+      const preferedTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      initialTheme = (preferedTheme && preferedTheme.matches) ? 'dark' : 'light';
     }
 
     document.documentElement.setAttribute('data-fr-theme', initialTheme);
