@@ -1,4 +1,8 @@
-﻿.select-search-options {
+﻿.select-search-input {
+    position: relative;
+}
+
+.select-search-options {
     background-color: var(--w);
     box-shadow: 0px 0px 10px var(--g300);
     position: absolute;
@@ -23,6 +27,16 @@
     cursor: pointer;
 }
 
+.select-search-option__selected,
 .select-search-option:hover {
     background-color: var(--block-color-hover);
+}
+
+.select-search-option__disabled {
+    cursor: not-allowed;
+    color: var(--g500);
+}
+
+.select-search-option__disabled:hover {
+    background-color: transparent;
 }
