@@ -15,7 +15,6 @@ import '@gouvfr/dsfr/dist/css/inputs.min.css';
 /*
 * react-ds-fr
 */
-import '../../../style/colors.css';
 import '../../../style/custom.css';
 
 import '@gouvfr/dsfr/dist/css/schemes.min.css';
