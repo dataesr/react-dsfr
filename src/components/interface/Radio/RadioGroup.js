@@ -41,12 +41,15 @@ const RadioGroup = ({
     }
   };
 
-  const childs = Children.toArray(children).map((child) => cloneElement(child, {
-    name: child.props.name || radioName,
-    isChecked: value ? child.props.value === value : child.props.value === internalValue,
-    required,
-    onGroupChange,
-  }));
+  const childs = Children.toArray(children).map((child) => {
+    const defaultChecked = value ? child.props.value === value : child.props.value === internalValue;
+    return cloneElement(child, {
+      name: child.props.name || radioName,
+      isChecked: child.props.isChecked || defaultChecked,
+      required,
+      onGroupChange,
+    });
+  });
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
   const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
