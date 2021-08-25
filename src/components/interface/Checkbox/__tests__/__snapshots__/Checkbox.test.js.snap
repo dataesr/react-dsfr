@@ -10,6 +10,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
     disabled={false}
     id="xxxxxxx"
     name="checkbox"
+    onBlur={[Function]}
     onChange={[Function]}
     type="checkbox"
     value="value"

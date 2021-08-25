@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { forwardRef, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -12,27 +12,26 @@ import dataAttributes from '../../../utils/data-attributes';
 const TextInput = forwardRef((props, ref) => {
   const {
     textarea,
-    inactive,
     label,
     hint,
     message,
-    value,
-    onChange,
     messageType,
     className,
-    placeholder,
-    pattern,
-    title,
     required,
-    type,
+    onBlur,
+    withAutoValidation,
     ...remainingProps
   } = props;
 
+  const [validation, setValidation] = useState({ status: '', message: undefined });
+
+  const internalMessageType = withAutoValidation ? validation.status : messageType;
+  const internalMessage = withAutoValidation ? validation.message : message;
   const _classNameWrapper = classNames('fr-input-group', {
-    [`fr-input-group--${messageType}`]: messageType,
+    [`fr-input-group--${internalMessageType}`]: internalMessageType,
   }, className);
   const _className = classNames('fr-input', {
-    [`fr-input--${messageType}`]: messageType,
+    [`fr-input--${internalMessageType}`]: internalMessageType,
   });
 
   const inputId = useRef(uuidv4());
@@ -57,77 +56,76 @@ const TextInput = forwardRef((props, ref) => {
         (textarea)
           ? (
             <textarea
+              {...dataAttributes(remainingProps, true)}
               ref={ref}
               className={_className}
-              disabled={inactive}
               id={inputId.current}
-              value={value}
-              placeholder={placeholder}
-              pattern={pattern}
-              title={title}
               required={required}
-              onChange={onChange}
+              onBlur={(e) => {
+                if (withAutoValidation) {
+                  setValidation({
+                    status: e.target.validity.valid ? 'valid' : 'error',
+                    message: e.target.validationMessage,
+                  });
+                }
+                onBlur(e);
+              }}
             />
           )
           : (
             <input
+              {...dataAttributes(remainingProps, true)}
               ref={ref}
               className={_className}
-              disabled={inactive}
-              type={type}
               id={inputId.current}
-              value={value}
-              placeholder={placeholder}
-              pattern={pattern}
-              title={title}
               required={required}
-              onChange={onChange}
+              onBlur={(e) => {
+                if (withAutoValidation) {
+                  setValidation({
+                    status: e.target.validity.valid ? 'valid' : 'error',
+                    message: e.target.validationMessage,
+                  });
+                }
+                onBlur(e);
+              }}
             />
           )
     }
-      {(message && messageType === 'error') && <p className="fr-error-text">{message}</p>}
-      {(message && messageType === 'valid') && <p className="fr-valid-text">{message}</p>}
+      {internalMessage && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
     </div>
   );
 });
+
 TextInput.defaultProps = {
   textarea: false,
-  inactive: false,
   hint: '',
-  onChange: () => {},
   messageType: '',
   message: '',
   label: null,
   className: '',
-  placeholder: undefined,
-  pattern: undefined,
-  title: undefined,
   required: false,
-  type: 'text',
+  withAutoValidation: false,
+  onBlur: () => {},
 };
+
 TextInput.propTypes = {
   textarea: PropTypes.bool,
-  inactive: PropTypes.bool,
   label: PropTypes.string,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
-  placeholder: PropTypes.string,
-  pattern: PropTypes.string,
-  title: PropTypes.string,
   required: PropTypes.bool,
-  type: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
+  withAutoValidation: PropTypes.bool,
+  onBlur: PropTypes.func,
 };
 
 export default TextInput;
