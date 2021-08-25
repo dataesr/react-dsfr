@@ -32,16 +32,7 @@ const SearchableSelect = ({
   const optionsRef = useRef([]);
   const optionsContainerRef = useRef();
   const [arrowSelected, setArrowSelected] = useState();
-
-  const getSelectedLabel = () => {
-    if (selected) {
-      const selectedOption = options.find((option) => option.value === selected);
-      return selectedOption ? selectedOption.label : '';
-    }
-    return '';
-  };
-
-  const [internalLabel, setInternalLabel] = useState(getSelectedLabel());
+  const [internalLabel, setInternalLabel] = useState('');
   const [showOptions, setShowOptions] = useState(false);
 
   if (options.length !== optionsRef.length) {
@@ -53,6 +44,15 @@ const SearchableSelect = ({
   useEffect(() => {
     selectId.current = id || uuidv4();
   }, [id]);
+
+  useEffect(() => {
+    if (selected) {
+      const selectedOption = options.find((option) => option.value === selected);
+      setInternalLabel(selectedOption ? selectedOption.label : '');
+    } else {
+      setInternalLabel('');
+    }
+  }, [options, selected]);
 
   useEffect(() => {
     if (arrowSelected) {
