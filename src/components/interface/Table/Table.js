@@ -26,19 +26,25 @@ const Table = ({
   data,
   rowKey,
   pagination,
+  paginationPosition,
   perPage,
   page,
   setPage,
   surrendingPages,
   ...remainingProps
 }) => {
-  const _className = classNames('fr-table', {
-    'fr-table--no-caption': (captionPosition === 'none'),
-    'fr-table--caption-bottom': (captionPosition === 'bottom'),
-    'fr-table--bordered': bordered,
-    'fr-table--no-scroll': noScroll,
-    'fr-table--layout-fixed': fixedLayout,
-  }, className);
+  const _className = classNames(
+    'fr-table',
+    {
+      'fr-table--no-caption': (captionPosition === 'none'),
+      'fr-table--caption-bottom': (captionPosition === 'bottom'),
+      'fr-table--bordered': bordered,
+      'fr-table--no-scroll': noScroll,
+      'fr-table--layout-fixed': fixedLayout,
+      [`fr-react-table--pagination-${paginationPosition}`]: pagination,
+    },
+    className,
+  );
 
   const [internalPage, setInternalPage] = useState(1);
   const [sort, setSort] = useState();
@@ -154,6 +160,7 @@ Table.defaultProps = {
   tableClassName: '',
   children: null,
   pagination: false,
+  paginationPosition: 'left',
   surrendingPages: 3,
   perPage: 10,
   page: undefined,
@@ -182,6 +189,7 @@ Table.propTypes = {
     PropTypes.array,
   ]),
   pagination: PropTypes.bool,
+  paginationPosition: PropTypes.oneOf(['left', 'center', 'right']),
   surrendingPages: PropTypes.number,
   perPage: PropTypes.number,
   page: PropTypes.number,
