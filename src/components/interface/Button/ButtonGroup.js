@@ -18,7 +18,8 @@ const ButtonGroup = ({
   ...remainingProps
 }) => {
   const content = Children.toArray(children)
-    .map((child) => <li key={child.props.title}>{child}</li>);
+    // eslint-disable-next-line react/no-array-index-key
+    .map((child, index) => <li key={index}>{child}</li>);
   const _className = classNames('fr-btns-group', {
     [`fr-btns-group--${size}`]: (size !== 'md'),
     [`fr-btns-group--${align}`]: (align !== 'left'),
