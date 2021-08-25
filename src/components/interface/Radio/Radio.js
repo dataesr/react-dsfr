@@ -23,10 +23,7 @@ const Radio = ({
   size,
   imageURL,
   value,
-  name,
-  isChecked,
-  required,
-  isDisabled,
+  defaultChecked,
   ...remainingProps
 }) => {
   const radioId = useRef(id || uuidv4());
@@ -57,14 +54,12 @@ const Radio = ({
   return (
     <div className={_className} {...dataAttributes(remainingProps)}>
       <input
+        {...dataAttributes(remainingProps, true)}
         type="radio"
         id={radioId.current}
         onChange={handleChange}
         value={value}
-        name={name}
-        defaultChecked={isChecked || undefined}
-        disabled={isDisabled}
-        required={required}
+        defaultChecked={defaultChecked || undefined}
       />
       <label
         className={_labelClassName}
@@ -96,10 +91,7 @@ Radio.defaultProps = {
   messageType: '',
   message: '',
   imageURL: '',
-  name: undefined,
-  isChecked: false,
-  required: false,
-  isDisabled: false,
+  defaultChecked: false,
 };
 
 Radio.propTypes = {
@@ -122,11 +114,8 @@ Radio.propTypes = {
   onGroupChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
   imageURL: PropTypes.string,
-  name: PropTypes.string,
   value: PropTypes.string.isRequired,
-  isChecked: PropTypes.bool,
-  required: PropTypes.bool,
-  isDisabled: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
 };
 
 export default Radio;

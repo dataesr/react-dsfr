@@ -7,10 +7,8 @@ exports[`<Radio /> renders correctly 1`] = `
 >
   <input
     defaultChecked={true}
-    disabled={false}
     id="xxxxxxx"
     onChange={[Function]}
-    required={false}
     type="radio"
     value="value"
   />

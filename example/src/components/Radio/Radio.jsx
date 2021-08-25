@@ -31,7 +31,7 @@ const RadioExample = () => {
               onChange={() => {
               }}
               value="value-3"
-              isChecked
+              defaultChecked
             />
           </RadioGroup>
         </Col>

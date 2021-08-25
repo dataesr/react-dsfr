@@ -17,9 +17,6 @@ const Toggle = ({
   label,
   id,
   description,
-  isChecked,
-  isDisabled,
-  onChange,
   ...remainingProps
 }) => {
   const _id = useRef(id || uuidv4());
@@ -38,11 +35,9 @@ const Toggle = ({
       {...dataAttributes(remainingProps)}
     >
       <input
+        {...dataAttributes(remainingProps, true)}
         data-testid="toggle-input"
         type="checkbox"
-        checked={isChecked}
-        disabled={isDisabled}
-        onChange={onChange}
         className="fr-toggle__input"
         id={_id.current}
       />
@@ -62,12 +57,9 @@ const Toggle = ({
 Toggle.defaultProps = {
   id: '',
   className: '',
-  isChecked: false,
-  isDisabled: false,
   hasSeparator: false,
   hasLabelLeft: false,
   description: '',
-  onChange: () => {},
 };
 
 Toggle.propTypes = {
@@ -78,12 +70,9 @@ Toggle.propTypes = {
     PropTypes.array,
   ]),
   hasSeparator: PropTypes.bool,
-  isChecked: PropTypes.bool,
-  isDisabled: PropTypes.bool,
   hasLabelLeft: PropTypes.bool,
   description: PropTypes.string,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
 };
 
 export default Toggle;

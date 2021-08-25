@@ -13,7 +13,7 @@ import { useState } from 'react';
 const [checked, setCheched] = useState(false);
 
 <Toggle
-    isChecked={checked}
+    checked={checked}
     onChange={() => setCheched(!checked)}
     label="Toggle Label"
 />
@@ -22,7 +22,7 @@ const [checked, setCheched] = useState(false);
 ### Toggle avec séparateur et label à gauche
 ```jsx
 <Toggle
-    isChecked={false}
+    checked={false}
     label="Toggle Label"
     hasSeparator
     hasLabelLeft
@@ -32,8 +32,8 @@ const [checked, setCheched] = useState(false);
 ### Toggle disabled
 ```jsx
 <Toggle
-    isDisabled
-    isChecked
+    disabled
+    checked
     label="Toggle Label"
     description="Toggle descirption"
 />

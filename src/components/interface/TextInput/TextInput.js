@@ -91,7 +91,8 @@ const TextInput = forwardRef((props, ref) => {
             />
           )
     }
-      {internalMessage && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
+      {(internalMessage && internalMessageType)
+       && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
     </div>
   );
 });

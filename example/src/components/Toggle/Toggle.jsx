@@ -8,8 +8,8 @@ const ToggleExample = () => (
   <Col>
     <Toggle
       onChange={() => { }}
-      isDisabled
-      isChecked
+      disabled
+      checked
       label="Toggle Label"
       description="Toggle descirption"
     />
