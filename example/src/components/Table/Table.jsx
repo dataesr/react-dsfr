@@ -131,6 +131,7 @@ const TableExample = () => {
           data={data}
           columns={columns}
           pagination
+          paginationPosition="center"
           perPage={3}
         />
       </Row>
