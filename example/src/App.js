@@ -6,6 +6,7 @@ import AccordionExample from './components/Accordion/Accordion';
 import AlertExample from './components/Alert/Alert';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
 import ButtonExample from './components/Button/Button';
+import ButtonGroupExample from './components/Button/ButtonGroup';
 import CalloutExample from './components/Callout/Callout';
 import CardExample from './components/Card/Card';
 import CheckboxExample from './components/Checkbox/Checkbox';
@@ -40,6 +41,7 @@ const App = () => {
     { title: 'Bloc marque', component: <LogoExample /> },
     { title: 'Breadcrumbs', component: <BreadcrumbsExample /> },
     { title: 'Button', component: <ButtonExample /> },
+    { title: 'Button group', component: <ButtonGroupExample /> },
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
