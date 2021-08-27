@@ -15,7 +15,9 @@ const MegaNavSubItem = ({
       <h5 className="fr-mega-menu__category">
         <a className="fr-nav__link" href={link} target="_self">{title}</a>
       </h5>
-      <ul className="fr-mega-menu__list">
+      {/* eslint-disable-next-line max-len */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
+      <ul className="fr-mega-menu__list" onClick={() => remainingProps.onClick()}>
         {/* eslint-disable-next-line react/no-array-index-key */}
         {childs.map((child, index) => <li key={index}>{child}</li>)}
       </ul>

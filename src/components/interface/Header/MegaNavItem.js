@@ -1,4 +1,6 @@
-import React, { useCallback, useState, useRef } from 'react';
+import React, {
+  useCallback, useState, useRef, Children, cloneElement,
+} from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -22,6 +24,12 @@ const MegaNavItem = ({
     }
   }, [isExpanded]);
   useOnClickOutside(expandedRef, close);
+
+  const subItems = Children.toArray(children).map((child) => cloneElement(child, {
+    onClick: () => {
+      setIsExpanded(false);
+    },
+  }));
 
   return (
     <li
@@ -70,7 +78,7 @@ const MegaNavItem = ({
                 )}
               </div>
             </div>
-            {children}
+            {subItems}
           </div>
         </div>
       </div>

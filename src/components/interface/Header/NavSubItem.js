@@ -16,7 +16,9 @@ const NavSubItem = ({
       {...dataAttributes(remainingProps)}
     >
       <Link
-        onClick={() => onOpenNav(false)}
+        onClick={() => {
+          onOpenNav(false);
+        }}
         as={asLink}
         className="fr-nav__link"
         href={link}

@@ -117,7 +117,7 @@ const HeaderExample = () => {
               title="Category #1"
               link="/path-to-resources-1"
             >
-              <Link title="title" href="/path">Link #1</Link>
+              <RouterLink title="title" to="/path">Link #1</RouterLink>
               <Link title="title" href="/path" current>Link #2</Link>
             </MegaNavSubItem>
             <MegaNavSubItem
