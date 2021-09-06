@@ -64,7 +64,25 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
             </a>
           </div>
         </div>
-        child
+        <div
+          className="fr-col-12 fr-col-lg-3"
+        >
+          <h5
+            className="fr-mega-menu__category"
+          >
+            <a
+              className="fr-nav__link"
+              href=""
+              target="_self"
+            >
+              
+            </a>
+          </h5>
+          <ul
+            className="fr-mega-menu__list"
+            onClick={[Function]}
+          />
+        </div>
       </div>
     </div>
   </div>

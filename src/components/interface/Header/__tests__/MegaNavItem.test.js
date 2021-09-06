@@ -3,6 +3,7 @@ import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { v4 as uuidv4 } from 'uuid';
 import { MegaNavItem } from '../index';
+import MegaNavSubItem from '../MegaNavSubItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -16,7 +17,6 @@ describe('<MegaNavItem />', () => {
   const initialProps = {
     title: 'title',
     link: 'link',
-    children: 'child',
     linkLabel: 'label',
     current: false,
     as: 'h6',
@@ -26,18 +26,18 @@ describe('<MegaNavItem />', () => {
 
   beforeEach(() => {
     uuidv4.mockImplementationOnce(() => 'xyx');
-    wrapper = (props = {}, children) => shallow(
+    wrapper = (props = {}) => shallow(
       <MegaNavItem
         {...props}
-      >
-        {children || props.children}
-      </MegaNavItem>,
+      />,
     );
   });
   it('renders correctly', () => {
     const component = renderer
       .create(
-        <MegaNavItem {...initialProps} />,
+        <MegaNavItem {...initialProps}>
+          <MegaNavSubItem />
+        </MegaNavItem>,
       )
       .toJSON();
     expect(component).toMatchSnapshot();

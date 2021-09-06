@@ -211,6 +211,7 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <ul
                 className="fr-menu__list"
+                onClick={[Function]}
               >
                 <li
                   data-test-id="navsubitem"

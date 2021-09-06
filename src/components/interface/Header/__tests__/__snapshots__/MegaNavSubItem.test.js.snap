@@ -17,6 +17,7 @@ exports[`<MegaNavSubItem /> renders correctly 1`] = `
   </h5>
   <ul
     className="fr-mega-menu__list"
+    onClick={[Function]}
   >
     <li>
       <a

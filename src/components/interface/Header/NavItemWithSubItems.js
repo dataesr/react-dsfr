@@ -54,7 +54,11 @@ const NavItemWithSubItem = ({
         className={item.class}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
       >
-        <ul className="fr-menu__list">{children}</ul>
+        {/* eslint-disable-next-line max-len */}
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
+        <ul className="fr-menu__list" onClick={() => setIsExpanded(false)}>
+          {children}
+        </ul>
       </div>
     </li>
   );
