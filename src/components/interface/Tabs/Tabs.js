@@ -56,7 +56,7 @@ const Tabs = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <ul
         className="fr-tabs__list"

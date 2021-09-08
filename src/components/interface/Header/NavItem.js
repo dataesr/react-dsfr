@@ -31,7 +31,7 @@ const NavItem = ({
     ) : (
       <li
         className="fr-nav__item"
-        {...dataAttributes(remainingProps)}
+        {...dataAttributes.getAll(remainingProps)}
       >
         <Link
           onClick={() => onOpenNav(false)}

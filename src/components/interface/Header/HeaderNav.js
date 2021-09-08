@@ -21,7 +21,7 @@ const HeaderNav = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-container">
         <button

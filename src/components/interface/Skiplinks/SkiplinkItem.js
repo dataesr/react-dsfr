@@ -9,7 +9,7 @@ const SkiplinkItem = ({
 }) => (
   <li
     className={classNames(className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <Link
       as={asLink}

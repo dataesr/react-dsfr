@@ -58,7 +58,7 @@ const RadioGroup = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <fieldset
         className="fr-fieldset"

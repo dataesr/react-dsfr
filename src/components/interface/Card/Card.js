@@ -39,7 +39,7 @@ const Card = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className={classNames('fr-card__body', bodyClassName)}>
         {displayTitle}

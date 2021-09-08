@@ -8,7 +8,7 @@ const FooterBodyItem = ({
 }) => (
   <li
     className="fr-footer__content-item"
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-footer__content-link">
       {children}

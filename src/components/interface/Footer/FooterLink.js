@@ -10,7 +10,7 @@ const FooterLink = ({
 }) => (
   <li
     className={classNames(`fr-footer__${section}-item`, className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <Link
       as={asLink}

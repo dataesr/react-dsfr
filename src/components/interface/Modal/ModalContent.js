@@ -7,7 +7,7 @@ import typeValidation from '../../../utils/type-validation';
 const ModalContent = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames(className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
 

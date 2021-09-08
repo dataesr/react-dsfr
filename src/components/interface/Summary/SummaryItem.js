@@ -7,7 +7,7 @@ const SummaryItem = ({
   href, target, children, className, asLink, ...remainingProps
 }) => (
   <li
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <Link
       as={asLink}

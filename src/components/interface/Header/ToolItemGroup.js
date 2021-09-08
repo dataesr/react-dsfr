@@ -17,7 +17,7 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
 
   return (
     <div
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
       <div className={classNames(className, 'fr-header__tools-links')}>

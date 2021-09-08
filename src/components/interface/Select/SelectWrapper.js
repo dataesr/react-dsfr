@@ -29,7 +29,7 @@ const SelectWrapper = ({
   return (
     <div
       className={_classNameWrapper}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {
       label && (

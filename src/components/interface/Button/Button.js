@@ -62,7 +62,7 @@ const Button = forwardRef((props, ref) => {
       className={_className}
       title={title || undefined}
       disabled={disabled}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </button>

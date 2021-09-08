@@ -11,7 +11,7 @@ const Service = ({
 }) => (
   <div
     className={classNames(className, 'fr-header__service')}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <Link
       as={asLink}

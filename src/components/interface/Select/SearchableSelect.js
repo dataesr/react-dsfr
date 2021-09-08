@@ -135,7 +135,7 @@ const SearchableSelect = ({
     >
       <div className="select-search-input">
         <input
-          {...dataAttributes(remainingProps, true)}
+          {...dataAttributes.filterAll(remainingProps)}
           id={selectId.current}
           className={_className}
           autoComplete="off"

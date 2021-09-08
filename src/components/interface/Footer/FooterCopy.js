@@ -7,7 +7,7 @@ import typeValidation from '../../../utils/type-validation';
 const FooterCopy = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames('fr-footer__bottom-copy', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </div>

@@ -52,9 +52,9 @@ const Radio = ({
   };
 
   return (
-    <div className={_className} {...dataAttributes(remainingProps)}>
+    <div className={_className} {...dataAttributes.getAll(remainingProps)}>
       <input
-        {...dataAttributes(remainingProps, true)}
+        {...dataAttributes.filterAll(remainingProps)}
         type="radio"
         id={radioId.current}
         onChange={handleChange}

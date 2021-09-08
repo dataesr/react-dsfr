@@ -12,7 +12,7 @@ import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
 const Skiplinks = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames('fr-skiplinks', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-container">
       <ul className="fr-skiplinks__list">

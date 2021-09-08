@@ -29,7 +29,7 @@ const HeaderBody = ({
   return (
     <div
       className="fr-header__body"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-container">
         <div className={classNames(className, 'fr-header__body-row')}>

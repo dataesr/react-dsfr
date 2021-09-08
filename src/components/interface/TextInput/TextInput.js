@@ -39,7 +39,7 @@ const TextInput = forwardRef((props, ref) => {
   return (
     <div
       className={_classNameWrapper}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {label && (
       <label
@@ -56,7 +56,7 @@ const TextInput = forwardRef((props, ref) => {
         (textarea)
           ? (
             <textarea
-              {...dataAttributes(remainingProps, true)}
+              {...dataAttributes.filterAll(remainingProps)}
               ref={ref}
               className={_className}
               id={inputId.current}
@@ -74,7 +74,7 @@ const TextInput = forwardRef((props, ref) => {
           )
           : (
             <input
-              {...dataAttributes(remainingProps, true)}
+              {...dataAttributes.filterAll(remainingProps)}
               ref={ref}
               className={_className}
               id={inputId.current}

@@ -61,6 +61,12 @@ const SelectExample = () => {
           disabled: i % 15 === 0,
         }))}
       />
+      <Select
+        label="Select inactif"
+        options={options}
+        disabled
+        hint="Disabled"
+      />
     </Col>
   );
 };

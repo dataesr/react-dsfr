@@ -11,7 +11,7 @@ const FooterPartnersTitle = ({
   return (
     <Tag
       className={classNames('fr-footer__partners-title', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </Tag>

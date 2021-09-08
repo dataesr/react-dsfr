@@ -18,7 +18,7 @@ const TagGroup = ({
   return (
     <ul
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {childs}
     </ul>

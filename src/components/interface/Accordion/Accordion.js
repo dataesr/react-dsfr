@@ -63,7 +63,7 @@ const Accordion = ({
   return (
     <HtmlTag
       className={classNames(className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <ul className="fr-accordions-group">{childs}</ul>
     </HtmlTag>

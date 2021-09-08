@@ -14,7 +14,7 @@ const FooterPartnersLogo = ({
         className={classNames('fr-footer__logo', className)}
         src={imageSrc}
         alt={imageAlt}
-        {...dataAttributes(remainingProps)}
+        {...dataAttributes.getAll(remainingProps)}
       />
     );
   }
@@ -23,7 +23,7 @@ const FooterPartnersLogo = ({
       as={asLink}
       className={classNames('footer__partners-link', className)}
       href={href}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <img
         className="fr-footer__logo"

@@ -11,7 +11,7 @@ const CardDescription = ({
   return (
     <Tag
       className={classNames('fr-card__desc', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
 

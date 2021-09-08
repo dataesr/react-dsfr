@@ -16,7 +16,7 @@ const FooterBody = ({
   return (
     <div
       className={classNames('fr-footer__body', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-footer__brand">{Logo}</div>
       <div className="fr-footer__content">

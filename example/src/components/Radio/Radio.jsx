@@ -33,6 +33,13 @@ const RadioExample = () => {
               value="value-3"
               defaultChecked
             />
+            <Radio
+              label="Disabled radio"
+              onChange={() => {
+              }}
+              value="value-4"
+              disabled
+            />
           </RadioGroup>
         </Col>
         <Col>

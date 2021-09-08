@@ -55,7 +55,7 @@ const Link = ({
       target={target}
       rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </a>

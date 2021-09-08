@@ -23,7 +23,7 @@ const TileBody = ({
   return (
     <div
       className={classNames('fr-tile__body', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <HtmlTag className="fr-tile__title">
         <Link

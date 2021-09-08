@@ -14,7 +14,7 @@ const ModalTitle = ({
         'ds-fr--inline-block': icon,
       })}
       id="fr-modal-title-modal"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </h1>

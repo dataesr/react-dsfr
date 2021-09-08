@@ -33,7 +33,7 @@ const Select = ({
       {...remainingProps}
     >
       <select
-        {...dataAttributes(remainingProps, true)}
+        {...dataAttributes.filterAll(remainingProps)}
         className={_className}
         id={selectId.current}
         value={selected}

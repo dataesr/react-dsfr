@@ -34,10 +34,10 @@ const Checkbox = forwardRef((props, ref) => {
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <input
-        {...dataAttributes(remainingProps, true)}
+        {...dataAttributes.filterAll(remainingProps)}
         type="checkbox"
         id={checkboxId.current}
         name="checkbox"

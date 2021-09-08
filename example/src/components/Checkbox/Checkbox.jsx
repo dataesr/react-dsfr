@@ -7,7 +7,7 @@ import {
 const CheckboxExample = () => (
   <Col>
     <CheckboxGroup
-      ariaLabel="This is aia label"
+      ariaLabel="This is the aria label"
       legend="This is the legend"
     >
       <Checkbox

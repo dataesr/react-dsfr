@@ -29,7 +29,7 @@ const TabButton = (props) => {
   return (
     <li
       role="presentation"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={ref}

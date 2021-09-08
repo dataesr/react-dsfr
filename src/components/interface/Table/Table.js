@@ -99,7 +99,7 @@ const Table = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <table id={tableID || undefined} className={tableClassName || undefined}>
         <caption data-testid="table-caption">{caption}</caption>

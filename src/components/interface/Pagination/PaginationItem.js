@@ -17,7 +17,7 @@ const PaginationItem = ({
     const to = (anchorAs !== 'a') ? buildURL(page) : undefined;
     return (
       <li
-        {...dataAttributes(remainingProps)}
+        {...dataAttributes.getAll(remainingProps)}
       >
         <Tag
           aria-current={(isActive && 'page') || undefined}
@@ -34,7 +34,7 @@ const PaginationItem = ({
   }
   return (
     <li
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         type="button"

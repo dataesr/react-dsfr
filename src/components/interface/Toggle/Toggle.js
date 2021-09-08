@@ -32,10 +32,10 @@ const Toggle = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <input
-        {...dataAttributes(remainingProps, true)}
+        {...dataAttributes.filterAll(remainingProps)}
         data-testid="toggle-input"
         type="checkbox"
         className="fr-toggle__input"
