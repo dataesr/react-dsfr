@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 const CalloutText = ({ children, className, ...remainingProps }) => (
   <p
     className={classNames('fr-callout__text', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </p>

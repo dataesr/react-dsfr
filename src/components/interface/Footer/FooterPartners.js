@@ -17,7 +17,7 @@ const FooterPartners = ({ children, className, ...remainingProps }) => {
   return (
     <div
       className={classNames('fr-footer__partners', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {title}
       <div className="fr-footer__partners-logos">

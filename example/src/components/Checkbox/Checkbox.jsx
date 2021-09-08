@@ -6,7 +6,10 @@ import {
 
 const CheckboxExample = () => (
   <Col>
-    <CheckboxGroup ariaLabel="This is aia label" legend="This is the legend">
+    <CheckboxGroup
+      ariaLabel="This is the aria label"
+      legend="This is the legend"
+    >
       <Checkbox
         label="Label checkbox 1"
         onChange={() => {

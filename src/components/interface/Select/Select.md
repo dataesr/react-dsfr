@@ -85,7 +85,7 @@ L'état inactif indique que utilisateur ne peut pas interagir avec l'élément.
   <Select
     label="Select Label"
     options={options}
-    disabled={true}
+    disabled
   />
 ```
 ### Liste déroulante avec texte d’aide

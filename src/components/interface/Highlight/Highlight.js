@@ -18,7 +18,7 @@ const Highlight = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </div>

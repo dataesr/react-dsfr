@@ -13,7 +13,7 @@ const ModalClose = ({
     onClick={hide}
     title={title}
     aria-controls="fr-modal"
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </button>

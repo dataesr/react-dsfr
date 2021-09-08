@@ -15,7 +15,7 @@ const SideMenuItem = ({
   return (
     <li
       className={classNames('fr-sidemenu__item', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         type="button"

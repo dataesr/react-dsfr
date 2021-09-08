@@ -41,7 +41,7 @@ const AccordionItem = forwardRef((props, ref) => {
   return (
     <li
       className={classNames(className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
       ref={ref}
     >
       <section className="fr-accordion">

@@ -1,4 +1,4 @@
-export default (props) => {
+const getAll = (props) => {
   const newProps = {};
 
   Object.keys(props).forEach((key) => {
@@ -9,3 +9,17 @@ export default (props) => {
 
   return newProps;
 };
+
+const filterAll = (props) => {
+  const newProps = {};
+
+  Object.keys(props).forEach((key) => {
+    if (!key.startsWith('data-')) {
+      newProps[key] = props[key];
+    }
+  });
+
+  return newProps;
+};
+
+export default { getAll, filterAll };

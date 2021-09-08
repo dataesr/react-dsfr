@@ -46,7 +46,7 @@ const Alert = ({
     <div
       role="alert"
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <HtmlTitleTag className="fr-alert__title">{title}</HtmlTitleTag>
       {!small && description && <p>{description}</p>}

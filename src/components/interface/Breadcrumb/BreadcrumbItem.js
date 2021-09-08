@@ -15,7 +15,7 @@ const BreadcrumbItem = ({
   return (
     <li
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <Link
         current={!href && !asLink}

@@ -6,11 +6,8 @@ exports[`<Checkbox /> renders correctly 1`] = `
   data-testid="checkbox"
 >
   <input
-    defaultChecked={false}
-    disabled={false}
     id="xxxxxxx"
     name="checkbox"
-    onChange={[Function]}
     type="checkbox"
     value="value"
   />

@@ -10,7 +10,7 @@ const MegaNavSubItem = ({
   return (
     <div
       className="fr-col-12 fr-col-lg-3"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <h5 className="fr-mega-menu__category">
         <a className="fr-nav__link" href={link} target="_self">{title}</a>

@@ -13,7 +13,7 @@ const NavSubItem = ({
   return (
     <li
       key={title}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <Link
         onClick={() => {

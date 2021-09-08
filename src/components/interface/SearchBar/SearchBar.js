@@ -46,7 +46,7 @@ const SearchBar = forwardRef((props, ref) => {
     <form
       role="search"
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       { label && <label className="fr-label" htmlFor={inputId.current}>{label}</label>}
       <input

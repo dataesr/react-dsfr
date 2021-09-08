@@ -15,14 +15,12 @@ exports[`<TextInput /> renders correctly 1`] = `
   
   <input
     className="fr-input"
-    disabled={false}
     id="xxxxxxx"
+    onBlur={[Function]}
     onChange={[MockFunction]}
     required={false}
-    type="text"
     value="init-value"
   />
-  
   
 </div>
 `;

@@ -14,7 +14,7 @@ describe('<Toggle />', () => {
     const onChange = jest.fn();
     render(
       <Toggle
-        isChecked
+        checked
         onChange={onChange}
         label="Accepter les cookies"
         description="Activez-moi!"
@@ -33,7 +33,7 @@ describe('<Toggle />', () => {
     const onChange = jest.fn();
     render(
       <Toggle
-        isChecked
+        checked
         onChange={onChange}
         label="Accepter les cookies"
         description="Activez-moi!"

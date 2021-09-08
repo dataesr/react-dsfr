@@ -16,7 +16,7 @@ const TileImage = ({
 }) => (
   <div
     className={classNames('fr-tile__img', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <img
       src={src}

@@ -16,10 +16,8 @@ exports[`<Select /> renders correctly 1`] = `
   <select
     className="fr-select fr-select--valid"
     data-testid="select"
-    disabled={false}
     id="message-xxxxxxx"
-    name={null}
-    onChange={[Function]}
+    label="Label pour liste déroulante"
     value=""
   >
     <option

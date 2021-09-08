@@ -64,7 +64,7 @@ const Breadcrumb = ({
       ref={breadRef}
       className={_className}
       aria-label={label}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={buttonRef}

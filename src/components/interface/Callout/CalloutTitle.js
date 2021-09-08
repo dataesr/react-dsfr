@@ -10,7 +10,7 @@ const CalloutTitle = ({
   return (
     <HtmlTitleTag
       className={classNames('fr-callout__title', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </HtmlTitleTag>

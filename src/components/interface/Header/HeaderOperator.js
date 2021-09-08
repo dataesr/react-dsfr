@@ -17,7 +17,7 @@ const HeaderOperator = ({
 }) => (
   <div
     className="fr-header__operator"
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </div>

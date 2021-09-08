@@ -15,7 +15,7 @@ const Footer = ({ children, className, ...remainingProps }) => {
       id="footer"
       className={_className}
       role="contentinfo"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {top}
       <div className="fr-container">

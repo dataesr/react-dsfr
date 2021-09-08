@@ -66,7 +66,7 @@ const Header = ({
       <header
         className={classNames(className, 'fr-header')}
         role="banner"
-        {...dataAttributes(remainingProps)}
+        {...dataAttributes.getAll(remainingProps)}
       >
         {Children.toArray(children).map(
           (child, index) => cloneElement(child, { key: index, closeButtonLabel }),

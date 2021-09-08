@@ -7,25 +7,22 @@ import classNames from 'classnames';
 
 import SelectWrapper from './SelectWrapper';
 import './searchableSelect.css';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
  * @visibleName SearchableSelect
  */
 const SearchableSelect = ({
-  className,
-  disabled,
-  hint,
   id,
-  label,
-  message,
   messageType,
-  name,
-  onChange,
   options,
   selected,
-  required,
   filter,
+  onChange,
+  onBlur,
+  onFocus,
+  onKeyDown,
   ...remainingProps
 }) => {
   const selectId = useRef(id || uuidv4());
@@ -77,13 +74,14 @@ const SearchableSelect = ({
     onChange(newValue);
   };
 
-  const onFocus = () => {
+  const onInternalFocus = (e) => {
     onInternalChange('', '');
     setShowOptions(true);
     setArrowSelected(null);
+    onFocus(e);
   };
 
-  const onBlur = () => {
+  const onInternalBlur = (e) => {
     if (filteredOptions.length === 1) {
       onInternalChange(filteredOptions[0].value, filteredOptions[0].label);
     } else {
@@ -93,9 +91,11 @@ const SearchableSelect = ({
       }
     }
     setShowOptions(false);
+    onBlur(e);
   };
 
-  const onKeyDown = (e) => {
+  const onInternalKeyDown = (e) => {
+    onKeyDown(e);
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
@@ -129,26 +129,20 @@ const SearchableSelect = ({
   let refCount = -1;
   return (
     <SelectWrapper
-      className={className}
-      hint={hint}
       selectId={selectId.current}
-      label={label}
-      message={message}
       messageType={messageType}
-      required={required}
       {...remainingProps}
     >
       <div className="select-search-input">
         <input
-          onKeyDown={onKeyDown}
+          {...dataAttributes.filterAll(remainingProps)}
           id={selectId.current}
           className={_className}
           autoComplete="off"
-          required={required}
-          disabled={disabled}
           onChange={(e) => setInternalLabel(e.target.value)}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          onFocus={onInternalFocus}
+          onBlur={onInternalBlur}
+          onKeyDown={onInternalKeyDown}
           value={internalLabel}
         />
         <div
@@ -207,6 +201,9 @@ SearchableSelect.defaultProps = {
   messageType: undefined,
   name: null,
   onChange: () => {},
+  onBlur: () => {},
+  onFocus: () => {},
+  onKeyDown: () => {},
   selected: '',
   required: false,
   filter: (
@@ -233,6 +230,9 @@ SearchableSelect.propTypes = {
   messageType: PropTypes.oneOf(['error', 'valid']),
   name: PropTypes.string,
   onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onKeyDown: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,

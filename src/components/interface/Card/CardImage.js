@@ -9,7 +9,7 @@ const CardImage = ({
 }) => (
   <div
     className={classNames('fr-card__img', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <img src={src} alt={alt} />
   </div>

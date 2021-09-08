@@ -34,7 +34,7 @@ const NavItemWithSubItem = ({
   return (
     <li
       className="fr-nav__item"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={buttonRef}

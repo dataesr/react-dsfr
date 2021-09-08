@@ -99,7 +99,7 @@ const ModalDialog = ({
         ref={modalRef}
         onKeyDown={(e) => handleAllKeyDown(e)}
         onClick={(e) => handleOverlayClick(e)}
-        {...dataAttributes(remainingProps)}
+        {...dataAttributes.getAll(remainingProps)}
       >
         <div className="fr-container fr-container--fluid fr-container-md">
           <div className="fr-grid-row fr-grid-row--center closing-overlay">
@@ -131,10 +131,9 @@ const Modal = ({
     size={size}
     hide={hide}
     canClose={canClose}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
-
   </ModalDialog>
 );
 

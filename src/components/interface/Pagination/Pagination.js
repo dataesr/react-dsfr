@@ -58,7 +58,7 @@ const Pagination = ({
       className="fr-pagination"
       aria-label={navigationAria}
       role="navigation"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <ul className="fr-pagination__list">
         <li>

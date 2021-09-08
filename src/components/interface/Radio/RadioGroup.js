@@ -15,7 +15,7 @@ const RadioGroup = ({
   children,
   className,
   hint,
-  isDisabled,
+  disabled,
   isInline,
   legend,
   message,
@@ -47,7 +47,7 @@ const RadioGroup = ({
 
     return cloneElement(child, {
       name: child.props.name || radioName,
-      isChecked: child.props.isChecked || defaultChecked,
+      defaultChecked: child.props.defaultChecked || defaultChecked,
       required,
       onGroupChange,
     });
@@ -58,12 +58,12 @@ const RadioGroup = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <fieldset
         className="fr-fieldset"
         aria-label={ariaLabel || legend}
-        disabled={isDisabled}
+        disabled={disabled}
       >
         {legend && (
         <legend className="fr-fieldset__legend">
@@ -85,7 +85,7 @@ RadioGroup.defaultProps = {
   children: '',
   className: '',
   hint: '',
-  isDisabled: false,
+  disabled: false,
   isInline: false,
   messageType: '',
   message: '',
@@ -113,7 +113,7 @@ RadioGroup.propTypes = {
     PropTypes.array,
   ]),
   ariaLabel: PropTypes.string,
-  isDisabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   isInline: PropTypes.bool,
   legend: PropTypes.string.isRequired,
   message: PropTypes.string,

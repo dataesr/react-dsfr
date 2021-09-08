@@ -19,7 +19,7 @@ const ToolItem = ({
   };
   return (
     <li
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {as ? (
         <HtmlTag

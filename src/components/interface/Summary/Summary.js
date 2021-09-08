@@ -13,7 +13,7 @@ const Summary = ({ title, children, ...remainingProps }) => (
     className="fr-summary"
     role="navigation"
     aria-labelledby="fr-summary-title"
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-summary__title">{title}</div>
     <ol className="fr-summary__list">

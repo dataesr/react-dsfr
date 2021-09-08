@@ -42,7 +42,7 @@ const Logo = ({
       as={asLink}
       title={hrefTitle || children}
       href={href}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <p className="fr-logo">
         {title}

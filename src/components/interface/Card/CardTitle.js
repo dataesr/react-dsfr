@@ -12,7 +12,7 @@ const CardTitle = ({
   return (
     <Tag
       className={classNames('fr-card__title', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <AnchorTag href={href} className="fr-card__link">{children}</AnchorTag>
     </Tag>

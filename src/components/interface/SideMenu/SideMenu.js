@@ -23,7 +23,7 @@ const SideMenu = ({
     <nav
       className={classNames('fr-sidemenu', className)}
       aria-label="Menu latéral"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-sidemenu__inner">
         <button

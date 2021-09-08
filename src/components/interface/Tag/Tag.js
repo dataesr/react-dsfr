@@ -43,7 +43,7 @@ const Tag = ({
       href={href || undefined}
       target={target || undefined}
       rel={target === '_blank' ? 'noopener noreferer' : undefined}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </HtmlTag>

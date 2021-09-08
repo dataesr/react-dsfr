@@ -26,7 +26,7 @@ const CheckboxGroup = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <fieldset className="fr-fieldset" aria-label={ariaLabel || legend}>
         {legend && (

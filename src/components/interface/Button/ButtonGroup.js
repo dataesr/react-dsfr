@@ -31,7 +31,7 @@ const ButtonGroup = ({
   return (
     <ul
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {content}
     </ul>
