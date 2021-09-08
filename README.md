@@ -23,6 +23,10 @@ Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gou
 ```bash
 yarn add @dataesr/react-dsfr
 ```
+or 
+```bash
+npm install @dataesr/react-dsfr
+```
 
 ## Library usage
 
@@ -31,7 +35,7 @@ yarn add @dataesr/react-dsfr
 Styleguide gives you access to the list of props needed and a working example for each component available in the library. To launch it on your local machine:
 
 ```bash
-yarn guide
+npm run guide
 ```
 Visit [http://localhost:6060](http://localhost:6060).
 
@@ -44,7 +48,7 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 > [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
 
 ```bash
-yarn build
+npm run build
 ```
 
 #### Generate and watch /dist folder containing bundles
@@ -105,7 +109,7 @@ Thanks to the internet world.
 #### Run all tests using react-scripts with watcher option
 
 ```bash
-yarn test:dev
+npm run test:dev
 ```
 
 #### Accessibility
@@ -128,7 +132,7 @@ pa11y-ci
 #### In Chrome
 
 ```bash
-yarn test:debug
+npm run test:debug
 ```
 
 Access `about:inspect`
