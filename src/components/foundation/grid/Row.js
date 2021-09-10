@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
-import { SCHEMES } from '../../../utils/constants';
 
 /**
  *
  * @visibleName Row
  */
 const Row = ({
-  gutters, justifyContent, alignItems, children, scheme, className, spacing,
+  gutters, justifyContent, alignItems, children, className, spacing,
 }) => {
   const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
@@ -17,7 +16,6 @@ const Row = ({
     'fr-grid-row fr-grid-row--gutters': gutters,
     [`fr-grid-row--${justifyContent}`]: justifyContent,
     [`fr-grid-row--${alignItems}`]: alignItems,
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };
@@ -49,14 +47,12 @@ Row.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  scheme: PropTypes.oneOf(SCHEMES),
 };
 Row.defaultProps = {
   className: '',
   gutters: false,
   alignItems: null,
   justifyContent: null,
-  scheme: '',
   children: null,
   spacing: null,
 };

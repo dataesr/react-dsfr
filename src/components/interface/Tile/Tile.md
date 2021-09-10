@@ -25,7 +25,7 @@ import { Tile, TileBody, TileImage } from '.';
 
 import { Tile, TileBody, TileImage } from '.';
 
-<Tile horizontalMedium={true} scheme="soft-orange-dark">
+<Tile horizontalMedium={true}>
     <TileBody
         title="Tile Title"
         description="Tile description"

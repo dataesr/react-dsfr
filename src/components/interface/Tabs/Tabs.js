@@ -5,7 +5,6 @@ import React, {
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
-import { SCHEMES } from '../../../utils/constants';
 import TabButton from './TabButton';
 
 import '@gouvfr/dsfr/dist/css/tabs.min.css';
@@ -15,7 +14,7 @@ import '@gouvfr/dsfr/dist/css/tabs.min.css';
  * @visibleName Tabs
  */
 const Tabs = ({
-  className, children, defaultActiveTab, scheme, ...remainingProps
+  className, children, defaultActiveTab, ...remainingProps
 }) => {
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
   const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
@@ -52,7 +51,7 @@ const Tabs = ({
     }
   };
 
-  const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });
+  const _className = classNames('fr-tabs', className);
   return (
     <div
       className={_className}
@@ -81,7 +80,6 @@ const Tabs = ({
 
 Tabs.defaultProps = {
   className: '',
-  scheme: '',
   defaultActiveTab: 0,
 };
 
@@ -91,7 +89,6 @@ Tabs.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  scheme: PropTypes.oneOf(SCHEMES),
   defaultActiveTab: PropTypes.number,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

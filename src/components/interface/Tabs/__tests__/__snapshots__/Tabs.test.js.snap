@@ -2,7 +2,7 @@
 
 exports[`<Tabs /> should render Tabs properly 1`] = `
 <div
-  className="fr-tabs fr-scheme-soft-blue-soft"
+  className="fr-tabs"
 >
   <ul
     className="fr-tabs__list"

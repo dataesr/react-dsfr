@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
-import { SCHEMES } from '../../../utils/constants';
 import Icon from '../../foundation/icon/index';
 
 import '@gouvfr/dsfr/dist/css/tags.min.css';
@@ -26,14 +25,12 @@ const Tag = ({
   icon,
   iconPosition,
   className,
-  scheme,
   ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
   const _className = classNames('fr-tag', {
     [`fr-tag--${size}`]: size,
     'fr-fi-icon': (icon && iconPosition),
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
 
   const _tag = (
@@ -63,7 +60,6 @@ const Tag = ({
 
 Tag.defaultProps = {
   className: '',
-  scheme: '',
   as: 'p',
   size: 'md',
   href: '',
@@ -80,7 +76,6 @@ Tag.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  scheme: PropTypes.oneOf(SCHEMES),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),

@@ -3,7 +3,7 @@
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 
-<Card href="/" scheme="soft-orange-dark">
+<Card href="/">
   <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
   <CardDetail>Detail</CardDetail>
   <CardTitle>

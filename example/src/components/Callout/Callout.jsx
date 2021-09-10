@@ -7,13 +7,13 @@ import {
 const CalloutExample = () => (
   <>
     <Col>
-      <Callout scheme="soft-green-warm">
+      <Callout>
         <CalloutTitle as="h3">Callout title</CalloutTitle>
         <CalloutText>Callout text that might be short and concise.</CalloutText>
       </Callout>
     </Col>
     <Col>
-      <Callout scheme="soft-green-warm">
+      <Callout>
         <CalloutTitle as="h3">Callout title</CalloutTitle>
         <CalloutText>Callout text that might be short and concise.</CalloutText>
         <Button title="acceder...">

@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace, getColSize } from '../../../utils/getters';
-import { SCHEMES } from '../../../utils/constants';
 
 /**
  *
  * @visibleName Col
  */
 const Col = ({
-  offset, n, scheme, children, className, spacing,
+  offset, n, children, className, spacing,
 }) => {
   const { margin, padding } = getSpace(spacing);
   const { n: size, offset: off } = getColSize(n, offset);
   const _className = classNames(off, size, padding, margin, {
     'fr-col': !n,
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div className={_className}>{children}</div>;
 };
@@ -40,13 +38,11 @@ Col.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  scheme: PropTypes.oneOf(SCHEMES),
 };
 Col.defaultProps = {
   n: '',
   offset: null,
   className: '',
-  scheme: '',
   children: null,
   spacing: null,
 };

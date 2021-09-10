@@ -2,7 +2,6 @@ import React, { Children, cloneElement } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
 import '@gouvfr/dsfr/dist/css/cards.min.css';
@@ -18,7 +17,6 @@ const Card = ({
   isHorizontal,
   className,
   hasArrow,
-  scheme,
   bodyClassName,
   enlargeLink,
   ...remainingProps
@@ -34,7 +32,6 @@ const Card = ({
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
     'fr-enlarge-link': enlargeLink,
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return (
     <div
@@ -58,7 +55,6 @@ Card.defaultProps = {
   bodyClassName: '',
   hasArrow: true,
   enlargeLink: true,
-  scheme: '',
 };
 Card.propTypes = {
   children: PropTypes.oneOfType([
@@ -76,7 +72,6 @@ Card.propTypes = {
   bodyClassName: PropTypes.string,
   hasArrow: PropTypes.bool,
   enlargeLink: PropTypes.bool,
-  scheme: PropTypes.oneOf(SCHEMES),
 };
 
 export default Card;
