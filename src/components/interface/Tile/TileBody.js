@@ -20,13 +20,13 @@ const TileBody = ({
   children,
   ...remainingProps
 }) => {
-  const HtmlTag = `${titleAs}`;
+  const TitleTag = `${titleAs}`;
   return (
     <div
       className={classNames('fr-tile__body', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <HtmlTag className="fr-tile__title">
+      <TitleTag className="fr-tile__title">
         {linkHref ? (
           <Link
             as={asLink}
@@ -37,8 +37,8 @@ const TileBody = ({
           >
             {title}
           </Link>
-        ) : <HtmlTag className="fr-tile__title">{title}</HtmlTag>}
-      </HtmlTag>
+        ) : title}
+      </TitleTag>
       {description && <p className="fr-tile__desc">{description}</p>}
       {children}
     </div>

@@ -14,11 +14,7 @@ exports[`<Tile /> renders correctly 1`] = `
     <p
       className="fr-tile__title"
     >
-      <p
-        className="fr-tile__title"
-      >
-        title
-      </p>
+      title
     </p>
     <p
       className="fr-tile__desc"
