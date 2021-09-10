@@ -14,6 +14,7 @@ const Tile = ({
   className,
   horizontalMedium,
   verticalMedium,
+  onClick,
   children,
   ...remainingProps
 }) => {
@@ -22,13 +23,22 @@ const Tile = ({
     'fr-tile--horizontal-md': !horizontal && horizontalMedium,
     'fr-tile--vertical-md': verticalMedium && horizontal,
   }, className);
+
+  const onTileClick = (e) => {
+    onClick(e);
+  };
+
+  const Tag = onClick ? 'button' : 'div';
+
   return (
-    <div
+    <Tag
+      type={onClick ? 'button' : undefined}
+      onClick={onClick ? onTileClick : undefined}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
-    </div>
+    </Tag>
   );
 };
 
@@ -37,6 +47,7 @@ Tile.defaultProps = {
   horizontal: false,
   verticalMedium: false,
   horizontalMedium: false,
+  onClick: null,
 };
 
 Tile.propTypes = {
@@ -46,18 +57,19 @@ Tile.propTypes = {
     PropTypes.array,
   ]),
   /**
-   * Source of the image — size is fixed 80x80
-   */
+     * Source of the image — size is fixed 80x80
+     */
   horizontal: PropTypes.bool,
   verticalMedium: PropTypes.bool,
   horizontalMedium: PropTypes.bool,
   /**
-   * One of: node, arrayOf(node), string
-   */
+     * One of: node, arrayOf(node), string
+     */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  onClick: PropTypes.func,
 };
 
 export default Tile;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile /> renders correctly 1`] = `
+<button
+  className="fr-tile fr-enlarge-link fr-tile--horizontal my-class"
+  data-testid="tile"
+  onClick={[Function]}
+  type="button"
+>
+  <div
+    className="fr-tile__body"
+    data-test-id="tilebody"
+  >
+    <p
+      className="fr-tile__title"
+    >
+      <p
+        className="fr-tile__title"
+      >
+        title
+      </p>
+    </p>
+    <p
+      className="fr-tile__desc"
+    >
+      description
+    </p>
+    <p>
+      Du texte aussi
+    </p>
+  </div>
+  <div
+    className="fr-tile__img"
+    data-id="titleimage"
+  >
+    <img
+      alt=""
+      src="/src.png"
+      title=""
+    />
+  </div>
+</button>
+`;

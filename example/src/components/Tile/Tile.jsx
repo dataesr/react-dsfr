@@ -2,16 +2,39 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import {
-  Row, Col, Tile, TileBody, TileImage,
+  Col, Row, Tile, TileBody, TileImage,
 } from '@dataesr/react-dsfr';
 
 const TileExample = () => (
   <Col>
-    <Row gutters>
+    <Row gutters alignItems="top">
       <Col>
-        <Tile horizontal verticalMedium>
+        <Tile
+          horizontal
+          verticalMedium
+          onClick={() => {}}
+        >
           <TileBody
-            title="Tuile horizontale par défaut"
+            title="Tuile horizontale par défaut sans lien"
+            description="Et verticale en desktop"
+          >
+            <p>
+              Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Amet corporis deleniti dolor dolorum eligendi est
+              laborum mollitia nihil odio odit possimus, quasi quod rem repellat sed sequi
+              soluta veniam
+              veritatis.
+            </p>
+          </TileBody>
+        </Tile>
+      </Col>
+      <Col>
+        <Tile
+          verticalMedium
+          horizontal
+        >
+          <TileBody
+            title="Tuile horizontale en mobile avec lien"
             description="Et verticale en desktop"
             linkHref="/myPath"
           />
