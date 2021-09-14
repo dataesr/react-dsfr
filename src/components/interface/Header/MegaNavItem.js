@@ -12,7 +12,7 @@ import useOnClickOutside from '../../../hooks/useOnClickOutside';
 const MegaNavItem = ({
   children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
 }) => {
-  const Tag = `${as}`;
+  const HTMLTag = `${as}`;
   const id = useRef(uuidv4());
   const [isExpanded, setIsExpanded] = useState(false);
   const { item, collapse } = useCollapse(null, isExpanded, 'fr-mega-menu');
@@ -66,7 +66,7 @@ const MegaNavItem = ({
           <div className="fr-grid-row fr-grid-row-lg--gutters">
             <div className="fr-col-12 fr-col-lg-8 fr-col-offset-lg-4--right">
               <div className="fr-mega-menu__leader">
-                <Tag className="fr-h4 fr-mb-2v">{title}</Tag>
+                <HTMLTag className="fr-h4 fr-mb-2v">{title}</HTMLTag>
                 {description && <p className="fr-hidden fr-displayed-lg">{description}</p>}
                 {link && linkLabel && (
                 <Link

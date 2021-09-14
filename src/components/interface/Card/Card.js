@@ -19,6 +19,7 @@ const Card = ({
   hasArrow,
   bodyClassName,
   enlargeLink,
+  ariaLabel,
   asLink,
   onClick,
   ...remainingProps
@@ -30,7 +31,7 @@ const Card = ({
   );
   const title = Children.toArray(children).find((child) => child.props.__TYPE === 'CardTitle');
   const displayTitle = title && cloneElement(title, {
-    href, anchorAs, onClick, asLink,
+    href, anchorAs, onClick, asLink, ariaLabel,
   });
   const _className = classNames('fr-card', {
     'fr-card--horizontal': isHorizontal,
@@ -55,6 +56,7 @@ const Card = ({
 Card.defaultProps = {
   anchorAs: 'a',
   href: '',
+  ariaLabel: '',
   isHorizontal: false,
   className: '',
   bodyClassName: '',
@@ -70,6 +72,7 @@ Card.propTypes = {
   ]).isRequired,
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
   href: PropTypes.string,
+  ariaLabel: PropTypes.string,
   isHorizontal: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,

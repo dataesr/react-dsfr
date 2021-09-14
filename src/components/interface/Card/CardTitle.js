@@ -6,13 +6,13 @@ import typeValidation from '../../../utils/type-validation';
 import Link from '../Link';
 
 const CardTitle = ({
-  href, children, as, anchorAs, className, asLink, onClick, ...remainingProps
+  href, children, as, anchorAs, className, asLink, onClick, ariaLabel, ...remainingProps
 }) => {
-  const Tag = `${as}`;
+  const HTMLTag = `${as}`;
   const AnchorTag = onClick ? 'button' : `${anchorAs}`;
 
   return (
-    <Tag
+    <HTMLTag
       className={classNames('fr-card__title', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
@@ -28,6 +28,8 @@ const CardTitle = ({
       )
         : (
           <AnchorTag
+            ariaLabel={ariaLabel || undefined}
+            type={onClick ? 'button' : undefined}
             onClick={onClick}
             href={href || undefined}
             className="fr-card__link"
@@ -35,7 +37,7 @@ const CardTitle = ({
             {children}
           </AnchorTag>
         )}
-    </Tag>
+    </HTMLTag>
   );
 };
 
@@ -45,6 +47,7 @@ CardTitle.defaultProps = {
   as: 'p',
   className: '',
   href: '',
+  ariaLabel: '',
   asLink: null,
   onClick: undefined,
 };
@@ -68,6 +71,7 @@ CardTitle.propTypes = {
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   asLink: PropTypes.element,
   onClick: PropTypes.func,
+  ariaLabel: PropTypes.string,
 };
 
 export default CardTitle;

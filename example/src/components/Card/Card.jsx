@@ -5,7 +5,7 @@ import {
 } from '@dataesr/react-dsfr';
 import { Link as RouterLink } from 'react-router-dom';
 
-const TagExample = () => (
+const CardExample = () => (
   <>
     <Col spacing="p-1w">
       <Card href="/" isHorizontal hasArrow={false}>
@@ -45,4 +45,4 @@ const TagExample = () => (
   </>
 );
 
-export default TagExample;
+export default CardExample;
