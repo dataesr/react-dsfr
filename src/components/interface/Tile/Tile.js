@@ -15,6 +15,7 @@ const Tile = ({
   horizontalMedium,
   verticalMedium,
   onClick,
+  ariaLabel,
   children,
   ...remainingProps
 }) => {
@@ -28,22 +29,24 @@ const Tile = ({
     onClick(e);
   };
 
-  const Tag = onClick ? 'button' : 'div';
+  const HTMLTag = onClick ? 'button' : 'div';
 
   return (
-    <Tag
+    <HTMLTag
       type={onClick ? 'button' : undefined}
+      ariaLabel={ariaLabel || undefined}
       onClick={onClick ? onTileClick : undefined}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
-    </Tag>
+    </HTMLTag>
   );
 };
 
 Tile.defaultProps = {
   className: '',
+  ariaLabel: '',
   horizontal: false,
   verticalMedium: false,
   horizontalMedium: false,
@@ -70,6 +73,7 @@ Tile.propTypes = {
     PropTypes.node,
   ]).isRequired,
   onClick: PropTypes.func,
+  ariaLabel: PropTypes.string,
 };
 
 export default Tile;

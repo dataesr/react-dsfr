@@ -7,14 +7,14 @@ import typeValidation from '../../../utils/type-validation';
 const FooterPartnersTitle = ({
   as, children, className, ...remainingProps
 }) => {
-  const Tag = `${as}`;
+  const HTMLTag = `${as}`;
   return (
-    <Tag
+    <HTMLTag
       className={classNames('fr-footer__partners-title', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
-    </Tag>
+    </HTMLTag>
   );
 };
 FooterPartnersTitle.propTypes = {

@@ -14,14 +14,23 @@ import './icons.css';
 const Icon = ({
   size, name, as, children, className, iconPosition, title,
 }) => {
-  const Tag = `${as}`;
+  const HTMLTag = `${as}`;
   const _className = classNames(
     `ri-${size}`,
     { [`icon-${iconPosition}`]: iconPosition !== 'center' },
     name,
     className,
   );
-  const i = title ? <Tag className={_className} title={title} /> : <Tag className={_className} />;
+  const i = title ? (
+    <HTMLTag
+      className={_className}
+      title={title}
+    />
+  ) : (
+    <HTMLTag
+      className={_className}
+    />
+  );
   const newChildren = (
     <>
       {iconPosition === 'right' ? children?.props?.children : i}

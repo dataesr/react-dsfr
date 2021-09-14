@@ -3,19 +3,41 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
+import Link from '../Link';
 
 const CardTitle = ({
-  href, children, as, anchorAs, className, ...remainingProps
+  href, children, as, anchorAs, className, asLink, onClick, ariaLabel, ...remainingProps
 }) => {
-  const Tag = `${as}`;
-  const AnchorTag = `${anchorAs}`;
+  const HTMLTag = `${as}`;
+  const AnchorTag = onClick ? 'button' : `${anchorAs}`;
+
   return (
-    <Tag
+    <HTMLTag
       className={classNames('fr-card__title', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <AnchorTag href={href} className="fr-card__link">{children}</AnchorTag>
-    </Tag>
+      {asLink ? (
+        <Link
+          as={asLink}
+          href={href}
+          className="fr-card__link"
+          onClick={onClick}
+        >
+          {children}
+        </Link>
+      )
+        : (
+          <AnchorTag
+            ariaLabel={ariaLabel || undefined}
+            type={onClick ? 'button' : undefined}
+            onClick={onClick}
+            href={href || undefined}
+            className="fr-card__link"
+          >
+            {children}
+          </AnchorTag>
+        )}
+    </HTMLTag>
   );
 };
 
@@ -25,6 +47,9 @@ CardTitle.defaultProps = {
   as: 'p',
   className: '',
   href: '',
+  ariaLabel: '',
+  asLink: null,
+  onClick: undefined,
 };
 CardTitle.propTypes = {
   /**
@@ -36,7 +61,7 @@ CardTitle.propTypes = {
    */
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('CardTitle'),
-  anchorAs: PropTypes.string,
+  anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -44,6 +69,9 @@ CardTitle.propTypes = {
     PropTypes.array,
   ]),
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  asLink: PropTypes.element,
+  onClick: PropTypes.func,
+  ariaLabel: PropTypes.string,
 };
 
 export default CardTitle;

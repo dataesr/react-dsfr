@@ -7,15 +7,15 @@ import typeValidation from '../../../utils/type-validation';
 const CardDescription = ({
   children, className, as, ...remainingProps
 }) => {
-  const Tag = `${as}`;
+  const HTMLTag = `${as}`;
   return (
-    <Tag
+    <HTMLTag
       className={classNames('fr-card__desc', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
 
-    </Tag>
+    </HTMLTag>
   );
 };
 CardDescription.defaultProps = {

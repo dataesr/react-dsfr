@@ -11,7 +11,7 @@ const PaginationItem = ({
   aria,
   ...remainingProps
 }) => {
-  const Tag = `${anchorAs}`;
+  const HTMLTag = `${anchorAs}`;
   if (buildURL) {
     const href = (anchorAs === 'a') ? buildURL(page) : undefined;
     const to = (anchorAs !== 'a') ? buildURL(page) : undefined;
@@ -19,7 +19,7 @@ const PaginationItem = ({
       <li
         {...dataAttributes.getAll(remainingProps)}
       >
-        <Tag
+        <HTMLTag
           aria-current={(isActive && 'page') || undefined}
           href={href}
           to={to}
@@ -28,7 +28,7 @@ const PaginationItem = ({
           title={aria}
         >
           {page}
-        </Tag>
+        </HTMLTag>
       </li>
     );
   }

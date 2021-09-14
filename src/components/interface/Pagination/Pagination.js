@@ -19,7 +19,7 @@ const Pagination = ({
 }) => {
   const surrendingLeft = getSurrendingLeft(currentPage, surrendingPages);
   const surrendingRight = getSurrendingRight(currentPage, surrendingPages, pageCount);
-  const Tag = `${anchorAs}`;
+  const HTMLTag = `${anchorAs}`;
   const {
     navigationAria, prevLabel, nextLabel, prevAria,
     nextAria, firstAria, lastAria, currentAria, pageAria,
@@ -29,14 +29,14 @@ const Pagination = ({
     const check = down ? currentPage > 1 : currentPage < pageCount;
     if (buildURL) {
       return (
-        <Tag
+        <HTMLTag
           href={check ? buildURL(index) : undefined}
           className={classNames({ [`fr-pagination__link--${icon}`]: aria }, 'fr-pagination__link')}
           aria-label={aria}
           title={aria}
         >
           {label}
-        </Tag>
+        </HTMLTag>
       );
     }
 
