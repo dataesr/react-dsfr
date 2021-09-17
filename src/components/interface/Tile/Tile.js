@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
@@ -17,8 +17,11 @@ const Tile = ({
   onClick,
   ariaLabel,
   children,
+  color,
   ...remainingProps
 }) => {
+  const tileRef = useRef();
+
   const _className = classNames('fr-tile fr-enlarge-link', {
     'fr-tile--horizontal': horizontal,
     'fr-tile--horizontal-md': !horizontal && horizontalMedium,
@@ -31,10 +34,17 @@ const Tile = ({
 
   const HTMLTag = onClick ? 'button' : 'div';
 
+  useEffect(() => {
+    if (color && tileRef.current) {
+      tileRef.current.style.boxShadow = `inset 0 -0.25rem 0 0 ${color}`;
+    }
+  }, [color]);
+
   return (
     <HTMLTag
+      ref={tileRef}
       type={onClick ? 'button' : undefined}
-      ariaLabel={ariaLabel || undefined}
+      aria-label={ariaLabel || undefined}
       onClick={onClick ? onTileClick : undefined}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
@@ -46,6 +56,7 @@ const Tile = ({
 
 Tile.defaultProps = {
   className: '',
+  color: '',
   ariaLabel: '',
   horizontal: false,
   verticalMedium: false,
@@ -63,6 +74,7 @@ Tile.propTypes = {
      * Source of the image — size is fixed 80x80
      */
   horizontal: PropTypes.bool,
+  color: PropTypes.string,
   verticalMedium: PropTypes.bool,
   horizontalMedium: PropTypes.bool,
   /**

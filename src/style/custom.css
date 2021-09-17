@@ -1,5 +1,6 @@
 ﻿:root {
     --is-link: ; /* hack needed because of DSFR style */
+    --color-tile1: var(--bf500);
 }
 
 /* ------------------------------------ *\
@@ -32,7 +33,7 @@ span.ds-fr--v-middle {
 }
 
 /*
-Fix DSFR issue 
+Fix DSFR issue
 https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
 */
 .fr-tabs__panel:not(.fr-tabs__panel--selected) {
@@ -57,4 +58,10 @@ span.error {
 
 .fr-table thead th.sortable {
     cursor: pointer;
+}
+
+.ds-fr-checkbox.fr-form-group input[type=checkbox]:active+label:before,
+.ds-fr-checkbox.fr-form-group input[type=checkbox]:checked+label:before {
+    background-color: var(--checkbox-custom-color1);
+    color: var(--checkbox-custom-color2);
 }
