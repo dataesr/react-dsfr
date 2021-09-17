@@ -66,10 +66,13 @@ const Button = forwardRef((props, ref) => {
 
     if (current) {
       if (backgroundColor) {
-        current.style.backgroundColor = `${backgroundColor}`;
+        current.style.backgroundColor = secondary ? color : backgroundColor;
       }
       if (color) {
-        current.style.color = `${color}`;
+        current.style.color = secondary ? backgroundColor : color;
+      }
+      if (secondary) {
+        current.style.boxShadow = `inset 0 0 0 1px ${backgroundColor}`;
       }
     }
   }, [colors, myRef]);
