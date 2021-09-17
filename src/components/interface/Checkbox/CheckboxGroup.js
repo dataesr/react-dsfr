@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
@@ -15,6 +15,7 @@ const CheckboxGroup = ({
   legend,
   message,
   messageType,
+  checkboxColors,
   ariaLabel,
   required,
   ...remainingProps
@@ -22,7 +23,22 @@ const CheckboxGroup = ({
   const _className = classNames('fr-form-group', {
     'fr-fieldset--inline': isInline,
     [`fr-fieldset--${messageType}`]: messageType,
+    'ds-fr-checkbox': checkboxColors.length,
   }, className);
+
+  useEffect(() => {
+    const backgroundColor = checkboxColors[0];
+    const color = checkboxColors[1];
+
+    if (backgroundColor) {
+      document.documentElement.style.setProperty('--checkbox-color1', backgroundColor);
+    }
+
+    if (color) {
+      document.documentElement.style.setProperty('--checkbox-color2', color);
+    }
+  }, [checkboxColors]);
+
   return (
     <div
       className={_className}
@@ -53,6 +69,7 @@ CheckboxGroup.defaultProps = {
   message: '',
   ariaLabel: '',
   required: false,
+  checkboxColors: [],
 };
 
 CheckboxGroup.propTypes = {
@@ -76,6 +93,10 @@ CheckboxGroup.propTypes = {
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   required: PropTypes.bool,
+  /**
+   * color[0] is background, color[1] is color
+   */
+  checkboxColors: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default CheckboxGroup;

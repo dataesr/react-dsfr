@@ -8,8 +8,10 @@ const IconsExample = () => (
   <>
     <Col>
       <Icon
+        verticalAlign
         name="ri-bubble-chart-line"
-        size="1x"
+        size="lg"
+        color="#f88"
       >
         <p>With label</p>
       </Icon>
@@ -17,7 +19,7 @@ const IconsExample = () => (
     <Col>
       <Icon
         name="ri-alert-fill"
-        size="1x"
+        size="2x"
         title="Here is a title"
       />
     </Col>

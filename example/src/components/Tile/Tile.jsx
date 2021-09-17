@@ -32,6 +32,7 @@ const TileExample = () => (
         <Tile
           verticalMedium
           horizontal
+          color="#f55"
         >
           <TileBody
             title="Tuile horizontale en mobile avec lien"
@@ -45,7 +46,7 @@ const TileExample = () => (
         </Tile>
       </Col>
       <Col>
-        <Tile>
+        <Tile color="#a91">
           <TileBody
             titleAs="h5"
             title="Tile Title"

@@ -28,7 +28,7 @@ const CardTitle = ({
       )
         : (
           <AnchorTag
-            ariaLabel={ariaLabel || undefined}
+            aria-label={ariaLabel || undefined}
             type={onClick ? 'button' : undefined}
             onClick={onClick}
             href={href || undefined}
