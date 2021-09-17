@@ -21,7 +21,6 @@ const Tile = ({
   ...remainingProps
 }) => {
   const tileRef = useRef();
-
   const _className = classNames('fr-tile fr-enlarge-link', {
     'fr-tile--horizontal': horizontal,
     'fr-tile--horizontal-md': !horizontal && horizontalMedium,

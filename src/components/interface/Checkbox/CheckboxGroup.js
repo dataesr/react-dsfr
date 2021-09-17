@@ -27,12 +27,15 @@ const CheckboxGroup = ({
   }, className);
 
   useEffect(() => {
-    if (colors[0]) {
-      document.documentElement.style.setProperty('--checkbox-custom-color1', colors[0]);
+    const backgroundColor = colors[0];
+    const color = colors[1];
+
+    if (backgroundColor) {
+      document.documentElement.style.setProperty('--checkbox-custom-color1', backgroundColor);
     }
 
-    if (colors[1]) {
-      document.documentElement.style.setProperty('--checkbox-custom-color2', colors[1]);
+    if (color) {
+      document.documentElement.style.setProperty('--checkbox-custom-color2', color);
     }
   }, [colors]);
 
@@ -90,6 +93,9 @@ CheckboxGroup.propTypes = {
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   required: PropTypes.bool,
+  /**
+   * color[0] is background, color[1] is color
+   */
   colors: PropTypes.arrayOf(PropTypes.string),
 };
 

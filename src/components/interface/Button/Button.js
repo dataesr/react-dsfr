@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
@@ -42,8 +42,10 @@ const Button = forwardRef((props, ref) => {
     children,
     className,
     submit,
+    colors,
     ...remainingProps
   } = props;
+
   const _className = classNames(
     `fr-btn--${size}`,
     className,
@@ -54,9 +56,27 @@ const Button = forwardRef((props, ref) => {
       'fr-btn--secondary': secondary,
     },
   );
+  const buttonRef = useRef();
+  const myRef = ref || buttonRef;
+
+  useEffect(() => {
+    const { current } = myRef;
+    const backgroundColor = colors[0];
+    const color = colors[1];
+
+    if (current) {
+      if (backgroundColor) {
+        current.style.backgroundColor = `${backgroundColor}`;
+      }
+      if (color) {
+        current.style.color = `${color}`;
+      }
+    }
+  }, [colors, myRef]);
+
   const _button = (
     <button
-      ref={ref}
+      ref={myRef}
       type={submit ? 'submit' : 'button'}
       onClick={onClick}
       className={_className}
@@ -90,6 +110,7 @@ Button.defaultProps = {
   styleAsLink: false,
   title: null,
   submit: false,
+  colors: [],
 };
 
 Button.propTypes = {
@@ -108,6 +129,10 @@ Button.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   submit: PropTypes.bool,
+  /**
+   * color[0] is background, color[1] is color
+   */
+  colors: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Button;
