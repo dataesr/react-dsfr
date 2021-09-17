@@ -56,11 +56,11 @@ const Button = forwardRef((props, ref) => {
       'fr-btn--secondary': secondary,
     },
   );
-  const buttonRef = useRef();
-  const myRef = ref || buttonRef;
+  const oRef = useRef();
+  const buttonRef = ref || oRef;
 
   useEffect(() => {
-    const { current } = myRef;
+    const { current } = buttonRef;
     const backgroundColor = colors[0];
     const color = colors[1];
 
@@ -75,11 +75,11 @@ const Button = forwardRef((props, ref) => {
         current.style.color = secondary ? backgroundColor : color;
       }
     }
-  }, [colors, myRef, secondary]);
+  }, [colors, buttonRef, secondary]);
 
   const _button = (
     <button
-      ref={myRef}
+      ref={buttonRef}
       type={submit ? 'submit' : 'button'}
       onClick={onClick}
       className={_className}

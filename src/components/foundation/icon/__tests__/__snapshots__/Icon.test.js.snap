@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> renders correctly 1`] = `
+<p
+  className=""
+>
+  Icon text
+  <span
+    className="ri-sm icon-right ds-fr--v-middle name test"
+    title="title"
+  />
+</p>
+`;

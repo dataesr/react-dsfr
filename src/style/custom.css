@@ -1,6 +1,5 @@
 ﻿:root {
     --is-link: ; /* hack needed because of DSFR style */
-    --color-tile1: var(--bf500);
 }
 
 /* ------------------------------------ *\
@@ -59,6 +58,10 @@ span.error {
 .fr-table thead th.sortable {
     cursor: pointer;
 }
+
+/**
+Colored Components
+ */
 
 .ds-fr-checkbox.fr-form-group input[type=checkbox]:active + label:before,
 .ds-fr-checkbox.fr-form-group input[type=checkbox]:checked + label:before {
