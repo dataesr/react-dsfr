@@ -16,19 +16,27 @@ const Toggle = ({
   hasLabelLeft,
   label,
   id,
+  toggleColor,
   description,
   ...remainingProps
 }) => {
   const _id = useRef(id || uuidv4());
+  const _className = classNames('fr-toggle', {
+    'fr-toggle--border-bottom': hasSeparator,
+    'fr-toggle--label-left': hasLabelLeft,
+    'ds-fr-toggle': toggleColor && !remainingProps.disabled,
+  }, className);
 
   useEffect(() => {
     _id.current = id || uuidv4();
   }, [id]);
 
-  const _className = classNames('fr-toggle', {
-    'fr-toggle--border-bottom': hasSeparator,
-    'fr-toggle--label-left': hasLabelLeft,
-  }, className);
+  useEffect(() => {
+    if (toggleColor) {
+      document.documentElement.style.setProperty('--toggle-color', toggleColor);
+    }
+  }, [toggleColor]);
+
   return (
     <div
       className={_className}
@@ -56,6 +64,7 @@ const Toggle = ({
 
 Toggle.defaultProps = {
   id: '',
+  toggleColor: '',
   className: '',
   hasSeparator: false,
   hasLabelLeft: false,
@@ -73,6 +82,7 @@ Toggle.propTypes = {
   hasLabelLeft: PropTypes.bool,
   description: PropTypes.string,
   label: PropTypes.string.isRequired,
+  toggleColor: PropTypes.string,
 };
 
 export default Toggle;

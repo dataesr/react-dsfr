@@ -10,7 +10,7 @@ const IconsExample = () => (
       <Icon
         verticalAlign="middle"
         name="ri-bubble-chart-line"
-        size="1x"
+        size="lg"
         color="#f88"
       >
         <p>With label</p>
@@ -19,7 +19,7 @@ const IconsExample = () => (
     <Col>
       <Icon
         name="ri-alert-fill"
-        size="1x"
+        size="2x"
         title="Here is a title"
       />
     </Col>

@@ -15,7 +15,7 @@ const CheckboxGroup = ({
   legend,
   message,
   messageType,
-  colors,
+  checkboxColors,
   ariaLabel,
   required,
   ...remainingProps
@@ -23,21 +23,21 @@ const CheckboxGroup = ({
   const _className = classNames('fr-form-group', {
     'fr-fieldset--inline': isInline,
     [`fr-fieldset--${messageType}`]: messageType,
-    'ds-fr-checkbox': colors.length,
+    'ds-fr-checkbox': checkboxColors.length,
   }, className);
 
   useEffect(() => {
-    const backgroundColor = colors[0];
-    const color = colors[1];
+    const backgroundColor = checkboxColors[0];
+    const color = checkboxColors[1];
 
     if (backgroundColor) {
-      document.documentElement.style.setProperty('--checkbox-custom-color1', backgroundColor);
+      document.documentElement.style.setProperty('--checkbox-color1', backgroundColor);
     }
 
     if (color) {
-      document.documentElement.style.setProperty('--checkbox-custom-color2', color);
+      document.documentElement.style.setProperty('--checkbox-color2', color);
     }
-  }, [colors]);
+  }, [checkboxColors]);
 
   return (
     <div
@@ -69,7 +69,7 @@ CheckboxGroup.defaultProps = {
   message: '',
   ariaLabel: '',
   required: false,
-  colors: [],
+  checkboxColors: [],
 };
 
 CheckboxGroup.propTypes = {
@@ -96,7 +96,7 @@ CheckboxGroup.propTypes = {
   /**
    * color[0] is background, color[1] is color
    */
-  colors: PropTypes.arrayOf(PropTypes.string),
+  checkboxColors: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default CheckboxGroup;
