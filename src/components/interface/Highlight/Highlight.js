@@ -46,7 +46,7 @@ Highlight.propTypes = {
 Highlight.defaultProps = {
   size: 'md',
   className: '',
-  color: PropTypes.string,
+  color: '',
 };
 
 export default Highlight;
