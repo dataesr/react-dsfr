@@ -2,7 +2,7 @@ const getAll = (props) => {
   const newProps = {};
 
   Object.keys(props).forEach((key) => {
-    if (key.startsWith('data-')) {
+    if (key.startsWith('data-') || key === 'id') {
       newProps[key] = props[key];
     }
   });
@@ -14,7 +14,7 @@ const filterAll = (props) => {
   const newProps = {};
 
   Object.keys(props).forEach((key) => {
-    if (!key.startsWith('data-')) {
+    if (!key.startsWith('data-') && key !== 'id') {
       newProps[key] = props[key];
     }
   });
