@@ -35,9 +35,11 @@ const HeaderBody = ({
         <div className={classNames(className, 'fr-header__body-row')}>
           <div className="fr-header__brand fr-enlarge-link">
             <div className="fr-header__brand-top">
+              {logo && (
               <div className="fr-header__logo">
                 {logo}
               </div>
+              )}
               {headerOperator}
               {(isNavBar || isNavTool) && (
                 <div className="fr-header__navbar">
