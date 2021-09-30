@@ -39,7 +39,7 @@ const HeaderBody = ({
               <div className="fr-header__logo">
                 {logo}
               </div>
-              )}
+              ) || null}
               {headerOperator}
               {(isNavBar || isNavTool) && (
                 <div className="fr-header__navbar">
