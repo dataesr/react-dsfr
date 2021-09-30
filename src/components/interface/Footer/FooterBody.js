@@ -18,7 +18,7 @@ const FooterBody = ({
       className={classNames('fr-footer__body', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      { Logo ? <div className="fr-footer__brand">{Logo}</div> : null}
+      { Logo && <div className="fr-footer__brand">{Logo}</div> || null}
       <div className="fr-footer__content">
         <p className="fr-footer__content-desc">{description}</p>
         <ul className="fr-footer__content-list">
