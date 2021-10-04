@@ -5,6 +5,7 @@ exports[`<Button /> renders correctly 1`] = `
   className="fr-btn--lg fr-btn fr-btn--secondary"
   data-testid="button"
   disabled={false}
+  id="nice-button"
   onClick={[Function]}
   title="title"
   type="button"

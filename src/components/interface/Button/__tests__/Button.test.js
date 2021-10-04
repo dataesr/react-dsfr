@@ -33,6 +33,7 @@ describe('<Button />', () => {
     const component = renderer
       .create(
         <Button
+          id="nice-button"
           icon={initialProps.icon}
           iconPosition={initialProps.iconPosition}
           secondary={initialProps.secondary}
