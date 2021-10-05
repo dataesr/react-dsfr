@@ -7,19 +7,37 @@ import ConsentBanner from './ConsentBanner';
 import ConsentModal from './ConsentModal';
 
 const ConsentManager = ({
-  isOpen, setIsOpen, bannerTitle, bannerDescription, bannerButtons,
+  children,
+  isModalOpen,
+  setIsModalOpen,
+  bannerTitle,
+  bannerDescription,
+  bannerButtons,
+  modalTitle,
+  modalCloseLabel,
+  modalCloseTitle,
 }) => {
   const [open, setOpen] = useState(false);
+  const openConsentModal = (v) => {
+    setOpen(v);
+    setIsModalOpen(v);
+  };
   return (
     <>
       <ConsentBanner
         bannerButtons={bannerButtons}
-        openConsentModal={setOpen}
+        openConsentModal={openConsentModal}
         title={bannerTitle}
         description={bannerDescription}
       />
-      <ConsentModal isOpen={isOpen || open} setIsOpen={setIsOpen}>
-        <p>Test</p>
+      <ConsentModal
+        title={modalTitle}
+        closeLabel={modalCloseLabel}
+        closeTitle={modalCloseTitle}
+        isOpen={isModalOpen || open}
+        setIsOpen={openConsentModal}
+      >
+        {children}
       </ConsentModal>
     </>
   );
@@ -30,15 +48,22 @@ ConsentManager.defaultProps = {
 };
 
 ConsentManager.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.element,
+  ]).isRequired,
+  isModalOpen: PropTypes.bool.isRequired,
   bannerDescription: PropTypes.string.isRequired,
+  modalTitle: PropTypes.string.isRequired,
+  modalCloseLabel: PropTypes.string.isRequired,
+  modalCloseTitle: PropTypes.string.isRequired,
   bannerTitle: PropTypes.string,
-  setIsOpen: PropTypes.func.isRequired,
-  bannerButtons: PropTypes.arrayOf(PropTypes.shape({
+  setIsModalOpen: PropTypes.func.isRequired,
+  bannerButtons: PropTypes.shape({
     refuse: PropTypes.shape({ label: PropTypes.string.isRequired }),
     accept: PropTypes.shape({ label: PropTypes.string.isRequired }),
     customize: PropTypes.shape({ label: PropTypes.string.isRequired }),
-  })).isRequired,
+  }).isRequired,
 };
 
 export default ConsentManager;

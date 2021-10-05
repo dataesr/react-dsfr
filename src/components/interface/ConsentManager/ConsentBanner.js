@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import { Button } from '../Button';
 
 const ConsentBanner = ({
-  children, className, openConsentModal, title, description, bannerButtons, ...remainingProps
+  className, openConsentModal, title, description, bannerButtons, ...remainingProps
 }) => {
   const _className = classNames('fr-consent-banner', className);
 
@@ -36,7 +36,7 @@ const ConsentBanner = ({
         <li>
           <Button
             secondary
-            onClick={openConsentModal}
+            onClick={() => openConsentModal(true)}
             title={bannerButtons.customize.label}
             aria-controls="fr-consent-modal"
           >
@@ -51,10 +51,6 @@ const ConsentBanner = ({
 ConsentBanner.defaultProps = { className: '', title: '' };
 
 ConsentBanner.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

@@ -43,7 +43,8 @@ import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
-import ConsentManager from './components/interface/ConsentManager/index';
+import ConsentManager from './components/interface/ConsentManager/ConsentManager';
+import ConsentService from './components/interface/ConsentManager/ConsentService';
 import SwitchTheme from './components/interface/SwitchTheme/SwitchTheme';
 import useTheme from './components/interface/SwitchTheme/useTheme';
 
@@ -69,6 +70,7 @@ const library = () => ({
   Checkbox,
   CheckboxGroup,
   Col,
+  ConsentService,
   Row,
   Container,
   Icon,
