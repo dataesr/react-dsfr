@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import { Button } from '../Button';
-import Col from '../../foundation/grid/Col';
-import Row from '../../foundation/grid/Row';
-import Container from '../../foundation/grid/Container';
 
 const ConsentBanner = ({
   className,
@@ -15,56 +12,51 @@ const ConsentBanner = ({
   description,
   bannerButtons,
   acceptBannerButton,
-  refuseBannerButton, ...remainingProps
+  refuseBannerButton,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-consent-banner', className);
 
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <div className={_className} {...dataAttributes.getAll(remainingProps)}>
-            {title && <p className="fr-h6 fr-mb-3v">{title}</p>}
-            <div className="fr-consent-banner__content">
-              <p className="fr-text--sm">
-                {description}
-              </p>
-            </div>
-            <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
-              <li>
-                <Button
-                  data-testid="button-accept"
-                  onClick={acceptBannerButton}
-                  title={bannerButtons.accept.label}
-                >
-                  {bannerButtons.accept.label}
-                </Button>
-              </li>
-              <li>
-                <Button
-                  data-testid="button-refuse"
-                  onClick={refuseBannerButton}
-                  title={bannerButtons.refuse.label}
-                >
-                  {bannerButtons.refuse.label}
-                </Button>
-              </li>
-              <li>
-                <Button
-                  data-testid="button-consent"
-                  secondary
-                  onClick={() => openConsentModal(true)}
-                  title={bannerButtons.customize.label}
-                  aria-controls="fr-consent-modal"
-                >
-                  {bannerButtons.customize.label}
-                </Button>
-              </li>
-            </ul>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <div className={_className} {...dataAttributes.getAll(remainingProps)}>
+      {title && <p className="fr-h6 fr-mb-3v">{title}</p>}
+      <div className="fr-consent-banner__content">
+        <p className="fr-text--sm">
+          {description}
+        </p>
+      </div>
+      <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
+        <li>
+          <Button
+            data-testid="button-accept"
+            onClick={acceptBannerButton}
+            title={bannerButtons.accept.label}
+          >
+            {bannerButtons.accept.label}
+          </Button>
+        </li>
+        <li>
+          <Button
+            data-testid="button-refuse"
+            onClick={refuseBannerButton}
+            title={bannerButtons.refuse.label}
+          >
+            {bannerButtons.refuse.label}
+          </Button>
+        </li>
+        <li>
+          <Button
+            data-testid="button-consent"
+            secondary
+            onClick={() => openConsentModal(true)}
+            title={bannerButtons.customize.label}
+            aria-controls="fr-consent-modal"
+          >
+            {bannerButtons.customize.label}
+          </Button>
+        </li>
+      </ul>
+    </div>
   );
 };
 
