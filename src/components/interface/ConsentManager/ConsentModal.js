@@ -1,15 +1,36 @@
-import React from 'react';
+import React, {
+  Children, cloneElement, useRef, createRef,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import {
   Modal, ModalTitle, ModalContent, ModalClose,
 } from '../Modal';
+import { Button } from '../Button';
 
 const ConsentModal = ({
-  children, className, isOpen, setIsOpen, closeLabel, closeTitle, title, ...remainingProps
+  children,
+  className,
+  isOpen,
+  setIsOpen,
+  closeLabel,
+  closeTitle,
+  title,
+  confirmButtonLabel,
+  confirmButtonTitle,
+  confirmConsent,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-modal', className);
+  const refs = useRef([]);
+
+  const consentChildren = Children.toArray(children);
+  refs.current = consentChildren.map((_, i) => refs.current[i] ?? createRef());
+  const childs = consentChildren.map((child, i) => cloneElement(child, {
+    ref: refs.current[i],
+  }));
+
   return (
     <Modal
       isOpen={isOpen}
@@ -19,15 +40,23 @@ const ConsentModal = ({
       aria-labelledby="fr-consent-modal-title"
       {...dataAttributes.getAll(remainingProps)}
     >
-      <ModalClose hide={() => setIsOpen(false)} title={closeTitle}>{closeLabel}</ModalClose>
+      <ModalClose
+        hide={() => setIsOpen(false)}
+        title={closeTitle}
+      >
+        {closeLabel}
+      </ModalClose>
       <ModalTitle>{title}</ModalTitle>
       <ModalContent>
-        {children}
+        {childs}
         <ul className="fr-consent-manager__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-sm">
           <li>
-            <button className="fr-btn" id="fr-consent-modal" title="Confirmer mes choix">
-              Confirmer mes choix
-            </button>
+            <Button
+              title={confirmButtonTitle || confirmButtonLabel}
+              onClick={() => confirmConsent(childs)}
+            >
+              {confirmButtonLabel}
+            </Button>
           </li>
         </ul>
       </ModalContent>
@@ -49,8 +78,11 @@ ConsentModal.propTypes = {
   ]),
   isOpen: PropTypes.bool.isRequired,
   closeLabel: PropTypes.string.isRequired,
+  confirmButtonLabel: PropTypes.string.isRequired,
+  confirmButtonTitle: PropTypes.string.isRequired,
   closeTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   setIsOpen: PropTypes.func.isRequired,
+  confirmConsent: PropTypes.func.isRequired,
 };
 export default ConsentModal;

@@ -4,47 +4,64 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import { Button } from '../Button';
+import Col from '../../foundation/grid/Col';
+import Row from '../../foundation/grid/Row';
+import Container from '../../foundation/grid/Container';
 
 const ConsentBanner = ({
-  className, openConsentModal, title, description, bannerButtons, ...remainingProps
+  className,
+  openConsentModal,
+  title,
+  description,
+  bannerButtons,
+  bannerButtonAccept,
+  bannerButtonRefuse, ...remainingProps
 }) => {
   const _className = classNames('fr-consent-banner', className);
 
   return (
-    <div className={_className} {...dataAttributes.getAll(remainingProps)}>
-      {title && <p className="fr-h6 fr-mb-3v">{title}</p>}
-      <div className="fr-consent-banner__content">
-        <p className="fr-text--sm">
-          {description}
-        </p>
-      </div>
-      <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
-        <li>
-          <Button
-            title={bannerButtons.accept.label}
-          >
-            {bannerButtons.accept.label}
-          </Button>
-        </li>
-        <li>
-          <Button
-            title={bannerButtons.refuse.label}
-          >
-            {bannerButtons.refuse.label}
-          </Button>
-        </li>
-        <li>
-          <Button
-            secondary
-            onClick={() => openConsentModal(true)}
-            title={bannerButtons.customize.label}
-            aria-controls="fr-consent-modal"
-          >
-            {bannerButtons.customize.label}
-          </Button>
-        </li>
-      </ul>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <div className={_className} {...dataAttributes.getAll(remainingProps)}>
+            {title && <p className="fr-h6 fr-mb-3v">{title}</p>}
+            <div className="fr-consent-banner__content">
+              <p className="fr-text--sm">
+                {description}
+              </p>
+            </div>
+            <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
+              <li>
+                <Button
+                  onClick={bannerButtonAccept}
+                  title={bannerButtons.accept.label}
+                >
+                  {bannerButtons.accept.label}
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={bannerButtonRefuse}
+                  title={bannerButtons.refuse.label}
+                >
+                  {bannerButtons.refuse.label}
+                </Button>
+              </li>
+              <li>
+                <Button
+                  secondary
+                  onClick={() => openConsentModal(true)}
+                  title={bannerButtons.customize.label}
+                  aria-controls="fr-consent-modal"
+                >
+                  {bannerButtons.customize.label}
+                </Button>
+              </li>
+            </ul>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
@@ -59,6 +76,8 @@ ConsentBanner.propTypes = {
   openConsentModal: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string.isRequired,
+  bannerButtonRefuse: PropTypes.func.isRequired,
+  bannerButtonAccept: PropTypes.func.isRequired,
   bannerButtons: PropTypes.shape({
     refuse: PropTypes.shape({ label: PropTypes.string.isRequired }),
     accept: PropTypes.shape({ label: PropTypes.string.isRequired }),

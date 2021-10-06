@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { ConsentManager, ConsentService } from '@dataesr/react-dsfr';
+Le bandeau permet le recueil du consentement des utilisateurs à l’arrivée sur le site. Ce doit être le premier élément sélectionné lors de la navigation au clavier. Il est faut donc le placer en première position dans le DOM, juste après la balise <body> (et avant les liens d'évitement).
 
-const ConsentManagerExample = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+```jsx
 
-  return (
-    <ConsentManager
+import ConsentManager  from '.';
+
+<ConsentManager
       bannerDescription="Bienvenue ! Nous utilisons des cookies pour améliorer votre expérience et les
           services disponibles sur ce site. Vous pouvez, à tout moment, avoir le contrôle sur les cookies que vous souhaitez activer."
       bannerTitle="À propos des cookies sur nomdusite.fr"
@@ -49,7 +48,4 @@ const ConsentManagerExample = () => {
         consent="accept-mandatory"
       />
     </ConsentManager>
-  );
-};
-
-export default ConsentManagerExample;
+```

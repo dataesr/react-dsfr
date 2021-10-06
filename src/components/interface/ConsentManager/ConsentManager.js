@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-import '@gouvfr/dsfr/dist/css/footer.min.css';
 import ConsentBanner from './ConsentBanner';
 import ConsentModal from './ConsentModal';
+import './consentManager.css';
 
 const ConsentManager = ({
   children,
@@ -15,6 +15,11 @@ const ConsentManager = ({
   bannerButtons,
   modalTitle,
   modalCloseLabel,
+  confirmButtonTitle,
+  confirmButtonLabel,
+  confirmConsent,
+  bannerButtonRefuse,
+  bannerButtonAccept,
   modalCloseTitle,
 }) => {
   const [open, setOpen] = useState(false);
@@ -22,15 +27,25 @@ const ConsentManager = ({
     setOpen(v);
     setIsModalOpen(v);
   };
+  const manageDataConsent = (service) => {
+    const consentValue = service.map((c) => (c.ref.current.querySelector('input').checked ? c.ref.current.querySelector('input').value : ''));
+    confirmConsent(consentValue);
+    openConsentModal(false);
+  };
   return (
     <>
       <ConsentBanner
+        bannerButtonAccept={bannerButtonAccept}
+        bannerButtonRefuse={bannerButtonRefuse}
         bannerButtons={bannerButtons}
         openConsentModal={openConsentModal}
         title={bannerTitle}
         description={bannerDescription}
       />
       <ConsentModal
+        confirmConsent={manageDataConsent}
+        confirmButtonLabel={confirmButtonLabel}
+        confirmButtonTitle={confirmButtonTitle}
         title={modalTitle}
         closeLabel={modalCloseLabel}
         closeTitle={modalCloseTitle}
@@ -45,6 +60,8 @@ const ConsentManager = ({
 
 ConsentManager.defaultProps = {
   bannerTitle: '',
+  confirmButtonLabel: 'Confirmer',
+  confirmButtonTitle: 'Confirmer',
 };
 
 ConsentManager.propTypes = {
@@ -53,12 +70,17 @@ ConsentManager.propTypes = {
     PropTypes.element,
   ]).isRequired,
   isModalOpen: PropTypes.bool.isRequired,
+  confirmButtonLabel: PropTypes.string,
+  confirmButtonTitle: PropTypes.string,
   bannerDescription: PropTypes.string.isRequired,
   modalTitle: PropTypes.string.isRequired,
   modalCloseLabel: PropTypes.string.isRequired,
   modalCloseTitle: PropTypes.string.isRequired,
   bannerTitle: PropTypes.string,
   setIsModalOpen: PropTypes.func.isRequired,
+  confirmConsent: PropTypes.func.isRequired,
+  bannerButtonRefuse: PropTypes.func.isRequired,
+  bannerButtonAccept: PropTypes.func.isRequired,
   bannerButtons: PropTypes.shape({
     refuse: PropTypes.shape({ label: PropTypes.string.isRequired }),
     accept: PropTypes.shape({ label: PropTypes.string.isRequired }),
