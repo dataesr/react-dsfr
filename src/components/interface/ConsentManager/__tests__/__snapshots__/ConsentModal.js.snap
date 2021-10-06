@@ -3,7 +3,7 @@
 exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
 <dialog
   aria-labelledby="fr-modal-title-modal"
-  class="fr-modal fr-modal--opened"
+  class="fr-modal fr-modal--opened fr-modal"
   data-testid="modal"
   id="fr-consent-modal"
 >
@@ -25,10 +25,10 @@ exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
             <button
               aria-controls="fr-modal"
               class="fr-link--close fr-link"
-              title="Close Title"
+              title="Close"
               type="button"
             >
-              Close Label
+              Close
             </button>
           </div>
           <div
@@ -38,7 +38,7 @@ exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
               class="fr-modal__title"
               id="fr-modal-title-modal"
             >
-              Title Modal Consent
+              Title
             </h1>
             <div
               class=""
@@ -49,10 +49,10 @@ exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
                 <li>
                   <button
                     class="fr-btn--md fr-btn"
-                    title="Button Title"
+                    title="Confirm Title"
                     type="button"
                   >
-                    Confirm Label
+                    Confirm
                   </button>
                 </li>
               </ul>

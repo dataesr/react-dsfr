@@ -1,42 +1,24 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import {
-  Modal, ModalClose, ModalContent, ModalTitle,
-} from '../../Modal';
-import { Button } from '../../Button';
+import ConsentModal from '../ConsentModal';
 
 describe('<ConsentModal />', () => {
   it('should render ConsentModal properly', () => {
     render(
-      <Modal
-        data-testid="modal"
+      <ConsentModal
+        confirmConsent={jest.fn()}
+        confirmButtonLabel="Confirm"
+        confirmButtonTitle="Confirm Title"
+        title="Title"
+        closeLabel="Close"
+        closeTitle="Close"
         isOpen
-        hide={() => jest.fn()}
-        id="fr-consent-modal"
-        aria-labelledby="fr-consent-modal-title"
+        setIsOpen={jest.fn()}
+        data-testid="modal"
       >
-        <ModalClose
-          hide={jest.fn()}
-          title="Close Title"
-        >
-          Close Label
-        </ModalClose>
-        <ModalTitle>Title Modal Consent</ModalTitle>
-        <ModalContent>
-          {null}
-          <ul className="fr-consent-manager__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-sm">
-            <li>
-              <Button
-                title="Button Title"
-                onClick={jest.fn()}
-              >
-                Confirm Label
-              </Button>
-            </li>
-          </ul>
-        </ModalContent>
-      </Modal>,
+        {null}
+      </ConsentModal>,
     );
     const modal = screen.getByTestId('modal');
     expect(modal).toMatchSnapshot();

@@ -33,6 +33,7 @@ exports[`<ConsentBanner /> should render ConsentBanner properly 1`] = `
           <li>
             <button
               className="fr-btn--md fr-btn"
+              data-testid="button-accept"
               disabled={false}
               onClick={[MockFunction]}
               title="Tout Accepter"
@@ -44,6 +45,7 @@ exports[`<ConsentBanner /> should render ConsentBanner properly 1`] = `
           <li>
             <button
               className="fr-btn--md fr-btn"
+              data-testid="button-refuse"
               disabled={false}
               onClick={[MockFunction]}
               title="Tout Refuser"
@@ -55,6 +57,7 @@ exports[`<ConsentBanner /> should render ConsentBanner properly 1`] = `
           <li>
             <button
               className="fr-btn--md fr-btn fr-btn--secondary"
+              data-testid="button-consent"
               disabled={false}
               onClick={[Function]}
               title="Personnaliser"
