@@ -3,6 +3,7 @@ import { ConsentManager, ConsentService } from '@dataesr/react-dsfr';
 
 const ConsentManagerExample = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
 
   return (
     <ConsentManager
@@ -15,6 +16,7 @@ const ConsentManagerExample = () => {
       modalCloseLabel="Fermer"
       modalCloseTitle="fermer la modal cookie"
       confirmButtonLabel="Confirmer mes choix"
+      isBannerOpen={isBannerOpen}
       bannerButtons={{
         accept: {
           label: 'Tout Accepter',
@@ -26,15 +28,15 @@ const ConsentManagerExample = () => {
           label: 'Personnaliser',
         },
       }}
-      confirmConsent={() => {}}
-      bannerButtonRefuse={() => {}}
-      bannerButtonAccept={() => {}}
+      confirmConsent={() => { setIsBannerOpen(false); }}
+      acceptBannerButton={() => { setIsBannerOpen(false); }}
+      refuseBannerButton={() => { setIsBannerOpen(false); }}
     >
       <ConsentService
         description=""
         title="Préférences pour tous les services."
-        acceptButtonLabel="Tout accepter"
-        refuseButtonLabel="Tout refuser"
+        acceptLabel="Tout accepter"
+        refuseLabel="Tout refuser"
         acceptValue="accept-all-consent"
         refuseValue="refuse-all-consent"
         consent="accept-all-consent"
@@ -42,8 +44,8 @@ const ConsentManagerExample = () => {
       <ConsentService
         description="Ce site utilise des cookies nécessaires à son bon fonctionnement qui ne peuvent pas être désactivés."
         title="Cookies obligatoires"
-        acceptButtonLabel="Accepter"
-        refuseButtonLabel="Refuser"
+        acceptLabel="Accepter"
+        refuseLabel="Refuser"
         acceptValue="accept-mandatory"
         refuseValue="refuse-mandatory"
         consent="accept-mandatory"

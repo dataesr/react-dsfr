@@ -18,9 +18,10 @@ const ConsentManager = ({
   confirmButtonTitle,
   confirmButtonLabel,
   confirmConsent,
-  bannerButtonRefuse,
-  bannerButtonAccept,
+  refuseBannerButton,
+  acceptBannerButton,
   modalCloseTitle,
+  isBannerOpen,
 }) => {
   const [open, setOpen] = useState(false);
   const openConsentModal = (v) => {
@@ -34,14 +35,16 @@ const ConsentManager = ({
   };
   return (
     <>
+      {isBannerOpen && (
       <ConsentBanner
-        bannerButtonAccept={bannerButtonAccept}
-        bannerButtonRefuse={bannerButtonRefuse}
+        acceptBannerButton={acceptBannerButton}
+        refuseBannerButton={refuseBannerButton}
         bannerButtons={bannerButtons}
         openConsentModal={openConsentModal}
         title={bannerTitle}
         description={bannerDescription}
       />
+      )}
       <ConsentModal
         confirmConsent={manageDataConsent}
         confirmButtonLabel={confirmButtonLabel}
@@ -62,6 +65,7 @@ ConsentManager.defaultProps = {
   bannerTitle: '',
   confirmButtonLabel: 'Confirmer',
   confirmButtonTitle: 'Confirmer',
+  isBannerOpen: true,
 };
 
 ConsentManager.propTypes = {
@@ -70,6 +74,7 @@ ConsentManager.propTypes = {
     PropTypes.element,
   ]).isRequired,
   isModalOpen: PropTypes.bool.isRequired,
+  isBannerOpen: PropTypes.bool,
   confirmButtonLabel: PropTypes.string,
   confirmButtonTitle: PropTypes.string,
   bannerDescription: PropTypes.string.isRequired,
@@ -79,8 +84,8 @@ ConsentManager.propTypes = {
   bannerTitle: PropTypes.string,
   setIsModalOpen: PropTypes.func.isRequired,
   confirmConsent: PropTypes.func.isRequired,
-  bannerButtonRefuse: PropTypes.func.isRequired,
-  bannerButtonAccept: PropTypes.func.isRequired,
+  refuseBannerButton: PropTypes.func.isRequired,
+  acceptBannerButton: PropTypes.func.isRequired,
   bannerButtons: PropTypes.shape({
     refuse: PropTypes.shape({ label: PropTypes.string.isRequired }),
     accept: PropTypes.shape({ label: PropTypes.string.isRequired }),

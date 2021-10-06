@@ -9,8 +9,8 @@ const ConsentService = forwardRef((props, ref) => {
     className,
     description,
     title,
-    acceptButtonLabel,
-    refuseButtonLabel,
+    acceptLabel,
+    refuseLabel,
     acceptValue,
     refuseValue,
     consent,
@@ -29,12 +29,12 @@ const ConsentService = forwardRef((props, ref) => {
           isInline
         >
           <Radio
-            label={acceptButtonLabel}
+            label={acceptLabel}
             value={acceptValue}
             defaultChecked={consent === acceptValue}
           />
           <Radio
-            label={refuseButtonLabel}
+            label={refuseLabel}
             value={refuseValue}
             defaultChecked={consent === refuseValue}
           />
@@ -61,9 +61,9 @@ ConsentService.propTypes = {
   title: PropTypes.string.isRequired,
   consent: PropTypes.string.isRequired,
   description: PropTypes.string,
-  acceptButtonLabel: PropTypes.string.isRequired,
+  acceptLabel: PropTypes.string.isRequired,
   acceptValue: PropTypes.string.isRequired,
   refuseValue: PropTypes.string.isRequired,
-  refuseButtonLabel: PropTypes.string.isRequired,
+  refuseLabel: PropTypes.string.isRequired,
 };
 export default ConsentService;

@@ -14,8 +14,8 @@ const ConsentBanner = ({
   title,
   description,
   bannerButtons,
-  bannerButtonAccept,
-  bannerButtonRefuse, ...remainingProps
+  acceptBannerButton,
+  refuseBannerButton, ...remainingProps
 }) => {
   const _className = classNames('fr-consent-banner', className);
 
@@ -33,7 +33,7 @@ const ConsentBanner = ({
             <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
               <li>
                 <Button
-                  onClick={bannerButtonAccept}
+                  onClick={acceptBannerButton}
                   title={bannerButtons.accept.label}
                 >
                   {bannerButtons.accept.label}
@@ -41,7 +41,7 @@ const ConsentBanner = ({
               </li>
               <li>
                 <Button
-                  onClick={bannerButtonRefuse}
+                  onClick={refuseBannerButton}
                   title={bannerButtons.refuse.label}
                 >
                   {bannerButtons.refuse.label}
@@ -76,8 +76,8 @@ ConsentBanner.propTypes = {
   openConsentModal: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string.isRequired,
-  bannerButtonRefuse: PropTypes.func.isRequired,
-  bannerButtonAccept: PropTypes.func.isRequired,
+  refuseBannerButton: PropTypes.func.isRequired,
+  acceptBannerButton: PropTypes.func.isRequired,
   bannerButtons: PropTypes.shape({
     refuse: PropTypes.shape({ label: PropTypes.string.isRequired }),
     accept: PropTypes.shape({ label: PropTypes.string.isRequired }),

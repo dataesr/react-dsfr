@@ -1,51 +1,56 @@
 Le bandeau permet le recueil du consentement des utilisateurs à l’arrivée sur le site. Ce doit être le premier élément sélectionné lors de la navigation au clavier. Il est faut donc le placer en première position dans le DOM, juste après la balise <body> (et avant les liens d'évitement).
 
+Value of props `consent` must be equal either to `acceptValue` or `refuseValue`
+
 ```jsx
 
 import ConsentManager  from '.';
 
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [isBannerOpen, setIsBannerOpen] = useState(true);
+
 <ConsentManager
-      bannerDescription="Bienvenue ! Nous utilisons des cookies pour améliorer votre expérience et les
-          services disponibles sur ce site. Vous pouvez, à tout moment, avoir le contrôle sur les cookies que vous souhaitez activer."
-      bannerTitle="À propos des cookies sur nomdusite.fr"
-      isModalOpen={isModalOpen}
-      setIsModalOpen={setIsModalOpen}
-      modalTitle="Panneau de gestion des cookies"
-      modalCloseLabel="Fermer"
-      modalCloseTitle="fermer la modal cookie"
-      confirmButtonLabel="Confirmer mes choix"
-      bannerButtons={{
+    bannerDescription="Bienvenue ! Nous utilisons des cookies pour améliorer votre expérience utilisateur"
+    bannerTitle="À propos des cookies sur dataesr/react-dsfr.fr"
+    isModalOpen={isModalOpen}
+    setIsModalOpen={setIsModalOpen}
+    modalTitle="Panneau de gestion des cookies"
+    modalCloseLabel="Fermer"
+    modalCloseTitle="fermer la modal cookie"
+    confirmButtonLabel="Confirmer mes choix"
+    isBannerOpen={isBannerOpen}
+    bannerButtons={{
         accept: {
-          label: 'Tout Accepter',
+            label: 'Tout Accepter',
         },
         refuse: {
-          label: 'Tout Refuser',
+            label: 'Tout Refuser',
         },
         customize: {
-          label: 'Personnaliser',
+            label: 'Personnaliser',
         },
-      }}
-      confirmConsent={() => {}}
-      bannerButtonRefuse={() => {}}
-      bannerButtonAccept={() => {}}
-    >
-      <ConsentService
+    }}
+    confirmConsent={() => { setIsBannerOpen(false); }}
+    refuseBannerButton={() => { setIsBannerOpen(false); }}
+    acceptBannerButton={() => { setIsBannerOpen(false); }}
+>
+    <ConsentService
         description=""
         title="Préférences pour tous les services."
-        acceptButtonLabel="Tout accepter"
-        refuseButtonLabel="Tout refuser"
+        acceptLabel="Tout accepter"
+        refuseLabel="Tout refuser"
         acceptValue="accept-all-consent"
         refuseValue="refuse-all-consent"
         consent="accept-all-consent"
-      />
-      <ConsentService
+    />
+    <ConsentService
         description="Ce site utilise des cookies nécessaires à son bon fonctionnement qui ne peuvent pas être désactivés."
         title="Cookies obligatoires"
-        acceptButtonLabel="Accepter"
-        refuseButtonLabel="Refuser"
+        acceptLabel="Accepter"
+        refuseLabel="Refuser"
         acceptValue="accept-mandatory"
         refuseValue="refuse-mandatory"
         consent="accept-mandatory"
-      />
-    </ConsentManager>
+    />
+</ConsentManager>
 ```
