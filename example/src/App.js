@@ -10,6 +10,7 @@ import ButtonGroupExample from './components/Button/ButtonGroup';
 import CalloutExample from './components/Callout/Callout';
 import CardExample from './components/Card/Card';
 import CheckboxExample from './components/Checkbox/Checkbox';
+import ConsentManagerExample from './components/ConsentManager/ConsentManager';
 import FooterExample from './components/Footer/Footer';
 import HeaderExample from './components/Header/Header';
 import HighlightExample from './components/Highlight/Highlight';
@@ -45,6 +46,7 @@ const App = () => {
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
+    { title: 'ConsentManager', component: <ConsentManagerExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
     { title: 'Icons', component: <IconsExample /> },
     { title: 'Lien', component: <LinkExample /> },

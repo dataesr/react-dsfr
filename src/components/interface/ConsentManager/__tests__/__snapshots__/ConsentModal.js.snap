@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
+<dialog
+  aria-labelledby="fr-modal-title-modal"
+  class="fr-modal fr-modal--opened fr-modal"
+  data-testid="modal"
+  id="fr-consent-modal"
+>
+  <div
+    class="fr-container fr-container--fluid fr-container-md"
+  >
+    <div
+      class="fr-grid-row fr-grid-row--center closing-overlay"
+    >
+      <div
+        class="fr-col-12 fr-col-md-6"
+      >
+        <div
+          class="fr-modal__body"
+        >
+          <div
+            class="fr-modal__header"
+          >
+            <button
+              aria-controls="fr-modal"
+              class="fr-link--close fr-link"
+              title="Close"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <div
+            class="fr-modal__content"
+          >
+            <h1
+              class="fr-modal__title"
+              id="fr-modal-title-modal"
+            >
+              Title
+            </h1>
+            <div
+              class=""
+            >
+              <ul
+                class="fr-consent-manager__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-sm"
+              >
+                <li>
+                  <button
+                    class="fr-btn--md fr-btn"
+                    title="Confirm Title"
+                    type="button"
+                  >
+                    Confirm
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+`;

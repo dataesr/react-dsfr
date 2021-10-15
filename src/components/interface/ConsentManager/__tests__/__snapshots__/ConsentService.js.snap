@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConsentService /> should render ConsentService properly 1`] = `
+<div
+  className="fr-consent-service ds-fr--border-bottom"
+>
+  <div
+    className="fr-consent-service__radios"
+  >
+    <div
+      className="fr-form-group fr-fieldset--inline"
+    >
+      <fieldset
+        aria-label="Préférences pour tous les services."
+        className="fr-fieldset"
+        disabled={false}
+      >
+        <legend
+          className="fr-fieldset__legend"
+        >
+          Préférences pour tous les services.
+        </legend>
+        
+        <div
+          className="fr-fieldset__content"
+        >
+          <div
+            className="fr-radio-group"
+          >
+            <input
+              id="name"
+              name="id"
+              onChange={[Function]}
+              required={false}
+              type="radio"
+              value="toutaccepter"
+            />
+            <label
+              className="fr-label"
+              htmlFor="name"
+            >
+              Tout accepter
+            </label>
+            
+            
+          </div>
+          <div
+            className="fr-radio-group"
+          >
+            <input
+              name="id"
+              onChange={[Function]}
+              required={false}
+              type="radio"
+              value="toutrefuser"
+            />
+            <label
+              className="fr-label"
+            >
+              Tout refuser
+            </label>
+            
+            
+          </div>
+        </div>
+        
+      </fieldset>
+    </div>
+  </div>
+  <p
+    className="fr-consent-service__desc"
+  >
+    Description
+  </p>
+</div>
+`;
