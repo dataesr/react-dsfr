@@ -11,9 +11,7 @@ const ConsentService = forwardRef((props, ref) => {
     title,
     acceptLabel,
     refuseLabel,
-    acceptValue,
-    refuseValue,
-    consent,
+    defaultConsent,
     ...remainingProps
   } = props;
   const _className = classNames('fr-consent-service ds-fr--border-bottom', className);
@@ -30,13 +28,13 @@ const ConsentService = forwardRef((props, ref) => {
         >
           <Radio
             label={acceptLabel}
-            value={acceptValue}
-            defaultChecked={consent === acceptValue}
+            value={`${acceptLabel.toLowerCase().replace(/\s+/g, '')}`}
+            defaultChecked={defaultConsent === 'accept'}
           />
           <Radio
             label={refuseLabel}
-            value={refuseValue}
-            defaultChecked={consent === refuseValue}
+            value={`${refuseLabel.toLowerCase().replace(/\s+/g, '')}`}
+            defaultChecked={defaultConsent === 'refuse'}
           />
         </RadioGroup>
       </div>
@@ -59,11 +57,9 @@ ConsentService.propTypes = {
     PropTypes.array,
   ]),
   title: PropTypes.string.isRequired,
-  consent: PropTypes.string.isRequired,
+  defaultConsent: PropTypes.oneOf(['accept', 'refuse']).isRequired,
   description: PropTypes.string,
   acceptLabel: PropTypes.string.isRequired,
-  acceptValue: PropTypes.string.isRequired,
-  refuseValue: PropTypes.string.isRequired,
   refuseLabel: PropTypes.string.isRequired,
 };
 export default ConsentService;

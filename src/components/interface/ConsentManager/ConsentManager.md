@@ -1,7 +1,5 @@
 Le bandeau permet le recueil du consentement des utilisateurs à l’arrivée sur le site. Ce doit être le premier élément sélectionné lors de la navigation au clavier. Il est faut donc le placer en première position dans le DOM, juste après la balise <body> (et avant les liens d'évitement).
 
-Value of props `consent` must be equal either to `acceptValue` or `refuseValue`
-
 ```jsx
 
 import ConsentManager  from '.';
@@ -39,18 +37,14 @@ const [isBannerOpen, setIsBannerOpen] = useState(true);
         title="Préférences pour tous les services."
         acceptLabel="Tout accepter"
         refuseLabel="Tout refuser"
-        acceptValue="accept-all-consent"
-        refuseValue="refuse-all-consent"
-        consent="accept-all-consent"
+        defaultConsent="refuse"
     />
     <ConsentService
         description="Ce site utilise des cookies nécessaires à son bon fonctionnement qui ne peuvent pas être désactivés."
         title="Cookies obligatoires"
         acceptLabel="Accepter"
         refuseLabel="Refuser"
-        acceptValue="accept-mandatory"
-        refuseValue="refuse-mandatory"
-        consent="accept-mandatory"
+        defaultConsent="accept"
     />
 </ConsentManager>
 ```

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -23,18 +23,17 @@ const ConsentManager = ({
   modalCloseTitle,
   isBannerOpen,
 }) => {
-  const [open, setOpen] = useState(false);
   const openConsentModal = (v) => {
-    setOpen(v);
     setIsModalOpen(v);
   };
   const manageDataConsent = (service) => {
-    const consentValue = service.map((c) => {
+    const responseObject = {};
+    service.map((c) => {
       const input = c.ref.current.querySelector('input');
-      return input.checked ? input.value : '';
+      responseObject[input.value] = input.checked;
+      return input.checked;
     });
-
-    confirmConsent(consentValue);
+    confirmConsent(responseObject);
     openConsentModal(false);
   };
   return (
@@ -56,7 +55,7 @@ const ConsentManager = ({
         title={modalTitle}
         closeLabel={modalCloseLabel}
         closeTitle={modalCloseTitle}
-        isOpen={isModalOpen || open}
+        isOpen={isModalOpen}
         setIsOpen={openConsentModal}
       >
         {children}

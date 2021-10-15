@@ -10,12 +10,6 @@ const ConsentManagerExample = () => {
       bannerDescription="Bienvenue ! Nous utilisons des cookies pour améliorer votre expérience et les
           services disponibles sur ce site. Vous pouvez, à tout moment, avoir le contrôle sur les cookies que vous souhaitez activer."
       bannerTitle="À propos des cookies sur nomdusite.fr"
-      isModalOpen={isModalOpen}
-      setIsModalOpen={setIsModalOpen}
-      modalTitle="Panneau de gestion des cookies"
-      modalCloseLabel="Fermer"
-      modalCloseTitle="fermer la modal cookie"
-      confirmButtonLabel="Confirmer mes choix"
       isBannerOpen={isBannerOpen}
       bannerButtons={{
         accept: {
@@ -28,27 +22,29 @@ const ConsentManagerExample = () => {
           label: 'Personnaliser',
         },
       }}
-      confirmConsent={() => { setIsBannerOpen(false); }}
       acceptBannerButton={() => { setIsBannerOpen(false); }}
       refuseBannerButton={() => { setIsBannerOpen(false); }}
+      isModalOpen={isModalOpen}
+      setIsModalOpen={setIsModalOpen}
+      modalTitle="Panneau de gestion des cookies"
+      modalCloseLabel="Fermer"
+      modalCloseTitle="fermer la modal cookie"
+      confirmButtonLabel="Confirmer mes choix"
+      confirmConsent={() => { setIsBannerOpen(false); }}
     >
       <ConsentService
         description=""
         title="Préférences pour tous les services."
         acceptLabel="Tout accepter"
         refuseLabel="Tout refuser"
-        acceptValue="accept-all-consent"
-        refuseValue="refuse-all-consent"
-        consent="accept-all-consent"
+        defaultConsent="refuse"
       />
       <ConsentService
         description="Ce site utilise des cookies nécessaires à son bon fonctionnement qui ne peuvent pas être désactivés."
         title="Cookies obligatoires"
         acceptLabel="Accepter"
         refuseLabel="Refuser"
-        acceptValue="accept-mandatory"
-        refuseValue="refuse-mandatory"
-        consent="accept-mandatory"
+        defaultConsent="accept"
       />
     </ConsentManager>
   );

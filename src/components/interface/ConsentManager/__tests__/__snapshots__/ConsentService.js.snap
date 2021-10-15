@@ -28,13 +28,12 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
             className="fr-radio-group"
           >
             <input
-              defaultChecked={true}
               id="name"
               name="id"
               onChange={[Function]}
               required={false}
               type="radio"
-              value="accept-all-consent"
+              value="toutaccepter"
             />
             <label
               className="fr-label"
@@ -53,7 +52,7 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               onChange={[Function]}
               required={false}
               type="radio"
-              value="refuse-all-consent"
+              value="toutrefuser"
             />
             <label
               className="fr-label"
