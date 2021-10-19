@@ -3,7 +3,7 @@
 exports[`<SideMenu /> should render SideMenu properly 1`] = `
 <nav
   aria-label="Menu latéral"
-  class="fr-sidemenu"
+  class="fr-sidemenu fr-sidemenu--sticky"
   data-testid="sidemenu"
 >
   <div

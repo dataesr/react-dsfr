@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container } from '@dataesr/react-dsfr';
+import { Container, Row, Col } from '@dataesr/react-dsfr';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import AccordionExample from './components/Accordion/Accordion';
 import AlertExample from './components/Alert/Alert';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
@@ -69,19 +68,28 @@ const App = () => {
   return (
     <BrowserRouter>
       <HeaderExample />
-      <Switch>
-        <Route exact path="/page-1">
-          <Page1 />
-        </Route>
-        <Route exact path="/page-2">
-          <Page2 />
-        </Route>
-        <Container role="main">
-          {elements.map((element) => (
-            <Element key={element.title} title={element.title}>{element.component}</Element>
-          ))}
-        </Container>
-      </Switch>
+      <Container>
+        <Row>
+          <Col n="md-4 12">
+            <SidemenuExample />
+          </Col>
+          <Col n="8">
+            <Switch>
+              <Route exact path="/page-1">
+                <Page1 />
+              </Route>
+              <Route exact path="/page-2">
+                <Page2 />
+              </Route>
+              <Container role="main">
+                {elements.map((element) => (
+                  <Element key={element.title} title={element.title}>{element.component}</Element>
+                ))}
+              </Container>
+            </Switch>
+          </Col>
+        </Row>
+      </Container>
       <FooterExample />
     </BrowserRouter>
   );

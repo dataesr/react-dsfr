@@ -13,7 +13,7 @@ import '@gouvfr/dsfr/dist/css/sidemenu.min.css';
  * @visibleName SideMenu
  */
 const SideMenu = ({
-  children, title, buttonLabel, className, ...remainingProps
+  children, title, buttonLabel, className, sticky, ...remainingProps
 }) => {
   const itemID = useRef(uuidv4());
   const [isExpanded, setExpanded] = useState(false);
@@ -21,7 +21,7 @@ const SideMenu = ({
 
   return (
     <nav
-      className={classNames('fr-sidemenu', className)}
+      className={classNames('fr-sidemenu', className, { 'fr-sidemenu--sticky': sticky })}
       aria-label="Menu latéral"
       {...dataAttributes.getAll(remainingProps)}
     >
@@ -51,7 +51,13 @@ const SideMenu = ({
   );
 };
 
+SideMenu.defaultProps = {
+  className: '',
+  title: undefined,
+  sticky: true,
+};
 SideMenu.propTypes = {
+  sticky: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -64,5 +70,4 @@ SideMenu.propTypes = {
   title: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
 };
-SideMenu.defaultProps = { className: '', title: undefined };
 export default SideMenu;
