@@ -4,7 +4,12 @@ import { Accordion, AccordionItem } from '..';
 describe('<Accordion />', () => {
   it('should render accordion properly', () => {
     render(
-      <Accordion className="custom-class" data-testid="accordiongroup">
+      <Accordion
+        className="custom-class"
+        data-testid="accordiongroup"
+        size="lg"
+        color="#f88"
+      >
         <AccordionItem title="first line accordion" data-testid="accordion">
           Anything I want
         </AccordionItem>

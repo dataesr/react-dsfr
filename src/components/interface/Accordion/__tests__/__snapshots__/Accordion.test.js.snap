@@ -21,9 +21,10 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           <button
             aria-controls="fr-accordion-1"
             aria-expanded="false"
-            class="fr-accordion__btn"
+            class="fr-accordion__btn fr-btn--lg"
             data-testid="accordion-button"
             id="button1"
+            style="color: rgb(255, 136, 136);"
             type="button"
           >
             first line accordion
@@ -52,9 +53,10 @@ exports[`<Accordion /> should render accordion properly 1`] = `
           <button
             aria-controls="fr-accordion-2"
             aria-expanded="false"
-            class="fr-accordion__btn"
+            class="fr-accordion__btn fr-btn--lg"
             data-testid="accordion-button"
             id="button2"
+            style="color: rgb(255, 136, 136);"
             type="button"
           >
             first line accordion
