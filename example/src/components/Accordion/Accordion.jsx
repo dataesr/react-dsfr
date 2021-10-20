@@ -6,7 +6,7 @@ import {
 
 const AccordionExample = () => (
   <Col>
-    <Accordion keepOpen>
+    <Accordion keepOpen size="sm" color="#f66">
       <AccordionItem title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>
       <AccordionItem title="title">Test</AccordionItem>

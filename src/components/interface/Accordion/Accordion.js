@@ -1,5 +1,5 @@
 import React, {
-  useState, Children, cloneElement,
+  useState, Children, cloneElement, useRef, useEffect,
 } from 'react';
 
 import PropTypes from 'prop-types';
@@ -27,10 +27,11 @@ import '@gouvfr/dsfr/dist/css/accordions.min.css';
  * @visibleName Accordion
  */
 const Accordion = ({
-  className, children, as, keepOpen, ...remainingProps
+  className, children, as, keepOpen, size, color, ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
   const [expandedItems, setExpandedItems] = useState([]);
+
   const expand = (isExpanded, e, newItem) => {
     let action = 'open';
     const actionObject = {
@@ -51,6 +52,8 @@ const Accordion = ({
     return cloneElement(child, {
       id,
       key: id,
+      size,
+      color,
       onClick: (isExpanded, e, newItem) => {
         child.props.onClick(isExpanded, e, newItem);
         expand(isExpanded, e, newItem);
@@ -74,6 +77,8 @@ Accordion.defaultProps = {
   as: 'div',
   className: '',
   keepOpen: false,
+  size: 'md',
+  color: '',
 };
 
 Accordion.propTypes = {
@@ -81,7 +86,9 @@ Accordion.propTypes = {
    * Html tag to render accordion wrapper.
    */
   as: PropTypes.oneOf(['div', 'section']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   keepOpen: PropTypes.bool,
+  color: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
