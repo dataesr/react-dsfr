@@ -7,6 +7,7 @@ describe('<MediaVideo />', () => {
     const component = renderer
       .create(
         <MediaVideo
+          data-testid="video"
           legend="légende de l'image"
           size="sm"
           buttonLabel="Transcription"
@@ -30,6 +31,7 @@ describe('<MediaVideo />', () => {
   it('in document', () => {
     render(
       <MediaVideo
+        data-testid="video"
         legend="légende de l'image"
         size="sm"
         buttonLabel="Transcription"

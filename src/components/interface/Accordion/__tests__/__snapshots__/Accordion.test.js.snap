@@ -22,7 +22,6 @@ exports[`<Accordion /> should render accordion properly 1`] = `
             aria-controls="fr-accordion-1"
             aria-expanded="false"
             class="fr-accordion__btn fr-btn--lg"
-            data-testid="accordion-button"
             id="button1"
             style="color: rgb(255, 136, 136);"
             type="button"
@@ -32,7 +31,6 @@ exports[`<Accordion /> should render accordion properly 1`] = `
         </h3>
         <div
           class="fr-collapse"
-          data-testid="accordion-div"
           id="fr-accordion-1"
           style="--collapse: -0px;"
         >
@@ -54,7 +52,6 @@ exports[`<Accordion /> should render accordion properly 1`] = `
             aria-controls="fr-accordion-2"
             aria-expanded="false"
             class="fr-accordion__btn fr-btn--lg"
-            data-testid="accordion-button"
             id="button2"
             style="color: rgb(255, 136, 136);"
             type="button"
@@ -64,7 +61,6 @@ exports[`<Accordion /> should render accordion properly 1`] = `
         </h3>
         <div
           class="fr-collapse"
-          data-testid="accordion-div"
           id="fr-accordion-2"
           style="--collapse: -0px;"
         >

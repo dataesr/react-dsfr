@@ -72,7 +72,6 @@ const Breadcrumb = ({
         onClick={handleOpenBreadcrumb}
         className="fr-breadcrumb__button"
         hidden={open}
-        data-testid="bc-button"
       >
         {buttonLabel}
       </button>
@@ -81,7 +80,6 @@ const Breadcrumb = ({
           ref={listRef}
           className="fr-breadcrumb__list"
           hidden={!open}
-          data-testid="bc-list"
         >
           {content}
         </ol>

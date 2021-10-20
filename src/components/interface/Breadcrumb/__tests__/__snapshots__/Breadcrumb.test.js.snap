@@ -9,7 +9,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
 >
   <button
     class="fr-breadcrumb__button"
-    data-testid="bc-button"
     type="button"
   >
     Voir le fil d'ariane
@@ -19,7 +18,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
   >
     <ol
       class="fr-breadcrumb__list"
-      data-testid="bc-list"
       hidden=""
     >
       <li

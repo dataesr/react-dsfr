@@ -66,7 +66,6 @@ const AccordionItem = forwardRef((props, ref) => {
             type="button"
             aria-controls={`fr-accordion-${id}`}
             aria-expanded={isExpanded}
-            data-testid="accordion-button"
           >
             {title}
           </button>
@@ -75,7 +74,6 @@ const AccordionItem = forwardRef((props, ref) => {
           style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
           className={item.class}
           id={`fr-accordion-${id}`}
-          data-testid="accordion-div"
         >
           {children}
         </div>

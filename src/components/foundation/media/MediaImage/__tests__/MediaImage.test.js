@@ -7,6 +7,7 @@ describe('<MediaImage />', () => {
     const component = renderer
       .create(
         <MediaImage
+          data-testid="image"
           src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
         />,
       )
@@ -17,6 +18,7 @@ describe('<MediaImage />', () => {
   it('in document', () => {
     render(
       <MediaImage
+        data-testid="image"
         src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
       />,
     );

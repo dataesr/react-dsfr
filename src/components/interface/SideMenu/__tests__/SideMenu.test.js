@@ -1,18 +1,20 @@
-import {
-  render, screen, cleanup, fireEvent, within,
-} from '@testing-library/react';
-import { v4 as uuidv4 } from 'uuid';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+import Enzyme from 'enzyme';
+import renderer from 'react-test-renderer';
 import { SideMenu, SideMenuItem, SideMenuLink } from '..';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('uuid', () => ({
   v4: jest.fn(),
 }));
 
+// TODO add tests
 describe('<SideMenu />', () => {
-  beforeEach(() => {
-    uuidv4.mockImplementation(() => 'xxxxxxx');
-    render(
-      <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique" data-testid="sidemenu">
+  it('should render ConsentBanner properly', () => {
+    const component = renderer
+      .create(<SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique" data-testid="sidemenu">
         <SideMenuItem title="Niveau 1" data-testid="sidemenuitem">
           <SideMenuLink href="/" data-test-id="sidemenulink1">Accès direct niveau 2</SideMenuLink>
           <SideMenuLink href="/" data-test--id="sidemenulink2">Accès direct niveau 2</SideMenuLink>
@@ -43,29 +45,8 @@ describe('<SideMenu />', () => {
           <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
           <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
         </SideMenuItem>
-      </SideMenu>,
-    );
-  });
-  afterEach(() => cleanup);
-  it('should render SideMenu properly', () => {
-    const sidemenu = screen.getByTestId('sidemenu');
-    const items = screen.getAllByRole('list');
-    expect(items).toHaveLength(5);
-    const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(5);
-    expect(sidemenu).toMatchSnapshot();
-  });
-
-  it('should toggle on click button', () => {
-    const niveau1 = screen.getAllByRole('list')[1];
-    const { getByRole, getByTestId } = within(niveau1);
-    const button = getByRole('button');
-    const item = getByTestId('xxxxxxx');
-    expect(button.className).toBe('fr-sidemenu__btn');
-    expect(item.className).toBe('fr-collapse');
-    fireEvent.click(button);
-    expect(item.className).toBe('fr-collapse fr-collapse--expanded');
-    fireEvent.click(button);
-    expect(item.className).toBe('fr-collapse');
+      </SideMenu>)
+      .toJSON();
+    expect(component).toMatchSnapshot();
   });
 });

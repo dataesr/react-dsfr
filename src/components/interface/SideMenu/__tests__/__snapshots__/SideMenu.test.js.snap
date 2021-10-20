@@ -1,164 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SideMenu /> should render SideMenu properly 1`] = `
+exports[`<SideMenu /> should render ConsentBanner properly 1`] = `
 <nav
   aria-label="Menu latéral"
-  class="fr-sidemenu fr-sidemenu--sticky"
+  className="fr-sidemenu fr-sidemenu--sticky"
   data-testid="sidemenu"
 >
   <div
-    class="fr-sidemenu__inner"
+    className="fr-sidemenu__inner"
   >
     <button
-      aria-controls="xxxxxxx"
-      aria-expanded="false"
-      class="fr-sidemenu__btn"
+      aria-expanded={false}
+      className="fr-sidemenu__btn"
+      hidden={false}
+      onClick={[Function]}
       type="button"
     >
       Dans cette rubrique
     </button>
     <div
-      class="fr-collapse"
-      id="xxxxxxx"
-      style="--collapse: 0px;"
+      className="fr-collapse"
+      style={
+        Object {
+          "--collapse": "0px",
+          "maxHeight": null,
+        }
+      }
     >
       <div
-        class="fr-sidemenu__title"
+        className="fr-sidemenu__title"
       >
         Titre de rubrique
       </div>
       <ul
-        class="fr-sidemenu__list"
+        className="fr-sidemenu__list"
       >
         <li
-          class="fr-sidemenu__item"
+          className="fr-sidemenu__item"
           data-testid="sidemenuitem"
         >
           <button
-            aria-controls="xxxxxxx"
-            aria-expanded="false"
-            class="fr-sidemenu__btn"
+            aria-expanded={false}
+            className="fr-sidemenu__btn"
+            onClick={[Function]}
             type="button"
           >
             Niveau 1
           </button>
           <div
-            class="fr-collapse"
-            data-testid="xxxxxxx"
-            id="xxxxxxx"
-            style="--collapse: 0px;"
+            className="fr-collapse"
+            style={
+              Object {
+                "--collapse": "0px",
+                "maxHeight": null,
+              }
+            }
           >
             <ul
-              class="fr-sidemenu__list"
+              className="fr-sidemenu__list"
             >
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
                 data-test-id="sidemenulink1"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
                 data-test--id="sidemenulink2"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
                 data-test="sidemenuitem2"
               >
                 <button
-                  aria-controls="xxxxxxx"
-                  aria-expanded="false"
-                  class="fr-sidemenu__btn"
+                  aria-expanded={false}
+                  className="fr-sidemenu__btn"
+                  onClick={[Function]}
                   type="button"
                 >
                   Niveau 2
                 </button>
                 <div
-                  class="fr-collapse"
-                  data-testid="xxxxxxx"
-                  id="xxxxxxx"
-                  style="--collapse: 0px;"
+                  className="fr-collapse"
+                  style={
+                    Object {
+                      "--collapse": "0px",
+                      "maxHeight": null,
+                    }
+                  }
                 >
                   <ul
-                    class="fr-sidemenu__list"
+                    className="fr-sidemenu__list"
                   >
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                       data-test="sidemenulink3"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                       data-testid="sidemenu4"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -168,33 +187,36 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </div>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -204,128 +226,142 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
           </div>
         </li>
         <li
-          class="fr-sidemenu__item"
+          className="fr-sidemenu__item"
         >
           <button
-            aria-controls="xxxxxxx"
-            aria-expanded="false"
-            class="fr-sidemenu__btn"
+            aria-expanded={false}
+            className="fr-sidemenu__btn"
+            onClick={[Function]}
             type="button"
           >
             Niveau 1
           </button>
           <div
-            class="fr-collapse"
-            data-testid="xxxxxxx"
-            id="xxxxxxx"
-            style="--collapse: 0px;"
+            className="fr-collapse"
+            style={
+              Object {
+                "--collapse": "0px",
+                "maxHeight": null,
+              }
+            }
           >
             <ul
-              class="fr-sidemenu__list"
+              className="fr-sidemenu__list"
             >
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <button
-                  aria-controls="xxxxxxx"
-                  aria-expanded="false"
-                  class="fr-sidemenu__btn"
+                  aria-expanded={false}
+                  className="fr-sidemenu__btn"
+                  onClick={[Function]}
                   type="button"
                 >
                   Niveau 2
                 </button>
                 <div
-                  class="fr-collapse"
-                  data-testid="xxxxxxx"
-                  id="xxxxxxx"
-                  style="--collapse: 0px;"
+                  className="fr-collapse"
+                  style={
+                    Object {
+                      "--collapse": "0px",
+                      "maxHeight": null,
+                    }
+                  }
                 >
                   <ul
-                    class="fr-sidemenu__list"
+                    className="fr-sidemenu__list"
                   >
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
                       </a>
                     </li>
                     <li
-                      class="fr-sidemenu__item"
+                      className="fr-sidemenu__item"
                     >
                       <a
-                        class="fr-sidemenu__link"
+                        className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -335,33 +371,36 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </div>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
                 </a>
               </li>
               <li
-                class="fr-sidemenu__item"
+                className="fr-sidemenu__item"
               >
                 <a
-                  class="fr-sidemenu__link"
+                  className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2

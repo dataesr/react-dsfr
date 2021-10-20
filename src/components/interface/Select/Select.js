@@ -37,7 +37,6 @@ const Select = ({
         className={_className}
         id={selectId.current}
         value={selected}
-        data-testid="select"
       >
         {
           options.map((opt) => (

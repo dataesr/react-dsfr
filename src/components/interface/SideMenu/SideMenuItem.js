@@ -30,7 +30,6 @@ const SideMenuItem = ({
         className={item.class}
         id={itemID.current}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
-        data-testid={itemID.current}
       >
         <ul className="fr-sidemenu__list">
           {children}

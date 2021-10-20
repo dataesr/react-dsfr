@@ -15,7 +15,6 @@ exports[`<Select /> renders correctly 1`] = `
   </label>
   <select
     className="fr-select fr-select--valid"
-    data-testid="select"
     id="message-xxxxxxx"
     label="Label pour liste déroulante"
     value=""

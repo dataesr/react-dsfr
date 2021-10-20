@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../../utils/data-attributes';
 
 /**
  *
@@ -14,6 +15,7 @@ const MediaVideo = ({
   onTranscriptionClick,
   ratio,
   size,
+  ...remainingProps
 }) => {
   const _className = classNames(
     'fr-content-media',
@@ -27,8 +29,8 @@ const MediaVideo = ({
 
   return (
     <div
+      {...dataAttributes.getAll(remainingProps)}
       className={_className}
-      data-testid="video"
     >
       <div className={_classNameRatio}>
         {children}

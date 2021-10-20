@@ -28,7 +28,6 @@ const ConsentBanner = ({
       <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
         <li>
           <Button
-            data-testid="button-accept"
             onClick={acceptBannerButton}
             title={bannerButtons.accept.label}
           >
@@ -37,7 +36,6 @@ const ConsentBanner = ({
         </li>
         <li>
           <Button
-            data-testid="button-refuse"
             onClick={refuseBannerButton}
             title={bannerButtons.refuse.label}
           >
@@ -46,7 +44,6 @@ const ConsentBanner = ({
         </li>
         <li>
           <Button
-            data-testid="button-consent"
             secondary
             onClick={() => openConsentModal(true)}
             title={bannerButtons.customize.label}
