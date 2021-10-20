@@ -12,7 +12,7 @@ jest.mock('uuid', () => ({
 
 // TODO add tests
 describe('<SideMenu />', () => {
-  it('should render ConsentBanner properly', () => {
+  it('should render SideMenu properly', () => {
     const component = renderer
       .create(<SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique" data-testid="sidemenu">
         <SideMenuItem title="Niveau 1" data-testid="sidemenuitem">

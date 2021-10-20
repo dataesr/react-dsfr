@@ -19,9 +19,12 @@ describe('<SearchBar />', () => {
         onSearch={onSearch}
         label="SearchBar du gouvernement"
         data-testid="searchbar"
+        defaultValue="text"
+        placeholder="placeholder"
       />,
     );
-    const search = screen.getByTestId('searchbar');
+
+    const search = screen.getByPlaceholderText('placeholder');
     expect(search).toBeInTheDocument();
     expect(search).toMatchSnapshot();
   });
@@ -34,6 +37,7 @@ describe('<SearchBar />', () => {
         onSearch={onSearch}
         label="SearchBar du gouvernement"
         data-testid="searchbar"
+        placeholder="placeholder"
       />,
     );
     const search = screen.getByTestId('searchbar');
@@ -50,9 +54,10 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        placeholder="placeholder"
       />,
     );
-    const input = screen.getByTestId('search-input');
+    const input = screen.getByPlaceholderText('placeholder');
     expect(input).toBeInTheDocument();
     expect(input.value).toBe('');
     expect(input.type).toBe('search');
@@ -67,6 +72,7 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        placeholder="placeholder"
       />,
     );
     const label = screen.getByText('SearchBar du gouvernement');
@@ -82,9 +88,10 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar"
+        placeholder="placeholder"
       />,
     );
-    const input = screen.getByTestId('search-input');
+    const input = screen.getByPlaceholderText('placeholder');
     expect(input.value).toBe('');
     userEvent.type(input, 'gouvernement');
     expect(input.value).toBe('gouvernement');
@@ -97,6 +104,7 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        placeholder="placeholder"
       />,
     );
     fireEvent.click(screen.getByText('Rechercher'));
@@ -110,10 +118,11 @@ describe('<SearchBar />', () => {
         buttonLabel="Rechercher"
         onSearch={onSearch}
         label="SearchBar du gouvernement"
+        placeholder="placeholder"
       />,
     );
     fireEvent.keyDown(
-      screen.getByTestId('search-input'),
+      screen.getByPlaceholderText('placeholder'),
       {
         key: 'Enter',
         code: 'Enter',

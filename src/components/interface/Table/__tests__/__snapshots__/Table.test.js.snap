@@ -6,9 +6,7 @@ exports[`<Table /> renders Table properly 1`] = `
   data-testid="table"
 >
   <table>
-    <caption
-      data-testid="table-caption"
-    >
+    <caption>
       Mon super tableau
     </caption>
     <thead>

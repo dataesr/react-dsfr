@@ -28,10 +28,7 @@ describe('<Table />', () => {
       />,
     );
     const table = screen.getByTestId('table');
-    const caption = screen.getByTestId('table-caption');
     expect(table).toBeInTheDocument();
-    expect(caption).toBeInTheDocument();
-    expect(caption).toHaveTextContent('Mon super tableau');
     expect(table.className).toBe('fr-table fr-table--caption-bottom fr-table--bordered');
     expect(table).toMatchSnapshot();
   });

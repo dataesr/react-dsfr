@@ -102,7 +102,7 @@ const Table = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       <table id={tableID || undefined} className={tableClassName || undefined}>
-        <caption data-testid="table-caption">{caption}</caption>
+        <caption>{caption}</caption>
         <thead>
           <tr key="headers">
             {columns.map((column) => (

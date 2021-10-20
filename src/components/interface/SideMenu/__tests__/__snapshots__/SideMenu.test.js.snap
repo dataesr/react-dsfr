@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SideMenu /> should render ConsentBanner properly 1`] = `
+exports[`<SideMenu /> should render SideMenu properly 1`] = `
 <nav
   aria-label="Menu latéral"
   className="fr-sidemenu fr-sidemenu--sticky"

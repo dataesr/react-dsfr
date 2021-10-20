@@ -58,7 +58,6 @@ const SearchBar = forwardRef((props, ref) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={onKeyDown}
-        data-testid="search-input"
       />
       <button
         type="submit"
