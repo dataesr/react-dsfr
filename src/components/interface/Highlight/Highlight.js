@@ -13,9 +13,7 @@ const Highlight = ({
   size, children, className, color, ...remainingProps
 }) => {
   const highlightRef = useRef();
-  const _className = classNames('fr-highlight', {
-    [`fr-highlight--${size}`]: (['sm', 'lg'].includes(size)),
-  }, className);
+  const _className = classNames('fr-highlight', className);
 
   useEffect(() => {
     if (color && highlightRef.current) {
@@ -29,7 +27,9 @@ const Highlight = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
-      {children}
+      <p className={`fr-text--${size}`}>
+        {children}
+      </p>
     </div>
   );
 };
