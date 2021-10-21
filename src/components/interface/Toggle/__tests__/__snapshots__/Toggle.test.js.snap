@@ -7,14 +7,14 @@ exports[`<Toggle /> should render Toggle properly 1`] = `
 >
   <input
     className="fr-toggle__input"
-    id="d8e868c0-7c3c-43ea-868d-5b7ac592c208"
+    id="xyx"
     type="checkbox"
   />
   <label
     className="fr-toggle__label"
     data-fr-checked-label="Activé"
     data-fr-unchecked-label="Désactivé"
-    htmlFor="d8e868c0-7c3c-43ea-868d-5b7ac592c208"
+    htmlFor="xyx"
   >
     Accepter les cookies
   </label>
