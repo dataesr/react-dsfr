@@ -3,9 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-const CalloutText = ({ children, className, ...remainingProps }) => (
+const CalloutText = ({
+  children, className, size, ...remainingProps
+}) => (
   <p
-    className={classNames('fr-callout__text', className)}
+    className={classNames('fr-callout__text',
+      {
+        [`fr-text--${size}`]: size !== 'md',
+        'fr-text': size === 'md',
+      },
+      className)}
     {...dataAttributes.getAll(remainingProps)}
   >
     {children}
@@ -19,8 +26,10 @@ CalloutText.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
 };
 CalloutText.defaultProps = {
   className: '',
+  size: 'lg',
 };
 export default CalloutText;

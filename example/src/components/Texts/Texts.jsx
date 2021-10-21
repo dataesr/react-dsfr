@@ -8,6 +8,8 @@ const TextsExample = () => (
   <>
     <Col>
       <Text size="xs">Text xs</Text>
+      <Text size="md">Text md</Text>
+      <Text size="lg">Text lg</Text>
       <Title as="h4">Title h4</Title>
     </Col>
     <Col>

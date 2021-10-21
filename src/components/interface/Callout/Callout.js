@@ -10,8 +10,9 @@ import '@gouvfr/dsfr/dist/css/callouts.min.css';
  * @visibleName Callout
  */
 const Callout = ({
-  hasInfoIcon, children, className, color, ...remainingProps
+  hasInfoIcon, children, className, colors, ...remainingProps
 }) => {
+  const [color, backgroundColor] = colors;
   const calloutRef = useRef();
   const _className = classNames('fr-callout', className, {
     'fr-fi-information-line': hasInfoIcon,
@@ -20,8 +21,9 @@ const Callout = ({
   useEffect(() => {
     if (color && calloutRef.current) {
       calloutRef.current.style.boxShadow = `inset .25rem 0 0 0 ${color}`;
+      calloutRef.current.style.backgroundColor = backgroundColor;
     }
-  }, [color]);
+  }, [color, backgroundColor]);
 
   return (
     <div
@@ -37,12 +39,16 @@ const Callout = ({
 Callout.defaultProps = {
   hasInfoIcon: true,
   className: '',
-  color: '',
+  colors: [],
 };
 
 Callout.propTypes = {
   hasInfoIcon: PropTypes.bool,
-  color: PropTypes.string,
+  /**
+   * first color is color of the border, second is background
+   * be careful with contrast
+   */
+  colors: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

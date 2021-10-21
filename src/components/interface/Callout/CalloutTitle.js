@@ -4,12 +4,16 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
 const CalloutTitle = ({
-  as, children, className, ...remainingProps
+  as, children, className, size, ...remainingProps
 }) => {
   const HtmlTitleTag = `${as}`;
   return (
     <HtmlTitleTag
-      className={classNames('fr-callout__title', className)}
+      className={classNames('fr-callout__title', {
+        'fr-text': size === 'md',
+        'fr-text--md': size === 'lg',
+        [`fr-text--${size}`]: size === 'sm' || size === 'xs',
+      }, className)}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
@@ -20,6 +24,7 @@ const CalloutTitle = ({
 CalloutTitle.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -28,6 +33,7 @@ CalloutTitle.propTypes = {
 };
 CalloutTitle.defaultProps = {
   as: 'p',
+  size: 'lg',
   className: '',
 };
 export default CalloutTitle;
