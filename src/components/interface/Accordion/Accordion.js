@@ -48,6 +48,7 @@ const Accordion = ({
   };
 
   const childs = Children.toArray(children).map((child, i) => {
+    // TODO fix custom id by AccordionItem
     const id = i + 1;
     return cloneElement(child, {
       id,
