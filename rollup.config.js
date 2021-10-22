@@ -39,7 +39,7 @@ MODE.forEach((m) => {
     plugins: [
       babel({
         exclude: 'node_modules/**',
-        plugins: ['@babel/transform-runtime'],
+        plugins: ['@babel/transform-runtime', '@babel/plugin-proposal-nullish-coalescing-operator'],
         babelHelpers: 'runtime',
       }),
       postcss({
