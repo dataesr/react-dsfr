@@ -163,6 +163,13 @@ exports[`<Header /> renders correctly 1`] = `
       >
         Fermer
       </button>
+      <div
+        className="fr-header__menu-links"
+      >
+        <ul
+          className="fr-links-group"
+        />
+      </div>
       <nav
         aria-label="Menu principal"
         className="fr-nav"
