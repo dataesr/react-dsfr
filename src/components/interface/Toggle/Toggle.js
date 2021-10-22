@@ -17,6 +17,7 @@ const Toggle = ({
   label,
   id,
   toggleColor,
+  onChange,
   description,
   ...remainingProps
 }) => {
@@ -43,6 +44,7 @@ const Toggle = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       <input
+        onChange={onChange}
         type="checkbox"
         className="fr-toggle__input"
         id={_id.current}
@@ -67,9 +69,11 @@ Toggle.defaultProps = {
   hasSeparator: false,
   hasLabelLeft: false,
   description: '',
+  onChange: undefined,
 };
 
 Toggle.propTypes = {
+  onChange: PropTypes.func,
   id: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,
