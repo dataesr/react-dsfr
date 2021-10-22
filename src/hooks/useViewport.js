@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useViewport = () => {
   const [size, setSize] = useState({ width: null, height: null });
