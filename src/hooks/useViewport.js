@@ -9,7 +9,6 @@ const useViewport = () => {
     };
 
     handleWindowResize(); // to initialize values on mount
-
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
