@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './icons.css';
+import dataAttributes from '../../../utils/data-attributes';
 
 /**
  *
  * @visibleName Icon
  */
 const Icon = ({
-  size, name, as, children, className, iconPosition, title, verticalAlign, color,
+  size, name, as, children, className, iconPosition, title, verticalAlign, color, ...remainingProps
+
 }) => {
   const iconRef = useRef();
   const HTMLTag = `${as}`;
@@ -27,11 +29,13 @@ const Icon = ({
       ref={iconRef}
       className={_className}
       title={title}
+      {...dataAttributes.getAll(remainingProps)}
     />
   ) : (
     <HTMLTag
       ref={iconRef}
       className={_className}
+      {...dataAttributes.getAll(remainingProps)}
     />
   );
   const newChildren = (
