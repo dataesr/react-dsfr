@@ -12,6 +12,7 @@ const IconsExample = () => (
         name="ri-bubble-chart-line"
         size="lg"
         color="#f88"
+        iconPosition="right"
       >
         <p>With label</p>
       </Icon>

@@ -10,9 +10,11 @@ exports[`<Button /> renders correctly 1`] = `
   title="title"
   type="button"
 >
-  test button
-  <span
-    className="ri-2x icon-right ri-alert-fill"
-  />
+  <span>
+    test button
+    <span
+      className="ri-2x icon-right ri-alert-fill"
+    />
+  </span>
 </button>
 `;

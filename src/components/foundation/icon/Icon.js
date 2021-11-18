@@ -24,7 +24,7 @@ const Icon = ({
     name,
     className,
   );
-  const i = title ? (
+  const icon = title ? (
     <HTMLTag
       ref={iconRef}
       className={_className}
@@ -38,11 +38,15 @@ const Icon = ({
       {...dataAttributes.getAll(remainingProps)}
     />
   );
-  const newChildren = (
-    <>
-      {iconPosition === 'right' ? children?.props?.children : i}
-      {iconPosition === 'right' ? i : children?.props?.children}
-    </>
+
+  const isChildrenElement = children && children.props;
+  const newChildren = isChildrenElement ? children.props.children : children;
+
+  const childrenWithIcon = (
+    <span>
+      {iconPosition === 'right' ? newChildren : icon}
+      {iconPosition === 'right' ? icon : newChildren}
+    </span>
   );
 
   useEffect(() => {
@@ -53,13 +57,13 @@ const Icon = ({
 
   return (
     <>
-      {children ? cloneElement(children, {
+      {isChildrenElement ? cloneElement(children, {
         ...children.props,
-        className: classNames({
+        className: children.props ? classNames({
           [`${children.props.className}`]: children.props.className,
-        }),
-        children: newChildren,
-      }) : i}
+        }) : '',
+        children: childrenWithIcon,
+      }) : childrenWithIcon}
     </>
   );
 };
@@ -76,7 +80,7 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
-  size: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
+  size: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'xl', '2x', '3x', '10x']),
   name: PropTypes.string.isRequired,
   verticalAlign: PropTypes.bool,
   className: PropTypes.string,
@@ -85,6 +89,7 @@ Icon.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
+    PropTypes.string,
   ]),
   title: PropTypes.string,
   color: PropTypes.string,

@@ -102,10 +102,12 @@ exports[`<Header /> renders correctly 1`] = `
                     onClick={[Function]}
                     target="_self"
                   >
-                    <span
-                      className="ri-1x icon-left fr-fi-lock-line ds-fr--v-middle"
-                    />
-                    Se connecter
+                    <span>
+                      <span
+                        className="ri-1x icon-left fr-fi-lock-line ds-fr--v-middle"
+                      />
+                      Se connecter
+                    </span>
                   </a>
                 </li>
                 <li
@@ -117,10 +119,12 @@ exports[`<Header /> renders correctly 1`] = `
                     onClick={[Function]}
                     target="_self"
                   >
-                    <span
-                      className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-middle"
-                    />
-                    Créer un espace
+                    <span>
+                      <span
+                        className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-middle"
+                      />
+                      Créer un espace
+                    </span>
                   </a>
                 </li>
               </ul>

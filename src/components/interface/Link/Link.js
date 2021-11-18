@@ -111,7 +111,7 @@ Link.propTypes = {
   icon: PropTypes.string,
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
-  iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
+  iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'xl', '2x', '3x', '10x']),
   /**
    * @ignore
    */

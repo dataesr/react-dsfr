@@ -33,6 +33,10 @@ const AccordionItem = forwardRef((props, ref) => {
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
 
   const onItemClick = (e) => {
+    if (e.target.nodeName !== 'BUTTON') {
+      e.target = e.target.parentNode;
+    }
+
     const trullyExpanded = (buttonRef.current.ariaExpanded === 'true');
     onClick(trullyExpanded, e, parseFloat(e.target.id.slice(6)));
     setInitItem(false);
@@ -111,7 +115,7 @@ AccordionItem.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   id: PropTypes.number,
   color: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   keepOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

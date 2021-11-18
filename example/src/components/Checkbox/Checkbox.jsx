@@ -28,12 +28,20 @@ const CheckboxExample = () => {
         checkboxColors={['#f99', '#000']}
         ariaLabel="With colors"
         legend="With colors"
+        message="test"
+        messageType="valid"
       >
         <Checkbox
           checked={isChecked}
           label="Label checkbox 2"
           onChange={() => setIsChecked(!isChecked)}
           value="value-2"
+        />
+        <Checkbox
+          checked={!isChecked}
+          label="Label checkbox 2"
+          onChange={() => setIsChecked(!isChecked)}
+          value="value-3"
         />
       </CheckboxGroup>
     </Col>
