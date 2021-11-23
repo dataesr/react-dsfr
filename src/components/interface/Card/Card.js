@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/cards.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/card/card.min.css';
 
 /**
  *
@@ -18,7 +21,6 @@ const Card = ({
   className,
   hasArrow,
   bodyClassName,
-  enlargeLink,
   ariaLabel,
   asLink,
   onClick,
@@ -33,10 +35,10 @@ const Card = ({
   const displayTitle = title && cloneElement(title, {
     href, anchorAs, onClick, asLink, ariaLabel,
   });
-  const _className = classNames('fr-card', {
+  const _className = classNames('fr-card fr-card--neutral', {
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
-    'fr-enlarge-link': enlargeLink,
+    'fr-enlarge-link': href || asLink,
   }, className);
   return (
     <div
@@ -61,7 +63,6 @@ Card.defaultProps = {
   className: '',
   bodyClassName: '',
   hasArrow: true,
-  enlargeLink: true,
   asLink: null,
   onClick: undefined,
 };
@@ -81,7 +82,6 @@ Card.propTypes = {
   ]),
   bodyClassName: PropTypes.string,
   hasArrow: PropTypes.bool,
-  enlargeLink: PropTypes.bool,
   asLink: PropTypes.element,
   onClick: PropTypes.func,
 };

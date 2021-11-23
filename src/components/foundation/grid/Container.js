@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
-import '@gouvfr/dsfr/dist/css/utilities.min.css';
 
 /**
  *

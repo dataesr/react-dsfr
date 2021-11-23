@@ -1,5 +1,5 @@
 import React, {
-  useState, useEffect, useRef, Children,
+  Children, useEffect, useRef, useState,
 } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,19 +7,9 @@ import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/breadcrumb.min.css';
+import '@gouvfr/dsfr/dist/component/breadcrumb/breadcrumb.min.css';
 
 /**
  * @visibleName Breadcrumb
@@ -90,8 +80,8 @@ const Breadcrumb = ({
 
 Breadcrumb.defaultProps = {
   className: '',
-  buttonLabel: "Voir le fil d'ariane",
-  label: "Fil d'ariane",
+  buttonLabel: 'Voir le fil d\'ariane',
+  label: 'Fil d\'ariane',
 };
 
 Breadcrumb.propTypes = {

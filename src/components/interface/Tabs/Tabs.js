@@ -7,7 +7,10 @@ import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 import TabButton from './TabButton';
 
-import '@gouvfr/dsfr/dist/css/tabs.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/tab/tab.min.css';
 
 /**
  *

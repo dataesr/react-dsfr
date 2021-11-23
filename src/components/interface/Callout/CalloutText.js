@@ -9,8 +9,7 @@ const CalloutText = ({
   <p
     className={classNames('fr-callout__text',
       {
-        [`fr-text--${size}`]: size !== 'md',
-        'fr-text': size === 'md',
+        [`fr-text--${size}`]: size,
       },
       className)}
     {...dataAttributes.getAll(remainingProps)}

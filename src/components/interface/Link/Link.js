@@ -4,7 +4,10 @@ import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/links.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/link/link.min.css';
 
 /**
  *
@@ -46,9 +49,10 @@ const Link = ({
       onClick,
     })
     : null;
+
   const _link = (
     <a
-      onClick={onClick ? (e) => onClickLink(e) : undefined}
+      onClick={onClick && !href ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
       href={href}
       title={title || undefined}

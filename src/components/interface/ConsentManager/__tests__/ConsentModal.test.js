@@ -17,7 +17,7 @@ describe('<ConsentModal />', () => {
         setIsOpen={jest.fn()}
         data-testid="modal"
       >
-        {null}
+        <p>Content Consent Modal</p>
       </ConsentModal>,
     );
     const modal = screen.getByTestId('modal');

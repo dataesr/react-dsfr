@@ -33,7 +33,7 @@ const HeaderBody = ({
     >
       <div className="fr-container">
         <div className={classNames(className, 'fr-header__body-row')}>
-          <div className="fr-header__brand fr-enlarge-link">
+          <div className="fr-header__brand">
             <div className="fr-header__brand-top">
               <div className="fr-header__logo">
                 {logo}

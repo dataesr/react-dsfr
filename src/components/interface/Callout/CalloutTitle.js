@@ -10,9 +10,7 @@ const CalloutTitle = ({
   return (
     <HtmlTitleTag
       className={classNames('fr-callout__title', {
-        'fr-text': size === 'md',
-        'fr-text--md': size === 'lg',
-        [`fr-text--${size}`]: size === 'sm' || size === 'xs',
+        [`fr-text--${size}`]: size,
       }, className)}
       {...dataAttributes.getAll(remainingProps)}
     >

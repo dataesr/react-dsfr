@@ -66,7 +66,7 @@ const RadioGroup = ({
         disabled={disabled}
       >
         {legend && (
-        <legend className="fr-fieldset__legend">
+        <legend className="fr-fieldset__legend fr-text--regular">
           {legend}
           {required && <span className="error"> *</span>}
         </legend>

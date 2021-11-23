@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/tiles.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/tile/tile.min.css';
 
 /**
  *
@@ -21,7 +24,7 @@ const Tile = ({
   ...remainingProps
 }) => {
   const tileRef = useRef();
-  const _className = classNames('fr-tile fr-enlarge-link', {
+  const _className = classNames('fr-tile fr-tile--neutral fr-enlarge-link', {
     'fr-tile--horizontal': horizontal,
     'fr-tile--horizontal-md': !horizontal && horizontalMedium,
     'fr-tile--vertical-md': verticalMedium && horizontal,
@@ -35,7 +38,7 @@ const Tile = ({
 
   useEffect(() => {
     if (color && tileRef.current) {
-      tileRef.current.style.boxShadow = `inset 0 -0.25rem 0 0 ${color}`;
+      tileRef.current.style.boxShadow = `inset 0 0 0 1px var(--border-default-grey),inset 0 -.25rem 0 0 ${color}`;
     }
   }, [color]);
 

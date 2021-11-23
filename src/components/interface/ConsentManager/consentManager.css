@@ -8,5 +8,5 @@
     z-index: 5500;
     left: 0;
     bottom: 0;
-    background-color: var(--g200);
+    background-color: var(--background-contrast-grey);
 }

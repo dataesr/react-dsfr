@@ -4,7 +4,10 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
-import '@gouvfr/dsfr/dist/css/tags.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/tag/tag.min.css';
 
 const iconSize = {
   sm: 'lg',

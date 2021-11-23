@@ -5,10 +5,21 @@ import PropTypes from 'prop-types';
 import { deepForEach } from '../../../utils/children-utilities';
 import dataAttributes from '../../../utils/data-attributes';
 import useViewport from '../../../hooks/useViewport';
+
 import HeaderContext from './headerContext';
 
-import '@gouvfr/dsfr/dist/css/navigation.min.css';
-import '@gouvfr/dsfr/dist/css/header.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/core/core.min.css';
+import '@gouvfr/dsfr/dist/component/navigation/navigation.min.css';
+import '@gouvfr/dsfr/dist/component/header/header.min.css';
+
+/*
+* react-ds-fr
+*/
+import '../../../style/color.scss';
+import '../../../style/custom.scss';
 
 /**
  *

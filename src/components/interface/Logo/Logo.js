@@ -6,19 +6,9 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/logo.min.css';
+import '@gouvfr/dsfr/dist/component/logo/logo.min.css';
 
 /**
  *
@@ -38,7 +28,7 @@ const Logo = ({
 
   return (
     <Link
-      className={classNames(className)}
+      className={classNames(className, 'ds-fr--no-shadow')}
       as={asLink}
       title={hrefTitle || children}
       href={href}

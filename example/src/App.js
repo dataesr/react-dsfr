@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from '@dataesr/react-dsfr';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AccordionExample from './components/Accordion/Accordion';
+/* eslint no-unused-vars: "off" */
 import AlertExample from './components/Alert/Alert';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
 import ButtonExample from './components/Button/Button';
@@ -51,6 +52,11 @@ const App = () => {
     { title: 'Lien', component: <LinkExample /> },
     { title: 'Media', component: <MediaExample /> },
     { title: 'Modal', component: <ModalExample /> },
+    { title: 'Radio', component: <RadioExample /> },
+    { title: 'Select', component: <SelectExample /> },
+    { title: 'Sidemenu', component: <SidemenuExample /> },
+    { title: 'Skiplinks', component: <SkiplinksExample /> },
+    { title: 'Sommaire', component: <SummaryExample /> },
     { title: 'Table', component: <TableExample /> },
     { title: 'Tabs - Onglets', component: <TabsExample /> },
     { title: 'Tag', component: <TagExample /> },
@@ -58,11 +64,6 @@ const App = () => {
     { title: 'TextInput', component: <TextInputExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },
-    { title: 'Radio', component: <RadioExample /> },
-    { title: 'Select', component: <SelectExample /> },
-    { title: 'Sidemenu', component: <SidemenuExample /> },
-    { title: 'Skiplinks', component: <SkiplinksExample /> },
-    { title: 'Sommaire', component: <SummaryExample /> },
   ];
 
   return (

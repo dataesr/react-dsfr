@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import useTheme from '../SwitchTheme/useTheme';
 
 /**
  *
@@ -25,11 +26,11 @@ const CheckboxGroup = ({
     [`fr-fieldset--${messageType}`]: messageType,
     'ds-fr-checkbox': checkboxColors.length,
   }, className);
+  const backgroundColor = checkboxColors[0];
+  const color = checkboxColors[1];
+  const theme = useTheme();
 
-  useEffect(() => {
-    const backgroundColor = checkboxColors[0];
-    const color = checkboxColors[1];
-
+  const colorCheckbox = useCallback(() => {
     if (backgroundColor) {
       document.documentElement.style.setProperty('--checkbox-color1', backgroundColor);
     }
@@ -37,7 +38,13 @@ const CheckboxGroup = ({
     if (color) {
       document.documentElement.style.setProperty('--checkbox-color2', color);
     }
-  }, [checkboxColors]);
+  }, [backgroundColor, color]);
+
+  useEffect(() => {
+    if (theme === 'light') {
+      colorCheckbox();
+    }
+  }, [color, theme, colorCheckbox]);
 
   return (
     <div

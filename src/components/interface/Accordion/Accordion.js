@@ -8,19 +8,9 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/accordions.min.css';
+import '@gouvfr/dsfr/dist/component/accordion/accordion.min.css';
 
 /**
  *

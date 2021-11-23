@@ -6,7 +6,11 @@ import Pagination from '../Pagination';
 import dataAttributes from '../../../utils/data-attributes';
 
 import './table.css';
-import '@gouvfr/dsfr/dist/css/table.min.css';
+
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/table/table.min.css';
 
 /**
  *

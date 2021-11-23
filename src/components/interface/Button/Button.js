@@ -1,24 +1,18 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, {
+  forwardRef, useCallback, useEffect, useRef,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/schemes.min.css';
-import '@gouvfr/dsfr/dist/css/buttons.min.css';
+import '@gouvfr/dsfr/dist/component/form/form.min.css';
+import '@gouvfr/dsfr/dist/component/input/input.min.css';
+import '@gouvfr/dsfr/dist/component/button/button.min.css';
+import useTheme from '../SwitchTheme/useTheme';
 
 const iconSize = {
   sm: 'lg',
@@ -45,7 +39,8 @@ const Button = forwardRef((props, ref) => {
     colors,
     ...remainingProps
   } = props;
-
+  const bgColor = colors[0];
+  const color = colors[1];
   const _className = classNames(
     `fr-btn--${size}`,
     className,
@@ -58,24 +53,29 @@ const Button = forwardRef((props, ref) => {
   );
   const oRef = useRef();
   const buttonRef = ref || oRef;
+  const theme = useTheme();
+
+  const colorButton = useCallback(() => {
+    const { current } = buttonRef;
+    if (bgColor) {
+      current.style.backgroundColor = secondary ? color : bgColor;
+
+      if (secondary) {
+        current.style.backgroundColor = color;
+        current.style.boxShadow = `inset 0 0 0 1px ${bgColor}`;
+      }
+    }
+    if (color) {
+      current.style.color = secondary ? bgColor : color;
+    }
+  }, [bgColor, buttonRef, color, secondary]);
 
   useEffect(() => {
     const { current } = buttonRef;
-    const backgroundColor = colors[0];
-    const color = colors[1];
-
-    if (current) {
-      if (backgroundColor) {
-        current.style.backgroundColor = secondary ? color : backgroundColor;
-        if (secondary) {
-          current.style.boxShadow = `inset 0 0 0 1px ${backgroundColor}`;
-        }
-      }
-      if (color) {
-        current.style.color = secondary ? backgroundColor : color;
-      }
+    if (current && !disabled && theme === 'light') {
+      colorButton();
     }
-  }, [colors, buttonRef, secondary]);
+  }, [buttonRef, colorButton, disabled, theme]);
 
   const _button = (
     <button

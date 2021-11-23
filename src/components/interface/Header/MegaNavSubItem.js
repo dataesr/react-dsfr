@@ -19,7 +19,7 @@ const MegaNavSubItem = ({
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
       <ul className="fr-mega-menu__list" onClick={() => remainingProps.onClick()}>
         {/* eslint-disable-next-line react/no-array-index-key */}
-        {childs.map((child, index) => <li key={index}>{child}</li>)}
+        {childs.map((child, index) => <li key={index} className="fr-enlarge-link">{child}</li>)}
       </ul>
     </div>
   );

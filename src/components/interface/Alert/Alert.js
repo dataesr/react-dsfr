@@ -5,7 +5,10 @@ import classNames from 'classnames';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/alerts.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/alert/alert.min.css';
 
 /**
  *

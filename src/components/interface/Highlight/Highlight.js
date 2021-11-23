@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/highlights.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/highlight/highlight.min.css';
 
 /**
  *
@@ -17,7 +20,7 @@ const Highlight = ({
 
   useEffect(() => {
     if (color && highlightRef.current) {
-      highlightRef.current.style.borderLeftColor = `${color}`;
+      highlightRef.current.style.boxShadow = `inset 0.25rem 0 0 0 ${color}`;
     }
   }, [color]);
 

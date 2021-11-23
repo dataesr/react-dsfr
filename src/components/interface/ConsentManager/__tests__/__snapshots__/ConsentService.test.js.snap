@@ -16,7 +16,7 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
         disabled={false}
       >
         <legend
-          className="fr-fieldset__legend"
+          className="fr-fieldset__legend fr-text--regular"
         >
           Préférences pour tous les services.
         </legend>
