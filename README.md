@@ -149,3 +149,4 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 #### TODO
 * Add getComputedStyle() to retrieve color variable in components using color props
 * Manage update color Components on switch theme
+* Tile, Table & Pagination on dark theme

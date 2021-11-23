@@ -8,7 +8,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/alert/alert.min.css';
+import '@gouvfr/dsfr/dist/component/alert/alert.css';
 
 /**
  *

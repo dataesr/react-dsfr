@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from '@dataesr/react-dsfr';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AccordionExample from './components/Accordion/Accordion';
-/* eslint no-unused-vars: "off" */
 import AlertExample from './components/Alert/Alert';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
 import ButtonExample from './components/Button/Button';

@@ -10,7 +10,7 @@ import './table.css';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/table/table.min.css';
+import '@gouvfr/dsfr/dist/component/table/table.css';
 
 /**
  *

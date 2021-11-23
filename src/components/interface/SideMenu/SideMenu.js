@@ -9,7 +9,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/sidemenu/sidemenu.min.css';
+import '@gouvfr/dsfr/dist/component/sidemenu/sidemenu.css';
 
 /**
  *

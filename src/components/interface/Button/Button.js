@@ -9,9 +9,9 @@ import Icon from '../../foundation/icon/index';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/form/form.min.css';
-import '@gouvfr/dsfr/dist/component/input/input.min.css';
-import '@gouvfr/dsfr/dist/component/button/button.min.css';
+import '@gouvfr/dsfr/dist/component/form/form.css';
+import '@gouvfr/dsfr/dist/component/input/input.css';
+import '@gouvfr/dsfr/dist/component/button/button.css';
 import useTheme from '../SwitchTheme/useTheme';
 
 const iconSize = {

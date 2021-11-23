@@ -12,8 +12,8 @@ import HeaderContext from './headerContext';
 * DSFR v1.2
 */
 import '@gouvfr/dsfr/dist/core/core.min.css';
-import '@gouvfr/dsfr/dist/component/navigation/navigation.min.css';
-import '@gouvfr/dsfr/dist/component/header/header.min.css';
+import '@gouvfr/dsfr/dist/component/navigation/navigation.css';
+import '@gouvfr/dsfr/dist/component/header/header.css';
 
 /*
 * react-ds-fr

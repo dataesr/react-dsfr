@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/highlight/highlight.min.css';
+import '@gouvfr/dsfr/dist/component/highlight/highlight.css';
 
 /**
  *

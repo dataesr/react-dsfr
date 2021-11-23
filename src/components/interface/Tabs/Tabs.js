@@ -10,7 +10,7 @@ import TabButton from './TabButton';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/tab/tab.min.css';
+import '@gouvfr/dsfr/dist/component/tab/tab.css';
 
 /**
  *

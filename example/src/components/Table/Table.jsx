@@ -106,7 +106,6 @@ const columns = [
 ];
 
 const TableExample = () => {
-  /* eslint no-unused-vars: "off" */
   const [page, setPage] = useState(1);
   return (
     <Col>

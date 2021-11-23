@@ -7,7 +7,7 @@ import Icon from '../../foundation/icon/index';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/tag/tag.min.css';
+import '@gouvfr/dsfr/dist/component/tag/tag.css';
 
 const iconSize = {
   sm: 'lg',

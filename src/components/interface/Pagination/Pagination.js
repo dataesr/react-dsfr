@@ -8,7 +8,7 @@ import PaginationItem from './PaginationItem';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/pagination/pagination.min.css';
+import '@gouvfr/dsfr/dist/component/pagination/pagination.css';
 
 const Pagination = ({
   pageCount,

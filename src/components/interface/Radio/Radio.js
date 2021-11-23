@@ -7,7 +7,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/radio/radio.min.css';
+import '@gouvfr/dsfr/dist/component/radio/radio.css';
 
 /**
  *

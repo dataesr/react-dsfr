@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/callout/callout.min.css';
+import '@gouvfr/dsfr/dist/component/callout/callout.css';
 import useTheme from '../SwitchTheme/useTheme';
 
 /**

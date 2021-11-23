@@ -7,7 +7,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/footer/footer.min.css';
+import '@gouvfr/dsfr/dist/component/footer/footer.css';
 
 const Footer = ({ children, className, ...remainingProps }) => {
   const top = Children.toArray(children).filter((child) => child.props.__TYPE === 'FooterTop');

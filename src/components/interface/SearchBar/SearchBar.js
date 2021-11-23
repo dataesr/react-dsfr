@@ -8,9 +8,9 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/form/form.min.css';
-import '@gouvfr/dsfr/dist/component/input/input.min.css';
-import '@gouvfr/dsfr/dist/component/search/search.min.css';
+import '@gouvfr/dsfr/dist/component/form/form.css';
+import '@gouvfr/dsfr/dist/component/input/input.css';
+import '@gouvfr/dsfr/dist/component/search/search.css';
 
 /**
  *
