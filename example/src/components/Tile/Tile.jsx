@@ -12,11 +12,11 @@ const TileExample = () => (
         <Tile
           horizontal
           verticalMedium
-          onClick={() => {}}
         >
           <TileBody
             title="Tuile horizontale par défaut sans lien"
             description="Et verticale en desktop"
+            linkHref="/"
           >
             <p>
               Lorem ipsum dolor sit amet,
@@ -33,11 +33,11 @@ const TileExample = () => (
           verticalMedium
           horizontal
           color="#f55"
+          onClick={() => {}}
         >
           <TileBody
             title="Tuile horizontale en mobile avec lien"
             description="Et verticale en desktop"
-            linkHref="/myPath"
           />
           <TileImage
             alt="un petit carré"

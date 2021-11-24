@@ -10,7 +10,7 @@
 
 > Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.2.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -130,6 +130,10 @@ Check configuration file `.pa11y-ci`
 npm install -g pa11y-ci
 pa11y-ci
 ```
+
+#### Colors
+
+Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 #### In Chrome
 

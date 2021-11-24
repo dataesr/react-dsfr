@@ -9,7 +9,7 @@ exports[`<Tile /> renders correctly 1`] = `
     className="fr-tile__body"
     data-test-id="tilebody"
   >
-    <p
+    <h3
       className="fr-tile__title"
     >
       <a
@@ -20,7 +20,7 @@ exports[`<Tile /> renders correctly 1`] = `
       >
         title
       </a>
-    </p>
+    </h3>
     <p
       className="fr-tile__desc"
     >

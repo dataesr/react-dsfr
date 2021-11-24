@@ -126,7 +126,7 @@ const TableExample = () => {
       </Row>
       <Row>
         <Table
-          caption="Complexe Table"
+          caption="Complex Table"
           rowKey={(x) => x.id}
           data={data}
           columns={columns}

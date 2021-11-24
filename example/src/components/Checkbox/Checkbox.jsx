@@ -39,7 +39,6 @@ const CheckboxExample = () => {
         />
         <Checkbox
           label="Label checkbox 2"
-          onChange={() => {}}
           value="value-3"
         />
       </CheckboxGroup>

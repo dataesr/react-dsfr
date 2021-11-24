@@ -27,27 +27,24 @@ const TileBody = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       <TitleTag className="fr-tile__title">
-        {linkHref ? (
-          <Link
-            as={asLink}
-            className="fr-tile__link"
-            title={linkTitle}
-            target={linkTarget || undefined}
-            href={linkHref}
-          >
-            {title}
-          </Link>
-        ) : title}
+        <Link
+          as={asLink || undefined}
+          className="fr-tile__link"
+          title={linkTitle}
+          target={linkTarget || undefined}
+          href={linkHref || undefined}
+        >
+          {title}
+        </Link>
       </TitleTag>
       {description && <p className="fr-tile__desc">{description}</p>}
-      {children}
     </div>
   );
 };
 
 TileBody.defaultProps = {
   description: '',
-  titleAs: 'p',
+  titleAs: 'h3',
   linkTitle: '',
   linkTarget: '',
   className: '',

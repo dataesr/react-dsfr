@@ -12,7 +12,7 @@ import dataAttributes from '../../../utils/data-attributes';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/modal/modal.min.css';
+import '@gouvfr/dsfr/dist/component/modal/modal.css';
 
 /**
  *

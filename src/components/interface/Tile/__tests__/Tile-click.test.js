@@ -82,7 +82,7 @@ describe('<Tile />', () => {
 
   it('on onClickTile', () => {
     const component = wrapper({ ...initialProps });
-    component.find('button').simulate('click');
+    component.find('[role="button"]').simulate('click', { preventDefault: () => {} });
     expect(mockSetonClickTile).toHaveBeenCalledTimes(1);
   });
 });

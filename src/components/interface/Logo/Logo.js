@@ -8,7 +8,7 @@ import typeValidation from '../../../utils/type-validation';
 /*
 * DSFR v1.2
 */
-import '@gouvfr/dsfr/dist/component/logo/logo.min.css';
+import '@gouvfr/dsfr/dist/component/logo/logo.css';
 
 /**
  *

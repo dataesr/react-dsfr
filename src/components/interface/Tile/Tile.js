@@ -31,10 +31,9 @@ const Tile = ({
   }, className);
 
   const onTileClick = (e) => {
+    e.preventDefault();
     onClick(e);
   };
-
-  const HTMLTag = onClick ? 'button' : 'div';
 
   useEffect(() => {
     if (color && tileRef.current) {
@@ -42,17 +41,34 @@ const Tile = ({
     }
   }, [color]);
 
+  const divButton = {
+    true: {
+      tabIndex: '0',
+      role: 'button',
+      click: (e) => onTileClick(e),
+    },
+    false: {
+      tabIndex: undefined,
+      role: undefined,
+      click: undefined,
+    },
+  };
+  const { role, tabIndex, click } = divButton[!!onClick];
+
   return (
-    <HTMLTag
+  // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <div
       ref={tileRef}
-      type={onClick ? 'button' : undefined}
+      role={role}
+      tabIndex={tabIndex}
       aria-label={ariaLabel || undefined}
-      onClick={onClick ? onTileClick : undefined}
+      onClick={click}
+      onKeyDown={click}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
-    </HTMLTag>
+    </div>
   );
 };
 
