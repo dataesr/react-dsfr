@@ -8,6 +8,7 @@ import Icon from '../../foundation/icon/index';
 * DSFR v1.2
 */
 import '@gouvfr/dsfr/dist/component/tag/tag.css';
+import colorFamilies from '../../../utils/variables';
 
 const iconSize = {
   sm: 'lg',
@@ -27,12 +28,14 @@ const Tag = ({
   target,
   icon,
   iconPosition,
+  colorFamily,
   className,
   ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
   const _className = classNames('fr-tag', {
     [`fr-tag--${size}`]: size,
+    [`fr-tag--${colorFamily}`]: colorFamily && href,
     'fr-fi-icon': (icon && iconPosition),
   }, className);
 
@@ -51,6 +54,7 @@ const Tag = ({
   return (
     icon ? (
       <Icon
+        verticalAlign
         name={icon}
         size={iconSize[size]}
         iconPosition={children ? iconPosition : 'center'}
@@ -63,13 +67,14 @@ const Tag = ({
 
 Tag.defaultProps = {
   className: '',
-  as: 'p',
+  as: 'a',
   size: 'md',
   href: '',
   title: '',
   target: '',
   icon: '',
   iconPosition: 'right',
+  colorFamily: '',
   children: undefined,
 };
 
@@ -79,6 +84,7 @@ Tag.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   size: PropTypes.oneOf(['sm', 'md']),

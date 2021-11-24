@@ -39,8 +39,6 @@ const Button = forwardRef((props, ref) => {
     colors,
     ...remainingProps
   } = props;
-  const bgColor = colors[0];
-  const color = colors[1];
   const _className = classNames(
     `fr-btn--${size}`,
     className,
@@ -57,6 +55,8 @@ const Button = forwardRef((props, ref) => {
 
   const colorButton = useCallback(() => {
     const { current } = buttonRef;
+    const bgColor = colors[0];
+    const color = colors[1];
     if (bgColor) {
       current.style.backgroundColor = secondary ? color : bgColor;
 
@@ -68,14 +68,21 @@ const Button = forwardRef((props, ref) => {
     if (color) {
       current.style.color = secondary ? bgColor : color;
     }
-  }, [bgColor, buttonRef, color, secondary]);
+  }, [colors, buttonRef, secondary]);
 
   useEffect(() => {
     const { current } = buttonRef;
-    if (current && !disabled && theme === 'light') {
+    if (current.style.backgroundColor || current.style.color) {
+      current.removeAttribute('style');
+    }
+  }, [buttonRef, disabled]);
+
+  useEffect(() => {
+    const { current } = buttonRef;
+    if (current && theme === 'light') {
       colorButton();
     }
-  }, [buttonRef, colorButton, disabled, theme]);
+  }, [buttonRef, colorButton, theme, colors]);
 
   const _button = (
     <button

@@ -84,6 +84,11 @@ We are using [remixicon](https://remixicon.com/).
 
 Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
 
+Some components can be colored with variables (see `colorFamily` props) listed below:
+```
+['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
+```
+
 #### Publish it on npm registry
 
 First update the version number in `package.json`
@@ -149,3 +154,6 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 * [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
 * [DashLord beta.gouv.fr](https://dashlord.incubateur.net/#/)
+
+### TODO
+* To limit usage of colors to colorFamilies

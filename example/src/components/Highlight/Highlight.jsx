@@ -11,11 +11,16 @@ const HighlightExample = () => (
         Mise en exergue
       </Highlight>
     </Col>
-    <Col>
+    <Col n="12">
       <Highlight size="lg">
         Highlight text that might be short and concise.
         Highlight text that might be short and concise.
         Highlight text that might be short and concise.
+      </Highlight>
+    </Col>
+    <Col n="12">
+      <Highlight colorFamily="green-bourgeon">
+        Highlight with colorFamily text that might be short and concise.
       </Highlight>
     </Col>
   </>

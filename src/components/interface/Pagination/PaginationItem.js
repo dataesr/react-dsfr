@@ -44,8 +44,8 @@ const PaginationItem = ({
             onClick(page);
           }
         }}
-        className="fr-pagination__link"
         aria-label={aria}
+        className="fr-pagination__link"
       >
         {page}
       </button>

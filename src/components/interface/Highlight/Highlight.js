@@ -7,16 +7,19 @@ import dataAttributes from '../../../utils/data-attributes';
 * DSFR v1.2
 */
 import '@gouvfr/dsfr/dist/component/highlight/highlight.css';
+import colorFamilies from '../../../utils/variables';
 
 /**
  *
  * @visibleName Highlight
  */
 const Highlight = ({
-  size, children, className, color, ...remainingProps
+  size, children, className, color, colorFamily, ...remainingProps
 }) => {
   const highlightRef = useRef();
-  const _className = classNames('fr-highlight', className);
+  const _className = classNames('fr-highlight',
+    className,
+    { [`fr-highlight--${colorFamily}`]: colorFamily });
 
   useEffect(() => {
     if (color && highlightRef.current) {
@@ -45,11 +48,13 @@ Highlight.propTypes = {
     PropTypes.array,
   ]),
   color: PropTypes.string,
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
 };
 Highlight.defaultProps = {
   size: 'md',
   className: '',
   color: '',
+  colorFamily: '',
 };
 
 export default Highlight;

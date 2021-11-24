@@ -15,7 +15,13 @@ const CalloutExample = () => (
       </Col>
       <Col>
         <Callout colors={['#f13d3d', '#ffb0b0']}>
-          <CalloutTitle as="h5" size="lg">Callout Colored title</CalloutTitle>
+          <CalloutTitle as="h5" size="lg">Callout Custom Colored</CalloutTitle>
+          <CalloutText size="lg">Callout text that might be short and concise.</CalloutText>
+        </Callout>
+      </Col>
+      <Col>
+        <Callout colorFamily="beige-gris-galet">
+          <CalloutTitle as="h5" size="lg">Callout themed</CalloutTitle>
           <CalloutText size="lg">Callout text that might be short and concise.</CalloutText>
         </Callout>
       </Col>

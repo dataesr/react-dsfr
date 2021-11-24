@@ -43,6 +43,7 @@ import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
+import File from './components/interface/File/index';
 import ConsentManager from './components/interface/ConsentManager/ConsentManager';
 import ConsentService from './components/interface/ConsentManager/ConsentService';
 import SwitchTheme from './components/interface/SwitchTheme/SwitchTheme';
@@ -134,5 +135,6 @@ const library = () => ({
   TileImage,
   Toggle,
   useTheme,
+  File,
 });
 export default library();

@@ -2,25 +2,27 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import colorFamilies from '../../../utils/variables';
+import useTheme from '../SwitchTheme/useTheme';
 
 /*
 * DSFR v1.2
 */
 import '@gouvfr/dsfr/dist/component/callout/callout.css';
-import useTheme from '../SwitchTheme/useTheme';
 
 /**
  *
  * @visibleName Callout
  */
 const Callout = ({
-  hasInfoIcon, children, className, colors, ...remainingProps
+  hasInfoIcon, children, className, colorFamily, colors, ...remainingProps
 }) => {
   const theme = useTheme();
   const [color, backgroundColor] = colors;
   const calloutRef = useRef();
   const _className = classNames('fr-callout', className, {
     'fr-fi-information-line': hasInfoIcon,
+    [`fr-callout--${colorFamily}`]: colorFamily,
   });
 
   const colorCallout = useCallback(() => {
@@ -49,6 +51,7 @@ Callout.defaultProps = {
   hasInfoIcon: true,
   className: '',
   colors: [],
+  colorFamily: '',
 };
 
 Callout.propTypes = {
@@ -57,6 +60,7 @@ Callout.propTypes = {
    * first color is color of the border, second is background
    * be careful with contrast
    */
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   colors: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

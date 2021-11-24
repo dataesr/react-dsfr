@@ -43,6 +43,10 @@ span.ds-fr--v-middle {
   margin-bottom: 1rem;
 }
 
+.fr-pagination__link {
+  color: var(--text-default-grey);
+}
+
 /*
 Fix DSFR issue
 https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322

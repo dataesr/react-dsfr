@@ -11,6 +11,7 @@ import CardExample from './components/Card/Card';
 import CheckboxExample from './components/Checkbox/Checkbox';
 import ConsentManagerExample from './components/ConsentManager/ConsentManager';
 import FooterExample from './components/Footer/Footer';
+import FileExample from './components/File/File';
 import HeaderExample from './components/Header/Header';
 import HighlightExample from './components/Highlight/Highlight';
 import IconsExample from './components/Icons/Icons';
@@ -46,6 +47,7 @@ const App = () => {
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
     { title: 'ConsentManager', component: <ConsentManagerExample /> },
+    { title: 'File', component: <FileExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
     { title: 'Icons', component: <IconsExample /> },
     { title: 'Lien', component: <LinkExample /> },
