@@ -48,7 +48,7 @@ Highlight.propTypes = {
     PropTypes.array,
   ]),
   color: PropTypes.string,
-  colorFamily: PropTypes.oneOf(colorFamilies),
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
 };
 Highlight.defaultProps = {
   size: 'md',

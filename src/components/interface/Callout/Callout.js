@@ -60,7 +60,7 @@ Callout.propTypes = {
    * first color is color of the border, second is background
    * be careful with contrast
    */
-  colorFamily: PropTypes.oneOf(colorFamilies),
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   colors: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

@@ -157,4 +157,3 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 ### TODO
 * To limit usage of colors to colorFamilies
-* Add file component
