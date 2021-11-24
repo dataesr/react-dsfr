@@ -1,7 +1,6 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
