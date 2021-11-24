@@ -58,7 +58,7 @@ npm install
 npm start
 ```
 
-:warning: <Header> component is mandatory to use @dataesr/react-dsfr
+:warning: Header component is mandatory to use @dataesr/react-dsfr
 
 #### Example page
 
@@ -79,6 +79,10 @@ We are using [remixicon](https://remixicon.com/).
 :warning: CDN link of css must be added to the `<head>` of your website.
 
 `<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
+
+#### Use Colors
+
+Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 #### Publish it on npm registry
 
@@ -130,10 +134,6 @@ Check configuration file `.pa11y-ci`
 npm install -g pa11y-ci
 pa11y-ci
 ```
-
-#### Colors
-
-Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 #### In Chrome
 
