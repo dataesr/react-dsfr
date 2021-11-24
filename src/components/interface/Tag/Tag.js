@@ -81,7 +81,7 @@ Tag.propTypes = {
   ]),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  size: PropTypes.oneOf(['sm', 'md']),
   href: PropTypes.string,
   title: PropTypes.string,
   target: PropTypes.string,
