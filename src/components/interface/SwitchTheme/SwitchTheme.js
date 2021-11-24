@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Light from '@gouvfr/dsfr/dist/artwork/light.svg';
+import Dark from '@gouvfr/dsfr/dist/artwork/dark.svg';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
 import useTheme from './useTheme';
+
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/scheme/scheme.css';
 
 const SwitchTheme = ({
   isOpen, setIsOpen, title, legend, darkLabel, lightLabel,
@@ -10,8 +17,8 @@ const SwitchTheme = ({
   const currentTheme = useTheme();
 
   const themes = [
-    { label: lightLabel, value: 'light' },
-    { label: darkLabel, value: 'dark' },
+    { label: lightLabel, value: 'light', svg: Light },
+    { label: darkLabel, value: 'dark', svg: Dark },
   ];
 
   useEffect(() => {
@@ -32,9 +39,8 @@ const SwitchTheme = ({
       aria-labelledby="fr-theme-modal-title"
     >
       <ModalTitle>{title}</ModalTitle>
-      <ModalContent className="fr-switch-theme">
+      <ModalContent className="fr-form-group">
         <RadioGroup
-          className="fr-text--regular"
           legend={legend}
           value={currentTheme}
           onChange={(value) => {
@@ -48,6 +54,7 @@ const SwitchTheme = ({
               label={theme.label}
               value={theme.value}
               isExtended
+              svg={theme.svg}
             />
           ))}
         </RadioGroup>

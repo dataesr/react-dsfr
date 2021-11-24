@@ -8,9 +8,7 @@ const HighlightExample = () => (
   <>
     <Col>
       <Highlight size="sm" color="#f55">
-        Highlight text that might be short and concise.
-        Highlight text that might be short and concise.
-        Highlight text that might be short and concise.
+        Mise en exergue
       </Highlight>
     </Col>
     <Col>

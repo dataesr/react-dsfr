@@ -4,7 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/selects.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/select/select.css';
 
 /**
  *

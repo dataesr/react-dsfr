@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
-import '@gouvfr/dsfr/dist/css/header.min.css';
+import '@gouvfr/dsfr/dist/component/header/header.css';
 
 /**
  *

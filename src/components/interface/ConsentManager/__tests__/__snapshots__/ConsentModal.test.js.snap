@@ -43,6 +43,9 @@ exports[`<ConsentModal /> should render ConsentModal properly 1`] = `
             <div
               class=""
             >
+              <p>
+                Content Consent Modal
+              </p>
               <ul
                 class="fr-consent-manager__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-sm"
               >

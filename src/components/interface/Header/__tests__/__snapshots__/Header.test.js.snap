@@ -17,7 +17,7 @@ exports[`<Header /> renders correctly 1`] = `
         className="fr-header__body-row"
       >
         <div
-          className="fr-header__brand fr-enlarge-link"
+          className="fr-header__brand"
         >
           <div
             className="fr-header__brand-top"
@@ -26,7 +26,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
-                className=""
+                className="ds-fr--no-shadow"
                 data-test-id="headerlogo"
                 href="/"
                 target="_self"
@@ -99,7 +99,6 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
-                    onClick={[Function]}
                     target="_self"
                   >
                     <span>
@@ -116,7 +115,6 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
-                    onClick={[Function]}
                     target="_self"
                   >
                     <span>
@@ -184,13 +182,12 @@ exports[`<Header /> renders correctly 1`] = `
           className="fr-nav__list"
         >
           <li
-            className="fr-nav__item"
+            className="fr-nav__item fr-enlarge-link"
             data-testid="navitem"
           >
             <a
               className="fr-nav__link"
               href="/"
-              onClick={[Function]}
               target="_self"
             >
               Home
@@ -225,36 +222,36 @@ exports[`<Header /> renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <li
+                  className="fr-enlarge-link"
                   data-test-id="navsubitem"
                 >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-1"
-                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #1
                   </a>
                 </li>
                 <li
+                  className="fr-enlarge-link"
                   data-test--id="navsubitem"
                 >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-2"
-                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #2
                   </a>
                 </li>
                 <li
+                  className="fr-enlarge-link"
                   data-test="navsubitem"
                 >
                   <a
                     className="fr-nav__link"
                     href="/path-to-resources-3"
-                    onClick={[Function]}
                     target="_self"
                   >
                     Ressource #3

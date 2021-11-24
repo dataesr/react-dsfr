@@ -1,6 +1,6 @@
 # @dataesr/react-dsfr
 
-:warning: beta version :hammer:
+:hammer: package still in beta version
 
 
 [![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![GitHub contributors](https://img.shields.io/github/contributors-anon/dataesr/react-dsfr?color=%23E52B50%20)
@@ -10,7 +10,7 @@
 
 > Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.2.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -57,6 +57,8 @@ npm run build
 npm install
 npm start
 ```
+
+:warning: <Header> component is mandatory to use @dataesr/react-dsfr
 
 #### Example page
 
@@ -129,6 +131,10 @@ npm install -g pa11y-ci
 pa11y-ci
 ```
 
+#### Colors
+
+Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
+
 #### In Chrome
 
 ```bash
@@ -143,3 +149,8 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
 [DashLord beta.gouv.fr](https://dashlord.incubateur.net/#/)
+
+#### TODO
+* Add getComputedStyle() to retrieve color variable in components using color props
+* Manage update color Components on switch theme
+* Tile, Table & Pagination on dark theme

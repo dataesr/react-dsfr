@@ -51,6 +51,11 @@ const App = () => {
     { title: 'Lien', component: <LinkExample /> },
     { title: 'Media', component: <MediaExample /> },
     { title: 'Modal', component: <ModalExample /> },
+    { title: 'Radio', component: <RadioExample /> },
+    { title: 'Select', component: <SelectExample /> },
+    { title: 'Sidemenu', component: <SidemenuExample /> },
+    { title: 'Skiplinks', component: <SkiplinksExample /> },
+    { title: 'Sommaire', component: <SummaryExample /> },
     { title: 'Table', component: <TableExample /> },
     { title: 'Tabs - Onglets', component: <TabsExample /> },
     { title: 'Tag', component: <TagExample /> },
@@ -58,11 +63,6 @@ const App = () => {
     { title: 'TextInput', component: <TextInputExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },
-    { title: 'Radio', component: <RadioExample /> },
-    { title: 'Select', component: <SelectExample /> },
-    { title: 'Sidemenu', component: <SidemenuExample /> },
-    { title: 'Skiplinks', component: <SkiplinksExample /> },
-    { title: 'Sommaire', component: <SummaryExample /> },
   ];
 
   return (

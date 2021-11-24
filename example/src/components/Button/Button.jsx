@@ -10,6 +10,9 @@ const ButtonExample = () => {
   return (
     <>
       <Col>
+        <Button title="Disabled" disabled>Disabled</Button>
+      </Col>
+      <Col>
         <Button title="title">Button</Button>
       </Col>
       <Col>

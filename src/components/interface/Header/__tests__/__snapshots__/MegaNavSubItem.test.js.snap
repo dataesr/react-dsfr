@@ -19,7 +19,9 @@ exports[`<MegaNavSubItem /> renders correctly 1`] = `
     className="fr-mega-menu__list"
     onClick={[Function]}
   >
-    <li>
+    <li
+      className="fr-enlarge-link"
+    >
       <a
         className="fr-nav__link"
         href="/"

@@ -4,7 +4,10 @@ import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/radios.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/radio/radio.css';
 
 /**
  *
@@ -24,6 +27,7 @@ const Radio = ({
   imageURL,
   value,
   defaultChecked,
+  svg,
   ...remainingProps
 }) => {
   const radioId = useRef(id || uuidv4());
@@ -65,11 +69,16 @@ const Radio = ({
         className={_labelClassName}
         htmlFor={radioId.current}
         style={
-          (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
-        }
+                    (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
+                }
       >
         {label}
       </label>
+      {svg && isExtended && (
+        <div className="fr-radio-rich__img" data-fr-inject-svg>
+          <img src={svg} alt="" />
+        </div>
+      )}
       {hint && <span className="fr-hint-text">{hint}</span>}
       {message && messageType && (
         <p className={`fr-${messageType}-text`}>
@@ -86,12 +95,15 @@ Radio.defaultProps = {
   id: '',
   isExtended: false,
   size: 'md',
-  onChange: () => {},
-  onGroupChange: () => {},
+  onChange: () => {
+  },
+  onGroupChange: () => {
+  },
   messageType: '',
   message: '',
   imageURL: '',
   defaultChecked: false,
+  svg: null,
 };
 
 Radio.propTypes = {
@@ -106,6 +118,7 @@ Radio.propTypes = {
     PropTypes.array,
   ]),
   id: PropTypes.string,
+  svg: PropTypes.node,
   isExtended: PropTypes.bool,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,

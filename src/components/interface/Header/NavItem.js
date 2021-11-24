@@ -30,7 +30,7 @@ const NavItem = ({
       </NavItemWithSubItems>
     ) : (
       <li
-        className="fr-nav__item"
+        className="fr-nav__item fr-enlarge-link"
         {...dataAttributes.getAll(remainingProps)}
       >
         <Link

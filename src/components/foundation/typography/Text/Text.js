@@ -12,8 +12,7 @@ const Text = ({
   const HtmlTag = `${as}`;
   const _className = classNames(className, {
     'fr-text--alt': size !== 'lead' && alt,
-    [`fr-text--${size}`]: size !== 'md',
-    'fr-text': size === 'md',
+    [`fr-text--${size}`]: size,
   });
   return (
     <HtmlTag className={_className}>

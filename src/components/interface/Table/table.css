@@ -9,17 +9,19 @@
 
 .fr-react-table--pagination-left nav,
 .fr-react-table--pagination-center nav,
-.fr-react-table--pagination-right nav{
+.fr-react-table--pagination-right nav {
     display: flex;
     margin-top: 8px;
 }
 
-.fr-react-table--pagination-left nav{
+.fr-react-table--pagination-left nav {
     justify-content: flex-start;
 }
-.fr-react-table--pagination-center nav{
+
+.fr-react-table--pagination-center nav {
     justify-content: center;
 }
-.fr-react-table--pagination-right nav{
+
+.fr-react-table--pagination-right nav {
     justify-content: flex-end;
 }

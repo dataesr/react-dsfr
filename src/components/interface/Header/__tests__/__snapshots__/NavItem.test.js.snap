@@ -2,12 +2,11 @@
 
 exports[`<NavItem /> renders correctly 1`] = `
 <li
-  className="fr-nav__item"
+  className="fr-nav__item fr-enlarge-link"
 >
   <a
     className="fr-nav__link"
     href="link"
-    onClick={[Function]}
     target="_self"
   >
     title

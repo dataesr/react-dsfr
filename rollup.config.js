@@ -2,6 +2,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
+import image from '@rollup/plugin-image';
 
 import pkg from './package.json';
 
@@ -47,6 +48,7 @@ MODE.forEach((m) => {
       }),
       visualizer(),
       resolve(),
+      image(),
     ],
   };
   config.push(conf);

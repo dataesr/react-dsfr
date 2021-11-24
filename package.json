@@ -18,9 +18,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.15.3",
-    "@gouvfr/dsfr": "^1.1.0",
+    "@gouvfr/dsfr": "1.2.0",
+    "@rollup/plugin-image": "^2.1.1",
     "classnames": "^2.3.1",
     "html-react-parser": "^1.2.7",
+    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "uuid": "^8.3.2"
   },

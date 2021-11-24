@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/toggles.min.css';
+/*
+* DSFR v1.2
+*/
+import '@gouvfr/dsfr/dist/component/toggle/toggle.css';
 
 /**
  *

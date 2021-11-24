@@ -10,7 +10,7 @@ exports[`<RadioGroup /> renders correctly 1`] = `
     disabled={false}
   >
     <legend
-      className="fr-fieldset__legend"
+      className="fr-fieldset__legend fr-text--regular"
     >
       Légende pour l’ensemble de champs
     </legend>

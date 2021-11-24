@@ -38,9 +38,7 @@ const CheckboxExample = () => {
           value="value-2"
         />
         <Checkbox
-          checked={!isChecked}
           label="Label checkbox 2"
-          onChange={() => setIsChecked(!isChecked)}
           value="value-3"
         />
       </CheckboxGroup>
