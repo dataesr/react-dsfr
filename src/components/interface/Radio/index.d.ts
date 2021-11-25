@@ -1,4 +1,4 @@
-import Radio from "./Radio"
-import RadioGroup from "./RadioGroup"
+import type Radio from "./Radio"
+import type RadioGroup from "./RadioGroup"
 
-export { Radio, RadioGroup }
+export type { Radio, RadioGroup }

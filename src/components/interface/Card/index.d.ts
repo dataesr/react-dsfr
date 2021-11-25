@@ -1,7 +1,7 @@
-import Card from "./Card"
-import CardDescription from "./CardDescription"
-import CardDetail from "./CardDetail"
-import CardImage from "./CardImage"
-import CardTitle from "./CardTitle"
+import type Card from "./Card"
+import type CardDescription from "./CardDescription"
+import type CardDetail from "./CardDetail"
+import type CardImage from "./CardImage"
+import type CardTitle from "./CardTitle"
 
-export { Card, CardDescription, CardDetail, CardImage, CardTitle };
+export type { Card, CardDescription, CardDetail, CardImage, CardTitle };

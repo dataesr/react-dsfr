@@ -1,3 +1,3 @@
-import TitleDisplay from "./TitleDisplay"
+import type TitleDisplay from "./TitleDisplay"
 
-export { TitleDisplay }
+export type { TitleDisplay }

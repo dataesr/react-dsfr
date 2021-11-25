@@ -1,4 +1,4 @@
-import Button from './Button';
-import ButtonGroup from './ButtonGroup';
+import type Button from './Button';
+import type ButtonGroup from './ButtonGroup';
 
-export { Button, ButtonGroup };
+export type { Button, ButtonGroup };

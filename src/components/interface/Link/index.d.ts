@@ -1,3 +1,3 @@
-import Link from "./Link"
+import type Link from "./Link"
 
-export { Link }
+export type { Link }

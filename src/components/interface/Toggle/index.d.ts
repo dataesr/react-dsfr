@@ -1,3 +1,3 @@
-import Toggle from "./Toggle"
+import type Toggle from "./Toggle"
 
-export { Toggle }
+export type { Toggle }

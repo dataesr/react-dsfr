@@ -1,3 +1,3 @@
-import TextInput from "./TextInput"
+import type TextInput from "./TextInput"
 
-export { TextInput }
+export type { TextInput }

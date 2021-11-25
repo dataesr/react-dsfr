@@ -1,3 +1,3 @@
-import Text from "./Text"
+import type Text from "./Text"
 
-export { Text }
+export type { Text }

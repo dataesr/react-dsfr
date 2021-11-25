@@ -1,6 +1,6 @@
-import ConsentBanner from "./ConsentBanner"
-import ConsentManager from "./ConsentManager"
-// import ConsentModal from "./ConsentModal"
-import ConsentService from "./ConsentService"
+import type ConsentBanner from "./ConsentBanner"
+import type ConsentManager from "./ConsentManager"
+// import type ConsentModal from "./ConsentModal"
+import type ConsentService from "./ConsentService"
 
-export { ConsentBanner, ConsentManager, ConsentService }
+export type { ConsentBanner, ConsentManager, ConsentService }

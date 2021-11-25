@@ -1,5 +1,5 @@
-import Callout from './Callout';
-import CalloutText from './CalloutText';
-import CalloutTitle from './CalloutTitle';
+import type Callout from './Callout';
+import type CalloutText from './CalloutText';
+import type CalloutTitle from './CalloutTitle';
 
-export { Callout, CalloutText, CalloutTitle };
+export type { Callout, CalloutText, CalloutTitle };

@@ -1,14 +1,14 @@
-import Footer from "./Footer"
-import FooterBody from "./FooterBody"
-import FooterBodyItem from "./FooterBodyItem"
-import FooterBottom from "./FooterBottom"
-import FooterCopy from "./FooterCopy"
-import FooterLink from "./FooterLink"
-import FooterPartners from "./FooterPartners"
-import FooterPartnersLogo from "./FooterPartnersLogo"
-import FooterPartnersTitle from "./FooterPartnersTitle"
-import FooterTop from "./FooterTop"
-import FooterTopCategory from "./FooterTopCategory"
+import type Footer from "./Footer"
+import type FooterBody from "./FooterBody"
+import type FooterBodyItem from "./FooterBodyItem"
+import type FooterBottom from "./FooterBottom"
+import type FooterCopy from "./FooterCopy"
+import type FooterLink from "./FooterLink"
+import type FooterPartners from "./FooterPartners"
+import type FooterPartnersLogo from "./FooterPartnersLogo"
+import type FooterPartnersTitle from "./FooterPartnersTitle"
+import type FooterTop from "./FooterTop"
+import type FooterTopCategory from "./FooterTopCategory"
 
 
-export { Footer, FooterBody, FooterBodyItem, FooterBottom, FooterCopy, FooterLink, FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterTop, FooterTopCategory }
+export type { Footer, FooterBody, FooterBodyItem, FooterBottom, FooterCopy, FooterLink, FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterTop, FooterTopCategory }

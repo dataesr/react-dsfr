@@ -2,6 +2,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
+import dts from 'rollup-plugin-dts';
 
 import pkg from './package.json';
 
@@ -50,6 +51,11 @@ MODE.forEach((m) => {
     ],
   };
   config.push(conf);
+  config.push({
+    input: 'src/index.d.ts',
+    output: [{ file: 'dist/react-dsfr.d.ts', format: 'es' }],
+    plugins: [dts()],
+  });
 });
 
 export default [

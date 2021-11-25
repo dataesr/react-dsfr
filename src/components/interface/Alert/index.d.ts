@@ -1,3 +1,3 @@
-import Alert from "./Alert"
+import type Alert from "./Alert"
 
-export { Alert }
+export type { Alert }

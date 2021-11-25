@@ -1,3 +1,3 @@
-import SearchBar from "./SearchBar"
+import type SearchBar from "./SearchBar"
 
-export { SearchBar }
+export type { SearchBar }

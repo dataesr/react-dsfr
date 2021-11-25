@@ -1,6 +1,6 @@
-import Tile from "./Tile"
-import TileBody from "./TileBody"
-import TileImage from "./TileImage"
+import type Tile from "./Tile"
+import type TileBody from "./TileBody"
+import type TileImage from "./TileImage"
 
 
-export { Tile, TileBody, TileImage }
+export type { Tile, TileBody, TileImage }
