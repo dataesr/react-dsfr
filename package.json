@@ -7,6 +7,7 @@
   "repository": "dataesr/react-dsfr",
   "main": "dist/index.min.cjs.js",
   "source": "src/index.js",
+  "types": "src/index.d.ts",
   "keywords": [
     "react",
     "components",
