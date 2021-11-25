@@ -7,11 +7,13 @@ const CalloutText = ({
   children, className, size, ...remainingProps
 }) => (
   <p
-    className={classNames('fr-callout__text',
+    className={classNames(
+      'fr-callout__text',
       {
         [`fr-text--${size}`]: size,
       },
-      className)}
+      className,
+    )}
     {...dataAttributes.getAll(remainingProps)}
   >
     {children}

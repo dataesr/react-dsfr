@@ -17,9 +17,11 @@ const Highlight = ({
   size, children, className, color, colorFamily, ...remainingProps
 }) => {
   const highlightRef = useRef();
-  const _className = classNames('fr-highlight',
+  const _className = classNames(
+    'fr-highlight',
     className,
-    { [`fr-highlight--${colorFamily}`]: colorFamily });
+    { [`fr-highlight--${colorFamily}`]: colorFamily },
+  );
 
   useEffect(() => {
     if (color && highlightRef.current) {

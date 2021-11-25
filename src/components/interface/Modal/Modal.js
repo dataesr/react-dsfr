@@ -91,36 +91,40 @@ const ModalDialog = ({
   if (close.length > 0) {
     closeComponent = cloneElement(close[0], { hide: handleAnimatedUnmount });
   } else {
-    closeComponent = canClose ? <ModalClose hide={handleAnimatedUnmount} /> : <></>;
+    closeComponent = canClose ? <ModalClose hide={handleAnimatedUnmount} /> : null;
   }
-  return (
-    ReactDOM.createPortal(
-      // eslint-disable-next-line
-      <dialog
-        aria-labelledby="fr-modal-title-modal"
-        className={_className}
-        ref={modalRef}
-        onKeyDown={(e) => handleAllKeyDown(e)}
-        onClick={(e) => handleOverlayClick(e)}
-        {...dataAttributes.getAll(remainingProps)}
-      >
-        <div className="fr-container fr-container--fluid fr-container-md">
-          <div className="fr-grid-row fr-grid-row--center closing-overlay">
-            <div className={`fr-col-12 fr-col-md-${colSize}`}>
-              <div className="fr-modal__body">
-                <div className="fr-modal__header">
-                  {closeComponent}
-                </div>
-                <div className="fr-modal__content">
-                  {title}
-                  {content}
-                </div>
-                {footer}
+  const component = (
+    // eslint-disable-next-line
+    <dialog
+      aria-labelledby="fr-modal-title-modal"
+      className={_className}
+      ref={modalRef}
+      onKeyDown={(e) => handleAllKeyDown(e)}
+      onClick={(e) => handleOverlayClick(e)}
+      {...dataAttributes.getAll(remainingProps)}
+    >
+      <div className="fr-container fr-container--fluid fr-container-md">
+        <div className="fr-grid-row fr-grid-row--center closing-overlay">
+          <div className={`fr-col-12 fr-col-md-${colSize}`}>
+            <div className="fr-modal__body">
+              <div className="fr-modal__header">
+                {closeComponent}
               </div>
+              <div className="fr-modal__content">
+                {title}
+                {content}
+              </div>
+              {footer}
             </div>
           </div>
         </div>
-      </dialog>, document.body,
+      </div>
+    </dialog>
+  );
+  return (
+    ReactDOM.createPortal(
+      component,
+      document.body,
     )
   );
 };

@@ -9,8 +9,10 @@ const HeaderBody = ({
   children, className, closeButtonLabel, ...remainingProps
 }) => {
   const managedTypes = ['HeaderOperator', 'Logo', 'Service'];
-  const headerBodyChildren = deepFilter(children,
-    (child) => child.type && !managedTypes.includes(child.props.__TYPE));
+  const headerBodyChildren = deepFilter(
+    children,
+    (child) => child.type && !managedTypes.includes(child.props.__TYPE),
+  );
   const logo = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Logo');
   const service = deepFilter(children, (child) => child.type && child.props.__TYPE === 'Service');
   const headerOperator = Children.toArray(children).find((child) => child.type && child.props.__TYPE === 'HeaderOperator');

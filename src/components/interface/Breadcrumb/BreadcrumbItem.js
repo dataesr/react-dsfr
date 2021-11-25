@@ -8,9 +8,7 @@ import typeValidation from '../../../utils/type-validation';
 const BreadcrumbItem = ({
   className, children, href, asLink, ...remainingProps
 }) => {
-  const _className = classNames(
-    'fr-breadcrumb__item', { 'fr-breadcrumb__item--current': !href }, className,
-  );
+  const _className = classNames('fr-breadcrumb__item', { 'fr-breadcrumb__item--current': !href }, className);
 
   return (
     <li

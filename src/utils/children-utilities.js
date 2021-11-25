@@ -5,9 +5,8 @@ const hasChildren = (element) => isValidElement(element) && Boolean(element.prop
 
 const hasComplexChildren = (element) => isValidElement(element)
     && hasChildren(element)
-    && Children.toArray(element.props.children).reduce(
-      (response, child) => response || isValidElement(child), false,
-    );
+    && Children.toArray(element.props.children)
+      .reduce((response, child) => response || isValidElement(child), false);
 
 const deepForEach = (children, deepForEachFn) => {
   Children.forEach(children, (child, index) => {

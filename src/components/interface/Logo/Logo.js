@@ -20,11 +20,13 @@ const Logo = ({
   // TODO Better system to split
   const regex = new RegExp(`.{${splitCharacter.toString()}}\\S*\\s+`, 'g');
   const arrayStr = children.replace(regex, '$&@').split(/\s+@/);
-  const title = arrayStr.reduce((el, a, i) => el.concat(a,
+  const title = arrayStr.reduce((el, a, i) => el.concat(
+    a,
     i < arrayStr.length - 1
       // eslint-disable-next-line react/no-array-index-key
       ? <br key={i} />
-      : ''), []);
+      : '',
+  ), []);
 
   return (
     <Link
