@@ -1,3 +1,3 @@
-import MediaVideo from "./MediaVideo"
+import type MediaVideo from "./MediaVideo"
 
-export { MediaVideo }
+export type { MediaVideo }

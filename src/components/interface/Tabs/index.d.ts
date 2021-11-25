@@ -1,5 +1,4 @@
-import Tab from "./Tab"
-import TabButton from "./TabButton"
-import Tabs from "./Tabs"
+import type TabButton from "./TabButton"
+import type Tabs from "./Tabs"
 
-export { Tab, TabButton, Tabs }
+export type { Tab, TabButton, Tabs }

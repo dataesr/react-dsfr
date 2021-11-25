@@ -1,4 +1,4 @@
-import SimpleTable from "./SimpleTable"
-import Table from "./Table"
+import type SimpleTable from "./SimpleTable"
+import type Table from "./Table"
 
-export { SimpleTable, Table }
+export type { SimpleTable, Table }

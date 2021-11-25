@@ -1,3 +1,3 @@
-import SwitchTheme from "./SwitchTheme"
+import type SwitchTheme from "./SwitchTheme"
 
-export { SwitchTheme }
+export type { SwitchTheme }

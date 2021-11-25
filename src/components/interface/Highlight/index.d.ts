@@ -1,3 +1,3 @@
-import Highlight from "./Highlight"
+import type Highlight from "./Highlight"
 
-export { Highlight }
+export type { Highlight }

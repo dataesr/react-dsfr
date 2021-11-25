@@ -1,5 +1,5 @@
-import SideMenu from "./SideMenu"
-import SideMenuItem from "./SideMenuItem"
-import SideMenuLink from "./SideMenuLink"
+import type SideMenu from "./SideMenu"
+import type SideMenuItem from "./SideMenuItem"
+import type SideMenuLink from "./SideMenuLink"
 
-export { SideMenu, SideMenuItem, SideMenuLink }
+export type { SideMenu, SideMenuItem, SideMenuLink }

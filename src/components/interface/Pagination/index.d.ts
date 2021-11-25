@@ -1,4 +1,4 @@
-import Pagination from "./Pagination"
-import PaginationItem from "./PaginationItem"
+import type Pagination from "./Pagination"
+import type PaginationItem from "./PaginationItem"
 
-export { Pagination, PaginationItem }
+export type { Pagination, PaginationItem }

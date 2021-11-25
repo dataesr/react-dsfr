@@ -1,4 +1,4 @@
-import Summary from "./Summary"
-import SummaryItem from "./SummaryItem"
+import type Summary from "./Summary"
+import type SummaryItem from "./SummaryItem"
 
-export { Summary, SummaryItem }
+export type { Summary, SummaryItem }

@@ -1,4 +1,4 @@
-import Breadcrumb from "./Breadcrumb"
-import BreadcrumbItem from "./BreadcrumbItem"
+import type Breadcrumb from "./Breadcrumb"
+import type BreadcrumbItem from "./BreadcrumbItem"
 
-export { Breadcrumb, BreadcrumbItem }
+export type { Breadcrumb, BreadcrumbItem }
