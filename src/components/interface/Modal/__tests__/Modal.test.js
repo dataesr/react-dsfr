@@ -88,7 +88,7 @@ describe('<Modal />', () => {
 
     // not ideal, but we need to wait for the component to unmount :/
     jest.useRealTimers();
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    await new Promise((resolve) => { setTimeout(resolve, 500); });
     expect(document.body.style.overflow).toBe('');
   });
 });

@@ -23,7 +23,8 @@ const File = ({
 }) => {
   const _className = classNames(
     'fr-upload-group',
-    className, {
+    className,
+    {
       [`ds-fr--${label}`]: label,
     },
   );

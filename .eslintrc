@@ -34,6 +34,8 @@
           ".jsx"
         ]
       }
-    ]
+    ],
+    "react/function-component-definition": 0,
+    "no-restricted-exports": 0
   }
 }

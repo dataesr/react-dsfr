@@ -55,17 +55,13 @@ const Icon = ({
     }
   }, [color]);
 
-  return (
-    <>
-      {isChildrenElement ? cloneElement(children, {
-        ...children.props,
-        className: children.props ? classNames({
-          [`${children.props.className}`]: children.props.className,
-        }) : '',
-        children: childrenWithIcon,
-      }) : childrenWithIcon}
-    </>
-  );
+  return isChildrenElement ? cloneElement(children, {
+    ...children.props,
+    className: children.props ? classNames({
+      [`${children.props.className}`]: children.props.className,
+    }) : '',
+    children: childrenWithIcon,
+  }) : childrenWithIcon;
 };
 
 Icon.defaultProps = {
