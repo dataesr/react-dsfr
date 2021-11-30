@@ -143,12 +143,14 @@ Pagination.propTypes = {
       return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
     }
     if (buildURL) {
-      PropTypes.checkPropTypes({
-        buildURL: PropTypes.func,
-      },
-      { buildURL },
-      'prop',
-      'Pagination');
+      PropTypes.checkPropTypes(
+        {
+          buildURL: PropTypes.func,
+        },
+        { buildURL },
+        'prop',
+        'Pagination',
+      );
     }
     return null;
   },
@@ -158,12 +160,14 @@ Pagination.propTypes = {
       return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
     }
     if (onClick) {
-      PropTypes.checkPropTypes({
-        onClick: PropTypes.func,
-      },
-      { onClick },
-      'prop',
-      'Pagination');
+      PropTypes.checkPropTypes(
+        {
+          onClick: PropTypes.func,
+        },
+        { onClick },
+        'prop',
+        'Pagination',
+      );
     }
     return null;
   },

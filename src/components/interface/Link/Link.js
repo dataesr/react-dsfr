@@ -30,12 +30,10 @@ const Link = ({
   onClick,
   ...remainingProps
 }) => {
-  const _className = classNames(
-    className, {
-      [`ds-fr--${display}`]: display && icon,
-      'fr-link': isSimple,
-    },
-  );
+  const _className = classNames(className, {
+    [`ds-fr--${display}`]: display && icon,
+    'fr-link': isSimple,
+  });
   const onClickLink = (e) => {
     e.preventDefault();
     onClick(e);

@@ -42,7 +42,7 @@ const Alert = ({
   }, [show]);
 
   if (!internalShow) {
-    return <></>;
+    return null;
   }
 
   return (

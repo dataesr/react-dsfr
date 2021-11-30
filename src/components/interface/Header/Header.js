@@ -60,6 +60,7 @@ const Header = ({
       isSearchBar = true;
     }
   });
+  // eslint-disable-next-line react/jsx-no-constructed-context-values
   const contextProps = {
     isNavBar,
     isNavTool,
