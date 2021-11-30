@@ -30,6 +30,9 @@ exports[`<Tile /> renders correctly 1`] = `
     >
       description
     </p>
+    <p>
+      Du texte aussi
+    </p>
   </div>
   <div
     className="fr-tile__img"
