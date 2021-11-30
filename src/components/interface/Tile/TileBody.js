@@ -38,6 +38,7 @@ const TileBody = ({
         </Link>
       </TitleTag>
       {description && <p className="fr-tile__desc">{description}</p>}
+      {children}
     </div>
   );
 };

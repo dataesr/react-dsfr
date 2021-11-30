@@ -38,7 +38,9 @@ const TileExample = () => (
           <TileBody
             title="Tuile horizontale en mobile avec lien"
             description="Et verticale en desktop"
-          />
+          >
+            Body Content
+          </TileBody>
           <TileImage
             alt="un petit carré"
             src="https://place-hold.it/80x80"
