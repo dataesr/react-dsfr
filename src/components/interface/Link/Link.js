@@ -68,7 +68,7 @@ const Link = ({
       className={classNames({ [`ds-fr--v-${verticalIconPosition}`]: verticalIconPosition && icon })}
       name={icon}
       size={iconSize}
-      iconPosition={_element.props?.children ? iconPosition : 'center'}
+      iconPosition={_element.props && _element.props.children ? iconPosition : 'center'}
     >
       {_element}
     </Icon>

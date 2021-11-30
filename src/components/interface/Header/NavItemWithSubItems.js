@@ -19,7 +19,7 @@ const NavItemWithSubItem = ({
   const expandedRef = useRef(null);
   const buttonRef = useRef(null);
   const close = useCallback((e) => {
-    if ((buttonRef?.current !== e.target) && isExpanded) {
+    if ((buttonRef && buttonRef.current !== e.target) && isExpanded) {
       setIsExpanded(false);
     }
   }, [isExpanded]);
