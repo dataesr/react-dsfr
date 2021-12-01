@@ -14,7 +14,7 @@
     "gouvfr"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=14.18"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3",
@@ -22,7 +22,6 @@
     "@rollup/plugin-image": "^2.1.1",
     "classnames": "^2.3.1",
     "html-react-parser": "^1.4.0",
-    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "uuid": "^8.3.2"
   },
@@ -49,7 +48,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.7",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-react-app": "^6.0.0",

@@ -1,6 +1,6 @@
 import Enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Tile from '../Tile';
 import TileBody from '../TileBody';
 import TileImage from '../TileImage';
