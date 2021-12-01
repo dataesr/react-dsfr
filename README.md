@@ -14,7 +14,7 @@ Current version is using [@gouvfr/dsfr@1.2.0](https://www.npmjs.com/package/@gou
 
 ## Requirements
 
-* node >= 12.13
+* node >= 14.18
 * npm >= 6.14
 * React >= 17.01
 
@@ -82,7 +82,7 @@ We are using [remixicon](https://remixicon.com/).
 
 #### Use Colors
 
-Color variables are available in `style/color.scss`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
+Color variables are available in `style/color.css`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 Some components can be colored with variables (see `colorFamily` props) listed below:
 ```
