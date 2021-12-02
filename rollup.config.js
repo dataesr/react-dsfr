@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import image from '@rollup/plugin-image';
-
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 const MODE = [
@@ -22,7 +22,7 @@ MODE.forEach((m) => {
     input: pkg.source,
     output: {
       name: '@dataesr/react-dsfr',
-      file: `dist/index.${m.format}.js`,
+      file: `dist/index.min.${m.format}.js`,
       format: m.format,
       exports: 'auto',
       globals: {
@@ -38,12 +38,15 @@ MODE.forEach((m) => {
     },
     external: ['uuid', 'classnames', 'prop-types', 'react', 'react-dom', /@babel\/runtime/],
     plugins: [
+      terser(),
       babel({
         exclude: 'node_modules/**',
         plugins: ['@babel/transform-runtime', '@babel/plugin-proposal-nullish-coalescing-operator'],
         babelHelpers: 'runtime',
       }),
       postcss({
+        extensions: ['.css'],
+        minimize: true,
         plugins: [],
       }),
       visualizer(),

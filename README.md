@@ -10,13 +10,13 @@
 
 > Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.2.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.2.1](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
-* node >= 14.18
-* npm >= 6.14
-* React >= 17.01
+* node >= 14.18.2
+* npm >= 6.14.15
+* React >= 17.0.2
 
 ## Installation
 

@@ -12,7 +12,6 @@ const NavSubItem = ({
 
   return (
     <li
-      className="fr-enlarge-link"
       key={title}
       {...dataAttributes.getAll(remainingProps)}
     >
