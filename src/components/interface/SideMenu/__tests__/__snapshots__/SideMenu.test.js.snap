@@ -36,7 +36,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
         className="fr-sidemenu__list"
       >
         <li
-          className="fr-sidemenu__item fr-enlarge-link"
+          className="fr-sidemenu__item"
           data-testid="sidemenuitem"
         >
           <button
@@ -84,7 +84,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                className="fr-sidemenu__item fr-enlarge-link"
+                className="fr-sidemenu__item"
                 data-test="sidemenuitem2"
               >
                 <button
@@ -215,7 +215,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
           </div>
         </li>
         <li
-          className="fr-sidemenu__item fr-enlarge-link"
+          className="fr-sidemenu__item"
         >
           <button
             aria-expanded={false}
@@ -260,7 +260,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 </a>
               </li>
               <li
-                className="fr-sidemenu__item fr-enlarge-link"
+                className="fr-sidemenu__item"
               >
                 <button
                   aria-expanded={false}

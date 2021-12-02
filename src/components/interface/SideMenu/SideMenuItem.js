@@ -14,7 +14,7 @@ const SideMenuItem = ({
   const { item, collapse } = useCollapse(itemID, isExpanded);
   return (
     <li
-      className={classNames('fr-sidemenu__item fr-enlarge-link', className)}
+      className={classNames('fr-sidemenu__item', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
       <button
