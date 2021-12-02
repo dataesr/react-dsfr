@@ -19,7 +19,7 @@ import '@gouvfr/dsfr/dist/component/header/header.css';
 * react-ds-fr
 */
 import '../../../style/color.css';
-import '../../../style/custom.scss';
+import '../../../style/custom.css';
 
 /**
  *

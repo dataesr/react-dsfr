@@ -1,6 +1,6 @@
 {
   "name": "@dataesr/react-dsfr",
-  "version": "0.8.6",
+  "version": "0.9.0",
   "private": false,
   "description": "A React implementation of the french government design system.",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "gouvfr"
   ],
   "engines": {
-    "node": ">=14.18"
+    "node": ">=14.18.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3",
@@ -22,9 +22,7 @@
     "@rollup/plugin-image": "^2.1.1",
     "classnames": "^2.3.1",
     "html-react-parser": "^1.4.0",
-    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
-    "sass": "^1.44.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
