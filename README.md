@@ -14,9 +14,9 @@ Current version is using [@gouvfr/dsfr@1.2.1](https://www.npmjs.com/package/@gou
 
 ## Requirements
 
-* node >= 14.18.2
-* npm >= 6.14.15
-* React >= 17.0.2
+* node >= 14.1x
+* npm >= 6.1x
+* React >= 17.0.x
 
 ## Installation
 
