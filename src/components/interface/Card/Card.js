@@ -35,7 +35,7 @@ const Card = ({
   const displayTitle = title && cloneElement(title, {
     href, anchorAs, onClick, asLink, ariaLabel,
   });
-  const _className = classNames('fr-card fr-card--neutral', {
+  const _className = classNames('fr-card fr-card--grey', {
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
     'fr-enlarge-link': href || asLink,

@@ -1,5 +1,7 @@
 ## Card - carte
 
+By default, Card component is in grey mode with `fr-card--grey` class.
+
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 

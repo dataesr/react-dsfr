@@ -2,7 +2,7 @@
 
 exports[`<NavItem /> renders correctly 1`] = `
 <li
-  className="fr-nav__item fr-enlarge-link"
+  className="fr-nav__item"
 >
   <a
     className="fr-nav__link"

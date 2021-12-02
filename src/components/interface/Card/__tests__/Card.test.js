@@ -37,7 +37,7 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card fr-card--neutral fr-card--horizontal fr-enlarge-link');
+    expect(card.className).toEqual('fr-card fr-card--grey fr-card--horizontal fr-enlarge-link');
   });
   it('renders Card without enlarge link properly', () => {
     render(
@@ -54,6 +54,6 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card fr-card--neutral');
+    expect(card.className).toEqual('fr-card fr-card--grey');
   });
 });

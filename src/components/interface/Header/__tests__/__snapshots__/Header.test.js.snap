@@ -182,7 +182,7 @@ exports[`<Header /> renders correctly 1`] = `
           className="fr-nav__list"
         >
           <li
-            className="fr-nav__item fr-enlarge-link"
+            className="fr-nav__item"
             data-testid="navitem"
           >
             <a
@@ -222,7 +222,6 @@ exports[`<Header /> renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <li
-                  className="fr-enlarge-link"
                   data-test-id="navsubitem"
                 >
                   <a
@@ -234,7 +233,6 @@ exports[`<Header /> renders correctly 1`] = `
                   </a>
                 </li>
                 <li
-                  className="fr-enlarge-link"
                   data-test--id="navsubitem"
                 >
                   <a
@@ -246,7 +244,6 @@ exports[`<Header /> renders correctly 1`] = `
                   </a>
                 </li>
                 <li
-                  className="fr-enlarge-link"
                   data-test="navsubitem"
                 >
                   <a
