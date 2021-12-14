@@ -4,6 +4,7 @@ import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import image from '@rollup/plugin-image';
 import { terser } from 'rollup-plugin-terser';
+import svgr from '@svgr/rollup';
 import pkg from './package.json';
 
 const MODE = [
@@ -52,6 +53,9 @@ MODE.forEach((m) => {
       visualizer(),
       resolve(),
       image(),
+      svgr({
+        svgoConfig: { prefixIds: false },
+      }),
     ],
   };
   config.push(conf);

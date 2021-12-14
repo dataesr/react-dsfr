@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Light from '@gouvfr/dsfr/dist/artwork/light.svg';
-import Dark from '@gouvfr/dsfr/dist/artwork/dark.svg';
+import { ReactComponent as Light } from '@gouvfr/dsfr/dist/artwork/light.svg';
+import { ReactComponent as Dark } from '@gouvfr/dsfr/dist/artwork/dark.svg';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
 import useTheme from './useTheme';
@@ -17,8 +17,8 @@ const SwitchTheme = ({
   const currentTheme = useTheme();
 
   const themes = [
-    { label: lightLabel, value: 'light', svg: Light },
-    { label: darkLabel, value: 'dark', svg: Dark },
+    { label: lightLabel, value: 'light', svg: <Light /> },
+    { label: darkLabel, value: 'dark', svg: <Dark /> },
   ];
 
   useEffect(() => {
