@@ -37,6 +37,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-eslint": "^8.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@svgr/rollup": "^6.1.2",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

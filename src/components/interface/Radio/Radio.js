@@ -76,7 +76,7 @@ const Radio = ({
       </label>
       {svg && isExtended && (
         <div className="fr-radio-rich__img" data-fr-inject-svg>
-          <img src={svg} alt="" />
+            {svg}
         </div>
       )}
       {hint && <span className="fr-hint-text">{hint}</span>}

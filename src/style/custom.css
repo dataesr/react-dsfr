@@ -9,7 +9,6 @@
   ALIGNMENT
 \* ------------------------------------ */
 
-
 a.ds-fr--inline {
   display: inline;
 }
@@ -51,16 +50,8 @@ https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
   display: none;
 }
 
-.fr-table tbody tr:nth-child(odd) {
-  background-color: var(--grey-850-200) !important;
-}
-
 span.error {
-  color: var(--error-925);
-}
-
-.fr-table thead th {
-  line-height: 30px;
+  color: var(--error-main-525);
 }
 
 .fr-table thead th.sortable {
