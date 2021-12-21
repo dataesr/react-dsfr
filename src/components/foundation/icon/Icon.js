@@ -19,7 +19,7 @@ const Icon = ({
     `ri-${size}`,
     {
       [`icon-${iconPosition}`]: iconPosition !== 'center',
-      'ds-fr--v-middle': verticalAlign,
+      [`ds-fr--v-${verticalAlign}`]: verticalAlign,
     },
     name,
     className,
@@ -69,7 +69,7 @@ Icon.defaultProps = {
   color: '',
   as: 'span',
   className: '',
-  verticalAlign: false,
+  verticalAlign: 'middle',
   iconPosition: 'left',
   children: null,
   title: '',
@@ -78,7 +78,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
   size: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'xl', '2x', '3x', '10x']),
   name: PropTypes.string.isRequired,
-  verticalAlign: PropTypes.bool,
+  verticalAlign: PropTypes.oneOf(['middle', 'sub', 'top']),
   className: PropTypes.string,
   iconPosition: PropTypes.oneOf(['left', 'right', 'center']),
   as: PropTypes.oneOf(['span', 'i', 'div', 'p']),

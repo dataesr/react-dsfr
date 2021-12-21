@@ -41,7 +41,7 @@ exports[`<Modal /> should render modal properly 1`] = `
             >
               <span>
                 <span
-                  class="ri-lg icon-left ri-arrow-right-line ds-fr--v-middle"
+                  class="ri-lg icon-left ds-fr--v-middle ri-arrow-right-line"
                 />
                 I am a title
               </span>

@@ -13,7 +13,7 @@ exports[`<Button /> renders correctly 1`] = `
   <span>
     test button
     <span
-      className="ri-2x icon-right ri-alert-fill"
+      className="ri-2x icon-right ds-fr--v-sub ri-alert-fill"
     />
   </span>
 </button>

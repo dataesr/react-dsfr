@@ -99,6 +99,7 @@ const Button = forwardRef((props, ref) => {
   );
   return icon ? (
     <Icon
+      verticalAlign="sub"
       name={icon}
       size={iconSize[size]}
       iconPosition={(children && `${iconPosition}`) || 'center'}

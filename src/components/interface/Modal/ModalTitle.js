@@ -21,7 +21,6 @@ const ModalTitle = ({
   );
   return icon ? (
     <Icon
-      className="ds-fr--v-middle"
       name={icon}
       size="lg"
     >

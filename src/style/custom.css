@@ -29,8 +29,12 @@ span.ds-fr--v-middle {
   vertical-align: middle;
 }
 
-.span.ds-fr--v-middle {
+span.ds-fr--v-sub {
   vertical-align: sub;
+}
+
+span.ds-fr--v-top {
+  vertical-align: top;
 }
 
 .ds-fr--border-bottom {

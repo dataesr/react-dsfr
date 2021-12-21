@@ -7,7 +7,6 @@ const initialProps = {
   name: 'name',
   iconPosition: 'right',
   title: 'title',
-  verticalAlign: true,
   as: 'span',
   size: 'sm',
   className: 'test',

@@ -13,7 +13,6 @@ const AccordionExample = () => (
           size="lg"
           color="#f88"
           iconPosition="right"
-          verticalAlign
         >
           With icon
         </Icon>

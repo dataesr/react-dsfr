@@ -54,7 +54,6 @@ const Tag = ({
   return (
     icon ? (
       <Icon
-        verticalAlign
         name={icon}
         size={iconSize[size]}
         iconPosition={children ? iconPosition : 'center'}

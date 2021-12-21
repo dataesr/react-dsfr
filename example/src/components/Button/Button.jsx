@@ -39,6 +39,16 @@ const ButtonExample = () => {
         </Col>
         <Col n="12">
           <Button
+            size="sm"
+            icon="ri-add-line"
+            secondary
+            iconPosition="right"
+          >
+            Voir plus
+          </Button>
+        </Col>
+        <Col n="12">
+          <Button
             colors={['#008941', '#fff']}
             size="lg"
             secondary

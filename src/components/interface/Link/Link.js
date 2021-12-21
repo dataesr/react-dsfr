@@ -65,7 +65,7 @@ const Link = ({
   const _element = as ? asLink : _link;
   return icon ? (
     <Icon
-      className={classNames({ [`ds-fr--v-${verticalIconPosition}`]: verticalIconPosition && icon })}
+      verticalAlign={verticalIconPosition}
       name={icon}
       size={iconSize}
       iconPosition={_element.props && _element.props.children ? iconPosition : 'center'}
@@ -104,7 +104,7 @@ Link.propTypes = {
     PropTypes.string,
   ]),
   href: PropTypes.string,
-  verticalIconPosition: PropTypes.oneOf(['top', 'middle']),
+  verticalIconPosition: PropTypes.oneOf(['top', 'middle', 'sub']),
   as: PropTypes.element,
   title: PropTypes.string,
   target: PropTypes.string,
@@ -115,8 +115,8 @@ Link.propTypes = {
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'xl', '2x', '3x', '10x']),
   /**
-   * @ignore
-   */
+     * @ignore
+     */
   display: PropTypes.oneOf(['inline', 'flex']),
 };
 

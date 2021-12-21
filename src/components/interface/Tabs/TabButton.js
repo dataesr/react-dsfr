@@ -49,7 +49,6 @@ const TabButton = (props) => {
       >
         {icon && (
         <Icon
-          verticalAlign
           name={icon}
           iconPosition="left"
         />
