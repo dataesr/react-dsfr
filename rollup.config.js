@@ -72,11 +72,12 @@ MODE.forEach((m) => {
     ],
   };
   config.push(conf);
-  config.push({
-    input: "src/index.d.ts",
-    output: [{ file: "dist/react-dsfr.d.ts", format: "es" }],
-    plugins: [dts()],
-  });
+});
+
+config.push({
+  input: "src/index.d.ts",
+  output: [{ file: "dist/index.d.ts", format: "es" }],
+  plugins: [dts()],
 });
 
 export default [...config];
