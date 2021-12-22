@@ -9,7 +9,7 @@ export * from "./Card"
 export * from "./Checkbox"
 export * from "./ConsentManager"
 export * from "./Footer"
-export * from "./Header"
+export { Header, HeaderBody, HeaderNav, HeaderOperator } from "./Header"; // createContext breaks d.ts file
 export * from "./Highlight"
 export * from "./Link"
 export * from "./Logo"
