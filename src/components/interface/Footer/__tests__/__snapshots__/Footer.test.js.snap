@@ -362,6 +362,14 @@ exports[`<Footer /> should render Footer properly 1`] = `
         </a>
       </div>
       <div
+        class="fr-footer__brand-link"
+      >
+        <img
+          alt="texte alternatif"
+          src="https://fakeimg.pl/145x81/"
+        />
+      </div>
+      <div
         class="fr-footer__content"
       >
         <p
@@ -415,12 +423,12 @@ exports[`<Footer /> should render Footer properly 1`] = `
       class="fr-footer__partners"
       data-testid="footerpartners"
     >
-      <p
+      <h4
         class="fr-footer__partners-title"
         data-testid="title"
       >
         Nos partenaires
-      </p>
+      </h4>
       <div
         class="fr-footer__partners-logos"
       >
@@ -443,39 +451,47 @@ exports[`<Footer /> should render Footer properly 1`] = `
         <div
           class="fr-footer__partners-sub"
         >
-          <a
-            class="footer__partners-link"
-            href="/"
-            target="_self"
-          >
-            <img
-              alt="Logo 2"
-              class="fr-footer__logo"
-              src="img/logo2"
-            />
-          </a>
-          <a
-            class="footer__partners-link"
-            href="/"
-            target="_self"
-          >
-            <img
-              alt="Logo 3"
-              class="fr-footer__logo"
-              src="img/logo3"
-            />
-          </a>
-          <a
-            class="footer__partners-link"
-            href="/"
-            target="_self"
-          >
-            <img
-              alt="Logo 4"
-              class="fr-footer__logo"
-              src="img/logo4"
-            />
-          </a>
+          <ul>
+            <li>
+              <a
+                class="footer__partners-link"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 2"
+                  class="fr-footer__logo"
+                  src="img/logo2"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer__partners-link"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 3"
+                  class="fr-footer__logo"
+                  src="img/logo3"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer__partners-link"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 4"
+                  class="fr-footer__logo"
+                  src="img/logo4"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
