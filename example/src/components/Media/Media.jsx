@@ -28,7 +28,7 @@ const MediaExample = () => (
     <Row>
       <Col n="8">
         <MediaImage
-          src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
+          src="https://dummyimage.com/300x170/000/fff.png"
           alt="description alternative à l‘image"
           legend="légende de l'image"
           size="lg"

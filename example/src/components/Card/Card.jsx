@@ -42,6 +42,24 @@ const CardExample = () => (
         </CardDescription>
       </Card>
     </Col>
+    <Col n="12">
+      <Card
+        onClick={() => {}}
+        href="/"
+      >
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
+          Card with custom onClick
+        </CardTitle>
+        <CardDescription>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Ab ad assumenda dolores eius fuga in iste labore laborum.
+          Deleniti error exercitationem fugit libero.
+          Description texte body small regular consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore…
+        </CardDescription>
+      </Card>
+    </Col>
   </>
 );
 

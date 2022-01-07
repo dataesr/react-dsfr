@@ -22,12 +22,15 @@ const FooterPartners = ({ children, className, ...remainingProps }) => {
       {title}
       <div className="fr-footer__partners-logos">
         {mainLogos && (
-          <div className="fr-footer__partners-main">{mainLogos}</div>
+        <div className="fr-footer__partners-main">{mainLogos}</div>
         )}
         {subLogos && (
         <div className="fr-footer__partners-sub">
           <ul>
-            {subLogos.map((subLogo) => <li key={subLogo.imageSrc}>{subLogo}</li>)}
+            {subLogos.map((subLogo, i) => {
+              const id = i + 1;
+              return <li key={`${subLogo.imageSrc}-${id}`}>{subLogo}</li>;
+            })}
           </ul>
         </div>
         )}

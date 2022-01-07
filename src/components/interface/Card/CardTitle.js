@@ -6,10 +6,10 @@ import typeValidation from '../../../utils/type-validation';
 import Link from '../Link';
 
 const CardTitle = ({
-  href, children, as, anchorAs, className, asLink, onClick, ariaLabel, ...remainingProps
+  href, children, as, anchorAs, className, asLink, ariaLabel, ...remainingProps
 }) => {
   const HTMLTag = `${as}`;
-  const AnchorTag = onClick ? 'button' : `${anchorAs}`;
+  const AnchorTag = `${anchorAs}`;
 
   return (
     <HTMLTag
@@ -21,7 +21,6 @@ const CardTitle = ({
           as={asLink}
           href={href}
           className="fr-card__link"
-          onClick={onClick}
         >
           {children}
         </Link>
@@ -29,8 +28,6 @@ const CardTitle = ({
         : (
           <AnchorTag
             aria-label={ariaLabel || undefined}
-            type={onClick ? 'button' : undefined}
-            onClick={onClick}
             href={href || undefined}
             className="fr-card__link"
           >

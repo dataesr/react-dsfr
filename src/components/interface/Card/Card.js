@@ -33,15 +33,41 @@ const Card = ({
   );
   const title = Children.toArray(children).find((child) => child.props.__TYPE === 'CardTitle');
   const displayTitle = title && cloneElement(title, {
-    href, anchorAs, onClick, asLink, ariaLabel,
+    href, anchorAs, asLink, ariaLabel,
   });
   const _className = classNames('fr-card fr-card--grey', {
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
-    'fr-enlarge-link': href || asLink,
+    'fr-enlarge-link': href || asLink || onClick,
   }, className);
+
+  const onCardClick = (e) => {
+    e.preventDefault();
+    onClick(e);
+  };
+
+  const divButton = {
+    true: {
+      tabIndex: '0',
+      role: 'button',
+      click: (e) => onCardClick(e),
+    },
+    false: {
+      tabIndex: undefined,
+      role: undefined,
+      click: undefined,
+    },
+  };
+  const { role, tabIndex, click } = divButton[!!onClick];
+
   return (
+  // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
+      role={role}
+      tabIndex={tabIndex}
+      aria-label={ariaLabel || undefined}
+      onClick={click}
+      onKeyDown={click}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
