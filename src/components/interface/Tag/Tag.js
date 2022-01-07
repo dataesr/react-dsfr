@@ -35,7 +35,7 @@ const Tag = ({
   const HtmlTag = `${as}`;
   const _className = classNames('fr-tag', {
     [`fr-tag--${size}`]: size,
-    [`fr-tag--${colorFamily}`]: colorFamily && href,
+    [`fr-tag--${colorFamily}`]: colorFamily,
     'fr-fi-icon': (icon && iconPosition),
   }, className);
 
