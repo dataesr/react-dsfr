@@ -30,7 +30,7 @@ FooterPartnersTitle.propTypes = {
 };
 FooterPartnersTitle.defaultProps = {
   __TYPE: 'FooterPartnersTitle',
-  as: 'p',
+  as: 'h4',
   className: '',
 };
 
