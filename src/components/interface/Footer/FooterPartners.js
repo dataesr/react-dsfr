@@ -24,7 +24,13 @@ const FooterPartners = ({ children, className, ...remainingProps }) => {
         {mainLogos && (
           <div className="fr-footer__partners-main">{mainLogos}</div>
         )}
-        {subLogos && <div className="fr-footer__partners-sub">{subLogos}</div>}
+        {subLogos && (
+        <div className="fr-footer__partners-sub">
+          <ul>
+            {subLogos.map((subLogo) => <li key={subLogo.imageSrc}>{subLogo}</li>)}
+          </ul>
+        </div>
+        )}
       </div>
     </div>
   );
