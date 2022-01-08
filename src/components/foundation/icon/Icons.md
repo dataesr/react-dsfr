@@ -1,8 +1,6 @@
 ## Icons - Icônes
 
 Toutes les icônes de la librairie [remixicon](https://remixicon.com/) sont utilisables.
-Le cdn de la librairie remixicon doit être ajouté dans le <head> de votre site.
-`<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
 
 ### Usage simple
 ```jsx
