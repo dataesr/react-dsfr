@@ -20,6 +20,7 @@ const SearchableSelect = ({
   selected,
   filter,
   onChange,
+  onTextChange,
   onBlur,
   onFocus,
   onKeyDown,
@@ -49,7 +50,16 @@ const SearchableSelect = ({
     } else {
       setInternalLabel('');
     }
-  }, [options, selected]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
+
+  useEffect(() => {
+    if (selected) {
+      const selectedOption = options.find((option) => option.value === selected);
+      setInternalLabel(selectedOption ? selectedOption.label : '');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [options]);
 
   useEffect(() => {
     if (arrowSelected) {
@@ -69,8 +79,13 @@ const SearchableSelect = ({
   const filteredOptions = options
     .filter((option, index, arr) => filter(internalLabel, option, index, arr));
 
+  const onTextInternalChange = (value) => {
+    onTextChange(value);
+    setInternalLabel(value);
+  };
+
   const onInternalChange = (newValue, newLabel) => {
-    setInternalLabel(newLabel);
+    onTextInternalChange(newLabel);
     onChange(newValue);
   };
 
@@ -87,7 +102,7 @@ const SearchableSelect = ({
     } else {
       const foundValue = options.find((option) => option.label === internalLabel);
       if (!foundValue) {
-        setInternalLabel('');
+        onTextInternalChange('');
       }
     }
     setShowOptions(false);
@@ -139,7 +154,7 @@ const SearchableSelect = ({
           id={selectId.current}
           className={_className}
           autoComplete="off"
-          onChange={(e) => setInternalLabel(e.target.value)}
+          onChange={(e) => onTextInternalChange(e.target.value)}
           onFocus={onInternalFocus}
           onBlur={onInternalBlur}
           onKeyDown={onInternalKeyDown}
@@ -201,6 +216,7 @@ SearchableSelect.defaultProps = {
   messageType: undefined,
   name: null,
   onChange: () => {},
+  onTextChange: () => {},
   onBlur: () => {},
   onFocus: () => {},
   onKeyDown: () => {},
@@ -230,6 +246,7 @@ SearchableSelect.propTypes = {
   messageType: PropTypes.oneOf(['error', 'valid']),
   name: PropTypes.string,
   onChange: PropTypes.func,
+  onTextChange: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
