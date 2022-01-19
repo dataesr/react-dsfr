@@ -15,7 +15,7 @@ import '@gouvfr/dsfr/dist/component/button/button.css';
 import useTheme from '../SwitchTheme/useTheme';
 
 const iconSize = {
-  sm: 'lg',
+  sm: 'sm',
   md: 'lg',
   lg: '2x',
 };
