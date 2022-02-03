@@ -44,7 +44,7 @@ Col.defaultProps = {
   offset: null,
   className: '',
   children: null,
-  spacing: null,
+  spacing: '',
 };
 
 export default Col;

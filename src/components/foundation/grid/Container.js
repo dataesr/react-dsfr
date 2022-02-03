@@ -23,7 +23,7 @@ Container.defaultProps = {
   className: '',
   role: '',
   children: null,
-  spacing: null,
+  spacing: '',
 };
 
 Container.propTypes = {

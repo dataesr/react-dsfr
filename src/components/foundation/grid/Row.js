@@ -54,7 +54,7 @@ Row.defaultProps = {
   alignItems: null,
   justifyContent: null,
   children: null,
-  spacing: null,
+  spacing: '',
 };
 
 export default Row;

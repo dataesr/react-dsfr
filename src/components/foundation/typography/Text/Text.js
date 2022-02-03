@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { getSpace } from '../../../../utils/getters';
 
 /**
  *
  * @visibleName Text
  */
 const Text = ({
-  as, size, alt, className, children,
+  as, size, alt, className, spacing, children,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames(className, {
+  const { margin, padding } = getSpace(spacing);
+  const _className = classNames(className, padding, margin, {
     'fr-text--alt': size !== 'lead' && alt,
     [`fr-text--${size}`]: size,
   });
@@ -27,6 +29,7 @@ Text.propTypes = {
   */
   as: PropTypes.oneOf(['p', 'span']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'lead']),
+  spacing: PropTypes.string,
   /**
   * If true Spectral is used instead of Marianne.
   */
@@ -43,6 +46,7 @@ Text.defaultProps = {
   size: 'md',
   alt: false,
   className: '',
+  spacing: '',
 };
 
 export default Text;
