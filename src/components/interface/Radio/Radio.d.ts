@@ -12,6 +12,7 @@ export interface RadioProps {
     className?: RadioClassName;
     hint?: RadioHint;
     id?: string;
+    svg?: React.ReactNode;
     isExtended?: boolean;
     label: string;
     message?: string;

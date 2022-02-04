@@ -14,6 +14,7 @@ export interface TitleDisplayProps {
     /**
      * html tag to render
      */
+    spacing?: string;
     as?: TitleDisplayAs;
     size: TitleDisplaySize;
 }

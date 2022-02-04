@@ -6,19 +6,20 @@ export type TagAs = "a" | "span" | "p";
 
 export type TagChildren = string | React.ReactNode;
 
-export type TagSize = "sm" | "md" | "lg";
-
 export type TagIconPosition = "left" | "right";
 
 export interface TagProps {
     className?: TagClassName;
     as?: TagAs;
     children?: TagChildren;
-    size?: TagSize;
+    small?: boolean;
+    selected?: boolean;
+    closable?: boolean;
     href?: string;
     title?: string;
     target?: string;
     icon?: string;
+    onClick?: (...args: any[])=>any;
     iconPosition?: TagIconPosition;
 }
 

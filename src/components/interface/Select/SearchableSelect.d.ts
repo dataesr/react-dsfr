@@ -23,6 +23,7 @@ export interface SearchableSelectProps {
     messageType?: SearchableSelectMessageType;
     name?: string;
     onChange?: (...args: any[])=>any;
+    onTextChange?: (...args: any[])=>any;
     onBlur?: (...args: any[])=>any;
     onFocus?: (...args: any[])=>any;
     onKeyDown?: (...args: any[])=>any;

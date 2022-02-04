@@ -15,7 +15,6 @@ export interface CardProps {
     className?: CardClassName;
     bodyClassName?: string;
     hasArrow?: boolean;
-    enlargeLink?: boolean;
     asLink?: React.ReactElement<any>;
     onClick?: (...args: any[])=>any;
 }

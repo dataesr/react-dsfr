@@ -14,6 +14,7 @@ export interface TextProps {
      */
     as?: TextAs;
     size?: TextSize;
+    spacing?: string;
     /**
      * If true Spectral is used instead of Marianne.
      */

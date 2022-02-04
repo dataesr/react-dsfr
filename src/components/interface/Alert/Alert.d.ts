@@ -16,6 +16,7 @@ export interface AlertProps {
     description?: AlertDescription;
     type?: AlertType;
     small?: boolean;
+    role?: string;
     show?: boolean;
     closable?: boolean;
     onClose?: (...args: any[])=>any;

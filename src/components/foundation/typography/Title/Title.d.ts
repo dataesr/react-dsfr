@@ -16,6 +16,7 @@ export interface TitleProps {
     as: TitleAs;
     look?: TitleLook;
     className?: TitleClassName;
+    spacing?: string;
 }
 
 declare const Title: React.FC<TitleProps>;

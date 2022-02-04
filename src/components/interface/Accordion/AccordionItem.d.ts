@@ -4,6 +4,8 @@ export type AccordionItemTitleAs = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type AccordionItemSize = "sm" | "md" | "lg";
 
+export type AccordionItemTitle = string | React.ReactElement<any>;
+
 export type AccordionItemChildren = React.ReactNode[] | React.ReactNode | string;
 
 export type AccordionItemClassName = string | Object | any[];
@@ -25,7 +27,7 @@ export interface AccordionItemProps {
     size?: AccordionItemSize;
     id?: number;
     color?: string;
-    title: string;
+    title: AccordionItemTitle;
     keepOpen?: boolean;
     children: AccordionItemChildren;
     className?: AccordionItemClassName;
