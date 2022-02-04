@@ -66,3 +66,26 @@ import Col from './Col';
   </Row>
 </Container>
 ```
+
+#### Grille avec spacing
+```jsx
+import Container from './Container';
+import Row from './Row';
+import Col from './Col';
+
+<Container>
+    <Row>
+        <Col spacing='m-1w'>
+            Col margin 1w
+        </Col>
+        <Col spacing='m-0'>
+            Col margin 0
+        </Col>
+    </Row>
+    <Row>
+        <Col spacing='m-auto'>
+            Col margin auto
+        </Col>
+    </Row>
+</Container>
+```

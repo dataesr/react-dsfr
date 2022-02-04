@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/logo/logo.css';
 

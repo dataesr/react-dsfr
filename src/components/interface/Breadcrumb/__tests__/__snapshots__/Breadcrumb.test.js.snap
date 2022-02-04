@@ -50,8 +50,9 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       >
         <a
           aria-current="page"
+          aria-disabled="true"
           class="fr-breadcrumb__link"
-          href=""
+          role="link"
           target="_self"
         >
           Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué

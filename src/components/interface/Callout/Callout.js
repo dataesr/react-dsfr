@@ -6,7 +6,7 @@ import colorFamilies from '../../../utils/variables';
 import useTheme from '../SwitchTheme/useTheme';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/callout/callout.css';
 

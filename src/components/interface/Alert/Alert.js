@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/alert/alert.css';
 
@@ -20,6 +20,7 @@ const Alert = ({
   type,
   title,
   description,
+  role,
   small,
   show,
   closable,
@@ -47,7 +48,7 @@ const Alert = ({
 
   return (
     <div
-      role="alert"
+      role={role || undefined}
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
@@ -74,6 +75,7 @@ const Alert = ({
 Alert.defaultProps = {
   as: 'p',
   type: 'info',
+  role: '',
   description: undefined,
   small: false,
   show: true,
@@ -96,6 +98,7 @@ Alert.propTypes = {
   ]),
   type: PropTypes.oneOf(['error', 'success', 'info']),
   small: PropTypes.bool,
+  role: PropTypes.string,
   show: PropTypes.bool,
   closable: PropTypes.bool,
   onClose: PropTypes.func,

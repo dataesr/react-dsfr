@@ -7,6 +7,7 @@ import Title from './components/foundation/typography/Title/index';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import Alert from './components/interface/Alert/index';
+import { Badge, BadgeGroup } from './components/interface/Badge/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
@@ -53,6 +54,8 @@ const library = () => ({
   Accordion,
   AccordionItem,
   Alert,
+  Badge,
+  BadgeGroup,
   Logo,
   Breadcrumb,
   BreadcrumbItem,

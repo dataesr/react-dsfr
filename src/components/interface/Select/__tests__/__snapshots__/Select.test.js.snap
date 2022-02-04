@@ -17,6 +17,7 @@ exports[`<Select /> renders correctly 1`] = `
     className="fr-select fr-select--valid"
     id="message-xxxxxxx"
     label="Label pour liste déroulante"
+    onChange={[Function]}
     value=""
   >
     <option

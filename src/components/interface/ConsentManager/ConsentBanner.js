@@ -16,6 +16,7 @@ const ConsentBanner = ({
   ...remainingProps
 }) => {
   const _className = classNames('fr-consent-banner', className);
+  const listClassNames = 'fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm';
 
   return (
     <div className={_className} {...dataAttributes.getAll(remainingProps)}>
@@ -25,7 +26,7 @@ const ConsentBanner = ({
           {description}
         </p>
       </div>
-      <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
+      <ul className={listClassNames}>
         <li>
           <Button
             onClick={acceptBannerButton}

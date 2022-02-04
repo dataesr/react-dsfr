@@ -3,6 +3,7 @@ import { Container, Row, Col } from '@dataesr/react-dsfr';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AccordionExample from './components/Accordion/Accordion';
 import AlertExample from './components/Alert/Alert';
+import BadgeExample from './components/Badge/Badge';
 import BreadcrumbsExample from './components/Breadcrumbs/Breadcrumbs';
 import ButtonExample from './components/Button/Button';
 import ButtonGroupExample from './components/Button/ButtonGroup';
@@ -39,6 +40,7 @@ const App = () => {
   const elements = [
     { title: 'Accordion', component: <AccordionExample /> },
     { title: 'Alert', component: <AlertExample /> },
+    { title: 'Badge', component: <BadgeExample /> },
     { title: 'Bloc marque', component: <LogoExample /> },
     { title: 'Breadcrumbs', component: <BreadcrumbsExample /> },
     { title: 'Button', component: <ButtonExample /> },

@@ -5,7 +5,7 @@ import {
 } from '@dataesr/react-dsfr';
 
 const AccordionExample = () => (
-  <Col>
+  <Col spacing="mt-1-5v">
     <Accordion keepOpen size="sm" color="#f66">
       <AccordionItem title={(
         <Icon

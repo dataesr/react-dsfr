@@ -19,3 +19,7 @@
 ```jsx
 <Text size="xs">Je suis un texte xs</Text>
 ```
+
+```jsx
+<Text size="xs" spacing='m-1w m-md-6w'>Je suis un texte xs avec un point de rupture md</Text>
+```

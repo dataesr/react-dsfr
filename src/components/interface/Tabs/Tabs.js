@@ -8,7 +8,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import TabButton from './TabButton';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/tab/tab.css';
 

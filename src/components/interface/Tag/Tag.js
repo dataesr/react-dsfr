@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/tag/tag.css';
-import colorFamilies from '../../../utils/variables';
 
 const iconSize = {
   sm: 'lg',
@@ -21,27 +20,52 @@ const iconSize = {
  */
 const Tag = ({
   as,
+  closable,
   children,
-  size,
+  small,
   href,
   title,
   target,
   icon,
   iconPosition,
-  colorFamily,
   className,
+  selected,
+  onClick,
   ...remainingProps
 }) => {
-  const HtmlTag = `${as}`;
+  const ref = useRef();
   const _className = classNames('fr-tag', {
-    [`fr-tag--${size}`]: size,
-    [`fr-tag--${colorFamily}`]: colorFamily,
+    'fr-tag--sm': small,
+    'fr-tag--dismiss': closable && onClick,
     'fr-fi-icon': (icon && iconPosition),
   }, className);
 
+  let HtmlTag = `${as}`;
+
+  if (selected !== undefined || onClick) {
+    HtmlTag = 'button';
+  }
+
+  if (href) {
+    HtmlTag = 'a';
+  }
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    if (closable) {
+      ref.current.remove();
+    }
+    onClick(e);
+  };
+
   const _tag = (
+
     <HtmlTag
+      ref={ref}
+      aria-label={closable ? `Retirer ${title}` : undefined}
+      onClick={(!href && onClick) || closable ? handleClick : undefined}
       className={_className}
+      aria-pressed={selected || 'false'}
       title={title || undefined}
       href={href || undefined}
       target={target || undefined}
@@ -55,7 +79,7 @@ const Tag = ({
     icon ? (
       <Icon
         name={icon}
-        size={iconSize[size]}
+        size={iconSize[small ? 'sm' : 'md']}
         iconPosition={children ? iconPosition : 'center'}
       >
         {_tag}
@@ -66,15 +90,17 @@ const Tag = ({
 
 Tag.defaultProps = {
   className: '',
-  as: 'a',
-  size: 'md',
+  as: 'p',
+  small: false,
+  closable: false,
+  selected: undefined,
   href: '',
   title: '',
   target: '',
   icon: '',
   iconPosition: 'right',
-  colorFamily: '',
   children: undefined,
+  onClick: null,
 };
 
 Tag.propTypes = {
@@ -83,14 +109,16 @@ Tag.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  size: PropTypes.oneOf(['sm', 'md']),
+  small: PropTypes.bool,
+  selected: PropTypes.bool,
+  closable: PropTypes.bool,
   href: PropTypes.string,
   title: PropTypes.string,
   target: PropTypes.string,
   icon: PropTypes.string,
+  onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
 };
 

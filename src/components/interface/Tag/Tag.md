@@ -58,18 +58,15 @@ import { Tag, TagGroup } from '.';
 
 <TagGroup>
     <Tag
-        as="span"
-        size="lg">Label tag
+        as="span">Label tag
     </Tag>
     <Tag
         as="span"
-        size="lg"
         icon="ri-markup-line"
         iconPosition="left">Label tag
     </Tag>
     <Tag
         as="span"
-        size="lg"
         icon="ri-markup-line">Label tag
     </Tag>
 </TagGroup>
@@ -102,17 +99,17 @@ import { Tag, TagGroup } from '.';
 <TagGroup>
     <Tag
         as="span"
-        size="sm">Label tag
+        small>Label tag
     </Tag>
     <Tag
         as="span"
-        size="sm"
+        small
         icon="ri-chat-smile-2-line"
         iconPosition="left">Label tag
     </Tag>
     <Tag
         as="span"
-        size="sm"
+        small
         icon="ri-chat-smile-2-line">Label tag
     </Tag>
 </TagGroup>
@@ -128,19 +125,17 @@ import { Tag, TagGroup } from '.';
   <Tag
       as="a"
       href="/"
-      size="lg">Label tag
+      >Label tag
   </Tag>
   <Tag
       as="a"
       href="/"
-      size="lg"
       icon="ri-arrow-right-s-line"
       iconPosition="left">Label tag
   </Tag>
   <Tag
       as="a"
       href="/"
-      size="lg"
       icon="ri-arrow-right-s-line">Label tag
   </Tag>
 </TagGroup>

@@ -17,8 +17,9 @@ exports[`<Tile /> renders correctly 1`] = `
       className="fr-tile__title"
     >
       <a
+        aria-disabled={true}
         className="fr-tile__link"
-        href=""
+        role="link"
         target="linkTarget"
         title="linkTitle"
       >

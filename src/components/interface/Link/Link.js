@@ -5,7 +5,7 @@ import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.2
+* DSFR v1.3
 */
 import '@gouvfr/dsfr/dist/component/link/link.css';
 
@@ -15,6 +15,7 @@ import '@gouvfr/dsfr/dist/component/link/link.css';
  */
 const Link = ({
   children,
+  disabled,
   href,
   title,
   target,
@@ -50,9 +51,11 @@ const Link = ({
 
   const _link = (
     <a
+      aria-disabled={(disabled || !href) ? true : undefined}
+      role={disabled || !href ? 'link' : undefined}
       onClick={onClick && !href ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
-      href={href}
+      href={href || undefined}
       title={title || undefined}
       target={target}
       rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
@@ -77,6 +80,7 @@ const Link = ({
 
 Link.defaultProps = {
   className: '',
+  disabled: false,
   title: '',
   target: '_self',
   isSimple: false,
@@ -104,6 +108,7 @@ Link.propTypes = {
     PropTypes.string,
   ]),
   href: PropTypes.string,
+  disabled: PropTypes.bool,
   verticalIconPosition: PropTypes.oneOf(['top', 'middle', 'sub']),
   as: PropTypes.element,
   title: PropTypes.string,

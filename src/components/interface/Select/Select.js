@@ -13,6 +13,7 @@ import dataAttributes from '../../../utils/data-attributes';
 const Select = ({
   id,
   messageType,
+  onChange,
   options,
   selected,
   ...remainingProps
@@ -21,6 +22,10 @@ const Select = ({
     [`fr-select--${messageType}`]: messageType,
   });
   const selectId = useRef(id || uuidv4());
+
+  const handleChange = (event) => {
+    onChange(event);
+  };
 
   useEffect(() => {
     selectId.current = id || uuidv4();
@@ -35,21 +40,22 @@ const Select = ({
       <select
         {...dataAttributes.filterAll(remainingProps)}
         className={_className}
+        onChange={handleChange}
         id={selectId.current}
         value={selected}
       >
         {
-          options.map((opt) => (
-            <option
-              disabled={opt.disabled || false}
-              hidden={opt.hidden || false}
-              key={`${selectId.current}-${opt.value}`}
-              value={opt.value}
-            >
-              {opt.label}
-            </option>
-          ))
-        }
+                    options.map((opt) => (
+                      <option
+                        disabled={opt.disabled || false}
+                        hidden={opt.hidden || false}
+                        key={`${selectId.current}-${opt.value}`}
+                        value={opt.value}
+                      >
+                        {opt.label}
+                      </option>
+                    ))
+                }
       </select>
     </SelectWrapper>
   );
