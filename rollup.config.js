@@ -19,7 +19,6 @@ const MODE = [
 ];
 
 const config = [];
-
 MODE.forEach((m) => {
   const conf = {
     input: pkg.source,
