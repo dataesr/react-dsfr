@@ -5,7 +5,7 @@ import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.3
+* DSFR v1.3.1
 */
 import '@gouvfr/dsfr/dist/component/link/link.css';
 
@@ -53,7 +53,7 @@ const Link = ({
     <a
       aria-disabled={(disabled || !href) ? true : undefined}
       role={disabled || !href ? 'link' : undefined}
-      onClick={onClick && !href ? (e) => onClickLink(e) : undefined}
+      onClick={onClick ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
       href={href || undefined}
       title={title || undefined}

@@ -66,6 +66,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -78,6 +79,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -114,6 +116,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -126,6 +129,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -137,6 +141,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -148,6 +153,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -159,6 +165,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -170,6 +177,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -184,6 +192,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -195,6 +204,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -206,6 +216,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -243,6 +254,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -254,6 +266,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -288,6 +301,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -299,6 +313,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -310,6 +325,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -321,6 +337,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -332,6 +349,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -343,6 +361,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                       <a
                         className="fr-sidemenu__link"
                         href="/"
+                        onClick={[Function]}
                         target="_self"
                       >
                         Accès direct niveau 3
@@ -357,6 +376,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -368,6 +388,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2
@@ -379,6 +400,7 @@ exports[`<SideMenu /> should render SideMenu properly 1`] = `
                 <a
                   className="fr-sidemenu__link"
                   href="/"
+                  onClick={[Function]}
                   target="_self"
                 >
                   Accès direct niveau 2

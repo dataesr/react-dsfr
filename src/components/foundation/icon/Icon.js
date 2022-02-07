@@ -10,7 +10,16 @@ import dataAttributes from '../../../utils/data-attributes';
  * @visibleName Icon
  */
 const Icon = ({
-  size, name, as, children, className, iconPosition, title, verticalAlign, color, ...remainingProps
+  size,
+  name,
+  as,
+  children,
+  className,
+  iconPosition,
+  title,
+  verticalAlign,
+  color,
+  ...remainingProps
 
 }) => {
   const iconRef = useRef();
@@ -24,23 +33,26 @@ const Icon = ({
     name,
     className,
   );
+
+  const isChildrenElement = children && children.props;
+  const newChildren = isChildrenElement ? children.props.children : children;
+
   const icon = title ? (
     <HTMLTag
       ref={iconRef}
       className={_className}
       title={title}
+      aria-hidden={!!newChildren}
       {...dataAttributes.getAll(remainingProps)}
     />
   ) : (
     <HTMLTag
       ref={iconRef}
       className={_className}
+      aria-hidden={!!newChildren}
       {...dataAttributes.getAll(remainingProps)}
     />
   );
-
-  const isChildrenElement = children && children.props;
-  const newChildren = isChildrenElement ? children.props.children : children;
 
   const childrenWithIcon = (
     <span>

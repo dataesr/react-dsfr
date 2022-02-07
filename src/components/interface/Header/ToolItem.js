@@ -11,7 +11,9 @@ const ToolItem = ({
   const { onOpenNav } = useContext(HeaderContext);
   const HtmlTag = `${as}`;
 
-  const closeNav = (e) => {
+  const onClickToolItem = (e) => {
+    e.preventDefault();
+    console.log('==== onClickToolItem ==== ');
     if (onClick) {
       onClick(e);
     }
@@ -23,14 +25,14 @@ const ToolItem = ({
     >
       {as ? (
         <HtmlTag
-          onClick={closeNav}
+          onClick={onClickToolItem}
           className={className}
         >
           {children}
         </HtmlTag>
       ) : (
         <Link
-          onClick={closeNav}
+          onClick={onClickToolItem}
           as={asLink}
           target={target}
           className={className}
@@ -39,7 +41,7 @@ const ToolItem = ({
           icon={icon}
           iconPosition="left"
           iconSize="1x"
-          href={link}
+          href={link || '#'}
         >
           {children}
         </Link>
@@ -66,8 +68,8 @@ ToolItem.propTypes = {
   ]),
   icon: PropTypes.string,
   /**
-   * html tag to render
-   */
+     * html tag to render
+     */
   as: PropTypes.oneOf(['p', 'span', 'div', '']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,

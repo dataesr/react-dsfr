@@ -6,7 +6,7 @@ import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
 
 /*
-* DSFR v1.3
+* DSFR v1.3.1
 */
 import '@gouvfr/dsfr/dist/component/pagination/pagination.css';
 

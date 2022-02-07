@@ -11,6 +11,7 @@ exports[`<Link /> renders correctly 1`] = `
   <span>
     test button
     <span
+      aria-hidden={true}
       className="ri-1x icon-right ds-fr--v-middle alert-fill"
     />
   </span>
