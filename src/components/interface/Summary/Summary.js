@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.3
+* DSFR v1.3.1
 */
 import '@gouvfr/dsfr/dist/component/summary/summary.css';
 

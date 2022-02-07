@@ -7,7 +7,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.3
+* DSFR v1.3.1
 */
 import '@gouvfr/dsfr/dist/component/form/form.css';
 import '@gouvfr/dsfr/dist/component/input/input.css';
