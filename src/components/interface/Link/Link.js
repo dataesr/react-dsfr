@@ -53,7 +53,7 @@ const Link = ({
     <a
       aria-disabled={(disabled || !href) ? true : undefined}
       role={disabled || !href ? 'link' : undefined}
-      onClick={onClick && !href ? (e) => onClickLink(e) : undefined}
+      onClick={onClick ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
       href={href || undefined}
       title={title || undefined}

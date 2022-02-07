@@ -41,6 +41,7 @@ exports[`<Modal /> should render modal properly 1`] = `
             >
               <span>
                 <span
+                  aria-hidden="true"
                   class="ri-lg icon-left ds-fr--v-middle ri-arrow-right-line"
                 />
                 I am a title
