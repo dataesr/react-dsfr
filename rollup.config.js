@@ -6,6 +6,7 @@ import image from '@rollup/plugin-image';
 import { terser } from 'rollup-plugin-terser';
 import svgr from '@svgr/rollup';
 import pkg from './package.json';
+import dts from 'rollup-plugin-dts';
 
 const MODE = [
   {
@@ -59,6 +60,12 @@ MODE.forEach((m) => {
     ],
   };
   config.push(conf);
+});
+
+config.push({
+  input: "src/index.d.ts",
+  output: [{ file: "dist/index.d.ts", format: "es" }],
+  plugins: [dts()],
 });
 
 export default [
