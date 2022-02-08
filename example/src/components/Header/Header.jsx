@@ -52,11 +52,11 @@ const HeaderExample = () => {
             <ToolItemGroup>
               <ToolItem
                 icon="ri-lock-line"
-                asLink={<RouterLink to="myNavItem" />}
+                asLink={<RouterLink to="/myNavItem" />}
               >
-                Example
+                react-router-dom Link
               </ToolItem>
-              <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
+              <ToolItem icon="ri-lock-line" link="/path">Link to /path</ToolItem>
               <ToolItem onClick={() => setIsOpen(true)}>
                 <span
                   className="fr-fi-theme-fill fr-link--icon-left"

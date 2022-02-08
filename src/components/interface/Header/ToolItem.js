@@ -13,12 +13,13 @@ const ToolItem = ({
 
   const onClickToolItem = (e) => {
     e.preventDefault();
-    console.log('==== onClickToolItem ==== ');
+
     if (onClick) {
       onClick(e);
     }
     onOpenNav(false);
   };
+
   return (
     <li
       {...dataAttributes.getAll(remainingProps)}
@@ -32,7 +33,7 @@ const ToolItem = ({
         </HtmlTag>
       ) : (
         <Link
-          onClick={onClickToolItem}
+          onClick={onClick ? onClickToolItem : undefined}
           as={asLink}
           target={target}
           className={className}
@@ -41,7 +42,7 @@ const ToolItem = ({
           icon={icon}
           iconPosition="left"
           iconSize="1x"
-          href={link || '#'}
+          href={onClick && !link ? '/' : link}
         >
           {children}
         </Link>
