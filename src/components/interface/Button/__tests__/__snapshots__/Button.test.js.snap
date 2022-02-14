@@ -14,7 +14,7 @@ exports[`<Button /> renders correctly 1`] = `
     test button
     <span
       aria-hidden={true}
-      className="ri-2x icon-right ds-fr--v-sub ri-alert-fill"
+      className="ri-xl icon-right ds-fr--v-sub ri-alert-fill"
     />
   </span>
 </button>
