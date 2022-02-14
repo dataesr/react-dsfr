@@ -2,6 +2,7 @@ Le bandeau permet le recueil du consentement des utilisateurs à l’arrivée su
 
 ```jsx
 
+import { useState } from 'react';
 import ConsentManager  from '.';
 
 const [isModalOpen, setIsModalOpen] = useState(false);

@@ -10,7 +10,7 @@ import '@gouvfr/dsfr/dist/component/link/link.css';
 
 /**
  *
- * @visibleName Link
+ * @visibleName File
  */
 const File = ({
   className,

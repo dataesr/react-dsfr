@@ -13,7 +13,7 @@ import colorFamilies from '../../../utils/variables';
 
 /**
  *
- * @visibleName Alert
+ * @visibleName Badge
  */
 const Badge = ({
   className,
