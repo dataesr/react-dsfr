@@ -9,13 +9,13 @@ const ButtonExample = () => (
     <ButtonGroup isEquisized isInlineFrom="md">
       <Button
         submit
-        icon="fr-fi-check-line"
+        icon="ri-check-line"
       >
         Valider
       </Button>
       <Button
         secondary
-        icon="fr-fi-close-line"
+        icon="ri-close-line"
       >
         Annuler
       </Button>

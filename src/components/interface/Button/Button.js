@@ -17,7 +17,7 @@ import useTheme from '../SwitchTheme/useTheme';
 const iconSize = {
   sm: 'lg',
   md: 'lg',
-  lg: '2x',
+  lg: 'xl',
 };
 
 /**

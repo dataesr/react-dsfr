@@ -67,13 +67,13 @@ import ButtonGroup from './ButtonGroup';
     <Button
         submit
         data-test-id="save-profile-button"
-        icon="fr-fi-check-line"
+        icon="ri-check-line"
     >
         Valider
     </Button>
     <Button
         secondary
-        icon="fr-fi-close-line"
+        icon="ri-close-line"
     >
         Annuler
     </Button>

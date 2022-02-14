@@ -71,13 +71,24 @@ npm start
 
 #### Use Icons
 
+We are using [remixicon](https://remixicon.com/).
+
+```
+ <Icon
+    name="ri-bubble-chart-line"
+    size="lg"
+    color="#f88"
+    iconPosition="right"
+>
+    <p>I have an icon</p>
+</Icon>
+```
+
 :warning: CDN link of css must be added to the `<head>` of your website.
 
 ```
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 ```
-
-We are using [remixicon](https://remixicon.com/).
 
 #### Use Colors
 
