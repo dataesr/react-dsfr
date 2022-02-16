@@ -11,7 +11,7 @@ export * from "./Checkbox";
 export * from "./ConsentManager";
 export * from "./File";
 export * from "./Footer";
-export { Header, HeaderBody, HeaderNav, HeaderOperator } from "./Header"; // createContext breaks d.ts file
+export * from "./Header";
 export * from "./Highlight";
 export * from "./Link";
 export * from "./Logo";
