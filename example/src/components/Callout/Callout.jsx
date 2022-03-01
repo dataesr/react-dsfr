@@ -8,6 +8,15 @@ const CalloutExample = () => (
   <Container fluid>
     <Row gutters>
       <Col n="12" spacing="py-2w">
+        <Callout hasInfoIcon={false}>
+          <CalloutTitle>List</CalloutTitle>
+          <CalloutText as="ul">
+            <li>#1</li>
+            <li>#2</li>
+          </CalloutText>
+        </Callout>
+      </Col>
+      <Col n="12" spacing="py-2w">
         <Callout>
           <CalloutTitle>Mise en avant</CalloutTitle>
           <CalloutText>Callout text that might be short and concise.</CalloutText>
