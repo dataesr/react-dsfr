@@ -31,7 +31,7 @@ CalloutText.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  as: PropTypes.oneOf(['p', 'ul']),
+  as: PropTypes.oneOf(['p', 'ul', 'div']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
 };
 CalloutText.defaultProps = {
