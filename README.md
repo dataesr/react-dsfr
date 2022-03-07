@@ -37,23 +37,6 @@ Visit [http://localhost:6060](http://localhost:6060).
 
 The complete styleguide is available online [https://dataesr.github.io/react-dsfr/](https://dataesr.github.io/react-dsfr/).
 
-### Npm package
-
-#### Generate /dist folder containing bundles
-
-> [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
-
-```bash
-yarn build
-```
-
-#### Generate and watch /dist folder containing bundles
-
-```bash
-npm install
-npm start
-```
-
 #### Example page
 
 > A playground to test components
@@ -73,24 +56,6 @@ We are using [remixicon](https://remixicon.com/).
 :warning: CDN link of css must be added to the `<head>` of your website.
 
 `<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
-
-#### Publish it on npm registry
-
-First update the version number in `package.json`
-
-```bash
-npm i --package-lock-only
-npm login
-npm publish --tag latest --access public
-```
-
-Visit [http://localhost:3000](http://localhost:3000).
-
-#### Test your node module before you publish 
-
-```bash
-npm link @dataesr/react-dsfr
-```
 
 #### Help from outside
 
@@ -138,3 +103,10 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 ### They use react-dsfr and we like it!
 
 [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
+
+### Release policy
+
+The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
+
+Merging code on the `master` branch will automatically bump the version, produce a changelog, and publish a new release if new semantic commits are found (commit message prefixed with `fix: ` or `feat: `). See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
+
