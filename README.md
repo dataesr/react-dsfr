@@ -164,6 +164,7 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 * [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr)
 * [DashLord](https://dashlord.incubateur.net)
+* [Baromètre de la Science Ouverte](https://barometredelascienceouverte.esr.gouv.fr)
 * [Enfants du spectacle](https://enfants-du-spectacle.fabrique.social.gouv.fr)
 * [Mon Psy](https://monpsy.sante.gouv.fr)
 * [Transitions collectives](https://transitions-collectives.fabrique.social.gouv.fr)
