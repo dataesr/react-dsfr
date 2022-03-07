@@ -162,8 +162,14 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 ### They use react-dsfr and we like it!
 
-* [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
-* [DashLord beta.gouv.fr](https://dashlord.incubateur.net/#/)
+* [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr)
+* [DashLord](https://dashlord.incubateur.net)
+* [Enfants du spectacle](https://enfants-du-spectacle.fabrique.social.gouv.fr)
+* [Mon Psy](https://monpsy.sante.gouv.fr)
+* [Transitions collectives](https://transitions-collectives.fabrique.social.gouv.fr)
+* [Immersion facile](https://immersion-facile.beta.gouv.fr)
+* [Bilans climat simplifiés](https://bilans-climat-simplifies.ademe.fr)
+* [Zero logement vacant](https://zerologementvacant.beta.gouv.fr)
 
 ### TODO
 * To limit usage of colors to colorFamilies
