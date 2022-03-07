@@ -6,7 +6,7 @@ export type CalloutTextClassName = string | Object | any[];
 
 export type CalloutTextSize = "xs" | "sm" | "md" | "lg" | "xl";
 
-export type CalloutTextAs = "p" | "ul";
+export type CalloutTextAs = "p" | "ul" | "div";
 
 export interface CalloutTextProps {
     children: CalloutTextChildren;
