@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/radios.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/radio/radio.css';
 
 /**
  *
@@ -23,17 +26,14 @@ const Radio = ({
   size,
   imageURL,
   value,
-  name,
-  checked,
-  required,
-  isDisabled,
+  defaultChecked,
+  svg,
   ...remainingProps
 }) => {
-  const [radioId, setRadioId] = useState(id || uuidv4());
-  const [messageId] = useState(uuidv4());
+  const radioId = useRef(id || uuidv4());
 
   useEffect(() => {
-    setRadioId(id || uuidv4());
+    radioId.current = id || uuidv4();
   }, [id]);
 
   const messageClasses = messageType !== '' ? `fr-radio-group--${messageType}` : null;
@@ -56,29 +56,32 @@ const Radio = ({
   };
 
   return (
-    <div className={_className} {...dataAttributes(remainingProps)}>
+    <div className={_className} {...dataAttributes.getAll(remainingProps)}>
       <input
+        {...dataAttributes.filterAll(remainingProps)}
         type="radio"
-        id={radioId}
+        id={radioId.current}
         onChange={handleChange}
         value={value}
-        name={name}
-        defaultChecked={checked}
-        disabled={isDisabled}
-        required={required}
+        defaultChecked={defaultChecked || undefined}
       />
       <label
         className={_labelClassName}
-        htmlFor={radioId}
+        htmlFor={radioId.current}
         style={
-          (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
-        }
+                    (imageURL && { backgroundImage: `url(${imageURL})` }) || undefined
+                }
       >
         {label}
       </label>
+      {svg && isExtended && (
+        <div className="fr-radio-rich__img" data-fr-inject-svg>
+            {svg}
+        </div>
+      )}
       {hint && <span className="fr-hint-text">{hint}</span>}
       {message && messageType && (
-        <p id={messageId} className={`fr-${messageType}-text`}>
+        <p className={`fr-${messageType}-text`}>
           {message}
         </p>
       )}
@@ -92,15 +95,15 @@ Radio.defaultProps = {
   id: '',
   isExtended: false,
   size: 'md',
-  onChange: () => {},
-  onGroupChange: () => {},
+  onChange: () => {
+  },
+  onGroupChange: () => {
+  },
   messageType: '',
   message: '',
   imageURL: '',
-  name: undefined,
-  checked: undefined,
-  required: false,
-  isDisabled: false,
+  defaultChecked: false,
+  svg: null,
 };
 
 Radio.propTypes = {
@@ -109,8 +112,13 @@ Radio.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   id: PropTypes.string,
+  svg: PropTypes.node,
   isExtended: PropTypes.bool,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,
@@ -119,11 +127,8 @@ Radio.propTypes = {
   onGroupChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
   imageURL: PropTypes.string,
-  name: PropTypes.string,
   value: PropTypes.string.isRequired,
-  checked: PropTypes.bool,
-  required: PropTypes.bool,
-  isDisabled: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
 };
 
 export default Radio;

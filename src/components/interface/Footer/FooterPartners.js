@@ -1,30 +1,39 @@
-import React from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const FooterPartners = ({ children, className, ...remainingProps }) => {
-  const title = children.filter(
+  const title = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersTitle',
   );
-  const mainLogos = children.filter(
+  const mainLogos = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersLogo' && child.props.isMain,
   );
-  const subLogos = children.filter(
+  const subLogos = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersLogo' && !child.props.isMain,
   );
   return (
     <div
       className={classNames('fr-footer__partners', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {title}
       <div className="fr-footer__partners-logos">
         {mainLogos && (
-          <div className="fr-footer__partners-main">{mainLogos}</div>
+        <div className="fr-footer__partners-main">{mainLogos}</div>
         )}
-        {subLogos && <div className="fr-footer__partners-sub">{subLogos}</div>}
+        {subLogos && (
+        <div className="fr-footer__partners-sub">
+          <ul>
+            {subLogos.map((subLogo, i) => {
+              const id = i + 1;
+              return <li key={`${subLogo.imageSrc}-${id}`}>{subLogo}</li>;
+            })}
+          </ul>
+        </div>
+        )}
       </div>
     </div>
   );

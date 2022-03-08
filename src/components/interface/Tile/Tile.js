@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/tiles.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/tile/tile.css';
 
 /**
  *
@@ -15,20 +17,55 @@ const Tile = ({
   className,
   horizontalMedium,
   verticalMedium,
+  onClick,
+  ariaLabel,
   children,
-  scheme,
+  color,
   ...remainingProps
 }) => {
-  const _className = classNames('fr-tile fr-enlarge-link', {
+  const tileRef = useRef();
+  const _className = classNames('fr-tile fr-tile--grey fr-enlarge-link', {
     'fr-tile--horizontal': horizontal,
     'fr-tile--horizontal-md': !horizontal && horizontalMedium,
     'fr-tile--vertical-md': verticalMedium && horizontal,
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
+
+  const onTileClick = (e) => {
+    e.preventDefault();
+    onClick(e);
+  };
+
+  useEffect(() => {
+    if (color && tileRef.current) {
+      tileRef.current.style.boxShadow = `inset 0 0 0 1px var(--border-default-grey),inset 0 -.25rem 0 0 ${color}`;
+    }
+  }, [color]);
+
+  const divButton = {
+    true: {
+      tabIndex: '0',
+      role: 'button',
+      click: (e) => onTileClick(e),
+    },
+    false: {
+      tabIndex: undefined,
+      role: undefined,
+      click: undefined,
+    },
+  };
+  const { role, tabIndex, click } = divButton[!!onClick];
+
   return (
+  // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
+      ref={tileRef}
+      role={role}
+      tabIndex={tabIndex}
+      aria-label={ariaLabel || undefined}
+      onClick={click}
+      onKeyDown={click}
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </div>
@@ -37,10 +74,12 @@ const Tile = ({
 
 Tile.defaultProps = {
   className: '',
-  scheme: '',
+  color: '',
+  ariaLabel: '',
   horizontal: false,
   verticalMedium: false,
   horizontalMedium: false,
+  onClick: null,
 };
 
 Tile.propTypes = {
@@ -50,19 +89,21 @@ Tile.propTypes = {
     PropTypes.array,
   ]),
   /**
-   * Source of the image — size is fixed 80x80
-   */
+     * Source of the image — size is fixed 80x80
+     */
   horizontal: PropTypes.bool,
+  color: PropTypes.string,
   verticalMedium: PropTypes.bool,
   horizontalMedium: PropTypes.bool,
   /**
-   * One of: node, arrayOf(node), string
-   */
+     * One of: node, arrayOf(node), string
+     */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  scheme: PropTypes.oneOf(SCHEMES),
+  onClick: PropTypes.func,
+  ariaLabel: PropTypes.string,
 };
 
 export default Tile;

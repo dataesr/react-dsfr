@@ -1,4 +1,6 @@
-import React, { useCallback, useState, useRef } from 'react';
+import React, {
+  useCallback, useState, useRef, Children, cloneElement,
+} from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,30 +12,36 @@ import useOnClickOutside from '../../../hooks/useOnClickOutside';
 const MegaNavItem = ({
   children, title, linkLabel, link, current, as, description, closeButtonLabel, ...remainingProps
 }) => {
-  const Tag = `${as}`;
-  const id = uuidv4();
+  const HTMLTag = `${as}`;
+  const id = useRef(uuidv4());
   const [isExpanded, setIsExpanded] = useState(false);
   const { item, collapse } = useCollapse(null, isExpanded, 'fr-mega-menu');
   const expandedRef = useRef(null);
   const buttonRef = useRef(null);
   const close = useCallback((e) => {
-    if ((buttonRef?.current !== e.target) && isExpanded) {
+    if ((buttonRef && buttonRef.current !== e.target) && isExpanded) {
       setIsExpanded(false);
     }
   }, [isExpanded]);
   useOnClickOutside(expandedRef, close);
 
+  const subItems = Children.toArray(children).map((child) => cloneElement(child, {
+    onClick: () => {
+      setIsExpanded(false);
+    },
+  }));
+
   return (
     <li
       className="fr-nav__item"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={buttonRef}
         onClick={() => setIsExpanded(!isExpanded)}
         type="button"
         aria-expanded={isExpanded}
-        aria-controls={id}
+        aria-controls={id.current}
         aria-current={current || undefined}
         className="fr-nav__btn"
         aria-label="ouvrir la navigation"
@@ -42,7 +50,7 @@ const MegaNavItem = ({
       </button>
       <div
         ref={expandedRef}
-        id={id}
+        id={id.current}
         className={item.class}
         style={{ maxHeight: item.stateHeight, '--collapse': collapse, padding: 0 }}
       >
@@ -58,7 +66,7 @@ const MegaNavItem = ({
           <div className="fr-grid-row fr-grid-row-lg--gutters">
             <div className="fr-col-12 fr-col-lg-8 fr-col-offset-lg-4--right">
               <div className="fr-mega-menu__leader">
-                <Tag className="fr-h4 fr-mb-2v">{title}</Tag>
+                <HTMLTag className="fr-h4 fr-mb-2v">{title}</HTMLTag>
                 {description && <p className="fr-hidden fr-displayed-lg">{description}</p>}
                 {link && linkLabel && (
                 <Link
@@ -70,7 +78,7 @@ const MegaNavItem = ({
                 )}
               </div>
             </div>
-            {children}
+            {subItems}
           </div>
         </div>
       </div>

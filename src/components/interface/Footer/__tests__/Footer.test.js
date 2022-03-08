@@ -11,6 +11,7 @@ import {
   FooterPartnersTitle,
   FooterPartnersLogo,
   Footer,
+  FooterOperator,
 } from '..';
 import Logo from '../../Logo';
 
@@ -59,6 +60,9 @@ describe('<Footer />', () => {
           <Logo splitCharacter={10} data-testid="footerlogo">
             Ministère de l&apos;enseignement supérieur de la rechercher et de l&apos;innovation
           </Logo>
+          <FooterOperator>
+            <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
+          </FooterOperator>
           <FooterBodyItem>
             legifrance.gouv.fr
           </FooterBodyItem>

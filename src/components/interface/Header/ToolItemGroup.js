@@ -13,11 +13,11 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
   useEffect(() => {
     setMenuLinkElement(document.querySelector('.fr-header__menu .fr-links-group'));
-  }, [shortcutClassName, setMenuLinkElement, menuLinkElement]);
+  }, [shortcutClassName, setMenuLinkElement, menuLinkElement, isMobile]);
 
   return (
     <div
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
       <div className={classNames(className, 'fr-header__tools-links')}>

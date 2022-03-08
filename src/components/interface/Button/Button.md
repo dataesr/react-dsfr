@@ -62,14 +62,21 @@ import ButtonGroup from './ButtonGroup';
     size="sm"
     isEquisized
     align="center"
-    isInlineFrom="md">
-  <Button
-    secondary 
-    title="title">secondary sm button
-  </Button>
-  <Button
-    title="title">sm button
-  </Button>
+    isInlineFrom="md"
+>
+    <Button
+        submit
+        data-test-id="save-profile-button"
+        icon="ri-check-line"
+    >
+        Valider
+    </Button>
+    <Button
+        secondary
+        icon="ri-close-line"
+    >
+        Annuler
+    </Button>
 </ButtonGroup>
 ```
 

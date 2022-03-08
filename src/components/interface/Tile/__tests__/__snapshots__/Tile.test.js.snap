@@ -2,14 +2,14 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="fr-tile fr-enlarge-link fr-tile--horizontal my-class"
+  className="fr-tile fr-tile--grey fr-enlarge-link fr-tile--horizontal my-class"
   data-testid="tile"
 >
   <div
     className="fr-tile__body"
     data-test-id="tilebody"
   >
-    <p
+    <h3
       className="fr-tile__title"
     >
       <a
@@ -20,7 +20,7 @@ exports[`<Tile /> renders correctly 1`] = `
       >
         title
       </a>
-    </p>
+    </h3>
     <p
       className="fr-tile__desc"
     >

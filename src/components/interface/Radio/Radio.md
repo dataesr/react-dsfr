@@ -12,6 +12,7 @@ import { RadioGroup, Radio } from '.';
   <Radio
     label="Label radio 1"
     value="value-1"
+    defaultChecked
   />
   <Radio
     label="Label radio 2"
@@ -30,7 +31,7 @@ import { RadioGroup, Radio } from '.';
 
 <RadioGroup
   legend="Legend"
-  isDisabled
+  disabled
 >
   <Radio
     label="Label Radio 1"
@@ -61,7 +62,7 @@ import { RadioGroup, Radio } from '.';
   <Radio
     label="Label Radio 2"
     value="value-2"
-    isDisabled
+    disabled
   />
   <Radio
     label="Label radio 3"

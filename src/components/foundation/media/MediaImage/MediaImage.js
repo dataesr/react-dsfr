@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import dataAttributes from '../../../../utils/data-attributes';
 
 /**
  *
@@ -12,6 +13,7 @@ const MediaImage = ({
   legend,
   size,
   src,
+  ...remainingProps
 }) => {
   const _className = classNames(
     'fr-content-media',
@@ -21,8 +23,8 @@ const MediaImage = ({
 
   return (
     <figure
+      {...dataAttributes.getAll(remainingProps)}
       className={_className}
-      data-testid="image"
     >
       <div className="fr-content-media__img">
         <img src={src} alt={alt} />

@@ -1,0 +1,299 @@
+:root {
+  --blue-france-main-525: #6a6af4;
+  --blue-france-113: #000091;
+  --blue-france-975: #f5f5fe;
+  --blue-france-950: #ececfe;
+  --blue-france-925: #e3e3fd;
+  --blue-france-850: #cacafb;
+
+  --red-marianne-main-472: #e1000f;
+  --red-marianne-425: #c9191e;
+  --red-marianne-975: #fef4f4;
+  --red-marianne-950: #fee9e9;
+  --red-marianne-925: #fddede;
+  --red-marianne-850: #fcbfbf;
+
+  --grey-main-525: #7b7b7b;
+  --grey-425: #666666;
+  --grey-1000: #ffffff;
+  --grey-975: #f6f6f6;
+  --grey-950: #eeeeee;
+  --grey-925: #e5e5e5;
+  --grey-850: #cecece;
+  --grey-50: #161616;
+
+  --info-main-525: #0078f3;
+  --info-425: #0063cb;
+  --info-975: #f4f6ff;
+  --info-950: #e8edff;
+  --info-925: #dde5ff;
+  --info-850: #bccdff;
+
+  --success-main-525: #1f8d49;
+  --success-425: #18753c;
+  --success-975: #dffee6;
+  --success-950: #b8fec9;
+  --success-925: #88fdaa;
+  --success-850: #3bea7e;
+
+  --warning-main-525: #d64d00;
+  --warning-425: #b34000;
+  --warning-975: #fff4f3;
+  --warning-950: #ffe9e6;
+  --warning-925: #ffded9;
+  --warning-850: #ffbeb4;
+
+  --error-main-525: #f60700;
+  --error-425: #ce0500;
+  --error-975: #fff4f4;
+  --error-950: #ffe9e9;
+  --error-925: #ffdddd;
+  --error-850: #ffbdbd;
+
+  --green-tilleul-verveine-main-707: #B7A73F;
+  --green-tilleul-verveine-418: #66673D;
+  --green-tilleul-verveine-975: #fef7da;
+  --green-tilleul-verveine-950: #fceeac;
+  --green-tilleul-verveine-925: #fbe769;
+  --green-tilleul-verveine-850: #e2cf58;
+
+  --green-bourgeon-main-640: #68A532;
+  --green-bourgeon-425: #447049;
+  --green-bourgeon-975: #e6feda;
+  --green-bourgeon-950: #c9fcac;
+  --green-bourgeon-925: #a9fb68;
+  --green-bourgeon-850: #95e257;
+
+  --green-emeraude-main-632: #00A95F;
+  --green-emeraude-425: #297254;
+  --green-emeraude-975: #e3fdeb;
+  --green-emeraude-950: #c3fad5;
+  --green-emeraude-925: #9ef9be;
+  --green-emeraude-850: #6fe49d;
+
+  --green-menthe-main-548: #009081;
+  --green-menthe-373: #37635f;
+  --green-menthe-975: #dffdf7;
+  --green-menthe-950: #bafaee;
+  --green-menthe-925: #8bf8e7;
+  --green-menthe-850: #73e0cf;
+
+  --green-archipel-main-557: #009099;
+  --green-archipel-391: #006A6F;
+  --green-archipel-975: #e5fbfd;
+  --green-archipel-950: #c7f6fc;
+  --green-archipel-925: #a6f2fa;
+  --green-archipel-850: #60e0eb;
+
+  --blue-ecume-main-400: #465F9D;
+  --blue-ecume-247: #2F4077;
+  --blue-ecume-975: #f4f6fe;
+  --blue-ecume-950: #e9edfe;
+  --blue-ecume-925: #dee5fd;
+  --blue-ecume-850: #bfccfb;
+
+  --blue-cumulus-main-526: #417DC4;
+  --blue-cumulus-368: #3558A2;
+  --blue-cumulus-975: #f3f6fe;
+  --blue-cumulus-950: #e6eefe;
+  --blue-cumulus-925: #dae6fd;
+  --blue-cumulus-850: #b6cffb;
+
+  --purple-glycine-main-494: #A558A0;
+  --purple-glycine-319: #6E445A;
+  --purple-glycine-975: #fef3fd;
+  --purple-glycine-950: #fee7fc;
+  --purple-glycine-925: #fddbfa;
+  --purple-glycine-850: #fbb8f6;
+
+  --pink-macaron-main-689: #E18B76;
+  --pink-macaron-406: #8D533E;
+  --pink-macaron-975: #fef4f2;
+  --pink-macaron-950: #fee9e6;
+  --pink-macaron-925: #fddfda;
+  --pink-macaron-850: #fcc0b4;
+
+  --pink-tuile-main-556: #CE614A;
+  --pink-tuile-425: #a94645;
+  --pink-tuile-975: #fef4f3;
+  --pink-tuile-950: #fee9e7;
+  --pink-tuile-925: #fddfdb;
+  --pink-tuile-850: #fcbfb7;
+
+  --yellow-tournesol-main-731: #C8AA39;
+  --yellow-tournesol-407: #716043;
+  --yellow-tournesol-975: #fef6e3;
+  --yellow-tournesol-950: #feecc2;
+  --yellow-tournesol-925: #fde39c;
+  --yellow-tournesol-850: #efcb3a;
+
+  --yellow-moutarde-main-679: #C3992A;
+  --yellow-moutarde-348: #695240;
+  --yellow-moutarde-975: #fef5e8;
+  --yellow-moutarde-950: #feebd0;
+  --yellow-moutarde-925: #fde2b5;
+  --yellow-moutarde-850: #fcc63a;
+
+  --orange-terre-battue-main-645: #E4794A;
+  --orange-terre-battue-370: #755348;
+  --orange-terre-battue-975: #fef4f2;
+  --orange-terre-battue-950: #fee9e5;
+  --orange-terre-battue-925: #fddfd8;
+  --orange-terre-battue-850: #fcc0b0;
+
+  --brown-cafe-creme-main-782: #D1B781;
+  --brown-cafe-creme-383: #685C48;
+  --brown-cafe-creme-975: #fbf6ed;
+  --brown-cafe-creme-950: #f7ecdb;
+  --brown-cafe-creme-925: #f4e3c7;
+  --brown-cafe-creme-850: #e7ca8e;
+
+  --brown-caramel-main-648: #C08C65;
+  --brown-caramel-425: #845d48;
+  --brown-caramel-975: #fbf5f2;
+  --brown-caramel-950: #f7ebe5;
+  --brown-caramel-925: #f3e2d9;
+  --brown-caramel-850: #eac7b2;
+
+  --brown-opera-main-680: #BD987A;
+  --brown-opera-395: #745B47;
+  --brown-opera-975: #fbf5f2;
+  --brown-opera-950: #f7ece4;
+  --brown-opera-925: #f3e2d7;
+  --brown-opera-850: #eac7ad;
+
+  --beige-gris-galet-main-702: #AEA397;
+  --beige-gris-galet-407: #6A6156;
+  --beige-gris-galet-975: #f9f6f2;
+  --beige-gris-galet-950: #f3ede5;
+  --beige-gris-galet-925: #eee4d9;
+  --beige-gris-galet-850: #e0cab0;
+}
+
+:root[data-fr-theme=dark] {
+  --info-moon-625: #518fff;
+  --info-moon-200: #273961;
+  --info-moon-125: #222a3f;
+  --info-moon-100: #1d2437;
+  --info-moon-75: #171d2e;
+
+  --success-moon-625: #27a658;
+  --success-moon-200: #204129;
+  --success-moon-125: #1e2e22;
+  --success-moon-100: #19271d;
+  --success-moon-75: #142117;
+
+  --warning-moon-625: #fc5d00;
+  --warning-moon-200: #5d2c20;
+  --warning-moon-125: #3e231e;
+  --warning-moon-100: #361e19;
+  --warning-moon-75: #2d1814;
+
+  --error-moon-625: #ff5655;
+  --error-moon-200: #642626;
+  --error-moon-125: #412121;
+  --error-moon-100: #391c1c;
+  --error-moon-75: #301717;
+
+  --green-tilleul-verveine-moon-817: #D8C634;
+  --green-tilleul-verveine-moon-200: #3f3a20;
+  --green-tilleul-verveine-moon-125: #2d2a1d;
+  --green-tilleul-verveine-moon-100: #272419;
+  --green-tilleul-verveine-moon-75: #201e14;
+
+  --green-bourgeon-moon-759: #99C221;
+  --green-bourgeon-moon-200: #2a401a;
+  --green-bourgeon-moon-125: #232d1d;
+  --green-bourgeon-moon-100: #1e2719;
+  --green-bourgeon-moon-75: #182014;
+
+  --green-emeraude-moon-753: #34CB6A;
+  --green-emeraude-moon-200: #21402c;
+  --green-emeraude-moon-125: #1e2e23;
+  --green-emeraude-moon-100: #19271e;
+  --green-emeraude-moon-75: #142018;
+
+  --green-menthe-moon-652: #21AB8E;
+  --green-menthe-moon-200: #223f3a;
+  --green-menthe-moon-125: #1f2d2a;
+  --green-menthe-moon-100: #1a2624;
+  --green-menthe-moon-75: #15201e;
+
+  --green-archipel-moon-716: #34BAB5;
+  --green-archipel-moon-200: #233e41;
+  --green-archipel-moon-125: #1f2c2e;
+  --green-archipel-moon-100: #1a2628;
+  --green-archipel-moon-75: #152021;
+
+  --blue-ecume-moon-675: #869ECE;
+  --blue-ecume-moon-200: #273962;
+  --blue-ecume-moon-125: #222940;
+  --blue-ecume-moon-100: #1d2437;
+  --blue-ecume-moon-75: #171d2f;
+
+  --blue-cumulus-moon-732: #7AB1E8;
+  --blue-cumulus-moon-200: #263b58;
+  --blue-cumulus-moon-125: #212a3a;
+  --blue-cumulus-moon-100: #1c2433;
+  --blue-cumulus-moon-75: #171e2b;
+
+  --purple-glycine-moon-630: #CE70CC;
+  --purple-glycine-moon-200: #502e4d;
+  --purple-glycine-moon-125: #332632;
+  --purple-glycine-moon-100: #2c202b;
+  --purple-glycine-moon-75: #251a24;
+
+  --pink-macaron-moon-833: #FFB7AE;
+  --pink-macaron-moon-200: #52312a;
+  --pink-macaron-moon-125: #352724;
+  --pink-macaron-moon-100: #2e211f;
+  --pink-macaron-moon-75: #261b19;
+
+  --pink-tuile-moon-750: #FF9575;
+  --pink-tuile-moon-200: #55302a;
+  --pink-tuile-moon-125: #372624;
+  --pink-tuile-moon-100: #2f211f;
+  --pink-tuile-moon-75: #281b19;
+
+  --yellow-tournesol-moon-922: #FFE552;
+  --yellow-tournesol-moon-200: #43391a;
+  --yellow-tournesol-moon-125: #302a1a;
+  --yellow-tournesol-moon-100: #292416;
+  --yellow-tournesol-moon-75: #221d11;
+
+  --yellow-moutarde-moon-860: #FFCA00;
+  --yellow-moutarde-moon-200: #453820;
+  --yellow-moutarde-moon-125: #30291d;
+  --yellow-moutarde-moon-100: #2a2319;
+  --yellow-moutarde-moon-75: #231d14;
+
+  --orange-terre-battue-moon-672: #FF732C;
+  --orange-terre-battue-moon-200: #543125;
+  --orange-terre-battue-moon-125: #382621;
+  --orange-terre-battue-moon-100: #31201c;
+  --orange-terre-battue-moon-75: #281a16;
+
+  --brown-cafe-creme-moon-885: #ECD7A2;
+  --brown-cafe-creme-moon-200: #423925;
+  --brown-cafe-creme-moon-125: #2e2a21;
+  --brown-cafe-creme-moon-100: #28241c;
+  --brown-cafe-creme-moon-75: #211d16;
+
+  --brown-caramel-moon-901: #FBD8AB;
+  --brown-caramel-moon-200: #4b3525;
+  --brown-caramel-moon-125: #332821;
+  --brown-caramel-moon-100: #2c221c;
+  --brown-caramel-moon-75: #251c16;
+
+  --brown-opera-moon-820: #E6BE92;
+  --brown-opera-moon-200: #493625;
+  --brown-opera-moon-125: #322821;
+  --brown-opera-moon-100: #2b221c;
+  --brown-opera-moon-75: #241c17;
+
+  --beige-gris-galet-moon-821: #D0C3B7;
+  --beige-gris-galet-moon-200: #433829;
+  --beige-gris-galet-moon-125: #2e2924;
+  --beige-gris-galet-moon-100: #28231f;
+  --beige-gris-galet-moon-75: #211d19;
+}

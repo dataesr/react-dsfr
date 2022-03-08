@@ -10,7 +10,7 @@ import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
-<Container spacing="m-4w" scheme="soft-yellow-medium">
+<Container spacing="m-4w">
   <Row alignItems="middle" spacing="p-4w">
     <Col spacing="p-2w m-6w">Column #1</Col>
     <Col>Column #2</Col>
@@ -26,7 +26,7 @@ import Container from './Container';
 import Row from './Row';
 import Col from './Col';
 
-<Container fluid scheme="blue-france-200">
+<Container fluid>
   <Row justifyContent="center" gutters>
     <Col>Column #1</Col>
     <Col spacing="ml-auto">Column #2</Col>
@@ -64,5 +64,28 @@ import Col from './Col';
       <Col offset="2">Column #1</Col>
       <Col>Column #2</Col>
   </Row>
+</Container>
+```
+
+#### Grille avec spacing
+```jsx
+import Container from './Container';
+import Row from './Row';
+import Col from './Col';
+
+<Container>
+    <Row>
+        <Col spacing='m-1w'>
+            Col margin 1w
+        </Col>
+        <Col spacing='m-0'>
+            Col margin 0
+        </Col>
+    </Row>
+    <Row>
+        <Col spacing='m-auto'>
+            Col margin auto
+        </Col>
+    </Row>
 </Container>
 ```

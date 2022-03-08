@@ -2,7 +2,6 @@ import React, { Children } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
 /**
@@ -14,11 +13,12 @@ const TagGroup = ({
   ...remainingProps
 }) => {
   const _className = classNames('fr-tags-group', className);
-  const childs = Children.toArray(children).map((child) => <li key={uuidv4()}>{child}</li>);
+  // eslint-disable-next-line react/no-array-index-key
+  const childs = Children.toArray(children).map((child, index) => <li key={index}>{child}</li>);
   return (
     <ul
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {childs}
     </ul>

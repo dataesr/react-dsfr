@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import Icon from '../../foundation/icon/index';
+
 import '../../foundation/icon/icons.css';
 
 const TabButton = (props) => {
@@ -29,7 +31,7 @@ const TabButton = (props) => {
   return (
     <li
       role="presentation"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={ref}
@@ -46,7 +48,10 @@ const TabButton = (props) => {
         onKeyDown={(e) => onKeyDownTab(e, index)}
       >
         {icon && (
-        <i className={classNames({ [icon]: icon })} />
+        <Icon
+          name={icon}
+          iconPosition="left"
+        />
         )}
         {label}
       </button>

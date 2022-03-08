@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/selects.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/select/select.css';
 
 /**
  *
@@ -21,7 +24,7 @@ const SelectWrapper = ({
   children,
   ...remainingProps
 }) => {
-  const [messageId] = useState(uuidv4());
+  const hintId = useRef(uuidv4());
   const _classNameWrapper = classNames('fr-select-group', {
     [`fr-select-group--${messageType}`]: messageType,
   }, className);
@@ -29,23 +32,23 @@ const SelectWrapper = ({
   return (
     <div
       className={_classNameWrapper}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {
       label && (
         <label
           className="fr-label"
           htmlFor={selectId}
-          aria-describedby={messageId}
+          aria-describedby={hint && hintId.current}
         >
           {label}
           {required && <span className="error"> *</span>}
-          {hint && <span className="fr-hint-text" id={`${selectId}-desc-hint`}>{hint}</span>}
+          {hint && <span id={hintId.current} className="fr-hint-text">{hint}</span>}
         </label>
       )
       }
       {children}
-      {(message && messageType) && <p id={messageId} className={`fr-${messageType}-text`}>{message}</p>}
+      {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );
 };
@@ -65,7 +68,11 @@ SelectWrapper.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   selectId: PropTypes.string.isRequired,
   label: PropTypes.string,
   message: PropTypes.string,

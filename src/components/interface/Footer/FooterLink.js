@@ -6,17 +6,25 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const FooterLink = ({
-  children, href, section, className, asLink, onClick, ...remainingProps
+  children,
+  href,
+  section,
+  className,
+  asLink,
+  onClick,
+  target,
+  ...remainingProps
 }) => (
   <li
     className={classNames(`fr-footer__${section}-item`, className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <Link
       as={asLink}
       href={href}
       className={`fr-footer__${section}-link`}
       onClick={onClick}
+      target={target}
     >
       {children}
     </Link>
@@ -30,6 +38,7 @@ FooterLink.defaultProps = {
   asLink: null,
   href: '',
   onClick: undefined,
+  target: '_self',
 };
 
 FooterLink.propTypes = {
@@ -45,6 +54,7 @@ FooterLink.propTypes = {
     PropTypes.array,
   ]),
   asLink: PropTypes.element,
+  target: PropTypes.string,
 };
 
 export default FooterLink;

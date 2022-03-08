@@ -1,6 +1,6 @@
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Button from '../Button';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -33,6 +33,7 @@ describe('<Button />', () => {
     const component = renderer
       .create(
         <Button
+          id="nice-button"
           icon={initialProps.icon}
           iconPosition={initialProps.iconPosition}
           secondary={initialProps.secondary}

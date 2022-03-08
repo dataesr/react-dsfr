@@ -10,7 +10,7 @@ exports[`<RadioGroup /> renders correctly 1`] = `
     disabled={false}
   >
     <legend
-      className="fr-fieldset__legend"
+      className="fr-fieldset__legend fr-text--regular"
     >
       Légende pour l’ensemble de champs
     </legend>
@@ -23,8 +23,6 @@ exports[`<RadioGroup /> renders correctly 1`] = `
         data-testid="radio 1"
       >
         <input
-          defaultChecked={false}
-          disabled={false}
           id="xxxxxxx"
           name="radio-test"
           onChange={[Function]}
@@ -46,8 +44,6 @@ exports[`<RadioGroup /> renders correctly 1`] = `
         data-test-id="radio 2"
       >
         <input
-          defaultChecked={false}
-          disabled={false}
           name="radio-test"
           onChange={[Function]}
           required={false}

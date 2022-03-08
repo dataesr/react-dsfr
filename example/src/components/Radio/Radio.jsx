@@ -5,7 +5,7 @@ import {
 } from '@dataesr/react-dsfr';
 
 const RadioExample = () => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('value-2');
   return (
     <Col>
       <Row>
@@ -31,6 +31,14 @@ const RadioExample = () => {
               onChange={() => {
               }}
               value="value-3"
+              defaultChecked
+            />
+            <Radio
+              label="Disabled radio"
+              onChange={() => {
+              }}
+              value="value-4"
+              disabled
             />
           </RadioGroup>
         </Col>

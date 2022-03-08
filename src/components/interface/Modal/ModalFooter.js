@@ -7,7 +7,7 @@ import typeValidation from '../../../utils/type-validation';
 const ModalFooter = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames('fr-modal__footer', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </div>

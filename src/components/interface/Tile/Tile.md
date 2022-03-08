@@ -2,6 +2,8 @@
 
 La tuile est un point d’entrée qui redirige les utilisateurs vers des pages de contenu. Elle fait partie d'une collection et n’est jamais présentée de manière isolée.
 
+By default, Tile component is in grey mode with `fr-tile--grey` class.
+
 ### Tuile horizontale par défaut et verticale en desktop
 ```jsx
 
@@ -25,7 +27,7 @@ import { Tile, TileBody, TileImage } from '.';
 
 import { Tile, TileBody, TileImage } from '.';
 
-<Tile horizontalMedium={true} scheme="soft-orange-dark">
+<Tile horizontalMedium={true}>
     <TileBody
         title="Tile Title"
         description="Tile description"

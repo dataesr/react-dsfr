@@ -2,21 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
-import { SCHEMES } from '../../../utils/constants';
-import '@gouvfr/dsfr/dist/css/utilities.min.css';
 
 /**
  *
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, scheme, className, role, spacing,
+  fluid, children, className, role, spacing,
 }) => {
   const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
     'fr-container': !fluid,
     'fr-container-fluid': fluid,
-    [`fr-scheme-${scheme}`]: scheme,
   }, className);
   return <div role={role || undefined} className={_className}>{children}</div>;
 };
@@ -24,10 +21,9 @@ const Container = ({
 Container.defaultProps = {
   fluid: false,
   className: '',
-  scheme: '',
   role: '',
   children: null,
-  spacing: null,
+  spacing: '',
 };
 
 Container.propTypes = {
@@ -50,7 +46,6 @@ Container.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  scheme: PropTypes.oneOf(SCHEMES),
 };
 
 export default Container;

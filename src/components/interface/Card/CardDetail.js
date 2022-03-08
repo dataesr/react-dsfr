@@ -7,7 +7,7 @@ import typeValidation from '../../../utils/type-validation';
 const CardDetail = ({ children, className, ...remainingProps }) => (
   <p
     className={classNames('fr-card__detail', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     {children}
   </p>

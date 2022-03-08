@@ -5,7 +5,12 @@ import Pagination from '../Pagination';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/table.min.css';
+import './table.css';
+
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/table/table.css';
 
 /**
  *
@@ -25,19 +30,25 @@ const Table = ({
   data,
   rowKey,
   pagination,
+  paginationPosition,
   perPage,
   page,
   setPage,
   surrendingPages,
   ...remainingProps
 }) => {
-  const _className = classNames('fr-table', {
-    'fr-table--no-caption': (captionPosition === 'none'),
-    'fr-table--caption-bottom': (captionPosition === 'bottom'),
-    'fr-table--bordered': bordered,
-    'fr-table--no-scroll': noScroll,
-    'fr-table--layout-fixed': fixedLayout,
-  }, className);
+  const _className = classNames(
+    'fr-table',
+    {
+      'fr-table--no-caption': (captionPosition === 'none'),
+      'fr-table--caption-bottom': (captionPosition === 'bottom'),
+      'fr-table--bordered': bordered,
+      'fr-table--no-scroll': noScroll,
+      'fr-table--layout-fixed': fixedLayout,
+      [`fr-react-table--pagination-${paginationPosition}`]: pagination,
+    },
+    className,
+  );
 
   const [internalPage, setInternalPage] = useState(1);
   const [sort, setSort] = useState();
@@ -73,13 +84,29 @@ const Table = ({
     });
   }
 
+  const getSortIcon = (column) => {
+    if (sort && sort.column.name === column.name) {
+      return sort.direction === 'dsc'
+        ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
+        : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />;
+    }
+
+    return <span className="empty-sort-icon" />;
+  };
+
+  const getRowKey = typeof rowKey === 'string' ? (row) => row[rowKey] : rowKey;
+
+  if (pagination) {
+    sortedData = sortedData.slice((currentPage - 1) * perPage, currentPage * perPage);
+  }
+
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <table id={tableID || undefined} className={tableClassName || undefined}>
-        <caption data-testid="table-caption">{caption}</caption>
+        <caption>{caption}</caption>
         <thead>
           <tr key="headers">
             {columns.map((column) => (
@@ -93,21 +120,18 @@ const Table = ({
                   }
                 }}
               >
-                {column.headerRender ? column.headerRender() : column.label}
-                {sort && sort.column.name === column.name && (
-                  sort.direction === 'dsc'
-                    ? <span className="fr-fi fr-fi-arrow-down-s-line" aria-hidden="true" />
-                    : <span className="fr-fi fr-fi-arrow-up-s-line" aria-hidden="true" />
-                )}
+                <div className="table-column-header">
+                  {column.headerRender ? column.headerRender() : column.label}
+                  {column.sortable && getSortIcon(column)}
+                </div>
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
           {sortedData
-            .slice((currentPage - 1) * perPage, currentPage * perPage)
             .map((row) => (
-              <tr key={row[rowKey]}>
+              <tr key={getRowKey(row)}>
                 {columns.map((column) => (
                   <td key={column.name}>
                     {column.render ? column.render(row) : row[column.name]}
@@ -133,12 +157,14 @@ Table.defaultProps = {
   fixedLayout: false,
   noScroll: false,
   bordered: false,
+  caption: undefined,
   captionPosition: 'top',
   className: '',
   tableID: '',
   tableClassName: '',
   children: null,
   pagination: false,
+  paginationPosition: 'left',
   surrendingPages: 3,
   perPage: 10,
   page: undefined,
@@ -147,15 +173,19 @@ Table.defaultProps = {
 
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.array.isRequired,
   fixedLayout: PropTypes.bool,
   tableID: PropTypes.string,
   tableClassName: PropTypes.string,
   noScroll: PropTypes.bool,
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
-  caption: PropTypes.string.isRequired,
-  rowKey: PropTypes.string.isRequired,
+  caption: PropTypes.string,
+  rowKey: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]).isRequired,
   children: PropTypes.node,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -163,6 +193,7 @@ Table.propTypes = {
     PropTypes.array,
   ]),
   pagination: PropTypes.bool,
+  paginationPosition: PropTypes.oneOf(['left', 'center', 'right']),
   surrendingPages: PropTypes.number,
   perPage: PropTypes.number,
   page: PropTypes.number,

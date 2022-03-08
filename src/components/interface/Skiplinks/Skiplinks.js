@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/skiplink/skiplink.css';
 
 /**
  *
@@ -12,7 +15,7 @@ import '@gouvfr/dsfr/dist/css/skiplinks.min.css';
 const Skiplinks = ({ children, className, ...remainingProps }) => (
   <div
     className={classNames('fr-skiplinks', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-container">
       <ul className="fr-skiplinks__list">

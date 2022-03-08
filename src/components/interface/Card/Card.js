@@ -2,10 +2,12 @@ import React, { Children, cloneElement } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { SCHEMES } from '../../../utils/constants';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/cards.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/card/card.css';
 
 /**
  *
@@ -18,9 +20,10 @@ const Card = ({
   isHorizontal,
   className,
   hasArrow,
-  scheme,
   bodyClassName,
-  enlargeLink,
+  ariaLabel,
+  asLink,
+  onClick,
   ...remainingProps
 }) => {
   const img = Children.toArray(children).find((child) => child.props.__TYPE === 'CardImage');
@@ -29,17 +32,44 @@ const Card = ({
     (child) => child.props.__TYPE === 'CardDescription',
   );
   const title = Children.toArray(children).find((child) => child.props.__TYPE === 'CardTitle');
-  const displayTitle = title && cloneElement(title, { href, anchorAs });
-  const _className = classNames('fr-card', {
+  const displayTitle = title && cloneElement(title, {
+    href, anchorAs, asLink, ariaLabel,
+  });
+  const _className = classNames('fr-card fr-card--grey', {
     'fr-card--horizontal': isHorizontal,
     'fr-card--no-arrow': !hasArrow,
-    'fr-enlarge-link': enlargeLink,
-    [`fr-scheme-${scheme}`]: scheme,
+    'fr-enlarge-link': href || asLink || onClick,
   }, className);
+
+  const onCardClick = (e) => {
+    e.preventDefault();
+    onClick(e);
+  };
+
+  const divButton = {
+    true: {
+      tabIndex: '0',
+      role: 'button',
+      click: (e) => onCardClick(e),
+    },
+    false: {
+      tabIndex: undefined,
+      role: undefined,
+      click: undefined,
+    },
+  };
+  const { role, tabIndex, click } = divButton[!!onClick];
+
   return (
+  // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
+      role={role}
+      tabIndex={tabIndex}
+      aria-label={ariaLabel || undefined}
+      onClick={click}
+      onKeyDown={click}
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className={classNames('fr-card__body', bodyClassName)}>
         {displayTitle}
@@ -53,20 +83,23 @@ const Card = ({
 
 Card.defaultProps = {
   anchorAs: 'a',
+  href: '',
+  ariaLabel: '',
   isHorizontal: false,
   className: '',
   bodyClassName: '',
   hasArrow: true,
-  enlargeLink: true,
-  scheme: '',
+  asLink: null,
+  onClick: undefined,
 };
 Card.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  anchorAs: PropTypes.string,
-  href: PropTypes.string.isRequired,
+  anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
+  href: PropTypes.string,
+  ariaLabel: PropTypes.string,
   isHorizontal: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -75,8 +108,8 @@ Card.propTypes = {
   ]),
   bodyClassName: PropTypes.string,
   hasArrow: PropTypes.bool,
-  enlargeLink: PropTypes.bool,
-  scheme: PropTypes.oneOf(SCHEMES),
+  asLink: PropTypes.element,
+  onClick: PropTypes.func,
 };
 
 export default Card;

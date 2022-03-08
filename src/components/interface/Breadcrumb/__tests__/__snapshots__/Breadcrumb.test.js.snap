@@ -9,7 +9,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
 >
   <button
     class="fr-breadcrumb__button"
-    data-testid="bc-button"
     type="button"
   >
     Voir le fil d'ariane
@@ -19,7 +18,6 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
   >
     <ol
       class="fr-breadcrumb__list"
-      data-testid="bc-list"
       hidden=""
     >
       <li
@@ -52,8 +50,9 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
       >
         <a
           aria-current="page"
+          aria-disabled="true"
           class="fr-breadcrumb__link"
-          href=""
+          role="link"
           target="_self"
         >
           Production 1234567899 avec un nom de page hyper long qui devrait etre tronqué

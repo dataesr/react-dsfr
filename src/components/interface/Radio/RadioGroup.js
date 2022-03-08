@@ -15,7 +15,7 @@ const RadioGroup = ({
   children,
   className,
   hint,
-  isDisabled,
+  disabled,
   isInline,
   legend,
   message,
@@ -41,27 +41,32 @@ const RadioGroup = ({
     }
   };
 
-  const childs = Children.toArray(children).map((child) => cloneElement(child, {
-    name: child.props.name || radioName,
-    checked: value ? child.props.value === value : child.props.value === internalValue,
-    required,
-    onGroupChange,
-  }));
+  const childs = Children.toArray(children).map((child) => {
+    const { value: childValue } = child.props;
+    const defaultChecked = value ? childValue === value : childValue === internalValue;
+
+    return cloneElement(child, {
+      name: child.props.name || radioName,
+      defaultChecked: child.props.defaultChecked || defaultChecked,
+      required,
+      onGroupChange,
+    });
+  });
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
   const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <fieldset
         className="fr-fieldset"
         aria-label={ariaLabel || legend}
-        disabled={isDisabled}
+        disabled={disabled}
       >
         {legend && (
-        <legend className="fr-fieldset__legend">
+        <legend className="fr-fieldset__legend fr-text--regular">
           {legend}
           {required && <span className="error"> *</span>}
         </legend>
@@ -80,7 +85,7 @@ RadioGroup.defaultProps = {
   children: '',
   className: '',
   hint: '',
-  isDisabled: false,
+  disabled: false,
   isInline: false,
   messageType: '',
   message: '',
@@ -102,9 +107,13 @@ RadioGroup.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   ariaLabel: PropTypes.string,
-  isDisabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   isInline: PropTypes.bool,
   legend: PropTypes.string.isRequired,
   message: PropTypes.string,

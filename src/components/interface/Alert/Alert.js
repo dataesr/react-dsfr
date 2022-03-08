@@ -5,7 +5,10 @@ import classNames from 'classnames';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/alerts.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/alert/alert.css';
 
 /**
  *
@@ -17,6 +20,7 @@ const Alert = ({
   type,
   title,
   description,
+  role,
   small,
   show,
   closable,
@@ -39,14 +43,14 @@ const Alert = ({
   }, [show]);
 
   if (!internalShow) {
-    return <></>;
+    return null;
   }
 
   return (
     <div
-      role="alert"
+      role={role || undefined}
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <HtmlTitleTag className="fr-alert__title">{title}</HtmlTitleTag>
       {!small && description && <p>{description}</p>}
@@ -71,6 +75,7 @@ const Alert = ({
 Alert.defaultProps = {
   as: 'p',
   type: 'info',
+  role: '',
   description: undefined,
   small: false,
   show: true,
@@ -81,10 +86,19 @@ Alert.defaultProps = {
 
 Alert.propTypes = {
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]).isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   type: PropTypes.oneOf(['error', 'success', 'info']),
   small: PropTypes.bool,
+  role: PropTypes.string,
   show: PropTypes.bool,
   closable: PropTypes.bool,
   onClose: PropTypes.func,

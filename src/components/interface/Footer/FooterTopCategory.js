@@ -18,7 +18,7 @@ const FooterTopCategory = ({
       n={n}
       offset={offset}
       className={classNames(className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-footer__top-cat">{title}</div>
       <ul className="fr-footer__top-list">

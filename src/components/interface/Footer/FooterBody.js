@@ -10,15 +10,19 @@ const FooterBody = ({
   const Logo = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'Logo',
   );
+  const operator = Children.toArray(children).filter(
+    (child) => child.props.__TYPE === 'FooterOperator',
+  );
   const items = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterBodyItem',
   );
   return (
     <div
       className={classNames('fr-footer__body', className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-footer__brand">{Logo}</div>
+      {operator}
       <div className="fr-footer__content">
         <p className="fr-footer__content-desc">{description}</p>
         <ul className="fr-footer__content-list">

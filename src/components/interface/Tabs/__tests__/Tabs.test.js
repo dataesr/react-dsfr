@@ -9,7 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Tabs />', () => {
   const initProps = {
     className: 'my-class',
-    scheme: 'soft-yellow-medium',
   };
   let wrapper;
 
@@ -17,7 +16,6 @@ describe('<Tabs />', () => {
     wrapper = shallow(
       <Tabs
         className={initProps.className}
-        scheme={initProps.scheme}
         defaultActiveTab={1}
         data-testid="tabs"
       >
@@ -33,7 +31,7 @@ describe('<Tabs />', () => {
   it('should render Tabs properly', () => {
     const component = renderer
       .create(
-        <Tabs scheme="soft-blue-soft">
+        <Tabs>
           <Tab label="Label1">Tab #1</Tab>
           <Tab label="Label2">Tab #2</Tab>
         </Tabs>,

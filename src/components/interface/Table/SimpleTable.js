@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Table from './Table';
 
 const SimpleTable = ({ data, ...remainingProps }) => {
-  const headers = Object.keys(data?.[0]);
+  const headers = Object.keys(data && data[0]);
   return (
     <Table
       {...remainingProps}

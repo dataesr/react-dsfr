@@ -7,6 +7,7 @@ import Title from './components/foundation/typography/Title/index';
 import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import Alert from './components/interface/Alert/index';
+import { Badge, BadgeGroup } from './components/interface/Badge/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
@@ -15,8 +16,8 @@ import {
 } from './components/interface/Card/index';
 import { Checkbox, CheckboxGroup } from './components/interface/Checkbox/index';
 import {
-  Footer, FooterLink, FooterBody, FooterBodyItem, FooterBottom, FooterCopy, FooterPartners,
-  FooterPartnersLogo, FooterPartnersTitle, FooterTop, FooterTopCategory,
+  Footer, FooterOperator, FooterLink, FooterBody, FooterBodyItem, FooterBottom, FooterCopy,
+  FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterTop, FooterTopCategory,
 } from './components/interface/Footer/index';
 import {
   Header, HeaderOperator, HeaderNav, HeaderBody, NavItem, NavSubItem,
@@ -43,12 +44,18 @@ import { Tag, TagGroup } from './components/interface/Tag/index';
 import TextInput from './components/interface/TextInput/index';
 import { Tile, TileImage, TileBody } from './components/interface/Tile/index';
 import Toggle from './components/interface/Toggle/index';
+import File from './components/interface/File/index';
+import ConsentManager from './components/interface/ConsentManager/ConsentManager';
+import ConsentService from './components/interface/ConsentManager/ConsentService';
 import SwitchTheme from './components/interface/SwitchTheme/SwitchTheme';
+import useTheme from './components/interface/SwitchTheme/useTheme';
 
 const library = () => ({
   Accordion,
   AccordionItem,
   Alert,
+  Badge,
+  BadgeGroup,
   Logo,
   Breadcrumb,
   BreadcrumbItem,
@@ -57,6 +64,7 @@ const library = () => ({
   Callout,
   CalloutTitle,
   CalloutText,
+  ConsentManager,
   Link,
   Card,
   CardDescription,
@@ -66,6 +74,7 @@ const library = () => ({
   Checkbox,
   CheckboxGroup,
   Col,
+  ConsentService,
   Row,
   Container,
   Icon,
@@ -75,6 +84,7 @@ const library = () => ({
   Footer,
   FooterTopCategory,
   FooterBody,
+  FooterOperator,
   FooterBodyItem,
   FooterBottom,
   FooterLink,
@@ -128,5 +138,7 @@ const library = () => ({
   TileBody,
   TileImage,
   Toggle,
+  useTheme,
+  File,
 });
 export default library();

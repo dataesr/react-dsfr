@@ -123,3 +123,50 @@ const [isOpen, setIsOpen] = useState(false);
      />
 </>
 ```
+
+### Hooks
+
+il est possible de recuperer l'état courant du theme avec un hook react
+
+```jsx
+import { useState } from 'react';
+import {
+    Header,
+    HeaderBody,
+    Tool,
+    ToolItem,
+    ToolItemGroup,
+} from '../Header';
+
+const [isOpen, setIsOpen] = useState(false);
+const theme = useTheme();
+
+<>
+    <Header>
+        <HeaderBody>
+            <Tool closeButtonLabel="fermer">
+            <ToolItemGroup>
+                <ToolItem onClick={() => setIsOpen(true)}>
+                    <span
+                        className="fr-fi-theme-fill fr-link--icon-left"
+                        aria-controls="fr-theme-modal"
+                        data-fr-opened={isOpen}
+                    >
+                        Paramètres d’affichage
+                    </span>
+                </ToolItem>
+            </ToolItemGroup>
+            </Tool>
+        </HeaderBody>
+    </Header>
+    <SwitchTheme 
+        isOpen={isOpen} 
+        setIsOpen={setIsOpen}
+        title="Titre de la modal"
+        legend="Legende de la modal"
+        darkLabel="Texte du mode sombre"
+        lightLabel="Texte du mode clair"
+     />
+     <h1>{`Le site est en ${theme} mode`}</h1>
+</>
+```

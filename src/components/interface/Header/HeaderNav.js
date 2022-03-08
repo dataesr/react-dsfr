@@ -1,7 +1,6 @@
 import React, { useContext, cloneElement, Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
@@ -17,12 +16,12 @@ const HeaderNav = ({
     'fr-modal--opened': isOpenNav,
   });
   const childs = Children.toArray(children).map(
-    (child) => cloneElement(child, { key: uuidv4(), path: path || undefined }),
+    (child, index) => cloneElement(child, { key: index, path: path || undefined }),
   );
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-container">
         <button

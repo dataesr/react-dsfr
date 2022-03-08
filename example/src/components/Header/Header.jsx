@@ -18,10 +18,12 @@ import {
   MegaNavItem,
   Link,
   SwitchTheme,
+  useTheme,
 } from '@dataesr/react-dsfr';
 
 const HeaderExample = () => {
   const location = useLocation();
+  const theme = useTheme();
   const [path, setPath] = useState(() => location.pathname || '');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -42,7 +44,7 @@ const HeaderExample = () => {
           <Service
             asLink={<RouterLink to="/myLinkUrl" />}
             title="Playground @dataesr/react-dsfr"
-            description="messy tests"
+            description={`${theme} mode`}
           />
           <Tool
             closeButtonLabel="fermer"
@@ -50,11 +52,11 @@ const HeaderExample = () => {
             <ToolItemGroup>
               <ToolItem
                 icon="ri-lock-line"
-                asLink={<RouterLink to="myNavItem" />}
+                asLink={<RouterLink to="/myNavItem" />}
               >
-                Example
+                react-router-dom Link
               </ToolItem>
-              <ToolItem icon="ri-lock-line" link="/path">Example</ToolItem>
+              <ToolItem icon="ri-lock-line" link="/path">Link to /path</ToolItem>
               <ToolItem onClick={() => setIsOpen(true)}>
                 <span
                   className="fr-fi-theme-fill fr-link--icon-left"
@@ -115,7 +117,7 @@ const HeaderExample = () => {
               title="Category #1"
               link="/path-to-resources-1"
             >
-              <Link title="title" href="/path">Link #1</Link>
+              <RouterLink title="title" to="/path">Link #1</RouterLink>
               <Link title="title" href="/path" current>Link #2</Link>
             </MegaNavSubItem>
             <MegaNavSubItem

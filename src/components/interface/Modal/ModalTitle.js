@@ -14,14 +14,13 @@ const ModalTitle = ({
         'ds-fr--inline-block': icon,
       })}
       id="fr-modal-title-modal"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </h1>
   );
   return icon ? (
     <Icon
-      className="ds-fr--v-middle"
       name={icon}
       size="lg"
     >

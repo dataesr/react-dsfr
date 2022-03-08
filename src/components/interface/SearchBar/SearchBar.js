@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState, forwardRef, useRef } from 'react';
 
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -6,20 +6,11 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.3.1
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/colors.css';
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/search.min.css';
+import '@gouvfr/dsfr/dist/component/form/form.css';
+import '@gouvfr/dsfr/dist/component/input/input.css';
+import '@gouvfr/dsfr/dist/component/search/search.css';
 
 /**
  *
@@ -37,7 +28,7 @@ const SearchBar = forwardRef((props, ref) => {
     ...remainingProps
   } = props;
   const [text, setText] = useState(defaultValue);
-  const inputId = uuidv4();
+  const inputId = useRef(uuidv4());
   const onKeyDown = (e) => (e.keyCode === 13) && onSearch(text);
   const _className = classNames('fr-search-bar', {
     'fr-search-bar--lg': (size === 'lg'),
@@ -47,19 +38,18 @@ const SearchBar = forwardRef((props, ref) => {
     <form
       role="search"
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
-      { label && <label className="fr-label" htmlFor={inputId}>{label}</label>}
+      { label && <label className="fr-label" htmlFor={inputId.current}>{label}</label>}
       <input
         ref={ref}
         className="fr-input"
         placeholder={placeholder}
         type="search"
-        id={inputId}
+        id={inputId.current}
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={onKeyDown}
-        data-testid="search-input"
       />
       <button
         type="submit"

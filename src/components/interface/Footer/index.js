@@ -1,4 +1,5 @@
 import FooterBody from './FooterBody';
+import FooterOperator from './FooterOperator';
 import FooterBodyItem from './FooterBodyItem';
 import FooterTop from './FooterTop';
 import FooterTopCategory from './FooterTopCategory';
@@ -12,6 +13,7 @@ import Footer from './Footer';
 
 export {
   FooterBody,
+  FooterOperator,
   FooterBodyItem,
   FooterTop,
   FooterBottom,

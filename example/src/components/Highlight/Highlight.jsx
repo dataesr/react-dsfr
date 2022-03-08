@@ -7,17 +7,20 @@ import {
 const HighlightExample = () => (
   <>
     <Col>
-      <Highlight size="sm" scheme="soft-green-warm">
+      <Highlight size="sm" color="#f55">
+        Mise en exergue
+      </Highlight>
+    </Col>
+    <Col n="12">
+      <Highlight size="lg">
         Highlight text that might be short and concise.
         Highlight text that might be short and concise.
         Highlight text that might be short and concise.
       </Highlight>
     </Col>
-    <Col>
-      <Highlight size="lg">
-        Highlight text that might be short and concise.
-        Highlight text that might be short and concise.
-        Highlight text that might be short and concise.
+    <Col n="12">
+      <Highlight colorFamily="green-bourgeon">
+        Highlight with colorFamily text that might be short and concise.
       </Highlight>
     </Col>
   </>

@@ -91,11 +91,14 @@ const columns = [
   {
     name: 'name_fr',
     headerRender: () => (
-      <span
+      <div
         className="fr-fi-theme-fill fr-link--icon-left"
       >
         Français
-      </span>
+        <div style={{ fontSize: 14, fontWeight: 'lighter' }}>
+          avec un hint
+        </div>
+      </div>
     ),
     sortable: true,
   },
@@ -123,11 +126,12 @@ const TableExample = () => {
       </Row>
       <Row>
         <Table
-          caption="Complexe Table"
-          rowKey="id"
+          caption="Complex Table"
+          rowKey={(x) => x.id}
           data={data}
           columns={columns}
           pagination
+          paginationPosition="center"
           perPage={3}
         />
       </Row>

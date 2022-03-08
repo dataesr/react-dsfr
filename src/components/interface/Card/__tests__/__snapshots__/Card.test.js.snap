@@ -2,7 +2,7 @@
 
 exports[`<Card /> renders Card properly 1`] = `
 <div
-  class="fr-card fr-enlarge-link"
+  class="fr-card fr-card--grey fr-enlarge-link"
   data-testid="card"
 >
   <div

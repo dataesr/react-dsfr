@@ -9,7 +9,7 @@ const FooterTop = ({
 }) => (
   <div
     className={classNames('fr-footer__top', className)}
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-container">
       <div className={`fr-grid-row fr-grid-row--${align} fr-grid-row--gutters`}>

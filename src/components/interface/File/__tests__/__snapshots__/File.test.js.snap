@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<File /> renders correctly 1`] = `
+<div
+  className="fr-upload-group ds-fr--Label File"
+>
+  <label
+    className="fr-label"
+    htmlFor="file-upload"
+  >
+    Label File
+    <span
+      className="fr-hint-text"
+    >
+      Hint
+    </span>
+  </label>
+  <input
+    aria-describedby="Hint"
+    className="fr-upload"
+    multiple={false}
+    onChange={[Function]}
+    type="file"
+  />
+  
+</div>
+`;

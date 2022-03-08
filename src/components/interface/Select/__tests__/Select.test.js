@@ -38,6 +38,7 @@ describe('<Select />', () => {
         label="Label pour liste déroulante"
         options={options}
         messageType="valid"
+        data-testid="select"
       />,
     );
     const search = screen.getByTestId('select');

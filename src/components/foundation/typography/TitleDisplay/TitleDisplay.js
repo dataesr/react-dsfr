@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { getSpace } from '../../../../utils/getters';
 
 /**
  *
  * @visibleName TitleDisplay
  */
 const TitleDisplay = ({
-  as, size, children, className,
+  as, size, children, spacing, className,
 }) => {
   const HtmlTag = `${as}`;
-  const _className = classNames(className, { [`fr-display-${size}`]: size });
+  const { margin, padding } = getSpace(spacing);
+
+  const _className = classNames(className, padding, margin, { [`fr-display-${size}`]: size });
   return (
     <HtmlTag className={_className}>
       {children}
@@ -26,8 +29,9 @@ TitleDisplay.propTypes = {
     PropTypes.array,
   ]),
   /**
-  * html tag to render
-  */
+     * html tag to render
+     */
+  spacing: PropTypes.string,
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
   size: PropTypes.oneOf(['xl', 'lg', 'md', 'sm', 'xs']).isRequired,
 };
@@ -35,6 +39,7 @@ TitleDisplay.propTypes = {
 TitleDisplay.defaultProps = {
   as: 'h1',
   className: '',
+  spacing: '',
 };
 
 export default TitleDisplay;

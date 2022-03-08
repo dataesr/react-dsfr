@@ -5,7 +5,10 @@ import dataAttributes from '../../../utils/data-attributes';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
 
-import '@gouvfr/dsfr/dist/css/pagination.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/pagination/pagination.css';
 
 const Pagination = ({
   pageCount,
@@ -19,7 +22,7 @@ const Pagination = ({
 }) => {
   const surrendingLeft = getSurrendingLeft(currentPage, surrendingPages);
   const surrendingRight = getSurrendingRight(currentPage, surrendingPages, pageCount);
-  const Tag = `${anchorAs}`;
+  const HTMLTag = `${anchorAs}`;
   const {
     navigationAria, prevLabel, nextLabel, prevAria,
     nextAria, firstAria, lastAria, currentAria, pageAria,
@@ -29,14 +32,14 @@ const Pagination = ({
     const check = down ? currentPage > 1 : currentPage < pageCount;
     if (buildURL) {
       return (
-        <Tag
+        <HTMLTag
           href={check ? buildURL(index) : undefined}
           className={classNames({ [`fr-pagination__link--${icon}`]: aria }, 'fr-pagination__link')}
           aria-label={aria}
           title={aria}
         >
           {label}
-        </Tag>
+        </HTMLTag>
       );
     }
 
@@ -58,7 +61,7 @@ const Pagination = ({
       className="fr-pagination"
       aria-label={navigationAria}
       role="navigation"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <ul className="fr-pagination__list">
         <li>
@@ -140,12 +143,14 @@ Pagination.propTypes = {
       return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
     }
     if (buildURL) {
-      PropTypes.checkPropTypes({
-        buildURL: PropTypes.func,
-      },
-      { buildURL },
-      'prop',
-      'Pagination');
+      PropTypes.checkPropTypes(
+        {
+          buildURL: PropTypes.func,
+        },
+        { buildURL },
+        'prop',
+        'Pagination',
+      );
     }
     return null;
   },
@@ -155,12 +160,14 @@ Pagination.propTypes = {
       return new Error(`You must specify only one of props 'buildURL' or 'onClick' in '${componentName}'.`);
     }
     if (onClick) {
-      PropTypes.checkPropTypes({
-        onClick: PropTypes.func,
-      },
-      { onClick },
-      'prop',
-      'Pagination');
+      PropTypes.checkPropTypes(
+        {
+          onClick: PropTypes.func,
+        },
+        { onClick },
+        'prop',
+        'Pagination',
+      );
     }
     return null;
   },

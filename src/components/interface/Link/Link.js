@@ -4,7 +4,10 @@ import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/links.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/link/link.css';
 
 /**
  *
@@ -12,6 +15,7 @@ import '@gouvfr/dsfr/dist/css/links.min.css';
  */
 const Link = ({
   children,
+  disabled,
   href,
   title,
   target,
@@ -27,15 +31,13 @@ const Link = ({
   onClick,
   ...remainingProps
 }) => {
-  const _className = classNames(
-    className, {
-      [`ds-fr--${display}`]: display && icon,
-      'fr-link': isSimple,
-    },
-  );
+  const _className = classNames(className, {
+    [`ds-fr--${display}`]: display && icon,
+    'fr-link': isSimple,
+  });
   const onClickLink = (e) => {
     e.preventDefault();
-    onClick();
+    onClick(e);
   };
 
   const asLink = as
@@ -46,16 +48,19 @@ const Link = ({
       onClick,
     })
     : null;
+
   const _link = (
     <a
+      aria-disabled={(disabled || !href) ? true : undefined}
+      role={disabled || !href ? 'link' : undefined}
       onClick={onClick ? (e) => onClickLink(e) : undefined}
       aria-current={current ? 'page' : undefined}
-      href={href}
+      href={href || undefined}
       title={title || undefined}
       target={target}
       rel={(target === '_blank') ? 'noopener noreferrer' : undefined}
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </a>
@@ -63,10 +68,10 @@ const Link = ({
   const _element = as ? asLink : _link;
   return icon ? (
     <Icon
-      className={classNames({ [`ds-fr--v-${verticalIconPosition}`]: verticalIconPosition && icon })}
+      verticalAlign={verticalIconPosition}
       name={icon}
       size={iconSize}
-      iconPosition={_element.props?.children ? iconPosition : 'center'}
+      iconPosition={_element.props && _element.props.children ? iconPosition : 'center'}
     >
       {_element}
     </Icon>
@@ -75,6 +80,7 @@ const Link = ({
 
 Link.defaultProps = {
   className: '',
+  disabled: false,
   title: '',
   target: '_self',
   isSimple: false,
@@ -102,7 +108,8 @@ Link.propTypes = {
     PropTypes.string,
   ]),
   href: PropTypes.string,
-  verticalIconPosition: PropTypes.oneOf(['top', 'middle']),
+  disabled: PropTypes.bool,
+  verticalIconPosition: PropTypes.oneOf(['top', 'middle', 'sub']),
   as: PropTypes.element,
   title: PropTypes.string,
   target: PropTypes.string,
@@ -111,10 +118,10 @@ Link.propTypes = {
   icon: PropTypes.string,
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
-  iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'lg', 'xl', '2x', '3x', '10x']),
+  iconSize: PropTypes.oneOf(['fw', 'xxs', 'xs', 'sm', '1x', 'lg', 'xl', '2x', '3x', '10x']),
   /**
-   * @ignore
-   */
+     * @ignore
+     */
   display: PropTypes.oneOf(['inline', 'flex']),
 };
 

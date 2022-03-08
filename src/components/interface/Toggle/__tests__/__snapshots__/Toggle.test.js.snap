@@ -1,27 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Toggle /> renders Toggle properly 1`] = `
+exports[`<Toggle /> should render Toggle properly 1`] = `
 <div
-  class="fr-toggle fr-toggle--border-bottom fr-toggle--label-left"
+  className="fr-toggle fr-toggle--border-bottom fr-toggle--label-left"
   data-testid="toggle"
 >
   <input
-    checked=""
-    class="fr-toggle__input"
-    data-testid="toggle-input"
-    id="xxxxxxx"
+    className="fr-toggle__input"
+    id="xyx"
     type="checkbox"
   />
   <label
-    class="fr-toggle__label"
+    className="fr-toggle__label"
     data-fr-checked-label="Activé"
     data-fr-unchecked-label="Désactivé"
-    for="xxxxxxx"
+    htmlFor="xyx"
   >
     Accepter les cookies
   </label>
   <p
-    class="fr-hint-text"
+    className="fr-hint-text"
   >
     Activez-moi!
   </p>

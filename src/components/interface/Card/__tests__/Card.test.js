@@ -1,7 +1,12 @@
 import { render, screen } from '@testing-library/react';
+import Enzyme, { shallow } from 'enzyme';
+import React from 'react';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import {
   Card, CardTitle, CardDescription, CardDetail, CardImage,
 } from '..';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Card />', () => {
   it('renders Card properly', () => {
@@ -37,11 +42,11 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card fr-card--horizontal fr-enlarge-link');
+    expect(card.className).toEqual('fr-card fr-card--grey fr-card--horizontal fr-enlarge-link');
   });
   it('renders Card without enlarge link properly', () => {
     render(
-      <Card href="/" enlargeLink={false} data-testid="card">
+      <Card data-testid="card">
         <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
         <CardDetail>Détail</CardDetail>
         <CardTitle>
@@ -54,6 +59,25 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card');
+    expect(card.className).toEqual('fr-card fr-card--grey');
+  });
+
+  it('Call Card onClick function', () => {
+    const mockClick = jest.fn();
+    const component = shallow(
+      <Card onClick={mockClick}>
+        <CardDetail>Détail</CardDetail>
+        <CardTitle>
+          Qu’est-ce que le Pass Culture et comment l’obtenir ?
+        </CardTitle>
+        <CardDescription>
+          Description texte body small regular consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore…
+        </CardDescription>
+      </Card>,
+    );
+
+    component.simulate('click', { preventDefault: () => {} });
+    expect(mockClick).toHaveBeenCalled();
   });
 });

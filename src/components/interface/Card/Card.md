@@ -1,9 +1,13 @@
 ## Card - carte
 
+By default, Card component is in grey mode with `fr-card--grey` class.
+
+> href props is mandatory with custom onClick props to have a clickable card component.
+
 ```jsx
 import { Card, CardTitle, CardDescription, CardDetail, CardImage } from '.';
 
-<Card href="/" scheme="soft-orange-dark">
+<Card href="/">
   <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
   <CardDetail>Detail</CardDetail>
   <CardTitle>

@@ -29,10 +29,6 @@ describe('<Breadcrumb />', () => {
     );
     const nav = screen.getByTestId('breadcrumb');
     expect(nav.className).toBe('fr-breadcrumb');
-    const bcList = screen.getByTestId('bc-list');
-    expect(bcList.className).toBe('fr-breadcrumb__list');
-    const button = screen.getByTestId('bc-button');
-    expect(button.className).toBe('fr-breadcrumb__button');
     const items = screen.getAllByTestId('bcitem');
     expect(items).toHaveLength(3);
     expect(items[0].className).toBe('fr-breadcrumb__item');

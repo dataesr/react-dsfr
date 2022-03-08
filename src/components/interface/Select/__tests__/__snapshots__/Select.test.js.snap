@@ -6,7 +6,7 @@ exports[`<Select /> renders correctly 1`] = `
   data-testid="select"
 >
   <label
-    aria-describedby="label-1-xxx"
+    aria-describedby=""
     className="fr-label"
     htmlFor="message-xxxxxxx"
   >
@@ -15,10 +15,8 @@ exports[`<Select /> renders correctly 1`] = `
   </label>
   <select
     className="fr-select fr-select--valid"
-    data-testid="select"
-    disabled={false}
     id="message-xxxxxxx"
-    name={null}
+    label="Label pour liste déroulante"
     onChange={[Function]}
     value=""
   >

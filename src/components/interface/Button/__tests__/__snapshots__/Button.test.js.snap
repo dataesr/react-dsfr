@@ -5,13 +5,17 @@ exports[`<Button /> renders correctly 1`] = `
   className="fr-btn--lg fr-btn fr-btn--secondary"
   data-testid="button"
   disabled={false}
+  id="nice-button"
   onClick={[Function]}
   title="title"
   type="button"
 >
-  test button
-  <span
-    className="ri-2x icon-right ri-alert-fill"
-  />
+  <span>
+    test button
+    <span
+      aria-hidden={true}
+      className="ri-xl icon-right ds-fr--v-sub ri-alert-fill"
+    />
+  </span>
 </button>
 `;

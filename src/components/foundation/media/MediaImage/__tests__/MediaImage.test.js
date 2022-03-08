@@ -7,7 +7,8 @@ describe('<MediaImage />', () => {
     const component = renderer
       .create(
         <MediaImage
-          src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
+          data-testid="image"
+          src="https://dummyimage.com/300x170/000/fff.png"
         />,
       )
       .toJSON();
@@ -17,7 +18,8 @@ describe('<MediaImage />', () => {
   it('in document', () => {
     render(
       <MediaImage
-        src="https://bibliotheques.csdm.qc.ca/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg"
+        data-testid="image"
+        src="https://dummyimage.com/300x170/000/fff.png"
       />,
     );
     const search = screen.getByTestId('image');

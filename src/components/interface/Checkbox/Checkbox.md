@@ -15,7 +15,7 @@ L'état inactif indique que utilisateur ne peux pas interagir avec l'élément.
   value="value-1"
   onChange={() => {}}
   label="Label checkbox disabled"
-  isDisabled={true}
+  disabled={true}
 />
 ```
 

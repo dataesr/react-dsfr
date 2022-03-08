@@ -1,18 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useViewport = () => {
-  const [size, setSize] = useState(
-    {
-      width: window ? window.innerWidth : null,
-      height: window ? window.innerHeight : null,
-    },
-  );
+  const [size, setSize] = useState({ width: null, height: null });
 
   useEffect(() => {
     const handleWindowResize = () => {
       setSize({ width: window.innerWidth, height: window.innerHeight });
     };
 
+    handleWindowResize(); // to initialize values on mount
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
 
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
@@ -12,27 +11,29 @@ const ToolItem = ({
   const { onOpenNav } = useContext(HeaderContext);
   const HtmlTag = `${as}`;
 
-  const closeNav = (e) => {
+  const onClickToolItem = (e) => {
+    e.preventDefault();
+
     if (onClick) {
       onClick(e);
     }
     onOpenNav(false);
   };
+
   return (
     <li
-      key={uuidv4()}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {as ? (
         <HtmlTag
-          onClick={closeNav}
+          onClick={onClickToolItem}
           className={className}
         >
           {children}
         </HtmlTag>
       ) : (
         <Link
-          onClick={closeNav}
+          onClick={onClick ? onClickToolItem : undefined}
           as={asLink}
           target={target}
           className={className}
@@ -41,7 +42,7 @@ const ToolItem = ({
           icon={icon}
           iconPosition="left"
           iconSize="1x"
-          href={link}
+          href={onClick && !link ? '/' : link}
         >
           {children}
         </Link>
@@ -68,8 +69,8 @@ ToolItem.propTypes = {
   ]),
   icon: PropTypes.string,
   /**
-   * html tag to render
-   */
+     * html tag to render
+     */
   as: PropTypes.oneOf(['p', 'span', 'div', '']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   link: PropTypes.string,

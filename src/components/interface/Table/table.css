@@ -1,0 +1,27 @@
+.empty-sort-icon {
+    width: 24px;
+}
+
+.table-column-header {
+    display: flex;
+    align-items: center;
+}
+
+.fr-react-table--pagination-left nav,
+.fr-react-table--pagination-center nav,
+.fr-react-table--pagination-right nav {
+    display: flex;
+    margin-top: 8px;
+}
+
+.fr-react-table--pagination-left nav {
+    justify-content: flex-start;
+}
+
+.fr-react-table--pagination-center nav {
+    justify-content: center;
+}
+
+.fr-react-table--pagination-right nav {
+    justify-content: flex-end;
+}

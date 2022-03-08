@@ -21,7 +21,7 @@ const Tool = ({
   return (
     <div
       className={_className}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {!isOpenSearch && toolItemGroup}
       <div className={classNames('fr-header__search fr-modal', { 'fr-modal--opened': isOpenSearch })}>

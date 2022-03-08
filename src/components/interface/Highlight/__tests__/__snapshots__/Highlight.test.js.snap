@@ -5,6 +5,10 @@ exports[`<Highlight /> renders Highlight properly 1`] = `
   class="fr-highlight"
   data-testid="highlight"
 >
-  Highlight text that might be short and concise.
+  <p
+    class="fr-text--md"
+  >
+    Highlight text that might be short and concise.
+  </p>
 </div>
 `;

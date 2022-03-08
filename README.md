@@ -1,8 +1,5 @@
 # @dataesr/react-dsfr
 
-:warning: beta version :hammer:
-
-
 [![NPM](https://img.shields.io/npm/v/@dataesr/react-dsfr.svg)](https://www.npmjs.com/package/@dataesr/react-dsfr) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![GitHub contributors](https://img.shields.io/github/contributors-anon/dataesr/react-dsfr?color=%23E52B50%20)
 
 [![Build & Test](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/check.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple)
@@ -10,18 +7,22 @@
 
 > Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
-Current version is using [@gouvfr/dsfr@1.1.0](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.3.1](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
-* node >= 12.13
-* npm >= 6.14
-* React >= 17.01
+* node >= 14.1x
+* npm >= 6.1x
+* React >= 17.0.x
 
 ## Installation
 
 ```bash
 yarn add @dataesr/react-dsfr
+```
+or 
+```bash
+npm install @dataesr/react-dsfr
 ```
 
 ## Library usage
@@ -31,7 +32,7 @@ yarn add @dataesr/react-dsfr
 Styleguide gives you access to the list of props needed and a working example for each component available in the library. To launch it on your local machine:
 
 ```bash
-yarn guide
+npm run guide
 ```
 Visit [http://localhost:6060](http://localhost:6060).
 
@@ -53,9 +54,31 @@ npm start
 
 We are using [remixicon](https://remixicon.com/).
 
+```
+ <Icon
+    name="ri-bubble-chart-line"
+    size="lg"
+    color="#f88"
+    iconPosition="right"
+>
+    <p>I have an icon</p>
+</Icon>
+```
+
 :warning: CDN link of css must be added to the `<head>` of your website.
 
-`<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">`
+```
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+```
+
+#### Use Colors
+
+Color variables are available in `style/color.css`. To make a new component dark theme compatible it's recommended to use variables from `scheme.css` in [@gouvfr/dsfr project](https://www.npmjs.com/package/@gouvfr/dsfr)
+
+Some components can be colored with variables (see `colorFamily` props) listed below:
+```
+['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
+```
 
 #### Help from outside
 
@@ -70,7 +93,7 @@ Thanks to the internet world.
 #### Run all tests using react-scripts with watcher option
 
 ```bash
-yarn test:dev
+npm run test:dev
 ```
 
 #### Accessibility
@@ -93,7 +116,7 @@ pa11y-ci
 #### In Chrome
 
 ```bash
-yarn test:debug
+npm run test:debug
 ```
 
 Access `about:inspect`
@@ -102,11 +125,24 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 ### They use react-dsfr and we like it!
 
-[santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
+* [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr)
+* [DashLord](https://dashlord.incubateur.net)
+* [Baromètre de la Science Ouverte](https://barometredelascienceouverte.esr.gouv.fr)
+* [Enfants du spectacle](https://enfants-du-spectacle.fabrique.social.gouv.fr)
+* [Mon Psy](https://monpsy.sante.gouv.fr)
+* [Transitions collectives](https://transitions-collectives.fabrique.social.gouv.fr)
+* [Immersion facile](https://immersion-facile.beta.gouv.fr)
+* [Bilans climat simplifiés](https://bilans-climat-simplifies.ademe.fr)
+* [Zero logement vacant](https://zerologementvacant.beta.gouv.fr)
+
 
 ### Release policy
 
 The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
 
 Merging code on the `master` branch will automatically bump the version, produce a changelog, and publish a new release if new semantic commits are found (commit message prefixed with `fix: ` or `feat: `). See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
+
+### TODO
+
+* To limit usage of colors to colorFamilies
 

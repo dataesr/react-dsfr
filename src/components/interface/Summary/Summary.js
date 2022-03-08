@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/summary.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/summary/summary.css';
 
 /**
  *
@@ -13,7 +16,7 @@ const Summary = ({ title, children, ...remainingProps }) => (
     className="fr-summary"
     role="navigation"
     aria-labelledby="fr-summary-title"
-    {...dataAttributes(remainingProps)}
+    {...dataAttributes.getAll(remainingProps)}
   >
     <div className="fr-summary__title">{title}</div>
     <ol className="fr-summary__list">

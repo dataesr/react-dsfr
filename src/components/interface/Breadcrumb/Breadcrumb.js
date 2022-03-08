@@ -1,5 +1,5 @@
 import React, {
-  useState, useEffect, useRef, Children,
+  Children, useEffect, useRef, useState,
 } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,20 +7,9 @@ import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.3.1
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/colors.css';
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/breadcrumb.min.css';
+import '@gouvfr/dsfr/dist/component/breadcrumb/breadcrumb.css';
 
 /**
  * @visibleName Breadcrumb
@@ -65,7 +54,7 @@ const Breadcrumb = ({
       ref={breadRef}
       className={_className}
       aria-label={label}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       <button
         ref={buttonRef}
@@ -73,7 +62,6 @@ const Breadcrumb = ({
         onClick={handleOpenBreadcrumb}
         className="fr-breadcrumb__button"
         hidden={open}
-        data-testid="bc-button"
       >
         {buttonLabel}
       </button>
@@ -82,7 +70,6 @@ const Breadcrumb = ({
           ref={listRef}
           className="fr-breadcrumb__list"
           hidden={!open}
-          data-testid="bc-list"
         >
           {content}
         </ol>
@@ -93,8 +80,8 @@ const Breadcrumb = ({
 
 Breadcrumb.defaultProps = {
   className: '',
-  buttonLabel: "Voir le fil d'ariane",
-  label: "Fil d'ariane",
+  buttonLabel: 'Voir le fil d\'ariane',
+  label: 'Fil d\'ariane',
 };
 
 Breadcrumb.propTypes = {

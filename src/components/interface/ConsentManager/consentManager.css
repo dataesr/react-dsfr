@@ -1,0 +1,12 @@
+.fr-consent-service__radios .fr-fieldset__content {
+    justify-content: flex-end !important;
+}
+
+.fr-consent-banner {
+    position: fixed;
+    padding: 1.5rem;
+    z-index: 5500;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-contrast-grey);
+}

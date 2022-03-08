@@ -1,30 +1,23 @@
-import React, { forwardRef } from 'react';
+import React, {
+  forwardRef, useCallback, useEffect, useRef,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.0.0
+* DSFR v1.3.1
 */
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/css/content.min.css';
-import '@gouvfr/dsfr/dist/css/forms.min.css';
-import '@gouvfr/dsfr/dist/css/inputs.min.css';
-
-/*
-* react-ds-fr
-*/
-import '../../../style/colors.css';
-import '../../../style/custom.css';
-
-import '@gouvfr/dsfr/dist/css/schemes.min.css';
-import '@gouvfr/dsfr/dist/css/buttons.min.css';
+import '@gouvfr/dsfr/dist/component/form/form.css';
+import '@gouvfr/dsfr/dist/component/input/input.css';
+import '@gouvfr/dsfr/dist/component/button/button.css';
+import useTheme from '../SwitchTheme/useTheme';
 
 const iconSize = {
   sm: 'lg',
   md: 'lg',
-  lg: '2x',
+  lg: 'xl',
 };
 
 /**
@@ -43,6 +36,7 @@ const Button = forwardRef((props, ref) => {
     children,
     className,
     submit,
+    colors,
     ...remainingProps
   } = props;
   const _className = classNames(
@@ -55,21 +49,57 @@ const Button = forwardRef((props, ref) => {
       'fr-btn--secondary': secondary,
     },
   );
+  const oRef = useRef();
+  const buttonRef = ref || oRef;
+  const theme = useTheme();
+
+  const colorButton = useCallback(() => {
+    const { current } = buttonRef;
+    const bgColor = colors[0];
+    const color = colors[1];
+    if (bgColor) {
+      current.style.backgroundColor = secondary ? color : bgColor;
+
+      if (secondary) {
+        current.style.backgroundColor = color;
+        current.style.boxShadow = `inset 0 0 0 1px ${bgColor}`;
+      }
+    }
+    if (color) {
+      current.style.color = secondary ? bgColor : color;
+    }
+  }, [colors, buttonRef, secondary]);
+
+  useEffect(() => {
+    const { current } = buttonRef;
+    if (current.style.backgroundColor || current.style.color) {
+      current.removeAttribute('style');
+    }
+  }, [buttonRef, disabled]);
+
+  useEffect(() => {
+    const { current } = buttonRef;
+    if (current && theme === 'light') {
+      colorButton();
+    }
+  }, [buttonRef, colorButton, theme, colors]);
+
   const _button = (
     <button
-      ref={ref}
+      ref={buttonRef}
       type={submit ? 'submit' : 'button'}
       onClick={onClick}
       className={_className}
       title={title || undefined}
       disabled={disabled}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {children}
     </button>
   );
   return icon ? (
     <Icon
+      verticalAlign="sub"
       name={icon}
       size={iconSize[size]}
       iconPosition={(children && `${iconPosition}`) || 'center'}
@@ -91,6 +121,7 @@ Button.defaultProps = {
   styleAsLink: false,
   title: null,
   submit: false,
+  colors: [],
 };
 
 Button.propTypes = {
@@ -109,6 +140,10 @@ Button.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   submit: PropTypes.bool,
+  /**
+   * color[0] is background, color[1] is color
+   */
+  colors: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Button;

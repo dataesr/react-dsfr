@@ -17,7 +17,7 @@ exports[`<Header /> renders correctly 1`] = `
         className="fr-header__body-row"
       >
         <div
-          className="fr-header__brand fr-enlarge-link"
+          className="fr-header__brand"
         >
           <div
             className="fr-header__brand-top"
@@ -26,7 +26,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
-                className=""
+                className="ds-fr--no-shadow"
                 data-test-id="headerlogo"
                 href="/"
                 target="_self"
@@ -99,13 +99,15 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
-                    onClick={[Function]}
                     target="_self"
                   >
-                    <span
-                      className="ri-1x icon-left fr-fi-lock-line ds-fr--v-middle"
-                    />
-                    Se connecter
+                    <span>
+                      <span
+                        aria-hidden={true}
+                        className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
+                      />
+                      Se connecter
+                    </span>
                   </a>
                 </li>
                 <li
@@ -114,13 +116,15 @@ exports[`<Header /> renders correctly 1`] = `
                   <a
                     className="ds-fr--flex fr-link"
                     href="/path"
-                    onClick={[Function]}
                     target="_self"
                   >
-                    <span
-                      className="ri-1x icon-left fr-fi-add-circle-line ds-fr--v-middle"
-                    />
-                    Créer un espace
+                    <span>
+                      <span
+                        aria-hidden={true}
+                        className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
+                      />
+                      Créer un espace
+                    </span>
                   </a>
                 </li>
               </ul>
@@ -163,6 +167,13 @@ exports[`<Header /> renders correctly 1`] = `
       >
         Fermer
       </button>
+      <div
+        className="fr-header__menu-links"
+      >
+        <ul
+          className="fr-links-group"
+        />
+      </div>
       <nav
         aria-label="Menu principal"
         className="fr-nav"
@@ -190,7 +201,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-test-id="navitem"
           >
             <button
-              aria-controls="fr-nav-subitem-undefined"
+              aria-controls="xxxxxxx"
               aria-expanded={false}
               aria-label="ouvrir la navigation"
               className="fr-nav__btn"
@@ -201,7 +212,7 @@ exports[`<Header /> renders correctly 1`] = `
             </button>
             <div
               className="fr-menu fr-collapse"
-              id="fr-nav-subitem-undefined"
+              id="xxxxxxx"
               style={
                 Object {
                   "--collapse": "0px",
@@ -211,6 +222,7 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <ul
                 className="fr-menu__list"
+                onClick={[Function]}
               >
                 <li
                   data-test-id="navsubitem"

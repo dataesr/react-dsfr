@@ -1,6 +1,10 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import { v4 as uuidv4 } from 'uuid';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Toggle from '..';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('uuid', () => ({
   v4: jest.fn(),
@@ -8,14 +12,30 @@ jest.mock('uuid', () => ({
 
 describe('<Toggle />', () => {
   beforeEach(() => {
-    uuidv4.mockImplementationOnce(() => 'xxxxxxx');
+    uuidv4.mockImplementationOnce(() => 'xyx');
   });
-  it('renders Toggle properly', () => {
-    const onChange = jest.fn();
-    render(
+  it('should render Toggle properly', () => {
+    const component = renderer
+      .create(
+        <Toggle
+          checked
+          label="Accepter les cookies"
+          description="Activez-moi!"
+          hasSeparator
+          hasLabelLeft
+          data-testid="toggle"
+        />,
+      )
+      .toJSON();
+    expect(component).toMatchSnapshot();
+  });
+  it('should call onChange', () => {
+    const mockClick = jest.fn();
+
+    const component = shallow(
       <Toggle
-        isChecked
-        onChange={onChange}
+        checked
+        onChange={mockClick}
         label="Accepter les cookies"
         description="Activez-moi!"
         hasSeparator
@@ -23,25 +43,8 @@ describe('<Toggle />', () => {
         data-testid="toggle"
       />,
     );
-    const toggle = screen.getByTestId('toggle');
-    expect(toggle.className).toBe('fr-toggle fr-toggle--border-bottom fr-toggle--label-left');
-    expect(toggle).toBeInTheDocument();
-    expect(toggle).toMatchSnapshot();
-  });
 
-  it('should fire onChange on click', () => {
-    const onChange = jest.fn();
-    render(
-      <Toggle
-        isChecked
-        onChange={onChange}
-        label="Accepter les cookies"
-        description="Activez-moi!"
-        hasSeparator
-        hasLabelLeft
-      />,
-    );
-    fireEvent.click(screen.getByTestId('toggle-input'));
-    expect(onChange).toHaveBeenCalledTimes(1);
+    component.find('.fr-toggle__input').simulate('change');
+    expect(mockClick).toHaveBeenCalled();
   });
 });

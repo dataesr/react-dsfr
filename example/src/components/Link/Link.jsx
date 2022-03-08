@@ -6,18 +6,22 @@ import {
 
 const LinkExample = () => (
   <>
-    <Col>
+    <Col n="12">
       <DSLink
-        className="bso-link"
+        className="custom-link"
         icon="ri-arrow-right-line"
         iconPosition="right"
         iconSize="lg"
+        href="/page-1"
       >
-        Link with icon on the right
+        Link icon on the right
       </DSLink>
     </Col>
     <Col>
-      <DSLink title="title" href="/#">Link</DSLink>
+      <DSLink title="title" href="/#">Link with title</DSLink>
+    </Col>
+    <Col n="12">
+      <DSLink title="title">Link disabled</DSLink>
     </Col>
     <Col>
       <DSLink title="title" as={<RouterLink to="/my-path" />}>

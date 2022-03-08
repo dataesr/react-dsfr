@@ -18,6 +18,8 @@ const AccordionItem = forwardRef((props, ref) => {
     id,
     keepOpen,
     initExpand,
+    size,
+    color,
     ...remainingProps
   } = props;
   const TitleTag = `${titleAs}`;
@@ -29,32 +31,45 @@ const AccordionItem = forwardRef((props, ref) => {
   }, [initItem, expandedItems, id]);
   const [isExpanded, setIsExpanded] = useState(checkExpanded);
   const { item, collapse } = useCollapse(`fr-accordion-${id}`, isExpanded);
+
   const onItemClick = (e) => {
+    if (e.target.nodeName !== 'BUTTON') {
+      e.target = e.target.parentNode;
+    }
+
     const trullyExpanded = (buttonRef.current.ariaExpanded === 'true');
     onClick(trullyExpanded, e, parseFloat(e.target.id.slice(6)));
     setInitItem(false);
   };
+
   useEffect(() => {
     setIsExpanded(checkExpanded());
   }, [isExpanded, setIsExpanded, checkExpanded]);
 
+  useEffect(() => {
+    if (color && buttonRef.current) {
+      buttonRef.current.style.color = `${color}`;
+    }
+  }, [color]);
+
+  const _btnClassName = classNames('fr-accordion__btn', { [`fr-btn--${size}`]: size && size !== 'md' });
+
   return (
     <li
       className={classNames(className)}
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
       ref={ref}
     >
       <section className="fr-accordion">
         <TitleTag className="fr-accordion__title">
           <button
             ref={buttonRef}
-            className="fr-accordion__btn"
+            className={_btnClassName}
             id={`button${id}`}
             onClick={(e) => onItemClick(e)}
             type="button"
             aria-controls={`fr-accordion-${id}`}
             aria-expanded={isExpanded}
-            data-testid="accordion-button"
           >
             {title}
           </button>
@@ -63,7 +78,6 @@ const AccordionItem = forwardRef((props, ref) => {
           style={{ maxHeight: item.stateHeight, '--collapse': collapse }}
           className={item.class}
           id={`fr-accordion-${id}`}
-          data-testid="accordion-div"
         >
           {children}
         </div>
@@ -79,7 +93,9 @@ AccordionItem.defaultProps = {
   expandedItems: [],
   keepOpen: false,
   onClick: () => {},
+  size: 'md',
   id: 0,
+  color: '',
 };
 
 AccordionItem.propTypes = {
@@ -96,8 +112,10 @@ AccordionItem.propTypes = {
      * @ignore
      */
   expandedItems: PropTypes.arrayOf(PropTypes.number),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   id: PropTypes.number,
-  title: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   keepOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

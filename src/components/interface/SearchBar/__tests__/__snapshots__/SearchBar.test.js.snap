@@ -1,33 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> renders SearchBar properly 1`] = `
-<form
-  class="fr-search-bar"
-  data-testid="searchbar"
-  role="search"
->
-  <label
-    class="fr-label"
-    for="xxxxxxx"
-  >
-    SearchBar du gouvernement
-  </label>
-  <input
-    class="fr-input"
-    data-testid="search-input"
-    id="xxxxxxx"
-    placeholder=""
-    type="search"
-    value=""
-  />
-  <button
-    class="fr-btn"
-    title="Rechercher"
-    type="submit"
-  >
-    Rechercher
-  </button>
-</form>
+<input
+  class="fr-input"
+  id="xxxxxxx"
+  placeholder="placeholder"
+  type="search"
+  value="text"
+/>
 `;
 
 exports[`<SearchBar /> renders large SearchBar properly 1`] = `
@@ -44,9 +24,8 @@ exports[`<SearchBar /> renders large SearchBar properly 1`] = `
   </label>
   <input
     class="fr-input"
-    data-testid="search-input"
     id="xxxxxxx"
-    placeholder=""
+    placeholder="placeholder"
     type="search"
     value=""
   />

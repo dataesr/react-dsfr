@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { Children } from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-import '@gouvfr/dsfr/dist/css/footer.min.css';
+/*
+* DSFR v1.3.1
+*/
+import '@gouvfr/dsfr/dist/component/footer/footer.css';
 
 const Footer = ({ children, className, ...remainingProps }) => {
-  const top = children.filter((child) => child.props.__TYPE === 'FooterTop');
-  const rest = children.filter((child) => child.props.__TYPE !== 'FooterTop');
+  const top = Children.toArray(children).filter((child) => child.props.__TYPE === 'FooterTop');
+  const rest = Children.toArray(children).filter((child) => child.props.__TYPE !== 'FooterTop');
   const _className = classNames('fr-footer', className);
   return (
     <footer
       id="footer"
       className={_className}
       role="contentinfo"
-      {...dataAttributes(remainingProps)}
+      {...dataAttributes.getAll(remainingProps)}
     >
       {top}
       <div className="fr-container">

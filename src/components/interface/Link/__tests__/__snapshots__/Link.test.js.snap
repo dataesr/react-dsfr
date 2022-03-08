@@ -8,9 +8,12 @@ exports[`<Link /> renders correctly 1`] = `
   target="_self"
   title="title"
 >
-  test button
-  <span
-    className="ri-1x icon-right alert-fill ds-fr--v-middle"
-  />
+  <span>
+    test button
+    <span
+      aria-hidden={true}
+      className="ri-1x icon-right ds-fr--v-middle alert-fill"
+    />
+  </span>
 </a>
 `;
