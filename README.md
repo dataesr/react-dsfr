@@ -38,25 +38,6 @@ Visit [http://localhost:6060](http://localhost:6060).
 
 The complete styleguide is available online [https://dataesr.github.io/react-dsfr/](https://dataesr.github.io/react-dsfr/).
 
-### Npm package
-
-#### Generate /dist folder containing bundles
-
-> [Rollupjs](https://www.rollupjs.org/guide/en/) is used to bundle files. cf config in `rollup.config.js`
-
-```bash
-npm run build
-```
-
-#### Generate and watch /dist folder containing bundles
-
-```bash
-npm install
-npm start
-```
-
-:warning: Header component is mandatory to use @dataesr/react-dsfr
-
 #### Example page
 
 > A playground to test components
@@ -97,24 +78,6 @@ Color variables are available in `style/color.css`. To make a new component dark
 Some components can be colored with variables (see `colorFamily` props) listed below:
 ```
 ['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
-```
-
-#### Publish it on npm registry
-
-First update the version number in `package.json`
-
-```bash
-npm i --package-lock-only
-npm login
-npm publish --tag latest --access public
-```
-
-Visit [http://localhost:3000](http://localhost:3000).
-
-#### Test your node module before you publish 
-
-```bash
-npm link @dataesr/react-dsfr
 ```
 
 #### Help from outside
@@ -162,8 +125,22 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 ### They use react-dsfr and we like it!
 
-* [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr/)
-* [DashLord beta.gouv.fr](https://dashlord.incubateur.net/#/)
+* [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr)
+* [DashLord](https://dashlord.incubateur.net)
+* [Baromètre de la Science Ouverte](https://barometredelascienceouverte.esr.gouv.fr)
+* [Enfants du spectacle](https://enfants-du-spectacle.fabrique.social.gouv.fr)
+* [Mon Psy](https://monpsy.sante.gouv.fr)
+* [Transitions collectives](https://transitions-collectives.fabrique.social.gouv.fr)
+* [Immersion facile](https://immersion-facile.beta.gouv.fr)
+* [Bilans climat simplifiés](https://bilans-climat-simplifies.ademe.fr)
+* [Zero logement vacant](https://zerologementvacant.beta.gouv.fr)
+
+
+### Release policy
+
+The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
+
+Merging code on the `master` branch will automatically bump the version, produce a changelog, and publish a new release if new semantic commits are found (commit message prefixed with `fix: ` or `feat: `). See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
 
 ### TODO
 * components v1.4
