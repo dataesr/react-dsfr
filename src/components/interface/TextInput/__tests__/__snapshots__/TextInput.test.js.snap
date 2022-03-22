@@ -13,14 +13,19 @@ exports[`<TextInput /> renders correctly 1`] = `
     label
   </label>
   
-  <input
-    className="fr-input"
-    id="xxxxxxx"
-    onBlur={[Function]}
-    onChange={[MockFunction]}
-    required={false}
-    value="init-value"
-  />
+  <div
+    className="fr-input-wrap"
+  >
+    <input
+      className="fr-input"
+      id="xxxxxxx"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      required={false}
+      type="text"
+      value="init-value"
+    />
+  </div>
   
 </div>
 `;

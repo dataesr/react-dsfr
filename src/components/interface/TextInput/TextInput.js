@@ -12,12 +12,14 @@ import dataAttributes from '../../../utils/data-attributes';
 const TextInput = forwardRef((props, ref) => {
   const {
     textarea,
+    type,
     label,
     hint,
     message,
     messageType,
     className,
     required,
+    warning,
     onBlur,
     withAutoValidation,
     ...remainingProps
@@ -34,6 +36,11 @@ const TextInput = forwardRef((props, ref) => {
     [`fr-input--${internalMessageType}`]: internalMessageType,
   });
 
+  const _wrapperClassName = classNames('fr-input-wrap', {
+    'fr-fi-calendar-line': type === 'date',
+    'fr-fi-alert-line': warning,
+  });
+
   const inputId = useRef(uuidv4());
   const hintId = useRef(uuidv4());
   return (
@@ -42,74 +49,82 @@ const TextInput = forwardRef((props, ref) => {
       {...dataAttributes.getAll(remainingProps)}
     >
       {label && (
-      <label
-        className="fr-label"
-        htmlFor={inputId.current}
-        aria-describedby={hint && hintId.current}
-      >
-        {label}
-        {required && <span className="error"> *</span>}
-      </label>
+        <label
+          className="fr-label"
+          htmlFor={inputId.current}
+          aria-describedby={hint && hintId.current}
+        >
+          {label}
+          {required && <span className="error"> *</span>}
+        </label>
       )}
       {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
       {
-        (textarea)
-          ? (
-            <textarea
-              {...dataAttributes.filterAll(remainingProps)}
-              ref={ref}
-              className={_className}
-              id={inputId.current}
-              required={required}
-              onBlur={(e) => {
-                if (withAutoValidation) {
-                  setValidation({
-                    status: e.target.validity.valid ? 'valid' : 'error',
-                    message: e.target.validationMessage,
-                  });
-                }
-                onBlur(e);
-              }}
-            />
-          )
-          : (
-            <input
-              {...dataAttributes.filterAll(remainingProps)}
-              ref={ref}
-              className={_className}
-              id={inputId.current}
-              required={required}
-              onBlur={(e) => {
-                if (withAutoValidation) {
-                  setValidation({
-                    status: e.target.validity.valid ? 'valid' : 'error',
-                    message: e.target.validationMessage,
-                  });
-                }
-                onBlur(e);
-              }}
-            />
-          )
-    }
+                (textarea)
+                  ? (
+                    <textarea
+                      {...dataAttributes.filterAll(remainingProps)}
+                      ref={ref}
+                      className={_className}
+                      id={inputId.current}
+                      required={required}
+                      onBlur={(e) => {
+                        if (withAutoValidation) {
+                          setValidation({
+                            status: e.target.validity.valid ? 'valid' : 'error',
+                            message: e.target.validationMessage,
+                          });
+                        }
+                        onBlur(e);
+                      }}
+                    />
+                  )
+                  : (
+                    <div className={_wrapperClassName}>
+                      <input
+                        {...dataAttributes.filterAll(remainingProps)}
+                        ref={ref}
+                        type={type}
+                        className={_className}
+                        id={inputId.current}
+                        required={required}
+                        onBlur={(e) => {
+                          if (withAutoValidation) {
+                            setValidation({
+                              status: e.target.validity.valid ? 'valid' : 'error',
+                              message: e.target.validationMessage,
+                            });
+                          }
+                          onBlur(e);
+                        }}
+                      />
+                    </div>
+                  )
+            }
       {(internalMessage && internalMessageType)
-       && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
+                && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
     </div>
   );
 });
 
 TextInput.defaultProps = {
   textarea: false,
+  warning: false,
   hint: '',
   messageType: '',
   message: '',
   label: null,
   className: '',
+  type: 'text',
   required: false,
   withAutoValidation: false,
-  onBlur: () => {},
+  onBlur: () => {
+  },
 };
 
 TextInput.propTypes = {
+  type: PropTypes.oneOf(['date', 'text', 'number']),
+  warning: PropTypes.bool,
   textarea: PropTypes.bool,
   label: PropTypes.string,
   hint: PropTypes.oneOfType([
