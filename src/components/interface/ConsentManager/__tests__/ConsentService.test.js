@@ -16,6 +16,7 @@ describe('<ConsentService />', () => {
   it('should render ConsentService properly', () => {
     const component = renderer
       .create(<ConsentService
+        defaultConsent="accept"
         description="Description"
         title="Préférences pour tous les services."
         acceptLabel="Tout accepter"

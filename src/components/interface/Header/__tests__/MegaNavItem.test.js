@@ -36,7 +36,7 @@ describe('<MegaNavItem />', () => {
     const component = renderer
       .create(
         <MegaNavItem {...initialProps}>
-          <MegaNavSubItem />
+          <MegaNavSubItem>Test</MegaNavSubItem>
         </MegaNavItem>,
       )
       .toJSON();
