@@ -33,6 +33,6 @@ SimpleTable.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 export default SimpleTable;

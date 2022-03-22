@@ -81,6 +81,7 @@ const Header = ({
         {...dataAttributes.getAll(remainingProps)}
       >
         {Children.toArray(children).map(
+          // eslint-disable-next-line react/no-array-index-key
           (child, index) => cloneElement(child, { key: index, closeButtonLabel }),
         )}
         {isNavTool && openNav && !isNavBar && (

@@ -172,7 +172,7 @@ Table.defaultProps = {
 };
 
 Table.propTypes = {
-  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+  columns: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.array.isRequired,
   fixedLayout: PropTypes.bool,

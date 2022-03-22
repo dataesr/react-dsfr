@@ -16,6 +16,7 @@ const HeaderNav = ({
     'fr-modal--opened': isOpenNav,
   });
   const childs = Children.toArray(children).map(
+    // eslint-disable-next-line react/no-array-index-key
     (child, index) => cloneElement(child, { key: index, path: path || undefined }),
   );
   return (
