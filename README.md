@@ -123,6 +123,13 @@ Access `about:inspect`
 
 See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
+### publish package
+
+```
+ npm i --package-lock-only
+ npm publish --tag latest --access public
+```
+
 ### They use react-dsfr and we like it!
 
 * [santepsy.etudiant.gouv.fr](https://santepsy.etudiant.gouv.fr)
@@ -134,13 +141,6 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 * [Immersion facile](https://immersion-facile.beta.gouv.fr)
 * [Bilans climat simplifiés](https://bilans-climat-simplifies.ademe.fr)
 * [Zero logement vacant](https://zerologementvacant.beta.gouv.fr)
-
-
-### Release policy
-
-The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
-
-Merging code on the `master` branch will automatically bump the version, produce a changelog, and publish a new release if new semantic commits are found (commit message prefixed with `fix: ` or `feat: `). See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
 
 ### TODO
 * components v1.4
