@@ -4,6 +4,7 @@
 
 [![Tests](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple)
 
+[![semantic-release: react](https://img.shields.io/badge/semantic--release-react-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 > Non-official React components of the official french [Système de Design de l'État](https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476).
 
@@ -96,6 +97,31 @@ Thanks to the internet world.
 npm run test:dev
 ```
 
+### Release policy and package publishing 
+
+The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
+
+Merging code on the `master` branch will automatically bump the version, create a tag, produce a changelog and trigger the tests.
+
+If new semantic commits are found (see below how to format commit) a new version of npm package is published and github pages is updated.
+
+#### new patch version
+```bash
+git commit -m "fix: This is my fix"
+```
+
+#### new minor version
+```bash
+git commit -m "feat: This is my feature"
+```
+
+#### new major version
+```bash
+git commit -m "[type]: BREAKING CHANGE: This is my breaking change"
+```
+
+See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
+
 #### Accessibility
 
 Components can be tested in Example's page `App.js` with [@axe-core/react](https://www.npmjs.com/package/@axe-core/react)
@@ -122,19 +148,6 @@ npm run test:debug
 Access `about:inspect`
 
 See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
-
-### Release policy
-
-The `@dataesr/react-dsfr` package is published with [semantic-release](https://github.com/semantic-release/semantic-release).
-
-Merging code on the `master` branch will automatically bump the version, produce a changelog, and publish a new release if new semantic commits are found (commit message prefixed with `fix: ` or `feat: `). See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
-
-### publish package
-
-```
- npm i --package-lock-only
- npm publish --tag latest --access public
-```
 
 ### They use react-dsfr and we like it!
 
