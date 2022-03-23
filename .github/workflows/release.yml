@@ -2,13 +2,13 @@ name: Release
 on:
   # can be triggered manually
   workflow_dispatch:
-  # on master merge
+  # on push with tag
   push:
-   branches:
-     - master
+   tags:
+     - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
-  release:
+  gh-release:
     name: Release
     runs-on: ubuntu-latest
     steps:
@@ -37,3 +37,30 @@ jobs:
           steps: ${{ toJson(steps) }}
           channel: '#github-tests'
         if: always()
+
+  npm-publish:
+    needs: gh-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish
+        run: npm publish --access public
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  gh-pages-deploy:
+    needs: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm clean-install
+      - run: git config --global user.name "poplingue"
+      - run: git config --global user.email "paulinegc@protonmail.com"
+      - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
+      - run: npm run deploy
+        env:
+          GH_PAT: ${{secrets.GH_PAT}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
