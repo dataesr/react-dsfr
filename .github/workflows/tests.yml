@@ -1,9 +1,9 @@
-name: check build & tests
+name: Tests
 
 on: push
 
 jobs:
-  check:
+  tests:
     runs-on: ubuntu-latest
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
