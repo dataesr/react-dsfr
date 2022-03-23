@@ -2,10 +2,10 @@ name: Release
 on:
   # can be triggered manually
   workflow_dispatch:
-  # on push with tag
+  # on master merge
   push:
-   tags:
-     - 'v[0-9]+.[0-9]+.[0-9]+'
+    branches:
+      - master
 
 jobs:
   gh-release:
@@ -39,6 +39,7 @@ jobs:
         if: always()
 
   npm-publish:
+    name: Npm publish
     needs: gh-release
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +49,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   gh-pages-deploy:
+    name: Github Pages deploy
     needs: npm-publish
     runs-on: ubuntu-latest
     steps:
