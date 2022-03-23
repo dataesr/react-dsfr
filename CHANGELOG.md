@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dataesr/react-dsfr/compare/v1.1.0...v1.1.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* readme ([4e4297b](https://github.com/dataesr/react-dsfr/commit/4e4297b5649c601537133514c873d0f7304a3bcc))
+
 # [1.1.0](https://github.com/dataesr/react-dsfr/compare/v1.0.9...v1.1.0) (2022-03-23)
 
 
