@@ -1,0 +1,44 @@
+name: Release
+on:
+  # can be triggered manually
+  workflow_dispatch:
+  # on push with tag
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  npm-publish:
+    name: Npm publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.18
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+  gh-pages-deploy:
+    name: Github Pages deploy
+    needs: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm clean-install
+      - run: git config --global user.name "poplingue"
+      - run: git config --global user.email "paulinegc@protonmail.com"
+      - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
+      - run: npm run deploy
+        env:
+          GH_PAT: ${{secrets.GH_PAT}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
