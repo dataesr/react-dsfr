@@ -81,7 +81,17 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
           <ul
             className="fr-mega-menu__list"
             onClick={[Function]}
-          />
+          >
+            <li
+              className="fr-enlarge-link"
+            >
+              <p
+                className="fr-nav__link"
+              >
+                Test
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

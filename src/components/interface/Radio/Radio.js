@@ -79,7 +79,7 @@ const Radio = ({
             {svg}
         </div>
       )}
-      {hint && <span className="fr-hint-text">{hint}</span>}
+      {hint && <p className="fr-hint-text">{hint}</p>}
       {message && messageType && (
         <p className={`fr-${messageType}-text`}>
           {message}

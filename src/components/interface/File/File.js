@@ -33,7 +33,7 @@ const File = ({
     <div {...dataAttributes.getAll(remainingProps)} className={_className}>
       <label className="fr-label" htmlFor="file-upload">
         {label}
-        {hint && <span className="fr-hint-text">{hint}</span>}
+        {hint && <p className="fr-hint-text">{hint}</p>}
       </label>
       <input
         onChange={onChange}

@@ -43,7 +43,7 @@ const SelectWrapper = ({
         >
           {label}
           {required && <span className="error"> *</span>}
-          {hint && <span id={hintId.current} className="fr-hint-text">{hint}</span>}
+          {hint && <p id={hintId.current} className="fr-hint-text">{hint}</p>}
         </label>
       )
       }

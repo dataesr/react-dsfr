@@ -9,11 +9,11 @@ exports[`<File /> renders correctly 1`] = `
     htmlFor="file-upload"
   >
     Label File
-    <span
+    <p
       className="fr-hint-text"
     >
       Hint
-    </span>
+    </p>
   </label>
   <input
     aria-describedby="Hint"
