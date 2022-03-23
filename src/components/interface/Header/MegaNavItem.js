@@ -34,6 +34,7 @@ const MegaNavItem = ({
   return (
     <li
       className="fr-nav__item"
+      key={id.current}
       {...dataAttributes.getAll(remainingProps)}
     >
       <button

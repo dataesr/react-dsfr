@@ -44,9 +44,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish
-        run: npm publish --access public
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.18
+      - run: npm install
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
   gh-pages-deploy:
     name: Github Pages deploy
