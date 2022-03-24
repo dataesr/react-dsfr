@@ -79,14 +79,6 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 ['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
 ```
 
-#### Help from outside
-
-Thanks to the internet world.
-
-* [How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
-
-* [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
-
 ### Unit tests
 
 #### Run all tests using react-scripts with watcher option
@@ -160,10 +152,18 @@ See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 * [Zero logement vacant](https://zerologementvacant.beta.gouv.fr)
 
 
+#### Help from outside
+
+Thanks to the internet world.
+
+* [How to build, test and release a node module in ES6 ](https://dev.to/whitep4nth3r/how-to-build-test-and-release-a-node-module-in-es6-296b)
+
+* [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
+
 ### TODO
 * components v1.4
   * bouton tertiaire
   * bouton FranceConnect
   * retour en haut de page
-* To limit usage of colors to colorFamilies
+* Limit usage of colors to colorFamilies
 * Add StoryBook
