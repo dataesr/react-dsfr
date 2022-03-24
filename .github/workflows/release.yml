@@ -30,5 +30,42 @@ jobs:
             @semantic-release/git
             @semantic-release/npm
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  npm-publish:
+    name: Npm publish
+    needs: gh-release
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.18
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+  gh-pages-deploy:
+    name: Github Pages deploy
+    needs: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm clean-install
+      - run: git config --global user.name "poplingue"
+      - run: git config --global user.email "paulinegc@protonmail.com"
+      - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
+      - run: npm run deploy
+        env:
+          GH_PAT: ${{secrets.GH_PAT}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
