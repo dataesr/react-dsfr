@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/dataesr/react-dsfr/compare/v1.1.5...v1.1.6) (2022-03-24)
+
+
+### Bug Fixes
+
+* hint inside label tag ([6924df5](https://github.com/dataesr/react-dsfr/commit/6924df54b19d8c173913feba05e3874fe1f80a51))
+
 ## [1.1.5](https://github.com/dataesr/react-dsfr/compare/v1.1.4...v1.1.5) (2022-03-24)
 
 
