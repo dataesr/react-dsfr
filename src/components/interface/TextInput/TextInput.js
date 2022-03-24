@@ -55,10 +55,10 @@ const TextInput = forwardRef((props, ref) => {
           aria-describedby={hint && hintId.current}
         >
           {label}
+          {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
           {required && <span className="error"> *</span>}
         </label>
       )}
-      {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
       {
                 (textarea)
                   ? (

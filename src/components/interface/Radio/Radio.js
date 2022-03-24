@@ -73,13 +73,13 @@ const Radio = ({
                 }
       >
         {label}
+        {hint && <p className="fr-hint-text">{hint}</p>}
       </label>
       {svg && isExtended && (
         <div className="fr-radio-rich__img" data-fr-inject-svg>
             {svg}
         </div>
       )}
-      {hint && <p className="fr-hint-text">{hint}</p>}
       {message && messageType && (
         <p className={`fr-${messageType}-text`}>
           {message}

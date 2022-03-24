@@ -11,8 +11,8 @@ exports[`<TextInput /> renders correctly 1`] = `
     htmlFor="xxxxxxx"
   >
     label
+    
   </label>
-  
   <div
     className="fr-input-wrap"
   >

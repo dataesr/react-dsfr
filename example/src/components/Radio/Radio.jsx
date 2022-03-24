@@ -12,6 +12,7 @@ const RadioExample = () => {
         <Col>
           <h3>Non controllé</h3>
           <RadioGroup
+            hint="Hint"
             legend="Légende pour l’ensemble de champs"
           >
             <Radio

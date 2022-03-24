@@ -28,6 +28,7 @@ const TextInputExample = () => {
         withAutoValidation
       />
       <TextInput
+        hint="Hint"
         warning
         message="Warning"
         messageType="error"

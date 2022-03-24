@@ -17,8 +17,8 @@ exports[`<Radio /> renders correctly 1`] = `
     htmlFor="xxxxxxx"
   >
     Label de la radio
+    
   </label>
-  
   
 </div>
 `;

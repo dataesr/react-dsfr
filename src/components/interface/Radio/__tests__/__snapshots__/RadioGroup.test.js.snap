@@ -35,8 +35,8 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           htmlFor="xxxxxxx"
         >
           Label de la radio 1
+          
         </label>
-        
         
       </div>
       <div
@@ -54,8 +54,8 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           className="fr-label"
         >
           Label de la radio 2
+          
         </label>
-        
         
       </div>
     </div>

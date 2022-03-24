@@ -46,8 +46,10 @@ const Checkbox = forwardRef((props, ref) => {
         name="checkbox"
         ref={ref}
       />
-      <label className="fr-label" htmlFor={checkboxId.current}>{label}</label>
-      {hint && <p className="fr-hint-text">{hint}</p>}
+      <label className="fr-label" htmlFor={checkboxId.current}>
+        {label}
+        {hint && <p className="fr-hint-text">{hint}</p>}
+      </label>
       {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
     </div>
   );

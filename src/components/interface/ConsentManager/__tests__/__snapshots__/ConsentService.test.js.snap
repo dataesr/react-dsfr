@@ -41,8 +41,8 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               htmlFor="name"
             >
               Tout accepter
+              
             </label>
-            
             
           </div>
           <div
@@ -59,8 +59,8 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               className="fr-label"
             >
               Tout refuser
+              
             </label>
-            
             
           </div>
         </div>

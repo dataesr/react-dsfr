@@ -17,11 +17,11 @@ exports[`<Toggle /> should render Toggle properly 1`] = `
     htmlFor="xyx"
   >
     Accepter les cookies
+    <p
+      className="fr-hint-text"
+    >
+      Activez-moi!
+    </p>
   </label>
-  <p
-    className="fr-hint-text"
-  >
-    Activez-moi!
-  </p>
 </div>
 `;

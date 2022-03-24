@@ -37,12 +37,13 @@ const SelectExample = () => {
         options={options}
       />
       <Select
-        label="Label pour liste déroulante"
+        label="Label pour liste déroulante avec erreur"
         options={options}
         selected={selectValue2}
         onChange={(e) => { setSelectValue2(e.target.value); }}
         message="Texte d'erreur obligatoire"
         messageType="error"
+        hint="Hint"
       />
       <SearchableSelect
         label="Select avec recherche"
