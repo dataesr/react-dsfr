@@ -8,6 +8,7 @@ export interface ToggleProps {
     className?: ToggleClassName;
     hasSeparator?: boolean;
     hasLabelLeft?: boolean;
+    checked?: boolean;
     description?: string;
     label: string;
     toggleColor?: string;

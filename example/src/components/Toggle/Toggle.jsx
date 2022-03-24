@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Col, Toggle } from '@dataesr/react-dsfr';
 
 const ToggleExample = () => {
-  const [toggleCheck, setToggleCheck] = useState(false);
+  const [toggleCheck, setToggleCheck] = useState(true);
 
   return (
     <>

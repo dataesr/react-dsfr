@@ -7,6 +7,7 @@ exports[`<Toggle /> should render Toggle properly 1`] = `
 >
   <input
     className="fr-toggle__input"
+    defaultChecked={true}
     id="xyx"
     type="checkbox"
   />
