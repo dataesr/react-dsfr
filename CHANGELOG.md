@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/dataesr/react-dsfr/compare/v1.1.6...v1.1.7) (2022-03-24)
+
+
+### Bug Fixes
+
+* toggle ([fdd0073](https://github.com/dataesr/react-dsfr/commit/fdd007355af0613f55f624b5cbba655c4079e6c2))
+
 ## [1.1.6](https://github.com/dataesr/react-dsfr/compare/v1.1.5...v1.1.6) (2022-03-24)
 
 
