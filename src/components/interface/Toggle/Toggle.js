@@ -59,8 +59,8 @@ const Toggle = ({
         data-fr-unchecked-label="Désactivé"
       >
         {label}
-        {description && <p className="fr-hint-text">{description}</p>}
       </label>
+      {description && <p className="fr-hint-text">{description}</p>}
     </div>
   );
 };
