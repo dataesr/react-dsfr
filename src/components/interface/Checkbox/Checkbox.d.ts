@@ -13,7 +13,7 @@ export type CheckboxSize = "sm" | "md";
 export interface CheckboxProps {
     className?: CheckboxClassName;
     id?: string;
-    disabled: CheckboxDisabled;
+    disabled?: CheckboxDisabled;
     hint?: CheckboxHint;
     label: string;
     message?: string;
