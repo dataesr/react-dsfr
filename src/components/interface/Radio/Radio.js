@@ -106,6 +106,7 @@ Radio.defaultProps = {
   imageURL: '',
   defaultChecked: false,
   svg: null,
+  disabled: undefined,
 };
 
 Radio.propTypes = {
@@ -120,6 +121,7 @@ Radio.propTypes = {
     PropTypes.array,
   ]),
   id: PropTypes.string,
+  disabled: PropTypes.bool,
   svg: PropTypes.node,
   isExtended: PropTypes.bool,
   label: PropTypes.string.isRequired,
