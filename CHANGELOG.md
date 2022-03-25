@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/dataesr/react-dsfr/compare/v1.1.9...v1.1.10) (2022-03-25)
+
+
+### Bug Fixes
+
+* radio disabled propType ([13d2bc9](https://github.com/dataesr/react-dsfr/commit/13d2bc934b651d79447b6ac66df256927cbba97d))
+
 ## [1.1.9](https://github.com/dataesr/react-dsfr/compare/v1.1.8...v1.1.9) (2022-03-25)
 
 
