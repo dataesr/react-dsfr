@@ -18,6 +18,7 @@ const CheckboxExample = () => {
           value="value-1"
         />
         <Checkbox
+          disabled
           label="Label checkbox 2"
           onChange={() => {
           }}

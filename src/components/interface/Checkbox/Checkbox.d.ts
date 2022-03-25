@@ -4,6 +4,8 @@ export type CheckboxClassName = string | Object | any[];
 
 export type CheckboxHint = string | Object | any[];
 
+export type CheckboxDisabled = boolean | undefined;
+
 export type CheckboxMessageType = "error" | "valid" | "";
 
 export type CheckboxSize = "sm" | "md";
@@ -11,6 +13,7 @@ export type CheckboxSize = "sm" | "md";
 export interface CheckboxProps {
     className?: CheckboxClassName;
     id?: string;
+    disabled: CheckboxDisabled;
     hint?: CheckboxHint;
     label: string;
     message?: string;

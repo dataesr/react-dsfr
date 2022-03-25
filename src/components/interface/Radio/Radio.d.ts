@@ -4,6 +4,8 @@ export type RadioClassName = string | Object | any[];
 
 export type RadioHint = string | Object | any[];
 
+export type RadioDisabled = boolean | undefined;
+
 export type RadioMessageType = "error" | "valid" | "";
 
 export type RadioSize = "sm" | "md";
@@ -14,6 +16,7 @@ export interface RadioProps {
     id?: string;
     svg?: React.ReactNode;
     isExtended?: boolean;
+    disabled?: RadioDisabled;
     label: string;
     message?: string;
     messageType?: RadioMessageType;

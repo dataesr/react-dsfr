@@ -21,6 +21,7 @@ const Radio = ({
   label,
   message,
   messageType,
+  disabled,
   onChange,
   onGroupChange,
   size,
@@ -58,6 +59,7 @@ const Radio = ({
   return (
     <div className={_className} {...dataAttributes.getAll(remainingProps)}>
       <input
+        disabled={disabled || undefined}
         {...dataAttributes.filterAll(remainingProps)}
         type="radio"
         id={radioId.current}

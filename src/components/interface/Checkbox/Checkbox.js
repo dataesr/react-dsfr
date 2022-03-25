@@ -16,6 +16,7 @@ import '@gouvfr/dsfr/dist/component/checkbox/checkbox.css';
 const Checkbox = forwardRef((props, ref) => {
   const {
     className,
+    disabled,
     hint,
     id,
     label,
@@ -44,6 +45,7 @@ const Checkbox = forwardRef((props, ref) => {
         type="checkbox"
         id={checkboxId.current}
         name="checkbox"
+        disabled={disabled}
         ref={ref}
       />
       <label className="fr-label" htmlFor={checkboxId.current}>
@@ -59,6 +61,7 @@ Checkbox.defaultProps = {
   className: '',
   hint: '',
   id: null,
+  disabled: undefined,
   size: 'md',
   messageType: '',
   message: '',
@@ -71,6 +74,7 @@ Checkbox.propTypes = {
     PropTypes.array,
   ]),
   id: PropTypes.string,
+  disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
