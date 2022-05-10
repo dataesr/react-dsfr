@@ -25,3 +25,14 @@
 .fr-react-table--pagination-right nav {
     justify-content: flex-end;
 }
+
+.fr-table--header-fixed table {
+    overflow: unset !important; 
+}
+
+.fr-table--header-fixed thead {
+    position: -webkit-sticky;   /* Safari */
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* if inside flexbox */
+}
