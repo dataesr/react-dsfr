@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dataesr/react-dsfr/compare/v1.2.0...v1.3.0) (2022-05-11)
+
+
+### Features
+
+* BREAKING CHANGE: upgrade v1.5.0 ([99ca28d](https://github.com/dataesr/react-dsfr/commit/99ca28dbc82950519e8b8caeb23edb6b3aa6636f))
+
 # [1.2.0](https://github.com/dataesr/react-dsfr/compare/v1.1.11...v1.2.0) (2022-05-11)
 
 
