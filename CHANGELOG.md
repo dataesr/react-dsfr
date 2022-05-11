@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dataesr/react-dsfr/compare/v1.1.11...v1.2.0) (2022-05-11)
+
+
+### Features
+
+* Download component ([3d047c4](https://github.com/dataesr/react-dsfr/commit/3d047c4e518a8cce95b04652fba451b3b0fae4dd))
+
 ## [1.1.11](https://github.com/dataesr/react-dsfr/compare/v1.1.10...v1.1.11) (2022-03-25)
 
 
