@@ -7,12 +7,15 @@ const DownloadExample = () => (
   <Container>
     <Row>
       <Col n="4">
-        <Download label="Label" fileName="thisIsYourFile" metaData="jpeg" onNewTab />
+        <Download label="React Favicon" file="./favicon.ico" />
       </Col>
-      <Col n="8">
-        <DownloadGroup title="Download Group Title">
-          <Download label="Label 1" fileName="thisIsYourFile1" metaData="jpeg - 45Mo" onNewTab />
-          <Download label="Label 2" fileName="thisIsYourFile2" metaData="jpeg - 12ko" onNewTab />
+      <Col n="4">
+        <Download label="React Favicon" file="./favicon.ico" asCard description="This is the description" />
+      </Col>
+      <Col n="12">
+        <DownloadGroup title="Group Title">
+          <Download label="Open React Favicon" file="./favicon.ico" openFile />
+          <Download label="Download React Favicon" file="./favicon.ico" metaData="custom" />
         </DownloadGroup>
       </Col>
     </Row>

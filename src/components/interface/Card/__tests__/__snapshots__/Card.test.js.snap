@@ -8,38 +8,54 @@ exports[`<Card /> renders Card properly 1`] = `
   <div
     class="fr-card__body"
   >
-    <p
-      class="fr-card__title"
-      data-testid="cardtitle"
+    <div
+      class="fr-card__content"
     >
-      <a
-        class="fr-card__link"
-        href="/"
+      <p
+        class="fr-card__title"
+        data-testid="cardtitle"
       >
-        Qu’est-ce que le Pass Culture et comment l’obtenir ?
-      </a>
-    </p>
-    <p
-      class="fr-card__desc"
-      data-testid="carddescription"
-    >
-      Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
-    </p>
-    <p
-      class="fr-card__detail"
-      data-testid="carddetail"
-    >
-      Détail
-    </p>
+        <a
+          class="fr-card__link"
+          href="/"
+        >
+          Qu’est-ce que le Pass Culture et comment l’obtenir ?
+        </a>
+      </p>
+      <p
+        class="fr-card__desc"
+        data-testid="carddescription"
+      >
+        Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
+      </p>
+      <p
+        class="fr-card__detail"
+        data-testid="carddetail"
+      >
+        Détail
+      </p>
+    </div>
   </div>
   <div
-    class="fr-card__img"
-    data-testid="cardimage"
+    class="fr-card__header"
   >
-    <img
-      alt="alternative"
-      src="http://fakeimg.pl/300/"
-    />
+    <div
+      class="fr-card__img"
+      data-testid="cardimage"
+    >
+      <img
+        alt="alternative"
+        class="fr-responsive-img"
+        src="http://fakeimg.pl/300/"
+      />
+    </div>
   </div>
+  <span>
+    <span
+      aria-hidden="false"
+      class="ri-xl icon-left ds-fr--v-middle ri-arrow-right-line ds-fr-card-icon"
+    />
+  </span>
+  
 </div>
 `;

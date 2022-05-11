@@ -16,7 +16,7 @@ describe('<Download />', () => {
         <Download
           metaData="metaData"
           label="Label de la checkbox"
-          fileName="value"
+          file="value"
         />,
       )
       .toJSON();

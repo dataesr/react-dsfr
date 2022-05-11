@@ -1,8 +1,9 @@
-import React, { Children, cloneElement } from 'react';
+import React, { Children, cloneElement, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import Icon from '../../foundation/icon/index';
 
 /*
 * DSFR v1.5.0
@@ -18,6 +19,7 @@ const Card = ({
   anchorAs,
   href,
   isHorizontal,
+  icon,
   className,
   hasArrow,
   bodyClassName,
@@ -37,7 +39,6 @@ const Card = ({
   });
   const _className = classNames('fr-card fr-card--grey', {
     'fr-card--horizontal': isHorizontal,
-    'fr-card--no-arrow': !hasArrow,
     'fr-enlarge-link': href || asLink || onClick,
   }, className);
 
@@ -72,11 +73,15 @@ const Card = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       <div className={classNames('fr-card__body', bodyClassName)}>
-        {displayTitle}
-        {description}
-        {detail}
+        <div className="fr-card__content">
+          {displayTitle}
+          {description}
+          {detail}
+        </div>
       </div>
       {img}
+      {hasArrow && !icon && <Icon name="ri-arrow-right-line" size="xl" className="ds-fr-card-icon" />}
+      {icon && <Icon name={icon} size="xl" className="ds-fr-card-icon" />}
     </div>
   );
 };
@@ -88,6 +93,7 @@ Card.defaultProps = {
   isHorizontal: false,
   className: '',
   bodyClassName: '',
+  icon: '',
   hasArrow: true,
   asLink: null,
   onClick: undefined,
@@ -99,6 +105,7 @@ Card.propTypes = {
   ]).isRequired,
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
   href: PropTypes.string,
+  icon: PropTypes.string,
   ariaLabel: PropTypes.string,
   isHorizontal: PropTypes.bool,
   className: PropTypes.oneOfType([

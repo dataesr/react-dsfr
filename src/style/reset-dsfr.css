@@ -1,4 +1,3 @@
-
 /*
 Fix DSFR issue
 https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
@@ -15,6 +14,6 @@ span.error {
     cursor: pointer;
 }
 
-.fr-download__link:after{
+.fr-download__link:after, .fr-card:before {
     display: none;
 }

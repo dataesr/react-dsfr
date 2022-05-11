@@ -6,8 +6,11 @@ export interface DownloadProps {
     className?: DownloadClassName;
     fileName: string;
     label: string;
-    metaData: string;
+    metaData?: string;
+    description?: string;
     lang?: string;
+    asCard?: boolean;
+    openFile?: boolean;
 }
 
 declare const Download: React.FC<DownloadProps>;
