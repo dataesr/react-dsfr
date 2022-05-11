@@ -107,7 +107,7 @@ git commit -m "feat: This is my feature"
 
 #### new major version
 ```bash
-git commit -m "[type]: BREAKING CHANGE: This is my breaking change"
+git commit -m "[subject]" -m "BREAKING CHANGE: [body]"
 ```
 
 See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
