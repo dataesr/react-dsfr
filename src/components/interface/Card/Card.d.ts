@@ -10,6 +10,7 @@ export interface CardProps {
     children: CardChildren;
     anchorAs?: CardAnchorAs;
     href?: string;
+    icon?: string;
     ariaLabel?: string;
     isHorizontal?: boolean;
     className?: CardClassName;
