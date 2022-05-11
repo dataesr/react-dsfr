@@ -46,6 +46,12 @@ const TextInputExample = () => {
         type="number"
         label="Number input"
       />
+      <TextInput
+        required
+        hint="Must contain letters and numbers"
+        type="password"
+        label="Password"
+      />
     </Col>
   );
 };
