@@ -7,7 +7,7 @@ import { RadioGroup, Radio } from '../Radio';
 import useTheme from './useTheme';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/scheme/scheme.css';
 

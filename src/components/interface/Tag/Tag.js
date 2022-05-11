@@ -5,7 +5,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/component/tag/tag.css';
 

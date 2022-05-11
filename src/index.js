@@ -10,6 +10,7 @@ import Alert from './components/interface/Alert/index';
 import { Badge, BadgeGroup } from './components/interface/Badge/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
+import { Download, DownloadGroup } from './components/interface/Download/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
 import {
   Card, CardDescription, CardDetail, CardImage, CardTitle,
@@ -65,6 +66,8 @@ const library = () => ({
   CalloutTitle,
   CalloutText,
   ConsentManager,
+  Download,
+  DownloadGroup,
   Link,
   Card,
   CardDescription,

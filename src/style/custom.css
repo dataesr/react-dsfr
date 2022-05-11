@@ -46,22 +46,6 @@ span.ds-fr--v-top {
   color: var(--text-default-grey);
 }
 
-/*
-Fix DSFR issue
-https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
-*/
-.fr-tabs__panel:not(.fr-tabs__panel--selected) {
-  display: none;
-}
-
-span.error {
-  color: var(--error-main-525);
-}
-
-.fr-table thead th.sortable {
-  cursor: pointer;
-}
-
 /**
 Colored Components
  */

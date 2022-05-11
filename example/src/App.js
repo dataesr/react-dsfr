@@ -32,6 +32,7 @@ import TextsExample from './components/Texts/Texts';
 import TileExample from './components/Tile/Tile';
 import ToggleExample from './components/Toggle/Toggle';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
+import DownloadExample from './components/Download/Download';
 import Element from './Element';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
@@ -49,6 +50,7 @@ const App = () => {
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
     { title: 'ConsentManager', component: <ConsentManagerExample /> },
+    { title: 'Download', component: <DownloadExample /> },
     { title: 'File', component: <FileExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
     { title: 'Icons', component: <IconsExample /> },

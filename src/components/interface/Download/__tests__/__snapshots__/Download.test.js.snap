@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Download /> renders correctly 1`] = `
+<div
+  className="fr-download"
+>
+  <p>
+    <a
+      className="fr-download__link"
+      download="test.jpg"
+      href="value"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <span>
+        Label de la checkbox
+        <span
+          className="fr-download__detail"
+        >
+          metaData
+        </span>
+        <span
+          aria-hidden={true}
+          className="ri-1x icon-right ds-fr--v-middle ri-download-line"
+        />
+      </span>
+    </a>
+  </p>
+</div>
+`;

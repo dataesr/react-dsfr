@@ -9,7 +9,7 @@ import useViewport from '../../../hooks/useViewport';
 import HeaderContext from './headerContext';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/core/core.css';
 import '@gouvfr/dsfr/dist/component/navigation/navigation.css';
@@ -20,6 +20,7 @@ import '@gouvfr/dsfr/dist/component/header/header.css';
 */
 import '../../../style/color.css';
 import '../../../style/custom.css';
+import '../../../style/reset-dsfr.css';
 
 /**
  *
