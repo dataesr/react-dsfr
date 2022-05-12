@@ -5,8 +5,8 @@ import postcss from 'rollup-plugin-postcss';
 import image from '@rollup/plugin-image';
 import { terser } from 'rollup-plugin-terser';
 import svgr from '@svgr/rollup';
-import pkg from './package.json';
 import dts from 'rollup-plugin-dts';
+import pkg from './package.json';
 
 const MODE = [
   {
@@ -63,8 +63,8 @@ MODE.forEach((m) => {
 });
 
 config.push({
-  input: "src/index.d.ts",
-  output: [{ file: "dist/index.d.ts", format: "es" }],
+  input: 'src/index.d.ts',
+  output: [{ file: 'dist/index.d.ts', format: 'es' }],
   plugins: [dts()],
 });
 

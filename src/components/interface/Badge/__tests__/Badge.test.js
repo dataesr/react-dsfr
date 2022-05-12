@@ -13,7 +13,6 @@ describe('<Badge />', () => {
         data-testid="badge"
         text="text"
         type="success"
-        icon={false}
         small
       />,
     );

@@ -14,6 +14,9 @@ span.error {
     cursor: pointer;
 }
 
-.fr-download__link:after, .fr-card:before {
+/** reset icon url */
+.fr-download__link:after,
+.fr-card:before,
+.fr-badge:before {
     display: none;
 }

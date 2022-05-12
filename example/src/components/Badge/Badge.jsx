@@ -9,12 +9,14 @@ const BadgeExample = () => (
     <Row>
       <Col>
         <Badge
+          hasIcon
           type="success"
           text="Success"
         />
       </Col>
       <Col>
         <Badge
+          hasIcon
           type="error"
           text="Error"
         />
@@ -22,22 +24,24 @@ const BadgeExample = () => (
       <Col>
         <Badge
           type="warning"
-          icon={false}
+          hasIcon={false}
           small
           text="warning"
         />
       </Col>
       <Col spacing="mx-2w">
         <Badge
+          hasIcon
           type="info"
           text="Information"
         />
       </Col>
       <Col>
         <Badge
-          text="Small custom color badge"
-          small
+          text="Small custom colored badge"
+          isSmall
           colorFamily="green-bourgeon"
+          icon="ri-lightbulb-flash-line"
         />
       </Col>
     </Row>
