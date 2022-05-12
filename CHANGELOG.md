@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/dataesr/react-dsfr/compare/v2.1.0...v2.1.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* badges ([ca4d43c](https://github.com/dataesr/react-dsfr/commit/ca4d43c27cd6f7dfd825a5ec6af13fb5ddf604d4))
+
 # [2.1.0](https://github.com/dataesr/react-dsfr/compare/v2.0.0...v2.1.0) (2022-05-12)
 
 
