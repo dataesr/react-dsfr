@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/dataesr/react-dsfr/compare/v1.3.0...v2.0.0) (2022-05-11)
+
+
+* Components ([8cca3ac](https://github.com/dataesr/react-dsfr/commit/8cca3ac9eaf887479e40f362dcde249080c7ae3b))
+
+
+### BREAKING CHANGES
+
+* upgrade dsfr 1.5.0
+
 # [1.3.0](https://github.com/dataesr/react-dsfr/compare/v1.2.0...v1.3.0) (2022-05-11)
 
 
