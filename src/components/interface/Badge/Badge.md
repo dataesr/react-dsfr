@@ -17,5 +17,5 @@ A utiliser quand il y a plusieurs erreurs dans un formulaire, ou des erreurs blo
 ### Small
 
 ```jsx
-<Badge small text="Information" icon={false}/>
+<Badge isSmall type="info" text="Information" hasIcon={false}/>
 ```

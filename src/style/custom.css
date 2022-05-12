@@ -88,3 +88,15 @@ Colored Components
     right: 1rem;
     color: var(--text-action-high-blue-france);
 }
+
+/**
+ Tag
+ */
+
+.ds-fr-tag-icon{
+    position: absolute;
+    top: -1px;
+    right: -15px;
+    color: var(--text-action-high-blue-france);
+}
+

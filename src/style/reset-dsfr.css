@@ -17,6 +17,7 @@ span.error {
 /** reset icon url */
 .fr-download__link:after,
 .fr-card:before,
+.fr-tag--dismiss:after,
 .fr-badge:before {
-    display: none;
+    display: none!important;
 }

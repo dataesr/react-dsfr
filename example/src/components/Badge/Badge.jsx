@@ -50,11 +50,10 @@ const BadgeExample = () => (
         <BadgeGroup>
           <Badge
             text="No system #1"
-            small
+            isSmall
           />
           <Badge
             text="No system #2"
-            small
           />
         </BadgeGroup>
       </Row>
