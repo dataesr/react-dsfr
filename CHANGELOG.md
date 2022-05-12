@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/dataesr/react-dsfr/compare/v2.0.0...v2.1.0) (2022-05-12)
+
+
+### Features
+
+* Card upgrade 1.5.0 ([4f64cfd](https://github.com/dataesr/react-dsfr/commit/4f64cfd53c4704d0d4b4cc61d16fbb0103f08bf6))
+
 # [2.0.0](https://github.com/dataesr/react-dsfr/compare/v1.3.0...v2.0.0) (2022-05-11)
 
 
