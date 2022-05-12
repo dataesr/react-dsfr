@@ -22,14 +22,21 @@ const Card = ({
   icon,
   className,
   hasArrow,
+  isGrey,
   bodyClassName,
   ariaLabel,
   asLink,
+  size,
+  hasShadow,
   onClick,
+  hasBorder,
+  hasBackground,
   ...remainingProps
 }) => {
-  const img = Children.toArray(children).find((child) => child.props.__TYPE === 'CardImage');
-  const detail = Children.toArray(children).find((child) => child.props.__TYPE === 'CardDetail');
+  const header = Children.toArray(children).find((child) => child.props.__TYPE === 'CardHeader');
+  const footer = Children.toArray(children).find((child) => child.props.__TYPE === 'CardFooter');
+  const detailTop = Children.toArray(children).find((child) => child.props.__TYPE === 'CardDetail' && child.props.position === 'top');
+  const detailBottom = Children.toArray(children).find((child) => child.props.__TYPE === 'CardDetail' && child.props.position === 'bottom');
   const description = Children.toArray(children).find(
     (child) => child.props.__TYPE === 'CardDescription',
   );
@@ -37,10 +44,15 @@ const Card = ({
   const displayTitle = title && cloneElement(title, {
     href, anchorAs, asLink, ariaLabel,
   });
-  const _className = classNames('fr-card fr-card--grey', {
+
+  const _className = classNames('fr-card', {
     'fr-card--horizontal': isHorizontal,
-    'fr-enlarge-link': href || asLink || onClick,
-  }, className);
+    'fr-card--grey': isGrey,
+    'fr-card--shadow': hasShadow,
+    'fr-card--no-border': !hasBorder,
+    'fr-card--no-background': !hasBackground,
+    'fr-enlarge-link': (href || asLink || onClick) && !footer,
+  }, className, `fr-card--${size}`);
 
   const onCardClick = (e) => {
     e.preventDefault();
@@ -72,14 +84,16 @@ const Card = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
+      {header}
       <div className={classNames('fr-card__body', bodyClassName)}>
         <div className="fr-card__content">
+          {detailTop}
           {displayTitle}
           {description}
-          {detail}
+          {detailBottom}
         </div>
+        {footer}
       </div>
-      {img}
       {hasArrow && !icon && <Icon name="ri-arrow-right-line" size="xl" className="ds-fr-card-icon" />}
       {icon && <Icon name={icon} size="xl" className="ds-fr-card-icon" />}
     </div>
@@ -90,11 +104,16 @@ Card.defaultProps = {
   anchorAs: 'a',
   href: '',
   ariaLabel: '',
+  isGrey: false,
+  hasShadow: false,
+  hasBorder: true,
   isHorizontal: false,
   className: '',
+  size: 'sm',
   bodyClassName: '',
   icon: '',
   hasArrow: true,
+  hasBackground: true,
   asLink: null,
   onClick: undefined,
 };
@@ -104,10 +123,15 @@ Card.propTypes = {
     PropTypes.node,
   ]).isRequired,
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   href: PropTypes.string,
   icon: PropTypes.string,
   ariaLabel: PropTypes.string,
   isHorizontal: PropTypes.bool,
+  hasBorder: PropTypes.bool,
+  hasBackground: PropTypes.bool,
+  isGrey: PropTypes.bool,
+  hasShadow: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

@@ -2,7 +2,7 @@
 
 exports[`<Card /> renders Card properly 1`] = `
 <div
-  class="fr-card fr-card--grey fr-enlarge-link"
+  class="fr-card fr-enlarge-link fr-card--sm"
   data-testid="card"
 >
   <div
@@ -11,6 +11,16 @@ exports[`<Card /> renders Card properly 1`] = `
     <div
       class="fr-card__content"
     >
+      <div
+        class="fr-card__start"
+        data-testid="carddetail"
+      >
+        <p
+          class="fr-card__detail fr-icon-warning-fill"
+        >
+          Détail
+        </p>
+      </div>
       <p
         class="fr-card__title"
         data-testid="cardtitle"
@@ -28,26 +38,6 @@ exports[`<Card /> renders Card properly 1`] = `
       >
         Description texte body small regular consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore…
       </p>
-      <p
-        class="fr-card__detail"
-        data-testid="carddetail"
-      >
-        Détail
-      </p>
-    </div>
-  </div>
-  <div
-    class="fr-card__header"
-  >
-    <div
-      class="fr-card__img"
-      data-testid="cardimage"
-    >
-      <img
-        alt="alternative"
-        class="fr-responsive-img"
-        src="http://fakeimg.pl/300/"
-      />
     </div>
   </div>
   <span>

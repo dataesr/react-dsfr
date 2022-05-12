@@ -7,13 +7,11 @@ import typeValidation from '../../../utils/type-validation';
 const CardImage = ({
   alt, src, className, ...remainingProps
 }) => (
-  <div className="fr-card__header">
-    <div
-      className={classNames('fr-card__img', className)}
-      {...dataAttributes.getAll(remainingProps)}
-    >
-      <img src={src} alt={alt} className="fr-responsive-img" />
-    </div>
+  <div
+    className={classNames('fr-card__img', className)}
+    {...dataAttributes.getAll(remainingProps)}
+  >
+    <img src={src} alt={alt} className="fr-responsive-img" />
   </div>
 );
 

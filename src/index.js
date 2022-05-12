@@ -13,7 +13,7 @@ import { Button, ButtonGroup } from './components/interface/Button/index';
 import { Download, DownloadGroup } from './components/interface/Download/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
 import {
-  Card, CardDescription, CardDetail, CardImage, CardTitle,
+  Card, CardDescription, CardDetail, CardImage, CardTitle, CardHeader, CardFooter,
 } from './components/interface/Card/index';
 import { Checkbox, CheckboxGroup } from './components/interface/Checkbox/index';
 import {
@@ -72,6 +72,8 @@ const library = () => ({
   Card,
   CardDescription,
   CardDetail,
+  CardHeader,
+  CardFooter,
   CardImage,
   CardTitle,
   Checkbox,

@@ -4,29 +4,16 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
-const CardDetail = ({
-  children, className, position, ...remainingProps
+const CardFooter = ({
+  children, className, ...remainingProps
 }) => {
-  const _className = classNames({
-    'fr-card__start': position === 'top',
-    'fr-card__end': position === 'bottom',
-  }, className);
+  const _className = classNames('fr-card__footer', className);
 
   const elements = Children.toArray(children).find((child) => {
     let content = null;
 
     if (child.props && child.props.__TYPE) {
-      content = child.props.__TYPE === 'TagGroup' || 'BadgeGroup' || 'ButtonGroup';
-    }
-
-    return content;
-  });
-
-  const text = Children.toArray(children).find((child) => {
-    let content = null;
-
-    if (child && !child.props) {
-      content = child;
+      content = child.props.__TYPE === 'ButtonGroup';
     }
 
     return content;
@@ -38,15 +25,13 @@ const CardDetail = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       {elements}
-      <p className="fr-card__detail fr-icon-warning-fill">{text}</p>
     </div>
   );
 };
 
-CardDetail.propTypes = {
+CardFooter.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
-  __TYPE: typeValidation('CardDetail'),
-  position: PropTypes.oneOf(['top', 'bottom']),
+  __TYPE: typeValidation('CardFooter'),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -54,10 +39,9 @@ CardDetail.propTypes = {
     PropTypes.array,
   ]),
 };
-CardDetail.defaultProps = {
-  __TYPE: 'CardDetail',
+CardFooter.defaultProps = {
+  __TYPE: 'CardFooter',
   className: '',
-  position: 'top',
 };
 
-export default CardDetail;
+export default CardFooter;
