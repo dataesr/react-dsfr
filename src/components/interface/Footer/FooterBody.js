@@ -21,7 +21,7 @@ const FooterBody = ({
       className={classNames('fr-footer__body', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <div className="fr-footer__brand">{Logo}</div>
+      <div className="fr-footer__brand fr-enlarge-link">{Logo}</div>
       {operator}
       <div className="fr-footer__content">
         <p className="fr-footer__content-desc">{description}</p>

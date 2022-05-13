@@ -116,7 +116,7 @@ import Logo from '../Logo';
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterLink href="/">Footer Link</FooterLink>
-      <FooterCopy href="/">© République Française 2020</FooterCopy>
+      <FooterCopy>licence etalab-2.0</FooterCopy>
     </FooterBottom>
   </Footer>
 </Router>

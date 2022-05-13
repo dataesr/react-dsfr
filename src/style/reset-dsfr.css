@@ -22,6 +22,16 @@ span.error {
     display: none !important;
 }
 
+/** Icons system from remixicon */
+
+[target=_blank]:after,
+[class^="fr-alert"]:before {
+    font-family: "remixicon";
+    background-color: inherit;
+    mask-image: inherit;
+    -webkit-mask-image: inherit;
+}
+
 /**
   Accordion
  */
@@ -45,10 +55,6 @@ button.fr-accordion__btn[aria-expanded=true]:before {
  */
 
 [class^="fr-alert"]:before {
-    font-family: "remixicon";
-    background-color: inherit;
-    mask-image: inherit;
-    -webkit-mask-image: inherit;
     font-size: 1.4rem;
 }
 
@@ -72,4 +78,12 @@ button.fr-accordion__btn[aria-expanded=true]:before {
     -webkit-mask-image: inherit;
 }
 
+/**
+  Footer
+ */
 
+[target=_blank]:after {
+    content: '\ecaf';
+    height: inherit;
+    font-size: 0.9rem;
+}

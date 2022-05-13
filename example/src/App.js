@@ -10,7 +10,7 @@ import ButtonGroupExample from './components/Button/ButtonGroup';
 import CalloutExample from './components/Callout/Callout';
 import CardExample from './components/Card/Card';
 import CheckboxExample from './components/Checkbox/Checkbox';
-import ConsentManagerExample from './components/ConsentManager/ConsentManager';
+// import ConsentManagerExample from './components/ConsentManager/ConsentManager';
 import FooterExample from './components/Footer/Footer';
 import FileExample from './components/File/File';
 import HeaderExample from './components/Header/Header';
@@ -49,7 +49,6 @@ const App = () => {
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
-    { title: 'ConsentManager', component: <ConsentManagerExample /> },
     { title: 'Download', component: <DownloadExample /> },
     { title: 'File', component: <FileExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
