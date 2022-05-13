@@ -44,13 +44,13 @@ const Checkbox = forwardRef((props, ref) => {
         {...dataAttributes.filterAll(remainingProps)}
         type="checkbox"
         id={checkboxId.current}
-        name="checkbox"
+        name={checkboxId.current}
         disabled={disabled}
         ref={ref}
       />
       <label className="fr-label" htmlFor={checkboxId.current}>
         {label}
-        {hint && <p className="fr-hint-text">{hint}</p>}
+        {hint && <span className="fr-hint-text">{hint}</span>}
       </label>
       {(message && messageType) && <p className={`fr-${messageType}-text`}>{message}</p>}
     </div>

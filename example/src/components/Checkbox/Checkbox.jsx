@@ -8,6 +8,7 @@ const CheckboxExample = () => {
   return (
     <Col>
       <CheckboxGroup
+        isInline
         ariaLabel="This is the aria label"
         legend="This is the legend"
       >
@@ -19,7 +20,7 @@ const CheckboxExample = () => {
         />
         <Checkbox
           disabled
-          label="Label checkbox 2"
+          label="Label checkbox disabled"
           onChange={() => {
           }}
           value="value-2"
@@ -30,6 +31,7 @@ const CheckboxExample = () => {
         ariaLabel="With colors"
         legend="With colors"
         message="test"
+        hint="This is the hint"
         messageType="valid"
       >
         <Checkbox
@@ -37,9 +39,10 @@ const CheckboxExample = () => {
           label="Label checkbox 2"
           onChange={() => setIsChecked(!isChecked)}
           value="value-2"
+          hint="Careful"
         />
         <Checkbox
-          label="Label checkbox 2"
+          label="Label checkbox 3"
           value="value-3"
         />
       </CheckboxGroup>

@@ -1,6 +1,7 @@
-import React, { Children } from 'react';
+import React, { Children, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
 
 /**
@@ -13,6 +14,7 @@ const DownloadGroup = ({
   title,
   ...remainingProps
 }) => {
+  const id = useRef(uuidv4());
   const _className = classNames(
     'fr-downloads-group fr-downloads-group--bordered',
     className,
@@ -22,7 +24,7 @@ const DownloadGroup = ({
     <div {...dataAttributes.getAll(remainingProps)} className={_className}>
       <h4 className="fr-downloads-group__title">{title}</h4>
       <ul>
-        {Children.toArray(children).map((child) => <li key={child.props.name}>{child}</li>)}
+        {Children.toArray(children).map((child) => <li key={`${child.props.label}${id.current}`}>{child}</li>)}
       </ul>
     </div>
   );
