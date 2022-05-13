@@ -18,7 +18,7 @@ const AlertExample = () => (
     />
     <Alert
       type="error"
-      title="Information"
+      title="Error"
       small
     />
   </Col>

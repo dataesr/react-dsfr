@@ -19,5 +19,57 @@ span.error {
 .fr-card:before,
 .fr-tag--dismiss:after,
 .fr-badge:before {
-    display: none!important;
+    display: none !important;
 }
+
+/**
+  Accordion
+ */
+button.fr-accordion__btn:before {
+    font-family: "remixicon";
+    content: '\ea13';
+    background-color: inherit;
+    mask-image: inherit;
+    -webkit-mask-image: inherit;
+    color: var(--text-action-high-grey);
+}
+
+button.fr-accordion__btn[aria-expanded=true]:before {
+    content: '\f1af';
+    mask-image: inherit;
+    -webkit-mask-image: inherit;
+}
+
+/**
+  Alert
+ */
+
+[class^="fr-alert"]:before {
+    font-family: "remixicon";
+    background-color: inherit;
+    mask-image: inherit;
+    -webkit-mask-image: inherit;
+    font-size: 1.4rem;
+}
+
+.fr-alert--success:before {
+    content: '\eb80';
+}
+
+.fr-alert--error:before {
+    content: '\f0eb';
+}
+
+.fr-alert--info:before {
+    content: '\ee58';
+}
+
+.fr-alert .fr-link--close:before{
+    font-family: "remixicon";
+    content: '\eb99';
+    background-color: inherit;
+    mask-image: inherit;
+    -webkit-mask-image: inherit;
+}
+
+
