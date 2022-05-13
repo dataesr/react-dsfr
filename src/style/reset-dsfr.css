@@ -34,6 +34,7 @@ span.error {
 button.fr-accordion__btn[aria-expanded=true]:before,
 button.fr-accordion__btn:before,
 .fr-link--close:before,
+button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
 button[class^="fr-btn"]:before,
 [class^="fr-alert"]:before {
@@ -143,4 +144,29 @@ button.fr-btn--copy:before {
     content: '\ecd5';
     font-size: 1.4rem;
     line-height: 1.5rem;
+}
+
+/**
+  Pagination
+ */
+
+button[class^="fr-pagination__link"]:before {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+button.fr-pagination__link--prev:before {
+    content: '\ea64';
+}
+
+button.fr-pagination__link--next:before {
+    content: '\ea6e';
+}
+
+button.fr-pagination__link--first:before {
+    content: '\f142';
+}
+
+button.fr-pagination__link--last:before {
+    content: '\f146';
 }
