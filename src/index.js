@@ -10,6 +10,7 @@ import Alert from './components/interface/Alert/index';
 import { Badge, BadgeGroup } from './components/interface/Badge/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
+import { Share, ShareButton } from './components/interface/Share/index';
 import { Download, DownloadGroup } from './components/interface/Download/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
 import {
@@ -121,6 +122,8 @@ const library = () => ({
   Pagination,
   Radio,
   RadioGroup,
+  Share,
+  ShareButton,
   SearchBar,
   Select,
   SearchableSelect,

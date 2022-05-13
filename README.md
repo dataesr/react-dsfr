@@ -161,9 +161,5 @@ Thanks to the internet world.
 * [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
 
 ### TODO
-* components v1.4
-  * bouton tertiaire
-  * bouton FranceConnect
-  * retour en haut de page
 * Limit usage of colors to colorFamilies
 * Add StoryBook

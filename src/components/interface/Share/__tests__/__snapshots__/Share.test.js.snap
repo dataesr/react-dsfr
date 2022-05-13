@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Share /> should render Share properly 1`] = `
+<div
+  className="fr-share"
+>
+  <p
+    className="fr-share__title"
+  >
+    Partager la page
+  </p>
+  <ul
+    className="fr-btns-group"
+  >
+    <li
+      className="fr-share"
+    >
+      <a
+        className="fr-btn fr-btn--facebook"
+        href="https://www.facebook.com/sharer.php"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Partager sur facebook
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Share /> should render SideMenu properly 1`] = `
+<div
+  className="fr-share"
+>
+  <p
+    className="fr-share__title"
+  >
+    Partager la page
+  </p>
+  <ul
+    className="fr-btns-group"
+  >
+    <li
+      className="fr-share"
+    >
+      <a
+        className="fr-btn fr-btn--facebook"
+        href="https://www.facebook.com/sharer.php"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Partager sur facebook
+      </a>
+    </li>
+  </ul>
+</div>
+`;

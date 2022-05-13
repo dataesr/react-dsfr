@@ -34,6 +34,8 @@ span.error {
 button.fr-accordion__btn[aria-expanded=true]:before,
 button.fr-accordion__btn:before,
 .fr-link--close:before,
+a[class^="fr-btn"]:before,
+button[class^="fr-btn"]:before,
 [class^="fr-alert"]:before {
     font-family: "remixicon";
     background-color: inherit;
@@ -111,4 +113,34 @@ button.fr-accordion__btn[aria-expanded=true]:before {
 
 .fr-nav__btn:after {
     content: '\ea4e';
+}
+
+a.fr-btn--facebook:before {
+    content: '\ecbb';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+a.fr-btn--twitter:before {
+    content: '\f23b';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+a.fr-btn--linkedin:before {
+    content: '\eeb4';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+a.fr-btn--mail:before {
+    content: '\eef6';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+button.fr-btn--copy:before {
+    content: '\ecd5';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
 }

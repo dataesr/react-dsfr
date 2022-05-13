@@ -10,7 +10,7 @@ import ButtonGroupExample from './components/Button/ButtonGroup';
 import CalloutExample from './components/Callout/Callout';
 import CardExample from './components/Card/Card';
 import CheckboxExample from './components/Checkbox/Checkbox';
-// import ConsentManagerExample from './components/ConsentManager/ConsentManager';
+import ConsentManagerExample from './components/ConsentManager/ConsentManager';
 import FooterExample from './components/Footer/Footer';
 import FileExample from './components/File/File';
 import HeaderExample from './components/Header/Header';
@@ -36,6 +36,7 @@ import DownloadExample from './components/Download/Download';
 import Element from './Element';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
+import ShareExample from './components/Share/Share';
 
 const App = () => {
   const elements = [
@@ -49,6 +50,7 @@ const App = () => {
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
+    { title: 'Consent', component: <ConsentManagerExample /> },
     { title: 'Download', component: <DownloadExample /> },
     { title: 'File', component: <FileExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
@@ -68,6 +70,7 @@ const App = () => {
     { title: 'TextInput', component: <TextInputExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },
+    { title: 'Share', component: <ShareExample /> },
   ];
 
   return (
