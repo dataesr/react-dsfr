@@ -17,7 +17,7 @@ exports[`<Header /> renders correctly 1`] = `
         className="fr-header__body-row"
       >
         <div
-          className="fr-header__brand"
+          className="fr-header__brand fr-enlarge-link"
         >
           <div
             className="fr-header__brand-top"
@@ -85,50 +85,47 @@ exports[`<Header /> renders correctly 1`] = `
           data-testid="tool"
         >
           <div
+            className="fr-header__tools-links"
             data-testid="toolitemgroup"
           >
-            <div
-              className="fr-header__tools-links"
+            <ul
+              className="fr-links-group"
             >
-              <ul
-                className="fr-links-group"
+              <li
+                data-testid="toolitem"
               >
-                <li
-                  data-testid="toolitem"
+                <a
+                  className="ds-fr--flex fr-link"
+                  href="/path"
+                  target="_self"
                 >
-                  <a
-                    className="ds-fr--flex fr-link"
-                    href="/path"
-                    target="_self"
-                  >
-                    <span>
-                      <span
-                        aria-hidden={true}
-                        className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
-                      />
-                      Se connecter
-                    </span>
-                  </a>
-                </li>
-                <li
-                  data-test-id="toolitem"
+                  <span>
+                    <span
+                      aria-hidden={true}
+                      className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
+                    />
+                    Se connecter
+                  </span>
+                </a>
+              </li>
+              <li
+                data-test-id="toolitem"
+              >
+                <a
+                  className="ds-fr--flex fr-link"
+                  href="/path"
+                  target="_self"
                 >
-                  <a
-                    className="ds-fr--flex fr-link"
-                    href="/path"
-                    target="_self"
-                  >
-                    <span>
-                      <span
-                        aria-hidden={true}
-                        className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
-                      />
-                      Créer un espace
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                  <span>
+                    <span
+                      aria-hidden={true}
+                      className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
+                    />
+                    Créer un espace
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div
             className="fr-header__search fr-modal"
