@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/dataesr/react-dsfr/compare/v2.1.7...v2.2.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* Pagination ([30f3559](https://github.com/dataesr/react-dsfr/commit/30f35598894e5ea817904ccfe573d59748c21f14))
+
+
+### Features
+
+* Share buttons ([f2b31e9](https://github.com/dataesr/react-dsfr/commit/f2b31e9fc21fbb86a96c904f8820adccea23354f))
+
 ## [2.1.7](https://github.com/dataesr/react-dsfr/compare/v2.1.6...v2.1.7) (2022-05-13)
 
 
