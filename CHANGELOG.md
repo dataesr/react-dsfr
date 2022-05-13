@@ -1,3 +1,10 @@
+## [2.1.5](https://github.com/dataesr/react-dsfr/compare/v2.1.4...v2.1.5) (2022-05-13)
+
+
+### Bug Fixes
+
+* checkbox ([ced82e5](https://github.com/dataesr/react-dsfr/commit/ced82e5ef0854c8d131628e6e7d6cb52315e956f))
+
 ## [2.1.4](https://github.com/dataesr/react-dsfr/compare/v2.1.3...v2.1.4) (2022-05-13)
 
 
