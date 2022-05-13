@@ -1,3 +1,11 @@
+## [2.1.6](https://github.com/dataesr/react-dsfr/compare/v2.1.5...v2.1.6) (2022-05-13)
+
+
+### Bug Fixes
+
+* footer ([c1b4dec](https://github.com/dataesr/react-dsfr/commit/c1b4dec8ed5ae6825a1f92b8656fd6601320a7ed))
+* TextInput ([503bb63](https://github.com/dataesr/react-dsfr/commit/503bb638a9a4416829147f901b91e4dbd164cc38))
+
 ## [2.1.5](https://github.com/dataesr/react-dsfr/compare/v2.1.4...v2.1.5) (2022-05-13)
 
 
