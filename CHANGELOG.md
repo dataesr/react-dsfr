@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/dataesr/react-dsfr/compare/v2.1.1...v2.1.2) (2022-05-12)
+
+
+### Bug Fixes
+
+* tags ([2037d08](https://github.com/dataesr/react-dsfr/commit/2037d0855a52ae4dfa017d95ae6ad402a1711929))
+
 ## [2.1.1](https://github.com/dataesr/react-dsfr/compare/v2.1.0...v2.1.1) (2022-05-12)
 
 
