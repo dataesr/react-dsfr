@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/dataesr/react-dsfr/compare/v2.1.3...v2.1.4) (2022-05-13)
+
+
+### Bug Fixes
+
+* Button ([41224b0](https://github.com/dataesr/react-dsfr/commit/41224b071fd62bef9b47a33904ce43bf977cd3d6))
+
 ## [2.1.3](https://github.com/dataesr/react-dsfr/compare/v2.1.2...v2.1.3) (2022-05-13)
 
 
