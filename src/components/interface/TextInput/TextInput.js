@@ -123,7 +123,7 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
-  type: PropTypes.oneOf(['date', 'text', 'number']),
+  type: PropTypes.oneOf(['date', 'text', 'number', 'password']),
   warning: PropTypes.bool,
   textarea: PropTypes.bool,
   label: PropTypes.string,

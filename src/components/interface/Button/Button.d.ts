@@ -10,6 +10,8 @@ export type ButtonChildren = string | React.ReactNode;
 
 export interface ButtonProps {
     secondary?: boolean;
+    tertiary?: boolean;
+    hasBorder?: boolean;
     icon?: string;
     disabled?: boolean;
     onClick?: (...args: any[])=>any;

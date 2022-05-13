@@ -27,6 +27,7 @@ const Button = forwardRef((props, ref) => {
   const {
     size,
     secondary,
+    tertiary,
     disabled,
     title,
     icon,
@@ -37,6 +38,7 @@ const Button = forwardRef((props, ref) => {
     className,
     submit,
     colors,
+    hasBorder,
     ...remainingProps
   } = props;
   const _className = classNames(
@@ -47,6 +49,8 @@ const Button = forwardRef((props, ref) => {
       'fr-link': styleAsLink,
       'fr-fi-icon': !children && icon,
       'fr-btn--secondary': secondary,
+      'fr-btn--tertiary': tertiary && hasBorder,
+      'fr-btn--tertiary-no-outline': !hasBorder,
     },
   );
   const oRef = useRef();
@@ -119,13 +123,17 @@ Button.defaultProps = {
   children: '',
   className: '',
   styleAsLink: false,
+  tertiary: false,
   title: null,
   submit: false,
+  hasBorder: true,
   colors: [],
 };
 
 Button.propTypes = {
   secondary: PropTypes.bool,
+  hasBorder: PropTypes.bool,
+  tertiary: PropTypes.bool,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
