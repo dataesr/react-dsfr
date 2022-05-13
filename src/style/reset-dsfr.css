@@ -25,6 +25,8 @@ span.error {
 /** Icons system from remixicon */
 
 [target=_blank]:after,
+.fr-error-text:before,
+.fr-valid-text:before,
 [class^="fr-alert"]:before {
     font-family: "remixicon";
     background-color: inherit;
@@ -58,11 +60,13 @@ button.fr-accordion__btn[aria-expanded=true]:before {
     font-size: 1.4rem;
 }
 
-.fr-alert--success:before {
+.fr-alert--success:before,
+.fr-valid-text:before {
     content: '\eb80';
 }
 
-.fr-alert--error:before {
+.fr-alert--error:before,
+.fr-error-text:before {
     content: '\f0eb';
 }
 

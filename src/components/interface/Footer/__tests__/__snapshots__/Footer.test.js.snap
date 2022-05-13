@@ -336,7 +336,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
       data-testid="footerbody"
     >
       <div
-        class="fr-footer__brand"
+        class="fr-footer__brand fr-enlarge-link"
       >
         <a
           class="ds-fr--no-shadow"
@@ -562,7 +562,17 @@ exports[`<Footer /> should render Footer properly 1`] = `
       <div
         class="fr-footer__bottom-copy"
       >
-        © République Française 2020
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous
+           
+          <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
+            rel="noreferrer"
+            target="_blank"
+          >
+            © République Française 2020
+          </a>
+        </p>
       </div>
     </div>
   </div>

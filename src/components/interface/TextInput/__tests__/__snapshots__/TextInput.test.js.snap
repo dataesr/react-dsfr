@@ -6,26 +6,22 @@ exports[`<TextInput /> renders correctly 1`] = `
   data-testid="textinput"
 >
   <label
-    aria-describedby=""
     className="fr-label"
     htmlFor="xxxxxxx"
   >
     label
     
   </label>
-  <div
-    className="fr-input-wrap"
-  >
-    <input
-      className="fr-input"
-      id="xxxxxxx"
-      onBlur={[Function]}
-      onChange={[MockFunction]}
-      required={false}
-      type="text"
-      value="init-value"
-    />
-  </div>
+  <input
+    aria-describedby=""
+    className="fr-input"
+    id="xxxxxxx"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    required={false}
+    type="text"
+    value="init-value"
+  />
   
 </div>
 `;

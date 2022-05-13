@@ -10,6 +10,8 @@ const TextInputExample = () => {
   return (
     <Col>
       <TextInput
+        message="Valid"
+        messageType="valid"
         value={textValue1}
         onChange={(e) => {
           setTextValue1(e.target.value);
@@ -30,7 +32,7 @@ const TextInputExample = () => {
       <TextInput
         hint="Hint"
         warning
-        message="Warning"
+        message="Error"
         messageType="error"
         value={textValue3}
         onChange={(e) => {

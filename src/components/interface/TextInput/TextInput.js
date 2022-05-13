@@ -52,7 +52,6 @@ const TextInput = forwardRef((props, ref) => {
         <label
           className="fr-label"
           htmlFor={inputId.current}
-          aria-describedby={hint && hintId.current}
         >
           {label}
           {required && <span className="error"> *</span>}
@@ -80,25 +79,24 @@ const TextInput = forwardRef((props, ref) => {
                     />
                   )
                   : (
-                    <div className={_wrapperClassName}>
-                      <input
-                        {...dataAttributes.filterAll(remainingProps)}
-                        ref={ref}
-                        type={type}
-                        className={_className}
-                        id={inputId.current}
-                        required={required}
-                        onBlur={(e) => {
-                          if (withAutoValidation) {
-                            setValidation({
-                              status: e.target.validity.valid ? 'valid' : 'error',
-                              message: e.target.validationMessage,
-                            });
-                          }
-                          onBlur(e);
-                        }}
-                      />
-                    </div>
+                    <input
+                      {...dataAttributes.filterAll(remainingProps)}
+                      aria-describedby={hint && hintId.current}
+                      ref={ref}
+                      type={type}
+                      className={_className}
+                      id={inputId.current}
+                      required={required}
+                      onBlur={(e) => {
+                        if (withAutoValidation) {
+                          setValidation({
+                            status: e.target.validity.valid ? 'valid' : 'error',
+                            message: e.target.validationMessage,
+                          });
+                        }
+                        onBlur(e);
+                      }}
+                    />
                   )
             }
       {(internalMessage && internalMessageType)
