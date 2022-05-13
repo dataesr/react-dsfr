@@ -36,11 +36,6 @@ const TextInput = forwardRef((props, ref) => {
     [`fr-input--${internalMessageType}`]: internalMessageType,
   });
 
-  const _wrapperClassName = classNames('fr-input-wrap', {
-    'fr-fi-calendar-line': type === 'date',
-    'fr-fi-alert-line': warning,
-  });
-
   const inputId = useRef(uuidv4());
   const hintId = useRef(uuidv4());
   return (
