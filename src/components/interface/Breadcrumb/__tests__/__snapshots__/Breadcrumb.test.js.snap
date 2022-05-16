@@ -25,7 +25,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
         data-testid="bcitem"
       >
         <a
-          class="fr-breadcrumb__link"
+          class="fr-breadcrumb__link fr-link--md"
           href="#"
           target="_self"
         >
@@ -37,7 +37,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
         data-testid="bcitem"
       >
         <a
-          class="fr-breadcrumb__link"
+          class="fr-breadcrumb__link fr-link--md"
           href="#"
           target="_self"
         >
@@ -51,7 +51,7 @@ exports[`<Breadcrumb /> should render breadcrumb properly 1`] = `
         <a
           aria-current="page"
           aria-disabled="true"
-          class="fr-breadcrumb__link"
+          class="fr-breadcrumb__link fr-link--md"
           role="link"
           target="_self"
         >

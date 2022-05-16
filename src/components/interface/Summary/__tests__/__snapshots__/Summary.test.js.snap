@@ -19,7 +19,7 @@ exports[`<Summary /> should renders Summary properly 1`] = `
       data-testid="item1"
     >
       <a
-        class="fr-summary__link fr-link"
+        class="fr-summary__link fr-link fr-link--md"
         href="#"
         target="_self"
       >
@@ -30,7 +30,7 @@ exports[`<Summary /> should renders Summary properly 1`] = `
       data-test-id="item2"
     >
       <a
-        class="fr-summary__link fr-link"
+        class="fr-summary__link fr-link fr-link--md"
         href="#"
         target="_self"
       >
@@ -41,7 +41,7 @@ exports[`<Summary /> should renders Summary properly 1`] = `
       data-id="item3"
     >
       <a
-        class="fr-summary__link fr-link"
+        class="fr-summary__link fr-link fr-link--md"
         href="#"
         target="_self"
       >
@@ -52,7 +52,7 @@ exports[`<Summary /> should renders Summary properly 1`] = `
       data-test--id="item4"
     >
       <a
-        class="fr-summary__link fr-link"
+        class="fr-summary__link fr-link fr-link--md"
         href="#"
         target="_self"
       >

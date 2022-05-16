@@ -13,12 +13,13 @@ const LinkExample = () => (
         iconPosition="right"
         iconSize="lg"
         href="/page-1"
+        size="sm"
       >
-        Link icon on the right
+        Small link icon on the right
       </DSLink>
     </Col>
     <Col>
-      <DSLink title="title" href="/#">Link with title</DSLink>
+      <DSLink size="lg" title="title" href="/#" target="_blank">Large link target blank</DSLink>
     </Col>
     <Col n="12">
       <DSLink title="title">Link disabled</DSLink>

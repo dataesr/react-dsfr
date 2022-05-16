@@ -56,7 +56,7 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
               description
             </p>
             <a
-              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
+              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content fr-link--md"
               href="link"
               target="_self"
             >

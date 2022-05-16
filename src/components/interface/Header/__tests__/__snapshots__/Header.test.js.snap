@@ -26,7 +26,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
-                className="ds-fr--no-shadow"
+                className="ds-fr--no-shadow fr-link--md"
                 data-test-id="headerlogo"
                 href="/"
                 target="_self"
@@ -66,7 +66,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-testid="service"
           >
             <a
-              className="fr-header__service-title"
+              className="fr-header__service-title fr-link--md"
               href="/"
               target="_self"
               title="Nom du service"
@@ -95,7 +95,7 @@ exports[`<Header /> renders correctly 1`] = `
                 data-testid="toolitem"
               >
                 <a
-                  className="ds-fr--flex fr-link"
+                  className="ds-fr--flex fr-link fr-link--md"
                   href="/path"
                   target="_self"
                 >
@@ -112,7 +112,7 @@ exports[`<Header /> renders correctly 1`] = `
                 data-test-id="toolitem"
               >
                 <a
-                  className="ds-fr--flex fr-link"
+                  className="ds-fr--flex fr-link fr-link--md"
                   href="/path"
                   target="_self"
                 >
@@ -185,7 +185,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-testid="navitem"
           >
             <a
-              className="fr-nav__link"
+              className="fr-nav__link fr-link--md"
               href="/"
               onClick={[Function]}
               target="_self"
@@ -225,7 +225,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test-id="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-1"
                     onClick={[Function]}
                     target="_self"
@@ -237,7 +237,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test--id="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-2"
                     onClick={[Function]}
                     target="_self"
@@ -249,7 +249,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-3"
                     onClick={[Function]}
                     target="_self"

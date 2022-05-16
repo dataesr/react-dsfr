@@ -13,7 +13,7 @@ exports[`<Tile /> renders correctly 1`] = `
       className="fr-tile__title"
     >
       <a
-        className="fr-tile__link"
+        className="fr-tile__link fr-link--md"
         href="/path"
         target="linkTarget"
         title="linkTitle"
