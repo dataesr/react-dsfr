@@ -1,3 +1,15 @@
+# [2.3.0](https://github.com/dataesr/react-dsfr/compare/v2.2.2...v2.3.0) (2022-05-16)
+
+
+### Bug Fixes
+
+* remove fonts folder ([79421b4](https://github.com/dataesr/react-dsfr/commit/79421b4af25eda18ac6a7d618b8ac11b18f51559))
+
+
+### Features
+
+* update components Title Text AltTitle ([a3981bb](https://github.com/dataesr/react-dsfr/commit/a3981bb40a9d7c4db44e5ac3a5571cdbc0ff325e))
+
 ## [2.2.2](https://github.com/dataesr/react-dsfr/compare/v2.2.1...v2.2.2) (2022-05-16)
 
 
