@@ -1,3 +1,3 @@
-export * from "./Text"
-export * from "./Title"
-export * from "./TitleDisplay"
+export * from './Text';
+export * from './Title';
+export * from './AltTitle';

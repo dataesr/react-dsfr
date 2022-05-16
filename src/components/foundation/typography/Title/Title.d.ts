@@ -4,7 +4,7 @@ export type TitleChildren = string | React.ReactNode;
 
 export type TitleAs = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
-export type TitleLook = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type TitleLook = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "";
 
 export type TitleClassName = string | Object | any[];
 

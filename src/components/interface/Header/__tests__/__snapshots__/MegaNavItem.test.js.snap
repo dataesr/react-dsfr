@@ -51,7 +51,7 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
               title
             </h6>
             <p
-              className="fr-hidden fr-displayed-lg"
+              className="fr-hidden fr-unhidden-lg"
             >
               description
             </p>

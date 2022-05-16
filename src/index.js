@@ -4,7 +4,7 @@ import Container from './components/foundation/grid/Container';
 import Icon from './components/foundation/icon/index';
 import Text from './components/foundation/typography/Text/index';
 import Title from './components/foundation/typography/Title/index';
-import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
+import AltTitle from './components/foundation/typography/AltTitle/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import Alert from './components/interface/Alert/index';
 import { Badge, BadgeGroup } from './components/interface/Badge/index';
@@ -86,7 +86,7 @@ const library = () => ({
   Icon,
   Text,
   Title,
-  TitleDisplay,
+  AltTitle,
   Footer,
   FooterTopCategory,
   FooterBody,

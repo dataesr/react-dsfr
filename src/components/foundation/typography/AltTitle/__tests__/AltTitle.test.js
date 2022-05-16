@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
-import TitleDisplay from '../TitleDisplay';
+import AltTitle from '../AltTitle';
 
 const initialProps = {
   as: 'h2',
@@ -8,10 +8,10 @@ const initialProps = {
   children: 'Title Alt xl',
 };
 
-describe('<TitleDisplay />', () => {
+describe('<AltTitle />', () => {
   it('renders correctly', () => {
     const component = renderer
-      .create(<TitleDisplay {...initialProps}>{initialProps.children}</TitleDisplay>)
+      .create(<AltTitle {...initialProps}>{initialProps.children}</AltTitle>)
       .toJSON();
     expect(component).toMatchSnapshot();
   });
