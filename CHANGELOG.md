@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/dataesr/react-dsfr/compare/v2.2.1...v2.2.2) (2022-05-16)
+
+
+### Bug Fixes
+
+* Link with size ([26c11f6](https://github.com/dataesr/react-dsfr/commit/26c11f63485cd2f617b10caf9e3da6bf2a6ad2c3))
+
 ## [2.2.1](https://github.com/dataesr/react-dsfr/compare/v2.2.0...v2.2.1) (2022-05-13)
 
 
