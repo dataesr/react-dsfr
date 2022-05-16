@@ -8,7 +8,7 @@ const TextsExample = () => (
   <Container>
     <Row>
       <Col>
-        <Text bold size="xs">Text bold xs</Text>
+        <Text bold size="xs" alt>Text bold xs</Text>
         <Text size="md">Text md</Text>
         <Text size="lg">Text lg</Text>
       </Col>

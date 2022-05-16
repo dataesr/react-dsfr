@@ -56,7 +56,7 @@ const HeaderExample = () => {
               >
                 react-router-dom Link
               </ToolItem>
-              <ToolItem icon="ri-lock-line" link="/path">Link to /path</ToolItem>
+              <ToolItem icon="ri-lock-line" link="/path" target="_blank">Link to /path</ToolItem>
               <ToolItem onClick={() => setIsOpen(true)}>
                 <span
                   className="fr-fi-theme-fill fr-link--icon-left"
@@ -68,7 +68,8 @@ const HeaderExample = () => {
               </ToolItem>
             </ToolItemGroup>
             <SearchBar
-              onSearch={() => {
+              onSearch={(e) => {
+                e.preventDefault();
               }}
               label="SearchBar du gouvernement"
               placeholder="Rechercher"

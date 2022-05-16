@@ -53,7 +53,7 @@ const SearchBar = forwardRef((props, ref) => {
       />
       <button
         type="submit"
-        onClick={() => onSearch(text)}
+        onClick={(e) => onSearch(e, text)}
         className={_classNameButton}
         title={buttonLabel}
       >

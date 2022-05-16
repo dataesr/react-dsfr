@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<TitleDisplay /> renders correctly 1`] = `
-<h2
-  className="fr-display-xl"
->
-  Title Alt xl
-</h2>
-`;
