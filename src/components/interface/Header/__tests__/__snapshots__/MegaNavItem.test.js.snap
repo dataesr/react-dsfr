@@ -51,12 +51,12 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
               title
             </h6>
             <p
-              className="fr-hidden fr-displayed-lg"
+              className="fr-hidden fr-unhidden-lg"
             >
               description
             </p>
             <a
-              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content"
+              className="fr-link fr-fi-arrow-right-line fr-link--icon-right fr-link--align-on-content fr-link--md"
               href="link"
               target="_self"
             >

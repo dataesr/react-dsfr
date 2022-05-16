@@ -42,11 +42,11 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card fr-card--grey fr-card--horizontal fr-enlarge-link');
+    expect(card).toHaveClass('fr-card--horizontal');
   });
-  it('renders Card without enlarge link properly', () => {
+  it('renders Card class', () => {
     render(
-      <Card data-testid="card">
+      <Card data-testid="card" isGrey hasBorder={false} hasShadow>
         <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
         <CardDetail>Détail</CardDetail>
         <CardTitle>
@@ -59,7 +59,7 @@ describe('<Card />', () => {
       </Card>,
     );
     const card = screen.getByTestId('card');
-    expect(card.className).toEqual('fr-card fr-card--grey');
+    expect(card.className).toEqual('fr-card fr-card--grey fr-card--shadow fr-card--no-border fr-card--sm');
   });
 
   it('Call Card onClick function', () => {

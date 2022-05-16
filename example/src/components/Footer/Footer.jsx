@@ -72,22 +72,22 @@ const FooterExample = () => {
             <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
           </FooterOperator>
           <FooterBodyItem>
-            <Link href="https://legifrance.gouv.fr">
+            <Link href="https://legifrance.gouv.fr" target="_blank">
               legifrance.gouv.fr
             </Link>
           </FooterBodyItem>
           <FooterBodyItem>
-            <Link href="https://gouvernement.fr">
+            <Link href="https://gouvernement.fr" target="_blank">
               gouvernement.fr
             </Link>
           </FooterBodyItem>
           <FooterBodyItem>
-            <Link href="https://service-public.fr">
+            <Link href="https://service-public.fr" target="_blank">
               service-public.fr
             </Link>
           </FooterBodyItem>
           <FooterBodyItem>
-            <Link href="https://data.gouv.fr">
+            <Link href="https://data.gouv.fr" target="_blank">
               data.gouv.fr
             </Link>
           </FooterBodyItem>
@@ -117,21 +117,15 @@ const FooterExample = () => {
           />
         </FooterPartners>
         <FooterBottom>
-          <FooterLink href="/">Footer Link</FooterLink>
+          <FooterLink href="/" target="_blank">Footer Link</FooterLink>
           <FooterLink href="/">Footer Link</FooterLink>
           <FooterLink href="/">Footer Link</FooterLink>
           <FooterLink href="/">Footer Link</FooterLink>
           <FooterLink href="/">Footer Link</FooterLink>
           <FooterLink onClick={() => setIsOpen(true)}>
-            <span
-              className="fr-fi-theme-fill fr-link--icon-left"
-              aria-controls="fr-theme-modal"
-              data-fr-opened={isOpen}
-            >
-              Paramètres d’affichage
-            </span>
+            Paramètres d’affichage
           </FooterLink>
-          <FooterCopy href="/">© République Française 2020</FooterCopy>
+          <FooterCopy>licence etalab-2.0</FooterCopy>
         </FooterBottom>
       </Footer>
       <SwitchTheme isOpen={isOpen} setIsOpen={setIsOpen} />

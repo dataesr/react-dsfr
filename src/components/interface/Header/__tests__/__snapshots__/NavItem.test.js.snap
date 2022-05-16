@@ -5,7 +5,7 @@ exports[`<NavItem /> renders correctly 1`] = `
   className="fr-nav__item"
 >
   <a
-    className="fr-nav__link"
+    className="fr-nav__link fr-link--md"
     href="link"
     onClick={[Function]}
     target="_self"

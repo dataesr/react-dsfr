@@ -23,7 +23,7 @@ exports[`<MegaNavSubItem /> renders correctly 1`] = `
       className="fr-enlarge-link"
     >
       <a
-        className="fr-nav__link"
+        className="fr-nav__link fr-link--md"
         href="/"
         target="_self"
         title="title"

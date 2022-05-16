@@ -6,6 +6,8 @@ export type LinkChildren = React.ReactNode[] | React.ReactNode | string;
 
 export type LinkVerticalIconPosition = "top" | "middle" | "sub";
 
+export type LinkSize = "sm" | "md" | "lg";
+
 export type LinkIconPosition = "left" | "right";
 
 export type LinkIconSize = "fw" | "xxs" | "xs" | "sm" | "1x" | "lg" | "xl" | "2x" | "3x" | "10x";
@@ -16,6 +18,7 @@ export interface LinkProps {
     className?: LinkClassName;
     children?: LinkChildren;
     href?: string;
+    size?: LinkSize;
     disabled?: boolean;
     verticalIconPosition?: LinkVerticalIconPosition;
     as?: React.ReactElement<any>;

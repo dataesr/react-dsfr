@@ -11,7 +11,7 @@ const CardImage = ({
     className={classNames('fr-card__img', className)}
     {...dataAttributes.getAll(remainingProps)}
   >
-    <img src={src} alt={alt} />
+    <img src={src} alt={alt} className="fr-responsive-img" />
   </div>
 );
 

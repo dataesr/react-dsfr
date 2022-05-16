@@ -1,24 +1,28 @@
 import React from 'react';
 
 import {
-  Col, Text, Title, TitleDisplay,
+  Col, Text, Title, AltTitle, Row, Container,
 } from '@dataesr/react-dsfr';
 
 const TextsExample = () => (
-  <>
-    <Col>
-      <Text size="xs">Text xs</Text>
-      <Text size="md">Text md</Text>
-      <Text size="lg">Text lg</Text>
-      <Title as="h4">Title h4</Title>
-    </Col>
-    <Col>
-      <Text size="lg">Text lg</Text>
-    </Col>
-    <Col>
-      <TitleDisplay as="h1" size="sm">Title sm</TitleDisplay>
-    </Col>
-  </>
+  <Container>
+    <Row>
+      <Col>
+        <Text bold size="xs">Text bold xs</Text>
+        <Text size="md">Text md</Text>
+        <Text size="lg">Text lg</Text>
+      </Col>
+      <Col>
+        <Text size="lg">Text lg</Text>
+      </Col>
+      <Col n="12">
+        <Title as="h4" look="h2">Title h4 looks h2</Title>
+      </Col>
+      <Col n="12">
+        <AltTitle as="h4" size="xs">Alternative Title md</AltTitle>
+      </Col>
+    </Row>
+  </Container>
 );
 
 export default TextsExample;

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/component/footer/footer.css';
 

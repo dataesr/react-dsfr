@@ -2,7 +2,7 @@
 
 exports[`<Link /> renders correctly 1`] = `
 <a
-  className="ds-fr--inline"
+  className="ds-fr--inline fr-link--lg"
   data-testid="link"
   href="/page"
   target="_self"
@@ -12,7 +12,7 @@ exports[`<Link /> renders correctly 1`] = `
     test button
     <span
       aria-hidden={true}
-      className="ri-1x icon-right ds-fr--v-middle alert-fill"
+      className="ri-sm icon-right ds-fr--v-middle alert-fill"
     />
   </span>
 </a>

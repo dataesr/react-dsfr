@@ -7,7 +7,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
 >
   <input
     id="xxxxxxx"
-    name="checkbox"
+    name="xxxxxxx"
     type="checkbox"
     value="value"
   />

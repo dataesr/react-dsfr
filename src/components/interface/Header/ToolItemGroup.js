@@ -17,14 +17,13 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
 
   return (
     <div
+      className={classNames(className, 'fr-header__tools-links')}
       {...dataAttributes.getAll(remainingProps)}
     >
       {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
-      <div className={classNames(className, 'fr-header__tools-links')}>
-        <ul className="fr-links-group">
-          {children}
-        </ul>
-      </div>
+      <ul className="fr-links-group">
+        {children}
+      </ul>
     </div>
   );
 };

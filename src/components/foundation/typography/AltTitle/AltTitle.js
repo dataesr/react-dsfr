@@ -5,15 +5,15 @@ import { getSpace } from '../../../../utils/getters';
 
 /**
  *
- * @visibleName TitleDisplay
+ * @visibleName AltTitle
  */
-const TitleDisplay = ({
+const AltTitle = ({
   as, size, children, spacing, className,
 }) => {
   const HtmlTag = `${as}`;
   const { margin, padding } = getSpace(spacing);
 
-  const _className = classNames(className, padding, margin, { [`fr-display-${size}`]: size });
+  const _className = classNames(className, padding, margin, { [`fr-display--${size}`]: size });
   return (
     <HtmlTag className={_className}>
       {children}
@@ -21,7 +21,7 @@ const TitleDisplay = ({
   );
 };
 
-TitleDisplay.propTypes = {
+AltTitle.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -32,14 +32,13 @@ TitleDisplay.propTypes = {
      * html tag to render
      */
   spacing: PropTypes.string,
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']).isRequired,
   size: PropTypes.oneOf(['xl', 'lg', 'md', 'sm', 'xs']).isRequired,
 };
 
-TitleDisplay.defaultProps = {
-  as: 'h1',
+AltTitle.defaultProps = {
   className: '',
   spacing: '',
 };
 
-export default TitleDisplay;
+export default AltTitle;

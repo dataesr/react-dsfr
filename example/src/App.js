@@ -32,9 +32,11 @@ import TextsExample from './components/Texts/Texts';
 import TileExample from './components/Tile/Tile';
 import ToggleExample from './components/Toggle/Toggle';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
+import DownloadExample from './components/Download/Download';
 import Element from './Element';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
+import ShareExample from './components/Share/Share';
 
 const App = () => {
   const elements = [
@@ -48,7 +50,8 @@ const App = () => {
     { title: 'Callout', component: <CalloutExample /> },
     { title: 'Card', component: <CardExample /> },
     { title: 'Checkbox', component: <CheckboxExample /> },
-    { title: 'ConsentManager', component: <ConsentManagerExample /> },
+    { title: 'Consent', component: <ConsentManagerExample /> },
+    { title: 'Download', component: <DownloadExample /> },
     { title: 'File', component: <FileExample /> },
     { title: 'Highlight', component: <HighlightExample /> },
     { title: 'Icons', component: <IconsExample /> },
@@ -67,6 +70,7 @@ const App = () => {
     { title: 'TextInput', component: <TextInputExample /> },
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },
+    { title: 'Share', component: <ShareExample /> },
   ];
 
   return (

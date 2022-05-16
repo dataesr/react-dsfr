@@ -5,9 +5,10 @@ import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/component/tag/tag.css';
+import colorFamilies from '../../../utils/variables';
 
 const iconSize = {
   sm: 'lg',
@@ -31,6 +32,7 @@ const Tag = ({
   className,
   selected,
   onClick,
+  colorFamily,
   ...remainingProps
 }) => {
   const ref = useRef();
@@ -38,6 +40,7 @@ const Tag = ({
     'fr-tag--sm': small,
     'fr-tag--dismiss': closable && onClick,
     'fr-fi-icon': (icon && iconPosition),
+    [`fr-tag--${colorFamily}`]: colorFamily,
   }, className);
 
   let HtmlTag = `${as}`;
@@ -65,7 +68,7 @@ const Tag = ({
       aria-label={closable ? `Retirer ${title}` : undefined}
       onClick={(!href && onClick) || closable ? handleClick : undefined}
       className={_className}
-      aria-pressed={selected || 'false'}
+      aria-pressed={selected || undefined}
       title={title || undefined}
       href={href || undefined}
       target={target || undefined}
@@ -73,8 +76,36 @@ const Tag = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
+      {selected && (
+      <Icon
+        verticalAlign="sub"
+        name="ri-checkbox-circle-line"
+        size="lg"
+        className="ds-fr-tag-icon"
+      />
+      )}
     </HtmlTag>
   );
+
+  const renderTag = () => {
+    let tag = _tag;
+
+    if (closable) {
+      tag = (
+        <Icon
+          verticalAlign="sub"
+          name="ri-close-line"
+          iconPosition="right"
+          size="lg"
+        >
+          {_tag}
+        </Icon>
+      );
+    }
+
+    return tag;
+  };
+
   return (
     icon ? (
       <Icon
@@ -84,7 +115,7 @@ const Tag = ({
       >
         {_tag}
       </Icon>
-    ) : _tag
+    ) : renderTag()
   );
 };
 
@@ -99,6 +130,7 @@ Tag.defaultProps = {
   target: '',
   icon: '',
   iconPosition: 'right',
+  colorFamily: '',
   children: undefined,
   onClick: null,
 };
@@ -109,6 +141,7 @@ Tag.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   small: PropTypes.bool,

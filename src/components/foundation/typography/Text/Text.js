@@ -8,12 +8,13 @@ import { getSpace } from '../../../../utils/getters';
  * @visibleName Text
  */
 const Text = ({
-  as, size, alt, className, spacing, children,
+  as, size, alt, bold, className, spacing, children,
 }) => {
   const HtmlTag = `${as}`;
   const { margin, padding } = getSpace(spacing);
   const _className = classNames(className, padding, margin, {
     'fr-text--alt': size !== 'lead' && alt,
+    'fr-text--heavy': bold,
     [`fr-text--${size}`]: size,
   });
   return (
@@ -34,6 +35,7 @@ Text.propTypes = {
   * If true Spectral is used instead of Marianne.
   */
   alt: PropTypes.bool,
+  bold: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
@@ -45,6 +47,7 @@ Text.defaultProps = {
   as: 'p',
   size: 'md',
   alt: false,
+  bold: false,
   className: '',
   spacing: '',
 };

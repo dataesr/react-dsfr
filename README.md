@@ -6,7 +6,7 @@
 
 [![Tests](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple) [![semantic-release: react](https://img.shields.io/badge/semantic--release-react-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Current version is using [@gouvfr/dsfr@1.3.1](https://www.npmjs.com/package/@gouvfr/dsfr)
+Current version is using [@gouvfr/dsfr@1.5.0](https://www.npmjs.com/package/@gouvfr/dsfr)
 
 ## Requirements
 
@@ -107,7 +107,7 @@ git commit -m "feat: This is my feature"
 
 #### new major version
 ```bash
-git commit -m "[type]: BREAKING CHANGE: This is my breaking change"
+git commit -m "[subject]" -m "BREAKING CHANGE: [body]"
 ```
 
 See [Commit message formats](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format) for more details.
@@ -161,9 +161,5 @@ Thanks to the internet world.
 * [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
 
 ### TODO
-* components v1.4
-  * bouton tertiaire
-  * bouton FranceConnect
-  * retour en haut de page
 * Limit usage of colors to colorFamilies
 * Add StoryBook

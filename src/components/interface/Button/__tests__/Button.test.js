@@ -59,6 +59,29 @@ describe('<Button />', () => {
     expect(component.find('button').text()).toBe('basic sm button');
   });
 
+  test('renders tertiary Button', () => {
+    const props = {
+      title: 'title',
+      children: 'tertiary button',
+      tertiary: true,
+    };
+
+    const component = wrapper({ ...props });
+    expect(component.find('.fr-btn--tertiary')).toBeTruthy();
+  });
+
+  test('renders tertiary Button', () => {
+    const props = {
+      title: 'title',
+      children: 'tertiary button',
+      tertiary: true,
+      hasBorder: false,
+    };
+
+    const component = wrapper({ ...props });
+    expect(component.find('.fr-btn--tertiary-no-outline')).toBeTruthy();
+  });
+
   test('onClick Button', () => {
     const mockClick = jest.fn();
     const props = {

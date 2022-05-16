@@ -1,3 +1,110 @@
+## [2.2.2](https://github.com/dataesr/react-dsfr/compare/v2.2.1...v2.2.2) (2022-05-16)
+
+
+### Bug Fixes
+
+* Link with size ([26c11f6](https://github.com/dataesr/react-dsfr/commit/26c11f63485cd2f617b10caf9e3da6bf2a6ad2c3))
+
+## [2.2.1](https://github.com/dataesr/react-dsfr/compare/v2.2.0...v2.2.1) (2022-05-13)
+
+
+### Bug Fixes
+
+* build ([8aa7bf0](https://github.com/dataesr/react-dsfr/commit/8aa7bf0aeaeae935e9f68f9a104b7f55c9171649))
+
+# [2.2.0](https://github.com/dataesr/react-dsfr/compare/v2.1.7...v2.2.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* Pagination ([30f3559](https://github.com/dataesr/react-dsfr/commit/30f35598894e5ea817904ccfe573d59748c21f14))
+
+
+### Features
+
+* Share buttons ([f2b31e9](https://github.com/dataesr/react-dsfr/commit/f2b31e9fc21fbb86a96c904f8820adccea23354f))
+
+## [2.1.7](https://github.com/dataesr/react-dsfr/compare/v2.1.6...v2.1.7) (2022-05-13)
+
+
+### Bug Fixes
+
+* header ([fcca9b9](https://github.com/dataesr/react-dsfr/commit/fcca9b9b1402bac57fc0cbea40478bb25fd4729f))
+
+## [2.1.6](https://github.com/dataesr/react-dsfr/compare/v2.1.5...v2.1.6) (2022-05-13)
+
+
+### Bug Fixes
+
+* footer ([c1b4dec](https://github.com/dataesr/react-dsfr/commit/c1b4dec8ed5ae6825a1f92b8656fd6601320a7ed))
+* TextInput ([503bb63](https://github.com/dataesr/react-dsfr/commit/503bb638a9a4416829147f901b91e4dbd164cc38))
+
+## [2.1.5](https://github.com/dataesr/react-dsfr/compare/v2.1.4...v2.1.5) (2022-05-13)
+
+
+### Bug Fixes
+
+* checkbox ([ced82e5](https://github.com/dataesr/react-dsfr/commit/ced82e5ef0854c8d131628e6e7d6cb52315e956f))
+
+## [2.1.4](https://github.com/dataesr/react-dsfr/compare/v2.1.3...v2.1.4) (2022-05-13)
+
+
+### Bug Fixes
+
+* Button ([41224b0](https://github.com/dataesr/react-dsfr/commit/41224b071fd62bef9b47a33904ce43bf977cd3d6))
+
+## [2.1.3](https://github.com/dataesr/react-dsfr/compare/v2.1.2...v2.1.3) (2022-05-13)
+
+
+### Bug Fixes
+
+* alert ([26289a9](https://github.com/dataesr/react-dsfr/commit/26289a99580fae73abe2b644037accc27bf1b3ff))
+
+## [2.1.2](https://github.com/dataesr/react-dsfr/compare/v2.1.1...v2.1.2) (2022-05-12)
+
+
+### Bug Fixes
+
+* tags ([2037d08](https://github.com/dataesr/react-dsfr/commit/2037d0855a52ae4dfa017d95ae6ad402a1711929))
+
+## [2.1.1](https://github.com/dataesr/react-dsfr/compare/v2.1.0...v2.1.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* badges ([ca4d43c](https://github.com/dataesr/react-dsfr/commit/ca4d43c27cd6f7dfd825a5ec6af13fb5ddf604d4))
+
+# [2.1.0](https://github.com/dataesr/react-dsfr/compare/v2.0.0...v2.1.0) (2022-05-12)
+
+
+### Features
+
+* Card upgrade 1.5.0 ([4f64cfd](https://github.com/dataesr/react-dsfr/commit/4f64cfd53c4704d0d4b4cc61d16fbb0103f08bf6))
+
+# [2.0.0](https://github.com/dataesr/react-dsfr/compare/v1.3.0...v2.0.0) (2022-05-11)
+
+
+* Components ([8cca3ac](https://github.com/dataesr/react-dsfr/commit/8cca3ac9eaf887479e40f362dcde249080c7ae3b))
+
+
+### BREAKING CHANGES
+
+* upgrade dsfr 1.5.0
+
+# [1.3.0](https://github.com/dataesr/react-dsfr/compare/v1.2.0...v1.3.0) (2022-05-11)
+
+
+### Features
+
+* BREAKING CHANGE: upgrade v1.5.0 ([99ca28d](https://github.com/dataesr/react-dsfr/commit/99ca28dbc82950519e8b8caeb23edb6b3aa6636f))
+
+# [1.2.0](https://github.com/dataesr/react-dsfr/compare/v1.1.11...v1.2.0) (2022-05-11)
+
+
+### Features
+
+* Download component ([3d047c4](https://github.com/dataesr/react-dsfr/commit/3d047c4e518a8cce95b04652fba451b3b0fae4dd))
+
 ## [1.1.11](https://github.com/dataesr/react-dsfr/compare/v1.1.10...v1.1.11) (2022-03-25)
 
 

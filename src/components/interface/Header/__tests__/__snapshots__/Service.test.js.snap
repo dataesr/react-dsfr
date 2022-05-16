@@ -5,7 +5,7 @@ exports[`<Service /> renders correctly 1`] = `
   className="fr-header__service"
 >
   <a
-    className="fr-header__service-title"
+    className="fr-header__service-title fr-link--md"
     href="/"
     target="_self"
     title="title"

@@ -36,11 +36,6 @@ const TextInput = forwardRef((props, ref) => {
     [`fr-input--${internalMessageType}`]: internalMessageType,
   });
 
-  const _wrapperClassName = classNames('fr-input-wrap', {
-    'fr-fi-calendar-line': type === 'date',
-    'fr-fi-alert-line': warning,
-  });
-
   const inputId = useRef(uuidv4());
   const hintId = useRef(uuidv4());
   return (
@@ -52,11 +47,10 @@ const TextInput = forwardRef((props, ref) => {
         <label
           className="fr-label"
           htmlFor={inputId.current}
-          aria-describedby={hint && hintId.current}
         >
           {label}
-          {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
           {required && <span className="error"> *</span>}
+          {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
         </label>
       )}
       {
@@ -80,25 +74,24 @@ const TextInput = forwardRef((props, ref) => {
                     />
                   )
                   : (
-                    <div className={_wrapperClassName}>
-                      <input
-                        {...dataAttributes.filterAll(remainingProps)}
-                        ref={ref}
-                        type={type}
-                        className={_className}
-                        id={inputId.current}
-                        required={required}
-                        onBlur={(e) => {
-                          if (withAutoValidation) {
-                            setValidation({
-                              status: e.target.validity.valid ? 'valid' : 'error',
-                              message: e.target.validationMessage,
-                            });
-                          }
-                          onBlur(e);
-                        }}
-                      />
-                    </div>
+                    <input
+                      {...dataAttributes.filterAll(remainingProps)}
+                      aria-describedby={hint && hintId.current}
+                      ref={ref}
+                      type={type}
+                      className={_className}
+                      id={inputId.current}
+                      required={required}
+                      onBlur={(e) => {
+                        if (withAutoValidation) {
+                          setValidation({
+                            status: e.target.validity.valid ? 'valid' : 'error',
+                            message: e.target.validationMessage,
+                          });
+                        }
+                        onBlur(e);
+                      }}
+                    />
                   )
             }
       {(internalMessage && internalMessageType)
@@ -123,7 +116,7 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
-  type: PropTypes.oneOf(['date', 'text', 'number']),
+  type: PropTypes.oneOf(['date', 'text', 'number', 'password']),
   warning: PropTypes.bool,
   textarea: PropTypes.bool,
   label: PropTypes.string,

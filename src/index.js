@@ -4,15 +4,17 @@ import Container from './components/foundation/grid/Container';
 import Icon from './components/foundation/icon/index';
 import Text from './components/foundation/typography/Text/index';
 import Title from './components/foundation/typography/Title/index';
-import TitleDisplay from './components/foundation/typography/TitleDisplay/index';
+import AltTitle from './components/foundation/typography/AltTitle/index';
 import { Accordion, AccordionItem } from './components/interface/Accordion/index';
 import Alert from './components/interface/Alert/index';
 import { Badge, BadgeGroup } from './components/interface/Badge/index';
 import { Breadcrumb, BreadcrumbItem } from './components/interface/Breadcrumb/index';
 import { Button, ButtonGroup } from './components/interface/Button/index';
+import { Share, ShareButton } from './components/interface/Share/index';
+import { Download, DownloadGroup } from './components/interface/Download/index';
 import { Callout, CalloutTitle, CalloutText } from './components/interface/Callout/index';
 import {
-  Card, CardDescription, CardDetail, CardImage, CardTitle,
+  Card, CardDescription, CardDetail, CardImage, CardTitle, CardHeader, CardFooter,
 } from './components/interface/Card/index';
 import { Checkbox, CheckboxGroup } from './components/interface/Checkbox/index';
 import {
@@ -65,10 +67,14 @@ const library = () => ({
   CalloutTitle,
   CalloutText,
   ConsentManager,
+  Download,
+  DownloadGroup,
   Link,
   Card,
   CardDescription,
   CardDetail,
+  CardHeader,
+  CardFooter,
   CardImage,
   CardTitle,
   Checkbox,
@@ -80,7 +86,7 @@ const library = () => ({
   Icon,
   Text,
   Title,
-  TitleDisplay,
+  AltTitle,
   Footer,
   FooterTopCategory,
   FooterBody,
@@ -116,6 +122,8 @@ const library = () => ({
   Pagination,
   Radio,
   RadioGroup,
+  Share,
+  ShareButton,
   SearchBar,
   Select,
   SearchableSelect,

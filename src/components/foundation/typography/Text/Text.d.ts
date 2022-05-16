@@ -19,6 +19,7 @@ export interface TextProps {
      * If true Spectral is used instead of Marianne.
      */
     alt?: boolean;
+    bold?: boolean;
     children: TextChildren;
     className?: TextClassName;
 }

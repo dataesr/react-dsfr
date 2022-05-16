@@ -2,7 +2,6 @@
 
 exports[`<Tag /> should renders Tag properly 1`] = `
 <a
-  aria-pressed="false"
   class="fr-tag"
   href="/"
   title="titre"
@@ -18,7 +17,6 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
 >
   <li>
     <span
-      aria-pressed="false"
       class="fr-tag fr-tag--sm"
       data-testid="tag1"
     >
@@ -27,7 +25,6 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   </li>
   <li>
     <span
-      aria-pressed="false"
       class="fr-tag fr-tag--sm"
       data-test-id="tag2"
     >
@@ -36,7 +33,6 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   </li>
   <li>
     <span
-      aria-pressed="false"
       class="fr-tag fr-tag--sm"
       data-test--id="tag3"
     >
@@ -45,7 +41,6 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
   </li>
   <li>
     <span
-      aria-pressed="false"
       class="fr-tag fr-tag--sm"
       data-test="tag4"
     >
@@ -57,7 +52,6 @@ exports[`<Tag /> should renders TagGroup properly 1`] = `
 
 exports[`<Tag /> should renders small Tag properly 1`] = `
 <span
-  aria-pressed="false"
   class="fr-tag fr-tag--sm"
 >
   tag-test

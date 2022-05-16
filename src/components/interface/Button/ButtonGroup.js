@@ -2,6 +2,7 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
+import typeValidation from '../../../utils/type-validation';
 
 /**
  *
@@ -39,6 +40,7 @@ const ButtonGroup = ({
 };
 
 ButtonGroup.defaultProps = {
+  __TYPE: 'ButtonGroup',
   size: 'md',
   isInlineFrom: null,
   children: '',
@@ -49,6 +51,8 @@ ButtonGroup.defaultProps = {
 };
 
 ButtonGroup.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('ButtonGroup'),
   isInlineFrom: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   className: PropTypes.oneOfType([
     PropTypes.string,

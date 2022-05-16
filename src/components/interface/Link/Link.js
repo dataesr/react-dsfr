@@ -5,7 +5,7 @@ import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
 /*
-* DSFR v1.3.1
+* DSFR v1.5.0
 */
 import '@gouvfr/dsfr/dist/component/link/link.css';
 
@@ -29,11 +29,13 @@ const Link = ({
   icon,
   iconPosition,
   onClick,
+  size,
   ...remainingProps
 }) => {
   const _className = classNames(className, {
     [`ds-fr--${display}`]: display && icon,
     'fr-link': isSimple,
+    [`fr-link--${size}`]: size,
   });
   const onClickLink = (e) => {
     e.preventDefault();
@@ -93,7 +95,8 @@ Link.defaultProps = {
   onClick: null,
   display: 'inline',
   verticalIconPosition: 'middle',
-  iconSize: '1x',
+  iconSize: 'sm',
+  size: 'md',
 };
 
 Link.propTypes = {
@@ -114,6 +117,7 @@ Link.propTypes = {
   title: PropTypes.string,
   target: PropTypes.string,
   isSimple: PropTypes.bool,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   current: PropTypes.bool,
   icon: PropTypes.string,
   onClick: PropTypes.func,

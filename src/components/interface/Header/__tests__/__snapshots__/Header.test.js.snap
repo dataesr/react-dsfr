@@ -17,7 +17,7 @@ exports[`<Header /> renders correctly 1`] = `
         className="fr-header__body-row"
       >
         <div
-          className="fr-header__brand"
+          className="fr-header__brand fr-enlarge-link"
         >
           <div
             className="fr-header__brand-top"
@@ -26,7 +26,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
-                className="ds-fr--no-shadow"
+                className="ds-fr--no-shadow fr-link--md"
                 data-test-id="headerlogo"
                 href="/"
                 target="_self"
@@ -66,7 +66,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-testid="service"
           >
             <a
-              className="fr-header__service-title"
+              className="fr-header__service-title fr-link--md"
               href="/"
               target="_self"
               title="Nom du service"
@@ -85,50 +85,47 @@ exports[`<Header /> renders correctly 1`] = `
           data-testid="tool"
         >
           <div
+            className="fr-header__tools-links"
             data-testid="toolitemgroup"
           >
-            <div
-              className="fr-header__tools-links"
+            <ul
+              className="fr-links-group"
             >
-              <ul
-                className="fr-links-group"
+              <li
+                data-testid="toolitem"
               >
-                <li
-                  data-testid="toolitem"
+                <a
+                  className="ds-fr--flex fr-link fr-link--md"
+                  href="/path"
+                  target="_self"
                 >
-                  <a
-                    className="ds-fr--flex fr-link"
-                    href="/path"
-                    target="_self"
-                  >
-                    <span>
-                      <span
-                        aria-hidden={true}
-                        className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
-                      />
-                      Se connecter
-                    </span>
-                  </a>
-                </li>
-                <li
-                  data-test-id="toolitem"
+                  <span>
+                    <span
+                      aria-hidden={true}
+                      className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
+                    />
+                    Se connecter
+                  </span>
+                </a>
+              </li>
+              <li
+                data-test-id="toolitem"
+              >
+                <a
+                  className="ds-fr--flex fr-link fr-link--md"
+                  href="/path"
+                  target="_self"
                 >
-                  <a
-                    className="ds-fr--flex fr-link"
-                    href="/path"
-                    target="_self"
-                  >
-                    <span>
-                      <span
-                        aria-hidden={true}
-                        className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
-                      />
-                      Créer un espace
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                  <span>
+                    <span
+                      aria-hidden={true}
+                      className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
+                    />
+                    Créer un espace
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div
             className="fr-header__search fr-modal"
@@ -188,7 +185,7 @@ exports[`<Header /> renders correctly 1`] = `
             data-testid="navitem"
           >
             <a
-              className="fr-nav__link"
+              className="fr-nav__link fr-link--md"
               href="/"
               onClick={[Function]}
               target="_self"
@@ -228,7 +225,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test-id="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-1"
                     onClick={[Function]}
                     target="_self"
@@ -240,7 +237,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test--id="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-2"
                     onClick={[Function]}
                     target="_self"
@@ -252,7 +249,7 @@ exports[`<Header /> renders correctly 1`] = `
                   data-test="navsubitem"
                 >
                   <a
-                    className="fr-nav__link"
+                    className="fr-nav__link fr-link--md"
                     href="/path-to-resources-3"
                     onClick={[Function]}
                     target="_self"
