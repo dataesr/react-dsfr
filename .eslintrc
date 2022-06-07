@@ -21,6 +21,16 @@
     }
   },
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        ".d.ts": "never",
+        "tsx": "never"
+      }
+    ],
     "no-underscore-dangle": 0,
     "react/jsx-props-no-spreading": 0,
     "react/prefer-stateless-function": 0,

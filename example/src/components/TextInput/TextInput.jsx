@@ -10,6 +10,9 @@ const TextInputExample = () => {
   return (
     <Col>
       <TextInput
+        value="Value"
+      />
+      <TextInput
         message="Valid"
         messageType="valid"
         value={textValue1}

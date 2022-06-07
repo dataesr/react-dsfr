@@ -100,29 +100,3 @@ import { BrowserRouter as Router, Route, Link as RouterLink } from 'react-router
     />
 </Router>
 ```
-
-```jsx
-<Link
-    href="/"
-    isSimple
-    icon="ri-arrow-right-line">lien simple avec icône à droite
-</Link>
-```
-
-```jsx
-<Link
-    href="/"
-    isSimple
-    icon="ri-arrow-left-line"
-    iconPosition="left">lien simple avec icône à gauche
-</Link>
-```
-
-L’icône seule n'est à utiliser que très rarement, et le lien doit contenir un texte afin d'être lu par les lecteurs d'écran.
-```jsx
-<Link
-    href="/"
-    isSimple
-    icon="ri-arrow-right-up-line"
-/>
-```

@@ -1,6 +1,9 @@
-import React, { forwardRef, useRef, useState } from 'react';
+import {
+  forwardRef, useRef, useState,
+} from 'react';
 
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuidv4 } from 'uuid';
 import dataAttributes from '../../../utils/data-attributes';
@@ -19,7 +22,6 @@ const TextInput = forwardRef((props, ref) => {
     messageType,
     className,
     required,
-    warning,
     onBlur,
     withAutoValidation,
     ...remainingProps
@@ -102,7 +104,6 @@ const TextInput = forwardRef((props, ref) => {
 
 TextInput.defaultProps = {
   textarea: false,
-  warning: false,
   hint: '',
   messageType: '',
   message: '',
@@ -116,8 +117,7 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
-  type: PropTypes.oneOf(['date', 'text', 'number', 'password']),
-  warning: PropTypes.bool,
+  type: PropTypes.oneOf(['date', 'text', 'number', 'password', 'email']),
   textarea: PropTypes.bool,
   label: PropTypes.string,
   hint: PropTypes.oneOfType([

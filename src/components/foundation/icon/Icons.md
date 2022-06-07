@@ -24,32 +24,6 @@ import Icon from './Icon';
 </Icon>
 ```
 
-### Usage avec un composant Button
-
-```jsx
-import Icon from './Icon';
-import Button from '../../interface/Button';
-
-<Button
-    title="title"
-    icon="ri-calendar-todo-fill"
-    iconPosition="right">click
-</Button>
-```
-
-### Usage avec un composant Link
-```jsx
-import Icon from './Icon';
-import Link from '../../interface/Link';
-
-<Link
-    title="title"
-    icon="ri-twitter-line"
-    iconPosition="left"
-    >this is a link
-</Link>
-```
-
 
 
 

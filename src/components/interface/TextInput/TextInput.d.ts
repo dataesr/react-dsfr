@@ -4,7 +4,7 @@ export type TextInputHint = string | Object | any[];
 
 export type TextInputMessageType = "error" | "valid" | "";
 
-export type TextInputType = "text" | "date" | "number";
+export type TextInputType = "text" | "date" | "number" | "email" | "password";
 
 export type TextInputClassName = string | Object | any[];
 
@@ -16,7 +16,6 @@ export interface TextInputProps {
     messageType?: TextInputMessageType;
     message?: string;
     required?: boolean;
-    warning?: boolean;
     className?: TextInputClassName;
     withAutoValidation?: boolean;
     onBlur?: (...args: any[])=>any;
