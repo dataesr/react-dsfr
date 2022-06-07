@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/dataesr/react-dsfr/compare/v2.3.0...v2.3.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* props TextInput ([ecd5978](https://github.com/dataesr/react-dsfr/commit/ecd59786b739b7fcd0bb32bbe274e7d0199c0ab0))
+
 # [2.3.0](https://github.com/dataesr/react-dsfr/compare/v2.2.2...v2.3.0) (2022-05-16)
 
 
