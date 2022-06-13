@@ -12,14 +12,20 @@ import useTheme from './useTheme';
 import '@gouvfr/dsfr/dist/scheme/scheme.css';
 
 const SwitchTheme = ({
-  isOpen, setIsOpen, title, legend, darkLabel, lightLabel,
+  isOpen, setIsOpen, title, legend, darkLabel, lightLabel, systemLabel
 }) => {
   const currentTheme = useTheme();
 
+  let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  console.log(dark)
+  let system = dark ? "dark" : "light";
   const themes = [
     { label: lightLabel, value: 'light', svg: <Light /> },
     { label: darkLabel, value: 'dark', svg: <Dark /> },
+    { label: systemLabel, value: system, svg: <System /> },
   ];
+
+  
 
   useEffect(() => {
     let initialTheme = window.localStorage.getItem('prefers-color-scheme');
@@ -50,7 +56,7 @@ const SwitchTheme = ({
         >
           {themes.map((theme) => (
             <Radio
-              key={theme.value}
+              key={theme.label}
               label={theme.label}
               value={theme.value}
               isExtended
@@ -68,6 +74,7 @@ SwitchTheme.defaultProps = {
   legend: 'Choisissez un thème pour personnaliser l’apparence du site.',
   darkLabel: 'Thème sombre',
   lightLabel: 'Thème clair',
+  systemLabel: 'Thème du système'
 };
 
 SwitchTheme.propTypes = {
@@ -78,5 +85,7 @@ SwitchTheme.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
 };
+
+
 
 export default SwitchTheme;
