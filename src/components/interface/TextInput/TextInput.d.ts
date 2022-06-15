@@ -8,7 +8,7 @@ export type TextInputType = "text" | "date" | "number" | "email" | "password";
 
 export type TextInputClassName = string | Object | any[];
 
-export interface TextInputProps {
+export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     textarea?: boolean;
     type?: TextInputType;
     label?: string;
@@ -18,7 +18,7 @@ export interface TextInputProps {
     required?: boolean;
     className?: TextInputClassName;
     withAutoValidation?: boolean;
-    onBlur?: (...args: any[])=>any;
+    onBlur?: (...args: any[]) => any;
 }
 
 declare const TextInput: React.FC<TextInputProps>;
