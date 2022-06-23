@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/dataesr/react-dsfr/compare/v2.4.1...v2.5.0) (2022-06-23)
+
+
+### Features
+
+* :sparkles: add optionnal sticky table header ([#238](https://github.com/dataesr/react-dsfr/issues/238)) ([a813c39](https://github.com/dataesr/react-dsfr/commit/a813c395c5fde7f69e958b077eaef8e8c92a455a))
+
 ## [2.4.1](https://github.com/dataesr/react-dsfr/compare/v2.4.0...v2.4.1) (2022-06-23)
 
 
