@@ -113,9 +113,10 @@ const TableExample = () => {
         <Col>
           <SimpleTable
             tableClassName="tableClassName"
+            fixedHeader={true}
             tableID="tableID-1"
             caption="Simple Table"
-            data={data.slice((page - 1) * 3, page * 3)}
+            data={data.slice((page - 1) * 10, page * 10)}
           />
           <Pagination
             currentPage={page}

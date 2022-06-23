@@ -12,6 +12,7 @@ export interface TableProps {
     columns: Object[];
     data: any[];
     fixedLayout?: boolean;
+    fixedHeader?: boolean;
     tableID?: string;
     tableClassName?: string;
     noScroll?: boolean;

@@ -23,6 +23,7 @@ const Table = ({
   captionPosition,
   bordered,
   fixedLayout,
+  fixedHeader,
   className,
   tableID,
   tableClassName,
@@ -45,6 +46,7 @@ const Table = ({
       'fr-table--bordered': bordered,
       'fr-table--no-scroll': noScroll,
       'fr-table--layout-fixed': fixedLayout,
+      'fr-table--header-fixed': fixedHeader,
       [`fr-react-table--pagination-${paginationPosition}`]: pagination,
     },
     className,
@@ -100,14 +102,8 @@ const Table = ({
     sortedData = sortedData.slice((currentPage - 1) * perPage, currentPage * perPage);
   }
 
-  return (
-    <div
-      className={_className}
-      {...dataAttributes.getAll(remainingProps)}
-    >
-      <table id={tableID || undefined} className={tableClassName || undefined}>
-        <caption>{caption}</caption>
-        <thead>
+  const renderHeader = () => (
+    <thead>
           <tr key="headers">
             {columns.map((column) => (
               <th
@@ -128,6 +124,16 @@ const Table = ({
             ))}
           </tr>
         </thead>
+  );
+
+  return (
+    <div
+      className={_className}
+      {...dataAttributes.getAll(remainingProps)}
+    >
+       <table id={tableID || undefined} className={tableClassName || undefined}>
+       <caption>{caption}</caption>
+        {renderHeader()}
         <tbody>
           {sortedData
             .map((row) => (
@@ -155,6 +161,7 @@ const Table = ({
 
 Table.defaultProps = {
   fixedLayout: false,
+  fixedHeader: false,
   noScroll: false,
   bordered: false,
   caption: undefined,
@@ -176,6 +183,7 @@ Table.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.array.isRequired,
   fixedLayout: PropTypes.bool,
+  fixedHeader: PropTypes.bool,
   tableID: PropTypes.string,
   tableClassName: PropTypes.string,
   noScroll: PropTypes.bool,
