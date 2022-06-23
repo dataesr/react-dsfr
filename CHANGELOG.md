@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/dataesr/react-dsfr/compare/v2.3.1...v2.4.0) (2022-06-23)
+
+
+### Features
+
+* **dsfr:** Use version 1.6.0 ([c72b581](https://github.com/dataesr/react-dsfr/commit/c72b581879bbc1876b13171a902e46c21566f1d9))
+
 ## [2.3.1](https://github.com/dataesr/react-dsfr/compare/v2.3.0...v2.3.1) (2022-06-07)
 
 
