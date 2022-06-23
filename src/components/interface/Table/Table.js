@@ -104,26 +104,26 @@ const Table = ({
 
   const renderHeader = () => (
     <thead>
-          <tr key="headers">
-            {columns.map((column) => (
-              <th
-                className={classNames({ sortable: column.sortable })}
-                scope="col"
-                key={column.name}
-                onClick={() => {
-                  if (column.sortable) {
-                    manageSort(column);
-                  }
-                }}
-              >
-                <div className="table-column-header">
-                  {column.headerRender ? column.headerRender() : column.label}
-                  {column.sortable && getSortIcon(column)}
-                </div>
-              </th>
-            ))}
-          </tr>
-        </thead>
+      <tr key="headers">
+        {columns.map((column) => (
+          <th
+            className={classNames({ sortable: column.sortable })}
+            scope="col"
+            key={column.name}
+            onClick={() => {
+              if (column.sortable) {
+                manageSort(column);
+              }
+            }}
+          >
+            <div className="table-column-header">
+              {column.headerRender ? column.headerRender() : column.label}
+              {column.sortable && getSortIcon(column)}
+            </div>
+          </th>
+        ))}
+      </tr>
+    </thead>
   );
 
   return (
@@ -131,8 +131,8 @@ const Table = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
-       <table id={tableID || undefined} className={tableClassName || undefined}>
-       <caption>{caption}</caption>
+      <table id={tableID || undefined} className={tableClassName || undefined}>
+        <caption>{caption}</caption>
         {renderHeader()}
         <tbody>
           {sortedData
