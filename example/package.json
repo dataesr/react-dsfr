@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@dataesr/react-dsfr": "file:..",
+    "@gouvfr/dsfr": "file:../node_modules/@gouvfr/dsfr",
     "prop-types": "file:../node_modules/prop-types",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
