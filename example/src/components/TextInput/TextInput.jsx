@@ -10,7 +10,7 @@ const TextInputExample = () => {
   return (
     <Col>
       <TextInput
-        value="Value"
+        placeholder="Value"
       />
       <TextInput
         message="Valid"
@@ -34,7 +34,6 @@ const TextInputExample = () => {
       />
       <TextInput
         hint="Hint"
-        warning
         message="Error"
         messageType="error"
         value={textValue3}

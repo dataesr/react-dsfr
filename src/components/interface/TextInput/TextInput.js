@@ -1,6 +1,4 @@
-import {
-  forwardRef, useRef, useState,
-} from 'react';
+import { forwardRef, useRef, useState } from 'react';
 
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
@@ -27,13 +25,22 @@ const TextInput = forwardRef((props, ref) => {
     ...remainingProps
   } = props;
 
-  const [validation, setValidation] = useState({ status: '', message: undefined });
+  const [validation, setValidation] = useState({
+    status: '',
+    message: undefined,
+  });
 
-  const internalMessageType = withAutoValidation ? validation.status : messageType;
+  const internalMessageType = withAutoValidation
+    ? validation.status
+    : messageType;
   const internalMessage = withAutoValidation ? validation.message : message;
-  const _classNameWrapper = classNames('fr-input-group', {
-    [`fr-input-group--${internalMessageType}`]: internalMessageType,
-  }, className);
+  const _classNameWrapper = classNames(
+    'fr-input-group',
+    {
+      [`fr-input-group--${internalMessageType}`]: internalMessageType,
+    },
+    className,
+  );
   const _className = classNames('fr-input', {
     [`fr-input--${internalMessageType}`]: internalMessageType,
   });
@@ -46,58 +53,56 @@ const TextInput = forwardRef((props, ref) => {
       {...dataAttributes.getAll(remainingProps)}
     >
       {label && (
-        <label
-          className="fr-label"
-          htmlFor={inputId.current}
-        >
+        <label className="fr-label" htmlFor={inputId.current}>
           {label}
           {required && <span className="error"> *</span>}
-          {hint && <p className="fr-hint-text" id={hintId.current}>{hint}</p>}
+          {hint && (
+            <p className="fr-hint-text" id={hintId.current}>
+              {hint}
+            </p>
+          )}
         </label>
       )}
-      {
-                (textarea)
-                  ? (
-                    <textarea
-                      {...dataAttributes.filterAll(remainingProps)}
-                      ref={ref}
-                      className={_className}
-                      id={inputId.current}
-                      required={required}
-                      onBlur={(e) => {
-                        if (withAutoValidation) {
-                          setValidation({
-                            status: e.target.validity.valid ? 'valid' : 'error',
-                            message: e.target.validationMessage,
-                          });
-                        }
-                        onBlur(e);
-                      }}
-                    />
-                  )
-                  : (
-                    <input
-                      {...dataAttributes.filterAll(remainingProps)}
-                      aria-describedby={hint && hintId.current}
-                      ref={ref}
-                      type={type}
-                      className={_className}
-                      id={inputId.current}
-                      required={required}
-                      onBlur={(e) => {
-                        if (withAutoValidation) {
-                          setValidation({
-                            status: e.target.validity.valid ? 'valid' : 'error',
-                            message: e.target.validationMessage,
-                          });
-                        }
-                        onBlur(e);
-                      }}
-                    />
-                  )
+      {textarea ? (
+        <textarea
+          {...dataAttributes.filterAll(remainingProps)}
+          ref={ref}
+          className={_className}
+          id={inputId.current}
+          required={required}
+          onBlur={(e) => {
+            if (withAutoValidation) {
+              setValidation({
+                status: e.target.validity.valid ? 'valid' : 'error',
+                message: e.target.validationMessage,
+              });
             }
-      {(internalMessage && internalMessageType)
-                && <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>}
+            onBlur(e);
+          }}
+        />
+      ) : (
+        <input
+          {...dataAttributes.filterAll(remainingProps)}
+          aria-describedby={hint && hintId.current}
+          ref={ref}
+          type={type}
+          className={_className}
+          id={inputId.current}
+          required={required}
+          onBlur={(e) => {
+            if (withAutoValidation) {
+              setValidation({
+                status: e.target.validity.valid ? 'valid' : 'error',
+                message: e.target.validationMessage,
+              });
+            }
+            onBlur(e);
+          }}
+        />
+      )}
+      {internalMessage && internalMessageType && (
+        <p className={`fr-${internalMessageType}-text`}>{internalMessage}</p>
+      )}
     </div>
   );
 });
@@ -112,8 +117,7 @@ TextInput.defaultProps = {
   type: 'text',
   required: false,
   withAutoValidation: false,
-  onBlur: () => {
-  },
+  onBlur: () => {},
 };
 
 TextInput.propTypes = {
