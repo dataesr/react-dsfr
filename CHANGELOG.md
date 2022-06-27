@@ -1,3 +1,15 @@
+# [2.6.0](https://github.com/dataesr/react-dsfr/compare/v2.5.0...v2.6.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* Update DSFR version to 1.6.0 ([#244](https://github.com/dataesr/react-dsfr/issues/244)) ([541adf7](https://github.com/dataesr/react-dsfr/commit/541adf70484ed8042e0db584fe430b93f5fa066a))
+
+
+### Features
+
+* **header:** Allow complexe title and description ([#245](https://github.com/dataesr/react-dsfr/issues/245)) ([c497183](https://github.com/dataesr/react-dsfr/commit/c4971832431ab1533fd1d1a90203ced0b2912577))
+
 # [2.5.0](https://github.com/dataesr/react-dsfr/compare/v2.4.1...v2.5.0) (2022-06-23)
 
 
