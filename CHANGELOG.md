@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/dataesr/react-dsfr/compare/v2.6.0...v2.6.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* type of service ([88d74d3](https://github.com/dataesr/react-dsfr/commit/88d74d32a21c052802b17953727daa0ae573226c))
+
 # [2.6.0](https://github.com/dataesr/react-dsfr/compare/v2.5.0...v2.6.0) (2022-06-27)
 
 
