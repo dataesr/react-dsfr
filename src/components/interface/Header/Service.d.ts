@@ -4,8 +4,8 @@ export type ServiceClassName = string | Object | any[];
 
 export interface ServiceProps {
     __TYPE?: any;
-    description?: React.ReactElement<any>;
-    title: React.ReactElement<any>;
+    description?: React.ReactNode;
+    title: React.ReactNode;
     link?: string;
     className?: ServiceClassName;
     asLink?: React.ReactElement<any>;
