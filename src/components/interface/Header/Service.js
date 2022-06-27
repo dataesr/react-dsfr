@@ -36,8 +36,8 @@ Service.defaultProps = {
 Service.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('Service'),
-  description: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  description: PropTypes.node,
+  title: PropTypes.node.isRequired,
   link: PropTypes.string,
   className: PropTypes.oneOfType([
     PropTypes.string,

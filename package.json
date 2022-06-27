@@ -1,6 +1,6 @@
 {
   "name": "@dataesr/react-dsfr",
-  "version": "2.5.0",
+  "version": "2.6.3",
   "private": false,
   "description": "A React implementation of the french government design system.",
   "license": "MIT",

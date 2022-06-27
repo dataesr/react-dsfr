@@ -112,6 +112,7 @@ const TableExample = () => {
       <Row>
         <Col>
           <SimpleTable
+            fixedHeader
             tableClassName="tableClassName"
             tableID="tableID-1"
             caption="Simple Table"
