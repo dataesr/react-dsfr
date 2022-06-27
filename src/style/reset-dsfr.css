@@ -37,7 +37,8 @@ button.fr-accordion__btn:before,
 button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
 button[class^="fr-btn"]:before,
-[class^="fr-alert"]:before {
+[class^="fr-alert"]:before,
+div.fr-notice--info .fr-notice__body:before {
     font-family: "remixicon";
     background-color: inherit;
     mask-image: inherit;
@@ -169,4 +170,10 @@ button.fr-pagination__link--first:before {
 
 button.fr-pagination__link--last:before {
     content: '\f146';
+}
+
+div.fr-notice--info .fr-notice__body:before {
+    content: '\ee59';
+    font-size: 1.4rem;
+    line-height: 1.5rem;
 }

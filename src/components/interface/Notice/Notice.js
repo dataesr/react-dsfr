@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 
-/*
-* DSFR v1.5.0
-*/
-import '@gouvfr/dsfr/dist/component/link/link.css';
+import '@gouvfr/dsfr/dist/component/notice/notice.css';
 
-const Notice = ({ chlidren, className, ...remainingProps }) => {
+const Notice = ({
+  title, className, asLink, ...remainingProps
+}) => {
   const _className = classNames('fr-notice fr-notice--info', className, {});
 
   return (
@@ -16,8 +15,8 @@ const Notice = ({ chlidren, className, ...remainingProps }) => {
       <div className="fr-container">
         <div className="fr-notice__body">
           <p className="fr-notice__title">
-            Titre du bandeau,
-            <a href="#" rel="noopener" target="_blank">lien au fil du texte</a>
+            {title}
+            {asLink}
           </p>
         </div>
       </div>
@@ -27,7 +26,9 @@ const Notice = ({ chlidren, className, ...remainingProps }) => {
 
 Notice.defaultProps = {
   className: '',
+  title: '',
   children: '',
+  asLink: null,
 };
 
 Notice.propTypes = {
@@ -41,5 +42,8 @@ Notice.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  title: PropTypes.string,
+  asLink: PropTypes.element,
 };
+
 export default Notice;

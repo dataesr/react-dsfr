@@ -7,6 +7,8 @@ export type NoticeChildren = React.ReactNode[] | React.ReactNode | string;
 export interface NoticeProps {
     className?: NoticeClassName;
     children?: NoticeChildren;
+    title: string;
+    asLink?: React.ReactElement<any>;
 }
 
 declare const Notice: React.FC<NoticeProps>;
