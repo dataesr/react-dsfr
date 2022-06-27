@@ -16,6 +16,7 @@ const SimpleTable = ({ data, ...remainingProps }) => {
 
 SimpleTable.defaultProps = {
   fixedLayout: false,
+  fixedHeader: false,
   noScroll: false,
   bordered: false,
   captionPosition: 'top',
@@ -24,6 +25,7 @@ SimpleTable.defaultProps = {
 
 SimpleTable.propTypes = {
   fixedLayout: PropTypes.bool,
+  fixedHeader: PropTypes.bool,
   noScroll: PropTypes.bool,
   bordered: PropTypes.bool,
   captionPosition: PropTypes.oneOf(['top', 'bottom', 'none']),
