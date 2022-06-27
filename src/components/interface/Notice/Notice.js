@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import '@gouvfr/dsfr/dist/component/notice/notice.css';
 
 const Notice = ({
-  title, className, asLink, ...remainingProps
+  title, className, onClose, asLink, ...remainingProps
 }) => {
   const _className = classNames('fr-notice fr-notice--info', className, {});
 
@@ -16,8 +16,16 @@ const Notice = ({
         <div className="fr-notice__body">
           <p className="fr-notice__title">
             {title}
+            {'. '}
             {asLink}
           </p>
+          <button
+            className="fr-btn--close fr-btn"
+            title="Masquer le message"
+            onClick={onClose}
+          >
+            Masquer le message
+          </button>
         </div>
       </div>
     </div>
