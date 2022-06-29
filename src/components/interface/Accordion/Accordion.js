@@ -7,9 +7,6 @@ import classNames from 'classnames';
 
 import dataAttributes from '../../../utils/data-attributes';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/accordion/accordion.css';
 
 /**

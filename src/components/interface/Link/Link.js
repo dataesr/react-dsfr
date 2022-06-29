@@ -4,9 +4,6 @@ import classNames from 'classnames';
 import Icon from '../../foundation/icon/index';
 import dataAttributes from '../../../utils/data-attributes';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/link/link.css';
 
 /**

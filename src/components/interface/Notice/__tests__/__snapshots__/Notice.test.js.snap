@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notice /> renders correctly 1`] = `
+<div
+  className="fr-notice fr-notice--info"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fr-notice__body"
+    >
+      <p
+        className="fr-notice__title"
+      >
+        Title
+        . 
+      </p>
+      <button
+        className="fr-btn--close fr-btn"
+        onClick={null}
+        title="Masquer le message"
+      >
+        Masquer le message
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import dataAttributes from '../../../utils/data-attributes';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/summary/summary.css';
 
 /**

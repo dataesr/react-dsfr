@@ -26,6 +26,7 @@ import {
   MegaNavItem, MegaNavSubItem, Service, Tool, ToolItem, ToolItemGroup,
 } from './components/interface/Header/index';
 import Highlight from './components/interface/Highlight/index';
+import Notice from './components/interface/Notice/index';
 import Link from './components/interface/Link/index';
 import Logo from './components/interface/Logo/index';
 import MediaImage from './components/foundation/media/MediaImage/index';
@@ -119,6 +120,7 @@ const library = () => ({
   ModalContent,
   ModalFooter,
   ModalTitle,
+  Notice,
   Pagination,
   Radio,
   RadioGroup,

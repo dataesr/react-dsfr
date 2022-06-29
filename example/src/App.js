@@ -37,6 +37,7 @@ import Element from './Element';
 import Page1 from './Page-1';
 import Page2 from './Page-2';
 import ShareExample from './components/Share/Share';
+import NoticeExample from './components/Notice/Notice';
 
 const App = () => {
   const elements = [
@@ -57,6 +58,7 @@ const App = () => {
     { title: 'Icons', component: <IconsExample /> },
     { title: 'Lien', component: <LinkExample /> },
     { title: 'Media', component: <MediaExample /> },
+    { title: 'Notice', component: <NoticeExample /> },
     { title: 'Modal', component: <ModalExample /> },
     { title: 'Radio', component: <RadioExample /> },
     { title: 'Select', component: <SelectExample /> },

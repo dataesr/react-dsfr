@@ -7,9 +7,6 @@ import dataAttributes from '../../../utils/data-attributes';
 
 import './table.css';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/table/table.css';
 
 /**

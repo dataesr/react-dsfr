@@ -6,9 +6,6 @@ import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import Icon from '../../foundation/icon/index';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/form/form.css';
 import '@gouvfr/dsfr/dist/component/input/input.css';
 import '@gouvfr/dsfr/dist/component/button/button.css';

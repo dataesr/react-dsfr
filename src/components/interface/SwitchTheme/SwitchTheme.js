@@ -6,9 +6,6 @@ import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
 import useTheme from './useTheme';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/scheme/scheme.css';
 
 const SwitchTheme = ({
