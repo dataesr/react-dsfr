@@ -9,9 +9,6 @@ import useFocusTrap from '../../../hooks/useFocusTrap';
 import ModalClose from './ModalClose';
 import dataAttributes from '../../../utils/data-attributes';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/modal/modal.css';
 
 /**

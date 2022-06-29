@@ -5,9 +5,6 @@ import dataAttributes from '../../../utils/data-attributes';
 import { getSurrendingLeft, getSurrendingRight } from './helpers';
 import PaginationItem from './PaginationItem';
 
-/*
-* DSFR v1.5.0
-*/
 import '@gouvfr/dsfr/dist/component/pagination/pagination.css';
 
 const Pagination = ({
