@@ -8,6 +8,7 @@ export interface NoticeProps {
     className?: NoticeClassName;
     children?: NoticeChildren;
     title: string;
+    visible?: boolean;
     asLink?: React.ReactElement<any>;
 }
 

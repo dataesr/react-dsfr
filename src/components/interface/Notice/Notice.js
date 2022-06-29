@@ -6,9 +6,13 @@ import dataAttributes from '../../../utils/data-attributes';
 import '@gouvfr/dsfr/dist/component/notice/notice.css';
 
 const Notice = ({
-  title, className, onClose, asLink, ...remainingProps
+  title, className, visible, onClose, asLink, ...remainingProps
 }) => {
   const _className = classNames('fr-notice fr-notice--info', className, {});
+
+  if (!visible) {
+    return null;
+  }
 
   return (
     <div className={_className} {...dataAttributes.getAll(remainingProps)}>
@@ -34,9 +38,9 @@ const Notice = ({
 
 Notice.defaultProps = {
   className: '',
-  title: '',
-  children: '',
   asLink: null,
+  visible: true,
+  onClose: null,
 };
 
 Notice.propTypes = {
@@ -45,12 +49,9 @@ Notice.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.string,
-  ]),
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  visible: PropTypes.bool,
+  onClose: PropTypes.func,
   asLink: PropTypes.element,
 };
 
