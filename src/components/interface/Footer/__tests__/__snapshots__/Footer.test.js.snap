@@ -423,30 +423,32 @@ exports[`<Footer /> should render Footer properly 1`] = `
       class="fr-footer__partners"
       data-testid="footerpartners"
     >
-      <h4
-        class="fr-footer__partners-title"
-        data-testid="title"
-      >
-        Nos partenaires
-      </h4>
       <div
         class="fr-footer__partners-logos"
       >
         <div
           class="fr-footer__partners-main"
         >
-          <a
-            class="footer__partners-link fr-link--md"
-            data-testid="logo"
-            href="/"
-            target="_self"
-          >
-            <img
-              alt="Logo 1"
-              class="fr-footer__logo"
-              src="img/logo1"
-            />
-          </a>
+          <div>
+            <h4
+              class="fr-footer__partners-title"
+              data-testid="title"
+            >
+              Nos partenaires
+            </h4>
+            <a
+              class="footer__partners-link fr-link--md"
+              data-testid="logo"
+              href="/"
+              target="_self"
+            >
+              <img
+                alt="Logo 1"
+                class="fr-footer__logo"
+                src="img/logo1"
+              />
+            </a>
+          </div>
         </div>
         <div
           class="fr-footer__partners-sub"

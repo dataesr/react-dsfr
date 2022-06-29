@@ -19,7 +19,8 @@ import {
 import { Checkbox, CheckboxGroup } from './components/interface/Checkbox/index';
 import {
   Footer, FooterOperator, FooterLink, FooterBody, FooterBodyItem, FooterBottom, FooterCopy,
-  FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterTop, FooterTopCategory,
+  FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterPartnersSecondaryTitle,
+  FooterTop, FooterTopCategory,
 } from './components/interface/Footer/index';
 import {
   Header, HeaderOperator, HeaderNav, HeaderBody, NavItem, NavSubItem,
@@ -98,6 +99,7 @@ const library = () => ({
   FooterPartners,
   FooterTop,
   FooterPartnersTitle,
+  FooterPartnersSecondaryTitle,
   FooterPartnersLogo,
   HeaderNav,
   NavSubItem,
