@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stepper /> renders correctly 1`] = `
+<div
+  className="fr-stepper"
+>
+  <h4
+    className="fr-stepper__title"
+  >
+    <span
+      className="fr-stepper__state"
+    >
+      Étape 5 sur 6
+    </span>
+    TiTle
+  </h4>
+  <div
+    className="fr-stepper__steps"
+    data-fr-current-step={5}
+    data-fr-steps={6}
+  />
+  <p
+    className="fr-stepper__details"
+  >
+    <span
+      className="fr-text--bold"
+    >
+      Étape suivante : 
+    </span>
+    TiTle next
+  </p>
+</div>
+`;

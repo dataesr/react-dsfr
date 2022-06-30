@@ -39,7 +39,8 @@ button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
 button[class^="fr-btn"]:before,
 [class^="fr-alert"]:before,
-div.fr-notice--info .fr-notice__body:before {
+div.fr-notice--info .fr-notice__body:before,
+.fr-share > .fr-btns-group > .fr-btn.fr-btn--facebook:before {
     font-family: "remixicon";
     background-color: inherit;
     mask-image: inherit;
@@ -119,7 +120,7 @@ button.fr-accordion__btn[aria-expanded=true]:before {
     content: '\ea4e';
 }
 
-a.fr-btn--facebook:before {
+ul.fr-btns-group > li.fr-share > a.fr-btn.fr-btn--facebook:before {
     content: '\ecbb';
     font-size: 1.4rem;
     line-height: 1.5rem;

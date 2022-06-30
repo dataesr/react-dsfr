@@ -38,6 +38,7 @@ import {
 import Pagination from './components/interface/Pagination/index';
 import { Radio, RadioGroup } from './components/interface/Radio/index';
 import SearchBar from './components/interface/SearchBar/index';
+import Stepper from './components/interface/Stepper/index';
 import { Select, SearchableSelect } from './components/interface/Select/index';
 import { SideMenu, SideMenuLink, SideMenuItem } from './components/interface/SideMenu/index';
 import { Skiplinks, SkiplinkItem } from './components/interface/Skiplinks/index';
@@ -136,6 +137,7 @@ const library = () => ({
   SideMenuLink,
   Skiplinks,
   SkiplinkItem,
+  Stepper,
   Summary,
   SummaryItem,
   Table,
