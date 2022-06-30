@@ -4,7 +4,7 @@ exports[`<Stepper /> renders correctly 1`] = `
 <div
   className="fr-stepper"
 >
-  <h2
+  <h4
     className="fr-stepper__title"
   >
     <span
@@ -13,7 +13,7 @@ exports[`<Stepper /> renders correctly 1`] = `
       Étape 5 sur 6
     </span>
     TiTle
-  </h2>
+  </h4>
   <div
     className="fr-stepper__steps"
     data-fr-current-step={5}
