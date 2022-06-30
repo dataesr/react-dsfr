@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/dataesr/react-dsfr/compare/v2.6.3...v2.7.0) (2022-06-30)
+
+
+### Features
+
+* **footer:** Add a secondary partners title ([#252](https://github.com/dataesr/react-dsfr/issues/252)) ([d2c82f2](https://github.com/dataesr/react-dsfr/commit/d2c82f2bfe18466f5f1e6908a2f3532ed4dbbb01))
+
 ## [2.6.3](https://github.com/dataesr/react-dsfr/compare/v2.6.2...v2.6.3) (2022-06-27)
 
 
