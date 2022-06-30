@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SkipLinks /> should renders Tag properly 1`] = `
+exports[`<SkipLinks /> should renders SkipLinks properly 1`] = `
 <div
   class="fr-skiplinks"
   data-testid="skiplinks"

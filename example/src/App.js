@@ -32,6 +32,7 @@ import TextsExample from './components/Texts/Texts';
 import TileExample from './components/Tile/Tile';
 import ToggleExample from './components/Toggle/Toggle';
 import SkiplinksExample from './components/Skiplinks/Skiplinks';
+import StepperExample from './components/Stepper/Stepper';
 import DownloadExample from './components/Download/Download';
 import Element from './Element';
 import Page1 from './Page-1';
@@ -73,6 +74,7 @@ const App = () => {
     { title: 'Tile - Tuile', component: <TileExample /> },
     { title: 'Toggle', component: <ToggleExample /> },
     { title: 'Share', component: <ShareExample /> },
+    { title: 'Stepper', component: <StepperExample /> },
   ];
 
   return (

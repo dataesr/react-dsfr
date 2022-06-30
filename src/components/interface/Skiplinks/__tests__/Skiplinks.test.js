@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import { SkiplinkItem, Skiplinks } from '..';
 
 describe('<SkipLinks />', () => {
-  it('should renders Tag properly', () => {
+  it('should renders SkipLinks properly', () => {
     render(
       <Skiplinks data-testid="skiplinks">
         <SkiplinkItem href="#" data-testid="skiplinkitem1">Accéder au contenu</SkiplinkItem>
