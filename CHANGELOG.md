@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/dataesr/react-dsfr/compare/v2.7.0...v2.8.0) (2022-06-30)
+
+
+### Features
+
+* **stepper:** new component ([#253](https://github.com/dataesr/react-dsfr/issues/253)) ([26c79b8](https://github.com/dataesr/react-dsfr/commit/26c79b849fc7f50d96e591d87a9e036e14aa51b1))
+
 # [2.7.0](https://github.com/dataesr/react-dsfr/compare/v2.6.3...v2.7.0) (2022-06-30)
 
 
