@@ -455,6 +455,12 @@ exports[`<Footer /> should render Footer properly 1`] = `
         >
           <ul>
             <li>
+              <h4
+                class="fr-footer__partners-title"
+                data-testid="title"
+              >
+                Et plus...
+              </h4>
               <a
                 class="footer__partners-link fr-link--md"
                 href="/"
