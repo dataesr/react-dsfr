@@ -46,6 +46,17 @@ span.ds-fr--v-top {
     color: var(--text-default-grey);
 }
 
+.fr-footer__partners-sub {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 36em) {
+  .fr-footer__partners-logos,
+  .fr-footer__partners-sub > ul {
+    align-items: flex-end;
+  }
+}
+
 /**
 Colored Components
  */
