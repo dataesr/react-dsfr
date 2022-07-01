@@ -40,7 +40,11 @@ a[class^="fr-btn"]:before,
 button[class^="fr-btn"]:before,
 [class^="fr-alert"]:before,
 div.fr-notice--info .fr-notice__body:before,
-.fr-share > .fr-btns-group > .fr-btn.fr-btn--facebook:before {
+#ds-fr--share-facebook .fr-btn--facebook:before,
+#ds-fr--share-linkedin .fr-btn--linkedin:before,
+#ds-fr--share-copy .fr-btn--copy:before,
+#ds-fr--share-mail .fr-btn--mail:before,
+#ds-fr--share-twitter .fr-btn--twitter:before {
     font-family: "remixicon";
     background-color: inherit;
     mask-image: inherit;
@@ -124,31 +128,31 @@ button.fr-accordion__btn[aria-expanded=true]:after {
     content: '\ea4e';
 }
 
-ul.fr-btns-group > li.fr-share > a.fr-btn.fr-btn--facebook:before {
+#ds-fr--share-facebook .fr-btn--facebook:before {
     content: '\ecbb';
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
 
-a.fr-btn--twitter:before {
+#ds-fr--share-twitter .fr-btn--twitter:before {
     content: '\f23b';
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
 
-a.fr-btn--linkedin:before {
+#ds-fr--share-linkedin .fr-btn--linkedin:before {
     content: '\eeb4';
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
 
-a.fr-btn--mail:before {
+#ds-fr--share-mail .fr-btn--mail:before{
     content: '\eef6';
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
 
-button.fr-btn--copy:before {
+#ds-fr--share-copy .fr-btn--copy:before{
     content: '\ecd5';
     font-size: 1.4rem;
     line-height: 1.5rem;
