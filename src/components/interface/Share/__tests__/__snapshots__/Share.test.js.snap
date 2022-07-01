@@ -14,6 +14,7 @@ exports[`<Share /> should render Share properly 1`] = `
   >
     <li
       className="fr-share"
+      id="ds-fr--share-facebook"
     >
       <a
         className="fr-btn fr-btn--facebook"

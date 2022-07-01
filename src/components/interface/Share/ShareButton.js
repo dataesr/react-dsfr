@@ -45,7 +45,7 @@ const ShareButton = ({
   };
 
   return (
-    <li className={_className} {...dataAttributes.getAll(remainingProps)}>
+    <li className={_className} {...dataAttributes.getAll(remainingProps)} id={`ds-fr--share-${type}`}>
       {type === 'copy' ? (
         <button
           type="button"
