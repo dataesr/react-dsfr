@@ -8,6 +8,9 @@ const FooterPartners = ({ children, className, ...remainingProps }) => {
   const title = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersTitle',
   );
+  const secondaryTitle = Children.toArray(children).filter(
+    (child) => child.props.__TYPE === 'FooterPartnersSecondaryTitle',
+  );
   const mainLogos = Children.toArray(children).filter(
     (child) => child.props.__TYPE === 'FooterPartnersLogo' && child.props.isMain,
   );
@@ -19,20 +22,29 @@ const FooterPartners = ({ children, className, ...remainingProps }) => {
       className={classNames('fr-footer__partners', className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      {title}
       <div className="fr-footer__partners-logos">
         {mainLogos && (
-        <div className="fr-footer__partners-main">{mainLogos}</div>
+        <div className="fr-footer__partners-main">
+          <div>
+            {title}
+            {mainLogos}
+          </div>
+        </div>
         )}
         {subLogos && (
-        <div className="fr-footer__partners-sub">
-          <ul>
-            {subLogos.map((subLogo, i) => {
-              const id = i + 1;
-              return <li key={`${subLogo.imageSrc}-${id}`}>{subLogo}</li>;
-            })}
-          </ul>
-        </div>
+          <div className="fr-footer__partners-sub">
+            <ul>
+              {subLogos.map((subLogo, i) => {
+                const id = i + 1;
+                return (
+                  <li key={`${subLogo.imageSrc}-${id}`}>
+                    {i === 0 && secondaryTitle}
+                    {subLogo}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         )}
       </div>
     </div>

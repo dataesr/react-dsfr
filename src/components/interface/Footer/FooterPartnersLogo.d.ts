@@ -9,6 +9,8 @@ export interface FooterPartnersLogoProps {
     imageAlt: string;
     className?: FooterPartnersLogoClassName;
     asLink?: React.ReactElement<any>;
+    isMain?: boolean;
+    target?: string;
 }
 
 declare const FooterPartnersLogo: React.FC<FooterPartnersLogoProps>;

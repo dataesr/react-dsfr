@@ -6,7 +6,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const FooterPartnersLogo = ({
-  href, imageSrc, imageAlt, className, asLink, ...remainingProps
+  href, imageSrc, imageAlt, className, asLink, target, ...remainingProps
 }) => {
   if (!href && !asLink) {
     return (
@@ -23,6 +23,7 @@ const FooterPartnersLogo = ({
       as={asLink}
       className={classNames('footer__partners-link', className)}
       href={href}
+      target={target}
       {...dataAttributes.getAll(remainingProps)}
     >
       <img
@@ -40,6 +41,7 @@ FooterPartnersLogo.defaultProps = {
   imageSrc: '',
   className: '',
   asLink: null,
+  target: '_self',
 };
 
 FooterPartnersLogo.propTypes = {
@@ -54,6 +56,7 @@ FooterPartnersLogo.propTypes = {
     PropTypes.array,
   ]),
   asLink: PropTypes.element,
+  target: PropTypes.string,
 };
 
 export default FooterPartnersLogo;

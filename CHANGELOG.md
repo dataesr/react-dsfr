@@ -1,3 +1,31 @@
+## [2.8.2](https://github.com/dataesr/react-dsfr/compare/v2.8.1...v2.8.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* add htmlinput element properties in TextInput ([#243](https://github.com/dataesr/react-dsfr/issues/243)) ([8a54051](https://github.com/dataesr/react-dsfr/commit/8a54051aede69f4d1f1c39b7cd3d562fee7a8a11))
+
+## [2.8.1](https://github.com/dataesr/react-dsfr/compare/v2.8.0...v2.8.1) (2022-07-01)
+
+
+### Bug Fixes
+
+* **accordion:** Realign icon to the right ([a4b0165](https://github.com/dataesr/react-dsfr/commit/a4b01652d594c282a1a25773dcbfc9c3afcb1ffe))
+
+# [2.8.0](https://github.com/dataesr/react-dsfr/compare/v2.7.0...v2.8.0) (2022-06-30)
+
+
+### Features
+
+* **stepper:** new component ([#253](https://github.com/dataesr/react-dsfr/issues/253)) ([26c79b8](https://github.com/dataesr/react-dsfr/commit/26c79b849fc7f50d96e591d87a9e036e14aa51b1))
+
+# [2.7.0](https://github.com/dataesr/react-dsfr/compare/v2.6.3...v2.7.0) (2022-06-30)
+
+
+### Features
+
+* **footer:** Add a secondary partners title ([#252](https://github.com/dataesr/react-dsfr/issues/252)) ([d2c82f2](https://github.com/dataesr/react-dsfr/commit/d2c82f2bfe18466f5f1e6908a2f3532ed4dbbb01))
+
 ## [2.6.3](https://github.com/dataesr/react-dsfr/compare/v2.6.2...v2.6.3) (2022-06-27)
 
 

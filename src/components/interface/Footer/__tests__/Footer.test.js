@@ -9,6 +9,7 @@ import {
   FooterLink,
   FooterCopy,
   FooterPartnersTitle,
+  FooterPartnersSecondaryTitle,
   FooterPartnersLogo,
   Footer,
   FooterOperator,
@@ -78,6 +79,7 @@ describe('<Footer />', () => {
         </FooterBody>
         <FooterPartners data-testid="footerpartners">
           <FooterPartnersTitle data-testid="title">Nos partenaires</FooterPartnersTitle>
+          <FooterPartnersSecondaryTitle data-testid="title">Et plus...</FooterPartnersSecondaryTitle>
           <FooterPartnersLogo isMain href="/" imageSrc="img/logo1" imageAlt="Logo 1" data-testid="logo" />
           <FooterPartnersLogo href="/" imageSrc="img/logo2" imageAlt="Logo 2" />
           <FooterPartnersLogo href="/" imageSrc="img/logo3" imageAlt="Logo 3" />

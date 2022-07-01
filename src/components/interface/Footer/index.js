@@ -8,6 +8,7 @@ import FooterCopy from './FooterCopy';
 import FooterPartners from './FooterPartners';
 import FooterPartnersLogo from './FooterPartnersLogo';
 import FooterPartnersTitle from './FooterPartnersTitle';
+import FooterPartnersSecondaryTitle from './FooterPartnersSecondaryTitle';
 import FooterLink from './FooterLink';
 import Footer from './Footer';
 
@@ -23,5 +24,6 @@ export {
   FooterTopCategory,
   Footer,
   FooterPartnersTitle,
+  FooterPartnersSecondaryTitle,
   FooterPartnersLogo,
 };

@@ -11,6 +11,7 @@ import {
   FooterBodyItem,
   FooterPartners,
   FooterPartnersTitle,
+  FooterPartnersSecondaryTitle,
   FooterPartnersLogo,
   Logo,
   FooterBottom,
@@ -94,6 +95,7 @@ const FooterExample = () => {
         </FooterBody>
         <FooterPartners>
           <FooterPartnersTitle>Nos partenaires</FooterPartnersTitle>
+          <FooterPartnersSecondaryTitle>et autres</FooterPartnersSecondaryTitle>
           <FooterPartnersLogo
             isMain
             href="/"
