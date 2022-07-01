@@ -1,3 +1,10 @@
+## [2.8.2](https://github.com/dataesr/react-dsfr/compare/v2.8.1...v2.8.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* add htmlinput element properties in TextInput ([#243](https://github.com/dataesr/react-dsfr/issues/243)) ([8a54051](https://github.com/dataesr/react-dsfr/commit/8a54051aede69f4d1f1c39b7cd3d562fee7a8a11))
+
 ## [2.8.1](https://github.com/dataesr/react-dsfr/compare/v2.8.0...v2.8.1) (2022-07-01)
 
 
