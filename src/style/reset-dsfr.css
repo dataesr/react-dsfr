@@ -33,7 +33,7 @@ span.error {
 .fr-nav__btn:after,
 button.fr-accordion__btn[aria-expanded=true]:after,
 button.fr-accordion__btn:after,
-.fr-link--close:before,
+.fr-link--close:after,
 .fr-notice button.fr-btn--close:before,
 button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
@@ -84,8 +84,12 @@ button.fr-accordion__btn[aria-expanded=true]:after {
 }
 
 .fr-notice button.fr-btn--close:before,
-.fr-link--close:before {
+.fr-link--close:after {
     content: '\eb99';
+}
+
+.fr-link--close:after {
+    line-height: 1.8rem;
 }
 
 /**
