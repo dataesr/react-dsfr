@@ -31,8 +31,8 @@ span.error {
 .fr-header__navbar .fr-btn--menu:before,
 .fr-header__navbar .fr-btn--search:before,
 .fr-nav__btn:after,
-button.fr-accordion__btn[aria-expanded=true]:before,
-button.fr-accordion__btn:before,
+button.fr-accordion__btn[aria-expanded=true]:after,
+button.fr-accordion__btn:after,
 .fr-link--close:before,
 .fr-notice button.fr-btn--close:before,
 button[class^="fr-pagination__link"]:before,
@@ -52,12 +52,12 @@ div.fr-notice--info .fr-notice__body:before,
 /**
   Accordion
  */
-button.fr-accordion__btn:before {
+button.fr-accordion__btn:after {
     content: '\ea13';
     color: var(--text-action-high-grey);
 }
 
-button.fr-accordion__btn[aria-expanded=true]:before {
+button.fr-accordion__btn[aria-expanded=true]:after {
     content: '\f1af';
 }
 
