@@ -1,3 +1,10 @@
+## [2.8.3](https://github.com/dataesr/react-dsfr/compare/v2.8.2...v2.8.3) (2022-07-01)
+
+
+### Bug Fixes
+
+* close icon ([ecaa68d](https://github.com/dataesr/react-dsfr/commit/ecaa68dfa292653a50056113862655b384bc9acc))
+
 ## [2.8.2](https://github.com/dataesr/react-dsfr/compare/v2.8.1...v2.8.2) (2022-07-01)
 
 
