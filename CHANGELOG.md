@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/dataesr/react-dsfr/compare/v2.8.0...v2.8.1) (2022-07-01)
+
+
+### Bug Fixes
+
+* **accordion:** Realign icon to the right ([a4b0165](https://github.com/dataesr/react-dsfr/commit/a4b01652d594c282a1a25773dcbfc9c3afcb1ffe))
+
 # [2.8.0](https://github.com/dataesr/react-dsfr/compare/v2.7.0...v2.8.0) (2022-06-30)
 
 
