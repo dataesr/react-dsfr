@@ -18,7 +18,9 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
     required?: boolean;
     className?: TextInputClassName;
     withAutoValidation?: boolean;
-    onBlur?: (...args: any[]) => any;
+    onBlur?: (...args: any[])=>any;
+    onChange?: (...args: any[])=>any;
+    value?: string;
 }
 
 declare const TextInput: React.FC<TextInputProps>;
