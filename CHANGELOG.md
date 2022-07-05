@@ -1,3 +1,10 @@
+## [2.8.4](https://github.com/dataesr/react-dsfr/compare/v2.8.3...v2.8.4) (2022-07-05)
+
+
+### Bug Fixes
+
+* **text:** TextInput type ([ca6338f](https://github.com/dataesr/react-dsfr/commit/ca6338f4fa1c213040280e8140d40496b0df25ac))
+
 ## [2.8.3](https://github.com/dataesr/react-dsfr/compare/v2.8.2...v2.8.3) (2022-07-01)
 
 
