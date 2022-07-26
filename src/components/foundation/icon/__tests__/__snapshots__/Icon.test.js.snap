@@ -4,13 +4,11 @@ exports[`<Icon /> renders correctly 1`] = `
 <p
   className=""
 >
-  <span>
-    Icon text
-    <span
-      aria-hidden={true}
-      className="ri-sm icon-right ds-fr--v-middle name test"
-      title="title"
-    />
-  </span>
+  Icon text
+  <span
+    aria-hidden={true}
+    className="ri-sm icon-right ds-fr--v-middle name test"
+    title="title"
+  />
 </p>
 `;

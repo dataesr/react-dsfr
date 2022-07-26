@@ -55,10 +55,10 @@ const Icon = ({
   );
 
   const childrenWithIcon = (
-    <span>
+    <>
       {iconPosition === 'right' ? newChildren : icon}
       {iconPosition === 'right' ? icon : newChildren}
-    </span>
+    </>
   );
 
   useEffect(() => {
