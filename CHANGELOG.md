@@ -1,3 +1,10 @@
+## [2.8.5](https://github.com/dataesr/react-dsfr/compare/v2.8.4...v2.8.5) (2022-07-26)
+
+
+### Bug Fixes
+
+* **icon:** Remove useless span tag inside button ([4044aa9](https://github.com/dataesr/react-dsfr/commit/4044aa959561baa7845226387e2a4645356b0641))
+
 ## [2.8.4](https://github.com/dataesr/react-dsfr/compare/v2.8.3...v2.8.4) (2022-07-05)
 
 
