@@ -99,13 +99,11 @@ exports[`<Header /> renders correctly 1`] = `
                   href="/path"
                   target="_self"
                 >
-                  <span>
-                    <span
-                      aria-hidden={true}
-                      className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
-                    />
-                    Se connecter
-                  </span>
+                  <span
+                    aria-hidden={true}
+                    className="ri-1x icon-left ds-fr--v-middle fr-fi-lock-line"
+                  />
+                  Se connecter
                 </a>
               </li>
               <li
@@ -116,13 +114,11 @@ exports[`<Header /> renders correctly 1`] = `
                   href="/path"
                   target="_self"
                 >
-                  <span>
-                    <span
-                      aria-hidden={true}
-                      className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
-                    />
-                    Créer un espace
-                  </span>
+                  <span
+                    aria-hidden={true}
+                    className="ri-1x icon-left ds-fr--v-middle fr-fi-add-circle-line"
+                  />
+                  Créer un espace
                 </a>
               </li>
               <nav

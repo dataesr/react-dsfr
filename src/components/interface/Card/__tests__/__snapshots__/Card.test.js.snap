@@ -40,12 +40,10 @@ exports[`<Card /> renders Card properly 1`] = `
       </p>
     </div>
   </div>
-  <span>
-    <span
-      aria-hidden="false"
-      class="ri-xl icon-left ds-fr--v-middle ri-arrow-right-line ds-fr-card-icon"
-    />
-  </span>
+  <span
+    aria-hidden="false"
+    class="ri-xl icon-left ds-fr--v-middle ri-arrow-right-line ds-fr-card-icon"
+  />
   
 </div>
 `;
