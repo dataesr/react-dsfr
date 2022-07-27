@@ -24,6 +24,15 @@ or
 npm install @dataesr/react-dsfr
 ```
 
+## Generate and watch
+
+Generate and watch dist folder containing bundles:
+
+```bash
+npm install
+npm start
+```
+
 ## Library usage
 
 ### Styleguide
@@ -41,7 +50,7 @@ The complete styleguide is available online [https://dataesr.github.io/react-dsf
 
 > A playground to test components
 
-An example page is available containing all components. To launch it on your local machine, first [launch watcher of the project](#generate-and-watch-dist-folder-containing-bundles) and then:
+An example page is available containing all components. To launch it on your local machine, first [launch watcher of the project](#generate-and-watch) and then:
 
 ```bash
 cd example
