@@ -27,7 +27,7 @@ const Logo = ({
 
   return (
     <Link
-      className={classNames(className, 'ds-fr--no-shadow')}
+      className={classNames(className)}
       as={asLink}
       title={hrefTitle || children}
       href={href}

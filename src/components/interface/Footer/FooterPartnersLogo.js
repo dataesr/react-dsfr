@@ -21,7 +21,7 @@ const FooterPartnersLogo = ({
   return (
     <Link
       as={asLink}
-      className={classNames('footer__partners-link', className)}
+      className={classNames('fr-footer__partners-link', className)}
       href={href}
       target={target}
       {...dataAttributes.getAll(remainingProps)}
