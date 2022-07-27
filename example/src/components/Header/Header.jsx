@@ -15,10 +15,12 @@ import {
   NavItem,
   NavSubItem,
   MegaNavSubItem,
+  ToolTranslateItem,
   MegaNavItem,
   Link,
   SwitchTheme,
   useTheme,
+  ToolTranslate,
 } from '@dataesr/react-dsfr';
 
 const HeaderExample = () => {
@@ -26,6 +28,13 @@ const HeaderExample = () => {
   const theme = useTheme();
   const [path, setPath] = useState(() => location.pathname || '');
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState('');
+
+  useEffect(() => {
+    if (!currentLang && navigator) {
+      setCurrentLang(navigator.language);
+    }
+  }, [currentLang]);
 
   useEffect(() => {
     if (path !== location.pathname) {
@@ -66,6 +75,14 @@ const HeaderExample = () => {
                   Paramètres d’affichage
                 </span>
               </ToolItem>
+              <ToolTranslate currentLang={location.pathname}>
+                <ToolTranslateItem href="/fr" hrefLang={currentLang} active={location.pathname === '/fr'}>
+                  Français
+                </ToolTranslateItem>
+                <ToolTranslateItem href="/en" hrefLang={currentLang} active={location.pathname === '/en'}>
+                  English
+                </ToolTranslateItem>
+              </ToolTranslate>
             </ToolItemGroup>
             <SearchBar
               onSearch={(e) => {

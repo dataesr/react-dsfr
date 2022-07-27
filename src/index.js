@@ -24,7 +24,7 @@ import {
 } from './components/interface/Footer/index';
 import {
   Header, HeaderOperator, HeaderNav, HeaderBody, NavItem, NavSubItem,
-  MegaNavItem, MegaNavSubItem, Service, Tool, ToolItem, ToolItemGroup,
+  MegaNavItem, MegaNavSubItem, Service, Tool, ToolItem, ToolItemGroup, ToolTranslate, ToolTranslateItem,
 } from './components/interface/Header/index';
 import Highlight from './components/interface/Highlight/index';
 import Notice from './components/interface/Notice/index';
@@ -110,11 +110,13 @@ const library = () => ({
   MegaNavSubItem,
   Service,
   ToolItemGroup,
+  ToolTranslate,
   Tool,
   Header,
   HeaderOperator,
   HeaderBody,
   ToolItem,
+  ToolTranslateItem,
   Highlight,
   MediaVideo,
   MediaImage,
