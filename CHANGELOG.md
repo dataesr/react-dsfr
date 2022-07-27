@@ -1,3 +1,10 @@
+## [2.8.6](https://github.com/dataesr/react-dsfr/compare/v2.8.5...v2.8.6) (2022-07-27)
+
+
+### Bug Fixes
+
+* upgrade card and link ([#260](https://github.com/dataesr/react-dsfr/issues/260)) ([c2e41cd](https://github.com/dataesr/react-dsfr/commit/c2e41cd22e95ec392650c48ea5895efef41388c4))
+
 ## [2.8.5](https://github.com/dataesr/react-dsfr/compare/v2.8.4...v2.8.5) (2022-07-26)
 
 
