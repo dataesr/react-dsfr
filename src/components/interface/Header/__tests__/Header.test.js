@@ -4,7 +4,7 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { v4 as uuidv4 } from 'uuid';
 import {
   Header, HeaderBody, HeaderOperator, Service, Tool, ToolItemGroup,
-  HeaderNav, NavItem, NavSubItem, ToolItem,
+  HeaderNav, NavItem, NavSubItem, ToolItem, ToolTranslate, ToolTranslateItem,
 } from '../index';
 import Logo from '../../Logo';
 
@@ -40,6 +40,14 @@ describe('<Header />', () => {
               <ToolItemGroup data-testid="toolitemgroup">
                 <ToolItem icon="fr-fi-lock-line" link="/path" data-testid="toolitem">Se connecter</ToolItem>
                 <ToolItem icon="fr-fi-add-circle-line" link="/path" data-test-id="toolitem">Créer un espace</ToolItem>
+                <ToolTranslate currentLang="FR">
+                  <ToolTranslateItem href="/fr" hrefLang="FR" active descCurrentLang="Français">
+                    Français
+                  </ToolTranslateItem>
+                  <ToolTranslateItem href="/en" hrefLang="EN" active={false}>
+                    English
+                  </ToolTranslateItem>
+                </ToolTranslate>
               </ToolItemGroup>
             </Tool>
           </HeaderBody>
