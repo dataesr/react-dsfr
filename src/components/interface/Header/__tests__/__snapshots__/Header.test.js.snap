@@ -136,16 +136,14 @@ exports[`<Header /> renders correctly 1`] = `
                     title="Sélectionner une langue"
                     type="button"
                   >
-                    <span>
-                      <span
-                        aria-hidden={true}
-                        className="ri-1x icon-left ds-fr--v-middle ri-translate-2"
-                      />
-                      FR
-                      <span
-                        className="fr-hidden-lg"
-                      />
-                    </span>
+                    <span
+                      aria-hidden={true}
+                      className="ri-1x icon-left ds-fr--v-middle ri-translate-2"
+                    />
+                    FR
+                    <span
+                      className="fr-hidden-lg"
+                    />
                   </button>
                   <div
                     className="fr-translate__menu fr-menu fr-collapse"
