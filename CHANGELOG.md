@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/dataesr/react-dsfr/compare/v2.8.6...v2.9.0) (2022-07-27)
+
+
+### Features
+
+* clean ([043d2bb](https://github.com/dataesr/react-dsfr/commit/043d2bbf2ac255fbc355131019bc2192b1b1a74d))
+
 ## [2.8.6](https://github.com/dataesr/react-dsfr/compare/v2.8.5...v2.8.6) (2022-07-27)
 
 
