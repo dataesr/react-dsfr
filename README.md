@@ -24,7 +24,7 @@ or
 npm install @dataesr/react-dsfr
 ```
 
-### # Generate and watch
+## Generate and watch
 
 Generate and watch dist folder containing bundles:
 
