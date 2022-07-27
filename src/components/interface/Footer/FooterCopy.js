@@ -9,17 +9,7 @@ const FooterCopy = ({ children, className, ...remainingProps }) => (
     className={classNames('fr-footer__bottom-copy', className)}
     {...dataAttributes.getAll(remainingProps)}
   >
-    <p>
-      Sauf mention contraire, tous les contenus de ce site sont sous
-      {' '}
-      <a
-        href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {children}
-      </a>
-    </p>
+    {children}
   </div>
 );
 FooterCopy.propTypes = {

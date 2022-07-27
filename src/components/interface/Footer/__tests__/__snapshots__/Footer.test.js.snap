@@ -339,7 +339,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
         class="fr-footer__brand fr-enlarge-link"
       >
         <a
-          class="ds-fr--no-shadow fr-link--md"
+          class="fr-link--md"
           data-testid="footerlogo"
           href="/"
           target="_self"
@@ -437,7 +437,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
               Nos partenaires
             </h4>
             <a
-              class="footer__partners-link fr-link--md"
+              class="fr-footer__partners-link fr-link--md"
               data-testid="logo"
               href="/"
               target="_self"
@@ -462,7 +462,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
                 Et plus...
               </h4>
               <a
-                class="footer__partners-link fr-link--md"
+                class="fr-footer__partners-link fr-link--md"
                 href="/"
                 target="_self"
               >
@@ -475,7 +475,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             </li>
             <li>
               <a
-                class="footer__partners-link fr-link--md"
+                class="fr-footer__partners-link fr-link--md"
                 href="/"
                 target="_self"
               >
@@ -488,7 +488,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
             </li>
             <li>
               <a
-                class="footer__partners-link fr-link--md"
+                class="fr-footer__partners-link fr-link--md"
                 href="/"
                 target="_self"
               >
@@ -570,17 +570,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
       <div
         class="fr-footer__bottom-copy"
       >
-        <p>
-          Sauf mention contraire, tous les contenus de ce site sont sous
-           
-          <a
-            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
-            rel="noreferrer"
-            target="_blank"
-          >
-            © République Française 2020
-          </a>
-        </p>
+        © République Française 2020
       </div>
     </div>
   </div>

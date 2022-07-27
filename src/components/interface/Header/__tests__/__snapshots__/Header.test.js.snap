@@ -26,7 +26,7 @@ exports[`<Header /> renders correctly 1`] = `
               className="fr-header__logo"
             >
               <a
-                className="ds-fr--no-shadow fr-link--md"
+                className="fr-link--md"
                 data-test-id="headerlogo"
                 href="/"
                 target="_self"
