@@ -79,7 +79,7 @@ const CardExample = () => (
           >
             <CardDetail>Détail top</CardDetail>
             <CardTitle>
-              Card with custom onClick
+              Card No border Custom onClick
             </CardTitle>
             <CardDescription>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.

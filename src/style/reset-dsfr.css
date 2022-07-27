@@ -97,12 +97,14 @@ button.fr-accordion__btn[aria-expanded=true]:after {
 }
 
 /**
-  Footer
+  Footer, Link
  */
 
-[target=_blank]:after {
+[target=_blank]:after,
+[class^="fr-link"][target=_blank]:after {
     content: '\ecaf';
     height: inherit;
+    --icon-size: 1rem;
     font-size: 0.9rem;
 }
 
