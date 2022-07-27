@@ -25,6 +25,7 @@ yarn-error.log*
 
 # lock
 yarn.lock
+/example/package-lock.json
 
 stats.html
 .local-pack
