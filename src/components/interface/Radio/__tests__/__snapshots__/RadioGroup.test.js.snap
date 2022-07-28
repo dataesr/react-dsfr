@@ -14,7 +14,6 @@ exports[`<RadioGroup /> renders correctly 1`] = `
     >
       Légende pour l’ensemble de champs
     </legend>
-    
     <div
       className="fr-fieldset__content"
     >
@@ -35,9 +34,7 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           htmlFor="xxxxxxx"
         >
           Label de la radio 1
-          
         </label>
-        
       </div>
       <div
         className="fr-radio-group"
@@ -54,12 +51,9 @@ exports[`<RadioGroup /> renders correctly 1`] = `
           className="fr-label"
         >
           Label de la radio 2
-          
         </label>
-        
       </div>
     </div>
-    
   </fieldset>
 </div>
 `;

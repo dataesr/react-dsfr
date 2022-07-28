@@ -15,8 +15,6 @@ exports[`<MediaImage /> renders correctly 1`] = `
   </div>
   <figcaption
     className="fr-content-media__caption"
-  >
-    
-  </figcaption>
+  />
 </figure>
 `;

@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { v4 as uuidv4 } from 'uuid';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import Toggle from '..';
 
 Enzyme.configure({ adapter: new Adapter() });

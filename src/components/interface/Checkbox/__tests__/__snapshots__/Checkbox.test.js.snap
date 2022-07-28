@@ -16,8 +16,6 @@ exports[`<Checkbox /> renders correctly 1`] = `
     htmlFor="xxxxxxx"
   >
     Label de la checkbox
-    
   </label>
-  
 </div>
 `;

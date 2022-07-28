@@ -74,9 +74,7 @@ exports[`<MegaNavItem /> renders correctly 1`] = `
               className="fr-nav__link"
               href=""
               target="_self"
-            >
-              
-            </a>
+            />
           </h5>
           <ul
             className="fr-mega-menu__list"

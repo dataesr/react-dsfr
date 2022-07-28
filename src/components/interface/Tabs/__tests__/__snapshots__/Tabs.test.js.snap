@@ -22,7 +22,6 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
         tabIndex={0}
         type="button"
       >
-        
         Label1
       </button>
     </li>
@@ -40,7 +39,6 @@ exports[`<Tabs /> should render Tabs properly 1`] = `
         tabIndex={-1}
         type="button"
       >
-        
         Label2
       </button>
     </li>

@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
