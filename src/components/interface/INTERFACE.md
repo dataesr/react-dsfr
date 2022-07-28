@@ -1,1 +1,0 @@
-Les [éléments d'interface](https://gouvfr.atlassian.net/wiki/spaces/DB/pages/217251916/l+ments+d+interface) du DS de l'État

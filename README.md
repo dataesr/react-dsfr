@@ -35,17 +35,6 @@ npm start
 
 ## Library usage
 
-### Styleguide
-
-Styleguide gives you access to the list of props needed and a working example for each component available in the library. To launch it on your local machine:
-
-```bash
-npm run guide
-```
-Visit [http://localhost:6060](http://localhost:6060).
-
-The complete styleguide is available online [https://dataesr.github.io/react-dsfr/](https://dataesr.github.io/react-dsfr/).
-
 #### Example page
 
 > A playground to test components
