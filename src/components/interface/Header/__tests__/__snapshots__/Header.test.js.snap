@@ -142,8 +142,10 @@ exports[`<Header /> renders correctly 1`] = `
                     />
                     FR
                     <span
-                      className="fr-hidden-lg"
-                    />
+                      className="fr-hidden"
+                    >
+                      Français
+                    </span>
                   </button>
                   <div
                     className="fr-translate__menu fr-menu fr-collapse"
