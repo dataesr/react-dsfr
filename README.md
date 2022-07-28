@@ -6,7 +6,7 @@
 
 [![Tests](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple) [![semantic-release: react](https://img.shields.io/badge/semantic--release-react-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Current version is using a degraded version of [@gouvfr/dsfr@1.6.0](https://www.npmjs.com/package/@gouvfr/dsfr) (new componants are not yet available)
+Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.npmjs.com/package/@gouvfr/dsfr) (new componants are not yet available)
 
 ## Requirements
 
