@@ -12,8 +12,6 @@ jobs:
       - uses: actions/setup-node@v2
       - name: Install
         run: npm clean-install
-      - name: Build
-        run: npm run predeploy
       - name: Test
         run: npm run test:nowatch
       - uses: act10ns/slack@v1
