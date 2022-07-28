@@ -1,3 +1,10 @@
+## [2.9.2](https://github.com/dataesr/react-dsfr/compare/v2.9.1...v2.9.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* pass className and onClick to component ToolTranslateItem ([#261](https://github.com/dataesr/react-dsfr/issues/261)) ([63577c9](https://github.com/dataesr/react-dsfr/commit/63577c933e57742e6fba276c8c40794b325fdd8b))
+
 ## [2.9.1](https://github.com/dataesr/react-dsfr/compare/v2.9.0...v2.9.1) (2022-07-28)
 
 
