@@ -1,32 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import dataAttributes from '../../../utils/data-attributes';
 
 const ToolTranslateItem = ({
   className, children, hrefLang, href, onClick, active, ...remainingProps
-}) => {
-  const _className = classNames(className);
-
-  return (
-    <li
-      className={_className || undefined}
-      {...dataAttributes.getAll(remainingProps)}
+}) => (
+  <li
+    className={className || undefined}
+    {...dataAttributes.getAll(remainingProps)}
+  >
+    <a
+      className="fr-translate__language fr-nav__link"
+      hrefLang={hrefLang}
+      lang={hrefLang}
+      href={href}
+      aria-current={active || undefined}
+      onClick={onClick}
     >
-      <a
-        className="fr-translate__language fr-nav__link"
-        hrefLang={hrefLang}
-        lang={hrefLang}
-        href={href}
-        aria-current={active || undefined}
-        onClick={onClick}
-      >
-        {children}
-      </a>
-    </li>
-  );
-};
+      {children}
+    </a>
+  </li>
+);
 
 ToolTranslateItem.defaultProps = {
   className: '',

@@ -66,16 +66,15 @@ const HeaderExample = () => {
                 react-router-dom Link
               </ToolItem>
               <ToolItem icon="ri-lock-line" link="/path" target="_blank">Link to /path</ToolItem>
-              <ToolItem onClick={() => setIsOpen(true)}>
+              <ToolItem onClick={() => setIsOpen(true)} icon="fr-fi-theme-fill">
                 <span
-                  className="fr-fi-theme-fill fr-link--icon-left"
                   aria-controls="fr-theme-modal"
                   data-fr-opened={isOpen}
                 >
                   Paramètres d’affichage
                 </span>
               </ToolItem>
-              <ToolTranslate currentLang={location.pathname}>
+              <ToolTranslate currentLang={location.pathname} descCurrentLang="Current language">
                 <ToolTranslateItem href="/fr" hrefLang={currentLang} active={location.pathname === '/fr'}>
                   Français
                 </ToolTranslateItem>

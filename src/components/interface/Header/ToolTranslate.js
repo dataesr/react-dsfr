@@ -12,11 +12,12 @@ const ToolTranslate = ({
   children, currentLang, className, descCurrentLang, title, ...remainingProps
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const _className = classNames(className, 'fr-translate fr-nav');
 
   return (
     <nav
       role="navigation"
-      className={classNames(className, 'fr-translate fr-nav')}
+      className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
       <div className="fr-nav__item">
@@ -33,7 +34,7 @@ const ToolTranslate = ({
             size="1x"
           >
             {currentLang}
-            <span className="fr-hidden-lg">{descCurrentLang}</span>
+            <span className="fr-hidden">{descCurrentLang}</span>
           </Icon>
         </button>
         <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516">
