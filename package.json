@@ -15,8 +15,8 @@
     "gouvfr"
   ],
   "engines": {
-    "node": ">=8.15",
-    "npm": ">=14.14"
+    "node": ">=14.18",
+    "npm": ">=8.15"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3",
