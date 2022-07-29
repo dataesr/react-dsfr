@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
@@ -46,9 +46,12 @@ describe('<Tool />', () => {
     expect(screen.getByRole('button')).toHaveClass('fr-link--close');
   });
 
-  it('should call onOpenSearch on click', () => {
+  it('should call onOpenSearch on click', async () => {
+    const user = userEvent.setup();
+
     wrapper(<Tool {...initProps}>Item #1</Tool>, { context });
-    userEvent.click(screen.getByText(/close/i));
+
+    await user.click(screen.getByText(/close/i));
     expect(context.onOpenSearch).toHaveBeenCalled();
   });
 

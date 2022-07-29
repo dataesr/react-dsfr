@@ -44,6 +44,5 @@ exports[`<Card /> renders Card properly 1`] = `
     aria-hidden="false"
     class="ri-xl icon-left ds-fr--v-middle ri-arrow-right-line ds-fr-card-icon"
   />
-  
 </div>
 `;

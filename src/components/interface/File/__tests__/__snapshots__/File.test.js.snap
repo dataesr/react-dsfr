@@ -22,6 +22,5 @@ exports[`<File /> renders correctly 1`] = `
     onChange={[Function]}
     type="file"
   />
-  
 </div>
 `;

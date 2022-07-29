@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import { v4 as uuidv4 } from 'uuid';
 import { MegaNavItem } from '../index';
 import MegaNavSubItem from '../MegaNavSubItem';

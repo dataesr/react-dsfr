@@ -1,6 +1,6 @@
 import Enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import Link from '../Link';
 
 Enzyme.configure({ adapter: new Adapter() });

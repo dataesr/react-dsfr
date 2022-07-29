@@ -357,7 +357,6 @@ exports[`<Footer /> should render Footer properly 1`] = `
             la rechercher
             <br />
             et de l'innovation
-            
           </p>
         </a>
       </div>

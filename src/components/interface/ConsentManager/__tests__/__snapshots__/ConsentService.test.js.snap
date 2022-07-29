@@ -20,7 +20,6 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
         >
           Préférences pour tous les services.
         </legend>
-        
         <div
           className="fr-fieldset__content"
         >
@@ -41,9 +40,7 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               htmlFor="name"
             >
               Tout accepter
-              
             </label>
-            
           </div>
           <div
             className="fr-radio-group"
@@ -59,12 +56,9 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               className="fr-label"
             >
               Tout refuser
-              
             </label>
-            
           </div>
         </div>
-        
       </fieldset>
     </div>
   </div>

@@ -11,7 +11,6 @@ exports[`<Select /> renders correctly 1`] = `
     htmlFor="message-xxxxxxx"
   >
     Label pour liste déroulante
-    
   </label>
   <select
     className="fr-select fr-select--valid"
@@ -35,6 +34,5 @@ exports[`<Select /> renders correctly 1`] = `
       label-2
     </option>
   </select>
-  
 </div>
 `;

@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
@@ -25,6 +25,7 @@ describe('<HeaderNav />', () => {
       renderOptions,
     );
   });
+
   it('renders correctly', () => {
     const component = renderer
       .create(
@@ -43,9 +44,12 @@ describe('<HeaderNav />', () => {
     expect(screen.getByRole('button')).toHaveClass('fr-link--close');
   });
 
-  it('should call onOpenNav', () => {
+  it('should call onOpenNav', async () => {
+    const user = userEvent.setup();
+
     wrapper(<HeaderNav closeButtonLabel="close"><li>nav #1</li></HeaderNav>, { context });
-    userEvent.click(screen.getByText(/close/i));
+
+    await user.click(screen.getByText(/close/i));
     expect(context.onOpenNav).toHaveBeenCalled();
   });
 });

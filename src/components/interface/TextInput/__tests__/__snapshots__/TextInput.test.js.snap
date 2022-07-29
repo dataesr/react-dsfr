@@ -10,7 +10,6 @@ exports[`<TextInput /> renders correctly 1`] = `
     htmlFor="xxxxxxx"
   >
     label
-    
   </label>
   <input
     aria-describedby=""
@@ -22,6 +21,5 @@ exports[`<TextInput /> renders correctly 1`] = `
     type="text"
     value="init-value"
   />
-  
 </div>
 `;

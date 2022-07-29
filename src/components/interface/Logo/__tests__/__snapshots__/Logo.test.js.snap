@@ -13,6 +13,5 @@ exports[`<Logo /> should render Logo properly 1`] = `
   la rechercher
   <br />
   et de l'innovation
-  
 </p>
 `;

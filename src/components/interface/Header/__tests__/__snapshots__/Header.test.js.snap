@@ -38,7 +38,6 @@ exports[`<Header /> renders correctly 1`] = `
                   République
                   <br />
                   française
-                  
                 </p>
               </a>
             </div>
