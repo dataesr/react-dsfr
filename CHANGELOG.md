@@ -1,3 +1,19 @@
+## [2.9.2](https://github.com/dataesr/react-dsfr/compare/v2.9.1...v2.9.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* pass className and onClick to component ToolTranslateItem ([#261](https://github.com/dataesr/react-dsfr/issues/261)) ([63577c9](https://github.com/dataesr/react-dsfr/commit/63577c933e57742e6fba276c8c40794b325fdd8b))
+
+## [2.9.1](https://github.com/dataesr/react-dsfr/compare/v2.9.0...v2.9.1) (2022-07-28)
+
+
+### Bug Fixes
+
+* remove styleguidist and gh-pages ([f5ace22](https://github.com/dataesr/react-dsfr/commit/f5ace22629c226d9fb1f736b10aff36009ebf8a3))
+* remove styleguidist and gh-pages ([d9a912c](https://github.com/dataesr/react-dsfr/commit/d9a912c301d0cf28c49cb59a2349d06fb244671b))
+* tests action ([e429808](https://github.com/dataesr/react-dsfr/commit/e429808a1d39fd37947f95c96f944bb0b6e85cd1))
+
 # [2.9.0](https://github.com/dataesr/react-dsfr/compare/v2.8.6...v2.9.0) (2022-07-27)
 
 

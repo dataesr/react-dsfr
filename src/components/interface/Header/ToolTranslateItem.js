@@ -7,9 +7,17 @@ const ToolTranslateItem = ({
   className, children, hrefLang, href, onClick, active, ...remainingProps
 }) => (
   <li
+    className={className || undefined}
     {...dataAttributes.getAll(remainingProps)}
   >
-    <a className="fr-translate__language fr-nav__link" hrefLang={hrefLang} lang={hrefLang} href={href} aria-current={active || undefined}>
+    <a
+      className="fr-translate__language fr-nav__link"
+      hrefLang={hrefLang}
+      lang={hrefLang}
+      href={href}
+      aria-current={active || undefined}
+      onClick={onClick}
+    >
       {children}
     </a>
   </li>

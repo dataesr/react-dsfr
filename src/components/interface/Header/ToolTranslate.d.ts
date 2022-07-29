@@ -9,6 +9,7 @@ export interface ToolTranslateProps {
     className?: ToolTranslateClassName;
     title?: string;
     currentLang: string;
+    descCurrentLang: string;
 }
 
 declare const ToolTranslate: React.FC<ToolTranslateProps>;
