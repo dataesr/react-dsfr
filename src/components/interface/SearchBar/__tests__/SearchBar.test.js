@@ -81,8 +81,10 @@ describe('<SearchBar />', () => {
     expect(label.htmlFor).toBe('xxxxxxx');
   });
 
-  it('should print search text', () => {
+  it('should print search text', async () => {
     const onSearch = jest.fn();
+    const user = userEvent.setup();
+
     render(
       <SearchBar
         buttonLabel="Rechercher"
@@ -93,7 +95,8 @@ describe('<SearchBar />', () => {
     );
     const input = screen.getByPlaceholderText('placeholder');
     expect(input.value).toBe('');
-    userEvent.type(input, 'gouvernement');
+
+    await user.type(input, 'gouvernement');
     expect(input.value).toBe('gouvernement');
   });
 

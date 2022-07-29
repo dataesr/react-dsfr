@@ -14,6 +14,7 @@ describe('<Download />', () => {
     const component = renderer
       .create(
         <Download
+          fileName="File Name"
           metaData="metaData"
           label="Label de la checkbox"
           file="value"

@@ -34,15 +34,21 @@ describe('<HeaderBody />', () => {
     expect(getByText(/navigation/i).textContent).toBe('navigation');
   });
 
-  it('should call onOpenNav', () => {
+  it('should call onOpenNav', async () => {
+    const user = userEvent.setup();
+
     wrapper(<HeaderBody />, { context });
-    userEvent.click(screen.getByText(/navigation/i));
+
+    await user.click(screen.getByText(/navigation/i));
     expect(context.onOpenNav).toHaveBeenCalled();
   });
 
-  it('should call onOpenSearch', () => {
+  it('should call onOpenSearch', async () => {
+    const user = userEvent.setup();
+
     wrapper(<HeaderBody />, { context });
-    userEvent.click(screen.getByText(/search/i));
+
+    await user.click(screen.getByText(/search/i));
     expect(context.onOpenSearch).toHaveBeenCalled();
   });
 });

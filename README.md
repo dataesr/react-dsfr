@@ -10,9 +10,9 @@ Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.
 
 ## Requirements
 
-* node >= 14.1x
-* npm >= 6.1x
-* React >= 17.0.x
+* node >= 14.18
+* npm >= 8.15
+* React >= 18.2
 
 ## Installation
 

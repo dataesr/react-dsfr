@@ -25,6 +25,7 @@ describe('<HeaderNav />', () => {
       renderOptions,
     );
   });
+
   it('renders correctly', () => {
     const component = renderer
       .create(
@@ -43,9 +44,12 @@ describe('<HeaderNav />', () => {
     expect(screen.getByRole('button')).toHaveClass('fr-link--close');
   });
 
-  it('should call onOpenNav', () => {
+  it('should call onOpenNav', async () => {
+    const user = userEvent.setup();
+
     wrapper(<HeaderNav closeButtonLabel="close"><li>nav #1</li></HeaderNav>, { context });
-    userEvent.click(screen.getByText(/close/i));
+
+    await user.click(screen.getByText(/close/i));
     expect(context.onOpenNav).toHaveBeenCalled();
   });
 });

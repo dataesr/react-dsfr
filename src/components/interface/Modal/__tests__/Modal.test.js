@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
+import Enzyme from 'enzyme';
 import {
   Modal, ModalTitle, ModalContent, ModalFooter, ModalClose,
 } from '..';
 import { Button } from '../../Button';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Modal />', () => {
   it('should render modal properly', () => {
@@ -30,8 +35,9 @@ describe('<Modal />', () => {
     expect(close).toBeInTheDocument();
     expect(modal).toMatchSnapshot();
   });
-  it('should close modal on dialog click', () => {
-    jest.useFakeTimers();
+
+  it('should close modal on dialog click', async () => {
+    const user = userEvent.setup();
     const hide = jest.fn();
     render(
       <Modal isOpen hide={hide} data-testid="modal">
@@ -43,10 +49,10 @@ describe('<Modal />', () => {
         </ModalFooter>
       </Modal>,
     );
+
     const modal = screen.getByTestId('modal');
-    fireEvent.click(modal);
-    expect(setTimeout).toHaveBeenCalledTimes(1);
-    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 300);
+    await user.click(modal);
+    expect(document.body.style.overflow).toBe('');
   });
 
   it('should disable overflow hidden when closing modal manually', async () => {
@@ -82,13 +88,13 @@ describe('<Modal />', () => {
     render(<FullModal />);
 
     expect(document.body.style.overflow).toBe('');
-    screen.getByTestId('open-modal-button').click();
-    expect(document.body.style.overflow).toBe('hidden');
-    screen.getByTestId('close-modal-button').click();
 
-    // not ideal, but we need to wait for the component to unmount :/
-    jest.useRealTimers();
-    await new Promise((resolve) => { setTimeout(resolve, 500); });
+    const openBtn = screen.getByTestId('open-modal-button');
+    fireEvent.click(openBtn);
+    expect(document.body.style.overflow).toBe('hidden');
+
+    const closeBtn = screen.getByTestId('close-modal-button');
+    fireEvent.click(closeBtn);
     expect(document.body.style.overflow).toBe('');
   });
 });
