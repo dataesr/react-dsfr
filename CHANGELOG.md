@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/dataesr/react-dsfr/compare/v2.9.2...v3.0.0) (2022-07-29)
+
+
+* Feat/upgrade react 18 (#262) ([6ef8fb9](https://github.com/dataesr/react-dsfr/commit/6ef8fb99247def313ad12882b33f698b968aefaa)), closes [#262](https://github.com/dataesr/react-dsfr/issues/262)
+
+
+### BREAKING CHANGES
+
+* react v18
+
 ## [2.9.2](https://github.com/dataesr/react-dsfr/compare/v2.9.1...v2.9.2) (2022-07-28)
 
 
