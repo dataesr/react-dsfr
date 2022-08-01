@@ -35,8 +35,8 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
       <ul className="fr-links-group">
         {itemsTool}
       </ul>
-      {translateTool}
       {isMobile && menuLinkElement && createPortal(<li>{translateTool}</li>, menuLinkElement)}
+      {translateTool}
     </div>
   );
 };
