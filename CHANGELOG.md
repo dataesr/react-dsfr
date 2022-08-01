@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/dataesr/react-dsfr/compare/v3.1.0...v3.1.1) (2022-08-01)
+
+
+### Bug Fixes
+
+* translate header arrow ([#264](https://github.com/dataesr/react-dsfr/issues/264)) ([77db34e](https://github.com/dataesr/react-dsfr/commit/77db34ec26cec48e80f634b517611be5f3d8e1b1))
+
 # [3.1.0](https://github.com/dataesr/react-dsfr/compare/v3.0.0...v3.1.0) (2022-08-01)
 
 
