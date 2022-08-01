@@ -47,8 +47,8 @@ Container.propTypes = {
   as: PropTypes.oneOf([
     'article',
     'aside',
-    'footer',
     'header',
+    'footer',
     'main',
     'nav',
     'section',
