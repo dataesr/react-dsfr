@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  useContext, useEffect, useState, Children,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { createPortal } from 'react-dom';
@@ -11,6 +13,15 @@ import HeaderContext from './headerContext';
 const ToolItemGroup = ({ children, className, ...remainingProps }) => {
   const [menuLinkElement, setMenuLinkElement] = useState();
   const { isMobile, shortcutClassName } = useContext(HeaderContext);
+
+  const translateTool = Children.toArray(children).filter(
+    (child) => child.props && child.props.__TYPE === 'ToolTranslate',
+  );
+
+  const itemsTool = Children.toArray(children).filter(
+    (child) => child.props && child.props.__TYPE === 'ToolItem',
+  );
+
   useEffect(() => {
     setMenuLinkElement(document.querySelector('.fr-header__menu .fr-links-group'));
   }, [shortcutClassName, setMenuLinkElement, menuLinkElement, isMobile]);
@@ -20,10 +31,12 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
       className={classNames(className, 'fr-header__tools-links')}
       {...dataAttributes.getAll(remainingProps)}
     >
-      {isMobile && menuLinkElement && createPortal(children, menuLinkElement)}
+      {isMobile && menuLinkElement && createPortal(itemsTool, menuLinkElement)}
       <ul className="fr-links-group">
-        {children}
+        {itemsTool}
       </ul>
+      {isMobile && menuLinkElement && createPortal(<li>{translateTool}</li>, menuLinkElement)}
+      {translateTool}
     </div>
   );
 };

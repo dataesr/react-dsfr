@@ -7,6 +7,7 @@ export type ToolItemAs = "p" | "span" | "div" | "";
 export type ToolItemChildren = string | React.ReactNode;
 
 export interface ToolItemProps {
+    __TYPE?: any;
     className?: ToolItemClassName;
     icon?: string;
     /**
