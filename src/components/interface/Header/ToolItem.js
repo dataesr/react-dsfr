@@ -53,13 +53,13 @@ const ToolItem = ({
 };
 
 ToolItem.defaultProps = {
+  __TYPE: 'ToolItem',
   className: '',
   icon: '',
   link: '',
   asLink: null,
   as: undefined,
   target: '_self',
-  __TYPE: 'ToolItem',
   onClick: undefined,
 };
 

@@ -18,7 +18,7 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
     (child) => child.props && child.props.__TYPE === 'ToolTranslate',
   );
 
-  const itemTool = Children.toArray(children).filter(
+  const itemsTool = Children.toArray(children).filter(
     (child) => child.props && child.props.__TYPE === 'ToolItem',
   );
 
@@ -31,9 +31,9 @@ const ToolItemGroup = ({ children, className, ...remainingProps }) => {
       className={classNames(className, 'fr-header__tools-links')}
       {...dataAttributes.getAll(remainingProps)}
     >
-      {isMobile && menuLinkElement && createPortal(itemTool, menuLinkElement)}
+      {isMobile && menuLinkElement && createPortal(itemsTool, menuLinkElement)}
       <ul className="fr-links-group">
-        {itemTool}
+        {itemsTool}
       </ul>
       {translateTool}
       {isMobile && menuLinkElement && createPortal(<li>{translateTool}</li>, menuLinkElement)}
