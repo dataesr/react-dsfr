@@ -120,56 +120,56 @@ exports[`<Header /> renders correctly 1`] = `
                   Créer un espace
                 </a>
               </li>
-              <nav
-                className="fr-translate fr-nav"
-                role="navigation"
-              >
-                <div
-                  className="fr-nav__item"
-                >
-                  <button
-                    aria-controls="translate-516"
-                    aria-expanded={false}
-                    className="fr-btn fr-btn--tertiary fr-translate__btn"
-                    onClick={[Function]}
-                    title="Sélectionner une langue"
-                    type="button"
-                  >
-                    FR
-                  </button>
-                  <div
-                    className="fr-translate__menu fr-menu fr-collapse"
-                    id="translate-516"
-                  >
-                    <ul
-                      className="fr-menu__list"
-                    >
-                      <li>
-                        <a
-                          aria-current={true}
-                          className="fr-translate__language fr-nav__link"
-                          href="/fr"
-                          hrefLang="FR"
-                          lang="FR"
-                        >
-                          Français
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="fr-translate__language fr-nav__link"
-                          href="/en"
-                          hrefLang="EN"
-                          lang="EN"
-                        >
-                          English
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
             </ul>
+            <nav
+              className="fr-translate fr-nav"
+              role="navigation"
+            >
+              <div
+                className="fr-nav__item"
+              >
+                <button
+                  aria-controls="translate-516"
+                  aria-expanded={false}
+                  className="fr-btn fr-btn--tertiary fr-translate__btn"
+                  onClick={[Function]}
+                  title="Sélectionner une langue"
+                  type="button"
+                >
+                  FR
+                </button>
+                <div
+                  className="fr-translate__menu fr-menu fr-collapse"
+                  id="translate-516"
+                >
+                  <ul
+                    className="fr-menu__list"
+                  >
+                    <li>
+                      <a
+                        aria-current={true}
+                        className="fr-translate__language fr-nav__link"
+                        href="/fr"
+                        hrefLang="FR"
+                        lang="FR"
+                      >
+                        Français
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="fr-translate__language fr-nav__link"
+                        href="/en"
+                        hrefLang="EN"
+                        lang="EN"
+                      >
+                        English
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
           </div>
           <div
             className="fr-header__search fr-modal"

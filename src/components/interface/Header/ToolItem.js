@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Link from '../Link/index';
 import dataAttributes from '../../../utils/data-attributes';
 import HeaderContext from './headerContext';
+import typeValidation from '../../../utils/type-validation';
 
 const ToolItem = ({
   icon, link, className, children, asLink, target, as, onClick, ...remainingProps
@@ -58,10 +59,13 @@ ToolItem.defaultProps = {
   asLink: null,
   as: undefined,
   target: '_self',
+  __TYPE: 'ToolItem',
   onClick: undefined,
 };
 
 ToolItem.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  __TYPE: typeValidation('ToolItem'),
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
