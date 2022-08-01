@@ -8,17 +8,23 @@ import { getSpace } from '../../../utils/getters';
  * @visibleName Container
  */
 const Container = ({
-  fluid, children, className, role, spacing,
+  as, fluid, children, className, role, spacing,
 }) => {
+  const HtmlTag = `${as}`;
   const { margin, padding } = getSpace(spacing);
   const _className = classNames(margin, padding, {
     'fr-container': !fluid,
     'fr-container-fluid': fluid,
   }, className);
-  return <div role={role || undefined} className={_className}>{children}</div>;
+  return (
+    <HtmlTag role={role || undefined} className={_className}>
+      {children}
+    </HtmlTag>
+  );
 };
 
 Container.defaultProps = {
+  as: 'div',
   fluid: false,
   className: '',
   role: '',
@@ -38,6 +44,15 @@ Container.propTypes = {
   /**
   * Container with no outer margins
   */
+  as: PropTypes.oneOf([
+    'article',
+    'aside',
+    'header',
+    'footer',
+    'main',
+    'nav',
+    'section',
+  ]),
   fluid: PropTypes.bool,
   spacing: PropTypes.string,
   role: PropTypes.string,

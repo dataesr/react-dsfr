@@ -130,21 +130,12 @@ exports[`<Header /> renders correctly 1`] = `
                   <button
                     aria-controls="translate-516"
                     aria-expanded={false}
-                    className="fr-btn fr-btn--tertiary"
+                    className="fr-btn fr-btn--tertiary fr-translate__btn"
                     onClick={[Function]}
                     title="Sélectionner une langue"
                     type="button"
                   >
-                    <span
-                      aria-hidden={true}
-                      className="ri-1x icon-left ds-fr--v-middle ri-translate-2"
-                    />
                     FR
-                    <span
-                      className="fr-hidden"
-                    >
-                      Français
-                    </span>
                   </button>
                   <div
                     className="fr-translate__menu fr-menu fr-collapse"
