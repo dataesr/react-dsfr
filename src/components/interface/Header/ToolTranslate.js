@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from '../../foundation/icon/index';
 
 import '@gouvfr/dsfr/dist/component/translate/translate.css';
 
@@ -24,18 +23,12 @@ const ToolTranslate = ({
         <button
           onClick={() => setIsOpen(!isOpen)}
           type="button"
-          className="fr-btn fr-btn--tertiary"
+          className="fr-btn fr-btn--tertiary fr-translate__btn"
           aria-controls="translate-516"
           aria-expanded={!!isOpen}
           title={title}
         >
-          <Icon
-            name="ri-translate-2"
-            size="1x"
-          >
-            {currentLang}
-            <span className="fr-hidden">{descCurrentLang}</span>
-          </Icon>
+          {currentLang}
         </button>
         <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516">
           <ul className="fr-menu__list">
