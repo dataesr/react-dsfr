@@ -38,7 +38,8 @@ button.fr-accordion__btn:after,
 button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
 button[class^="fr-btn"]:before,
-button[class^="fr-translate__btn"].fr-translate:before,
+.fr-translate button.fr-translate__btn:before,
+.fr-translate button.fr-translate__btn:after,
 [class^="fr-alert"]:before,
 div.fr-notice--info .fr-notice__body:before,
 #ds-fr--share-facebook .fr-btn--facebook:before,
@@ -47,6 +48,7 @@ div.fr-notice--info .fr-notice__body:before,
 #ds-fr--share-mail .fr-btn--mail:before,
 #ds-fr--share-twitter .fr-btn--twitter:before {
     font-family: "remixicon";
+    box-shadow: none;
     background-color: inherit;
     mask-image: inherit;
     -webkit-mask-image: inherit;
@@ -87,6 +89,7 @@ button.fr-accordion__btn[aria-expanded=true]:after {
 .fr-alert--info:before {
     content: '\ee58';
 }
+/**********************************/
 
 .fr-notice button.fr-btn--close:before,
 .fr-link--close:after {
@@ -131,6 +134,15 @@ button.fr-accordion__btn[aria-expanded=true]:after {
     content: '\ea4e';
 }
 
+.fr-fi-theme-fill:after,
+.fr-fi-theme-fill:before {
+    --icon-size: 1rem;
+}
+
+/**
+ Sharing buttons
+ */
+
 #ds-fr--share-facebook .fr-btn--facebook:before {
     content: '\ecbb';
     font-size: 1.4rem;
@@ -149,13 +161,13 @@ button.fr-accordion__btn[aria-expanded=true]:after {
     line-height: 1.5rem;
 }
 
-#ds-fr--share-mail .fr-btn--mail:before{
+#ds-fr--share-mail .fr-btn--mail:before {
     content: '\eef6';
     font-size: 1.4rem;
     line-height: 1.5rem;
 }
 
-#ds-fr--share-copy .fr-btn--copy:before{
+#ds-fr--share-copy .fr-btn--copy:before {
     content: '\ecd5';
     font-size: 1.4rem;
     line-height: 1.5rem;
@@ -186,8 +198,20 @@ button.fr-pagination__link--last:before {
     content: '\f146';
 }
 
+/**
+    Icons
+ */
+
 div.fr-notice--info .fr-notice__body:before {
     content: '\ee59';
     font-size: 1.4rem;
     line-height: 1.5rem;
+}
+
+.fr-translate button.fr-translate__btn:before {
+    content: '\f226';
+}
+
+.fr-translate button.fr-translate__btn:after {
+    content: '\ea4d';
 }
