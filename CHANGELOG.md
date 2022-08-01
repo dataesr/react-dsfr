@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/dataesr/react-dsfr/compare/v3.0.0...v3.1.0) (2022-08-01)
+
+
+### Features
+
+* Add html5 structuring tags ([7bf5495](https://github.com/dataesr/react-dsfr/commit/7bf5495b4993f5d16f8feb0ce8151a362dd3086b))
+
 # [3.0.0](https://github.com/dataesr/react-dsfr/compare/v2.9.2...v3.0.0) (2022-07-29)
 
 
