@@ -19,18 +19,13 @@ Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.
 ```bash
 yarn add @dataesr/react-dsfr
 ```
-or 
-```bash
-npm install @dataesr/react-dsfr
-```
 
 ## Generate and watch
 
 Generate and watch dist folder containing bundles:
 
 ```bash
-npm install
-npm start
+yarn start
 ```
 
 ## Library usage
@@ -86,7 +81,7 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 #### Run all tests using react-scripts with watcher option
 
 ```bash
-npm run test:dev
+yarn run test:dev
 ```
 
 ### Release policy and package publishing 
@@ -119,7 +114,7 @@ See [Commit message formats](https://github.com/angular/angular/blob/master/CONT
 Components can be tested in Example's page `App.js` with [@axe-core/react](https://www.npmjs.com/package/@axe-core/react)
 
 ```bash
-npm install --save-dev @axe-core/react
+yarn add -D @axe-core/react
 ```
 
 Another solution to test accessibility is CLI module [https://pa11y.org/](https://pa11y.org/)
@@ -127,14 +122,14 @@ Another solution to test accessibility is CLI module [https://pa11y.org/](https:
 Check configuration file `.pa11y-ci`
 
 ```bash
-npm install -g pa11y-ci
+yarn add -g pa11y-ci
 pa11y-ci
 ```
 
 #### In Chrome
 
 ```bash
-npm run test:debug
+yarn run test:debug
 ```
 
 Access `about:inspect`
