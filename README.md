@@ -17,11 +17,7 @@ Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.
 ## Installation
 
 ```bash
-yarn add @dataesr/react-dsfr
-```
-or 
-```bash
-npm install @dataesr/react-dsfr
+npm i @dataesr/react-dsfr
 ```
 
 ## Generate and watch
@@ -29,7 +25,7 @@ npm install @dataesr/react-dsfr
 Generate and watch dist folder containing bundles:
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 npm start
 ```
 
@@ -77,6 +73,10 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 ['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
 ```
 
+### Documentation - Storybook
+
+[Storybook](https://dataesr.github.io/react-dsfr) of the project is under construction.
+
 ### Unit tests
 
 #### Run all tests using react-scripts with watcher option
@@ -115,7 +115,7 @@ See [Commit message formats](https://github.com/angular/angular/blob/master/CONT
 Components can be tested in Example's page `App.js` with [@axe-core/react](https://www.npmjs.com/package/@axe-core/react)
 
 ```bash
-npm install --save-dev @axe-core/react
+npm instal --save-dev @axe-core/react
 ```
 
 Another solution to test accessibility is CLI module [https://pa11y.org/](https://pa11y.org/)
@@ -160,4 +160,3 @@ Thanks to the internet world.
 
 ### TODO
 * Limit usage of colors to colorFamilies
-* Add StoryBook

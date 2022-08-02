@@ -17,7 +17,7 @@
   },
   "settings": {
     "react": {
-      "version": "17"
+      "version": "18"
     }
   },
   "rules": {
@@ -41,6 +41,7 @@
       {
         "extensions": [
           ".js",
+          ".tsx",
           ".jsx"
         ]
       }

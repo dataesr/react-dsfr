@@ -30,7 +30,6 @@ const Button = forwardRef((props, ref) => {
     icon,
     iconPosition,
     onClick,
-    styleAsLink,
     children,
     className,
     submit,
@@ -39,11 +38,9 @@ const Button = forwardRef((props, ref) => {
     ...remainingProps
   } = props;
   const _className = classNames(
-    `fr-btn--${size}`,
+    `fr-btn--${size} fr-btn`,
     className,
     {
-      'fr-btn': !styleAsLink,
-      'fr-link': styleAsLink,
       'fr-fi-icon': !children && icon,
       'fr-btn--secondary': secondary,
       'fr-btn--tertiary': tertiary && hasBorder,
@@ -119,7 +116,6 @@ Button.defaultProps = {
   onClick: () => { },
   children: '',
   className: '',
-  styleAsLink: false,
   tertiary: false,
   title: null,
   submit: false,
@@ -136,7 +132,6 @@ Button.propTypes = {
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string,
-  styleAsLink: PropTypes.bool,
   className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

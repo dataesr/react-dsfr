@@ -29,3 +29,6 @@ yarn.lock
 
 stats.html
 .local-pack
+
+# Storybook
+/storybook-static
