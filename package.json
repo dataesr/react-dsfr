@@ -108,6 +108,11 @@
   "files": [
     "dist"
   ],
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?![@testing-library]).+\\.js$"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
