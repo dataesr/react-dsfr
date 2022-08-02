@@ -43,13 +43,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm clean-install
-      - run: git config --global user.name "poplingue"
-      - run: git config --global user.email "paulinegc@protonmail.com"
-      - run: git remote set-url origin https://github.com/dataesr/react-dsfr.git
       - run: npm run predeploy
       - run: npm run deploy-storybook
-        env:
-          GH_PAT: ${{secrets.GH_PAT}}
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
