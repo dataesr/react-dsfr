@@ -24,7 +24,7 @@ yarn-error.log*
 .idea
 
 # lock
-package-lock.json
+yarn.lock
 /example/package-lock.json
 
 stats.html
