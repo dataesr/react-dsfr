@@ -17,7 +17,6 @@ export interface ButtonProps {
     onClick?: (...args: any[])=>any;
     iconPosition?: ButtonIconPosition;
     title?: string;
-    styleAsLink?: boolean;
     className?: ButtonClassName;
     size?: ButtonSize;
     children?: ButtonChildren;

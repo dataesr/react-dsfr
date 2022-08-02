@@ -6,9 +6,7 @@ export default {
   title: 'Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -22,9 +20,37 @@ Primary.args = {
 
 Primary.storyName = 'Primary';
 
+export const Secondary = Template.bind({});
+
+Secondary.args = {
+  children: 'Button',
+  secondary: true,
+};
+
+export const Tertiary = Template.bind({});
+
+Tertiary.args = {
+  children: 'Button',
+  tertiary: true,
+};
+
 export const WithIcon = Template.bind({});
 
 WithIcon.args = {
   children: 'Button',
   icon: 'ri-alert-fill',
+};
+
+export const Disabled = Template.bind({});
+
+Disabled.args = {
+  children: 'Button',
+  disabled: true,
+};
+
+export const NoBorder = Template.bind({});
+
+NoBorder.args = {
+  children: 'Button',
+  hasBorder: false,
 };
