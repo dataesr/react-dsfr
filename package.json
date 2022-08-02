@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.3.1",
-    "gh-pages": "^4.0.0",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.0",
@@ -67,6 +66,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-react-app": "^6.0.0",
+    "gh-pages": "^4.0.0",
     "install": "^0.13.0",
     "postcss": "^8.4.1",
     "react": "^18.2.0",
@@ -100,6 +100,9 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "storybook": "start-storybook -p 6006",
+    "homepage": "https://dataesr.github.io/react-dsfr",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook"
   },
   "files": [

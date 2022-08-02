@@ -77,6 +77,10 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 ['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet']
 ```
 
+### Documentation - Storybook
+
+[Storybook](https://dataesr.github.io/react-dsfr) of the project is under construction.
+
 ### Unit tests
 
 #### Run all tests using react-scripts with watcher option
@@ -160,4 +164,3 @@ Thanks to the internet world.
 
 ### TODO
 * Limit usage of colors to colorFamilies
-* Add StoryBook
