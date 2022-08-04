@@ -1,3 +1,11 @@
+## [3.1.3](https://github.com/dataesr/react-dsfr/compare/v3.1.2...v3.1.3) (2022-08-03)
+
+
+### Bug Fixes
+
+* storybook-start ([66ee7e2](https://github.com/dataesr/react-dsfr/commit/66ee7e224a3bd6dfb42cad2794cf66af8bea4d12))
+* storybook-start ([2275b5e](https://github.com/dataesr/react-dsfr/commit/2275b5e96a89fa6aa9c6393c1fe6e33c09b9c4bb))
+
 ## [3.1.2](https://github.com/dataesr/react-dsfr/compare/v3.1.1...v3.1.2) (2022-08-03)
 
 
