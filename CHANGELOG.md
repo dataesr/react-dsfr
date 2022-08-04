@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/dataesr/react-dsfr/compare/v3.1.3...v3.1.4) (2022-08-04)
+
+
+### Bug Fixes
+
+* storybook button colored ([f1b97ce](https://github.com/dataesr/react-dsfr/commit/f1b97ce21436b003b33e3466c02d2f187fe24e13))
+
 ## [3.1.3](https://github.com/dataesr/react-dsfr/compare/v3.1.2...v3.1.3) (2022-08-03)
 
 
