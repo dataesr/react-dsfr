@@ -31,7 +31,7 @@ const useTheme = () => {
 
   useEffect(() => {
     if (!theme) {
-      setTheme(document.documentElement.getAttribute('data-fr-theme'));
+      setTheme(document.documentElement.getAttribute('data-fr-theme') || 'light');
     }
   }, [theme]);
   return theme;

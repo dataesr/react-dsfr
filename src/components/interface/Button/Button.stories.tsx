@@ -54,3 +54,13 @@ NoBorder.args = {
   children: 'Button',
   hasBorder: false,
 };
+
+export const CustomColor = Template.bind({});
+
+CustomColor.args = {
+  children: 'Button',
+  colors: ['#f55', '#fff'],
+  size: 'lg',
+  secondary: true,
+  title: 'title',
+};

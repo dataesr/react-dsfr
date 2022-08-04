@@ -22,7 +22,7 @@ export interface ButtonProps {
     children?: ButtonChildren;
     submit?: boolean;
     /**
-     * color[0] is background, color[1] is color
+     * colors[0] is background, colors[1] is color
      */
     colors?: string[];
 }
