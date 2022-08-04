@@ -1,3 +1,10 @@
+## [3.1.5](https://github.com/dataesr/react-dsfr/compare/v3.1.4...v3.1.5) (2022-08-04)
+
+
+### Bug Fixes
+
+* secrets deploy storybook gh-pages ([d6cc9a8](https://github.com/dataesr/react-dsfr/commit/d6cc9a825c20fe35818ee3b47199a14a6ecf5d33))
+
 ## [3.1.4](https://github.com/dataesr/react-dsfr/compare/v3.1.3...v3.1.4) (2022-08-04)
 
 
