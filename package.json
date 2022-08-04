@@ -49,6 +49,7 @@
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/testing-library": "^0.0.13",
     "@svgr/rollup": "^6.1.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -101,8 +102,8 @@
     "storybook": "start-storybook -p 6006",
     "homepage": "https://dataesr.github.io/react-dsfr",
     "predeploy": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
-    "build-storybook": "build-storybook"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build-storybook": "build-storybook -s public"
   },
   "files": [
     "dist"
