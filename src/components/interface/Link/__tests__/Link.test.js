@@ -30,4 +30,19 @@ describe('<Link />', () => {
       .toJSON();
     expect(component).toMatchSnapshot();
   });
+
+  it('renders correctly as link', () => {
+    const component = renderer
+      .create(
+        <Link
+          href={initialProps.href}
+          as={<div className="should-also-stay">Avec text</div>}
+          className="should-stay"
+        >
+          Text inutile
+        </Link>,
+      )
+      .toJSON();
+    expect(component).toMatchSnapshot();
+  });
 });

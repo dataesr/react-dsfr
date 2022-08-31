@@ -15,3 +15,12 @@ exports[`<Link /> renders correctly 1`] = `
   />
 </a>
 `;
+
+exports[`<Link /> renders correctly as link 1`] = `
+<div
+  className="should-stay should-also-stay fr-link--md"
+  onClick={null}
+>
+  Avec text
+</div>
+`;
