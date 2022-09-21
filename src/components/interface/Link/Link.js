@@ -29,7 +29,7 @@ const Link = ({
   size,
   ...remainingProps
 }) => {
-  const _className = classNames(className, {
+  const _className = classNames(className, as && as.props.className, {
     [`ds-fr--${display}`]: display && icon,
     'fr-link': isSimple,
     [`fr-link--${size}`]: size,
@@ -42,7 +42,7 @@ const Link = ({
   const asLink = as
     ? cloneElement(as, {
       className: _className,
-      children,
+      children: as.props.children || children,
       'aria-current': (current && 'page') || undefined,
       onClick,
     })
