@@ -1,3 +1,10 @@
+## [3.1.7](https://github.com/dataesr/react-dsfr/compare/v3.1.6...v3.1.7) (2022-09-21)
+
+
+### Bug Fixes
+
+* Display children of As Link ([#267](https://github.com/dataesr/react-dsfr/issues/267)) ([74a6be3](https://github.com/dataesr/react-dsfr/commit/74a6be39fe8ece0a7aadbc004890db9073af707e))
+
 ## [3.1.6](https://github.com/dataesr/react-dsfr/compare/v3.1.5...v3.1.6) (2022-08-04)
 
 
