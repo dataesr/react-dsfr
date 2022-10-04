@@ -5,7 +5,6 @@ import { ReactComponent as Dark } from '@gouvfr/dsfr/dist/artwork/dark.svg';
 import { ReactComponent as System } from '@gouvfr/dsfr/dist/artwork/system.svg';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
-import useTheme from './useTheme';
 
 /*
 * DSFR v1.5.0
@@ -15,9 +14,8 @@ import '@gouvfr/dsfr/dist/scheme/scheme.css';
 const SwitchTheme = ({
   isOpen, setIsOpen, title, legend, darkLabel, lightLabel, systemLabel,
 }) => {
-  const currentTheme = useTheme();
-  const initialTheme = window.localStorage.getItem('prefers-color-scheme');
-
+  let initialTheme = window.localStorage.getItem('prefers-color-scheme');
+  if (initialTheme == null) initialTheme = systemLabel;
   const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const system = dark ? 'dark' : 'light';
 
@@ -57,7 +55,6 @@ const SwitchTheme = ({
       <ModalContent className="fr-form-group">
         <RadioGroup
           legend={legend}
-          value={currentTheme}
           onChange={(value) => {
             if (value === systemLabel) {
               window.localStorage.setItem('prefers-color-scheme', value);
