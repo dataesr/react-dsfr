@@ -12,16 +12,15 @@ export interface SelectOptions {
 
 export type SelectSelected = React.ReactElement<any> | string;
 
-export interface SelectProps extends SelectWrapperProps{
+export interface SelectProps{
     id?: string;
+    message?: string;
     messageType?: SelectMessageType;
     options: SelectOptions[];
     selected?: SelectSelected;
-    className?: SelectWrapperClassName;
-    hint?: SelectWrapperHint;
+    className?: string | Object | any[];
+    hint?: string | Object | any[];
     label?: string;
-    message?: string;
-    messageType?: SelectWrapperMessageType;
     required?: boolean;
     onChange?: (...args: any[])=>any;
 }
