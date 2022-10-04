@@ -29,24 +29,19 @@ const SwitchTheme = ({
 
   useEffect(() => {
     let initTheme;
-    if (!initialTheme) {
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)');
-      initTheme = (preferredTheme && preferredTheme.matches) ? 'dark' : 'light';
-    } else {
-      switch (initialTheme) {
-        case lightLabel:
-          initTheme = 'light';
-          break;
-        case darkLabel:
-          initTheme = 'dark';
-          break;
-        case systemLabel:
-          initTheme = system;
-          break;
-        default:
-          initTheme = 'light';
-          break;
-      }
+    switch (initialTheme) {
+      case lightLabel:
+        initTheme = 'light';
+        break;
+      case darkLabel:
+        initTheme = 'dark';
+        break;
+      case systemLabel:
+        initTheme = system;
+        break;
+      default: // not a label, therefore it is a first visit and the system theme will be applied
+        initTheme = system;
+        break;
     }
     document.documentElement.setAttribute('data-fr-theme', initTheme);
   }, [darkLabel, initialTheme, lightLabel, system, systemLabel]);
