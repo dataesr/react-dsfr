@@ -69,9 +69,9 @@ const RadioGroup = ({
         <legend className="fr-fieldset__legend fr-text--regular">
           {legend}
           {required && <span className="error"> *</span>}
+          {hint && <p className="fr-hint-text">{hint}</p>}
         </legend>
         )}
-        {hint && <p className="fr-hint-text">{hint}</p>}
         <div className="fr-fieldset__content">
           {childs}
         </div>

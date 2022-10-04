@@ -54,11 +54,11 @@ const CheckboxGroup = ({
     >
       <fieldset className="fr-fieldset" aria-label={ariaLabel || legend}>
         {legend && (
-        <legend className="fr-fieldset__legend fr-text--regular">
-          {legend}
-          <span className="fr-hint-text">{hint}</span>
-          {required && <span className="error"> *</span>}
-        </legend>
+          <legend className="fr-fieldset__legend fr-text--regular">
+            {legend}
+            {required && <span className="error"> *</span>}
+            {hint && <span className="fr-hint-text">{hint}</span>}
+          </legend>
         )}
         <div className="fr-fieldset__content">
           {children}

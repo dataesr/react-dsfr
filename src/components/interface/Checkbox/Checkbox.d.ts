@@ -19,6 +19,8 @@ export interface CheckboxProps {
     message?: string;
     messageType?: CheckboxMessageType;
     size?: CheckboxSize;
+    defaultChecked?: boolean;
+    onClick?: (...args: any[])=>any;
 }
 
 declare const Checkbox: React.FC<CheckboxProps>;
