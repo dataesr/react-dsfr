@@ -1,3 +1,11 @@
+## [3.1.8](https://github.com/dataesr/react-dsfr/compare/v3.1.7...v3.1.8) (2022-10-04)
+
+
+### Bug Fixes
+
+* Checkbox and radio hints placement ([d5820a0](https://github.com/dataesr/react-dsfr/commit/d5820a07b4b13757805e941037d8459aa78e701a))
+* Select(s) types ([#271](https://github.com/dataesr/react-dsfr/issues/271)) ([09e9b6e](https://github.com/dataesr/react-dsfr/commit/09e9b6e31fa89b46da01705109f1db5edb99386e))
+
 ## [3.1.7](https://github.com/dataesr/react-dsfr/compare/v3.1.6...v3.1.7) (2022-09-21)
 
 
