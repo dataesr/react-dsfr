@@ -11,6 +11,7 @@ const CheckboxExample = () => {
         isInline
         ariaLabel="This is the aria label"
         legend="This is the legend"
+        required
       >
         <Checkbox
           label="Label checkbox 1"
