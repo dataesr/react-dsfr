@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/dataesr/react-dsfr/compare/v3.1.9...v3.1.10) (2022-10-04)
+
+
+### Bug Fixes
+
+* Select types ([#274](https://github.com/dataesr/react-dsfr/issues/274)) ([b84170e](https://github.com/dataesr/react-dsfr/commit/b84170e55aa36f50595cbb6fea7df47e97f24524))
+
 ## [3.1.9](https://github.com/dataesr/react-dsfr/compare/v3.1.8...v3.1.9) (2022-10-04)
 
 
