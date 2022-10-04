@@ -17,6 +17,13 @@ export interface SelectProps extends SelectWrapperProps{
     messageType?: SelectMessageType;
     options: SelectOptions[];
     selected?: SelectSelected;
+    className?: SelectWrapperClassName;
+    hint?: SelectWrapperHint;
+    label?: string;
+    message?: string;
+    messageType?: SelectWrapperMessageType;
+    required?: boolean;
+    onChange?: (...args: any[])=>any;
 }
 
 declare const Select: React.FC<SelectProps>;
