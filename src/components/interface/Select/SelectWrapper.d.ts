@@ -15,6 +15,7 @@ export interface SelectWrapperProps {
     messageType?: SelectWrapperMessageType;
     required?: boolean;
     children: React.ReactNode;
+    onChange?: (...args: any[])=>any;
 }
 
 declare const SelectWrapper: React.FC<SelectWrapperProps>;

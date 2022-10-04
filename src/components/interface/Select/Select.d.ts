@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SelectWrapperProps } from './SelectWrapper';
 
 export type SelectMessageType = "error" | "valid";
 
@@ -11,7 +12,7 @@ export interface SelectOptions {
 
 export type SelectSelected = React.ReactElement<any> | string;
 
-export interface SelectProps {
+export interface SelectProps extends SelectWrapperProps{
     id?: string;
     messageType?: SelectMessageType;
     options: SelectOptions[];
