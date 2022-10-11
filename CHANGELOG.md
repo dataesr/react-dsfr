@@ -1,3 +1,10 @@
+## [3.1.11](https://github.com/dataesr/react-dsfr/compare/v3.1.10...v3.1.11) (2022-10-11)
+
+
+### Bug Fixes
+
+* Sidemenu icon and active ([#275](https://github.com/dataesr/react-dsfr/issues/275)) ([d276dd2](https://github.com/dataesr/react-dsfr/commit/d276dd232e62ac848bc206bef2e1fd60092b877e))
+
 ## [3.1.10](https://github.com/dataesr/react-dsfr/compare/v3.1.9...v3.1.10) (2022-10-04)
 
 
