@@ -27,8 +27,10 @@ const SidemenuExample = () => (
       <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
       <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
     </SideMenuItem>
-    <SideMenuItem title="Niveau 1">
-      <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
+    <SideMenuItem title="Niveau 1" current>
+      <SideMenuLink href="/" current>
+        Accès direct niveau 222
+      </SideMenuLink>
       <SideMenuLink href="/">Accès direct niveau 2</SideMenuLink>
       <SideMenuItem title="Niveau 2">
         <SideMenuLink href="/">Accès direct niveau 3</SideMenuLink>

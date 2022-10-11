@@ -7,7 +7,7 @@ import useCollapse from '../../../hooks/useCollapse';
 import dataAttributes from '../../../utils/data-attributes';
 
 const SideMenuItem = ({
-  children, expandedDefault, title, className, ...remainingProps
+  children, expandedDefault, title, className, current, ...remainingProps
 }) => {
   const itemID = useRef(uuidv4());
   const [isExpanded, setExpanded] = useState(expandedDefault);
@@ -23,6 +23,7 @@ const SideMenuItem = ({
         className="fr-sidemenu__btn"
         aria-expanded={isExpanded}
         aria-controls={itemID.current}
+        aria-current={current || undefined}
       >
         {title}
       </button>
@@ -51,9 +52,11 @@ SideMenuItem.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  current: PropTypes.bool,
 };
 SideMenuItem.defaultProps = {
   expandedDefault: false,
   className: '',
+  current: false,
 };
 export default SideMenuItem;
