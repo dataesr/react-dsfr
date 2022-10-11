@@ -9,6 +9,7 @@ export interface SideMenuItemProps {
     title: string;
     expandedDefault?: boolean;
     className?: SideMenuItemClassName;
+    current?: boolean;
 }
 
 declare const SideMenuItem: React.FC<SideMenuItemProps>;

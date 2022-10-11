@@ -5,7 +5,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import Link from '../Link/index';
 
 const SideMenuLink = ({
-  children, href, className, asLink, onClick, ...remainingProps
+  children, href, className, asLink, onClick, current, ...remainingProps
 }) => (
   <li
     className={classNames('fr-sidemenu__item', className)}
@@ -13,6 +13,7 @@ const SideMenuLink = ({
   >
     <Link
       as={asLink}
+      current={current}
       className="fr-sidemenu__link"
       href={href}
       onClick={onClick}
@@ -39,6 +40,11 @@ SideMenuLink.propTypes = {
   ]),
   asLink: PropTypes.element,
   onClick: PropTypes.func,
+  current: PropTypes.bool,
+};
+
+SideMenuLink.defaultProps = {
+  current: false,
 };
 
 export default SideMenuLink;

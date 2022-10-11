@@ -10,6 +10,7 @@ export interface SideMenuLinkProps {
     className?: SideMenuLinkClassName;
     asLink?: React.ReactElement<any>;
     onClick?: (...args: any[])=>any;
+    current?: boolean;
 }
 
 declare const SideMenuLink: React.FC<SideMenuLinkProps>;

@@ -16,9 +16,9 @@ describe('<SideMenu />', () => {
     const component = renderer
       .create(
         <SideMenu title="Titre de rubrique" buttonLabel="Dans cette rubrique" data-testid="sidemenu">
-          <SideMenuItem title="Niveau 1" data-testid="sidemenuitem">
+          <SideMenuItem title="Niveau 1" data-testid="sidemenuitem" current>
             <SideMenuLink href="/" data-test-id="sidemenulink1">Accès direct niveau 2</SideMenuLink>
-            <SideMenuLink href="/" data-test--id="sidemenulink2">Accès direct niveau 2</SideMenuLink>
+            <SideMenuLink href="/" data-test--id="sidemenulink2" current>Accès direct niveau 2</SideMenuLink>
             <SideMenuItem title="Niveau 2" data-test="sidemenuitem2">
               <SideMenuLink href="/" data-test="sidemenulink3">Accès direct niveau 3</SideMenuLink>
               <SideMenuLink href="/" data-testid="sidemenu4">Accès direct niveau 3</SideMenuLink>

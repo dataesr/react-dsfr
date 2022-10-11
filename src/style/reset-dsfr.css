@@ -31,6 +31,7 @@ span.error {
 .fr-header__navbar .fr-btn--menu:before,
 .fr-header__navbar .fr-btn--search:before,
 .fr-nav__btn:after,
+.fr-sidemenu__btn:after,
 button.fr-accordion__btn[aria-expanded=true]:after,
 button.fr-accordion__btn:after,
 .fr-link--close:after,
@@ -49,9 +50,9 @@ div.fr-notice--info .fr-notice__body:before,
 #ds-fr--share-twitter .fr-btn--twitter:before {
     font-family: "remixicon";
     box-shadow: none;
-    background-color: inherit;
-    mask-image: inherit;
-    -webkit-mask-image: inherit;
+    background-color: inherit !important;
+    mask-image: inherit !important;
+    -webkit-mask-image: inherit !important;
     line-height: 1.2rem;
     font-size: 1rem;
 }
@@ -214,4 +215,13 @@ div.fr-notice--info .fr-notice__body:before {
 
 .fr-translate button.fr-translate__btn:after {
     content: '\ea4d';
+}
+
+
+/**
+    Sidemenu
+  */
+
+.fr-sidemenu__btn[aria-expanded]:after {
+  content: '\ea4e' !important;
 }
