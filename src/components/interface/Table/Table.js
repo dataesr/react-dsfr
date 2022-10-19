@@ -136,7 +136,7 @@ const Table = ({
             .map((row) => (
               <tr key={getRowKey(row)}>
                 {columns.map((column) => (
-                  <td key={column.name}>
+                  <td key={column.name} className={column.columnClassName || undefined}>
                     {column.render ? column.render(row) : row[column.name]}
                   </td>
                 ))}

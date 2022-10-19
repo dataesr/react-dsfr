@@ -102,7 +102,7 @@ const columns = [
     ),
     sortable: true,
   },
-  { name: 'name_en', label: 'Anglais', sortable: true },
+  { name: 'name_en', label: 'Anglais', sortable: true, columnClassName: 'my-own-css-class' },
 ];
 
 const TableExample = () => {
