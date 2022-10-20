@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Table from './Table';
 
 const SimpleTable = ({ data, ...remainingProps }) => {
-  const headers = Object.keys(data && data[0]);
+  const headers = data.length > 0 ? Object.keys(data && data[0]) : ['Pas de données'];
   return (
     <Table
       {...remainingProps}
@@ -15,6 +15,7 @@ const SimpleTable = ({ data, ...remainingProps }) => {
 };
 
 SimpleTable.defaultProps = {
+  data: [],
   fixedLayout: false,
   fixedHeader: false,
   noScroll: false,
@@ -35,6 +36,6 @@ SimpleTable.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({})),
 };
 export default SimpleTable;

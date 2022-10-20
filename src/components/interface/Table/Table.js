@@ -132,7 +132,7 @@ const Table = ({
         <caption>{caption}</caption>
         {renderHeader()}
         <tbody>
-          {sortedData
+          {data.length > 0 && sortedData
             .map((row) => (
               <tr key={getRowKey(row)}>
                 {columns.map((column) => (
@@ -141,10 +141,11 @@ const Table = ({
                   </td>
                 ))}
               </tr>
-            ))}
+            ))
+          }
         </tbody>
       </table>
-      {pagination && (
+      {pagination && data.length > 0 && (
         <Pagination
           currentPage={Math.min(currentPage, Math.ceil(data.length / perPage))}
           onClick={page ? setPage : setInternalPage}
@@ -157,6 +158,7 @@ const Table = ({
 };
 
 Table.defaultProps = {
+  data: [],
   fixedLayout: false,
   fixedHeader: false,
   noScroll: false,
@@ -178,7 +180,7 @@ Table.defaultProps = {
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
   fixedLayout: PropTypes.bool,
   fixedHeader: PropTypes.bool,
   tableID: PropTypes.string,
