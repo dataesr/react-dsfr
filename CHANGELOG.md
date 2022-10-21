@@ -1,3 +1,10 @@
+## [3.1.12](https://github.com/dataesr/react-dsfr/compare/v3.1.11...v3.1.12) (2022-10-21)
+
+
+### Bug Fixes
+
+* Allow tables to have an empty data var ([#280](https://github.com/dataesr/react-dsfr/issues/280)) ([05ef81d](https://github.com/dataesr/react-dsfr/commit/05ef81df904c210c28ff4e1b5d3f5c68317654c8))
+
 ## [3.1.11](https://github.com/dataesr/react-dsfr/compare/v3.1.10...v3.1.11) (2022-10-11)
 
 
