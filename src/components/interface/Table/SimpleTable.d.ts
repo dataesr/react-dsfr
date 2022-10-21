@@ -5,6 +5,7 @@ export type SimpleTableCaptionPosition = "top" | "bottom" | "none";
 export type SimpleTableClassName = string | Object | any[];
 
 export interface SimpleTableProps {
+    emptyDataMessage?: string;
     fixedLayout?: boolean;
     noScroll?: boolean;
     bordered?: boolean;

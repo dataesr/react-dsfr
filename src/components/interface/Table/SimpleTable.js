@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Table from './Table';
 
-const SimpleTable = ({ data, ...remainingProps }) => {
-  const headers = Object.keys(data && data[0]);
+const SimpleTable = ({ data, emptyDataMessage, ...remainingProps }) => {
+  const headers = data.length > 0 ? Object.keys(data && data[0]) : [emptyDataMessage];
   return (
     <Table
       {...remainingProps}
@@ -15,6 +15,7 @@ const SimpleTable = ({ data, ...remainingProps }) => {
 };
 
 SimpleTable.defaultProps = {
+  emptyDataMessage: 'Pas de données',
   fixedLayout: false,
   fixedHeader: false,
   noScroll: false,
@@ -24,6 +25,7 @@ SimpleTable.defaultProps = {
 };
 
 SimpleTable.propTypes = {
+  emptyDataMessage: PropTypes.string,
   fixedLayout: PropTypes.bool,
   fixedHeader: PropTypes.bool,
   noScroll: PropTypes.bool,

@@ -144,7 +144,7 @@ const Table = ({
             ))}
         </tbody>
       </table>
-      {pagination && (
+      {pagination && data.length > 0 && (
         <Pagination
           currentPage={Math.min(currentPage, Math.ceil(data.length / perPage))}
           onClick={page ? setPage : setInternalPage}
