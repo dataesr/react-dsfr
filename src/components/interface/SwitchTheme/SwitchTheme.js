@@ -1,32 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as Light } from '@gouvfr/dsfr/dist/artwork/light.svg';
 import { ReactComponent as Dark } from '@gouvfr/dsfr/dist/artwork/dark.svg';
+import { ReactComponent as System } from '@gouvfr/dsfr/dist/artwork/system.svg';
 import { Modal, ModalTitle, ModalContent } from '../Modal';
 import { RadioGroup, Radio } from '../Radio';
-import useTheme from './useTheme';
 
 import '@gouvfr/dsfr/dist/scheme/scheme.css';
 
+const DARK = 'dark';
+const LIGHT = 'light';
+const SYSTEM = 'system';
+
 const SwitchTheme = ({
-  isOpen, setIsOpen, title, legend, darkLabel, lightLabel,
+  isOpen,
+  setIsOpen,
+  title,
+  legend,
+  darkLabel,
+  lightLabel,
+  systemLabel,
+  systemHint,
 }) => {
-  const currentTheme = useTheme();
+  const [storedValue, setStoredValue] = useState('');
 
   const themes = [
-    { label: lightLabel, value: 'light', svg: <Light /> },
-    { label: darkLabel, value: 'dark', svg: <Dark /> },
+    { label: lightLabel, value: LIGHT, svg: <Light /> },
+    { label: darkLabel, value: DARK, svg: <Dark /> },
+    {
+      label: systemLabel, hint: systemHint, value: SYSTEM, svg: <System />,
+    },
   ];
 
   useEffect(() => {
-    let initialTheme = window.localStorage.getItem('prefers-color-scheme');
-    if (!initialTheme) {
+    const initialTheme = window.localStorage.getItem('prefers-color-scheme');
+    setStoredValue(initialTheme || SYSTEM);
+  }, [isOpen]);
+
+  useEffect(() => {
+    let tempTheme = storedValue;
+    if (!storedValue || storedValue === SYSTEM) {
       const preferedTheme = window.matchMedia('(prefers-color-scheme: dark)');
-      initialTheme = (preferedTheme && preferedTheme.matches) ? 'dark' : 'light';
+      tempTheme = (preferedTheme && preferedTheme.matches) ? DARK : LIGHT;
     }
 
-    document.documentElement.setAttribute('data-fr-theme', initialTheme);
-  }, []);
+    window.localStorage.setItem('prefers-color-scheme', storedValue);
+    document.documentElement.setAttribute('data-fr-theme', tempTheme);
+  }, [storedValue]);
 
   return (
     <Modal
@@ -39,19 +59,17 @@ const SwitchTheme = ({
       <ModalContent className="fr-form-group">
         <RadioGroup
           legend={legend}
-          value={currentTheme}
-          onChange={(value) => {
-            window.localStorage.setItem('prefers-color-scheme', value);
-            document.documentElement.setAttribute('data-fr-theme', value);
-          }}
+          value={window.localStorage.getItem('prefers-color-scheme')}
+          onChange={(value) => setStoredValue(value)}
         >
-          {themes.map((theme) => (
+          {themes.map((item) => (
             <Radio
-              key={theme.value}
-              label={theme.label}
-              value={theme.value}
+              key={item.value}
+              label={item.label}
+              value={item.value}
               isExtended
-              svg={theme.svg}
+              svg={item.svg}
+              hint={item.hint}
             />
           ))}
         </RadioGroup>
@@ -65,6 +83,8 @@ SwitchTheme.defaultProps = {
   legend: 'Choisissez un thème pour personnaliser l’apparence du site.',
   darkLabel: 'Thème sombre',
   lightLabel: 'Thème clair',
+  systemLabel: 'Système',
+  systemHint: 'Utilise les paramètres système.',
 };
 
 SwitchTheme.propTypes = {
@@ -72,6 +92,8 @@ SwitchTheme.propTypes = {
   legend: PropTypes.string,
   darkLabel: PropTypes.string,
   lightLabel: PropTypes.string,
+  systemLabel: PropTypes.string,
+  systemHint: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
 };

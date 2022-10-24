@@ -5,6 +5,8 @@ export interface SwitchThemeProps {
     legend?: string;
     darkLabel?: string;
     lightLabel?: string;
+    systemLabel?: string;
+    systemHint?: string;
     isOpen: boolean;
     setIsOpen: (...args: any[])=>any;
 }
