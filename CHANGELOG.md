@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/dataesr/react-dsfr/compare/v3.1.12...v3.2.0) (2022-10-24)
+
+
+### Features
+
+* Add a default system display ([#281](https://github.com/dataesr/react-dsfr/issues/281)) ([0c2867d](https://github.com/dataesr/react-dsfr/commit/0c2867dccde91f8b4a91317899100deb0c08bc30))
+
 ## [3.1.12](https://github.com/dataesr/react-dsfr/compare/v3.1.11...v3.1.12) (2022-10-21)
 
 
