@@ -138,7 +138,7 @@ const Table = ({
                 {columns.map((column) => (
                   <td
                     key={column.name}
-                    className={column.cellClassRender ? column.cellClassRender(row) : null}
+                    className={column.cellClassRender && column.cellClassRender(row)}
                   >
                     {column.render ? column.render(row) : row[column.name]}
                   </td>
