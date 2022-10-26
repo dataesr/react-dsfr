@@ -87,7 +87,12 @@ const data = [
 
 const columns = [
   // eslint-disable-next-line react/prop-types
-  { name: 'level', label: 'Niveau', render: ({ level }) => `Niveau ${level}` },
+  {
+    name: 'level',
+    label: 'Niveau',
+    cellClassRender: ({ level }) => (level === 1 ? 'fr-notice fr-notice--info' : null),
+    render: ({ level }) => `Niveau ${level}`,
+  },
   {
     name: 'name_fr',
     headerRender: () => (
@@ -102,7 +107,9 @@ const columns = [
     ),
     sortable: true,
   },
-  { name: 'name_en', label: 'Anglais', sortable: true },
+  {
+    name: 'name_en', label: 'Anglais', sortable: true,
+  },
 ];
 
 const TableExample = () => {
@@ -133,7 +140,7 @@ const TableExample = () => {
           columns={columns}
           pagination
           paginationPosition="center"
-          perPage={3}
+          perPage={5}
         />
       </Row>
     </Col>
