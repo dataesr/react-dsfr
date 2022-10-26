@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/dataesr/react-dsfr/compare/v3.2.0...v3.3.0) (2022-10-26)
+
+
+### Features
+
+* Ajout de la gestion d'une classe specifique pour les cellule TD des Tableau ([#278](https://github.com/dataesr/react-dsfr/issues/278)) ([3d914e0](https://github.com/dataesr/react-dsfr/commit/3d914e0e872674cae0e10e0d0b3786ac8693c31d))
+
 # [3.2.0](https://github.com/dataesr/react-dsfr/compare/v3.1.12...v3.2.0) (2022-10-24)
 
 
