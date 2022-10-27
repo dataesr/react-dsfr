@@ -49,8 +49,8 @@ const Alert = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <HtmlTitleTag className="fr-alert__title">{title}</HtmlTitleTag>
-      {!small && description && <p>{description}</p>}
+      {!small && title && <HtmlTitleTag className="fr-alert__title">{title}</HtmlTitleTag>}
+      { description && <p>{description}</p>}
       {closable && (
         <button
           type="button"
@@ -73,6 +73,7 @@ Alert.defaultProps = {
   as: 'p',
   type: 'info',
   role: '',
+  title: undefined,
   description: undefined,
   small: false,
   show: true,
@@ -87,7 +88,7 @@ Alert.propTypes = {
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
-  ]).isRequired,
+  ]),
   description: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

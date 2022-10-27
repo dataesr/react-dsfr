@@ -16,7 +16,6 @@ const AccordionItem = forwardRef((props, ref) => {
     children,
     className,
     id,
-    keepOpen,
     initExpand,
     size,
     color,
@@ -91,7 +90,6 @@ AccordionItem.defaultProps = {
   className: '',
   initExpand: false,
   expandedItems: [],
-  keepOpen: false,
   onClick: () => {},
   size: 'md',
   id: 0,
@@ -103,9 +101,6 @@ AccordionItem.propTypes = {
      * Html tag to render in accordion title.
      */
   titleAs: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  /**
-     * @ignore
-     */
   initExpand: PropTypes.bool,
   onClick: PropTypes.func,
   /**
@@ -116,7 +111,6 @@ AccordionItem.propTypes = {
   id: PropTypes.number,
   color: PropTypes.string,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  keepOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

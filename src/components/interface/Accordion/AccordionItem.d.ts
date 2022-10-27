@@ -26,7 +26,6 @@ export interface AccordionItemProps {
   id?: number;
   color?: string;
   title: AccordionItemTitle;
-  keepOpen?: boolean;
   children: AccordionItemChildren;
   className?: string;
 }
