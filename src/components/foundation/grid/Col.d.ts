@@ -2,8 +2,6 @@ import * as React from 'react';
 
 export type ColChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type ColClassName = string | Object | any[];
-
 export interface ColProps {
   children?: ColChildren;
   spacing?: string;
@@ -15,7 +13,7 @@ export interface ColProps {
      * Set Col offset.
      */
   offset?: string;
-  className?: ColClassName;
+  className?: string;
 }
 
 declare const Col: React.FC<ColProps>;

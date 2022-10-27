@@ -56,11 +56,7 @@ Container.propTypes = {
   fluid: PropTypes.bool,
   spacing: PropTypes.string,
   role: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default Container;

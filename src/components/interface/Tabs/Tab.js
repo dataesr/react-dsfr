@@ -28,11 +28,7 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   index: PropTypes.number.isRequired,
   activeTab: PropTypes.number.isRequired,
   children: PropTypes.oneOfType([

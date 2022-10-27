@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type SummaryItemClassName = string | Object | string[];
-
 export interface SummaryItemProps {
   children: string;
   href?: string;
-  className?: SummaryItemClassName;
+  className?: string;
   target?: string;
   asLink?: React.ReactElement<any>;
 }

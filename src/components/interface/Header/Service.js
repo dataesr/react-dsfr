@@ -39,11 +39,7 @@ Service.propTypes = {
   description: PropTypes.node,
   title: PropTypes.node.isRequired,
   link: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   asLink: PropTypes.element,
 };
 

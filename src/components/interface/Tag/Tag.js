@@ -133,11 +133,7 @@ Tag.defaultProps = {
 };
 
 Tag.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

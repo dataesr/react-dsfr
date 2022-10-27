@@ -53,10 +53,6 @@ ToolItemGroup.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 export default ToolItemGroup;

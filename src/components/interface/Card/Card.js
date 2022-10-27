@@ -129,11 +129,7 @@ Card.propTypes = {
   hasBackground: PropTypes.bool,
   isGrey: PropTypes.bool,
   hasShadow: PropTypes.bool,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   bodyClassName: PropTypes.string,
   hasArrow: PropTypes.bool,
   asLink: PropTypes.element,

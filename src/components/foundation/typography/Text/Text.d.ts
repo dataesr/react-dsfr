@@ -6,8 +6,6 @@ export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'lead';
 
 export type TextChildren = string | React.ReactNode;
 
-export type TextClassName = string | Object | any[];
-
 export interface TextProps {
   /**
      * html tag to render
@@ -21,7 +19,7 @@ export interface TextProps {
   alt?: boolean;
   bold?: boolean;
   children: TextChildren;
-  className?: TextClassName;
+  className?: string;
 }
 
 declare const Text: React.FC<TextProps>;

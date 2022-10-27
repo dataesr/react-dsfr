@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-export type FooterPartnersLogoClassName = string | Object | any[];
-
 export interface FooterPartnersLogoProps {
   __TYPE?: any;
   href?: string;
   imageSrc?: string;
   imageAlt: string;
-  className?: FooterPartnersLogoClassName;
+  className?: string;
   asLink?: React.ReactElement<any>;
   isMain?: boolean;
   target?: string;

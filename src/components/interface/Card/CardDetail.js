@@ -48,11 +48,7 @@ CardDetail.propTypes = {
   __TYPE: typeValidation('CardDetail'),
   position: PropTypes.oneOf(['top', 'bottom']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 CardDetail.defaultProps = {
   __TYPE: 'CardDetail',

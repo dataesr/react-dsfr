@@ -61,11 +61,7 @@ const ConsentBanner = ({
 ConsentBanner.defaultProps = { className: '', title: '' };
 
 ConsentBanner.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   openConsentModal: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string.isRequired,

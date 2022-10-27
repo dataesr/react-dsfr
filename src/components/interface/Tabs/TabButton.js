@@ -65,11 +65,7 @@ TabButton.defaultProps = {
 };
 
 TabButton.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   onClickTab: PropTypes.func.isRequired,
   onKeyDownTab: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,

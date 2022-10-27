@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type TileClassName = string | Object | any[];
-
 export type TileChildren = React.ReactNode[] | React.ReactNode;
 
 export interface TileProps {
-  className?: TileClassName;
+  className?: string;
   /**
      * Source of the image — size is fixed 80x80
      */

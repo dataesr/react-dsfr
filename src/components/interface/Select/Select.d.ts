@@ -17,7 +17,7 @@ export interface SelectProps {
   messageType?: SelectMessageType;
   options: SelectOptions[];
   selected?: SelectSelected;
-  className?: string | Object | any[];
+  className?: string;
   hint?: string | Object | any[];
   label?: string;
   required?: boolean;

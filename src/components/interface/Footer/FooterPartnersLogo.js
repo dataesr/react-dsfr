@@ -50,11 +50,7 @@ FooterPartnersLogo.propTypes = {
   href: PropTypes.string,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   asLink: PropTypes.element,
   target: PropTypes.string,
 };

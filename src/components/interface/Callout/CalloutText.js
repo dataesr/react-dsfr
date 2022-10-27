@@ -26,11 +26,7 @@ const CalloutText = ({
 
 CalloutText.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   as: PropTypes.oneOf(['p', 'ul', 'div']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
 };

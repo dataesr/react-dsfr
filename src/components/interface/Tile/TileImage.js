@@ -32,11 +32,7 @@ TileImage.defaultProps = {
 };
 
 TileImage.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   title: PropTypes.string,
   alt: PropTypes.string.isRequired,
   /**

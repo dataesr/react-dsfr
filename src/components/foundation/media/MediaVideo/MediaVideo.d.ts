@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export type MediaVideoClassName = string | Object | any[];
-
 export type MediaVideoRatio = '' | '4x3';
 
 export type MediaVideoSize = 'sm' | 'md' | 'lg';
@@ -9,7 +7,7 @@ export type MediaVideoSize = 'sm' | 'md' | 'lg';
 export interface MediaVideoProps {
   buttonLabel?: string;
   children: React.ReactNode;
-  className?: MediaVideoClassName;
+  className?: string;
   legend?: string;
   onTranscriptionClick?: (...args: any[])=>any;
   ratio?: MediaVideoRatio;

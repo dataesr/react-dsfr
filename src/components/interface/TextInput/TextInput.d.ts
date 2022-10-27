@@ -6,8 +6,6 @@ export type TextInputMessageType = 'error' | 'valid' | '';
 
 export type TextInputType = 'text' | 'date' | 'number' | 'email' | 'password';
 
-export type TextInputClassName = string | Object | any[];
-
 export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   textarea?: boolean;
   type?: TextInputType;
@@ -16,7 +14,7 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
   messageType?: TextInputMessageType;
   message?: string;
   required?: boolean;
-  className?: TextInputClassName;
+  className?: string;
   withAutoValidation?: boolean;
   onBlur?: (...args: any[])=>any;
   onChange?: (...args: any[])=>any;

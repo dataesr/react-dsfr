@@ -4,13 +4,11 @@ export type FooterBodyChildren = React.ReactNode[] | React.ReactNode;
 
 export type FooterBodyDescription = React.ReactNode | string;
 
-export type FooterBodyClassName = string | Object | any[];
-
 export interface FooterBodyProps {
   __TYPE?: any;
   children: FooterBodyChildren;
   description: FooterBodyDescription;
-  className?: FooterBodyClassName;
+  className?: string;
 }
 
 declare const FooterBody: React.FC<FooterBodyProps>;

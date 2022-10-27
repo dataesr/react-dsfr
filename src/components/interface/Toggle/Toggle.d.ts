@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type ToggleClassName = string | Object | any[];
-
 export interface ToggleProps {
   onChange?: (...args: any[])=>any;
   id?: string;
-  className?: ToggleClassName;
+  className?: string;
   hasSeparator?: boolean;
   hasLabelLeft?: boolean;
   checked?: boolean;

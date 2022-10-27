@@ -2,8 +2,6 @@ import * as React from 'react';
 
 export type ButtonIconPosition = 'left' | 'right';
 
-export type ButtonClassName = string | Object | any[];
-
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export type ButtonChildren = string | React.ReactNode;
@@ -17,7 +15,7 @@ export interface ButtonProps {
   onClick?: (...args: any[])=>any;
   iconPosition?: ButtonIconPosition;
   title?: string;
-  className?: ButtonClassName;
+  className?: string;
   size?: ButtonSize;
   children?: ButtonChildren;
   submit?: boolean;

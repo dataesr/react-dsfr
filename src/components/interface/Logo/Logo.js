@@ -52,11 +52,7 @@ Logo.defaultProps = {
 Logo.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('Logo'),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   hrefTitle: PropTypes.string,
   href: PropTypes.string,

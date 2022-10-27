@@ -47,11 +47,7 @@ SideMenuItem.propTypes = {
   ]).isRequired,
   title: PropTypes.string.isRequired,
   expandedDefault: PropTypes.bool,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   current: PropTypes.bool,
 };
 SideMenuItem.defaultProps = {

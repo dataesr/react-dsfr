@@ -51,11 +51,7 @@ ConsentService.defaultProps = {
 };
 
 ConsentService.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
   defaultConsent: PropTypes.oneOf(['accept', 'refuse']).isRequired,
   description: PropTypes.string,

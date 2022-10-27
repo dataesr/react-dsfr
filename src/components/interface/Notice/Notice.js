@@ -45,11 +45,7 @@ Notice.defaultProps = {
 };
 
 Notice.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
   visible: PropTypes.bool,
   onClose: PropTypes.func,

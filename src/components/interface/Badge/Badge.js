@@ -85,11 +85,7 @@ Badge.propTypes = {
   isSmall: PropTypes.bool,
   colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   type: PropTypes.oneOf(['success', 'error', 'warning', 'new', 'info']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default Badge;

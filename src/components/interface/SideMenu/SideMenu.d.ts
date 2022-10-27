@@ -2,12 +2,10 @@ import * as React from 'react';
 
 export type SideMenuChildren = React.ReactNode[] | React.ReactNode;
 
-export type SideMenuClassName = string | Object | any[];
-
 export interface SideMenuProps {
   sticky?: boolean;
   children: SideMenuChildren;
-  className?: SideMenuClassName;
+  className?: string;
   title?: string;
   buttonLabel: string;
 }

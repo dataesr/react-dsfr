@@ -2,12 +2,10 @@ import * as React from 'react';
 
 export type CardFooterChildren = string | React.ReactNode;
 
-export type CardFooterClassName = string | Object | any[];
-
 export interface CardFooterProps {
   __TYPE?: any;
   children: CardFooterChildren;
-  className?: CardFooterClassName;
+  className?: string;
 }
 
 declare const CardFooter: React.FC<CardFooterProps>;

@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export type TagClassName = string | Object | any[];
-
 export type TagAs = 'a' | 'span' | 'p';
 
 export type TagChildren = string | React.ReactNode;
@@ -9,7 +7,7 @@ export type TagChildren = string | React.ReactNode;
 export type TagIconPosition = 'left' | 'right';
 
 export interface TagProps {
-  className?: TagClassName;
+  className?: string;
   as?: TagAs;
   children?: TagChildren;
   small?: boolean;

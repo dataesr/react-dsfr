@@ -5,8 +5,6 @@ export type CardChildren = React.ReactNode[] | React.ReactNode;
 export type CardAnchorAs = 'a' | any;
 export type CardSize = 'sm' | 'md' | 'lg';
 
-export type CardClassName = string | Object | any[];
-
 export interface CardProps {
   children: CardChildren;
   anchorAs?: CardAnchorAs;
@@ -18,7 +16,7 @@ export interface CardProps {
   hasShadow?: boolean;
   hasBorder?: boolean;
   hasBackground?: boolean;
-  className?: CardClassName;
+  className?: string;
   size?: CardSize;
   bodyClassName?: string;
   hasArrow?: boolean;

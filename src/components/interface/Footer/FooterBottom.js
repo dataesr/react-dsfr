@@ -29,11 +29,7 @@ FooterBottom.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 FooterBottom.defaultProps = {
   __TYPE: 'FooterBottom',

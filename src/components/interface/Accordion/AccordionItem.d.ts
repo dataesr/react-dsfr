@@ -8,8 +8,6 @@ export type AccordionItemTitle = string | React.ReactElement<any>;
 
 export type AccordionItemChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type AccordionItemClassName = string | Object | any[];
-
 export interface AccordionItemProps {
   /**
      * Html tag to render in accordion title.
@@ -30,7 +28,7 @@ export interface AccordionItemProps {
   title: AccordionItemTitle;
   keepOpen?: boolean;
   children: AccordionItemChildren;
-  className?: AccordionItemClassName;
+  className?: string;
 }
 
 declare const AccordionItem: React.FC<AccordionItemProps>;

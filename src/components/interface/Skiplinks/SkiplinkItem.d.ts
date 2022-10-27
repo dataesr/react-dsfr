@@ -2,12 +2,10 @@ import * as React from 'react';
 
 export type SkiplinkItemChildren = string | React.ReactNode;
 
-export type SkiplinkItemClassName = string | Object | string[];
-
 export interface SkiplinkItemProps {
   children: SkiplinkItemChildren;
   href?: string;
-  className?: SkiplinkItemClassName;
+  className?: string;
   target?: string;
   asLink?: React.ReactElement<any>;
 }

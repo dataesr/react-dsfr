@@ -132,11 +132,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   submit: PropTypes.bool,

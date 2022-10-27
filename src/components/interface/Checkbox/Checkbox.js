@@ -65,11 +65,7 @@ Checkbox.defaultProps = {
 };
 
 Checkbox.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   id: PropTypes.string,
   disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([

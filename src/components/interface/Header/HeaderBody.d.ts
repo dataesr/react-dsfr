@@ -2,11 +2,9 @@ import * as React from 'react';
 
 export type HeaderBodyChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type HeaderBodyClassName = string | Object | any[];
-
 export interface HeaderBodyProps {
   children?: HeaderBodyChildren;
-  className?: HeaderBodyClassName;
+  className?: string;
   closeButtonLabel?: string;
 }
 

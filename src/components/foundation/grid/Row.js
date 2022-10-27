@@ -42,11 +42,7 @@ Row.propTypes = {
   * Horizontal alignement.
   */
   justifyContent: PropTypes.oneOf(['right', 'center', 'left']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 Row.defaultProps = {
   className: '',

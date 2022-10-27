@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type CardImageClassName = string | Object | any[];
-
 export interface CardImageProps {
   __TYPE?: any;
   alt?: string;
-  className?: CardImageClassName;
+  className?: string;
   src: string;
 }
 

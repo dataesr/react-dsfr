@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export type LinkClassName = string | Object | any[];
-
 export type LinkChildren = React.ReactNode[] | React.ReactNode | string;
 
 export type LinkVerticalIconPosition = 'top' | 'middle' | 'sub';
@@ -15,7 +13,7 @@ export type LinkIconSize = 'fw' | 'xxs' | 'xs' | 'sm' | '1x' | 'lg' | 'xl' | '2x
 export type LinkDisplay = 'inline' | 'flex';
 
 export interface LinkProps {
-  className?: LinkClassName;
+  className?: string;
   children?: LinkChildren;
   href?: string;
   size?: LinkSize;

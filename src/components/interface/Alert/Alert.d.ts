@@ -8,8 +8,6 @@ export type AlertDescription = string | Object | any[];
 
 export type AlertType = 'error' | 'success' | 'info';
 
-export type AlertClassName = string | Object | any[];
-
 export interface AlertProps {
   as?: AlertAs;
   title: AlertTitle;
@@ -20,7 +18,7 @@ export interface AlertProps {
   show?: boolean;
   closable?: boolean;
   onClose?: (...args: any[])=>any;
-  className?: AlertClassName;
+  className?: string;
 }
 
 declare const Alert: React.FC<AlertProps>;

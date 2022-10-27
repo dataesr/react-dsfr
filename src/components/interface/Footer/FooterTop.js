@@ -26,11 +26,7 @@ FooterTop.propTypes = {
     PropTypes.node,
   ]).isRequired,
   align: PropTypes.oneOf(['center', 'start', 'end']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 FooterTop.defaultProps = {
   __TYPE: 'FooterTop',

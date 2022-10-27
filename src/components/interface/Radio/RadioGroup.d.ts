@@ -2,15 +2,13 @@ import * as React from 'react';
 
 export type RadioGroupChildren = string | Object | any[];
 
-export type RadioGroupClassName = string | Object | any[];
-
 export type RadioGroupHint = string | Object | any[];
 
 export type RadioGroupMessageType = 'error' | 'valid' | '';
 
 export interface RadioGroupProps {
   children?: RadioGroupChildren;
-  className?: RadioGroupClassName;
+  className?: string;
   hint?: RadioGroupHint;
   ariaLabel?: string;
   disabled?: boolean;

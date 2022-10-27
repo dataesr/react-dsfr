@@ -1,12 +1,10 @@
 import * as React from 'react';
 
-export type MediaImageClassName = string | Object | any[];
-
 export type MediaImageSize = 'sm' | 'md' | 'lg';
 
 export interface MediaImageProps {
   alt?: string;
-  className?: MediaImageClassName;
+  className?: string;
   legend?: string;
   size?: MediaImageSize;
   src: string;

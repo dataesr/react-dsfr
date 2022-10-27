@@ -48,11 +48,7 @@ FooterLink.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
   section: PropTypes.oneOf(['bottom', 'top']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   asLink: PropTypes.element,
   target: PropTypes.string,
 };

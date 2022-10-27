@@ -27,11 +27,7 @@ const Stepper = ({
 };
 
 Stepper.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   currentStep: PropTypes.number.isRequired,
   steps: PropTypes.number.isRequired,
   currentTitle: PropTypes.string.isRequired,

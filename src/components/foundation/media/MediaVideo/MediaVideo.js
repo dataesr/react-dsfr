@@ -66,11 +66,7 @@ MediaVideo.defaultProps = {
 MediaVideo.propTypes = {
   buttonLabel: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   legend: PropTypes.string,
   onTranscriptionClick: PropTypes.func,
   ratio: PropTypes.oneOf(['', '4x3']),

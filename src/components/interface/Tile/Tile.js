@@ -80,11 +80,7 @@ Tile.defaultProps = {
 };
 
 Tile.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   /**
      * Source of the image — size is fixed 80x80
      */

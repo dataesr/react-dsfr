@@ -37,11 +37,7 @@ Text.propTypes = {
   alt: PropTypes.bool,
   bold: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 Text.defaultProps = {
   as: 'p',

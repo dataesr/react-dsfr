@@ -4,8 +4,6 @@ export type BadgeColorFamily = any | '';
 
 export type BadgeType = 'success' | 'error' | 'warning' | 'new' | 'info';
 
-export type BadgeClassName = string | Object | any[];
-
 export interface BadgeProps {
   text: string;
   icon?: string;
@@ -13,7 +11,7 @@ export interface BadgeProps {
   isSmall?: boolean;
   colorFamily?: BadgeColorFamily;
   type?: BadgeType;
-  className?: BadgeClassName;
+  className?: string;
 }
 
 declare const Badge: React.FC<BadgeProps>;

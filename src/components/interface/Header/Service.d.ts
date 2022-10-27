@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-export type ServiceClassName = string | Object | any[];
-
 export interface ServiceProps {
   __TYPE?: any;
   description?: React.ReactNode;
   title: React.ReactNode;
   link?: string;
-  className?: ServiceClassName;
+  className?: string;
   asLink?: React.ReactElement<any>;
 }
 
