@@ -7,7 +7,7 @@ import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
 
 const Service = ({
-  title, description, className, link, asLink, ...remainingProps
+  title, description, className, link, linkTitle, asLink, ...remainingProps
 }) => (
   <div
     className={classNames(className, 'fr-header__service')}
@@ -17,7 +17,7 @@ const Service = ({
       as={asLink}
       className="fr-header__service-title"
       href={link}
-      title={title}
+      title={linkTitle}
     >
       {title}
     </Link>
@@ -30,6 +30,7 @@ Service.defaultProps = {
   className: '',
   description: 'Ouvrir le menu',
   link: '/',
+  linkTitle: 'Accueil',
   asLink: null,
 };
 
@@ -39,6 +40,7 @@ Service.propTypes = {
   description: PropTypes.node,
   title: PropTypes.node.isRequired,
   link: PropTypes.string,
+  linkTitle: PropTypes.string,
   className: PropTypes.string,
   asLink: PropTypes.element,
 };

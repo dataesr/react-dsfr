@@ -31,6 +31,7 @@ describe('<Header />', () => {
             </HeaderOperator>
             <Service
               title="Nom du service"
+              linkTitle="ACCUEIL - Service"
               description="baseline - précisions sur l‘organisation"
               data-testid="service"
             />
