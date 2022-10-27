@@ -8,9 +8,11 @@ exports[`<Service /> renders correctly 1`] = `
     className="fr-header__service-title fr-link--md"
     href="/"
     target="_self"
-    title="title"
+    title="Accueil"
   >
-    title
+    <p>
+      title
+    </p>
   </a>
   <p
     className="fr-header__service-tagline"

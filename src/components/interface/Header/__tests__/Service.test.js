@@ -12,7 +12,7 @@ describe('<Service />', () => {
     const component = renderer
       .create(
         <Service
-          title="title"
+          title={<p>title</p>}
           description="description service"
         />,
       )

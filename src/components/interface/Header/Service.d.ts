@@ -5,6 +5,7 @@ export interface ServiceProps {
   description?: React.ReactNode;
   title: React.ReactNode;
   link?: string;
+  linkTitle?: string;
   className?: string;
   asLink?: React.ReactElement<any>;
 }
