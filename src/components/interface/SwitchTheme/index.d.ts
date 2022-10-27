@@ -1,3 +1,4 @@
-import type SwitchTheme from "./SwitchTheme"
+import type SwitchTheme from './SwitchTheme';
+import type useTheme from './useTheme';
 
-export type { SwitchTheme }
+export type { SwitchTheme, useTheme };

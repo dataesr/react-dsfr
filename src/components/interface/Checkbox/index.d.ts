@@ -1,4 +1,4 @@
-import type Checkbox from "./Checkbox"
-import type CheckboxGroup from "./CheckboxGroup"
+import type Checkbox from './Checkbox';
+import type CheckboxGroup from './CheckboxGroup';
 
-export type { Checkbox, CheckboxGroup }
+export type { Checkbox, CheckboxGroup };

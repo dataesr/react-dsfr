@@ -4,39 +4,38 @@ export type LinkClassName = string | Object | any[];
 
 export type LinkChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type LinkVerticalIconPosition = "top" | "middle" | "sub";
+export type LinkVerticalIconPosition = 'top' | 'middle' | 'sub';
 
-export type LinkSize = "sm" | "md" | "lg";
+export type LinkSize = 'sm' | 'md' | 'lg';
 
-export type LinkIconPosition = "left" | "right";
+export type LinkIconPosition = 'left' | 'right';
 
-export type LinkIconSize = "fw" | "xxs" | "xs" | "sm" | "1x" | "lg" | "xl" | "2x" | "3x" | "10x";
+export type LinkIconSize = 'fw' | 'xxs' | 'xs' | 'sm' | '1x' | 'lg' | 'xl' | '2x' | '3x' | '10x';
 
-export type LinkDisplay = "inline" | "flex";
+export type LinkDisplay = 'inline' | 'flex';
 
 export interface LinkProps {
-    className?: LinkClassName;
-    children?: LinkChildren;
-    href?: string;
-    size?: LinkSize;
-    disabled?: boolean;
-    verticalIconPosition?: LinkVerticalIconPosition;
-    as?: React.ReactElement<any>;
-    title?: string;
-    target?: string;
-    isSimple?: boolean;
-    current?: boolean;
-    icon?: string;
-    onClick?: (...args: any[])=>any;
-    iconPosition?: LinkIconPosition;
-    iconSize?: LinkIconSize;
-    /**
+  className?: LinkClassName;
+  children?: LinkChildren;
+  href?: string;
+  size?: LinkSize;
+  disabled?: boolean;
+  verticalIconPosition?: LinkVerticalIconPosition;
+  as?: React.ReactElement<any>;
+  title?: string;
+  target?: string;
+  isSimple?: boolean;
+  current?: boolean;
+  icon?: string;
+  onClick?: (...args: any[])=>any;
+  iconPosition?: LinkIconPosition;
+  iconSize?: LinkIconSize;
+  /**
      * @ignore
      */
-    display?: LinkDisplay;
+  display?: LinkDisplay;
 }
 
 declare const Link: React.FC<LinkProps>;
 
 export default Link;
-

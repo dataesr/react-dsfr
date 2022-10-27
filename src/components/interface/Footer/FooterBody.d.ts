@@ -7,13 +7,12 @@ export type FooterBodyDescription = React.ReactNode | string;
 export type FooterBodyClassName = string | Object | any[];
 
 export interface FooterBodyProps {
-    __TYPE?: any;
-    children: FooterBodyChildren;
-    description: FooterBodyDescription;
-    className?: FooterBodyClassName;
+  __TYPE?: any;
+  children: FooterBodyChildren;
+  description: FooterBodyDescription;
+  className?: FooterBodyClassName;
 }
 
 declare const FooterBody: React.FC<FooterBodyProps>;
 
 export default FooterBody;
-

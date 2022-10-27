@@ -1,2 +1,3 @@
-import * as React from 'react';
+declare const useTheme: () => string;
 
+export default useTheme;

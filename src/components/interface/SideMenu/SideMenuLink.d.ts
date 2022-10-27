@@ -5,15 +5,14 @@ export type SideMenuLinkChildren = string | React.ReactNode;
 export type SideMenuLinkClassName = string | Object | any[];
 
 export interface SideMenuLinkProps {
-    children: SideMenuLinkChildren;
-    href?: string;
-    className?: SideMenuLinkClassName;
-    asLink?: React.ReactElement<any>;
-    onClick?: (...args: any[])=>any;
-    current?: boolean;
+  children: SideMenuLinkChildren;
+  href?: string;
+  className?: SideMenuLinkClassName;
+  asLink?: React.ReactElement<any>;
+  onClick?: (...args: any[])=>any;
+  current?: boolean;
 }
 
 declare const SideMenuLink: React.FC<SideMenuLinkProps>;
 
 export default SideMenuLink;
-

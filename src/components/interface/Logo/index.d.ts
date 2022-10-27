@@ -1,3 +1,3 @@
-import type Logo from "./Logo"
+import type Logo from './Logo';
 
-export type { Logo }
+export type { Logo };

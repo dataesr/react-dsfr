@@ -1,3 +1,3 @@
-import type MediaImage from "./MediaImage"
+import type MediaImage from './MediaImage';
 
-export type { MediaImage }
+export type { MediaImage };

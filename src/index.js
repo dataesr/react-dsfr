@@ -18,13 +18,35 @@ import {
 } from './components/interface/Card/index';
 import { Checkbox, CheckboxGroup } from './components/interface/Checkbox/index';
 import {
-  Footer, FooterOperator, FooterLink, FooterBody, FooterBodyItem, FooterBottom, FooterCopy,
-  FooterPartners, FooterPartnersLogo, FooterPartnersTitle, FooterPartnersSecondaryTitle,
-  FooterTop, FooterTopCategory,
+  Footer,
+  FooterOperator,
+  FooterLink,
+  FooterBody,
+  FooterBodyItem,
+  FooterBottom,
+  FooterCopy,
+  FooterPartners,
+  FooterPartnersLogo,
+  FooterPartnersTitle,
+  FooterPartnersSecondaryTitle,
+  FooterTop,
+  FooterTopCategory,
 } from './components/interface/Footer/index';
 import {
-  Header, HeaderOperator, HeaderNav, HeaderBody, NavItem, NavSubItem,
-  MegaNavItem, MegaNavSubItem, Service, Tool, ToolItem, ToolItemGroup, ToolTranslate, ToolTranslateItem,
+  Header,
+  HeaderOperator,
+  HeaderNav,
+  HeaderBody,
+  NavItem,
+  NavSubItem,
+  MegaNavItem,
+  MegaNavSubItem,
+  Service,
+  Tool,
+  ToolItem,
+  ToolItemGroup,
+  ToolTranslate,
+  ToolTranslateItem,
 } from './components/interface/Header/index';
 import Highlight from './components/interface/Highlight/index';
 import Notice from './components/interface/Notice/index';
