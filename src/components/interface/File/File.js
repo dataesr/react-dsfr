@@ -57,11 +57,7 @@ File.defaultProps = {
 };
 
 File.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   label: PropTypes.string.isRequired,
   multiple: PropTypes.bool,
   onChange: PropTypes.func,

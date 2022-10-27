@@ -132,11 +132,7 @@ TextInput.propTypes = {
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   message: PropTypes.string,
   required: PropTypes.bool,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   withAutoValidation: PropTypes.bool,
   onBlur: PropTypes.func,
 };

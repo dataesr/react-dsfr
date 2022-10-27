@@ -43,11 +43,7 @@ MediaImage.defaultProps = {
 
 MediaImage.propTypes = {
   alt: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   legend: PropTypes.string,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   src: PropTypes.string.isRequired,

@@ -195,11 +195,7 @@ Table.propTypes = {
     PropTypes.func,
   ]).isRequired,
   children: PropTypes.node,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   pagination: PropTypes.bool,
   paginationPosition: PropTypes.oneOf(['left', 'center', 'right']),
   surrendingPages: PropTypes.number,

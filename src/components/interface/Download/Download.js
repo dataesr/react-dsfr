@@ -86,11 +86,7 @@ Download.defaultProps = {
 };
 
 Download.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   label: PropTypes.string.isRequired,
   openFile: PropTypes.bool,
   asCard: PropTypes.bool,

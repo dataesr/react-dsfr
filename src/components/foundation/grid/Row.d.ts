@@ -6,8 +6,6 @@ export type RowAlignItems = 'top' | 'middle' | 'bottom';
 
 export type RowJustifyContent = 'right' | 'center' | 'left';
 
-export type RowClassName = string | Object | any[];
-
 export interface RowProps {
   /**
      * Row children (should always be Col)
@@ -26,7 +24,7 @@ export interface RowProps {
      * Horizontal alignement.
      */
   justifyContent?: RowJustifyContent;
-  className?: RowClassName;
+  className?: string;
 }
 
 declare const Row: React.FC<RowProps>;

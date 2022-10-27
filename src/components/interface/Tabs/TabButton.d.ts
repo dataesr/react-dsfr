@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export type TabButtonClassName = string | Object | any[];
-
 export interface TabButtonProps {
-  className?: TabButtonClassName;
+  className?: string;
   onClickTab: (...args: any[])=>any;
   onKeyDownTab: (...args: any[])=>any;
   label: string;

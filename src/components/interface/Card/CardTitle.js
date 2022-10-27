@@ -60,11 +60,7 @@ CardTitle.propTypes = {
   __TYPE: typeValidation('CardTitle'),
   anchorAs: PropTypes.oneOf(['a', PropTypes.elementType]),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   asLink: PropTypes.element,
   onClick: PropTypes.func,

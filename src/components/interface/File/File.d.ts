@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export type FileClassName = string | Object | any[];
-
 export interface FileProps {
-  className?: FileClassName;
+  className?: string;
   label: string;
   multiple?: boolean;
   onChange?: (...args: any[])=>any;

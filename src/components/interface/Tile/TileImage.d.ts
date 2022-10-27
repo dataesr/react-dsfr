@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export type TileImageClassName = string | Object | any[];
-
 export interface TileImageProps {
-  className?: TileImageClassName;
+  className?: string;
   title?: string;
   alt: string;
   /**

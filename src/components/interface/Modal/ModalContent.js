@@ -22,11 +22,7 @@ ModalContent.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 ModalContent.defaultProps = { __TYPE: 'ModalContent', className: '' };
 

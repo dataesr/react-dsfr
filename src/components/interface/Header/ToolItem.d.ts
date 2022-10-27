@@ -1,14 +1,12 @@
 import * as React from 'react';
 
-export type ToolItemClassName = string | Object | any[];
-
 export type ToolItemAs = 'p' | 'span' | 'div' | '';
 
 export type ToolItemChildren = string | React.ReactNode;
 
 export interface ToolItemProps {
   __TYPE?: any;
-  className?: ToolItemClassName;
+  className?: string;
   icon?: string;
   /**
      * html tag to render

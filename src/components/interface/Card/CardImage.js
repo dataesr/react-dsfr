@@ -19,11 +19,7 @@ CardImage.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('CardImage'),
   alt: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   src: PropTypes.string.isRequired,
 };
 CardImage.defaultProps = {

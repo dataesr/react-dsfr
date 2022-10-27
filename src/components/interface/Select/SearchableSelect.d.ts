@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export type SearchableSelectClassName = string | Object | any[];
-
 export type SearchableSelectHint = string | Object | any[];
 
 export type SearchableSelectMessageType = 'error' | 'valid';
@@ -14,7 +12,7 @@ export interface SearchableSelectOptions {
 }
 
 export interface SearchableSelectProps {
-  className?: SearchableSelectClassName;
+  className?: string;
   disabled?: boolean;
   hint?: SearchableSelectHint;
   id?: string;

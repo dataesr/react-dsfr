@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type ConsentServiceClassName = string | Object | any[];
-
 export type ConsentServiceDefaultConsent = 'accept' | 'refuse';
 
 export interface ConsentServiceProps {
-  className?: ConsentServiceClassName;
+  className?: string;
   title: string;
   defaultConsent: ConsentServiceDefaultConsent;
   description?: string;

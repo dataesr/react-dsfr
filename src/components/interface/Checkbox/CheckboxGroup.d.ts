@@ -2,15 +2,13 @@ import * as React from 'react';
 
 export type CheckboxGroupChildren = React.ReactNode[] | React.ReactNode;
 
-export type CheckboxGroupClassName = string | Object | any[];
-
 export type CheckboxGroupHint = string | Object | any[];
 
 export type CheckboxGroupMessageType = 'error' | 'valid' | '';
 
 export interface CheckboxGroupProps {
   children: CheckboxGroupChildren;
-  className?: CheckboxGroupClassName;
+  className?: string;
   hint?: CheckboxGroupHint;
   ariaLabel?: string;
   isInline?: boolean;

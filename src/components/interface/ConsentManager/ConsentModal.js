@@ -71,11 +71,7 @@ ConsentModal.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   closeLabel: PropTypes.string.isRequired,
   confirmButtonLabel: PropTypes.string.isRequired,

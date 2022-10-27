@@ -78,11 +78,7 @@ Toggle.defaultProps = {
 Toggle.propTypes = {
   onChange: PropTypes.func,
   id: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   hasSeparator: PropTypes.bool,
   checked: PropTypes.bool,
   hasLabelLeft: PropTypes.bool,

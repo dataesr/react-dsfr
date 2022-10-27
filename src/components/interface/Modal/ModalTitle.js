@@ -40,11 +40,7 @@ ModalTitle.propTypes = {
   __TYPE: typeValidation('ModalTitle'),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   icon: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default ModalTitle;

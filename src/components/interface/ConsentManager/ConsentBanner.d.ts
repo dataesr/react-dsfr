@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export type ConsentBannerClassName = string | Object | any[];
-
 export interface ConsentBannerBannerButtons {
   refuse?: {
     label: string;
@@ -15,7 +13,7 @@ export interface ConsentBannerBannerButtons {
 }
 
 export interface ConsentBannerProps {
-  className?: ConsentBannerClassName;
+  className?: string;
   openConsentModal: (...args: any[])=>any;
   title?: string;
   description: string;

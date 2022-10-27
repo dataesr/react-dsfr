@@ -2,11 +2,9 @@ import * as React from 'react';
 
 export type ToolChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type ToolClassName = string | Object | any[];
-
 export interface ToolProps {
   children: ToolChildren;
-  className?: ToolClassName;
+  className?: string;
   closeButtonLabel?: string;
 }
 

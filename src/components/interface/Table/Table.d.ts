@@ -4,8 +4,6 @@ export type TableCaptionPosition = 'top' | 'bottom' | 'none';
 
 export type TableRowKey = string | ((...args: any[])=>any);
 
-export type TableClassName = string | Object | any[];
-
 export type TablePaginationPosition = 'left' | 'center' | 'right';
 
 export interface TableProps {
@@ -21,7 +19,7 @@ export interface TableProps {
   caption?: string;
   rowKey: TableRowKey;
   children?: React.ReactNode;
-  className?: TableClassName;
+  className?: string;
   pagination?: boolean;
   paginationPosition?: TablePaginationPosition;
   surrendingPages?: number;

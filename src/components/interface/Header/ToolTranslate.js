@@ -56,11 +56,7 @@ ToolTranslate.propTypes = {
   currentLang: PropTypes.string.isRequired,
   descCurrentLang: PropTypes.string.isRequired,
   title: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default ToolTranslate;

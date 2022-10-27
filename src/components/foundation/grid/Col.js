@@ -33,11 +33,7 @@ Col.propTypes = {
   * Set Col offset.
   */
   offset: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 Col.defaultProps = {
   n: '',

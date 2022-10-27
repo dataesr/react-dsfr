@@ -1,12 +1,10 @@
 import * as React from 'react';
 
-export type LogoClassName = string | Object | any[];
-
 export type LogoChildren = string | React.ReactNode;
 
 export interface LogoProps {
   __TYPE?: any;
-  className?: LogoClassName;
+  className?: string;
   children: LogoChildren;
   hrefTitle?: string;
   href?: string;

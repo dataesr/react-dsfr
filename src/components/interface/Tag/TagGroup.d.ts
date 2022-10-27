@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export type TagGroupClassName = string | Object | any[];
-
 export interface TagGroupProps {
-  className?: TagGroupClassName;
+  className?: string;
   children: React.ReactNode;
 }
 

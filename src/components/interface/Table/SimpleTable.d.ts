@@ -2,8 +2,6 @@ import * as React from 'react';
 
 export type SimpleTableCaptionPosition = 'top' | 'bottom' | 'none';
 
-export type SimpleTableClassName = string | Object | any[];
-
 export interface SimpleTableProps {
   emptyDataMessage?: string;
   fixedLayout?: boolean;
@@ -11,7 +9,7 @@ export interface SimpleTableProps {
   bordered?: boolean;
   captionPosition?: SimpleTableCaptionPosition;
   caption: string;
-  className?: SimpleTableClassName;
+  className?: string;
   data: Object[];
 }
 

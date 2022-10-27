@@ -2,8 +2,6 @@ import * as React from 'react';
 
 export type SearchBarSize = 'md' | 'lg';
 
-export type SearchBarClassName = string | Object | any[];
-
 export interface SearchBarProps {
   label?: string;
   buttonLabel: string;
@@ -14,7 +12,7 @@ export interface SearchBarProps {
   onSearch: (...args: any[])=>any;
   size?: SearchBarSize;
   defaultValue?: string;
-  className?: SearchBarClassName;
+  className?: string;
 }
 
 declare const SearchBar: React.FC<SearchBarProps>;

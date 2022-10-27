@@ -6,8 +6,6 @@ export type AccordionSize = 'sm' | 'md' | 'lg';
 
 export type AccordionChildren = React.ReactNode[] | React.ReactNode;
 
-export type AccordionClassName = string | Object | any[];
-
 export interface AccordionProps {
   /**
      * Html tag to render accordion wrapper.
@@ -17,7 +15,7 @@ export interface AccordionProps {
   keepOpen?: boolean;
   color?: string;
   children: AccordionChildren;
-  className?: AccordionClassName;
+  className?: string;
 }
 
 declare const Accordion: React.FC<AccordionProps>;

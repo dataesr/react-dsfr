@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-export type TabsClassName = string | Object | any[];
-
 export type TabsChildren = React.ReactNode[] | React.ReactNode | string;
 
 export interface TabsProps {
-  className?: TabsClassName;
+  className?: string;
   defaultActiveTab?: number;
   children: TabsChildren;
 }

@@ -54,11 +54,7 @@ ButtonGroup.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('ButtonGroup'),
   isInlineFrom: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   children: PropTypes.oneOfType([

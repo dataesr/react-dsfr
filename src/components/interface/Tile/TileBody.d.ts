@@ -4,8 +4,6 @@ export type TileBodyTitleAs = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type TileBodyChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type TileBodyClassName = string | Object | any[];
-
 export interface TileBodyProps {
   /**
      * Html tag to render in accordion title.
@@ -17,7 +15,7 @@ export interface TileBodyProps {
   linkTitle?: string;
   linkHref?: string;
   children?: TileBodyChildren;
-  className?: TileBodyClassName;
+  className?: string;
   asLink?: React.ReactElement<any>;
 }
 

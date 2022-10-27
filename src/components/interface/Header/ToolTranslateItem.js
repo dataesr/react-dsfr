@@ -30,11 +30,7 @@ ToolTranslateItem.defaultProps = {
 };
 
 ToolTranslateItem.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   /**
      * html tag to render
      */

@@ -66,11 +66,7 @@ ToolItem.defaultProps = {
 ToolItem.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('ToolItem'),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   icon: PropTypes.string,
   /**
      * html tag to render

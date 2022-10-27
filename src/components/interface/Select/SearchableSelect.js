@@ -229,11 +229,7 @@ SearchableSelect.defaultProps = {
 };
 
 SearchableSelect.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,

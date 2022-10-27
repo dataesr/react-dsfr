@@ -2,10 +2,8 @@ import * as React from 'react';
 
 export type DownloadGroupChildren = string | React.ReactNode;
 
-export type DownloadGroupClassName = string | Object | any[];
-
 export interface DownloadGroupProps {
-  className?: DownloadGroupClassName;
+  className?: string;
   title: string;
   children: DownloadGroupChildren
 }

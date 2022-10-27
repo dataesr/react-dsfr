@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-export type SelectWrapperClassName = string | Object | any[];
-
 export type SelectWrapperHint = string | Object | any[];
 
 export type SelectWrapperMessageType = 'error' | 'valid';
 
 export interface SelectWrapperProps {
-  className?: SelectWrapperClassName;
+  className?: string;
   hint?: SelectWrapperHint;
   selectId: string;
   label?: string;

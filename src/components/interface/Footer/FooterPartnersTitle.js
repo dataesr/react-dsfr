@@ -22,11 +22,7 @@ FooterPartnersTitle.propTypes = {
   __TYPE: typeValidation('FooterPartnersTitle'),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   as: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 FooterPartnersTitle.defaultProps = {
   __TYPE: 'FooterPartnersTitle',

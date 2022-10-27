@@ -2,12 +2,10 @@ import * as React from 'react';
 
 export type BreadcrumbItemChildren = string | React.ReactNode;
 
-export type BreadcrumbItemClassName = string | Object | any[];
-
 export interface BreadcrumbItemProps {
   __TYPE?: any;
   children: BreadcrumbItemChildren;
-  className?: BreadcrumbItemClassName;
+  className?: string;
   href?: string;
   asLink?: React.ReactElement<any>;
 }

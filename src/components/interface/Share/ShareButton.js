@@ -72,11 +72,7 @@ ShareButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(['facebook', 'twitter', 'linkedin', 'copy', 'mail']).isRequired,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default ShareButton;

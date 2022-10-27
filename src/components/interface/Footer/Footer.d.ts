@@ -2,11 +2,9 @@ import * as React from 'react';
 
 export type FooterChildren = React.ReactNode[] | React.ReactNode;
 
-export type FooterClassName = string | Object | any[];
-
 export interface FooterProps {
   children: FooterChildren;
-  className?: FooterClassName;
+  className?: string;
 }
 
 declare const Footer: React.FC<FooterProps>;

@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export type DownloadClassName = string | Object | any[];
-
 export interface DownloadProps {
-  className?: DownloadClassName;
+  className?: string;
   fileName: string;
   label: string;
   metaData?: string;

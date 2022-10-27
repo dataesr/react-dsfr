@@ -150,11 +150,7 @@ Modal.propTypes = {
   ]).isRequired,
   hide: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   canClose: PropTypes.bool,
 };
 Modal.defaultProps = {

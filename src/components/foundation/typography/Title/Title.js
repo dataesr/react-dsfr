@@ -32,11 +32,7 @@ Title.propTypes = {
   */
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
   look: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', '']),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   spacing: PropTypes.string,
   bold: PropTypes.bool,
 };

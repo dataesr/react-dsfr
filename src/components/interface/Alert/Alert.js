@@ -99,11 +99,7 @@ Alert.propTypes = {
   show: PropTypes.bool,
   closable: PropTypes.bool,
   onClose: PropTypes.func,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default Alert;

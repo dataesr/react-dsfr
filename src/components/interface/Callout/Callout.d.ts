@@ -4,8 +4,6 @@ export type CalloutColorFamily = any | '';
 
 export type CalloutChildren = React.ReactNode[] | React.ReactNode;
 
-export type CalloutClassName = string | Object | any[];
-
 export interface CalloutProps {
   hasInfoIcon?: boolean;
   /**
@@ -15,7 +13,7 @@ export interface CalloutProps {
   colorFamily?: CalloutColorFamily;
   colors?: string[];
   children: CalloutChildren;
-  className?: CalloutClassName;
+  className?: string;
 }
 
 declare const Callout: React.FC<CalloutProps>;

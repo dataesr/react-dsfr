@@ -4,14 +4,12 @@ export type HighlightSize = 'sm' | 'md' | 'lg';
 
 export type HighlightChildren = string | React.ReactNode;
 
-export type HighlightClassName = string | Object | any[];
-
 export type HighlightColorFamily = any | '';
 
 export interface HighlightProps {
   size?: HighlightSize;
   children: HighlightChildren;
-  className?: HighlightClassName;
+  className?: string;
   color?: string;
   colorFamily?: HighlightColorFamily;
 }

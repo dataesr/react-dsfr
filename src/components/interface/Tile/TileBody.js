@@ -69,11 +69,7 @@ TileBody.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
   asLink: PropTypes.element,
 };
 

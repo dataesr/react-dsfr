@@ -76,11 +76,7 @@ SearchBar.propTypes = {
   onSearch: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['md', 'lg']),
   defaultValue: PropTypes.string,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  className: PropTypes.string,
 };
 
 export default SearchBar;

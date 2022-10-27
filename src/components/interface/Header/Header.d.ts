@@ -2,8 +2,6 @@ import * as React from 'react';
 
 export type HeaderChildren = React.ReactNode[] | React.ReactNode;
 
-export type HeaderClassName = string | Object | any[];
-
 export interface HeaderProps {
   /**
      * Ouverture de la popin de recherche en mobile
@@ -14,7 +12,7 @@ export interface HeaderProps {
      */
   isOpenNav?: boolean;
   children: HeaderChildren;
-  className?: HeaderClassName;
+  className?: string;
   closeButtonLabel?: string;
 }
 
