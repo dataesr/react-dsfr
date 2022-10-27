@@ -1,12 +1,28 @@
 {
   "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": [
+        "airbnb-typescript"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {"project": "./tsconfig.json"},
+      "rules": {
+        "import/named": "off",
+        "no-unused-vars": "off",
+        "import/export": "off"
+      }
+    }
+  ],
   "extends": [
-    "react-app",
     "airbnb",
     "airbnb/hooks"
   ],
   "env": {
-    "node": true
+    "node": true,
+    "browser": true,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -41,12 +57,14 @@
       {
         "extensions": [
           ".js",
+          ".ts",
           ".tsx",
           ".jsx"
         ]
       }
     ],
     "react/function-component-definition": 0,
-    "no-restricted-exports": 0
+    "no-restricted-exports": 0,
+    "import/prefer-default-export": "off"
   }
 }

@@ -1,2 +1,2 @@
-export * from "./MediaImage"
-export * from "./MediaVideo"
+export * from './MediaImage';
+export * from './MediaVideo';

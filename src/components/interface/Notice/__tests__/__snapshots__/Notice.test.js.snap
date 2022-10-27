@@ -20,6 +20,7 @@ exports[`<Notice /> renders correctly 1`] = `
         className="fr-btn--close fr-btn"
         onClick={null}
         title="Masquer le message"
+        type="button"
       >
         Masquer le message
       </button>

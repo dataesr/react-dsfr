@@ -5,14 +5,13 @@ export type SideMenuItemChildren = React.ReactNode[] | React.ReactNode;
 export type SideMenuItemClassName = string | Object | any[];
 
 export interface SideMenuItemProps {
-    children: SideMenuItemChildren;
-    title: string;
-    expandedDefault?: boolean;
-    className?: SideMenuItemClassName;
-    current?: boolean;
+  children: SideMenuItemChildren;
+  title: string;
+  expandedDefault?: boolean;
+  className?: SideMenuItemClassName;
+  current?: boolean;
 }
 
 declare const SideMenuItem: React.FC<SideMenuItemProps>;
 
 export default SideMenuItem;
-

@@ -1,3 +1,3 @@
-import type TextInput from "./TextInput"
+import type TextInput from './TextInput';
 
-export type { TextInput }
+export type { TextInput };

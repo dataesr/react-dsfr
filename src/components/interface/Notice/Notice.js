@@ -24,6 +24,7 @@ const Notice = ({
             {asLink}
           </p>
           <button
+            type="button"
             className="fr-btn--close fr-btn"
             title="Masquer le message"
             onClick={onClose}

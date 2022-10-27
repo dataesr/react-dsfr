@@ -1,3 +1,3 @@
-import type Title from "./Title"
+import type Title from './Title';
 
-export type { Title }
+export type { Title };
