@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/dataesr/react-dsfr/compare/v3.3.0...v3.3.1) (2022-10-27)
+
+
+### Bug Fixes
+
+* Storybook deployment ([#282](https://github.com/dataesr/react-dsfr/issues/282)) ([8566531](https://github.com/dataesr/react-dsfr/commit/8566531fcbb075152e1346bee7dfce3211f96d1b))
+
 # [3.3.0](https://github.com/dataesr/react-dsfr/compare/v3.2.0...v3.3.0) (2022-10-26)
 
 
