@@ -1,3 +1,10 @@
+## [3.3.4](https://github.com/dataesr/react-dsfr/compare/v3.3.3...v3.3.4) (2022-10-27)
+
+
+### Bug Fixes
+
+* Title type in service ([#287](https://github.com/dataesr/react-dsfr/issues/287)) ([91f7b5a](https://github.com/dataesr/react-dsfr/commit/91f7b5a467d6cdd0d05b4b4f0b9a19327247e60c))
+
 ## [3.3.3](https://github.com/dataesr/react-dsfr/compare/v3.3.2...v3.3.3) (2022-10-27)
 
 
