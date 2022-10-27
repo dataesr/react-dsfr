@@ -43,6 +43,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm run deploy-storybook -- --ci
+      - name: Install
+        run: npm ci
+      - name: Deploy
+        run: npm run deploy-storybook -- --ci
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
