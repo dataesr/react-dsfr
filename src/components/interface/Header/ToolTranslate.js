@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -6,12 +6,20 @@ import '@gouvfr/dsfr/dist/component/translate/translate.css';
 
 import dataAttributes from '../../../utils/data-attributes';
 import typeValidation from '../../../utils/type-validation';
+import useOnClickOutside from '../../../hooks/useOnClickOutside';
 
 const ToolTranslate = ({
   children, currentLang, className, descCurrentLang, title, ...remainingProps
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const _className = classNames(className, 'fr-translate fr-nav');
+  const translateMenuRef = useRef();
+  const close = useCallback((e) => {
+    if ((translateMenuRef && translateMenuRef.current !== e.target) && isOpen) {
+      setIsOpen(false);
+    }
+  }, [isOpen]);
+  useOnClickOutside(translateMenuRef, close);
 
   return (
     <nav
@@ -19,7 +27,7 @@ const ToolTranslate = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <div className="fr-nav__item">
+      <div className="fr-nav__item" ref={translateMenuRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
           type="button"
@@ -30,9 +38,9 @@ const ToolTranslate = ({
         >
           {currentLang}
         </button>
-        <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516">
+        <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516" onClick={() => setIsOpen(false)} onKeyDown={(e) => (e.key === 'Enter' ? setIsOpen(false) : null)} role="menu" tabIndex={-1}>
           <ul className="fr-menu__list">
-            {children}
+            sdf
           </ul>
         </div>
       </div>
