@@ -107,7 +107,7 @@ button.fr-accordion__btn[aria-expanded=true]:after {
 
 [target=_blank]:after,
 [class^="fr-link"][target=_blank]:after {
-    content: '\ecaf';
+    content: '\ecaf' !important;
     height: inherit;
     --icon-size: 1rem;
     font-size: 0.9rem;
