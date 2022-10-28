@@ -40,7 +40,7 @@ const ToolTranslate = ({
         </button>
         <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516" onClick={() => setIsOpen(false)} onKeyDown={(e) => (e.key === 'Enter' ? setIsOpen(false) : null)} role="menuitem" tabIndex={-1}>
           <ul className="fr-menu__list">
-            { children }
+            {children}
           </ul>
         </div>
       </div>
