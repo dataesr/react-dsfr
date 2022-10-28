@@ -1,3 +1,10 @@
+## [3.3.5](https://github.com/dataesr/react-dsfr/compare/v3.3.4...v3.3.5) (2022-10-28)
+
+
+### Bug Fixes
+
+* header icon ([dc299fe](https://github.com/dataesr/react-dsfr/commit/dc299fe364cc38d1ba667f08d95c7b2cf3d1f562))
+
 ## [3.3.4](https://github.com/dataesr/react-dsfr/compare/v3.3.3...v3.3.4) (2022-10-27)
 
 
