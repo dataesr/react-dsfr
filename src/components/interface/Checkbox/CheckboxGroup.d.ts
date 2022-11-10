@@ -12,7 +12,7 @@ export interface CheckboxGroupProps {
   hint?: CheckboxGroupHint;
   ariaLabel?: string;
   isInline?: boolean;
-  legend: string;
+  legend?: string;
   message?: string;
   messageType?: CheckboxGroupMessageType;
   required?: boolean;
