@@ -1,3 +1,15 @@
+# [3.4.0](https://github.com/dataesr/react-dsfr/compare/v3.3.5...v3.4.0) (2022-11-14)
+
+
+### Bug Fixes
+
+* fixing broken test ([#293](https://github.com/dataesr/react-dsfr/issues/293)) ([96ca724](https://github.com/dataesr/react-dsfr/commit/96ca724bc877ed0753875718ff4af6daf07342d0))
+
+
+### Features
+
+* close language menu when item is clicked on ([#289](https://github.com/dataesr/react-dsfr/issues/289)) ([6876303](https://github.com/dataesr/react-dsfr/commit/68763032355cdd42349b31949179d98f5ec921af))
+
 ## [3.3.5](https://github.com/dataesr/react-dsfr/compare/v3.3.4...v3.3.5) (2022-10-28)
 
 
