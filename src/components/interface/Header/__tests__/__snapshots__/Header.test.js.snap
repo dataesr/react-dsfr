@@ -141,6 +141,10 @@ exports[`<Header /> renders correctly 1`] = `
                 <div
                   className="fr-translate__menu fr-menu fr-collapse"
                   id="translate-516"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="menuitem"
+                  tabIndex={-1}
                 >
                   <ul
                     className="fr-menu__list"
