@@ -1,3 +1,10 @@
+## [3.4.1](https://github.com/dataesr/react-dsfr/compare/v3.4.0...v3.4.1) (2022-11-15)
+
+
+### Bug Fixes
+
+* Add accept props to file upload ([#296](https://github.com/dataesr/react-dsfr/issues/296)) ([6e60581](https://github.com/dataesr/react-dsfr/commit/6e60581850080a499618366356f25a67721c756f))
+
 # [3.4.0](https://github.com/dataesr/react-dsfr/compare/v3.3.5...v3.4.0) (2022-11-14)
 
 
