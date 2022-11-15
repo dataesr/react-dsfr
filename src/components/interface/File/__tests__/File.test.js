@@ -17,7 +17,7 @@ describe('<File />', () => {
   it('renders correctly', () => {
     const component = renderer
       .create(
-        <File label="Label File" hint="Hint" message="Format de fichier non supporté" />,
+        <File label="Label File" hint="Hint" message="Format de fichier non supporté" accept=".txt, .csv" />,
       )
       .toJSON();
     expect(component).toMatchSnapshot();

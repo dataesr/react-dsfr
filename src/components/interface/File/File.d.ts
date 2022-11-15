@@ -7,6 +7,7 @@ export interface FileProps {
   onChange?: (...args: any[])=>any;
   errorMessage?: string;
   hint?: string;
+  accept?: string;
 }
 
 declare const File: React.FC<FileProps>;
