@@ -16,6 +16,7 @@ exports[`<File /> renders correctly 1`] = `
     </p>
   </label>
   <input
+    accept=".txt, .csv"
     aria-describedby="Hint"
     className="fr-upload"
     multiple={false}

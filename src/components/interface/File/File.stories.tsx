@@ -19,6 +19,14 @@ SimpleFile.args = {
 };
 SimpleFile.storyName = 'Ajout de fichier';
 
+export const AcceptFile = Template.bind({});
+AcceptFile.args = {
+  label: 'Label File',
+  hint: 'Hint',
+  accept: '.txt, .csv',
+};
+AcceptFile.storyName = 'Ajout de fichier specifique';
+
 export const MultipleFile = Template.bind({});
 MultipleFile.args = {
   multiple: true,

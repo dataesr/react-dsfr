@@ -16,6 +16,7 @@ const File = ({
   hint,
   onChange,
   multiple,
+  accept,
   ...remainingProps
 }) => {
   const _className = classNames(
@@ -38,6 +39,7 @@ const File = ({
         type="file"
         aria-describedby={hint || undefined}
         multiple={multiple}
+        accept={accept}
       />
       {errorMessage && (
       <p id="file-upload-with-error-desc-error" className="fr-error-text">
@@ -52,6 +54,7 @@ File.defaultProps = {
   className: '',
   hint: '',
   errorMessage: '',
+  accept: undefined,
   multiple: false,
   onChange: () => {},
 };
@@ -63,6 +66,7 @@ File.propTypes = {
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
   hint: PropTypes.string,
+  accept: PropTypes.string,
 };
 
 export default File;
