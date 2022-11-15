@@ -6,7 +6,7 @@
 
 [![Tests](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/dataesr/react-dsfr/actions/workflows/tests.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/dataesr/react-dsfr?color=purple) [![semantic-release: react](https://img.shields.io/badge/semantic--release-react-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.npmjs.com/package/@gouvfr/dsfr) (new componants are not yet available)
+Current version is using a degraded version of [@gouvfr/dsfr@1.7.0](https://www.npmjs.com/package/@gouvfr/dsfr) (new components are not yet available)
 
 ## Requirements
 
@@ -47,8 +47,10 @@ npm start
 
 We are using [remixicon](https://remixicon.com/).
 
-```
- <Icon
+```javascript
+import { Icon } from '@dataesr/react-dsfr';
+
+<Icon
     name="ri-bubble-chart-line"
     size="lg"
     color="#f88"
@@ -58,10 +60,10 @@ We are using [remixicon](https://remixicon.com/).
 </Icon>
 ```
 
-:warning: CDN link of css must be added to the `<head>` of your website.
+> :warning: CDN link of css must be added to the `<head>` of your website.  
 
-```
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+```html
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 ```
 
 #### Use Colors
