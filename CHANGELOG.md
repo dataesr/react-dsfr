@@ -1,3 +1,11 @@
+## [3.4.2](https://github.com/dataesr/react-dsfr/compare/v3.4.1...v3.4.2) (2022-11-17)
+
+
+### Bug Fixes
+
+* Make @storybook/react a dev dependency ([#294](https://github.com/dataesr/react-dsfr/issues/294)) ([ca207bb](https://github.com/dataesr/react-dsfr/commit/ca207bb589a9eac4a4f13e8b054ca92c49ff9c16))
+* Update README formating ([#295](https://github.com/dataesr/react-dsfr/issues/295)) ([6f1bd68](https://github.com/dataesr/react-dsfr/commit/6f1bd687b247ec1ae027c2e68ddbddc776792c62))
+
 ## [3.4.1](https://github.com/dataesr/react-dsfr/compare/v3.4.0...v3.4.1) (2022-11-15)
 
 
