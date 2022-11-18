@@ -11,7 +11,17 @@
       "rules": {
         "import/named": "off",
         "no-unused-vars": "off",
-        "import/export": "off"
+        "import/export": "off",
+        "import/no-extraneous-dependencies": [
+          "warn",
+          {
+            "devDependencies": [
+              "**/**.stories.tsx",
+              "**/.storybook/**/*.*"
+            ],
+            "peerDependencies": true
+          }
+        ]
       }
     }
   ],
