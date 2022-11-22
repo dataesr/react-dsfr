@@ -26,6 +26,13 @@ Succes.args = {
 };
 Succes.storyName = 'Succes';
 
+export const Warning = Template.bind({});
+Warning.args = {
+  title: 'Warning',
+  description: 'Attention',
+  type: 'warning',
+};
+
 export const Erreur = Template.bind({});
 Erreur.args = {
   title: 'Erreur',

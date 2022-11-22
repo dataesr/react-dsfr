@@ -6,20 +6,24 @@ export type TextInputMessageType = 'error' | 'valid' | '';
 
 export type TextInputType = 'text' | 'date' | 'number' | 'email' | 'password';
 
-export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  textarea?: boolean;
-  type?: TextInputType;
-  label?: string;
+export interface BaseTextInputProps {
   hint?: TextInputHint;
+  label?: string
   messageType?: TextInputMessageType;
   message?: string;
-  required?: boolean;
-  className?: string;
-  withAutoValidation?: boolean;
-  onBlur?: (...args: any[])=>any;
-  onChange?: (...args: any[])=>any;
-  value?: string;
+  withAutoValidation?: boolean
 }
+
+export interface TextFieldProps extends React.ComponentPropsWithRef<'input'>, BaseTextInputProps {
+  textarea?: false;
+  type?: TextInputType;
+}
+
+export interface TextareaProps extends React.ComponentPropsWithRef<'textarea'>, BaseTextInputProps {
+  textarea: true;
+}
+
+export type TextInputProps = TextFieldProps | TextareaProps;
 
 declare const TextInput: React.FC<TextInputProps>;
 
