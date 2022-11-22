@@ -1,3 +1,10 @@
+## [3.4.4](https://github.com/dataesr/react-dsfr/compare/v3.4.3...v3.4.4) (2022-11-22)
+
+
+### Bug Fixes
+
+* Update github workflow plugin version ([3fb5ae1](https://github.com/dataesr/react-dsfr/commit/3fb5ae140ee29364804a1f1d0aca69459af5d140))
+
 ## [3.4.3](https://github.com/dataesr/react-dsfr/compare/v3.4.2...v3.4.3) (2022-11-18)
 
 
