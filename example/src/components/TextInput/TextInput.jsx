@@ -56,6 +56,12 @@ const TextInputExample = () => {
         type="password"
         label="Password"
       />
+      <TextInput
+        hint="This is a textarea"
+        required
+        rows="3"
+        textarea
+      />
     </Col>
   );
 };
