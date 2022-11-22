@@ -94,7 +94,7 @@ Alert.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  type: PropTypes.oneOf(['error', 'success', 'info']),
+  type: PropTypes.oneOf(['error', 'success', 'info', 'warning']),
   small: PropTypes.bool,
   role: PropTypes.string,
   show: PropTypes.bool,
