@@ -21,12 +21,12 @@
   "dependencies": {
     "@babel/runtime": "^7.19.4",
     "@gouvfr/dsfr": "1.7.2",
-    "@storybook/react": "^6.5.13",
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^6.5.13",
     "@axe-core/react": "^4.3.1",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
