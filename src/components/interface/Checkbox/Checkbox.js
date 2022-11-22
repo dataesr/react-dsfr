@@ -13,7 +13,6 @@ import '@gouvfr/dsfr/dist/component/checkbox/checkbox.css';
 const Checkbox = forwardRef((props, ref) => {
   const {
     className,
-    disabled,
     hint,
     id,
     label,
@@ -42,7 +41,6 @@ const Checkbox = forwardRef((props, ref) => {
         type="checkbox"
         id={checkboxId.current}
         name={checkboxId.current}
-        disabled={disabled}
         ref={ref}
       />
       <label className="fr-label" htmlFor={checkboxId.current}>

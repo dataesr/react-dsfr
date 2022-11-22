@@ -1,24 +1,22 @@
 import * as React from 'react';
+import { ComponentPropsWithRef } from 'react';
 
 export type CheckboxHint = string | Object | any[];
-
-export type CheckboxDisabled = boolean | undefined;
 
 export type CheckboxMessageType = 'error' | 'valid' | '';
 
 export type CheckboxSize = 'sm' | 'md';
 
-export interface CheckboxProps {
-  className?: string;
+// Type always equals 'checkbox'
+type OmittedProps = 'type';
+
+export interface CheckboxProps extends Omit<ComponentPropsWithRef<'input'>, OmittedProps> {
   id?: string;
-  disabled?: CheckboxDisabled;
   hint?: CheckboxHint;
   label: string;
   message?: string;
   messageType?: CheckboxMessageType;
   size?: CheckboxSize;
-  defaultChecked?: boolean;
-  onClick?: (...args: any[])=>any;
 }
 
 declare const Checkbox: React.FC<CheckboxProps>;
