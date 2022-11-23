@@ -25,7 +25,7 @@ const Callout = ({
   const [color, backgroundColor] = colors;
   const calloutRef = useRef();
   const _className = classNames('fr-callout', className, {
-    [`fr-fi-${icon}`]: icon,
+    [icon]: icon,
     [`fr-callout--${colorFamily}`]: colorFamily,
   });
 
@@ -52,7 +52,7 @@ const Callout = ({
 };
 
 Callout.defaultProps = {
-  icon: 'information-line',
+  icon: 'fr-fi-information-line',
   hasInfoIcon: true,
   className: '',
   colors: [],
@@ -60,7 +60,10 @@ Callout.defaultProps = {
 };
 
 Callout.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.oneOf([null]),
+    PropTypes.string,
+  ]),
   hasInfoIcon: PropTypes.bool,
   colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   /**

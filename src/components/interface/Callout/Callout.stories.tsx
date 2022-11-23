@@ -39,13 +39,23 @@ ButtonCallout.storyName = 'Mise en avant avec bouton';
 
 export const WithoutIconCallout = Template.bind({});
 WithoutIconCallout.args = {
-  hasInfoIcon: false,
+  icon: null,
   children: [
     <CalloutTitle as="h3">Callout title</CalloutTitle>,
     <CalloutText>Callout text that might be short and concise.</CalloutText>,
   ],
 };
 WithoutIconCallout.storyName = 'Mise en avant sans icone';
+
+export const DifferentIconCallout = Template.bind({});
+DifferentIconCallout.args = {
+  icon: 'fr-fi-lock-line',
+  children: [
+    <CalloutTitle as="h3">Callout title</CalloutTitle>,
+    <CalloutText>Callout text that might be short and concise.</CalloutText>,
+  ],
+};
+DifferentIconCallout.storyName = 'Mise en avant avec une autre icone';
 
 export const ColoredCallout = Template.bind({});
 ColoredCallout.args = {
