@@ -39,12 +39,13 @@ FooterLink.defaultProps = {
   href: '',
   onClick: undefined,
   target: '_self',
+  children: null,
 };
 
 FooterLink.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   __TYPE: typeValidation('FooterLink'),
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   href: PropTypes.string,
   onClick: PropTypes.func,
   section: PropTypes.oneOf(['bottom', 'top']),

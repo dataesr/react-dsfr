@@ -135,6 +135,18 @@ SimpleCheckbox.args = {
       />
     </FooterPartners>,
     <FooterBottom>
+      <FooterLink
+        asLink={(
+          <button type="button">
+            <span
+              className="fr-fi-theme-fill fr-link--icon-left"
+              aria-controls="fr-theme-modal"
+            >
+              Paramètres d’affichage
+            </span>
+          </button>
+        )}
+      />
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterLink href="/">Footer Link</FooterLink>

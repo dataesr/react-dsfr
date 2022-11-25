@@ -22,7 +22,7 @@ const SwitchTheme = ({
   systemLabel,
   systemHint,
 }) => {
-  const [storedValue, setStoredValue] = useState('');
+  const [storedValue, setStoredValue] = useState(window.localStorage.getItem('prefers-color-scheme') || SYSTEM);
 
   const themes = [
     { label: lightLabel, value: LIGHT, svg: <Light /> },
@@ -31,11 +31,6 @@ const SwitchTheme = ({
       label: systemLabel, hint: systemHint, value: SYSTEM, svg: <System />,
     },
   ];
-
-  useEffect(() => {
-    const initialTheme = window.localStorage.getItem('prefers-color-scheme');
-    setStoredValue(initialTheme || SYSTEM);
-  }, [isOpen]);
 
   useEffect(() => {
     let tempTheme = storedValue;
