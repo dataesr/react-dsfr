@@ -6,7 +6,7 @@ export type FooterLinkSection = 'bottom' | 'top';
 
 export interface FooterLinkProps {
   __TYPE?: any;
-  children: FooterLinkChildren;
+  children?: FooterLinkChildren;
   href?: string;
   onClick?: (...args: any[])=>any;
   section?: FooterLinkSection;
