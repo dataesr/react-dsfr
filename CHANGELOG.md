@@ -1,3 +1,10 @@
+## [3.4.5](https://github.com/dataesr/react-dsfr/compare/v3.4.4...v3.4.5) (2022-11-25)
+
+
+### Bug Fixes
+
+* Multiple switch theme ([#302](https://github.com/dataesr/react-dsfr/issues/302)) ([2766515](https://github.com/dataesr/react-dsfr/commit/2766515b273b4722d744bf19dbf1d977bbfbe3c0))
+
 ## [3.4.4](https://github.com/dataesr/react-dsfr/compare/v3.4.3...v3.4.4) (2022-11-22)
 
 
