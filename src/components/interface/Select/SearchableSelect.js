@@ -179,7 +179,9 @@ const SearchableSelect = ({
                   refCount += 1;
                 }
                 return (
-                  <option
+                  <div
+                    role="option"
+                    aria-selected={selected === option.value}
                     ref={option.disabled ? null : optionsRef.current[refCount]}
                     className={classNames(
                       'select-search-option',
@@ -195,7 +197,7 @@ const SearchableSelect = ({
                     onMouseDown={() => onInternalChange(option.value, option.label)}
                   >
                     {option.label}
-                  </option>
+                  </div>
                 );
               })}
             </>
