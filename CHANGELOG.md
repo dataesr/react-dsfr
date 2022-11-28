@@ -1,3 +1,10 @@
+## [3.4.6](https://github.com/dataesr/react-dsfr/compare/v3.4.5...v3.4.6) (2022-11-28)
+
+
+### Bug Fixes
+
+* Use div for searchable select ([#303](https://github.com/dataesr/react-dsfr/issues/303)) ([74152c1](https://github.com/dataesr/react-dsfr/commit/74152c1509c529da235b9af085180819cf2a5991))
+
 ## [3.4.5](https://github.com/dataesr/react-dsfr/compare/v3.4.4...v3.4.5) (2022-11-25)
 
 
