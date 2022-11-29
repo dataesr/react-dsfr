@@ -1,3 +1,10 @@
+## [3.4.8](https://github.com/dataesr/react-dsfr/compare/v3.4.7...v3.4.8) (2022-11-29)
+
+
+### Bug Fixes
+
+* Fix tab height due to tabs-height not updated ([#308](https://github.com/dataesr/react-dsfr/issues/308)) ([37e75a5](https://github.com/dataesr/react-dsfr/commit/37e75a5df4ce2afb32dfbe1ea0089e43fcb1ba16))
+
 ## [3.4.7](https://github.com/dataesr/react-dsfr/compare/v3.4.6...v3.4.7) (2022-11-29)
 
 
