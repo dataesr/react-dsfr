@@ -51,6 +51,10 @@ const SwitchTheme = ({
     document.documentElement.setAttribute('data-fr-theme', tempTheme);
   }, [storedValue]);
 
+  const prefersColorScheme =
+    typeof window !== undefined &&
+    window.localStorage.getItem("prefers-color-scheme");
+
   return (
     <Modal
       id="fr-theme-modal"
@@ -62,7 +66,7 @@ const SwitchTheme = ({
       <ModalContent className="fr-form-group">
         <RadioGroup
           legend={legend}
-          value={window.localStorage.getItem('prefers-color-scheme')}
+          value={prefersColorScheme}
           onChange={(value) => setStoredValue(value)}
         >
           {themes.map((item) => (
