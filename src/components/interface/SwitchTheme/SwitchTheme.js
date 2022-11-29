@@ -22,7 +22,7 @@ const SwitchTheme = ({
   systemLabel,
   systemHint,
 }) => {
-  const [storedValue, setStoredValue] = useState(window.localStorage.getItem('prefers-color-scheme') || SYSTEM);
+  const [storedValue, setStoredValue] = useState('');
 
   const themes = [
     { label: lightLabel, value: LIGHT, svg: <Light /> },
@@ -33,8 +33,16 @@ const SwitchTheme = ({
   ];
 
   useEffect(() => {
+    setStoredValue(window.localStorage.getItem('prefers-color-scheme') || SYSTEM);
+  }, []);
+
+  useEffect(() => {
+    if (!storedValue) {
+      return;
+    }
+
     let tempTheme = storedValue;
-    if (!storedValue || storedValue === SYSTEM) {
+    if (storedValue === SYSTEM) {
       const preferedTheme = window.matchMedia('(prefers-color-scheme: dark)');
       tempTheme = (preferedTheme && preferedTheme.matches) ? DARK : LIGHT;
     }
