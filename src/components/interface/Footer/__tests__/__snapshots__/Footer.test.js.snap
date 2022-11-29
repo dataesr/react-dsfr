@@ -575,3 +575,296 @@ exports[`<Footer /> should render Footer properly 1`] = `
   </div>
 </footer>
 `;
+
+exports[`<Footer /> should render Footer properly 2`] = `
+<footer
+  class="fr-footer"
+  data-testid="footer"
+  id="footer"
+  role="contentinfo"
+>
+  <div
+    class="fr-footer__top"
+    data-testid="footertop"
+  >
+    <div
+      class="fr-container"
+    >
+      <div
+        class="fr-grid-row fr-grid-row--center fr-grid-row--gutters"
+      >
+        <div
+          class="fr-col-12 fr-col-sm-4 fr-col-md-2"
+        >
+          <div
+            class="fr-footer__top-cat"
+          >
+            Nom de la catégorie
+          </div>
+          <ul
+            class="fr-footer__top-list"
+          >
+            <li
+              class="fr-footer__top-item"
+              data-testid="footerlink"
+            >
+              <a
+                class="fr-footer__top-link fr-link--md"
+                href="/"
+                target="_self"
+              >
+                Lien de navigation
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="fr-container"
+  >
+    <div
+      class="fr-footer__body"
+      data-testid="footerbody"
+    >
+      <div
+        class="fr-footer__brand fr-enlarge-link"
+      >
+        <a
+          class="fr-link--md"
+          data-testid="footerlogo"
+          href="/"
+          target="_self"
+          title="Ministère de l'enseignement supérieur de la rechercher et de l'innovation"
+        >
+          <p
+            class="fr-logo"
+          >
+            Ministère de
+            <br />
+            l'enseignement
+            <br />
+            supérieur de
+            <br />
+            la rechercher
+            <br />
+            et de l'innovation
+          </p>
+        </a>
+      </div>
+      <div
+        class="fr-footer__brand-link"
+      >
+        <img
+          alt="texte alternatif"
+          src="https://fakeimg.pl/145x81/"
+        />
+      </div>
+      <div
+        class="fr-footer__content"
+      >
+        <p
+          class="fr-footer__content-desc"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <ul
+          class="fr-footer__content-list"
+        >
+          <li
+            class="fr-footer__content-item"
+          >
+            <div
+              class="fr-footer__content-link"
+            >
+              legifrance.gouv.fr
+            </div>
+          </li>
+          <li
+            class="fr-footer__content-item"
+          >
+            <div
+              class="fr-footer__content-link"
+            >
+              gouvernement.fr
+            </div>
+          </li>
+          <li
+            class="fr-footer__content-item"
+          >
+            <div
+              class="fr-footer__content-link"
+            >
+              service-public.fr
+            </div>
+          </li>
+          <li
+            class="fr-footer__content-item"
+          >
+            <div
+              class="fr-footer__content-link"
+            >
+              data.gouv.fr
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="fr-footer__partners"
+      data-testid="footerpartners"
+    >
+      <div
+        class="fr-footer__partners-logos"
+      >
+        <div
+          class="fr-footer__partners-main"
+        >
+          <div>
+            <h4
+              class="fr-footer__partners-title"
+              data-testid="title"
+            >
+              Nos partenaires
+            </h4>
+            <a
+              class="fr-footer__partners-link fr-link--md"
+              data-testid="logo"
+              href="/"
+              target="_self"
+            >
+              <img
+                alt="Logo 1"
+                class="fr-footer__logo"
+                src="img/logo1"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="fr-footer__partners-sub"
+        >
+          <ul>
+            <li>
+              <h4
+                class="fr-footer__partners-title"
+                data-testid="title"
+              >
+                Et plus...
+              </h4>
+              <a
+                class="fr-footer__partners-link fr-link--md"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 2"
+                  class="fr-footer__logo"
+                  src="img/logo2"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="fr-footer__partners-link fr-link--md"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 3"
+                  class="fr-footer__logo"
+                  src="img/logo3"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="fr-footer__partners-link fr-link--md"
+                href="/"
+                target="_self"
+              >
+                <img
+                  alt="Logo 4"
+                  class="fr-footer__logo"
+                  src="img/logo4"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fr-footer__bottom"
+      data-testid="bottom"
+    >
+      <ul
+        class="fr-footer__bottom-list"
+      >
+        <li
+          class="fr-footer__bottom-item"
+          data-testid="link"
+        >
+          <a
+            class="fr-footer__bottom-link fr-link--md"
+            href="/"
+            target="_self"
+          >
+            Plan du site
+          </a>
+        </li>
+        <li
+          class="fr-footer__bottom-item"
+        >
+          <a
+            class="fr-footer__bottom-link fr-link--md"
+            href="/"
+            target="_self"
+          >
+            Accessibilité: non/partiellement/totalement conforme
+          </a>
+        </li>
+        <li
+          class="fr-footer__bottom-item"
+        >
+          <a
+            class="fr-footer__bottom-link fr-link--md"
+            href="/"
+            target="_self"
+          >
+            Mentions légales
+          </a>
+        </li>
+        <li
+          class="fr-footer__bottom-item"
+        >
+          <a
+            class="fr-footer__bottom-link fr-link--md"
+            href="/"
+            target="_self"
+          >
+            Données personnelles
+          </a>
+        </li>
+        <li
+          class="fr-footer__bottom-item"
+        >
+          <a
+            class="fr-footer__bottom-link fr-link--md"
+            href="/"
+            target="_self"
+          >
+            Gestion des cookies
+          </a>
+        </li>
+      </ul>
+      <div
+        class="fr-footer__bottom-copy"
+      >
+        © République Française 2020
+      </div>
+    </div>
+  </div>
+</footer>
+`;
