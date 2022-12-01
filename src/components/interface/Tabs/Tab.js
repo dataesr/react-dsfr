@@ -25,10 +25,13 @@ const Tab = ({
 
 Tab.defaultProps = {
   className: '',
+  icon: '',
 };
 
 Tab.propTypes = {
   className: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   index: PropTypes.number.isRequired,
   activeTab: PropTypes.number.isRequired,
   children: PropTypes.oneOfType([

@@ -7,6 +7,8 @@ export interface TabProps {
   children?: TabChildren;
   index: number;
   activeTab: number;
+  label: string;
+  icon?: string;
 }
 
 declare const Tab: React.FC<TabProps>;
