@@ -8,6 +8,7 @@ export interface NavItemProps {
   link?: string;
   current?: boolean;
   asLink?: React.ReactElement<any>;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>any;
   /**
      * @ignore
      */

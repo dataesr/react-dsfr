@@ -8,7 +8,7 @@ import NavItemWithSubItems from './NavItemWithSubItems';
 import HeaderContext from './headerContext';
 
 const NavItem = ({
-  children, title, link, path, current, asLink, ...remainingProps
+  children, title, link, path, current, asLink, onClick, ...remainingProps
 }) => {
   const { onOpenNav } = useContext(HeaderContext);
 
@@ -34,7 +34,12 @@ const NavItem = ({
         {...dataAttributes.getAll(remainingProps)}
       >
         <Link
-          onClick={() => onOpenNav(false)}
+          onClick={(e) => {
+            if (onClick) {
+              onClick(e);
+            }
+            onOpenNav(false);
+          }}
           as={asLink}
           className="fr-nav__link"
           href={link}
@@ -53,6 +58,7 @@ NavItem.defaultProps = {
   current: false,
   path: '',
   asLink: null,
+  onClick: undefined,
 };
 
 NavItem.propTypes = {
@@ -65,6 +71,7 @@ NavItem.propTypes = {
   link: PropTypes.string,
   current: PropTypes.bool,
   asLink: PropTypes.element,
+  onClick: PropTypes.func,
   /**
    * @ignore
    */

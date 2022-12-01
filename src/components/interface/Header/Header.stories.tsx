@@ -97,6 +97,7 @@ SimpleCheckbox.args = {
         </MegaNavSubItem>
       </MegaNavItem>
       <NavItem title="nav item #4" link="/" current />
+      <NavItem title="nav item onClick" link="#" onClick={() => console.log('NavItem onClick')} />
     </HeaderNav>],
 };
 SimpleCheckbox.storyName = 'En-tête';
