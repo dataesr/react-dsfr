@@ -1,6 +1,8 @@
 name: Tests
 
-on: push
+on:
+  - push
+  - pull_request
 
 jobs:
   tests:
@@ -22,5 +24,5 @@ jobs:
         with:
           status: ${{ job.status }}
           steps: ${{ toJson(steps) }}
-          channel: '#github-tests'
+          channel: "#github-tests"
         if: always()
