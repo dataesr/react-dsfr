@@ -1,3 +1,10 @@
+## [3.4.9](https://github.com/dataesr/react-dsfr/compare/v3.4.8...v3.4.9) (2022-12-01)
+
+
+### Bug Fixes
+
+* **SwitchMode:** fix SSR fix [#290](https://github.com/dataesr/react-dsfr/issues/290) ([#309](https://github.com/dataesr/react-dsfr/issues/309)) ([8fae6c1](https://github.com/dataesr/react-dsfr/commit/8fae6c139e028324315fc9e9ff6a29dbf2582d1c))
+
 ## [3.4.8](https://github.com/dataesr/react-dsfr/compare/v3.4.7...v3.4.8) (2022-11-29)
 
 
