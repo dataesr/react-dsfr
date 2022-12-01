@@ -9,10 +9,11 @@ import typeValidation from '../../../utils/type-validation';
 const FooterTopCategory = ({
   children, title, n, offset, className, ...remainingProps
 }) => {
-  const links = Children.toArray(children)
+  const childrenArray = Children.toArray(children);
+  const links = childrenArray
     .filter((link) => link && link.props.__TYPE === 'FooterLink')
     .map((link) => cloneElement(link, { section: 'top' }));
-  const childs = children.filter((link) => link.props.__TYPE !== 'FooterLink');
+  const childs = childrenArray.filter((link) => link.props.__TYPE !== 'FooterLink');
   return (
     <Col
       n={n}
