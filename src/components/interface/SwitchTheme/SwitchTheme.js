@@ -51,9 +51,8 @@ const SwitchTheme = ({
     document.documentElement.setAttribute('data-fr-theme', tempTheme);
   }, [storedValue]);
 
-  const prefersColorScheme =
-    typeof window !== undefined &&
-    window.localStorage.getItem("prefers-color-scheme");
+  const prefersColorScheme = typeof window !== 'undefined'
+    && window.localStorage.getItem('prefers-color-scheme');
 
   return (
     <Modal
