@@ -576,7 +576,7 @@ exports[`<Footer /> should render Footer properly 1`] = `
 </footer>
 `;
 
-exports[`<Footer /> should render Footer properly 2`] = `
+exports[`<Footer /> should render Footer properly with only one child under FooterTopCategory 1`] = `
 <footer
   class="fr-footer"
   data-testid="footer"
