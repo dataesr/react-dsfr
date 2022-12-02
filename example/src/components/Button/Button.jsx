@@ -31,11 +31,14 @@ const ButtonExample = () => {
         <Col n="4">
           <Button title="title" hasBorder={false}>Button tertiary #2</Button>
         </Col>
-        <Col n="6">
+        <Col n="4">
           <Button ref={ref} title="title" colors={['#008941', '#fff']}>Button colored</Button>
         </Col>
-        <Col n="6">
+        <Col n="4">
           <Button icon="ri-alert-fill" iconPosition="right" title="title">icon on the right</Button>
+        </Col>
+        <Col n="4">
+          <Button icon="fr-fi-theme-fill" />
         </Col>
         <Col n="6">
           <Button size="sm" secondary title="title">
