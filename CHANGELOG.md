@@ -1,3 +1,10 @@
+## [3.4.12](https://github.com/dataesr/react-dsfr/compare/v3.4.11...v3.4.12) (2022-12-02)
+
+
+### Bug Fixes
+
+* **Header:** :technologist: Add onClick prop on NavItem ([#312](https://github.com/dataesr/react-dsfr/issues/312)) ([34eeb88](https://github.com/dataesr/react-dsfr/commit/34eeb885638ec7780f618b05e703a550415406eb))
+
 ## [3.4.11](https://github.com/dataesr/react-dsfr/compare/v3.4.10...v3.4.11) (2022-12-02)
 
 
