@@ -41,7 +41,6 @@ const Button = forwardRef((props, ref) => {
     `fr-btn--${size} fr-btn`,
     className,
     {
-      'fr-fi-icon': !children && icon,
       'fr-btn--secondary': secondary,
       'fr-btn--tertiary': tertiary && hasBorder,
       'fr-btn--tertiary-no-outline': !hasBorder,
