@@ -109,6 +109,11 @@ const HeaderExample = () => {
             current={path.startsWith('/page-2')}
             asLink={<RouterLink to="/page-2" />}
           />
+          <NavItem
+            title="onClick"
+            current={false}
+            onClick={() => console.log('NavItem click')}
+          />
           <NavItem title="Pages">
             <NavSubItem
               current={path.startsWith('/page-1')}

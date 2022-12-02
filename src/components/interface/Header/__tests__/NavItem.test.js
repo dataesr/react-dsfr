@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   NavItem, NavSubItem,
 } from '../index';
+import HeaderContext from '../headerContext';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -44,5 +45,24 @@ describe('<NavItem />', () => {
     expect(component.find('button').text()).toBe('title');
     component.find('[type="button"]').simulate('click');
     expect(component.find('.fr-collapse--expanded').exists()).toBeTruthy();
+  });
+
+  it('should trigger onClick action', () => {
+    const fn = jest.fn();
+    const mockOnOpenNav = jest.fn();
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
+    const ctx = { onOpenNav: mockOnOpenNav };
+    const component = mount(
+      <HeaderContext.Provider value={ctx}>
+        <NavItem
+          title="title"
+          onClick={fn}
+        />
+      </HeaderContext.Provider>,
+    );
+    expect(component.find('a').text()).toBe('title');
+    component.find('a').simulate('click');
+    expect(mockOnOpenNav).toBeCalledWith(false);
+    expect(fn).toBeCalled();
   });
 });
