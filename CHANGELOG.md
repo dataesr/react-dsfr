@@ -1,3 +1,11 @@
+## [3.4.10](https://github.com/dataesr/react-dsfr/compare/v3.4.9...v3.4.10) (2022-12-02)
+
+
+### Bug Fixes
+
+* **Footer:** :bug: Fix "filter" bug when FooterTopCategory has only one child ([#311](https://github.com/dataesr/react-dsfr/issues/311)) ([e8035a2](https://github.com/dataesr/react-dsfr/commit/e8035a29cca78cc9283d07985fcf3bb8b732e3e5))
+* **ts:** fix Tab types ([#310](https://github.com/dataesr/react-dsfr/issues/310)) ([e65341f](https://github.com/dataesr/react-dsfr/commit/e65341f0803688adbcd8fd601ff0bf91a2389169))
+
 ## [3.4.9](https://github.com/dataesr/react-dsfr/compare/v3.4.8...v3.4.9) (2022-12-01)
 
 
