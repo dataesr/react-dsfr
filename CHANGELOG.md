@@ -1,3 +1,10 @@
+## [3.4.11](https://github.com/dataesr/react-dsfr/compare/v3.4.10...v3.4.11) (2022-12-02)
+
+
+### Bug Fixes
+
+* Display only icon button ([#314](https://github.com/dataesr/react-dsfr/issues/314)) ([5a7e83d](https://github.com/dataesr/react-dsfr/commit/5a7e83d9a6b1d928e274793ef1a3db8a79c5d643))
+
 ## [3.4.10](https://github.com/dataesr/react-dsfr/compare/v3.4.9...v3.4.10) (2022-12-02)
 
 
