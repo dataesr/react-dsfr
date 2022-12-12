@@ -3,7 +3,7 @@ Fix DSFR issue
 https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
 */
 .fr-tabs__panel:not(.fr-tabs__panel--selected) {
-    display: none;
+  display: none;
 }
 
 .fr-tabs {
@@ -11,11 +11,11 @@ https://gouvfr.atlassian.net/servicedesk/customer/portal/1/DSFR-322
 }
 
 span.error {
-    color: var(--error-main-525);
+  color: var(--error-main-525);
 }
 
 .fr-table thead th.sortable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /** reset icon url */
@@ -23,12 +23,12 @@ span.error {
 .fr-card:before,
 .fr-tag--dismiss:after,
 .fr-badge:before {
-    display: none !important;
+  display: none !important;
 }
 
 /** Icons system from remixicon */
 
-[target=_blank]:after,
+[target="_blank"]:after,
 .fr-search-bar button.fr-btn:before,
 .fr-error-text:before,
 .fr-valid-text:before,
@@ -36,9 +36,9 @@ span.error {
 .fr-header__navbar .fr-btn--search:before,
 .fr-nav__btn:after,
 .fr-sidemenu__btn:after,
-button.fr-accordion__btn[aria-expanded=true]:after,
+button.fr-accordion__btn[aria-expanded="true"]:after,
 button.fr-accordion__btn:after,
-.fr-link--close:after,
+.fr-link--close:before,
 .fr-notice button.fr-btn--close:before,
 button[class^="fr-pagination__link"]:before,
 a[class^="fr-btn"]:before,
@@ -52,25 +52,25 @@ div.fr-notice--info .fr-notice__body:before,
 #ds-fr--share-copy .fr-btn--copy:before,
 #ds-fr--share-mail .fr-btn--mail:before,
 #ds-fr--share-twitter .fr-btn--twitter:before {
-    font-family: "remixicon";
-    box-shadow: none;
-    background-color: inherit !important;
-    mask-image: inherit !important;
-    -webkit-mask-image: inherit !important;
-    line-height: 1.2rem;
-    font-size: 1rem;
+  font-family: "remixicon";
+  box-shadow: none;
+  background-color: inherit !important;
+  mask-image: inherit !important;
+  -webkit-mask-image: inherit !important;
+  line-height: 1.2rem;
+  font-size: 1rem;
 }
 
 /**
   Accordion
  */
 button.fr-accordion__btn:after {
-    content: '\ea13';
-    color: var(--text-action-high-grey);
+  content: "\ea13";
+  color: var(--text-action-high-grey);
 }
 
-button.fr-accordion__btn[aria-expanded=true]:after {
-    content: '\f1af';
+button.fr-accordion__btn[aria-expanded="true"]:after {
+  content: "\f1af";
 }
 
 /**
@@ -78,43 +78,39 @@ button.fr-accordion__btn[aria-expanded=true]:after {
  */
 
 [class^="fr-alert"]:before {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .fr-alert--success:before,
 .fr-valid-text:before {
-    content: '\eb80';
+  content: "\eb80";
 }
 
 .fr-alert--error:before,
 .fr-error-text:before {
-    content: '\f0eb';
+  content: "\f0eb";
 }
 
 .fr-alert--info:before {
-    content: '\ee58';
+  content: "\ee58";
 }
 /**********************************/
 
 .fr-notice button.fr-btn--close:before,
-.fr-link--close:after {
-    content: '\eb99';
-}
-
-.fr-link--close:after {
-    line-height: 1.8rem;
+.fr-link--close:before {
+  content: "\eb99" !important;
 }
 
 /**
   Footer, Link
  */
 
-[target=_blank]:after,
-[class^="fr-link"][target=_blank]:after {
-    content: '\ecaf' !important;
-    height: inherit;
-    --icon-size: 1rem;
-    font-size: 0.9rem;
+[target="_blank"]:after,
+[class^="fr-link"][target="_blank"]:after {
+  content: "\ecaf" !important;
+  height: inherit;
+  --icon-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /**
@@ -122,26 +118,26 @@ button.fr-accordion__btn[aria-expanded=true]:after {
  */
 
 .fr-search-bar button.fr-btn:before {
-    content: '\f0d1';
+  content: "\f0d1";
 }
 
 .fr-header__navbar .fr-btn--menu:before {
-    content: '\ef3e';
-    font-size: 1.2rem;
+  content: "\ef3e";
+  font-size: 1.2rem;
 }
 
 .fr-header__navbar .fr-btn--search:before {
-    content: '\f0d1';
-    font-size: 1.2rem;
+  content: "\f0d1";
+  font-size: 1.2rem;
 }
 
 .fr-nav__btn:after {
-    content: '\ea4e';
+  content: "\ea4e";
 }
 
 .fr-fi-theme-fill:after,
 .fr-fi-theme-fill:before {
-    --icon-size: 1rem;
+  --icon-size: 1rem;
 }
 
 /**
@@ -149,33 +145,33 @@ button.fr-accordion__btn[aria-expanded=true]:after {
  */
 
 #ds-fr--share-facebook .fr-btn--facebook:before {
-    content: '\ecbb';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\ecbb";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 #ds-fr--share-twitter .fr-btn--twitter:before {
-    content: '\f23b';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\f23b";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 #ds-fr--share-linkedin .fr-btn--linkedin:before {
-    content: '\eeb4';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\eeb4";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 #ds-fr--share-mail .fr-btn--mail:before {
-    content: '\eef6';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\eef6";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 #ds-fr--share-copy .fr-btn--copy:before {
-    content: '\ecd5';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\ecd5";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 /**
@@ -183,24 +179,24 @@ button.fr-accordion__btn[aria-expanded=true]:after {
  */
 
 button[class^="fr-pagination__link"]:before {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 button.fr-pagination__link--prev:before {
-    content: '\ea64';
+  content: "\ea64";
 }
 
 button.fr-pagination__link--next:before {
-    content: '\ea6e';
+  content: "\ea6e";
 }
 
 button.fr-pagination__link--first:before {
-    content: '\f142';
+  content: "\f142";
 }
 
 button.fr-pagination__link--last:before {
-    content: '\f146';
+  content: "\f146";
 }
 
 /**
@@ -208,24 +204,23 @@ button.fr-pagination__link--last:before {
  */
 
 div.fr-notice--info .fr-notice__body:before {
-    content: '\ee59';
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+  content: "\ee59";
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 .fr-translate button.fr-translate__btn:before {
-    content: '\f226';
+  content: "\f226";
 }
 
 .fr-translate button.fr-translate__btn:after {
-    content: '\ea4d';
+  content: "\ea4d";
 }
-
 
 /**
     Sidemenu
   */
 
 .fr-sidemenu__btn[aria-expanded]:after {
-  content: '\ea4e' !important;
+  content: "\ea4e" !important;
 }
