@@ -1,3 +1,10 @@
+## [3.4.13](https://github.com/dataesr/react-dsfr/compare/v3.4.12...v3.4.13) (2022-12-12)
+
+
+### Bug Fixes
+
+* Closable alert icon ([#317](https://github.com/dataesr/react-dsfr/issues/317)) ([f12d53d](https://github.com/dataesr/react-dsfr/commit/f12d53d39c47b6d9319db9c77b2bc5c196d6d848))
+
 ## [3.4.12](https://github.com/dataesr/react-dsfr/compare/v3.4.11...v3.4.12) (2022-12-02)
 
 
