@@ -1,3 +1,10 @@
+## [3.4.14](https://github.com/dataesr/react-dsfr/compare/v3.4.13...v3.4.14) (2022-12-15)
+
+
+### Bug Fixes
+
+* header onSearch on empty child ([#318](https://github.com/dataesr/react-dsfr/issues/318)) ([6c67fbf](https://github.com/dataesr/react-dsfr/commit/6c67fbf9631fdaf3eec29e0c0fdc3a70f53e93d7))
+
 ## [3.4.13](https://github.com/dataesr/react-dsfr/compare/v3.4.12...v3.4.13) (2022-12-12)
 
 
