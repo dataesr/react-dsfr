@@ -13,8 +13,8 @@ import '@gouvfr/dsfr/dist/component/navigation/navigation.css';
 import '@gouvfr/dsfr/dist/component/header/header.css';
 
 /*
-* react-ds-fr
-*/
+ * react-ds-fr
+ */
 import '../../../style/color.css';
 import '../../../style/custom.css';
 import '../../../style/reset-dsfr.css';
@@ -47,14 +47,16 @@ const Header = ({
   };
 
   deepForEach(children, (child) => {
-    if (!child) return;
+    if (!child) {
+      return;
+    }
     if (child.type && child.props.__TYPE === 'HeaderNav') {
       isNavBar = true;
     }
     if (child.type && child.props.__TYPE === 'ToolItemGroup') {
       isNavTool = true;
     }
-    if (child && !!child.props.onSearch) {
+    if (child.props && !!child.props.onSearch) {
       isSearchBar = true;
     }
   });
@@ -83,29 +85,33 @@ const Header = ({
           (child, index) => cloneElement(child, { key: index, closeButtonLabel }),
         )}
         {isNavTool && openNav && !isNavBar && (
-        <div className={`fr-header__menu fr-modal ${openNav ? 'fr-modal--opened' : ''}`}>
-          <div className="fr-container">
-            <nav
-              id="header-navigation"
-              className="fr-nav"
-              role="navigation"
-              aria-label="Menu principal"
-            >
-              <button
-                onClick={() => setOpenNav(false)}
-                type="button"
-                className="fr-link--close fr-link"
-                title={closeButtonLabel}
-                aria-controls="header-nav-popin"
+          <div
+            className={`fr-header__menu fr-modal ${
+              openNav ? 'fr-modal--opened' : ''
+            }`}
+          >
+            <div className="fr-container">
+              <nav
+                id="header-navigation"
+                className="fr-nav"
+                role="navigation"
+                aria-label="Menu principal"
               >
-                {closeButtonLabel}
-              </button>
-            </nav>
-            <div className="fr-header__menu-links">
-              <ul className="fr-links-group" />
+                <button
+                  onClick={() => setOpenNav(false)}
+                  type="button"
+                  className="fr-link--close fr-link"
+                  title={closeButtonLabel}
+                  aria-controls="header-nav-popin"
+                >
+                  {closeButtonLabel}
+                </button>
+              </nav>
+              <div className="fr-header__menu-links">
+                <ul className="fr-links-group" />
+              </div>
             </div>
           </div>
-        </div>
         )}
       </header>
     </HeaderContext.Provider>
