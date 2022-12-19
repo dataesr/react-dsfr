@@ -6,15 +6,21 @@ import { RadioGroup, Radio } from '../Radio';
 
 const ConsentService = forwardRef((props, ref) => {
   const {
-    className,
-    description,
-    title,
     acceptLabel,
-    refuseLabel,
+    className,
     defaultConsent,
+    description,
+    disabled,
+    name,
+    onChange,
+    refuseLabel,
+    title,
     ...remainingProps
   } = props;
-  const _className = classNames('fr-consent-service ds-fr--border-bottom', className);
+  const _className = classNames(
+    'fr-consent-service ds-fr--border-bottom',
+    className,
+  );
   return (
     <div
       className={_className}
@@ -23,39 +29,47 @@ const ConsentService = forwardRef((props, ref) => {
     >
       <div className="fr-consent-service__radios">
         <RadioGroup
-          legend={title}
+          disabled={disabled}
           isInline
+          legend={title}
+          name={name}
+          onChange={onChange}
         >
           <Radio
-            label={acceptLabel}
-            value={`${acceptLabel.toLowerCase().replace(/\s+/g, '')}`}
             defaultChecked={defaultConsent === 'accept'}
+            disabled={disabled}
+            label={acceptLabel}
+            value="accept"
           />
           <Radio
-            label={refuseLabel}
-            value={`${refuseLabel.toLowerCase().replace(/\s+/g, '')}`}
             defaultChecked={defaultConsent === 'refuse'}
+            disabled={disabled}
+            label={refuseLabel}
+            value="refuse"
           />
         </RadioGroup>
       </div>
-      <p className="fr-consent-service__desc">
-        {description}
-      </p>
+      <p className="fr-consent-service__desc">{description}</p>
     </div>
   );
 });
 
 ConsentService.defaultProps = {
   description: '',
+  disabled: false,
   className: '',
+  onChange: () => null,
 };
 
 ConsentService.propTypes = {
+  acceptLabel: PropTypes.string.isRequired,
   className: PropTypes.string,
-  title: PropTypes.string.isRequired,
   defaultConsent: PropTypes.oneOf(['accept', 'refuse']).isRequired,
   description: PropTypes.string,
-  acceptLabel: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   refuseLabel: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 export default ConsentService;
