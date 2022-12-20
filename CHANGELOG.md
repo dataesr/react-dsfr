@@ -1,3 +1,10 @@
+## [3.4.15](https://github.com/dataesr/react-dsfr/compare/v3.4.14...v3.4.15) (2022-12-20)
+
+
+### Bug Fixes
+
+* Fix breadcrumbs icon ([#322](https://github.com/dataesr/react-dsfr/issues/322)) ([7a5c11e](https://github.com/dataesr/react-dsfr/commit/7a5c11ed32c7add885a9951b77681cf238a7a769))
+
 ## [3.4.14](https://github.com/dataesr/react-dsfr/compare/v3.4.13...v3.4.14) (2022-12-15)
 
 
