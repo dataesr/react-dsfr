@@ -6,6 +6,7 @@ export interface TabsProps {
   className?: string;
   defaultActiveTab?: number;
   children: TabsChildren;
+  onChange?: (index: number) => void
 }
 
 declare const Tabs: React.FC<TabsProps>;
