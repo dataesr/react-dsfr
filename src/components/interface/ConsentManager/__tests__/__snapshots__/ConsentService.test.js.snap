@@ -33,7 +33,7 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               onChange={[Function]}
               required={false}
               type="radio"
-              value="toutaccepter"
+              value="accept"
             />
             <label
               className="fr-label"
@@ -50,7 +50,7 @@ exports[`<ConsentService /> should render ConsentService properly 1`] = `
               onChange={[Function]}
               required={false}
               type="radio"
-              value="toutrefuser"
+              value="refuse"
             />
             <label
               className="fr-label"

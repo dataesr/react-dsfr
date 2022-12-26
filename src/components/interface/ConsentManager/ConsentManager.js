@@ -30,7 +30,7 @@ const ConsentManager = ({
     const responseObject = {};
     service.map((c) => {
       const input = c.ref.current.querySelector('input');
-      responseObject[input.value] = input.checked;
+      responseObject[input.name] = input.checked;
       return input.checked;
     });
     confirmConsent(responseObject);
@@ -39,14 +39,14 @@ const ConsentManager = ({
   return (
     <>
       {isBannerOpen && (
-      <ConsentBanner
-        acceptBannerButton={acceptBannerButton}
-        refuseBannerButton={refuseBannerButton}
-        bannerButtons={bannerButtons}
-        openConsentModal={openConsentModal}
-        title={bannerTitle}
-        description={bannerDescription}
-      />
+        <ConsentBanner
+          acceptBannerButton={acceptBannerButton}
+          refuseBannerButton={refuseBannerButton}
+          bannerButtons={bannerButtons}
+          openConsentModal={openConsentModal}
+          title={bannerTitle}
+          description={bannerDescription}
+        />
       )}
       <ConsentModal
         confirmConsent={manageDataConsent}

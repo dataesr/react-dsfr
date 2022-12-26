@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-export type ConsentManagerChildren = React.ReactNode[] | React.ReactElement<any>;
+export type ConsentManagerChildren =
+  | React.ReactNode[]
+  | React.ReactElement<any>;
 
 export interface ConsentManagerBannerButtons {
   refuse?: {
@@ -15,21 +17,22 @@ export interface ConsentManagerBannerButtons {
 }
 
 export interface ConsentManagerProps {
+  acceptBannerButton: (...args: any[]) => any;
+  bannerButtons: ConsentManagerBannerButtons;
+  bannerDescription: string;
+  bannerTitle?: string;
   children: ConsentManagerChildren;
-  isModalOpen: boolean;
-  isBannerOpen?: boolean;
   confirmButtonLabel?: string;
   confirmButtonTitle?: string;
-  bannerDescription: string;
-  modalTitle: string;
+  confirmConsent: (...args: any[]) => any;
+  isBannerOpen?: boolean;
+  isModalOpen: boolean;
   modalCloseLabel: string;
   modalCloseTitle: string;
-  bannerTitle?: string;
-  setIsModalOpen: (...args: any[])=>any;
-  confirmConsent: (...args: any[])=>any;
-  refuseBannerButton: (...args: any[])=>any;
-  acceptBannerButton: (...args: any[])=>any;
-  bannerButtons: ConsentManagerBannerButtons;
+  modalTitle: string;
+  name: string;
+  refuseBannerButton: (...args: any[]) => any;
+  setIsModalOpen: (...args: any[]) => any;
 }
 
 declare const ConsentManager: React.FC<ConsentManagerProps>;
