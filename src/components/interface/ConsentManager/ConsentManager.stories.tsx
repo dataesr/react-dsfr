@@ -123,6 +123,7 @@ ModalOpenedConsentManager.args = {
       name="mandatory"
       refuseLabel="Refuser"
       title="Cookies obligatoires"
+      value="accept"
     />,
     <ConsentService
       description="Identifie les visiteurs en provenance de publications Facebook."
@@ -139,6 +140,15 @@ ModalOpenedConsentManager.args = {
       acceptLabel="Accepter"
       refuseLabel="Refuser"
       defaultConsent="accept"
+    />,
+    <ConsentService
+      description="Permet d'analyser les statistiques de consultation de notre site."
+      name="youtube"
+      title="Youtube"
+      acceptLabel="Accepter"
+      refuseLabel="Refuser"
+      defaultConsent="refuse"
+      value="accept"
     />,
   ],
 };
