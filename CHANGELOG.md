@@ -1,3 +1,15 @@
+# [3.5.0](https://github.com/dataesr/react-dsfr/compare/v3.4.15...v3.5.0) (2022-12-26)
+
+
+### Bug Fixes
+
+* **ConsentManager:** :technologist: Improvement of the APIs of ConsentManager & ConsentService to be able to manage consents correctly ([#319](https://github.com/dataesr/react-dsfr/issues/319)) ([ec00810](https://github.com/dataesr/react-dsfr/commit/ec008107bd419b24f20e128b13cbd370f655072a))
+
+
+### Features
+
+* Add a onChange on Tabs ([#323](https://github.com/dataesr/react-dsfr/issues/323)) ([e69c321](https://github.com/dataesr/react-dsfr/commit/e69c32152529af7dc0f60253aa0445d9b038add3))
+
 ## [3.4.15](https://github.com/dataesr/react-dsfr/compare/v3.4.14...v3.4.15) (2022-12-20)
 
 
