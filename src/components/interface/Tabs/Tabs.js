@@ -14,7 +14,7 @@ import '@gouvfr/dsfr/dist/component/tab/tab.css';
  * @visibleName Tabs
  */
 const Tabs = ({
-  className, children, defaultActiveTab, ...remainingProps
+  className, children, defaultActiveTab, onChange, ...remainingProps
 }) => {
   const [activeTab, setActiveTab] = useState(() => defaultActiveTab);
   const tabsPanel = Children.toArray(children).map((child, index) => cloneElement(child, {
@@ -22,28 +22,35 @@ const Tabs = ({
     index,
   }));
 
+  const changeTab = (index) => {
+    setActiveTab(index);
+    if (onChange) {
+      onChange(index);
+    }
+  };
+
   const onKeyDownTab = (e, index) => {
     // Behavior from WAI-ARIA Authoring Practices 1.1
     // https://www.w3.org/TR/wai-aria-practices/#keyboard-interaction-19
     switch (e.key) {
       case 'ArrowRight':
         e.preventDefault();
-        setActiveTab((index + 1) % tabsPanel.length);
+        changeTab((index + 1) % tabsPanel.length);
         break;
 
       case 'ArrowLeft':
         e.preventDefault();
-        setActiveTab(index - 1 < 0 ? tabsPanel.length - 1 : index - 1);
+        changeTab(index - 1 < 0 ? tabsPanel.length - 1 : index - 1);
         break;
 
       case 'Home':
         e.preventDefault();
-        setActiveTab(0);
+        changeTab(0);
         break;
 
       case 'End':
         e.preventDefault();
-        setActiveTab(tabsPanel.length - 1);
+        changeTab(tabsPanel.length - 1);
         break;
 
       default:
@@ -65,7 +72,7 @@ const Tabs = ({
           <TabButton
             key={element.props.label}
             activeTab={activeTab}
-            onClickTab={setActiveTab}
+            onClickTab={changeTab}
             onKeyDownTab={onKeyDownTab}
             index={index}
             label={element.props.label}
@@ -81,11 +88,13 @@ const Tabs = ({
 Tabs.defaultProps = {
   className: '',
   defaultActiveTab: 0,
+  onChange: undefined,
 };
 
 Tabs.propTypes = {
   className: PropTypes.string,
   defaultActiveTab: PropTypes.number,
+  onChange: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

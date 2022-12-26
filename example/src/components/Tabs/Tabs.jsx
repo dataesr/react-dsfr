@@ -6,7 +6,7 @@ import {
 
 const TabsExample = () => (
   <Col>
-    <Tabs>
+    <Tabs onChange={(index) => { console.log(index); }}>
       <Tab label="Label tab #1">
         <h3>Content tab #1</h3>
         <p>
