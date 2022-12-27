@@ -1,3 +1,10 @@
+## [3.5.1](https://github.com/dataesr/react-dsfr/compare/v3.5.0...v3.5.1) (2022-12-27)
+
+
+### Bug Fixes
+
+* ConsentService API ([#324](https://github.com/dataesr/react-dsfr/issues/324)) ([15e5176](https://github.com/dataesr/react-dsfr/commit/15e5176b6e51841b80011f96e91ac559d6d2fb9f))
+
 # [3.5.0](https://github.com/dataesr/react-dsfr/compare/v3.4.15...v3.5.0) (2022-12-26)
 
 
