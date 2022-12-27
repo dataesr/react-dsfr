@@ -12,6 +12,7 @@ export interface ConsentServiceProps {
   onChange?: (...args: any[]) => any;
   refuseLabel: string;
   title: string;
+  value?: ConsentServiceDefaultConsent;
 }
 
 declare const ConsentService: React.FC<ConsentServiceProps>;

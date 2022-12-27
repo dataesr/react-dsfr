@@ -13,7 +13,7 @@ const ConsentModal = ({
   children,
   className,
   isOpen,
-  setIsOpen,
+  close,
   closeLabel,
   closeTitle,
   title,
@@ -30,18 +30,21 @@ const ConsentModal = ({
   const childs = consentChildren.map((child, i) => cloneElement(child, {
     ref: refs.current[i],
   }));
+  const consents = childs
+    .map((c) => c.ref.current?.querySelector('input'))
+    .reduce((acc, input) => ({ ...acc, [input?.name]: input?.checked }), {});
 
   return (
     <Modal
       isOpen={isOpen}
-      hide={() => setIsOpen(false)}
+      hide={close}
       className={_className}
       id="fr-consent-modal"
       aria-labelledby="fr-consent-modal-title"
       {...dataAttributes.getAll(remainingProps)}
     >
       <ModalClose
-        hide={() => setIsOpen(false)}
+        hide={close}
         title={closeTitle}
       >
         {closeLabel}
@@ -53,7 +56,7 @@ const ConsentModal = ({
           <li>
             <Button
               title={confirmButtonTitle || confirmButtonLabel}
-              onClick={() => confirmConsent(childs)}
+              onClick={() => confirmConsent(consents)}
             >
               {confirmButtonLabel}
             </Button>
@@ -78,7 +81,7 @@ ConsentModal.propTypes = {
   confirmButtonTitle: PropTypes.string.isRequired,
   closeTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  setIsOpen: PropTypes.func.isRequired,
+  close: PropTypes.func.isRequired,
   confirmConsent: PropTypes.func.isRequired,
 };
 export default ConsentModal;

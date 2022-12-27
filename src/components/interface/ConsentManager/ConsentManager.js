@@ -26,14 +26,8 @@ const ConsentManager = ({
   const openConsentModal = (v) => {
     setIsModalOpen(v);
   };
-  const manageDataConsent = (service) => {
-    const responseObject = {};
-    service.map((c) => {
-      const input = c.ref.current.querySelector('input');
-      responseObject[input.name] = input.checked;
-      return input.checked;
-    });
-    confirmConsent(responseObject);
+  const manageDataConsent = (consents) => {
+    confirmConsent(consents);
     openConsentModal(false);
   };
   return (
