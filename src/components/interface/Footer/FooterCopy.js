@@ -9,7 +9,9 @@ const FooterCopy = ({ children, className, ...remainingProps }) => (
     className={classNames('fr-footer__bottom-copy', className)}
     {...dataAttributes.getAll(remainingProps)}
   >
-    {children}
+    <p>
+      {children}
+    </p>
   </div>
 );
 FooterCopy.propTypes = {

@@ -139,17 +139,15 @@ const FooterExample = () => {
           <FooterLink href="/">Gestion des cookies</FooterLink>
           <FooterLink href="/" target="_blank">Footer Link</FooterLink>
           <FooterCopy>
-            <p>
-              Sauf mention contraire, tous les contenus de ce site sont sous
-              {' '}
-              <a
-                href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
-                target="_blank"
-                rel="noreferrer"
-              >
-                licence etalab-2.0
-              </a>
-            </p>
+            Sauf mention contraire, tous les contenus de ce site sont sous
+            {' '}
+            <a
+              href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              licence etalab-2.0
+            </a>
           </FooterCopy>
         </FooterBottom>
       </Footer>
