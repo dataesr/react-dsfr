@@ -569,7 +569,9 @@ exports[`<Footer /> should render Footer properly 1`] = `
       <div
         class="fr-footer__bottom-copy"
       >
-        © République Française 2020
+        <p>
+          © République Française 2020
+        </p>
       </div>
     </div>
   </div>
@@ -862,7 +864,9 @@ exports[`<Footer /> should render Footer properly with only one child under Foot
       <div
         class="fr-footer__bottom-copy"
       >
-        © République Française 2020
+        <p>
+          © République Française 2020
+        </p>
       </div>
     </div>
   </div>

@@ -91,7 +91,7 @@ describe('<Footer />', () => {
           <FooterLink href="/">Mentions légales</FooterLink>
           <FooterLink href="/">Données personnelles</FooterLink>
           <FooterLink href="/">Gestion des cookies</FooterLink>
-          <FooterCopy href="/">© République Française 2020</FooterCopy>
+          <FooterCopy>© République Française 2020</FooterCopy>
         </FooterBottom>
       </Footer>,
     );
