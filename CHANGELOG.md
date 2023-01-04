@@ -1,3 +1,10 @@
+## [3.5.2](https://github.com/dataesr/react-dsfr/compare/v3.5.1...v3.5.2) (2023-01-04)
+
+
+### Bug Fixes
+
+* Add default p to footercopy ([#326](https://github.com/dataesr/react-dsfr/issues/326)) ([6b0e3bb](https://github.com/dataesr/react-dsfr/commit/6b0e3bb4a8b0ced222d859cd8f32263a22ed2bb2))
+
 ## [3.5.1](https://github.com/dataesr/react-dsfr/compare/v3.5.0...v3.5.1) (2022-12-27)
 
 
