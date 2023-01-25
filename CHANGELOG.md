@@ -1,3 +1,10 @@
+## [3.5.3](https://github.com/dataesr/react-dsfr/compare/v3.5.2...v3.5.3) (2023-01-25)
+
+
+### Bug Fixes
+
+* Remove grey background of tile ([#328](https://github.com/dataesr/react-dsfr/issues/328)) ([b9dd601](https://github.com/dataesr/react-dsfr/commit/b9dd601719b05991c013f0afed137776b081f9f4))
+
 ## [3.5.2](https://github.com/dataesr/react-dsfr/compare/v3.5.1...v3.5.2) (2023-01-04)
 
 
