@@ -2,7 +2,7 @@
 
 exports[`<Tile /> renders correctly 1`] = `
 <div
-  className="fr-tile fr-tile--grey fr-enlarge-link fr-tile--horizontal my-class"
+  className="fr-tile fr-enlarge-link fr-tile--horizontal my-class"
   data-testid="tile"
 >
   <div
