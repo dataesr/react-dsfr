@@ -1,3 +1,10 @@
+## [3.5.4](https://github.com/dataesr/react-dsfr/compare/v3.5.3...v3.5.4) (2023-01-27)
+
+
+### Bug Fixes
+
+* **alert:** Warning icon ([#329](https://github.com/dataesr/react-dsfr/issues/329)) ([0d16873](https://github.com/dataesr/react-dsfr/commit/0d168732ffd2845b7a05dbe628a328aa4a0e1e9a))
+
 ## [3.5.3](https://github.com/dataesr/react-dsfr/compare/v3.5.2...v3.5.3) (2023-01-25)
 
 
