@@ -21,6 +21,14 @@ const AlertExample = () => (
       description="Error"
       small
     />
+    <Alert
+      type="warning"
+      description="Warning !!!!"
+    />
+    <Alert
+      type="new"
+      description="Awesome news"
+    />
   </Col>
 );
 
