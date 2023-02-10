@@ -96,7 +96,6 @@ exports[`<Header /> renders correctly 1`] = `
                 <a
                   className="ds-fr--flex fr-link fr-link--md"
                   href="/path"
-                  onClick={[Function]}
                   target="_self"
                 >
                   <span
@@ -112,7 +111,6 @@ exports[`<Header /> renders correctly 1`] = `
                 <a
                   className="ds-fr--flex fr-link fr-link--md"
                   href="/path"
-                  onClick={[Function]}
                   target="_self"
                 >
                   <span

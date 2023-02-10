@@ -34,7 +34,7 @@ const ToolItem = ({
         </HtmlTag>
       ) : (
         <Link
-          onClick={onClickToolItem}
+          onClick={onClick ? onClickToolItem : undefined}
           as={asLink}
           target={target}
           className={className}
