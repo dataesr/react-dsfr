@@ -1,3 +1,10 @@
+## [3.5.5](https://github.com/dataesr/react-dsfr/compare/v3.5.4...v3.5.5) (2023-02-10)
+
+
+### Bug Fixes
+
+* always close mobile sidemenu on click ([#331](https://github.com/dataesr/react-dsfr/issues/331)) ([13c7b6f](https://github.com/dataesr/react-dsfr/commit/13c7b6fafe5dfde507d618eeebbe41dfea086aba))
+
 ## [3.5.4](https://github.com/dataesr/react-dsfr/compare/v3.5.3...v3.5.4) (2023-01-27)
 
 
