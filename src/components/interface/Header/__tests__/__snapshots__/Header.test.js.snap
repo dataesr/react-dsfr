@@ -92,6 +92,7 @@ exports[`<Header /> renders correctly 1`] = `
             >
               <li
                 data-testid="toolitem"
+                onClick={[Function]}
               >
                 <a
                   className="ds-fr--flex fr-link fr-link--md"
@@ -107,6 +108,7 @@ exports[`<Header /> renders correctly 1`] = `
               </li>
               <li
                 data-test-id="toolitem"
+                onClick={[Function]}
               >
                 <a
                   className="ds-fr--flex fr-link fr-link--md"
