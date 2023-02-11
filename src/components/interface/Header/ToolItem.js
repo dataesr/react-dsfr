@@ -22,8 +22,11 @@ const ToolItem = ({
   };
 
   return (
+    // eslint-disable-next-line max-len
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <li
       {...dataAttributes.getAll(remainingProps)}
+      onClick={() => onOpenNav(false)}
     >
       {as ? (
         <HtmlTag
@@ -34,7 +37,7 @@ const ToolItem = ({
         </HtmlTag>
       ) : (
         <Link
-          onClick={onClickToolItem}
+          onClick={onClick ? onClickToolItem : undefined}
           as={asLink}
           target={target}
           className={className}
