@@ -68,7 +68,7 @@ TabButton.propTypes = {
   className: PropTypes.string,
   onClickTab: PropTypes.func.isRequired,
   onKeyDownTab: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   icon: PropTypes.string,
   index: PropTypes.number.isRequired,
   activeTab: PropTypes.number.isRequired,

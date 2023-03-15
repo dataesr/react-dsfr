@@ -4,7 +4,7 @@ export interface TabButtonProps {
   className?: string;
   onClickTab: (...args: any[])=>any;
   onKeyDownTab: (...args: any[])=>any;
-  label: string;
+  label: React.ReactNode;
   icon?: string;
   index: number;
   activeTab: number;

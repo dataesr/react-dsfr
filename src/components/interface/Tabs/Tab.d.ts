@@ -7,7 +7,7 @@ export interface TabProps {
   children?: TabChildren;
   index: number;
   activeTab: number;
-  label: string;
+  label: React.ReactNode;
   icon?: string;
 }
 
