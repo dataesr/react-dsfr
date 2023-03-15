@@ -1,3 +1,10 @@
+## [3.5.8](https://github.com/dataesr/react-dsfr/compare/v3.5.7...v3.5.8) (2023-03-15)
+
+
+### Bug Fixes
+
+* tabs border ([#334](https://github.com/dataesr/react-dsfr/issues/334)) ([fdbcfa4](https://github.com/dataesr/react-dsfr/commit/fdbcfa41888b1d8e672a9508489e7b73803c7966))
+
 ## [3.5.7](https://github.com/dataesr/react-dsfr/compare/v3.5.6...v3.5.7) (2023-03-15)
 
 
