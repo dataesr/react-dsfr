@@ -4,9 +4,7 @@ export type TabChildren = React.ReactNode[] | React.ReactNode | string;
 
 export interface TabProps {
   className?: string;
-  children?: TabChildren;
-  index: number;
-  activeTab: number;
+  children: TabChildren;
   label: React.ReactNode;
   icon?: string;
 }
