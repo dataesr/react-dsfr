@@ -1,3 +1,10 @@
+## [3.5.9](https://github.com/dataesr/react-dsfr/compare/v3.5.8...v3.5.9) (2023-03-15)
+
+
+### Bug Fixes
+
+* remove managed props type ([#335](https://github.com/dataesr/react-dsfr/issues/335)) ([837a8f3](https://github.com/dataesr/react-dsfr/commit/837a8f3e8b9975da1fdb0b756ad3a66c9c8781a7))
+
 ## [3.5.8](https://github.com/dataesr/react-dsfr/compare/v3.5.7...v3.5.8) (2023-03-15)
 
 
