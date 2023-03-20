@@ -1,3 +1,10 @@
+## [3.5.11](https://github.com/dataesr/react-dsfr/compare/v3.5.10...v3.5.11) (2023-03-20)
+
+
+### Bug Fixes
+
+* Tabs key and props ([#337](https://github.com/dataesr/react-dsfr/issues/337)) ([288a96f](https://github.com/dataesr/react-dsfr/commit/288a96f7761a68a68ef532cf3b6e37927f403ea6))
+
 ## [3.5.10](https://github.com/dataesr/react-dsfr/compare/v3.5.9...v3.5.10) (2023-03-20)
 
 
