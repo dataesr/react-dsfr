@@ -30,7 +30,7 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   icon: PropTypes.string,
   index: PropTypes.number.isRequired,
   activeTab: PropTypes.number.isRequired,
