@@ -70,7 +70,7 @@ const Tabs = ({
       >
         {tabsPanel.map((element, index) => (
           <TabButton
-            key={element.props.label}
+            key={element.props.key || element.props.label}
             activeTab={activeTab}
             onClickTab={changeTab}
             onKeyDownTab={onKeyDownTab}
