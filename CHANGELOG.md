@@ -1,3 +1,10 @@
+## [3.5.13](https://github.com/dataesr/react-dsfr/compare/v3.5.12...v3.5.13) (2023-03-28)
+
+
+### Bug Fixes
+
+* Searchable select margin with label ([#338](https://github.com/dataesr/react-dsfr/issues/338)) ([85d34dd](https://github.com/dataesr/react-dsfr/commit/85d34ddf56342e7dfc36479d9bcd1c57978676ff))
+
 ## [3.5.12](https://github.com/dataesr/react-dsfr/compare/v3.5.11...v3.5.12) (2023-03-28)
 
 
