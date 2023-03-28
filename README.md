@@ -160,5 +160,52 @@ Thanks to the internet world.
 
 * [How to create an npm library from react components](https://dev.to/jimjunior/how-to-create-an-npm-library-from-react-components-2m2)
 
-### TODO
+
+## TODO
+
 * Limit usage of colors to colorFamilies
+* Complete the StoryBook
+    - [x] Accordion
+    - [x] Alert
+    - [x] Badge
+    - [x] Breadcrumb
+    - [x] Button
+    - [x] Callout
+    - [x] Card
+    - [x] Checkbox
+    - [x] Checkboxgroup
+    - [ ] Col
+    - [x] ConsentManager
+    - [ ] Container
+    - [ ] Download
+    - [x] File
+    - [x] Footer
+    - [x] Header
+    - [x] Highlight
+    - [ ] Icon
+    - [ ] Link
+    - [ ] Logo
+    - [x] MediaImage
+    - [x] MediaVideo
+    - [ ] Modal
+    - [ ] Notice
+    - [ ] Pagination
+    - [ ] Radio
+    - [ ] Row
+    - [ ] SearchBar
+    - [ ] Select
+    - [ ] Share
+    - [ ] SideMenu
+    - [ ] Skiplinks
+    - [ ] Stepper
+    - [ ] Summary
+    - [ ] SwitchTheme
+    - [ ] Table
+    - [ ] Tabs
+    - [ ] Tag
+    - [x] TextInput
+    - [ ] Tile
+    - [ ] Toggle
+    - [x] Typography
+* Upgrade to latest version of the DSFR (v1.9)
+* Full review ot the Typescript integration
