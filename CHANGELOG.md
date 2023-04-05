@@ -1,3 +1,10 @@
+## [3.5.14](https://github.com/dataesr/react-dsfr/compare/v3.5.13...v3.5.14) (2023-04-05)
+
+
+### Bug Fixes
+
+* **ci:** Clean and update github workflow ([21e1610](https://github.com/dataesr/react-dsfr/commit/21e16101d5bbb35466b83e94ee88698d7f43e14e))
+
 ## [3.5.13](https://github.com/dataesr/react-dsfr/compare/v3.5.12...v3.5.13) (2023-03-28)
 
 
