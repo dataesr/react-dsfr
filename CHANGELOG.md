@@ -1,3 +1,10 @@
+## [3.5.15](https://github.com/dataesr/react-dsfr/compare/v3.5.14...v3.5.15) (2023-04-22)
+
+
+### Bug Fixes
+
+* ConsentManager types ([fdae379](https://github.com/dataesr/react-dsfr/commit/fdae3792d0eecb937f3406227fba8bb79e68c73f))
+
 ## [3.5.14](https://github.com/dataesr/react-dsfr/compare/v3.5.13...v3.5.14) (2023-04-05)
 
 
