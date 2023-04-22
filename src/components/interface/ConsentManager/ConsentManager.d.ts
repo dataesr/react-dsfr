@@ -30,7 +30,6 @@ export interface ConsentManagerProps {
   modalCloseLabel: string;
   modalCloseTitle: string;
   modalTitle: string;
-  name: string;
   refuseBannerButton: (...args: any[]) => any;
   setIsModalOpen: (...args: any[]) => any;
 }
