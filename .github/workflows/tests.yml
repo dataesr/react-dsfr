@@ -18,9 +18,3 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm run test:nowatch
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-          channel: "#github-tests"
-        if: always()
