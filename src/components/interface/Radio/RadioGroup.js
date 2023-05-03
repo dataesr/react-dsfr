@@ -12,19 +12,19 @@ import dataAttributes from '../../../utils/data-attributes';
  * @visibleName RadioGroup
  */
 const RadioGroup = ({
+  ariaLabel,
   children,
   className,
-  hint,
   disabled,
+  hint,
   isInline,
   legend,
   message,
   messageType,
-  ariaLabel,
   name,
-  value,
   onChange,
   required,
+  value,
   ...remainingProps
 }) => {
   const [radioName, setRadioName] = useState(name || uuidv4());
@@ -82,42 +82,42 @@ const RadioGroup = ({
 };
 
 RadioGroup.defaultProps = {
+  ariaLabel: '',
   children: '',
   className: '',
-  hint: '',
   disabled: false,
+  hint: '',
   isInline: false,
-  messageType: '',
   message: '',
-  ariaLabel: '',
+  messageType: '',
   name: undefined,
-  value: '',
   onChange: () => {},
   required: false,
+  value: '',
 };
 
 RadioGroup.propTypes = {
+  ariaLabel: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
-  ariaLabel: PropTypes.string,
-  disabled: PropTypes.bool,
   isInline: PropTypes.bool,
   legend: PropTypes.string.isRequired,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid', '']),
   name: PropTypes.string,
-  value: PropTypes.string,
   onChange: PropTypes.func,
   required: PropTypes.bool,
+  value: PropTypes.string,
 };
 
 export default RadioGroup;

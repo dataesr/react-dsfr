@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-export type RadioHint = string | Object | any[];
-
 export type RadioDisabled = boolean | undefined;
+
+export type RadioHint = string | Object | any[];
 
 export type RadioMessageType = 'error' | 'valid' | '';
 
@@ -10,20 +10,20 @@ export type RadioSize = 'sm' | 'md';
 
 export interface RadioProps {
   className?: string;
+  defaultChecked?: boolean;
+  disabled?: RadioDisabled;
   hint?: RadioHint;
   id?: string;
-  svg?: React.ReactNode;
+  imageURL?: string;
   isExtended?: boolean;
-  disabled?: RadioDisabled;
   label: string;
   message?: string;
   messageType?: RadioMessageType;
   onChange?: (...args: any[])=>any;
   onGroupChange?: (...args: any[])=>any;
   size?: RadioSize;
-  imageURL?: string;
+  svg?: React.ReactNode;
   value: string;
-  defaultChecked?: boolean;
 }
 
 declare const Radio: React.FC<RadioProps>;
