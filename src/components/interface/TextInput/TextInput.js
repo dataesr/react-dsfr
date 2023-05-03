@@ -89,6 +89,11 @@ const TextInput = forwardRef((props, ref) => {
           className={_className}
           id={inputId.current}
           required={required}
+          onWheel={(e) => {
+            if (type === 'number') {
+              e.target.blur();
+            }
+          }}
           onBlur={(e) => {
             if (withAutoValidation) {
               setValidation({

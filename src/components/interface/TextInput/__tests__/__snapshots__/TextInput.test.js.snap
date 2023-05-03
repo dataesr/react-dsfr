@@ -17,6 +17,7 @@ exports[`<TextInput /> renders correctly 1`] = `
     id="xxxxxxx"
     onBlur={[Function]}
     onChange={[MockFunction]}
+    onWheel={[Function]}
     required={false}
     type="text"
     value="init-value"
