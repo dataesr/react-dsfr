@@ -190,7 +190,7 @@ Thanks to the internet world.
     - [ ] Modal
     - [ ] Notice
     - [ ] Pagination
-    - [ ] Radio
+    - [x] Radio
     - [ ] Row
     - [ ] SearchBar
     - [ ] Select
