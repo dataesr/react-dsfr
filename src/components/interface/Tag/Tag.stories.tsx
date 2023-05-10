@@ -33,14 +33,14 @@ Selected.storyName = 'Tag selectionné';
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   children: 'Avec icône',
-  icon: 'ri-emotion-line',
+  icon: 'fr-fi-arrow-right-line',
 };
 WithIcon.storyName = 'Tag avec icône';
 
 export const WithLeftIcon = Template.bind({});
 WithLeftIcon.args = {
   children: 'Tag avec icône à gauche',
-  icon: 'ri-emotion-line',
+  icon: 'fr-fi-arrow-right-line',
   iconPosition: 'left',
 };
 WithLeftIcon.storyName = 'Tag avec icône à gauche';
