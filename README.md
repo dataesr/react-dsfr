@@ -197,7 +197,7 @@ Thanks to the internet world.
     - [ ] Share
     - [ ] SideMenu
     - [ ] Skiplinks
-    - [ ] Stepper
+    - [x] Stepper
     - [ ] Summary
     - [ ] SwitchTheme
     - [ ] Table
