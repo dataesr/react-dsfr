@@ -1,16 +1,17 @@
-import { useState } from 'react';
 import { ComponentStory } from '@storybook/react';
+import { useState } from 'react';
 
 import Modal from './Modal';
 import ModalClose from './ModalClose';
 import ModalContent from './ModalContent';
 import ModalFooter from './ModalFooter';
 import ModalTitle from './ModalTitle';
-
 import Button from '../Button/Button';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/modale
+
 export default {
-  title: 'Modale - Modal',
+  title: 'Composants/Modale - Modal',
   component: Modal,
   subcomponents: {
     ModalClose, ModalContent, ModalFooter, ModalTitle,
@@ -18,7 +19,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite une action de l’utilisateur afin d'être clôturée ou ouverte.",
+        component: 'La modale permet de concentrer l\'attention de l\'utilisateur exclusivement sur une tâche ou un élément d\'information, sans perdre le contexte de la page en cours. Ce composant nécessite une action de l\'utilisateur afin d\'être clôturée ou ouverte.',
       },
     },
   },
@@ -59,4 +60,4 @@ ModalWithFooter.args = {
   ],
   isOpen: false,
 };
-ModalWithFooter.storyName = "Modale avec zone d'action";
+ModalWithFooter.storyName = 'Modale avec zone d\'action';
