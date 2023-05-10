@@ -189,7 +189,7 @@ Thanks to the internet world.
     - [x] MediaVideo
     - [ ] Modal
     - [ ] Notice
-    - [ ] Pagination
+    - [x] Pagination
     - [x] Radio
     - [ ] Row
     - [ ] SearchBar
