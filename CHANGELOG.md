@@ -1,3 +1,10 @@
+# [3.8.0](https://github.com/dataesr/react-dsfr/compare/v3.7.0...v3.8.0) (2023-05-10)
+
+
+### Features
+
+* **link:** add storybook for links ([aff8faf](https://github.com/dataesr/react-dsfr/commit/aff8faf6a9ac98972d61f8ac0f67c06de46f1202))
+
 # [3.7.0](https://github.com/dataesr/react-dsfr/compare/v3.6.0...v3.7.0) (2023-05-10)
 
 
