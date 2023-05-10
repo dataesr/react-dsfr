@@ -202,7 +202,7 @@ Thanks to the internet world.
     - [ ] SwitchTheme
     - [ ] Table
     - [ ] Tabs
-    - [ ] Tag
+    - [x] Tag
     - [x] TextInput
     - [ ] Tile
     - [ ] Toggle
