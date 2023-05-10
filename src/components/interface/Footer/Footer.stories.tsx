@@ -14,11 +14,13 @@ import FooterPartnersSecondaryTitle from './FooterPartnersSecondaryTitle';
 import FooterPartnersLogo from './FooterPartnersLogo';
 import FooterBottom from './FooterBottom';
 import FooterCopy from './FooterCopy';
-import Logo from '../Logo/Logo';
 import Link from '../Link/Link';
+import Logo from '../Logo/Logo';
+
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/pied-de-page
 
 export default {
-  title: 'Footer',
+  title: 'Pied de page - Footer',
   component: Footer,
   subcomponents: {
     FooterTopCategory,

@@ -2,8 +2,10 @@ import { ComponentStory } from '@storybook/react';
 
 import Badge from './Badge';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/badge
+
 export default {
-  title: 'Badge',
+  title: 'Badge - Badge',
   component: Badge,
 };
 

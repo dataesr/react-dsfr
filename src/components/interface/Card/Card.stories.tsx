@@ -11,8 +11,10 @@ import TagGroup from '../Tag/TagGroup';
 import Badge from '../Badge/Badge';
 import BadgeGroup from '../Badge/BadgeGroup';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/carte
+
 export default {
-  title: 'Card',
+  title: 'Carte - Card',
   component: Card,
   subcomponents: {
     CardHeader,

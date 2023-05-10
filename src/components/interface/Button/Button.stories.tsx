@@ -2,18 +2,17 @@ import { ComponentStory } from '@storybook/react';
 
 import Button from './Button';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/bouton
+
 export default {
-  title: 'Button',
+  title: 'Bouton - Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
 };
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   children: 'Button',
 };

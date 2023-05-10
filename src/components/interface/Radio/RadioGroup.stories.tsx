@@ -3,8 +3,10 @@ import { ComponentStory } from '@storybook/react';
 import Radio from './Radio';
 import RadioGroup from './RadioGroup';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/bouton-radio
+
 export default {
-  title: 'Radio',
+  title: 'Bouton radio - Radio button',
   component: RadioGroup,
   subcomponents: { Radio },
   argTypes: {},

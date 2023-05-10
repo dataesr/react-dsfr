@@ -2,8 +2,10 @@ import { Story } from '@storybook/react/types-6-0';
 import TagGroup, { TagGroupProps } from './TagGroup';
 import Tag from './Tag';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tag
+
 export default {
-  title: 'TagGroup',
+  title: 'Tag - Tag',
   component: TagGroup,
   argTypes: {},
   subcomponents: { Tag },
@@ -28,7 +30,7 @@ Default.args = {
 
   ],
 };
-Default.storyName = 'Groupes de tags';
+Default.storyName = 'Groupe de tags';
 
 export const DifferentsSize = Template.bind({});
 DifferentsSize.args = {
@@ -51,7 +53,7 @@ DifferentsSize.args = {
     </Tag>,
   ],
 };
-DifferentsSize.storyName = 'Tags de différentes tailles';
+DifferentsSize.storyName = 'Groupe de tags de différentes tailles';
 
 export const TagsSelected = Template.bind({});
 TagsSelected.args = {
@@ -84,7 +86,7 @@ TagsSelected.args = {
     </Tag>,
   ],
 };
-TagsSelected.storyName = 'Groupes de tags selectionnables';
+TagsSelected.storyName = 'Groupe de tags sélectionnables';
 
 export const TagsToDismiss = Template.bind({});
 TagsToDismiss.args = {
@@ -121,4 +123,4 @@ TagsToDismiss.args = {
     </Tag>,
   ],
 };
-TagsToDismiss.storyName = 'Groupes de tags à supprimer';
+TagsToDismiss.storyName = 'Groupe de tags supprimables';

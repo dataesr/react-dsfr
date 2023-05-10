@@ -18,8 +18,10 @@ import SearchBar from '../SearchBar/SearchBar';
 import Logo from '../Logo/Logo';
 import Link from '../Link/Link';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/en-tete
+
 export default {
-  title: 'Header',
+  title: 'En-tête - Header',
   component: Header,
   subcomponents: {
     HeaderBody,

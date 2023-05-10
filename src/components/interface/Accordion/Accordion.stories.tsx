@@ -3,8 +3,10 @@ import { ComponentStory } from '@storybook/react';
 import Accordion from './Accordion';
 import AccordionItem from './AccordionItem';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/accordeon
+
 export default {
-  title: 'Accordion',
+  title: 'Accordéon - Accordion',
   component: Accordion,
   subcomponents: { AccordionItem },
 };

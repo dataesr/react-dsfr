@@ -6,7 +6,7 @@ import PaginationItem from './PaginationItem';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/pagination/
 
 export default {
-  title: 'Pagination',
+  title: 'Pagination - Pagination',
   component: Pagination,
   subcomponents: { PaginationItem },
   argTypes: {},

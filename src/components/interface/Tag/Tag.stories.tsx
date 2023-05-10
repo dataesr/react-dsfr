@@ -2,8 +2,10 @@ import { Story } from '@storybook/react/types-6-0';
 
 import Tag, { TagProps } from './Tag';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tag
+
 export default {
-  title: 'Tag',
+  title: 'Tag - Tag',
   component: Tag,
   argTypes: {},
 };
@@ -21,7 +23,7 @@ Small.args = {
   children: 'petit',
   small: true,
 };
-Small.storyName = 'Petit';
+Small.storyName = 'Tag petit';
 
 export const Selected = Template.bind({});
 Selected.args = {
@@ -80,4 +82,4 @@ ALT.args = {
   href: 'https://www.example.com',
   title: 'Vers le site : https://www.example.com',
 };
-ALT.storyName = 'Accessibilité';
+ALT.storyName = 'Tag accessible';

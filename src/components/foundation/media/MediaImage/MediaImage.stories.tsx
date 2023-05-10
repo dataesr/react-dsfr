@@ -2,8 +2,10 @@ import { ComponentStory } from '@storybook/react';
 
 import MediaImage from './MediaImage';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/medias
+
 export default {
-  title: 'MediaImage',
+  title: 'Médias Image - Media Image',
   component: MediaImage,
   argTypes: {
     size: {

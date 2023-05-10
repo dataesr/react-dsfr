@@ -3,8 +3,10 @@ import { ComponentStory } from '@storybook/react';
 import Breadcrumb from './Breadcrumb';
 import BreadcrumbItem from './BreadcrumbItem';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/fil-d-ariane
+
 export default {
-  title: 'Breadcrumb',
+  title: 'Fil d\'Ariane - Breadcrumb',
   component: Breadcrumb,
   subcomponents: { BreadcrumbItem },
 };

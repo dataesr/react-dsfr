@@ -5,8 +5,10 @@ import CalloutTitle from './CalloutTitle';
 import CalloutText from './CalloutText';
 import Button from '../Button/Button';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/mise-en-avant
+
 export default {
-  title: 'Callout',
+  title: 'Mise en avant - Callout',
   component: Callout,
   subcomponents: { CalloutTitle, CalloutText },
 };

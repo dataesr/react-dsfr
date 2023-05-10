@@ -2,8 +2,10 @@ import { ComponentStory } from '@storybook/react';
 
 import MediaVideo from './MediaVideo';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/medias
+
 export default {
-  title: 'MediaVideo',
+  title: 'Médias Vidéo - Media Video',
   component: MediaVideo,
   argTypes: {
     size: {

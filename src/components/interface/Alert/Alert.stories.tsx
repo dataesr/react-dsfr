@@ -2,8 +2,10 @@ import { ComponentStory } from '@storybook/react';
 
 import Alert from './Alert';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte
+
 export default {
-  title: 'Alert',
+  title: 'Alerte - Alert',
   component: Alert,
 };
 

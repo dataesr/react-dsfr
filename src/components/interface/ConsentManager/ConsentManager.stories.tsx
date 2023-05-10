@@ -3,8 +3,10 @@ import { ComponentStory } from '@storybook/react';
 import ConsentManager from './ConsentManager';
 import ConsentService from './ConsentService';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/gestionnaire-de-consentement
+
 export default {
-  title: 'ConsentManager',
+  title: 'Gestionnaire de consentement - Consent banner',
   component: ConsentManager,
   subcomponents: { ConsentService },
 };
