@@ -183,7 +183,7 @@ Thanks to the internet world.
     - [x] Header
     - [x] Highlight
     - [ ] Icon
-    - [ ] Link
+    - [x] Link
     - [ ] Logo
     - [x] MediaImage
     - [x] MediaVideo
