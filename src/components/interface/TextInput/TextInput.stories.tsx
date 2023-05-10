@@ -7,7 +7,13 @@ import TextInput from './TextInput';
 export default {
   title: 'Composants/Champ de saisie - Input',
   component: TextInput,
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les champs permettent à un utilisateur d\'entrer du contenu et données. Le champ simple est un champ de saisie libre, qui accepte une courte ligne de contenu (texte ou/ et nombre). Le libellé se trouve au-dessus du champs de saisie, pour faciliter la lecture.',
+      },
+    },
+  },
 } as ComponentMeta<typeof TextInput>;
 
 const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />;

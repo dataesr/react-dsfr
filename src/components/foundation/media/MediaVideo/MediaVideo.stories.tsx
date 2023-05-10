@@ -16,6 +16,13 @@ export default {
       `,
     },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof MediaVideo> = (args) => (

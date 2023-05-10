@@ -9,6 +9,13 @@ export default {
   title: 'Composants/Gestionnaire de consentement - Consent banner',
   component: ConsentManager,
   subcomponents: { ConsentService },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le gestionnaire de consentement permet à l\'utilisateur de définir ses préférences sur l\'utilisation de ses données personnelles, notamment le dépôt de cookies non fonctionnels dans son navigateur).',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof ConsentManager> = (args) => (

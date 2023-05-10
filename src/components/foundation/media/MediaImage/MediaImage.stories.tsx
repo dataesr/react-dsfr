@@ -10,10 +10,17 @@ export default {
   argTypes: {
     size: {
       description: `Si vous souhaitez accentuer la visibilité d'une image vous pouvez utiliser les différentes tailles à votre disposition :
-      - lg : dans cette taille, la largeur de l’image est supérieure à celle du contenu.
-      - md : dans cette taille, la largeur de l’image correspond à celle du contenu. Par défaut (100%)
-      - sm : dans cette taille, la largeur de l’image est inférieure à celle du contenu.
+      - lg : dans cette taille, la largeur de l'image est supérieure à celle du contenu.
+      - md : dans cette taille, la largeur de l'image correspond à celle du contenu. Par défaut (100%)
+      - sm : dans cette taille, la largeur de l'image est inférieure à celle du contenu.
       `,
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
+      },
     },
   },
 };

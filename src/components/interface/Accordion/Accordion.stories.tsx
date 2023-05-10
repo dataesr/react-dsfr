@@ -9,6 +9,13 @@ export default {
   title: 'Composants/Accordéon - Accordion',
   component: Accordion,
   subcomponents: { AccordionItem },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les accordéons permettent aux utilisateurs d\'afficher et de masquer des sections de contenu présentés dans une page.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Accordion> = (args) => (

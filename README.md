@@ -209,3 +209,4 @@ Thanks to the internet world.
     - [x] Typography
 * Upgrade to latest version of the DSFR (v1.9)
 * Full review ot the Typescript integration
+* Tree Shaking (instead of the whole bundle)

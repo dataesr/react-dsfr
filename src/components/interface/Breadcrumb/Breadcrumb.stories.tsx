@@ -9,6 +9,13 @@ export default {
   title: 'Composants/Fil d\'Ariane - Breadcrumb',
   component: Breadcrumb,
   subcomponents: { BreadcrumbItem },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le fil d\'Ariane est un système de navigation secondaire qui permet à l\'utilisateur de se situer sur le site qu\'il consulte.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Breadcrumb> = (args) => (

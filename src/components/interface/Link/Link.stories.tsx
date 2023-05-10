@@ -7,7 +7,13 @@ import Link, { LinkProps } from './Link';
 export default {
   title: 'Composants/Lien - Link',
   component: Link,
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le lien permet la navigation entre une page et un autre contenu au sein de la même page, du même site ou externe.',
+      },
+    },
+  },
 };
 
 const Template: Story<LinkProps> = (args) => <Link {...args} />;

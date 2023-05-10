@@ -8,6 +8,13 @@ export default {
   title: 'Composants/Case à cocher - Checkbox',
   component: Checkbox,
   subcomponents: { Checkbox },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les cases à cocher permettent à l\'utilisateur de sélectionner une ou plusieurs options dans une liste. Elles sont utilisées pour effectuer des sélections multiples (de 0 à N éléments) ou bien pour permettre un choix binaire, lorsque l\'utilisateur peut sélectionner ou désélectionner une seule option.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Checkbox> = (args) => (

@@ -36,6 +36,13 @@ export default {
     MegaNavItem,
     MegaNavSubItem,
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'L\'en-tête permet aux utilisateurs d\'identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Header> = (args) => (

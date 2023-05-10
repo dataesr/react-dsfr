@@ -7,7 +7,13 @@ import Tag, { TagProps } from './Tag';
 export default {
   title: 'Composants/Tag - Tag',
   component: Tag,
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le tag catégorise, classe et organise les contenus à l\'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.',
+      },
+    },
+  },
 };
 
 const Template: Story<TagProps> = (args) => <Tag {...args} />;

@@ -23,6 +23,13 @@ export default {
     CardTitle,
     CardDescription,
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'La carte est un lien vers une page éditoriale dont elle donne un aperçu. Elle fait généralement partie d\'une collection ou liste d\'aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Card> = (args) => (

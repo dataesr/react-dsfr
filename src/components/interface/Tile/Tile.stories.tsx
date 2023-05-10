@@ -4,10 +4,19 @@ import Tile from './Tile';
 import TileBody from './TileBody';
 import TileImage from './TileImage';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tuile
+
 export default {
   title: 'Composants/Tuile - Tile',
   component: Tile,
   subcomponents: { TileBody, TileImage },
+  parameters: {
+    docs: {
+      description: {
+        component: 'La tuile est un raccourci ou point d\'entrée qui redirige les utilisateurs vers des pages de contenu. Elle fait généralement partie d\'une collection ou liste de tuiles similaires. La tuile n\'est jamais présentée de manière isolée.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Tile> = (args) => (

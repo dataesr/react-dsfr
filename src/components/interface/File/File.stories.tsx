@@ -8,6 +8,13 @@ export default {
   title: 'Composants/Ajout de fichier - Upload',
   component: File,
   subcomponents: { File },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Ce composant permet aux utilisateurs de sélectionner et envoyer un ou plusieurs fichiers.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof File> = (args) => (

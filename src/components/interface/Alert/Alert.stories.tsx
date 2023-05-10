@@ -7,6 +7,13 @@ import Alert from './Alert';
 export default {
   title: 'Composants/Alerte - Alert',
   component: Alert,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les alertes permettent d\'attirer l\'attention de l\'utilisateur sur une information sans interrompre sa tâche en cours.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Alert> = (args) => (

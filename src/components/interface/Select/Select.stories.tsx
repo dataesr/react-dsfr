@@ -7,7 +7,6 @@ import Select from './Select';
 export default {
   title: 'Composants/Liste déroulante - Select',
   component: Select,
-  argTypes: {},
   parameters: {
     docs: {
       description: {

@@ -9,7 +9,13 @@ export default {
   title: 'Composants/Pagination - Pagination',
   component: Pagination,
   subcomponents: { PaginationItem },
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'La pagination permet à l\'utilisateur de naviguer entre les différentes pages d\'une liste d\'éléments.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />;

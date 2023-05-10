@@ -36,6 +36,13 @@ export default {
     FooterBottom,
     FooterCopy,
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le pied de page propose des éléments d\information sur le site et une navigation secondaire pour l\'utilisateur afin qu\'il poursuive son parcours. Il est modulable selon les besoins et les exigences du site.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Footer> = (args) => (

@@ -11,6 +11,13 @@ export default {
   title: 'Composants/Mise en avant - Callout',
   component: Callout,
   subcomponents: { CalloutTitle, CalloutText },
+  parameters: {
+    docs: {
+      description: {
+        component: 'La mise en avant permet à l’utilisateur de distinguer rapidement une information qui vient compléter le contenu consulté.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Callout> = (args) => (

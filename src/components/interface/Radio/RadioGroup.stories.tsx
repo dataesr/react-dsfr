@@ -9,7 +9,13 @@ export default {
   title: 'Composants/Bouton radio - Radio button',
   component: RadioGroup,
   subcomponents: { Radio },
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les boutons radio permettent à l\'utilisateur de sélectionner une seule option dans une liste.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof RadioGroup> = (args) => <RadioGroup {...args} />;
