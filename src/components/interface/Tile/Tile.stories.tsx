@@ -5,7 +5,7 @@ import TileBody from './TileBody';
 import TileImage from './TileImage';
 
 export default {
-  title: 'Tuile - Tile',
+  title: 'Composants/Tuile - Tile',
   component: Tile,
   subcomponents: { TileBody, TileImage },
 };

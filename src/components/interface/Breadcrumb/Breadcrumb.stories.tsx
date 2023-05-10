@@ -6,7 +6,7 @@ import BreadcrumbItem from './BreadcrumbItem';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/fil-d-ariane
 
 export default {
-  title: 'Fil d\'Ariane - Breadcrumb',
+  title: 'Composants/Fil d\'Ariane - Breadcrumb',
   component: Breadcrumb,
   subcomponents: { BreadcrumbItem },
 };

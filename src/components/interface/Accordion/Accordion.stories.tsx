@@ -6,7 +6,7 @@ import AccordionItem from './AccordionItem';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/accordeon
 
 export default {
-  title: 'Accordéon - Accordion',
+  title: 'Composants/Accordéon - Accordion',
   component: Accordion,
   subcomponents: { AccordionItem },
 };

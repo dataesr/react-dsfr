@@ -5,7 +5,7 @@ import Button from './Button';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/bouton
 
 export default {
-  title: 'Bouton - Button',
+  title: 'Composants/Bouton - Button',
   component: Button,
   argTypes: {},
 };

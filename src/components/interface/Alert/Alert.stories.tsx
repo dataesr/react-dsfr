@@ -5,7 +5,7 @@ import Alert from './Alert';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte
 
 export default {
-  title: 'Alerte - Alert',
+  title: 'Composants/Alerte - Alert',
   component: Alert,
 };
 

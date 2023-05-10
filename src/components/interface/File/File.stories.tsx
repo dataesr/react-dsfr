@@ -5,7 +5,7 @@ import File from './File';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/ajout-de-fichier
 
 export default {
-  title: 'Ajout de fichier - Upload',
+  title: 'Composants/Ajout de fichier - Upload',
   component: File,
   subcomponents: { File },
 };

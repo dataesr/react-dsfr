@@ -5,7 +5,7 @@ import Tag, { TagProps } from './Tag';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tag
 
 export default {
-  title: 'Tag - Tag',
+  title: 'Composants/Tag - Tag',
   component: Tag,
   argTypes: {},
 };

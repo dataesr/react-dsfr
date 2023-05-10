@@ -7,7 +7,7 @@ import Title from './Title/Title';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-de-l-identite-de-l-etat/typographie
 
 export default {
-  title: 'Typographie - Typography',
+  title: 'Fondamentaux Techniques/Typographie - Typography',
 };
 
 const AltTitleTemplate: ComponentStory<typeof AltTitle> = (args) => (

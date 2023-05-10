@@ -5,7 +5,7 @@ import MediaVideo from './MediaVideo';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/medias
 
 export default {
-  title: 'Médias Vidéo - Media Video',
+  title: 'Fondamentaux Techniques/Médias Vidéo - Media Video',
   component: MediaVideo,
   argTypes: {
     size: {

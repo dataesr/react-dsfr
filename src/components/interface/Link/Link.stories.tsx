@@ -2,8 +2,10 @@ import { Story } from '@storybook/react/types-6-0';
 
 import Link, { LinkProps } from './Link';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/lien
+
 export default {
-  title: 'Link',
+  title: 'Composants/Lien - Link',
   component: Link,
   argTypes: {},
 };

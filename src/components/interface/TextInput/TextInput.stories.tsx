@@ -5,7 +5,7 @@ import TextInput from './TextInput';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/champ-de-saisie
 
 export default {
-  title: 'Champ de saisie - Input',
+  title: 'Composants/Champ de saisie - Input',
   component: TextInput,
   argTypes: {},
 } as ComponentMeta<typeof TextInput>;

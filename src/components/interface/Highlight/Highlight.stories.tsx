@@ -5,7 +5,7 @@ import Highlight from './Highlight';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/mise-en-exergue
 
 export default {
-  title: 'Mise en exergue - Highlight',
+  title: 'Composants/Mise en exergue - Highlight',
   component: Highlight,
   subcomponents: { Highlight },
 };

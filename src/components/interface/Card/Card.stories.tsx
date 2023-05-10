@@ -14,7 +14,7 @@ import BadgeGroup from '../Badge/BadgeGroup';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/carte
 
 export default {
-  title: 'Carte - Card',
+  title: 'Composants/Carte - Card',
   component: Card,
   subcomponents: {
     CardHeader,

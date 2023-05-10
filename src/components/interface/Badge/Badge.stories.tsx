@@ -5,7 +5,7 @@ import Badge from './Badge';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/badge
 
 export default {
-  title: 'Badge - Badge',
+  title: 'Composants/Badge - Badge',
   component: Badge,
 };
 

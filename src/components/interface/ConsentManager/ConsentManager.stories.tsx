@@ -6,7 +6,7 @@ import ConsentService from './ConsentService';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/gestionnaire-de-consentement
 
 export default {
-  title: 'Gestionnaire de consentement - Consent banner',
+  title: 'Composants/Gestionnaire de consentement - Consent banner',
   component: ConsentManager,
   subcomponents: { ConsentService },
 };

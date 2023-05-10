@@ -20,7 +20,7 @@ import Logo from '../Logo/Logo';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/pied-de-page
 
 export default {
-  title: 'Pied de page - Footer',
+  title: 'Composants/Pied de page - Footer',
   component: Footer,
   subcomponents: {
     FooterTopCategory,

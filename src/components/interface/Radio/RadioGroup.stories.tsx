@@ -6,7 +6,7 @@ import RadioGroup from './RadioGroup';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/bouton-radio
 
 export default {
-  title: 'Bouton radio - Radio button',
+  title: 'Composants/Bouton radio - Radio button',
   component: RadioGroup,
   subcomponents: { Radio },
   argTypes: {},
