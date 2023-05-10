@@ -204,7 +204,7 @@ Thanks to the internet world.
     - [ ] Tabs
     - [x] Tag
     - [x] TextInput
-    - [ ] Tile
+    - [x] Tile
     - [ ] Toggle
     - [x] Typography
 * Upgrade to latest version of the DSFR (v1.9)
