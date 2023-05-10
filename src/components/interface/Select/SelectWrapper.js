@@ -11,19 +11,21 @@ import '@gouvfr/dsfr/dist/component/select/select.css';
  * @visibleName SelectWrapper
  */
 const SelectWrapper = ({
+  children,
   className,
+  disabled,
   hint,
-  selectId,
   label,
   message,
   messageType,
   required,
-  children,
+  selectId,
   ...remainingProps
 }) => {
   const hintId = useRef(uuidv4());
   const _classNameWrapper = classNames('fr-select-group', {
     [`fr-select-group--${messageType}`]: messageType,
+    'fr-select-group--disabled': disabled,
   }, className);
 
   return (
@@ -52,6 +54,7 @@ const SelectWrapper = ({
 
 SelectWrapper.defaultProps = {
   className: '',
+  disabled: false,
   hint: '',
   label: '',
   message: '',
@@ -60,18 +63,19 @@ SelectWrapper.defaultProps = {
 };
 
 SelectWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
-  selectId: PropTypes.string.isRequired,
   label: PropTypes.string,
   message: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid']),
   required: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  selectId: PropTypes.string.isRequired,
 };
 
 export default SelectWrapper;

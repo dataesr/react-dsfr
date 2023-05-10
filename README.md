@@ -193,7 +193,7 @@ Thanks to the internet world.
     - [x] Radio
     - [ ] Row
     - [ ] SearchBar
-    - [ ] Select
+    - [x] Select
     - [ ] Share
     - [ ] SideMenu
     - [ ] Skiplinks

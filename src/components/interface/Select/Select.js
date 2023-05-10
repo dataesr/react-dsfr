@@ -11,6 +11,7 @@ import dataAttributes from '../../../utils/data-attributes';
  * @visibleName Select
  */
 const Select = ({
+  disabled,
   id,
   messageType,
   onChange,
@@ -33,35 +34,38 @@ const Select = ({
 
   return (
     <SelectWrapper
-      selectId={selectId.current}
+      disabled={disabled}
       messageType={messageType}
+      selectId={selectId.current}
       {...remainingProps}
     >
       <select
         {...dataAttributes.filterAll(remainingProps)}
         className={_className}
-        onChange={handleChange}
+        disabled={disabled}
         id={selectId.current}
+        onChange={handleChange}
         value={selected}
       >
         {
-                    options.map((opt) => (
-                      <option
-                        disabled={opt.disabled || false}
-                        hidden={opt.hidden || false}
-                        key={`${selectId.current}-${opt.value}`}
-                        value={opt.value}
-                      >
-                        {opt.label}
-                      </option>
-                    ))
-                }
+          options.map((opt) => (
+            <option
+              disabled={opt.disabled || false}
+              hidden={opt.hidden || false}
+              key={`${selectId.current}-${opt.value}`}
+              value={opt.value}
+            >
+              {opt.label}
+            </option>
+          ))
+        }
       </select>
     </SelectWrapper>
   );
 };
 
 Select.defaultProps = {
+  disabled: false,
   id: null,
   messageType: undefined,
   selected: '',
@@ -69,13 +73,14 @@ Select.defaultProps = {
 
 Select.propTypes = {
   ...SelectWrapper.PropTypes,
+  disabled: PropTypes.bool,
   id: PropTypes.string,
   messageType: PropTypes.oneOf(['error', 'valid']),
   options: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
   })).isRequired,
   selected: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
 };
