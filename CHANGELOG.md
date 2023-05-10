@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/dataesr/react-dsfr/compare/v3.6.0...v3.7.0) (2023-05-10)
+
+
+### Features
+
+* **tag/taggroup:** add storybook for tag and taggroup ([c6ce84c](https://github.com/dataesr/react-dsfr/commit/c6ce84caffc6a9e58f31ec6a1baeba384291ebca))
+
 # [3.6.0](https://github.com/dataesr/react-dsfr/compare/v3.5.15...v3.6.0) (2023-05-03)
 
 
