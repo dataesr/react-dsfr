@@ -33,4 +33,4 @@ LastStep.args = {
   currentTitle: 'Titre de l\'étape en cours',
   nextStepTitle: 'Titre de la prochaine étape',
 };
-LastStep.storyName = "Indicateur d'étapes";
+LastStep.storyName = "Indicateur d'étapes - Dernière étape";
