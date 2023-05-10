@@ -187,7 +187,7 @@ Thanks to the internet world.
     - [ ] Logo
     - [x] MediaImage
     - [x] MediaVideo
-    - [ ] Modal
+    - [x] Modal
     - [ ] Notice
     - [x] Pagination
     - [x] Radio
