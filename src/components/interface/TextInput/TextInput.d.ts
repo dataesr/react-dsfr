@@ -7,11 +7,15 @@ export type TextInputMessageType = 'error' | 'valid' | '';
 export type TextInputType = 'text' | 'date' | 'number' | 'email' | 'password';
 
 export interface BaseTextInputProps {
+  className?: string;
+  disabled?: boolean;
   hint?: TextInputHint;
-  label?: string
-  messageType?: TextInputMessageType;
+  label?: string;
   message?: string;
-  withAutoValidation?: boolean
+  messageType?: TextInputMessageType;
+  onBlur?: (...args: any[])=>any;
+  required?: boolean;
+  withAutoValidation?: boolean;
 }
 
 export interface TextFieldProps extends React.ComponentPropsWithRef<'input'>, BaseTextInputProps {

@@ -13,7 +13,7 @@ export type SelectSelected = React.ReactElement<any> | string;
 
 export interface SelectProps {
   className?: string;
-  disabled?: boolean,
+  disabled?: boolean;
   hint?: string | Object | any[];
   id?: string;
   label?: string;

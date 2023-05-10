@@ -12,15 +12,16 @@ import dataAttributes from '../../../utils/data-attributes';
  */
 const TextInput = forwardRef((props, ref) => {
   const {
-    textarea,
-    type,
-    label,
+    className,
+    disabled,
     hint,
+    label,
     message,
     messageType,
-    className,
-    required,
     onBlur,
+    required,
+    textarea,
+    type,
     withAutoValidation,
     ...remainingProps
   } = props;
@@ -38,6 +39,7 @@ const TextInput = forwardRef((props, ref) => {
     'fr-input-group',
     {
       [`fr-input-group--${internalMessageType}`]: internalMessageType,
+      'fr-input-group--disabled': disabled,
     },
     className,
   );
@@ -65,11 +67,28 @@ const TextInput = forwardRef((props, ref) => {
       )}
       {textarea ? (
         <textarea
-          {...dataAttributes.filterAll(remainingProps)}
-          ref={ref}
           className={_className}
+          disabled={disabled}
           id={inputId.current}
+          onBlur={(e) => {
+            if (withAutoValidation) {
+              setValidation({
+                message: e.target.validationMessage,
+                status: e.target.validity.valid ? 'valid' : 'error',
+              });
+            }
+            onBlur(e);
+          }}
+          ref={ref}
           required={required}
+          {...dataAttributes.filterAll(remainingProps)}
+        />
+      ) : (
+        <input
+          aria-describedby={hint && hintId.current}
+          className={_className}
+          disabled={disabled}
+          id={inputId.current}
           onBlur={(e) => {
             if (withAutoValidation) {
               setValidation({
@@ -79,30 +98,15 @@ const TextInput = forwardRef((props, ref) => {
             }
             onBlur(e);
           }}
-        />
-      ) : (
-        <input
-          {...dataAttributes.filterAll(remainingProps)}
-          aria-describedby={hint && hintId.current}
-          ref={ref}
-          type={type}
-          className={_className}
-          id={inputId.current}
-          required={required}
           onWheel={(e) => {
             if (type === 'number') {
               e.target.blur();
             }
           }}
-          onBlur={(e) => {
-            if (withAutoValidation) {
-              setValidation({
-                status: e.target.validity.valid ? 'valid' : 'error',
-                message: e.target.validationMessage,
-              });
-            }
-            onBlur(e);
-          }}
+          ref={ref}
+          required={required}
+          type={type}
+          {...dataAttributes.filterAll(remainingProps)}
         />
       )}
       {internalMessage && internalMessageType && (
@@ -113,33 +117,35 @@ const TextInput = forwardRef((props, ref) => {
 });
 
 TextInput.defaultProps = {
-  textarea: false,
-  hint: '',
-  messageType: '',
-  message: '',
-  label: null,
   className: '',
-  type: 'text',
-  required: false,
-  withAutoValidation: false,
+  disabled: false,
+  hint: '',
+  label: null,
+  message: '',
+  messageType: '',
   onBlur: () => {},
+  required: false,
+  textarea: false,
+  type: 'text',
+  withAutoValidation: false,
 };
 
 TextInput.propTypes = {
-  type: PropTypes.oneOf(['date', 'text', 'number', 'password', 'email']),
-  textarea: PropTypes.bool,
-  label: PropTypes.string,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
-  messageType: PropTypes.oneOf(['error', 'valid', '']),
+  label: PropTypes.string,
   message: PropTypes.string,
-  required: PropTypes.bool,
-  className: PropTypes.string,
-  withAutoValidation: PropTypes.bool,
+  messageType: PropTypes.oneOf(['error', 'valid', '']),
   onBlur: PropTypes.func,
+  required: PropTypes.bool,
+  textarea: PropTypes.bool,
+  type: PropTypes.oneOf(['date', 'text', 'number', 'password', 'email']),
+  withAutoValidation: PropTypes.bool,
 };
 
 export default TextInput;
