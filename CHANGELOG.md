@@ -1,3 +1,10 @@
+# [3.9.0](https://github.com/dataesr/react-dsfr/compare/v3.8.1...v3.9.0) (2023-05-11)
+
+
+### Features
+
+* **logo:** add stories ([#351](https://github.com/dataesr/react-dsfr/issues/351)) ([09aca9d](https://github.com/dataesr/react-dsfr/commit/09aca9d89937222bba8a6bec3eb7d502c4fd1750))
+
 ## [3.8.1](https://github.com/dataesr/react-dsfr/compare/v3.8.0...v3.8.1) (2023-05-11)
 
 
