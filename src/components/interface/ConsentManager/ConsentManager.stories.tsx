@@ -42,13 +42,15 @@ SimpleConsentManager.args = {
   modalCloseLabel: 'Fermer',
   modalCloseTitle: 'fermer la modal cookie',
   confirmButtonLabel: 'Confirmer mes choix',
-
+  // eslint-disable-next-line no-console
   acceptBannerButton: () => console.log('acceptBannerButton'),
+  // eslint-disable-next-line no-console
   refuseBannerButton: () => console.log('refuseBannerButton'),
   isModalOpen: false,
+  // eslint-disable-next-line no-console
   setIsModalOpen: () => console.log('setIsModalOpen'),
+  // eslint-disable-next-line no-console
   confirmConsent: (value) => console.log('confirmConsent', value),
-
   children: [
     <ConsentService
       description=""
@@ -106,14 +108,16 @@ ModalOpenedConsentManager.args = {
   modalCloseLabel: 'Fermer',
   modalCloseTitle: 'fermer la modal cookie',
   confirmButtonLabel: 'Confirmer mes choix',
-
+  // eslint-disable-next-line no-console
   acceptBannerButton: () => console.log('acceptBannerButton'),
+  // eslint-disable-next-line no-console
   refuseBannerButton: () => console.log('refuseBannerButton'),
   isModalOpen: true,
+  // eslint-disable-next-line no-console
   setIsModalOpen: (value) => console.log('setIsModalOpen', value),
+  // eslint-disable-next-line no-console
   confirmConsent: (value) => console.log('confirmConsent', value),
   isBannerOpen: false,
-
   children: [
     <ConsentService
       description=""
@@ -122,6 +126,7 @@ ModalOpenedConsentManager.args = {
       acceptLabel="Tout accepter"
       refuseLabel="Tout refuser"
       defaultConsent="refuse"
+      // eslint-disable-next-line no-console
       onChange={(e) => console.log('onChange', e)}
     />,
     <ConsentService
