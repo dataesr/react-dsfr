@@ -208,7 +208,7 @@ Thanks to the internet world.
     - [x] Pagination
     - [x] Radio
     - [x] Row
-    - [ ] SearchBar
+    - [x] SearchBar
     - [x] Select
     - [ ] Share
     - [ ] SideMenu
