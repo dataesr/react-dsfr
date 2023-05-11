@@ -79,13 +79,39 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 
 [Storybook](https://dataesr.github.io/react-dsfr) of the project is under construction.
 
+
+
 ### Unit tests
 
-#### Run all tests using react-scripts with watcher option
+#### Run all tests using react-scripts WHITH watcher option
 
 ```bash
 npm run test:dev
 ```
+
+#### Run all tests using react-scripts WITHOUT watcher option
+
+```bash
+npm run test:nowatch
+```
+
+#### Update snapshots
+
+```bash
+npm test -- --updateSnapshot
+```
+
+#### In Chrome
+
+```bash
+npm run test:debug
+```
+
+Access `about:inspect`
+
+See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
+
+
 
 ### Release policy and package publishing 
 
@@ -128,16 +154,6 @@ Check configuration file `.pa11y-ci`
 npm install -g pa11y-ci
 pa11y-ci
 ```
-
-#### In Chrome
-
-```bash
-npm run test:debug
-```
-
-Access `about:inspect`
-
-See doc [debugging-tests](https://create-react-app.dev/docs/debugging-tests/)
 
 ### They use react-dsfr and we like it!
 

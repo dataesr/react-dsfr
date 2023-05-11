@@ -88,20 +88,20 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "homepage": "https://dataesr.github.io/react-dsfr",
+    "lint": "eslint .",
+    "predeploy": "npm run build-storybook",
     "start": "rollup -c --watch",
+    "storybook": "start-storybook -p 6006",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:coverage": "CI=true npm test -- --coverage",
+    "test:debug": "react-scripts --inspect test --runInBand --no-cache",
     "test:dev": "react-scripts test --watchAll",
     "test:dev:coverage": "react-scripts test  --watchAll --coverage",
-    "test:debug": "react-scripts --inspect test --runInBand --no-cache",
-    "lint": "eslint .",
     "test:nowatch": "react-scripts test --watchAll=false",
-    "test:watch": "react-scripts test --env=jsdom",
-    "storybook": "start-storybook -p 6006",
-    "homepage": "https://dataesr.github.io/react-dsfr",
-    "predeploy": "npm run build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "build-storybook": "build-storybook"
+    "test:watch": "react-scripts test --env=jsdom"
   },
   "files": [
     "dist"

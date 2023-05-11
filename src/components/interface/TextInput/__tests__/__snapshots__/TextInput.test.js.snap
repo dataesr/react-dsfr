@@ -14,6 +14,7 @@ exports[`<TextInput /> renders correctly 1`] = `
   <input
     aria-describedby=""
     className="fr-input"
+    disabled={false}
     id="xxxxxxx"
     onBlur={[Function]}
     onChange={[MockFunction]}

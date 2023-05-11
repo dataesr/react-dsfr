@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { v4 as uuidv4 } from 'uuid';
+
 import { Select } from '..';
 
 jest.mock('uuid', () => ({
@@ -23,6 +24,7 @@ describe('<Select />', () => {
       .create(
         <Select
           label="Label pour liste déroulante"
+          disabled={false}
           options={options}
           messageType="valid"
           data-testid="select"
@@ -36,6 +38,7 @@ describe('<Select />', () => {
     render(
       <Select
         label="Label pour liste déroulante"
+        disabled={false}
         options={options}
         messageType="valid"
         data-testid="select"
@@ -50,6 +53,7 @@ describe('<Select />', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
+        disabled={false}
         options={options}
         messageType="valid"
       />,
@@ -62,6 +66,7 @@ describe('<Select />', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
+        disabled={false}
         options={options}
         messageType="error"
       />,
@@ -74,6 +79,7 @@ describe('<Select />', () => {
     const { container } = render(
       <Select
         label="Label pour liste déroulante"
+        disabled={false}
         options={options}
         messageType="valid"
       />,
