@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getSpace } from '../../../utils/getters';
 
-/**
- *
- * @visibleName Container
- */
 const Container = ({
   as, fluid, children, className, role, spacing,
 }) => {
