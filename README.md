@@ -204,7 +204,7 @@ Thanks to the internet world.
     - [x] MediaImage
     - [x] MediaVideo
     - [x] Modal
-    - [ ] Notice
+    - [x] Notice
     - [x] Pagination
     - [x] Radio
     - [x] Row
