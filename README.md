@@ -200,7 +200,7 @@ Thanks to the internet world.
     - [x] Highlight
     - [ ] Icon
     - [x] Link
-    - [ ] Logo
+    - [x] Logo
     - [x] MediaImage
     - [x] MediaVideo
     - [x] Modal
