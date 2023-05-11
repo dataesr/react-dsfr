@@ -2,10 +2,19 @@ import { Story } from '@storybook/react/types-6-0';
 import Download, { DownloadProps } from './Download';
 import DownloadGroup, { DownloadGroupProps } from './DownloadGroup';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/telechargement-de-fichier
+
 export default {
-  title: 'Téléchargement de fichier - Download ',
+  title: 'Composant/Téléchargement de fichier - Download ',
   component: Download,
   argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Ce composant permet à l’usager de télécharger un document depuis votre site. Deux options sont possibles : un lien de téléchargement, un bloc de téléchargement pour mettre plus en avant le document. Dans les deux cas, il est possible de mettre un ou plusieurs documents à disposition à la suite.',
+      },
+    },
+  },
 };
 
 const Template: Story<DownloadProps> = (args) => <Download {...args} />;

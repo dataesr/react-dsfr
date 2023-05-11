@@ -177,7 +177,7 @@ Thanks to the internet world.
     - [x] Col
     - [x] ConsentManager
     - [x] Container
-    - [ ] Download
+    - [x] Download
     - [x] File
     - [x] Footer
     - [x] Header
