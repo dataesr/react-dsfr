@@ -205,7 +205,7 @@ Thanks to the internet world.
     - [x] Tag
     - [x] TextInput
     - [x] Tile
-    - [ ] Toggle
+    - [x] Toggle
     - [x] Typography
 * Upgrade to latest version of the DSFR (v1.9)
 * Full review ot the Typescript integration
