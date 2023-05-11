@@ -5,8 +5,15 @@ import { getSpace } from '../../../utils/getters';
 
 /**
  *
- * @visibleName Container
+ ** Usage : pour que la grille s’affiche correctement, il faut respecter la structure :
+ ** ->  Container,
+ *Conteneur principal de la grille.
+ ** -> Row,
+ *Qui contient une ou plusieurs colonnes.
+ ** -> Col,
+ *Colonne qui contient le contenu à afficher.
  */
+
 const Container = ({
   as, fluid, children, className, role, spacing,
 }) => {
