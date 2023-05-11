@@ -90,32 +90,31 @@ const Radio = ({
 
 Radio.defaultProps = {
   className: '',
+  defaultChecked: false,
+  disabled: undefined,
   hint: '',
   id: '',
-  isExtended: false,
-  size: 'md',
-  onChange: () => {
-  },
-  onGroupChange: () => {
-  },
-  messageType: '',
-  message: '',
   imageURL: '',
-  defaultChecked: false,
+  isExtended: false,
+  message: '',
+  messageType: '',
+  onChange: () => {},
+  onGroupChange: () => {},
+  size: 'md',
   svg: null,
-  disabled: undefined,
 };
 
 Radio.propTypes = {
   className: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
   hint: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
   ]),
   id: PropTypes.string,
-  disabled: PropTypes.bool,
-  svg: PropTypes.node,
+  imageURL: PropTypes.string,
   isExtended: PropTypes.bool,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,
@@ -123,9 +122,8 @@ Radio.propTypes = {
   onChange: PropTypes.func,
   onGroupChange: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md']),
-  imageURL: PropTypes.string,
+  svg: PropTypes.node,
   value: PropTypes.string.isRequired,
-  defaultChecked: PropTypes.bool,
 };
 
 export default Radio;

@@ -50,7 +50,7 @@ jobs:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
 
   notify:
-    needs: deploy
+    needs: storybook-deploy
     if: always()
     runs-on: ubuntu-latest
     steps:

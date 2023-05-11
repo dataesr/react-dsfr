@@ -14,11 +14,13 @@ import FooterPartnersSecondaryTitle from './FooterPartnersSecondaryTitle';
 import FooterPartnersLogo from './FooterPartnersLogo';
 import FooterBottom from './FooterBottom';
 import FooterCopy from './FooterCopy';
-import Logo from '../Logo/Logo';
 import Link from '../Link/Link';
+import Logo from '../Logo/Logo';
+
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/pied-de-page
 
 export default {
-  title: 'Footer',
+  title: 'Composants/Pied de page - Footer',
   component: Footer,
   subcomponents: {
     FooterTopCategory,
@@ -33,6 +35,13 @@ export default {
     FooterPartnersLogo,
     FooterBottom,
     FooterCopy,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le pied de page propose des éléments d\information sur le site et une navigation secondaire pour l\'utilisateur afin qu\'il poursuive son parcours. Il est modulable selon les besoins et les exigences du site.',
+      },
+    },
   },
 };
 

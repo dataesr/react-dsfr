@@ -2,9 +2,18 @@ import { ComponentStory } from '@storybook/react';
 
 import Alert from './Alert';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte
+
 export default {
-  title: 'Alert',
+  title: 'Composants/Alerte - Alert',
   component: Alert,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les alertes permettent d\'attirer l\'attention de l\'utilisateur sur une information sans interrompre sa tâche en cours.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Alert> = (args) => (

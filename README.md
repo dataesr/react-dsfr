@@ -187,25 +187,26 @@ Thanks to the internet world.
     - [ ] Logo
     - [x] MediaImage
     - [x] MediaVideo
-    - [ ] Modal
+    - [x] Modal
     - [ ] Notice
-    - [ ] Pagination
-    - [ ] Radio
+    - [x] Pagination
+    - [x] Radio
     - [x] Row
     - [ ] SearchBar
-    - [ ] Select
+    - [x] Select
     - [ ] Share
     - [ ] SideMenu
     - [ ] Skiplinks
-    - [ ] Stepper
+    - [x] Stepper
     - [ ] Summary
     - [ ] SwitchTheme
     - [ ] Table
     - [ ] Tabs
     - [x] Tag
     - [x] TextInput
-    - [ ] Tile
+    - [x] Tile
     - [ ] Toggle
     - [x] Typography
 * Upgrade to latest version of the DSFR (v1.9)
 * Full review ot the Typescript integration
+* Tree Shaking (instead of the whole bundle)

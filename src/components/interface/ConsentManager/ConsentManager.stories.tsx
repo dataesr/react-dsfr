@@ -3,10 +3,19 @@ import { ComponentStory } from '@storybook/react';
 import ConsentManager from './ConsentManager';
 import ConsentService from './ConsentService';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/gestionnaire-de-consentement
+
 export default {
-  title: 'ConsentManager',
+  title: 'Composants/Gestionnaire de consentement - Consent banner',
   component: ConsentManager,
   subcomponents: { ConsentService },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le gestionnaire de consentement permet à l\'utilisateur de définir ses préférences sur l\'utilisation de ses données personnelles, notamment le dépôt de cookies non fonctionnels dans son navigateur).',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof ConsentManager> = (args) => (

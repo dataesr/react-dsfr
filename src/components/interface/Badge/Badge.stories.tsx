@@ -2,9 +2,18 @@ import { ComponentStory } from '@storybook/react';
 
 import Badge from './Badge';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/badge
+
 export default {
-  title: 'Badge',
+  title: 'Composants/Badge - Badge',
   component: Badge,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le composant badge permet de mettre en avant une information de type "statut" ou "état" sur un élément du site. Le badge n\'est pas un composant "cliquable". Il doit être associé à une information donnée sur une page pour préciser le statut ou l\'état associée à cette information.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Badge> = (args) => (

@@ -11,8 +11,10 @@ import TagGroup from '../Tag/TagGroup';
 import Badge from '../Badge/Badge';
 import BadgeGroup from '../Badge/BadgeGroup';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/carte
+
 export default {
-  title: 'Card',
+  title: 'Composants/Carte - Card',
   component: Card,
   subcomponents: {
     CardHeader,
@@ -20,6 +22,13 @@ export default {
     CardDetail,
     CardTitle,
     CardDescription,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'La carte est un lien vers une page éditoriale dont elle donne un aperçu. Elle fait généralement partie d\'une collection ou liste d\'aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée.',
+      },
+    },
   },
 };
 

@@ -3,24 +3,24 @@ import * as React from 'react';
 export type PaginationAnchorAs = 'a' | any;
 
 export interface PaginationButtonLabels {
-  navigationAria?: string;
   currentAria?: string;
-  pageAria?: (...args: any[])=>any;
-  prevLabel?: string;
-  nextLabel?: string;
-  prevAria?: string;
-  nextAria?: string;
   firstAria?: string;
   lastAria?: string;
+  navigationAria?: string;
+  nextAria?: string;
+  nextLabel?: string;
+  pageAria?: (...args: any[])=>any;
+  prevAria?: string;
+  prevLabel?: string;
 }
 
 export interface PaginationProps {
-  currentPage: number;
-  pageCount: number;
-  buildURL?: any;
-  onClick?: any;
   anchorAs?: PaginationAnchorAs;
+  buildURL?: any;
   buttonLabels?: PaginationButtonLabels;
+  currentPage: number;
+  onClick?: any;
+  pageCount: number;
   surrendingPages?: number;
 }
 

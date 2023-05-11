@@ -7,19 +7,19 @@ export type RadioGroupHint = string | Object | any[];
 export type RadioGroupMessageType = 'error' | 'valid' | '';
 
 export interface RadioGroupProps {
+  ariaLabel?: string;
   children?: RadioGroupChildren;
   className?: string;
-  hint?: RadioGroupHint;
-  ariaLabel?: string;
   disabled?: boolean;
+  hint?: RadioGroupHint;
   isInline?: boolean;
   legend: string;
   message?: string;
   messageType?: RadioGroupMessageType;
   name?: string;
-  value?: string;
   onChange?: (...args: any[])=>any;
   required?: boolean;
+  value?: string;
 }
 
 declare const RadioGroup: React.FC<RadioGroupProps>;
