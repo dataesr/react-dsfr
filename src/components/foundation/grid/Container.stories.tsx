@@ -4,10 +4,19 @@ import Col from './Col';
 import Container from './Container';
 import Row from './Row';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/grille-et-points-de-rupture/
+
 export default {
-  title: 'Grille et points de rupture - Grid System',
+  title: 'Fondamentaux Techniques/Grille et points de rupture - Grid System',
   component: Container,
   subcomponents: { Row, Col },
+  parameters: {
+    docs: {
+      description: {
+        component: ' Usage : pour que la grille s’affiche correctement, il faut respecter la structure. Container (principal de la grille) Row (contient une ou plusieurs colonnes) Col (colonne qui contient le contenu à afficher).',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Container> = (args) => (
