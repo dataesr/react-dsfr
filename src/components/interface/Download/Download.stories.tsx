@@ -5,7 +5,7 @@ import DownloadGroup, { DownloadGroupProps } from './DownloadGroup';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/telechargement-de-fichier
 
 export default {
-  title: 'Composant/Téléchargement de fichier - Download ',
+  title: 'Composants/Téléchargement de fichier - Download ',
   component: Download,
   argTypes: {},
   parameters: {
