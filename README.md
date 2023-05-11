@@ -174,9 +174,9 @@ Thanks to the internet world.
     - [x] Card
     - [x] Checkbox
     - [x] Checkboxgroup
-    - [ ] Col
+    - [x] Col
     - [x] ConsentManager
-    - [ ] Container
+    - [x] Container
     - [ ] Download
     - [x] File
     - [x] Footer
@@ -191,7 +191,7 @@ Thanks to the internet world.
     - [ ] Notice
     - [ ] Pagination
     - [ ] Radio
-    - [ ] Row
+    - [x] Row
     - [ ] SearchBar
     - [ ] Select
     - [ ] Share
