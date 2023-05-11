@@ -1,3 +1,11 @@
+## [3.8.1](https://github.com/dataesr/react-dsfr/compare/v3.8.0...v3.8.1) (2023-05-11)
+
+
+### Bug Fixes
+
+* CI and update unit tests snapshots ([0e6d8d5](https://github.com/dataesr/react-dsfr/commit/0e6d8d52b70b345eb42e8b67c4181c75ee96c5de))
+* Resolve ci errors and warnings ([43db8d5](https://github.com/dataesr/react-dsfr/commit/43db8d555a4268e4ce631f69f13eb8410ac05f07))
+
 # [3.8.0](https://github.com/dataesr/react-dsfr/compare/v3.7.0...v3.8.0) (2023-05-10)
 
 
