@@ -189,8 +189,8 @@ Thanks to the internet world.
     - [x] MediaVideo
     - [ ] Modal
     - [ ] Notice
-    - [ ] Pagination
-    - [ ] Radio
+    - [x] Pagination
+    - [x] Radio
     - [x] Row
     - [ ] SearchBar
     - [ ] Select
