@@ -18,8 +18,10 @@ import SearchBar from '../SearchBar/SearchBar';
 import Logo from '../Logo/Logo';
 import Link from '../Link/Link';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/en-tete
+
 export default {
-  title: 'Header',
+  title: 'Composants/En-tête - Header',
   component: Header,
   subcomponents: {
     HeaderBody,
@@ -33,6 +35,13 @@ export default {
     NavSubItem,
     MegaNavItem,
     MegaNavSubItem,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'L\'en-tête permet aux utilisateurs d\'identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.',
+      },
+    },
   },
 };
 

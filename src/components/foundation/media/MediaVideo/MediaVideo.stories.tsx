@@ -2,8 +2,10 @@ import { ComponentStory } from '@storybook/react';
 
 import MediaVideo from './MediaVideo';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/medias
+
 export default {
-  title: 'MediaVideo',
+  title: 'Fondamentaux Techniques/Médias Vidéo - Media Video',
   component: MediaVideo,
   argTypes: {
     size: {
@@ -12,6 +14,13 @@ export default {
       - md : dans cette taille, la largeur de la vidéo correspond à celle du contenu.
       - sm : dans cette taille, la largeur de la vidéo est inférieure à celle du contenu.
       `,
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
+      },
     },
   },
 };

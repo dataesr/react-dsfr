@@ -6,7 +6,13 @@ import dataAttributes from '../../../utils/data-attributes';
 import '@gouvfr/dsfr/dist/component/stepper/stepper.css';
 
 const Stepper = ({
-  titleAs, currentStep, steps, currentTitle, nextStepTitle, className, ...remainingProps
+  className,
+  currentStep,
+  currentTitle,
+  nextStepTitle,
+  steps,
+  titleAs,
+  ...remainingProps
 }) => {
   const _className = classNames('fr-stepper', className, {});
   const HtmlTag = `${titleAs}`;
@@ -29,10 +35,10 @@ const Stepper = ({
 Stepper.propTypes = {
   className: PropTypes.string,
   currentStep: PropTypes.number.isRequired,
-  steps: PropTypes.number.isRequired,
   currentTitle: PropTypes.string.isRequired,
   nextStepTitle: PropTypes.string.isRequired,
-  titleAs: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5']),
+  steps: PropTypes.number.isRequired,
+  titleAs: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
 };
 
 Stepper.defaultProps = {

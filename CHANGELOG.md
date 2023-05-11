@@ -1,3 +1,33 @@
+# [3.8.0](https://github.com/dataesr/react-dsfr/compare/v3.7.0...v3.8.0) (2023-05-10)
+
+
+### Features
+
+* **link:** add storybook for links ([aff8faf](https://github.com/dataesr/react-dsfr/commit/aff8faf6a9ac98972d61f8ac0f67c06de46f1202))
+
+# [3.7.0](https://github.com/dataesr/react-dsfr/compare/v3.6.0...v3.7.0) (2023-05-10)
+
+
+### Features
+
+* **tag/taggroup:** add storybook for tag and taggroup ([c6ce84c](https://github.com/dataesr/react-dsfr/commit/c6ce84caffc6a9e58f31ec6a1baeba384291ebca))
+
+# [3.6.0](https://github.com/dataesr/react-dsfr/compare/v3.5.15...v3.6.0) (2023-05-03)
+
+
+### Bug Fixes
+
+* **chore:** Udate package-lock.json ([cdd7599](https://github.com/dataesr/react-dsfr/commit/cdd75998483b9394e6d9fec3beb31e2e965d0763))
+* release ([7eb5f40](https://github.com/dataesr/react-dsfr/commit/7eb5f4034cae46aa5c9c52a1a522d3a44a78d823))
+* scroll on number input ([#341](https://github.com/dataesr/react-dsfr/issues/341)) ([fe48da3](https://github.com/dataesr/react-dsfr/commit/fe48da38f445e3d33efb2a6f57a5da0fab659444))
+
+
+### Features
+
+* **ci:** Switch from Slack to mattermost ([6858df8](https://github.com/dataesr/react-dsfr/commit/6858df8745620dbb590ba8c91de818ef604a3c94))
+* **radio:** Add stories for storybook ([db392a8](https://github.com/dataesr/react-dsfr/commit/db392a828747b6d6facc7968e43df5b3dcf1bd1d))
+* **radio:** Add stories for storybook /2 ([2949c66](https://github.com/dataesr/react-dsfr/commit/2949c66ac0e5af422a80c20261543b5c199e5c86))
+
 ## [3.5.15](https://github.com/dataesr/react-dsfr/compare/v3.5.14...v3.5.15) (2023-04-22)
 
 

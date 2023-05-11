@@ -3,8 +3,10 @@ import { ComponentStory } from '@storybook/react';
 import Checkbox from './Checkbox';
 import CheckboxGroup from './CheckboxGroup';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/case-a-cocher
+
 export default {
-  title: 'CheckboxGroup',
+  title: 'Composants/Case à cocher - Checkbox',
   component: CheckboxGroup,
   subcomponents: { Checkbox },
 };

@@ -2,10 +2,19 @@ import { ComponentStory } from '@storybook/react';
 
 import File from './File';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/ajout-de-fichier
+
 export default {
-  title: 'File',
+  title: 'Composants/Ajout de fichier - Upload',
   component: File,
   subcomponents: { File },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Ce composant permet aux utilisateurs de sélectionner et envoyer un ou plusieurs fichiers.',
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof File> = (args) => (
@@ -25,7 +34,7 @@ AcceptFile.args = {
   hint: 'Hint',
   accept: '.txt, .csv',
 };
-AcceptFile.storyName = 'Ajout de fichier specifique';
+AcceptFile.storyName = 'Ajout de fichier spécifique';
 
 export const MultipleFile = Template.bind({});
 MultipleFile.args = {
@@ -33,7 +42,7 @@ MultipleFile.args = {
   label: 'Label File',
   hint: 'Hint',
 };
-MultipleFile.storyName = 'Ajout de fichier multiples';
+MultipleFile.storyName = 'Ajout de fichiers multiples';
 
 export const ErrorFile = Template.bind({});
 ErrorFile.args = {

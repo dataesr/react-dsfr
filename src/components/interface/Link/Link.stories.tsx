@@ -2,10 +2,18 @@ import { Story } from '@storybook/react/types-6-0';
 
 import Link, { LinkProps } from './Link';
 
+// https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/lien
+
 export default {
-  title: 'Link',
+  title: 'Composants/Lien - Link',
   component: Link,
-  argTypes: {},
+  parameters: {
+    docs: {
+      description: {
+        component: 'Le lien permet la navigation entre une page et un autre contenu au sein de la même page, du même site ou externe.',
+      },
+    },
+  },
 };
 
 const Template: Story<LinkProps> = (args) => <Link {...args} />;
