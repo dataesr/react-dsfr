@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react/types-6-0';
 
 import Share, { ShareProps } from './Share';
-import ShareButton, { ShareButtonProps } from './ShareButton';
+import ShareButton from './ShareButton';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/partage
 
