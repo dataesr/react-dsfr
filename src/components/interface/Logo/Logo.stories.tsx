@@ -3,7 +3,7 @@ import { ComponentStory } from '@storybook/react';
 import Logo from './Logo';
 
 export default {
-  title: 'Composants/Logo',
+  title: 'Composants/Logo - Logo',
   component: Logo,
   parameters: {
     docs: {

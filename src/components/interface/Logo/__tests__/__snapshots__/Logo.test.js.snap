@@ -8,10 +8,8 @@ exports[`<Logo /> should render Logo properly 1`] = `
   <br />
   l'enseignement
   <br />
-  supérieur de
+  supérieur et de
   <br />
-  la rechercher
-  <br />
-  et de l'innovation
+  la recherche
 </p>
 `;
