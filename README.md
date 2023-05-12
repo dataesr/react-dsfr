@@ -210,7 +210,7 @@ Thanks to the internet world.
     - [x] Row
     - [x] SearchBar
     - [x] Select
-    - [ ] Share
+    - [x] Share
     - [ ] SideMenu
     - [ ] Skiplinks
     - [x] Stepper
