@@ -198,7 +198,7 @@ Thanks to the internet world.
     - [x] Footer
     - [x] Header
     - [x] Highlight
-    - [ ] Icon
+    - [x] Icon
     - [x] Link
     - [x] Logo
     - [x] MediaImage
