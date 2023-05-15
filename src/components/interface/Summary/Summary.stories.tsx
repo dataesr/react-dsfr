@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react/types-6-0';
 
 import Summary, { SummaryProps } from './Summary';
-import SummaryItem, { SummaryItemProps } from './SummaryItem';
+import SummaryItem from './SummaryItem';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/sommaire
 
