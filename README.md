@@ -214,7 +214,7 @@ Thanks to the internet world.
     - [ ] SideMenu
     - [x] Skiplinks
     - [x] Stepper
-    - [ ] Summary
+    - [x] Summary
     - [ ] SwitchTheme
     - [ ] Table
     - [ ] Tabs
