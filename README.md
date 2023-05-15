@@ -212,7 +212,7 @@ Thanks to the internet world.
     - [x] Select
     - [x] Share
     - [ ] SideMenu
-    - [ ] Skiplinks
+    - [x] Skiplinks
     - [x] Stepper
     - [ ] Summary
     - [ ] SwitchTheme
