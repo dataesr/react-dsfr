@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react/types-6-0';
+import { ComponentStory } from '@storybook/react';
 
-import SearchBar, { SearchBarProps } from './SearchBar';
+import SearchBar from './SearchBar';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/barre-de-recherche
 
@@ -16,16 +16,18 @@ export default {
   },
 };
 
-const Template: Story<SearchBarProps> = (args) => <SearchBar {...args} />;
+const Template: ComponentStory<typeof SearchBar> = (args) => <SearchBar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  buttonLabel: 'Rechercher',
   placeholder: 'Par défaut, la taille est fixée à "md"',
 };
 Default.storyName = 'Barre de recherche';
 
 export const MDSize = Template.bind({});
 MDSize.args = {
+  buttonLabel: 'Rechercher',
   placeholder: 'Rechercher',
   size: 'lg',
 };
@@ -33,7 +35,7 @@ MDSize.storyName = 'Barre de recherche large';
 
 export const ButtonLabel = Template.bind({});
 ButtonLabel.args = {
+  buttonLabel: 'Rechercher',
   placeholder: 'Rechercher',
-  buttonLabel: 'Cliquez ici pour effectuer votre recherche',
 };
 ButtonLabel.storyName = 'Label sur le bouton';

@@ -54,7 +54,7 @@ div.fr-notice--info .fr-notice__body:before,
 #ds-fr--share-copy .fr-btn--copy:before,
 #ds-fr--share-mail .fr-btn--mail:before,
 #ds-fr--share-twitter .fr-btn--twitter:before,
-.fr-breadcrumb__list li:not(:first-child):before {
+.fr-breadcrumb__list li:not(:first-of-type):before {
   font-family: 'remixicon';
   box-shadow: none;
   background-color: inherit !important;
@@ -232,6 +232,6 @@ div.fr-notice--info .fr-notice__body:before {
   content: '\ea4e' !important;
 }
 
-.fr-breadcrumb__list li:not(:first-child):before {
+.fr-breadcrumb__list li:not(:first-of-type):before {
   content: '\ea54' !important;
 }

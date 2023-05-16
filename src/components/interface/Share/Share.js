@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import dataAttributes from '../../../utils/data-attributes';
 
 import '@gouvfr/dsfr/dist/component/share/share.css';
@@ -15,7 +16,9 @@ const Share = ({
       className={_className}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <p className="fr-share__title">{title}</p>
+      <p className="fr-share__title">
+        {title}
+      </p>
       <ul className="fr-btns-group">
         {children}
       </ul>
@@ -30,8 +33,8 @@ Share.defaultProps = {
 
 Share.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  title: PropTypes.string,
   className: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Share;

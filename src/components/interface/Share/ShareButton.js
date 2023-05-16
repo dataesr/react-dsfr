@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import dataAttributes from '../../../utils/data-attributes';
 
 import '@gouvfr/dsfr/dist/component/share/share.css';
 
 const ShareButton = ({
-  label, href, className, type, onClick, ...remainingProps
+  className, href, label, onClick, type, ...remainingProps
 }) => {
   const _className = classNames('fr-share', className);
 
@@ -19,10 +20,10 @@ const ShareButton = ({
     let link = (
       <a
         className={`fr-btn fr-btn--${type}`}
-        onClick={_onClick}
         href={href}
-        target="_blank"
+        onClick={_onClick}
         rel="noopener noreferrer"
+        target="_blank"
       >
         {label}
       </a>
@@ -33,8 +34,8 @@ const ShareButton = ({
         <a
           className={`fr-btn fr-btn--${type}`}
           href={href}
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
           {label}
         </a>
@@ -48,9 +49,9 @@ const ShareButton = ({
     <li className={_className} {...dataAttributes.getAll(remainingProps)} id={`ds-fr--share-${type}`}>
       {type === 'copy' ? (
         <button
-          type="button"
           className="fr-btn--copy fr-btn"
           onClick={_onClick}
+          type="button"
         >
           {label}
         </button>
@@ -68,11 +69,11 @@ ShareButton.defaultProps = {
 };
 
 ShareButton.propTypes = {
+  className: PropTypes.string,
   href: PropTypes.string,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(['facebook', 'twitter', 'linkedin', 'copy', 'mail']).isRequired,
-  className: PropTypes.string,
 };
 
 export default ShareButton;
