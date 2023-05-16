@@ -216,7 +216,7 @@ Thanks to the internet world.
     - [x] Stepper
     - [x] Summary
     - [ ] SwitchTheme
-    - [ ] Table
+    - [x] Table
     - [ ] Tabs
     - [x] Tag
     - [x] TextInput
