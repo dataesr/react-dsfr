@@ -17,8 +17,9 @@ export interface TagProps {
   title?: string;
   target?: string;
   icon?: string;
-  onClick?: (...args: any[])=>any;
+  onClick?: undefined;
   iconPosition?: TagIconPosition;
+  colorFamily?: string;
 }
 
 declare const Tag: React.FC<TagProps>;

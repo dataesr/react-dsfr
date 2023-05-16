@@ -18,25 +18,25 @@ const iconSize = {
  */
 const Tag = ({
   as,
-  closable,
   children,
-  small,
+  className,
+  closable,
+  colorFamily,
   href,
-  title,
-  target,
   icon,
   iconPosition,
-  className,
-  selected,
   onClick,
-  colorFamily,
+  small,
+  target,
+  title,
+  selected,
   ...remainingProps
 }) => {
   const ref = useRef();
   const _className = classNames('fr-tag', {
     'fr-tag--sm': small,
     'fr-tag--dismiss': closable && onClick,
-    'fr-fi-icon': (icon && iconPosition),
+    'fr-fi-icon': icon && iconPosition,
     [`fr-tag--${colorFamily}`]: colorFamily,
   }, className);
 
@@ -49,9 +49,9 @@ const Tag = ({
   if (href) {
     HtmlTag = 'a';
   }
+
   const handleClick = (e) => {
     e.preventDefault();
-
     if (closable) {
       ref.current.remove();
     }
@@ -59,7 +59,6 @@ const Tag = ({
   };
 
   const _tag = (
-
     <HtmlTag
       ref={ref}
       aria-label={closable ? `Retirer ${title}` : undefined}
@@ -74,12 +73,12 @@ const Tag = ({
     >
       {children}
       {(selected && closable) && (
-      <Icon
-        verticalAlign="sub"
-        name="ri-checkbox-circle-line"
-        size="lg"
-        className="ds-fr-tag-icon"
-      />
+        <Icon
+          className="ds-fr-tag-icon"
+          name="ri-checkbox-circle-line"
+          size="lg"
+          verticalAlign="sub"
+        />
       )}
     </HtmlTag>
   );
@@ -90,10 +89,10 @@ const Tag = ({
     if (closable) {
       tag = (
         <Icon
-          verticalAlign="sub"
-          name="ri-close-line"
           iconPosition="right"
+          name="ri-close-line"
           size="lg"
+          verticalAlign="sub"
         >
           {_tag}
         </Icon>
@@ -106,9 +105,9 @@ const Tag = ({
   return (
     icon ? (
       <Icon
+        iconPosition={children ? iconPosition : 'center'}
         name={icon}
         size={iconSize[small ? 'sm' : 'md']}
-        iconPosition={children ? iconPosition : 'center'}
       >
         {_tag}
       </Icon>
@@ -117,35 +116,35 @@ const Tag = ({
 };
 
 Tag.defaultProps = {
-  className: '',
   as: 'p',
-  small: false,
+  children: undefined,
+  className: '',
   closable: false,
-  selected: undefined,
+  colorFamily: '',
   href: '',
-  title: '',
-  target: '',
   icon: '',
   iconPosition: 'right',
-  colorFamily: '',
-  children: undefined,
-  onClick: null,
+  onClick: undefined,
+  selected: undefined,
+  small: false,
+  target: '',
+  title: '',
 };
 
 Tag.propTypes = {
-  className: PropTypes.string,
-  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   as: PropTypes.oneOf(['a', 'span', 'p']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  small: PropTypes.bool,
-  selected: PropTypes.bool,
+  className: PropTypes.string,
   closable: PropTypes.bool,
+  colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   href: PropTypes.string,
-  title: PropTypes.string,
-  target: PropTypes.string,
   icon: PropTypes.string,
-  onClick: PropTypes.func,
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  onClick: PropTypes.oneOfType([PropTypes.func, undefined]),
+  selected: PropTypes.bool,
+  small: PropTypes.bool,
+  target: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Tag;

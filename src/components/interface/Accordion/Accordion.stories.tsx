@@ -25,13 +25,13 @@ const Template: ComponentStory<typeof Accordion> = (args) => (
 export const SimpleAccordion = Template.bind({});
 SimpleAccordion.args = {
   children: [
-    <AccordionItem title="first line accordion" initExpand>
+    <AccordionItem title="first line accordion" initExpand key="#1">
       Accordion Item #1
     </AccordionItem>,
-    <AccordionItem title="second line accordion">
+    <AccordionItem title="second line accordion" key="#2">
       Accordion Item #2
     </AccordionItem>,
-    <AccordionItem title="third line accordion">
+    <AccordionItem title="third line accordion" key="#3">
       <article>
         <h1>Title</h1>
         <p>

@@ -9,12 +9,14 @@ import dataAttributes from '../../../utils/data-attributes';
 
 import '@gouvfr/dsfr/dist/component/accordion/accordion.css';
 
-/**
- *
- * @visibleName Accordion
- */
 const Accordion = ({
-  className, children, as, keepOpen, size, color, ...remainingProps
+  as,
+  children,
+  className,
+  color,
+  keepOpen,
+  size,
+  ...remainingProps
 }) => {
   const HtmlTag = `${as}`;
   const [expandedItems, setExpandedItems] = useState([]);
@@ -56,7 +58,9 @@ const Accordion = ({
       className={classNames(className)}
       {...dataAttributes.getAll(remainingProps)}
     >
-      <ul className="fr-accordions-group">{childs}</ul>
+      <ul className="fr-accordions-group">
+        {childs}
+      </ul>
     </HtmlTag>
   );
 };
@@ -64,24 +68,21 @@ const Accordion = ({
 Accordion.defaultProps = {
   as: 'div',
   className: '',
+  color: '',
   keepOpen: false,
   size: 'md',
-  color: '',
 };
 
 Accordion.propTypes = {
-  /**
-   * Html tag to render accordion wrapper.
-   */
   as: PropTypes.oneOf(['div', 'section']),
-  size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  keepOpen: PropTypes.bool,
-  color: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
+  color: PropTypes.string,
+  keepOpen: PropTypes.bool,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
 };
 
 export default Accordion;

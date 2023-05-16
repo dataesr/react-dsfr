@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react/types-6-0';
+import { ComponentStory } from '@storybook/react';
 
-import Tag, { TagProps } from './Tag';
+import Tag from './Tag';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tag
 
@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template: Story<TagProps> = (args) => <Tag {...args} />;
+const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -89,3 +89,19 @@ ALT.args = {
   title: 'Vers le site : https://www.example.com',
 };
 ALT.storyName = 'Tag accessible';
+
+export const Disable = Template.bind({});
+Disable.args = {
+  children: 'Label tag',
+  onClick: undefined,
+};
+Disable.storyName = 'Tag non cliquable';
+
+export const DisableIcon = Template.bind({});
+DisableIcon.args = {
+  children: 'Label tag',
+  icon: 'fr-fi-arrow-right-line',
+  iconPosition: 'left',
+  onClick: undefined,
+};
+DisableIcon.storyName = 'Tag non cliquable avec icône';

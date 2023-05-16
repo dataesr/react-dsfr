@@ -1,3 +1,21 @@
-const colorFamilies = ['green-tilleul-verveine', 'green-bourgeon', 'green-emeraude', 'green-menthe', 'green-archipel', 'blue-ecume', 'blue-cumulus', 'purple-glycine', 'pink-macaron', 'pink-tuile', 'yellow-tournesol', 'yellow-moutarde', 'orange-terre-battue', 'brown-cafe-creme', 'brown-caramel', 'brown-opera', 'beige-gris-galet'];
+const colorFamilies = [
+  'beige-gris-galet',
+  'blue-cumulus',
+  'blue-ecume',
+  'brown-cafe-creme',
+  'brown-caramel',
+  'brown-opera',
+  'green-archipel',
+  'green-bourgeon',
+  'green-emeraude',
+  'green-menthe',
+  'green-tilleul-verveine',
+  'orange-terre-battue',
+  'pink-macaron',
+  'pink-tuile',
+  'purple-glycine',
+  'yellow-moutarde',
+  'yellow-tournesol',
+];
 
 export default colorFamilies;
