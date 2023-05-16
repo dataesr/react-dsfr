@@ -104,8 +104,7 @@ button.fr-accordion__btn[aria-expanded='true']:after {
 
 /**********************************/
 
-.fr-notice button.fr-btn--close:before,
-.fr-link--close:before {
+.fr-notice button.fr-btn--close:before{
   content: '\eb99' !important;
 }
 
