@@ -180,49 +180,6 @@ Thanks to the internet world.
 ## TODO
 
 * Limit usage of colors to colorFamilies
-* Complete the StoryBook
-    - [x] Accordion
-    - [x] Alert
-    - [x] Badge
-    - [x] Breadcrumb
-    - [x] Button
-    - [x] Callout
-    - [x] Card
-    - [x] Checkbox
-    - [x] Checkboxgroup
-    - [x] Col
-    - [x] ConsentManager
-    - [x] Container
-    - [x] Download
-    - [x] File
-    - [x] Footer
-    - [x] Header
-    - [x] Highlight
-    - [x] Icon
-    - [x] Link
-    - [x] Logo
-    - [x] MediaImage
-    - [x] MediaVideo
-    - [x] Modal
-    - [x] Notice
-    - [x] Pagination
-    - [x] Radio
-    - [x] Row
-    - [x] SearchBar
-    - [x] Select
-    - [x] Share
-    - [ ] SideMenu
-    - [x] Skiplinks
-    - [x] Stepper
-    - [x] Summary
-    - [ ] SwitchTheme
-    - [x] Table
-    - [ ] Tabs
-    - [x] Tag
-    - [x] TextInput
-    - [x] Tile
-    - [x] Toggle
-    - [x] Typography
 * Upgrade to latest version of the DSFR (v1.9)
 * Full review ot the Typescript integration
 * Tree Shaking (instead of the whole bundle)
