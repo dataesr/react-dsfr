@@ -1,3 +1,10 @@
+## [3.9.1](https://github.com/dataesr/react-dsfr/compare/v3.9.0...v3.9.1) (2023-05-16)
+
+
+### Bug Fixes
+
+* **tag:** avoid stacked icons on tag component ([797c3df](https://github.com/dataesr/react-dsfr/commit/797c3df31835e922b05a056ca9e41fb326c6ce8b))
+
 # [3.9.0](https://github.com/dataesr/react-dsfr/compare/v3.8.1...v3.9.0) (2023-05-11)
 
 
