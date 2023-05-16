@@ -186,6 +186,7 @@ Thanks to the internet world.
     - [x] Badge
     - [x] Breadcrumb
     - [x] Button
+    - [x] ButtonGroup
     - [x] Callout
     - [x] Card
     - [x] Checkbox
