@@ -73,7 +73,7 @@ const Tag = ({
       {...dataAttributes.getAll(remainingProps)}
     >
       {children}
-      {selected && (
+      {(selected && closable) && (
       <Icon
         verticalAlign="sub"
         name="ri-checkbox-circle-line"
