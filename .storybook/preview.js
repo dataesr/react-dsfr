@@ -23,5 +23,6 @@ export const parameters = {
     storySort: {
       method: 'alphabetical'
     }
-  }
+  },
+  viewMode: 'docs'
 }
