@@ -22,6 +22,7 @@ const RadioGroup = ({
   message,
   messageType,
   name,
+  size,
   onChange,
   required,
   value,
@@ -40,6 +41,7 @@ const RadioGroup = ({
       setInternalValue(newValue);
     }
   };
+  const sizeClass = size !== 'md' ? 'fr-radio-group--sm' : null;
 
   const childs = Children.toArray(children).map((child) => {
     const { value: childValue } = child.props;
@@ -54,7 +56,7 @@ const RadioGroup = ({
   });
   const inlineClass = (isInline) ? 'fr-fieldset--inline' : null;
   const messageClasses = (messageType !== '') ? `fr-fieldset--${messageType}` : null;
-  const _className = classNames('fr-form-group', className, inlineClass, messageClasses);
+  const _className = classNames('fr-form-group', className, inlineClass, messageClasses, sizeClass);
   return (
     <div
       className={_className}
@@ -94,6 +96,7 @@ RadioGroup.defaultProps = {
   onChange: () => {},
   required: false,
   value: '',
+  size: 'md',
 };
 
 RadioGroup.propTypes = {
@@ -118,6 +121,7 @@ RadioGroup.propTypes = {
   onChange: PropTypes.func,
   required: PropTypes.bool,
   value: PropTypes.string,
+  size: PropTypes.oneOf(['sm', 'md']),
 };
 
 export default RadioGroup;
