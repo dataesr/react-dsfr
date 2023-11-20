@@ -1,3 +1,10 @@
+## [3.9.2](https://github.com/dataesr/react-dsfr/compare/v3.9.1...v3.9.2) (2023-11-20)
+
+
+### Bug Fixes
+
+* **container:** add prop type div to the component ([f5f2f51](https://github.com/dataesr/react-dsfr/commit/f5f2f51c1f104be250068e565104909b88cdc031))
+
 ## [3.9.1](https://github.com/dataesr/react-dsfr/compare/v3.9.0...v3.9.1) (2023-05-16)
 
 
