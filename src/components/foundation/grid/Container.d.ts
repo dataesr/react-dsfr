@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export type ContainerChildren = React.ReactNode[] | React.ReactNode | string;
 
-export type ContainerAs = 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'section';
+export type ContainerAs = 'article' | 'aside' | 'div' |'header' | 'footer' | 'main' | 'nav' | 'section';
 
 export interface ContainerProps {
   /**
