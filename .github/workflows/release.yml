@@ -58,5 +58,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           mattermost_webhook_url: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-          mattermost_channel: react-dsfr
+          mattermost_channel: bots
           deployment_url: https://dataesr.github.io/react-dsfr
