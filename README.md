@@ -79,6 +79,12 @@ Some components can be colored with variables (see `colorFamily` props) listed b
 
 [Storybook](https://dataesr.github.io/react-dsfr) of the project is under construction.
 
+To run it locally
+
+```bash
+npm run storybook
+```
+
 
 
 ### Unit tests
