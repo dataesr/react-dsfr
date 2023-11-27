@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/dataesr/react-dsfr/compare/v3.9.2...v3.10.0) (2023-11-27)
+
+
+### Features
+
+* **ci:** Change Mattermost notification channel ([8a424e2](https://github.com/dataesr/react-dsfr/commit/8a424e2567386458e3bcef0968256e294edf38c4))
+
 ## [3.9.2](https://github.com/dataesr/react-dsfr/compare/v3.9.1...v3.9.2) (2023-11-20)
 
 
