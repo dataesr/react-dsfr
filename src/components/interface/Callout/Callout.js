@@ -12,13 +12,20 @@ import '@gouvfr/dsfr/dist/component/callout/callout.css';
  * @visibleName Callout
  */
 const Callout = ({
-  hasInfoIcon, children, className, colorFamily, colors, ...remainingProps
+  hasInfoIcon, icon, children, className, colorFamily, colors, ...remainingProps
 }) => {
+  if (!hasInfoIcon) { // TODO Delete deprecated prop hasInfoIcon when reaching major version 4.0.0
+    // eslint-disable-next-line no-console
+    console.warn("'hasInfoIcon' is deprecated and will be deleted in version 4.0.0. Please use 'icon' instead", hasInfoIcon);
+    // eslint-disable-next-line no-param-reassign
+    icon = undefined;
+  }
+
   const theme = useTheme();
   const [color, backgroundColor] = colors;
   const calloutRef = useRef();
   const _className = classNames('fr-callout', className, {
-    'fr-fi-information-line': hasInfoIcon,
+    [icon]: icon,
     [`fr-callout--${colorFamily}`]: colorFamily,
   });
 
@@ -45,6 +52,7 @@ const Callout = ({
 };
 
 Callout.defaultProps = {
+  icon: 'fr-fi-information-line',
   hasInfoIcon: true,
   className: '',
   colors: [],
@@ -52,6 +60,10 @@ Callout.defaultProps = {
 };
 
 Callout.propTypes = {
+  icon: PropTypes.oneOfType([
+    PropTypes.oneOf([null]),
+    PropTypes.string,
+  ]),
   hasInfoIcon: PropTypes.bool,
   colorFamily: PropTypes.oneOf([...colorFamilies, '']),
   /**

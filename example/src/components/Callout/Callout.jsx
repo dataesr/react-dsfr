@@ -17,7 +17,7 @@ const CalloutExample = () => (
         </Callout>
       </Col>
       <Col n="12" spacing="py-2w">
-        <Callout>
+        <Callout icon={null}>
           <CalloutTitle>Mise en avant</CalloutTitle>
           <CalloutText>Callout text that might be short and concise.</CalloutText>
         </Callout>
