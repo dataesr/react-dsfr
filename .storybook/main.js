@@ -4,7 +4,8 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/preset-create-react-app",
     "@chromatic-com/storybook",
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
+    "@storybook/addon-webpack5-compiler-babel"
   ],
 
   "framework": {
