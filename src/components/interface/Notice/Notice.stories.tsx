@@ -8,7 +8,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le bandeau d’information importante permet aux utilisateurs de voir ou d’accéder à une information importante et temporaire.',
+        component:
+          'Le bandeau d’information importante permet aux utilisateurs de voir ou d’accéder à une information importante et temporaire.',
       },
     },
   },

@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Button from './Button';
 
@@ -10,13 +10,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le bouton est un élément d\'interaction avec l\'interface permettant à l\'utilisateur d\'effectuer une action.',
+        component:
+          "Le bouton est un élément d'interaction avec l'interface permettant à l'utilisateur d'effectuer une action.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

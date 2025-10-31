@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import TextInput from './TextInput';
 
@@ -10,13 +10,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les champs permettent à un utilisateur d\'entrer du contenu et données. Le champ simple est un champ de saisie libre, qui accepte une courte ligne de contenu (texte ou/ et nombre). Le libellé se trouve au-dessus du champs de saisie, pour faciliter la lecture.',
+        component:
+          "Les champs permettent à un utilisateur d'entrer du contenu et données. Le champ simple est un champ de saisie libre, qui accepte une courte ligne de contenu (texte ou/ et nombre). Le libellé se trouve au-dessus du champs de saisie, pour faciliter la lecture.",
       },
     },
   },
-} as ComponentMeta<typeof TextInput>;
+} as Meta<typeof TextInput>;
 
-const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />;
+const Template: StoryFn<typeof TextInput> = (args) => (
+  <TextInput {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -27,10 +30,10 @@ Default.storyName = 'État par défaut';
 export const ErrorState = Template.bind({});
 ErrorState.args = {
   label: 'Label champ de saisie',
-  message: 'Texte d\'erreur obligatoire',
+  message: "Texte d'erreur obligatoire",
   messageType: 'error',
 };
-ErrorState.storyName = 'État d\'erreur';
+ErrorState.storyName = "État d'erreur";
 
 export const SuccessState = Template.bind({});
 SuccessState.args = {
@@ -52,7 +55,7 @@ HelpText.args = {
   hint: 'Texte de description additionnel',
   label: 'Label champ de saisie',
 };
-HelpText.storyName = 'Champ avec texte d\'aide';
+HelpText.storyName = "Champ avec texte d'aide";
 
 export const TextArea = Template.bind({});
 TextArea.args = {

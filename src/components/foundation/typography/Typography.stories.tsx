@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import AltTitle from './AltTitle/AltTitle';
 import Text from './Text/Text';
@@ -11,19 +11,18 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les typographies Marianne® et Spectral sont les typographies officielles de la charte de l\'État. Leur usage crée une cohérence entre les interfaces et offre une expérience positive à l\'utilisateur. Leur respect renforce également la reconnaissance de la parole de l\'État.',
+        component:
+          "Les typographies Marianne® et Spectral sont les typographies officielles de la charte de l'État. Leur usage crée une cohérence entre les interfaces et offre une expérience positive à l'utilisateur. Leur respect renforce également la reconnaissance de la parole de l'État.",
       },
     },
   },
 };
 
-const AltTitleTemplate: ComponentStory<typeof AltTitle> = (args) => (
+const AltTitleTemplate: StoryFn<typeof AltTitle> = (args) => (
   <AltTitle {...args} />
 );
 
-const TextTemplate: ComponentStory<typeof Text> = (args) => (
-  <Text {...args} />
-);
+const TextTemplate: StoryFn<typeof Text> = (args) => <Text {...args} />;
 
 export const TextAlternatif = TextTemplate.bind({});
 TextAlternatif.args = {
@@ -33,7 +32,7 @@ TextAlternatif.args = {
 };
 TextAlternatif.storyName = 'Texte alternatif';
 
-const TitleTemplate: ComponentStory<typeof Title> = (args) => (
+const TitleTemplate: StoryFn<typeof Title> = (args) => (
   <Title {...args} />
 );
 

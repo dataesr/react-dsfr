@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import ConsentManager from './ConsentManager';
 import ConsentService from './ConsentService';
@@ -12,13 +12,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le gestionnaire de consentement permet à l\'utilisateur de définir ses préférences sur l\'utilisation de ses données personnelles, notamment le dépôt de cookies non fonctionnels dans son navigateur).',
+        component:
+          "Le gestionnaire de consentement permet à l'utilisateur de définir ses préférences sur l'utilisation de ses données personnelles, notamment le dépôt de cookies non fonctionnels dans son navigateur).",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof ConsentManager> = (args) => (
+const Template: StoryFn<typeof ConsentManager> = (args) => (
   <ConsentManager {...args} />
 );
 

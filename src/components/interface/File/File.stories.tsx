@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import File from './File';
 
@@ -11,15 +11,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Ce composant permet aux utilisateurs de sélectionner et envoyer un ou plusieurs fichiers.',
+        component:
+          'Ce composant permet aux utilisateurs de sélectionner et envoyer un ou plusieurs fichiers.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof File> = (args) => (
-  <File {...args} />
-);
+const Template: StoryFn<typeof File> = (args) => <File {...args} />;
 
 export const SimpleFile = Template.bind({});
 SimpleFile.args = {

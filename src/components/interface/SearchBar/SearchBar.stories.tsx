@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import SearchBar from './SearchBar';
 
@@ -10,13 +10,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "La barre de recherche est un système de navigation qui permet à l'utilisateur d’accéder rapidement à un contenu en lançant une recherche sur un mot clé ou une expression. Pour l’affichage mobile/tablette, il est obligatoire d’utiliser le format MD qui est le plus adapté. ",
+        component:
+          "La barre de recherche est un système de navigation qui permet à l'utilisateur d’accéder rapidement à un contenu en lançant une recherche sur un mot clé ou une expression. Pour l’affichage mobile/tablette, il est obligatoire d’utiliser le format MD qui est le plus adapté. ",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof SearchBar> = (args) => <SearchBar {...args} />;
+const Template: StoryFn<typeof SearchBar> = (args) => (
+  <SearchBar {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

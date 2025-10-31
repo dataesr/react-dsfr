@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import SimpleTable from './SimpleTable';
 
 export default {
@@ -7,13 +7,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Il permet de simplifier l’analyse et la comparaison d’information pour l’utilisateur.',
+        component:
+          'Il permet de simplifier l’analyse et la comparaison d’information pour l’utilisateur.',
       },
     },
   },
 };
 
-const Template: Story = (args) => <SimpleTable {...args} />;
+const Template: StoryFn = (args) => <SimpleTable {...args} />;
 
 const data = [
   { id: 1, name: 'Alice Martin', age: 25 },
@@ -54,5 +55,8 @@ Bordered.args = { ...Template.args, borderer: true };
 Bordered.storyName = 'Tableau avec éléments fond et bordure';
 
 export const ColoredTable = Template.bind({});
-ColoredTable.args = { ...Template.args, className: 'fr-table fr-table--green-emeraude' };
+ColoredTable.args = {
+  ...Template.args,
+  className: 'fr-table fr-table--green-emeraude',
+};
 ColoredTable.storyName = 'Tableau avec éléments fond et bordure de couleur';

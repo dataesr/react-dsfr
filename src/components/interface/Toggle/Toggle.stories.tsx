@@ -10,7 +10,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le composant “Interrupteur” permet à l’utilisateur de faire un choix entre deux états opposés (activé / désactivé).',
+        component:
+          'Le composant “Interrupteur” permet à l’utilisateur de faire un choix entre deux états opposés (activé / désactivé).',
       },
     },
   },
@@ -20,7 +21,8 @@ const Template: StoryFn<ToggleProps> = (args) => <Toggle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Un label d’interrupteur doit être concis (ne pas dépasser 3 mots si possible)',
+  label:
+    'Un label d’interrupteur doit être concis (ne pas dépasser 3 mots si possible)',
 };
 Default.storyName = 'Interrupteur avec label à droite';
 
@@ -48,7 +50,8 @@ ToggleWithSeparator.storyName = 'Interrupteur avec un séparateur';
 export const ToggleWithDescription = Template.bind({});
 ToggleWithDescription.args = {
   label: 'Un interrupteur avec une description',
-  description: 'Si le label seul ne permet pas de comprendre l’action proposée, nous recommandons d’y associer une description',
+  description:
+    'Si le label seul ne permet pas de comprendre l’action proposée, nous recommandons d’y associer une description',
 };
 ToggleWithDescription.storyName = 'Interrupteur avec description';
 

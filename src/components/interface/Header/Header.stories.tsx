@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Header from './Header';
 
@@ -39,15 +39,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'L\'en-tête permet aux utilisateurs d\'identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.',
+        component:
+          "L'en-tête permet aux utilisateurs d'identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Header> = (args) => (
-  <Header {...args} />
-);
+const Template: StoryFn<typeof Header> = (args) => <Header {...args} />;
 
 export const SimpleCheckbox = Template.bind({});
 SimpleCheckbox.args = {
@@ -58,18 +57,18 @@ SimpleCheckbox.args = {
       <HeaderOperator>
         <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
       </HeaderOperator>
-      <Service
-        title="Service title"
-        description="Service Description"
-      />
+      <Service title="Service title" description="Service Description" />
       <Tool>
         <ToolItemGroup>
-          <ToolItem icon="ri-lock-line" link="/path">Tool Item #1</ToolItem>
-          <ToolItem icon="ri-add-circle-line" link="/path">Tool Item #2</ToolItem>
+          <ToolItem icon="ri-lock-line" link="/path">
+            Tool Item #1
+          </ToolItem>
+          <ToolItem icon="ri-add-circle-line" link="/path">
+            Tool Item #2
+          </ToolItem>
         </ToolItemGroup>
         <SearchBar
-          onSearch={() => {
-          }}
+          onSearch={() => {}}
           label="SearchBar"
           placeholder="Search"
           buttonLabel="Search"
@@ -80,7 +79,11 @@ SimpleCheckbox.args = {
       <NavItem title="nav item #1" link="/" />
       <NavItem title="nav item #2">
         <NavSubItem title="nav subItem #1" link="/path-to-resources-1" />
-        <NavSubItem title="nav subItem #2" link="/path-to-resources-2" current />
+        <NavSubItem
+          title="nav subItem #2"
+          link="/path-to-resources-2"
+          current
+        />
         <NavSubItem title="nav subItem #3" link="/path-to-resources-3" />
       </NavItem>
       <MegaNavItem
@@ -91,18 +94,18 @@ SimpleCheckbox.args = {
         linkLabel="This is a link"
         link="/"
       >
-        <MegaNavSubItem
-          title="Category #1"
-          link="/path-to-resources-1"
-        >
-          <Link title="title" href="/path">Link #1</Link>
-          <Link title="title" href="/path" current>Link #2</Link>
+        <MegaNavSubItem title="Category #1" link="/path-to-resources-1">
+          <Link title="title" href="/path">
+            Link #1
+          </Link>
+          <Link title="title" href="/path" current>
+            Link #2
+          </Link>
         </MegaNavSubItem>
-        <MegaNavSubItem
-          title="Category #2"
-          link="/path-to-resources-2"
-        >
-          <Link title="title" href="/path">Link #1</Link>
+        <MegaNavSubItem title="Category #2" link="/path-to-resources-2">
+          <Link title="title" href="/path">
+            Link #1
+          </Link>
         </MegaNavSubItem>
       </MegaNavItem>
       <NavItem title="nav item #4" link="/" current />
@@ -112,6 +115,7 @@ SimpleCheckbox.args = {
         onClick={() => console.log('NavItem onClick')}
         title="nav item onClick"
       />
-    </HeaderNav>],
+    </HeaderNav>,
+  ],
 };
 SimpleCheckbox.storyName = 'En-tête';

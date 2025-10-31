@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Callout from './Callout';
 import CalloutTitle from './CalloutTitle';
@@ -14,13 +14,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'La mise en avant permet à l’utilisateur de distinguer rapidement une information qui vient compléter le contenu consulté.',
+        component:
+          'La mise en avant permet à l’utilisateur de distinguer rapidement une information qui vient compléter le contenu consulté.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Callout> = (args) => (
+const Template: StoryFn<typeof Callout> = (args) => (
   <Callout {...args} />
 );
 
@@ -38,10 +39,7 @@ ButtonCallout.args = {
   children: [
     <CalloutTitle as="h3">Callout title</CalloutTitle>,
     <CalloutText>Callout text that might be short and concise.</CalloutText>,
-    <Button title="acceder...">
-      Accéder au service
-    </Button>,
-
+    <Button title="acceder...">Accéder au service</Button>,
   ],
 };
 ButtonCallout.storyName = 'Mise en avant avec bouton';

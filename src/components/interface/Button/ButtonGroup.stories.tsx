@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import ButtonGroup from './ButtonGroup';
 import Button from './Button';
@@ -9,18 +9,21 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le bouton est un élément d\'interaction avec l\'interface permettant à l\'utilisateur d\'effectuer une action. Les boutons dans le contexte d\'un groupe suivent les mêmes règles que le composant bouton',
+        component:
+          "Le bouton est un élément d'interaction avec l'interface permettant à l'utilisateur d'effectuer une action. Les boutons dans le contexte d'un groupe suivent les mêmes règles que le composant bouton",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof ButtonGroup> = (args) => <ButtonGroup {...args} />;
+const Template: StoryFn<typeof ButtonGroup> = (args) => (
+  <ButtonGroup {...args} />
+);
 
 export const VerticalButtons = Template.bind({});
 VerticalButtons.args = {
   children: [
-    <Button secondary="true">Bouton 1</Button>,
+    <Button secondary>Bouton 1</Button>,
     <Button>Bouton 2</Button>,
     <Button>Bouton 3</Button>,
   ],

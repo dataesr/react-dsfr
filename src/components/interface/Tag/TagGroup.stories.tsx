@@ -11,7 +11,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le tag catégorise, classe et organise les contenus à l\'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.',
+        component:
+          "Le tag catégorise, classe et organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.",
       },
     },
   },
@@ -21,19 +22,12 @@ const Template: StoryFn<TagGroupProps> = (args) => <TagGroup {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: [
-    <Tag small>
-      Tag
-    </Tag>,
-    <Tag selected>
-      Tag
-    </Tag>,
-    <Tag icon="fr-fi-arrow-right-line">
-      Tag
-    </Tag>,
+    <Tag small>Tag</Tag>,
+    <Tag selected>Tag</Tag>,
+    <Tag icon="fr-fi-arrow-right-line">Tag</Tag>,
     <Tag icon="fr-fi-arrow-right-line" iconPosition="left">
       Tag
     </Tag>,
-
   ],
 };
 Default.storyName = 'Groupe de tags';
@@ -41,22 +35,9 @@ Default.storyName = 'Groupe de tags';
 export const DifferentsSize = Template.bind({});
 DifferentsSize.args = {
   children: [
-    <Tag
-      small
-      onClick={() => {}}
-    >
-      Petit tag
-    </Tag>,
-    <Tag
-      onClick={() => {}}
-    >
-      Tag
-    </Tag>,
-    <Tag
-      onClick={() => {}}
-    >
-      Tag
-    </Tag>,
+    <Tag small>Petit tag</Tag>,
+    <Tag>Tag</Tag>,
+    <Tag>Tag</Tag>,
   ],
 };
 DifferentsSize.storyName = 'Groupe de tags de différentes tailles';
@@ -64,30 +45,16 @@ DifferentsSize.storyName = 'Groupe de tags de différentes tailles';
 export const TagsSelected = Template.bind({});
 TagsSelected.args = {
   children: [
-    <Tag
-      selected
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag selected href="https://www.example.com">
       Tag selectionné
     </Tag>,
-    <Tag
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag href="https://www.example.com">
       Tag
     </Tag>,
-    <Tag
-      selected
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag selected href="https://www.example.com">
       Tag selectionné
     </Tag>,
-    <Tag
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag href="https://www.example.com">
       Tag
     </Tag>,
   ],
@@ -97,34 +64,16 @@ TagsSelected.storyName = 'Groupe de tags sélectionnables';
 export const TagsToDismiss = Template.bind({});
 TagsToDismiss.args = {
   children: [
-    <Tag
-      selected
-      href="https://www.example.com"
-      onClick={() => {}}
-      closable
-    >
+    <Tag selected href="https://www.example.com" closable>
       Tag selectionné
     </Tag>,
-    <Tag
-      closable
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag closable href="https://www.example.com">
       Tag
     </Tag>,
-    <Tag
-      closable
-      selected
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag closable selected href="https://www.example.com">
       Tag selectionné
     </Tag>,
-    <Tag
-      closable
-      href="https://www.example.com"
-      onClick={() => {}}
-    >
+    <Tag closable href="https://www.example.com">
       Tag
     </Tag>,
   ],

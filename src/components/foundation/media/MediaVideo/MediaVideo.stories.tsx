@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import MediaVideo from './MediaVideo';
 
@@ -19,15 +19,25 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
+        component:
+          'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof MediaVideo> = (args) => (
+const Template: StoryFn<typeof MediaVideo> = (args) => (
   <MediaVideo {...args}>
-    <iframe title="titre de l’iframe" className="fr-responsive-vid__player" src="https://www.youtube.com/embed/HyirpmPL43I" width="100%" height="100%" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" />
+    <iframe
+      title="titre de l’iframe"
+      className="fr-responsive-vid__player"
+      src="https://www.youtube.com/embed/HyirpmPL43I"
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
   </MediaVideo>
 );
 

@@ -8,9 +8,9 @@ export interface SimpleTableProps {
   noScroll?: boolean;
   bordered?: boolean;
   captionPosition?: SimpleTableCaptionPosition;
-  caption: string;
+  caption?: string;
   className?: string;
-  data: Object[];
+  data?: Object[];
 }
 
 declare const SimpleTable: React.FC<SimpleTableProps>;

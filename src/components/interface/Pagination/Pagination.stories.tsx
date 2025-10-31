@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Pagination from './Pagination';
 import PaginationItem from './PaginationItem';
@@ -12,13 +12,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'La pagination permet à l\'utilisateur de naviguer entre les différentes pages d\'une liste d\'éléments.',
+        component:
+          "La pagination permet à l'utilisateur de naviguer entre les différentes pages d'une liste d'éléments.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />;
+const Template: StoryFn<typeof Pagination> = (args) => (
+  <Pagination {...args} />
+);
 
 export const PaginationSimple = Template.bind({});
 PaginationSimple.args = {
@@ -68,7 +71,7 @@ PaginationBuildURL.args = {
   currentPage: 1,
   pageCount: 20,
 };
-PaginationBuildURL.storyName = 'Construction d\'URL';
+PaginationBuildURL.storyName = "Construction d'URL";
 
 export const PaginationSurrendingPages = Template.bind({});
 PaginationSurrendingPages.args = {

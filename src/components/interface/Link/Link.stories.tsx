@@ -10,7 +10,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le lien permet la navigation entre une page et un autre contenu au sein de la même page, du même site ou externe.',
+        component:
+          'Le lien permet la navigation entre une page et un autre contenu au sein de la même page, du même site ou externe.',
       },
     },
   },

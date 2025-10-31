@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Radio from './Radio';
 import RadioGroup from './RadioGroup';
@@ -12,13 +12,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les boutons radio permettent à l\'utilisateur de sélectionner une seule option dans une liste.',
+        component:
+          "Les boutons radio permettent à l'utilisateur de sélectionner une seule option dans une liste.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof RadioGroup> = (args) => <RadioGroup {...args} />;
+const Template: StoryFn<typeof RadioGroup> = (args) => (
+  <RadioGroup {...args} />
+);
 
 export const VerticalList = Template.bind({});
 VerticalList.args = {
@@ -27,7 +30,7 @@ VerticalList.args = {
     <Radio label="Libellé bouton radio" value="1" />,
     <Radio label="Libellé bouton radio" value="2" />,
   ],
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
 };
 VerticalList.storyName = 'Liste verticale';
 
@@ -39,7 +42,7 @@ HorizontalList.args = {
     <Radio label="Libellé bouton radio" value="2" />,
   ],
   isInline: true,
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
 };
 HorizontalList.storyName = 'Liste horizontale';
 
@@ -51,20 +54,32 @@ HelpTextOnRadioGroup.args = {
     <Radio label="Libellé bouton radio" value="2" />,
   ],
   hint: 'Texte de description additionnel',
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
 };
-HelpTextOnRadioGroup.storyName = 'Liste avec texte d\'aide sous le titre de la liste';
+HelpTextOnRadioGroup.storyName = "Liste avec texte d'aide sous le titre de la liste";
 
 export const HelpTextOnRadio = Template.bind({});
 HelpTextOnRadio.args = {
   children: [
-    <Radio label="Libellé bouton radio" value="0" hint="Texte de description additionnel" />,
-    <Radio label="Libellé bouton radio" value="1" hint="Texte de description additionnel" />,
-    <Radio label="Libellé bouton radio" value="2" hint="Texte de description additionnel" />,
+    <Radio
+      label="Libellé bouton radio"
+      value="0"
+      hint="Texte de description additionnel"
+    />,
+    <Radio
+      label="Libellé bouton radio"
+      value="1"
+      hint="Texte de description additionnel"
+    />,
+    <Radio
+      label="Libellé bouton radio"
+      value="2"
+      hint="Texte de description additionnel"
+    />,
   ],
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
 };
-HelpTextOnRadio.storyName = 'Liste avec texte d\'aide sous le libellé de chaque bouton';
+HelpTextOnRadio.storyName = "Liste avec texte d'aide sous le libellé de chaque bouton";
 
 export const ErrorStatusVertical = Template.bind({});
 ErrorStatusVertical.args = {
@@ -73,11 +88,11 @@ ErrorStatusVertical.args = {
     <Radio label="Libellé bouton radio" value="1" />,
     <Radio label="Libellé bouton radio" value="2" />,
   ],
-  legend: 'Légende pour l\'ensemble des éléments',
-  message: 'Texte d\'erreur obligatoire',
+  legend: "Légende pour l'ensemble des éléments",
+  message: "Texte d'erreur obligatoire",
   messageType: 'error',
 };
-ErrorStatusVertical.storyName = 'État d\'erreur pour liste verticale';
+ErrorStatusVertical.storyName = "État d'erreur pour liste verticale";
 
 export const ErrorStatusHorizontal = Template.bind({});
 ErrorStatusHorizontal.args = {
@@ -87,11 +102,11 @@ ErrorStatusHorizontal.args = {
     <Radio label="Libellé bouton radio" value="2" />,
   ],
   isInline: true,
-  legend: 'Légende pour l\'ensemble des éléments',
-  message: 'Texte d\'erreur obligatoire',
+  legend: "Légende pour l'ensemble des éléments",
+  message: "Texte d'erreur obligatoire",
   messageType: 'error',
 };
-ErrorStatusHorizontal.storyName = 'État d\'erreur pour liste horizontale';
+ErrorStatusHorizontal.storyName = "État d'erreur pour liste horizontale";
 
 export const SuccessStatusVertical = Template.bind({});
 SuccessStatusVertical.args = {
@@ -100,7 +115,7 @@ SuccessStatusVertical.args = {
     <Radio label="Libellé bouton radio" value="1" />,
     <Radio label="Libellé bouton radio" value="2" />,
   ],
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
   message: 'Texte de validation',
   messageType: 'valid',
 };
@@ -114,7 +129,7 @@ SuccessStatusHorizontal.args = {
     <Radio label="Libellé bouton radio" value="2" />,
   ],
   isInline: true,
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
   message: 'Texte de validation',
   messageType: 'valid',
 };
@@ -128,6 +143,6 @@ Disabled.args = {
     <Radio label="Libellé bouton radio" value="2" />,
   ],
   disabled: true,
-  legend: 'Légende pour l\'ensemble des éléments',
+  legend: "Légende pour l'ensemble des éléments",
 };
 Disabled.storyName = 'État Désactivé';

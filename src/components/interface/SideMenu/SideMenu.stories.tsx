@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import SideMenu from './SideMenu';
 import SideMenuItem from './SideMenuItem';
 import SideMenuLink from './SideMenuLink';
@@ -12,13 +12,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une rubrique ou d’un même thème.<br /> Le menu latéral est un système de navigation vertical présentant une liste de liens placée à côté du contenu(à gauche ou à droite de la page) et donnant accès jusqu\'à 3 niveaux d’arborescence. <br />Ce composant doit être utilisé sur les sites avec un niveau de profondeur assez important(2 niveaux de navigation ou plus). <br />Le menu latéral se compose d’un titre de rubrique(optionnel) et d’une liste de liens sur 3 niveaux(les pages associées à une même rubrique sont regroupées dans des collapse).',
+        component:
+          "Le menu latéral permet aux utilisateurs de naviguer entre les différentes pages d’une rubrique ou d’un même thème.<br /> Le menu latéral est un système de navigation vertical présentant une liste de liens placée à côté du contenu(à gauche ou à droite de la page) et donnant accès jusqu'à 3 niveaux d’arborescence. <br />Ce composant doit être utilisé sur les sites avec un niveau de profondeur assez important(2 niveaux de navigation ou plus). <br />Le menu latéral se compose d’un titre de rubrique(optionnel) et d’une liste de liens sur 3 niveaux(les pages associées à une même rubrique sont regroupées dans des collapse).",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof SideMenu> = (args) => (
+const Template: StoryFn<typeof SideMenu> = (args) => (
   <SideMenu {...args} />
 );
 
@@ -60,7 +61,8 @@ StoryTwo.storyName = 'Menu latéral avec deux niveaux d’arborescence';
 StoryTwo.parameters = {
   docs: {
     description: {
-      story: 'Il permet d’afficher les niveaux secondaires d’une rubrique. Le click sur le premier niveau fait apparaitre la liste des liens lui étant rattachée.',
+      story:
+        'Il permet d’afficher les niveaux secondaires d’une rubrique. Le click sur le premier niveau fait apparaitre la liste des liens lui étant rattachée.',
     },
   },
 };
@@ -84,7 +86,8 @@ StoryThree.storyName = 'Menu latéral avec trois niveaux d’arborescence';
 StoryThree.parameters = {
   docs: {
     description: {
-      story: 'Il permet d’afficher les niveaux 1, 2 et 3 imbriqués d’une rubrique.',
+      story:
+        'Il permet d’afficher les niveaux 1, 2 et 3 imbriqués d’une rubrique.',
     },
   },
 };
@@ -102,7 +105,8 @@ StoryFour.storyName = 'Menu latéral aligné à droite';
 StoryFour.parameters = {
   docs: {
     description: {
-      story: 'Lorsque le menu est placé à droite de la page, il est nécessaire d’associer à l\'élément<nav> la classe fr- sidemenu avec le modificateur fr- sidemenu--right afin que la bordure se positionne à gauche du menu.On peut également le rendre fixe avec la classe fr- sidemenu--sticky.',
+      story:
+        "Lorsque le menu est placé à droite de la page, il est nécessaire d’associer à l'élément<nav> la classe fr- sidemenu avec le modificateur fr- sidemenu--right afin que la bordure se positionne à gauche du menu.On peut également le rendre fixe avec la classe fr- sidemenu--sticky.",
     },
   },
 };
@@ -119,7 +123,8 @@ StoryFive.storyName = 'Menu latéral fixe, affiché sur 100% de la hauteur de pa
 StoryFive.parameters = {
   docs: {
     description: {
-      story: 'Enfin vous pouvez afficher un menu latéral fixe sur 100% de la hauteur de votre page.<br />Pour cela il suffit d’associer à l\'élément <nav> la classe a classe fr-sidemenu avec le modificateur fr-sidemenu--sticky-full-height .',
+      story:
+        "Enfin vous pouvez afficher un menu latéral fixe sur 100% de la hauteur de votre page.<br />Pour cela il suffit d’associer à l'élément <nav> la classe a classe fr-sidemenu avec le modificateur fr-sidemenu--sticky-full-height .",
     },
   },
 };

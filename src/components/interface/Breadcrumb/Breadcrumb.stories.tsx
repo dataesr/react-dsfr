@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Breadcrumb from './Breadcrumb';
 import BreadcrumbItem from './BreadcrumbItem';
@@ -6,19 +6,20 @@ import BreadcrumbItem from './BreadcrumbItem';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/fil-d-ariane
 
 export default {
-  title: 'Composants/Fil d\'Ariane - Breadcrumb',
+  title: "Composants/Fil d'Ariane - Breadcrumb",
   component: Breadcrumb,
   subcomponents: { BreadcrumbItem },
   parameters: {
     docs: {
       description: {
-        component: 'Le fil d\'Ariane est un système de navigation secondaire qui permet à l\'utilisateur de se situer sur le site qu\'il consulte.',
+        component:
+          "Le fil d'Ariane est un système de navigation secondaire qui permet à l'utilisateur de se situer sur le site qu'il consulte.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Breadcrumb> = (args) => (
+const Template: StoryFn<typeof Breadcrumb> = (args) => (
   <Breadcrumb {...args} />
 );
 

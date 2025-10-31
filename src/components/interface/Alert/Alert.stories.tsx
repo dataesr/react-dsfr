@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Alert from './Alert';
 
@@ -10,15 +10,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les alertes permettent d\'attirer l\'attention de l\'utilisateur sur une information sans interrompre sa tâche en cours.',
+        component:
+          "Les alertes permettent d'attirer l'attention de l'utilisateur sur une information sans interrompre sa tâche en cours.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Alert> = (args) => (
-  <Alert {...args} />
-);
+const Template: StoryFn<typeof Alert> = (args) => <Alert {...args} />;
 
 export const Information = Template.bind({});
 Information.args = {

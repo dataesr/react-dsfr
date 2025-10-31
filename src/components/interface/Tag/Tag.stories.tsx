@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Tag from './Tag';
 
@@ -10,13 +10,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le tag catégorise, classe et organise les contenus à l\'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.',
+        component:
+          "Le tag catégorise, classe et organise les contenus à l'aide de mots-clés. Il aide les utilisateurs à rechercher et à trouver facilement une information.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
+const Template: StoryFn<typeof Tag> = (args) => <Tag {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Card from './Card';
 import CardHeader from './CardHeader';
@@ -26,15 +26,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'La carte est un lien vers une page éditoriale dont elle donne un aperçu. Elle fait généralement partie d\'une collection ou liste d\'aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée.',
+        component:
+          "La carte est un lien vers une page éditoriale dont elle donne un aperçu. Elle fait généralement partie d'une collection ou liste d'aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Card> = (args) => (
-  <Card {...args} />
-);
+const Template: StoryFn<typeof Card> = (args) => <Card {...args} />;
 
 export const SimpleCard = Template.bind({});
 SimpleCard.args = {
@@ -43,16 +42,14 @@ SimpleCard.args = {
     <CardHeader>
       <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
     </CardHeader>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </CardDescription>],
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </CardDescription>,
+  ],
 };
 SimpleCard.storyName = 'Carte';
 
@@ -64,16 +61,14 @@ HorizontalCard.args = {
     <CardHeader>
       <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
     </CardHeader>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </CardDescription>],
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </CardDescription>,
+  ],
 };
 HorizontalCard.storyName = 'Carte horizontal';
 
@@ -84,20 +79,18 @@ TaggedCard.args = {
     <CardHeader>
       <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
     </CardHeader>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
       <TagGroup>
         <Tag>Tag 1</Tag>
         <Tag>Tag 2</Tag>
       </TagGroup>
-    </CardDescription>],
+    </CardDescription>,
+  ],
 };
 TaggedCard.storyName = 'Carte avec tag';
 
@@ -109,16 +102,14 @@ DetailedCard.args = {
       <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
     </CardHeader>,
     <CardDetail position="bottom">Detail</CardDetail>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </CardDescription>],
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </CardDescription>,
+  ],
 };
 DetailedCard.storyName = 'Carte avec detail';
 
@@ -131,24 +122,18 @@ BadgedCard.args = {
     </CardHeader>,
     <CardDetail>
       <BadgeGroup>
-        <Badge
-          text="Badge #1"
-        />
-        <Badge
-          text="Badge #2"
-        />
+        <Badge text="Badge #1" />
+        <Badge text="Badge #2" />
       </BadgeGroup>
     </CardDetail>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </CardDescription>],
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </CardDescription>,
+  ],
 };
 BadgedCard.storyName = 'Carte avec badge';
 
@@ -160,15 +145,13 @@ BorderlessCard.args = {
     <CardHeader>
       <CardImage alt="alternative" src="http://fakeimg.pl/300/" />
     </CardHeader>,
-    <CardTitle>
-      Card Title
-    </CardTitle>,
+    <CardTitle>Card Title</CardTitle>,
     <CardDescription>
-      Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Uenim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </CardDescription>],
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </CardDescription>,
+  ],
 };
 BorderlessCard.storyName = 'Carte sans bordure';

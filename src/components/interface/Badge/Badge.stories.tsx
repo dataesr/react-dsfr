@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Badge from './Badge';
 
@@ -10,15 +10,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le composant badge permet de mettre en avant une information de type "statut" ou "état" sur un élément du site. Le badge n\'est pas un composant "cliquable". Il doit être associé à une information donnée sur une page pour préciser le statut ou l\'état associée à cette information.',
+        component:
+          'Le composant badge permet de mettre en avant une information de type "statut" ou "état" sur un élément du site. Le badge n\'est pas un composant "cliquable". Il doit être associé à une information donnée sur une page pour préciser le statut ou l\'état associée à cette information.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Badge> = (args) => (
-  <Badge {...args} />
-);
+const Template: StoryFn<typeof Badge> = (args) => <Badge {...args} />;
 
 export const Succes = Template.bind({});
 Succes.args = { text: 'Success', type: 'success', hasIcon: true };

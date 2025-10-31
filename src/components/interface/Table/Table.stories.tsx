@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import Table, { TableProps } from './Table';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tableau
@@ -9,7 +9,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le tableau permet de présenter une liste structurée de données textuelles et/ou numériques.',
+        component:
+          'Le tableau permet de présenter une liste structurée de données textuelles et/ou numériques.',
       },
     },
   },
@@ -31,7 +32,7 @@ const data = [
   { id: 7, name: 'Eric Souverain', age: 55 },
 ];
 
-const Template: Story<TableProps> = (args) => <Table {...args} />;
+const Template: StoryFn<TableProps> = (args) => <Table {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

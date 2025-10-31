@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Accordion from './Accordion';
 import AccordionItem from './AccordionItem';
@@ -12,13 +12,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les accordéons permettent aux utilisateurs d\'afficher et de masquer des sections de contenu présentés dans une page.',
+        component:
+          "Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Accordion> = (args) => (
+const Template: StoryFn<typeof Accordion> = (args) => (
   <Accordion {...args} />
 );
 
@@ -35,17 +36,15 @@ SimpleAccordion.args = {
       <article>
         <h1>Title</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Aliquid architecto assumenda autem deleniti eius error
-          eum exercitationem hic libero modi mollitia numquam obcaecati
-          provident quis quisquam, repellendus tempore
-          temporibus ullam.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          architecto assumenda autem deleniti eius error eum exercitationem hic
+          libero modi mollitia numquam obcaecati provident quis quisquam,
+          repellendus tempore temporibus ullam.
         </p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquid architecto assumenda autem deleniti eius error
-        eum exercitationem hic libero modi mollitia numquam obcaecati
-        provident quis quisquam, repellendus tempore
-        temporibus ullam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+        architecto assumenda autem deleniti eius error eum exercitationem hic
+        libero modi mollitia numquam obcaecati provident quis quisquam,
+        repellendus tempore temporibus ullam.
       </article>
     </AccordionItem>,
   ],

@@ -10,7 +10,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "Les icônes fonctionnelles sont des symboles visuels qui accompagnent l’utilisateur dans ses actions et qui aident à sa compréhension de l’interface. Dans cette version, toutes les icônes de remixicon sont acceptées. Une nouvelle version est en court de développement pour correspondre aux icônes attendues par le système de design de l'état.",
+        component:
+          "Les icônes fonctionnelles sont des symboles visuels qui accompagnent l’utilisateur dans ses actions et qui aident à sa compréhension de l’interface. Dans cette version, toutes les icônes de remixicon sont acceptées. Une nouvelle version est en court de développement pour correspondre aux icônes attendues par le système de design de l'état.",
       },
     },
   },

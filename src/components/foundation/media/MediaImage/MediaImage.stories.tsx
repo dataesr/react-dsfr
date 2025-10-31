@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import MediaImage from './MediaImage';
 
@@ -19,13 +19,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
+        component:
+          'Les médias sont des images ou des vidéos présents au sein des pages du site. Ils sont utilisés pour donner une information visuelle ou dans un but purement décoratif.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof MediaImage> = (args) => <MediaImage {...args} />;
+const Template: StoryFn<typeof MediaImage> = (args) => (
+  <MediaImage {...args} />
+);
 
 export const Image = Template.bind({});
 Image.args = {

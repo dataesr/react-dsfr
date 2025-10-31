@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Highlight from './Highlight';
 
@@ -11,13 +11,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'La mise en exergue permet à l\'utilisateur de distinguer et repérer une information facilement.',
+        component:
+          "La mise en exergue permet à l'utilisateur de distinguer et repérer une information facilement.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Highlight> = (args) => (
+const Template: StoryFn<typeof Highlight> = (args) => (
   <Highlight {...args}>Text à mettre en exergue</Highlight>
 );
 

@@ -12,7 +12,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Les boutons de partage permettent aux utilisateurs de partager facilement un contenu qu’il consulte à d’autres utilisateurs.',
+        component:
+          'Les boutons de partage permettent aux utilisateurs de partager facilement un contenu qu’il consulte à d’autres utilisateurs.',
       },
     },
   },
@@ -23,9 +24,17 @@ const Template: StoryFn<ShareProps> = (args) => <Share {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: [
-    <ShareButton type="facebook" label="Partager sur Facebook" key="facebook" />,
+    <ShareButton
+      type="facebook"
+      label="Partager sur Facebook"
+      key="facebook"
+    />,
     <ShareButton type="twitter" label="Partager sur Twitter" key="twitter" />,
-    <ShareButton type="linkedin" label="Partager sur LinkedIn" key="linkedin" />,
+    <ShareButton
+      type="linkedin"
+      label="Partager sur LinkedIn"
+      key="linkedin"
+    />,
     <ShareButton type="copy" label="Copier le lien" key="copy" />,
     <ShareButton type="mail" label="Envoyer le lien par email" key="mail" />,
   ],
@@ -35,16 +44,24 @@ Default.storyName = 'Partage par défaut';
 
 export const ShareWithLink = Template.bind({});
 ShareWithLink.args = {
-  children: [<ShareButton type="facebook" href="https://exemple.fr" label="Partager sur Facebook" key="faceboook2" />],
+  children: [
+    <ShareButton
+      type="facebook"
+      href="https://exemple.fr"
+      label="Partager sur Facebook"
+      key="faceboook2"
+    />,
+  ],
   title: 'Partager la page',
 };
 ShareWithLink.storyName = "Partage par défaut avec lien vers l'icône cliquée";
 
 export const ShareMail = Template.bind({});
 ShareMail.args = {
-  children: [<ShareButton type="mail" label="Envoyer le lien par email" key="mail2" />],
+  children: [
+    <ShareButton type="mail" label="Envoyer le lien par email" key="mail2" />,
+  ],
   title: 'Partager la page',
-
 };
 ShareMail.storyName = 'Partager par email';
 

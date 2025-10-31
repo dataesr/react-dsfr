@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Checkbox from './Checkbox';
 import CheckboxGroup from './CheckboxGroup';
@@ -11,7 +11,7 @@ export default {
   subcomponents: { Checkbox },
 };
 
-const Template: ComponentStory<typeof CheckboxGroup> = (args) => (
+const Template: StoryFn<typeof CheckboxGroup> = (args) => (
   <CheckboxGroup {...args} />
 );
 

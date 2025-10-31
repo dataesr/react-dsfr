@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Footer from './Footer';
 
@@ -39,24 +39,21 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Le pied de page propose des éléments d\'information sur le site et une navigation secondaire pour l\'utilisateur afin qu\'il poursuive son parcours. Il est modulable selon les besoins et les exigences du site.',
+        component:
+          "Le pied de page propose des éléments d'information sur le site et une navigation secondaire pour l'utilisateur afin qu'il poursuive son parcours. Il est modulable selon les besoins et les exigences du site.",
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Footer> = (args) => (
-  <Footer {...args} />
-);
+const Template: StoryFn<typeof Footer> = (args) => <Footer {...args} />;
 
 export const SimpleCheckbox = Template.bind({});
 SimpleCheckbox.args = {
   children: [
     <FooterTop>
       <FooterTopCategory title="Nom de la catégorie">
-        <FooterLink
-          asLink={<Link href="/myFooterLink" />}
-        >
+        <FooterLink asLink={<Link href="/myFooterLink" />}>
           Footer Link Router
         </FooterLink>
         <FooterLink href="/">Footer Link</FooterLink>
@@ -91,32 +88,25 @@ SimpleCheckbox.args = {
         <FooterLink href="/">Footer Link</FooterLink>
       </FooterTopCategory>
     </FooterTop>,
-    <FooterBody
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    >
-      <Logo>Ministère de l‘enseignement supérieur de la rechercher et de l‘innovation</Logo>
+    <FooterBody description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+      <Logo>
+        Ministère de l‘enseignement supérieur de la rechercher et de
+        l‘innovation
+      </Logo>
       <FooterOperator>
         <img src="https://fakeimg.pl/145x81/" alt="texte alternatif" />
       </FooterOperator>
       <FooterBodyItem>
-        <Link href="https://legifrance.gouv.fr">
-          legifrance.gouv.fr
-        </Link>
+        <Link href="https://legifrance.gouv.fr">legifrance.gouv.fr</Link>
       </FooterBodyItem>
       <FooterBodyItem>
-        <Link href="https://gouvernement.fr">
-          gouvernement.fr
-        </Link>
+        <Link href="https://gouvernement.fr">gouvernement.fr</Link>
       </FooterBodyItem>
       <FooterBodyItem>
-        <Link href="https://service-public.fr">
-          service-public.fr
-        </Link>
+        <Link href="https://service-public.fr">service-public.fr</Link>
       </FooterBodyItem>
       <FooterBodyItem>
-        <Link href="https://data.gouv.fr">
-          data.gouv.fr
-        </Link>
+        <Link href="https://data.gouv.fr">data.gouv.fr</Link>
       </FooterBodyItem>
     </FooterBody>,
     <FooterPartners>
@@ -162,6 +152,7 @@ SimpleCheckbox.args = {
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterLink href="/">Footer Link</FooterLink>
       <FooterCopy>licence etalab-2.0</FooterCopy>
-    </FooterBottom>],
+    </FooterBottom>,
+  ],
 };
 SimpleCheckbox.storyName = 'Pied de page';

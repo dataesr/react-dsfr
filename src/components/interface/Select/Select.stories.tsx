@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Select from './Select';
 
@@ -10,13 +10,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'La liste déroulante permet à un utilisateur de choisir un élément dans une liste donnée.',
+        component:
+          'La liste déroulante permet à un utilisateur de choisir un élément dans une liste donnée.',
       },
     },
   },
 };
 
-const Template: ComponentStory<typeof Select> = (args) => (<Select {...args} />);
+const Template: StoryFn<typeof Select> = (args) => <Select {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
@@ -33,7 +34,7 @@ Simple.storyName = 'Liste déroulante simple';
 export const ErrorState = Template.bind({});
 ErrorState.args = {
   label: 'Label pour liste déroulante',
-  message: 'Texte d\'erreur obligatoire',
+  message: "Texte d'erreur obligatoire",
   messageType: 'error',
   options: [
     { label: 'Option 1', value: '1' },
@@ -42,7 +43,7 @@ ErrorState.args = {
     { label: 'Option 4', value: '4' },
   ],
 };
-ErrorState.storyName = 'État d\'erreur';
+ErrorState.storyName = "État d'erreur";
 
 export const SuccessState = Template.bind({});
 SuccessState.args = {
@@ -82,4 +83,4 @@ HelpText.args = {
     { label: 'Option 4', value: '4' },
   ],
 };
-HelpText.storyName = 'Liste déroulante avec texte d\'aide';
+HelpText.storyName = "Liste déroulante avec texte d'aide";
