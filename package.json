@@ -15,8 +15,8 @@
     "gouvfr"
   ],
   "engines": {
-    "node": ">=14.18",
-    "npm": ">=8.15"
+    "node": ">=20.18",
+    "npm": ">=11.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.19.4",
@@ -83,6 +83,11 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "overrides": {
+    "enzyme": {
+      "cheerio": "1.0.0-rc.12"
+    }
   },
   "scripts": {
     "build": "rollup -c",
