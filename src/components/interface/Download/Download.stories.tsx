@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-webpack5';
 import Download, { DownloadProps } from './Download';
 import DownloadGroup, { DownloadGroupProps } from './DownloadGroup';
 

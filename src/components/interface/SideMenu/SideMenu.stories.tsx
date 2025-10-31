@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-webpack5';
 import SideMenu from './SideMenu';
 import SideMenuItem from './SideMenuItem';
 import SideMenuLink from './SideMenuLink';

@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-webpack5';
 
 import Callout from './Callout';
 import CalloutTitle from './CalloutTitle';

@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-webpack5';
 import Table, { TableProps } from './Table';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tableau

@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-webpack5';
 
 import Toggle from './Toggle';
 import ToggleGroup, { ToggleGroupProps } from './ToggleGroup';
