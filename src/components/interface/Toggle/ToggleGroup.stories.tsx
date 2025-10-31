@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Toggle from './Toggle';
 import ToggleGroup, { ToggleGroupProps } from './ToggleGroup';
@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Template: Story<ToggleGroupProps> = (args) => <ToggleGroup {...args} />;
+const Template: StoryFn<ToggleGroupProps> = (args) => <ToggleGroup {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

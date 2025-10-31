@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Summary, { SummaryProps } from './Summary';
 import SummaryItem from './SummaryItem';
@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Template: Story<SummaryProps> = (args) => <Summary {...args} />;
+const Template: StoryFn<SummaryProps> = (args) => <Summary {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

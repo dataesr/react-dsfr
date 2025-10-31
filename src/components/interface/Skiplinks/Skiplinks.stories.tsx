@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Skiplinks, { SkiplinksProps } from './Skiplinks';
 import SkiplinkItem from './SkiplinkItem';
@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Template: Story<SkiplinksProps> = (args) => <Skiplinks {...args} />;
+const Template: StoryFn<SkiplinksProps> = (args) => <Skiplinks {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

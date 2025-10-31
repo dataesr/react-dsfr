@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Icon, { IconProps } from './Icon';
 
@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template: Story<IconProps> = (args) => <Icon {...args} />;
+const Template: StoryFn<IconProps> = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

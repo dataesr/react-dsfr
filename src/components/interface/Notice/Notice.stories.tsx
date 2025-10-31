@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Notice, { NoticeProps } from './Notice';
 
@@ -14,7 +14,7 @@ export default {
   },
 };
 
-const Template: Story<NoticeProps> = (args) => <Notice {...args} />;
+const Template: StoryFn<NoticeProps> = (args) => <Notice {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

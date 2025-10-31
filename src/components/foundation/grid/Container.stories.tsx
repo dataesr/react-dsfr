@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 
 import Col from './Col';
 import Container from './Container';
@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof Container> = (args) => (
+const Template: StoryFn<typeof Container> = (args) => (
   <Container {...args} />
 );
 

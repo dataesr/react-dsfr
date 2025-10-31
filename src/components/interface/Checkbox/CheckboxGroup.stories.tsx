@@ -6,7 +6,7 @@ import CheckboxGroup from './CheckboxGroup';
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/case-a-cocher
 
 export default {
-  title: 'Composants/Case à cocher - Checkbox',
+  title: 'Composants/Groupe de cases à cocher - Checkboxes',
   component: CheckboxGroup,
   subcomponents: { Checkbox },
 };

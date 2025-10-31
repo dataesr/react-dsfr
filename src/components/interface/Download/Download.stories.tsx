@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 import Download, { DownloadProps } from './Download';
 import DownloadGroup, { DownloadGroupProps } from './DownloadGroup';
 
@@ -17,8 +17,8 @@ export default {
   },
 };
 
-const Template: Story<DownloadProps> = (args) => <Download {...args} />;
-const GroupTemplate: Story<DownloadGroupProps> = (arg) => <DownloadGroup {...arg} />;
+const Template: StoryFn<DownloadProps> = (args) => <Download {...args} />;
+const GroupTemplate: StoryFn<DownloadGroupProps> = (arg) => <DownloadGroup {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {

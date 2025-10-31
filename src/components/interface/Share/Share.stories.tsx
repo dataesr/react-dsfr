@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Share, { ShareProps } from './Share';
 import ShareButton from './ShareButton';
@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Template: Story<ShareProps> = (args) => <Share {...args} />;
+const Template: StoryFn<ShareProps> = (args) => <Share {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,11 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 import TagGroup, { TagGroupProps } from './TagGroup';
 import Tag from './Tag';
 
 // https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tag
 
 export default {
-  title: 'Composants/Tag - Tag',
+  title: 'Composants/Groupe de tags - Tags',
   component: TagGroup,
   subcomponents: { Tag },
   parameters: {
@@ -16,7 +16,7 @@ export default {
     },
   },
 };
-const Template: Story<TagGroupProps> = (args) => <TagGroup {...args} />;
+const Template: StoryFn<TagGroupProps> = (args) => <TagGroup {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

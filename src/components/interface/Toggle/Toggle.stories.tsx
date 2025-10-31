@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Toggle, { ToggleProps } from './Toggle';
 
@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
+const Template: StoryFn<ToggleProps> = (args) => <Toggle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

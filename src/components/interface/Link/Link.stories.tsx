@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 
 import Link, { LinkProps } from './Link';
 
@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template: Story<LinkProps> = (args) => <Link {...args} />;
+const Template: StoryFn<LinkProps> = (args) => <Link {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
