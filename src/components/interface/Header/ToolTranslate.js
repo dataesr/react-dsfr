@@ -39,6 +39,7 @@ const ToolTranslate = ({
         <button
           onClick={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             setIsOpen(!isOpen);
           }}
           type="button"
@@ -50,7 +51,9 @@ const ToolTranslate = ({
           {currentLang}
         </button>
         <div
-          className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`}
+          className={`fr-translate__menu fr-menu ${
+            isOpen ? 'fr-collapse--expanded' : 'fr-collapse'
+          }`}
           id="translate-516"
           onClick={() => setIsOpen(false)}
           onKeyDown={(e) => (e.key === 'Enter' ? setIsOpen(false) : null)}
