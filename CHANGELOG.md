@@ -1,3 +1,10 @@
+## [3.10.1](https://github.com/dataesr/react-dsfr/compare/v3.10.0...v3.10.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* **typo:** . ([0937cc0](https://github.com/dataesr/react-dsfr/commit/0937cc070d788c055542c14919d60d06cc360dca))
+
 # [3.10.0](https://github.com/dataesr/react-dsfr/compare/v3.9.2...v3.10.0) (2026-03-09)
 
 
