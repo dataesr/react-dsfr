@@ -8,32 +8,37 @@ on:
       - master
 
 permissions:
-  id-token: write # to enable use of OIDC for trusted publishing and npm provenance
+  contents: read # for checkout
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Install
+      - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run build
       - name: Test
         run: npm run test:nowatch
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v6
-        with:
-          # semantic_version: 19.0.5
-          extra_plugins: |
-            @semantic-release/changelog@6.0.0
-            @semantic-release/git
+        run: npx semantic-release
+        # with:
+        #   # semantic_version: 19.0.5
+        #   extra_plugins: |
+        #     @semantic-release/changelog@6.0.0
+        #     @semantic-release/github
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   storybook-deploy:
     name: Storybook deploy
