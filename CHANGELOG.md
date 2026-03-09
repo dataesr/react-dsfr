@@ -1,3 +1,10 @@
+## [3.10.2](https://github.com/dataesr/react-dsfr/compare/v3.10.1...v3.10.2) (2026-03-09)
+
+
+### Bug Fixes
+
+* **header:** Click on LanguageSelector should not close menu ([3268c31](https://github.com/dataesr/react-dsfr/commit/3268c31e911f1a323c697dc2fe8ef3690ef0e355))
+
 ## [3.10.1](https://github.com/dataesr/react-dsfr/compare/v3.10.0...v3.10.1) (2026-03-09)
 
 
