@@ -1,3 +1,29 @@
+# [3.10.0](https://github.com/dataesr/react-dsfr/compare/v3.9.2...v3.10.0) (2026-03-09)
+
+
+### Bug Fixes
+
+* **header:** Click on language selector should not close the navigation menu in mobile ([aaaeb0b](https://github.com/dataesr/react-dsfr/commit/aaaeb0ba1469a5bbaa0e0e2c5956fc9c2832c77e))
+* **linter:** Add space before pipe ([ae58a21](https://github.com/dataesr/react-dsfr/commit/ae58a212d744cc558ed683942c025aa9abf51177))
+
+
+### Features
+
+* **ci:** Change Mattermost notification channel ([8a424e2](https://github.com/dataesr/react-dsfr/commit/8a424e2567386458e3bcef0968256e294edf38c4))
+
+
+### Reverts
+
+* Revert "fix(ci/cd): Fix NPM release push to registry" ([0eef501](https://github.com/dataesr/react-dsfr/commit/0eef5017374efdf113717382fb2702586d1f74b9))
+* Revert "fix(ci/cd): Correct GITHUB_TOKEN ?" ([fa2c3c3](https://github.com/dataesr/react-dsfr/commit/fa2c3c3d2269cf3ff1ec04f9dfc5f600f1e23054))
+* Revert "fix(ci/cd): Correct workflow /2" ([a744b2c](https://github.com/dataesr/react-dsfr/commit/a744b2c5e6971f28fced009c7c9d224ddeac3ca2))
+* Revert "fix(ci/cd): Correct workflow /3" ([2dbc33b](https://github.com/dataesr/react-dsfr/commit/2dbc33bf1e21835224caf410c1447f064af524a3))
+* Revert "fix(ci/cd): Correct workflow /4" ([cbdddc2](https://github.com/dataesr/react-dsfr/commit/cbdddc2ee9868200a92e046f896f34ded4e4883e))
+* Revert "fix(ci/cd): Correct workflow /4" ([6435e5f](https://github.com/dataesr/react-dsfr/commit/6435e5f6db389114386e29330811b025aab31d9b))
+* Revert "fix(ci/cd): Correct workflow /5" ([b3fd206](https://github.com/dataesr/react-dsfr/commit/b3fd2061d4282df84c699e50aa040b61f41bc92f))
+* Revert "fix(ci/cd): Correct workflow /6" ([44ca6ef](https://github.com/dataesr/react-dsfr/commit/44ca6effe7741da0c8938804e170ceea88a2e8f6))
+* Revert "fix(ci/cd): Correct workflow /7" ([c02cbf1](https://github.com/dataesr/react-dsfr/commit/c02cbf141dacbc0ddb5abf1388eeafb91c88fe4a))
+
 # [3.10.0](https://github.com/dataesr/react-dsfr/compare/v3.9.2...v3.10.0) (2023-11-27)
 
 
