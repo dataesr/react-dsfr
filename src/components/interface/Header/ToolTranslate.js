@@ -9,16 +9,24 @@ import typeValidation from '../../../utils/type-validation';
 import useOnClickOutside from '../../../hooks/useOnClickOutside';
 
 const ToolTranslate = ({
-  children, currentLang, className, descCurrentLang, title, ...remainingProps
+  children,
+  currentLang,
+  className,
+  descCurrentLang,
+  title,
+  ...remainingProps
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const _className = classNames(className, 'fr-translate fr-nav');
   const translateMenuRef = useRef();
-  const close = useCallback((e) => {
-    if ((translateMenuRef && translateMenuRef.current !== e.target) && isOpen) {
-      setIsOpen(false);
-    }
-  }, [isOpen]);
+  const close = useCallback(
+    (e) => {
+      if (translateMenuRef && translateMenuRef.current !== e.target && isOpen) {
+        setIsOpen(false);
+      }
+    },
+    [isOpen],
+  );
   useOnClickOutside(translateMenuRef, close);
 
   return (
@@ -29,7 +37,10 @@ const ToolTranslate = ({
     >
       <div className="fr-nav__item" ref={translateMenuRef}>
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={(e) => {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }}
           type="button"
           className="fr-btn fr-btn--tertiary fr-translate__btn"
           aria-controls="translate-516"
@@ -38,10 +49,15 @@ const ToolTranslate = ({
         >
           {currentLang}
         </button>
-        <div className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`} id="translate-516" onClick={() => setIsOpen(false)} onKeyDown={(e) => (e.key === 'Enter' ? setIsOpen(false) : null)} role="menuitem" tabIndex={-1}>
-          <ul className="fr-menu__list">
-            {children}
-          </ul>
+        <div
+          className={`fr-translate__menu fr-menu ${isOpen ? 'fr-collapse--expanded' : 'fr-collapse'}`}
+          id="translate-516"
+          onClick={() => setIsOpen(false)}
+          onKeyDown={(e) => (e.key === 'Enter' ? setIsOpen(false) : null)}
+          role="menuitem"
+          tabIndex={-1}
+        >
+          <ul className="fr-menu__list">{children}</ul>
         </div>
       </div>
     </nav>
