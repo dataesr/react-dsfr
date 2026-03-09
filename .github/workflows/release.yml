@@ -33,7 +33,7 @@ jobs:
             @semantic-release/changelog@6.0.0
             @semantic-release/git
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
   storybook-deploy:
     name: Storybook deploy
