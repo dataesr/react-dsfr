@@ -26,7 +26,6 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@storybook/react": "^6.5.13",
     "@axe-core/react": "^4.3.1",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
@@ -40,6 +39,7 @@
     "@rollup/plugin-eslint": "^8.0.1",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@semantic-release/changelog": "^6.0.3",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -48,6 +48,7 @@
     "@storybook/builder-webpack5": "^6.5.13",
     "@storybook/manager-webpack4": "^6.5.13",
     "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
     "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/testing-library": "^0.0.13",
     "@svgr/rollup": "^6.1.2",
