@@ -32,9 +32,6 @@ jobs:
         run: npm run test:nowatch
       - name: Semantic Release
         run: npx semantic-release
-        extra_plugins: |
-          @semantic-release/changelog@6.0.0
-          @semantic-release/github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
