@@ -7,18 +7,15 @@ on:
     branches:
       - master
 
-permissions:
-  id-token: write # to enable use of OIDC for trusted publishing and npm provenance
-
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 24
+          node-version: 14
       - name: Install
         run: npm ci
       - name: Build
@@ -26,7 +23,7 @@ jobs:
       - name: Test
         run: npm run test:nowatch
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v6
+        uses: cycjimmy/semantic-release-action@v3
         with:
           semantic_version: 19.0.5
           extra_plugins: |
@@ -34,6 +31,7 @@ jobs:
             @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   storybook-deploy:
     name: Storybook deploy
