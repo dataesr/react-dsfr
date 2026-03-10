@@ -5,7 +5,11 @@ export type CalloutColorFamily = 'green-tilleul-verveine' | 'green-bourgeon' | '
 export type CalloutChildren = React.ReactNode[] | React.ReactNode;
 
 export interface CalloutProps {
+  /**
+   * @deprecated The method should not be used
+   */
   hasInfoIcon?: boolean;
+  icon?: Nullable<string>;
   colorFamily?: CalloutColorFamily;
   /**
      * first color is color of the border, second is background
